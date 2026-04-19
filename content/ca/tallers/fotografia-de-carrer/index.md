@@ -15,17 +15,17 @@ formats:
   - intensiu
 tags: ["carrer", "documental", "mirada", "analògica", "Barcelona", "35mm"]
 
-duration: "4 hores"
+duration: "3,5 hores (teoria + sortida + revelat)"
 sessions: 1
-price: 80
+price: 99
 max_places: 4
 location: "Barcelona (sortida des de Nau Bostik)"
 extern: false
 
 objective: "Desenvolupar una mirada pròpia al carrer i entendre les decisions tècniques i ètiques de la fotografia documental."
 methodology: "Sortida fotogràfica per Barcelona amb càmera analògica, seguida de revisió col·lectiva dels fotogrames exposats."
-result: "Un carret exposat i una conversa sobre les imatges preses: el que funciona, el que no i per què."
-prerequisites: "Saber fotografiar en mode manual. Recomanable haver fet el taller de Càmera i exposició o tenir experiència equivalent."
+result: "Un carret exposat i revelat el mateix dia, amb els negatius digitalitzats. Comprensió pràctica de la mirada de carrer."
+prerequisites: "Saber fotografiar en mode manual. Recomanable haver fet el taller d'Iniciació o tenir experiència equivalent."
 target: "Fotògrafs que volen fer el pas del control tècnic a la mirada: aprendre a veure abans de disparar."
 related:
   - camera-i-exposicio

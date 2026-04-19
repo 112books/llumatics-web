@@ -1,5 +1,5 @@
 ---
-title: "Revelat B/N"
+title: "Revelat bàsic de pel·lícula B/N"
 subtitle: "Procés complet de revelat de pel·lícula en blanc i negre"
 lead: "Del negatiu a la còpia en paper: aprèn el procés químic complet de la fotografia analògica en dues sessions de laboratori."
 description: "Taller pràctic de revelat en blanc i negre. Procés químic, revelat de pel·lícula i còpia en paper. Laboratori analògic a Barcelona."

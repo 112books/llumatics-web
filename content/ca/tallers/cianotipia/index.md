@@ -14,22 +14,22 @@ formats:
   - puntual
 tags: ["cianotípia", "cyanotype", "procés alternatiu", "impressió", "blau", "solar", "sense càmera"]
 
-duration: "4 hores"
-sessions: 1
-price: 75
+duration: "8 hores (10:00–14:00 i 15:00–19:00)"
+sessions: 2
+price: 129
 max_places: 4
 location: "Nau Bostik, Barcelona"
 extern: false
 
-objective: "Comprendre i aplicar el procés de cianotípia per obtenir impressions fotogràfiques en paper amb la característica tonalitat blava prusiana."
-methodology: "Treball pràctic complet: preparació de l'emulsió, emulsionament del paper, exposició i revelat. Cada alumne treballa les seves pròpies peces."
-result: "4-6 peces en cianotípia: impressions de negatius, fotogrames d'objectes i experimentació amb variacions del procés."
-prerequisites: "Cap. La cianotípia no requereix cambra fosca ni equipament especial. Perfecta com a primera experiència en processos alternatius."
+objective: "Dominar el procés complet de cianotípia: preparació de la fórmula, sensibilització, exposició i revelat, incloent tècniques de virat i impressió sobre negatius propis."
+methodology: "Jornada completa en dues parts amb pausa de migdia. Matí: fonaments i fotogrames. Tarda: impressió amb negatius en acetat i variacions tècniques."
+result: "6-10 peces en cianotípia: fotogrames, impressions de negatius, experimentació amb virats i suports alternatius."
+prerequisites: "Cap coneixement tècnic previ. Els participants han de portar fotografies convertides a negatiu en acetate (o les generem a la sessió)."
 target: "Qualsevol persona curiosa per la fotografia química sense càmera. Artistes, dissenyadors, fotògrafs i no fotògrafs."
 related:
-  - fotografia-estenopèica
+  - fotogrames-cianotipia
   - reveladors-artesanals
-  - revelats-experimentals
+  - fotografia-estenopèica
 
 status: "soon"
 date: 2024-01-01

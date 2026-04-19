@@ -1,8 +1,8 @@
 ---
-title: "Càmera i exposició"
-subtitle: "Entén la teva càmera i la llum abans de prémer el disparador"
-lead: "Un taller pràctic per entendre d'una vegada com funciona una càmera i per què les fotos surten com surten."
-description: "Iniciació a la fotografia analògica: la càmera, la llum, el diafragma, la velocitat i el ISO. Sense artificis ni apps. Barcelona."
+title: "Taller d'iniciació a la fotografia analògica"
+subtitle: "Aprèn a controlar la llum. Serveix per a qualsevol càmera, analògica o digital."
+lead: "El punt de partida per a tothom: entendre com funciona una càmera i per què les fotos surten com surten. Treballem amb càmera analògica perquè obliga a pensar, però el que s'aprèn aquí s'aplica a qualsevol càmera."
+description: "Taller d'iniciació a la fotografia analògica a Barcelona. Diafragma, velocitat, ISO i exposició manual. Vàlid per a digital i analògica."
 image: "/images/tallers/camera-i-exposicio.jpg"
 
 blocs:
@@ -20,11 +20,11 @@ max_places: 4
 location: "Nau Bostik, Barcelona"
 extern: false
 
-objective: "Entendre el triangle d'exposició i ser capaç de fotografiar en mode manual amb una càmera analògica."
-methodology: "Teoria mínima i contextualitzada, pràctica amb càmeres analògiques al plató i al carrer."
-result: "Un carret exposat i el coneixement per tornar a casa i seguir fotografiant en manual."
+objective: "Entendre el triangle d'exposició i ser capaç de fotografiar en mode manual, amb qualsevol càmera."
+methodology: "Teoria mínima i contextualitzada, pràctica amb càmeres analògiques al plató i al carrer. La càmera analògica s'usa com a eina d'aprenentatge, no com a objectiu en si."
+result: "Un carret exposat i el coneixement per tornar a casa i fotografiar en manual, tant amb analògica com amb digital."
 prerequisites: "Cap. Ni tan sols cal tenir càmera —en podem deixar una."
-target: "Persones sense experiència prèvia que volen entendre la fotografia des dels seus fonaments, sense dreceres digitals."
+target: "Persones sense experiència prèvia, fotògrafs digitals que mai han entès del tot l'exposició manual, i tothom que vol refer les bases des de zero."
 related:
   - revelat-bn
   - fotografia-de-carrer
