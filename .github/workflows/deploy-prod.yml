@@ -30,15 +30,34 @@ jobs:
           hugo-version: '0.159.0'
           extended: true
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install staticrypt
+        run: npm install
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build
+      - name: Build Hugo
         env:
           HUGO_BASEURL: ${{ steps.pages.outputs.base_url }}/
         run: |
           hugo --minify --baseURL "$HUGO_BASEURL"
+
+      - name: Encrypt with staticrypt
+        # SITE_PASSWORD és un GitHub Secret: Settings → Secrets → Actions → New
+        # Nom: SITE_PASSWORD  Valor: la contrasenya que vulguis
+        run: |
+          npx staticrypt public/**/*.html \
+            --password "${{ secrets.SITE_PASSWORD }}" \
+            --config .staticrypt.json \
+            --directory public
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

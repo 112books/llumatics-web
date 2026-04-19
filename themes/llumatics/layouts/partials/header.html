@@ -4,8 +4,8 @@
 
       {{/* Logo */}}
       <a href="{{ "/" | relLangURL }}" class="site-logo">
-        {{ if fileExists "static/images/logo.png" }}
-          <img src="/images/logo.png" alt="{{ .Site.Params.logoAlt }}" height="40">
+        {{ if fileExists "static/images/llumatics-logo.svg" }}
+          <img src="/images/llumatics-logo.svg" alt="{{ .Site.Params.logoAlt }}" height="48" width="48">
         {{ else }}
           <span class="site-logo__text">{{ .Site.Title }}</span>
         {{ end }}

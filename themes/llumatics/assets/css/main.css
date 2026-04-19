@@ -128,8 +128,10 @@ button, input, select, textarea {
 }
 
 .site-logo img {
-  height: 40px;
-  width: auto;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 .site-logo__text {

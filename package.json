@@ -1,0 +1,11 @@
+{
+  "name": "llumatics-web",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "staticrypt": "^3.4.2"
+  },
+  "scripts": {
+    "encrypt": "staticrypt public/**/*.html --config .staticrypt.json --directory public"
+  }
+}

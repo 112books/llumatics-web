@@ -30,11 +30,28 @@ jobs:
           hugo-version: '0.159.0'
           extended: true
 
-      - name: Build (staging)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install staticrypt
+        run: npm install
+
+      - name: Build Hugo (staging, amb drafts)
         run: |
           hugo --minify --baseURL "https://112books.github.io/llumatics-web/" --buildDrafts
 
-      - name: Deploy to GitHub Pages (staging branch)
+      - name: Encrypt with staticrypt (staging)
+        run: |
+          npx staticrypt public/**/*.html \
+            --password "${{ secrets.SITE_PASSWORD }}" \
+            --config .staticrypt.json \
+            --directory public
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+
+      - name: Deploy to GitHub Pages (branca gh-pages-staging)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

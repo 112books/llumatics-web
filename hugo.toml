@@ -54,7 +54,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   author = "Llumàtics"
-  logo = "/images/logo.png"
+  logo = "/images/llumatics-logo.svg"
   logoAlt = "Llumàtics"
   contactEmail = "info@llumatics.com"
   instagram = "https://www.instagram.com/llumaticscat"

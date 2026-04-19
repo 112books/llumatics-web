@@ -4,3 +4,4 @@ resources/_gen/
 .DS_Store
 *.local.toml
 node_modules/
+package-lock.json

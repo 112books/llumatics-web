@@ -3,8 +3,8 @@
     <div class="site-footer__grid">
 
       <div class="site-footer__brand">
-        {{ if fileExists "static/images/logo.png" }}
-          <img src="/images/logo.png" alt="{{ .Site.Title }}">
+        {{ if fileExists "static/images/llumatics-logo.svg" }}
+          <img src="/images/llumatics-logo.svg" alt="{{ .Site.Title }}" style="height:40px;width:40px;filter:brightness(0) invert(1);">
         {{ else }}
           <div style="font-family: var(--font-serif); font-size: 1.25rem; color: white; margin-bottom: 1rem;">{{ .Site.Title }}</div>
         {{ end }}
