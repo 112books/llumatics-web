@@ -4,39 +4,38 @@ description: "Llumàtics is Joan Linux's photography school. Analogue, chemical 
 eyebrow: "Who we are"
 ---
 
-Llumàtics is a small photography school — deliberately small. No overcrowded classrooms, no showy curricula. What we have is a darkroom that actually works, an equipped studio, and many years doing what we love: teaching real photography.
+Llumàtics exists to share the passion for real photography with people who feel it the same way. We've been doing and teaching analogue photography for many years — long before hipsters made it fashionable a decade ago. We didn't come from a trend. We came from a necessity.
 
 ## Where we come from
 
-The story starts in **2011 at the Lomography Embassy Barcelona**, now known as [Cameras & Films](https://www.camerasandfilms.com). That's where photographer **Joan Linux** began teaching darkroom and analogue photography workshops, and discovered that teaching chemical photography wasn't nostalgia — it was a genuine need. A lot of people wanted to learn the process from scratch, without shortcuts.
+Joan Linux Martínez (Barcelona, 1972) grew up in a family of artists: ceramicists, sculptors and painters. That environment gave him, from a very early age, access to a reflex camera and a first glimpse of what would become his life.
 
-**2017** was the time to have a space of our own. Llumàtics opened in the **Poble-Sec** neighbourhood, with the lab and studio under the same roof. Small groups, close contact, plenty of chemistry.
+Working in photography means never stopping the research: new developing formulas, experimental techniques, new surfaces — including glass —, new results. And keeping close contact with creators from both similar and very different fields. He still gets moved watching an image appear magically while developing. And even more so, seeing the faces of people who have never witnessed it in person: the smell of the chemicals, the red light, the shift from total darkness to the blinding burst of the strobes.
 
-The pandemic changed the space but not the direction. Today Llumàtics operates from **[Nau Bostik](https://naubostik.com/)**, in the north of the city, in a studio that Joan shares with his personal photographic work.
+In **2011** he starts teaching workshops at the Lomography Embassy Barcelona, now [Cameras & Films](https://www.camerasandfilms.com). In **2017**, Llumàtics opens as its own school in the **Poble-Sec** neighbourhood. The pandemic moves the studio to **[Nau Bostik](https://naubostik.com/)**, in the north of the city, where it operates today.
+
+He is self-taught and has learned alongside masters including **Manuel Castro Prieto**, **Rubén Morales** and **Alfonso de Castro**. He has taught classes and given talks on experimental photography in various spaces and contexts. In 2020 he founded **[112 Books](https://112books.eu)**, an independent **photobook** publisher.
+
+More about Joan Linux at [about.pocallum.cat](https://about.pocallum.cat)
 
 ## The space
 
-Small but well thought-out. The darkroom has:
+The darkroom is small but well designed. It has **medium format and large format** enlargers, comfortable sinks for paper developing, a **fridge** to keep paper and film in good condition, a negative drying cabinet, a glazing machine and all the **chemicals** needed to work in film and paper. Next to the darkroom there is a **small studio** with paper backdrops and quality strobes.
 
-- **Medium format and large format** enlargers
-- Comfortable sinks for paper developing
-- A **fridge** to keep paper and film in good condition
-- Negative drying cabinet
-- Glazing machine for quality print finishing
-- All the **chemicals** needed for film and paper developing
+We also have a small but very interesting **library**: a collection of books on authors and photographic techniques, available to students.
 
-Next to the darkroom there's a **small studio** with paper backdrops and quality strobes, available for students during practical sessions.
-
-## Joan Linux
-
-Joan Linux Martínez (Barcelona, 1972) has been **teaching analogue photography in Barcelona for over fifteen years**. He is self-taught and has learned alongside masters including **Manuel Castro Prieto**, **Rubén Morales** and **Alfonso de Castro**. Beyond teaching, he works daily as a photographer: blues, jazz, performing arts, street photography and alternative processes. In 2020 he founded **112 Books**, an independent fotobook publisher.
-
-To find out more about his work: [about.pocallum.cat](https://about.pocallum.cat)
+**The space is a working studio, not a showroom.** Visits by appointment only.
 
 ## How we think about photography
 
-We're not theorists. We didn't come from fine arts faculties and we don't believe photography is learned by reading about it. We believe it's learned by doing — by making mistakes, by pulling a negative out of the fixer that didn't work, and understanding why.
+Photography has two inseparable parts.
 
-The chemistry, the process, the waiting time over the tray: none of this is an obstacle. It's the point. Analogue photography forces you to think before you shoot, to respect the light, to understand the relationship between light, time and matter. When you learn that properly, it changes how you see the world. And by extension, how you photograph with any camera.
+The **technical** side is learned through a solid theoretical foundation and a lot of practice. There are no shortcuts: you need to understand light, chemistry, the relationship between exposure time and developing temperature. We are rigorous here, and theoretical when needed — we're actually writing a rather theoretical book on graphic editing in the publishing world.
 
-We run small-group workshops, typically **4 to 6 people**, because the darkroom is small and because we believe individual attention isn't a luxury — it's a basic condition for learning.
+The **conceptual** side comes from all existing arts and needs to be watered and cultivated every day. We always recommend seeing exhibitions — of any kind, not necessarily photographic —, reading a lot, looking at author books, buying photobooks ([112books.eu is a good place to start](https://112books.eu)), and doing what we call **forensic analysis**: stopping in front of any photograph that catches your eye and asking yourself why.
+
+Documentary and street photography interest us a great deal, especially from a conceptual standpoint: as a form of communication, not as technical display.
+
+We didn't come from fine arts school. But we have taught classes and given talks on experimental photography in many different contexts. And we're still learning.
+
+Groups of **4 to 6 people** isn't a capacity limit — it's a pedagogical condition. When learning chemical photography, individual attention isn't a luxury, it's the minimum.

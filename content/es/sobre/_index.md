@@ -4,39 +4,38 @@ description: "Llumàtics es la escuela de fotografía de Joan Linux. Formación 
 eyebrow: "Quiénes somos"
 ---
 
-Llumàtics somos una escuela de fotografía pequeña, deliberadamente pequeña. No tenemos aulas masificadas ni currículums de escaparate. Lo que tenemos es un laboratorio que funciona de verdad, un plató equipado y muchos años haciendo lo que nos gusta: enseñar fotografía de la de verdad.
+Llumàtics existe para transmitir la pasión por la fotografía de toda la vida a las personas que la sienten de la misma manera. Llevamos muchos años haciendo y enseñando fotografía analógica —mucho antes de que los hipsters la pusieran de moda hace una década. No venimos de una tendencia. Venimos de una necesidad.
 
 ## De dónde venimos
 
-La historia empieza en **2011 en la Lomography Embassy Barcelona**, conocida hoy como [Cameras & Films](https://www.camerasandfilms.com). Allí, el fotógrafo **Joan Linux** comenzó a impartir talleres de revelado y fotografía analógica, y descubrió que enseñar fotografía química no era nostalgia sino necesidad: había mucha gente que quería aprender el proceso desde cero, sin atajos.
+Joan Linux Martínez (Barcelona, 1972) se crió en una familia de artistas: ceramistas, escultores y pintores. Ese entorno le dio, de muy pequeño, acceso a una cámara réflex y un primer vistazo a lo que sería su vida.
 
-En **2017** llegó el momento de tener un espacio propio. Llumàtics abrió en el barrio del **Poble-Sec**, con el laboratorio y el estudio en el mismo edificio. Pocos grupos, mucho contacto directo, mucha química.
+La formación en fotografía le obliga a no parar de investigar: creación de nuevas fórmulas de revelado, técnicas experimentales, nuevos soportes —incluido el vidrio—, nuevos resultados. Y a mantener contacto constante con creadores de ámbitos similares y muy diferentes. Todavía se emociona viendo cómo aparece mágicamente la imagen mientras revela. Y aún más, viendo la cara de la gente que nunca lo ha visto en directo: los olores de los productos químicos, la luz roja, el paso de la oscuridad al exceso de luz de los flashes.
 
-La pandemia cambió los planes de espacio pero no los de fondo. Hoy Llumàtics opera desde la **[Nau Bostik](https://naubostik.com/)**, al norte de la ciudad, en un estudio-plató que Joan comparte con su trabajo personal.
+En **2011** empieza a impartir talleres en la Lomography Embassy Barcelona, hoy [Cameras & Films](https://www.camerasandfilms.com). En **2017**, Llumàtics abre como escuela propia en el barrio del **Poble-Sec**. Con la pandemia, el estudio-plató se traslada a la **[Nau Bostik](https://naubostik.com/)**, al norte de la ciudad, donde opera hoy.
+
+Ha aprendido fotografía de manera autodidacta y junto a maestros como **Manuel Castro Prieto**, **Rubén Morales** y **Alfonso de Castro**. Ha impartido clases y conferencias sobre fotografía experimental en diversos espacios y contextos. En 2020 fundó **[112 Books](https://112books.eu)**, editorial independiente de **fotolibros**.
+
+Más sobre Joan Linux en [about.pocallum.cat](https://about.pocallum.cat)
 
 ## El espacio
 
-Pequeño pero bien pensado. El laboratorio dispone de:
+El laboratorio es pequeño pero bien pensado. Dispone de ampliadoras de **medio formato y gran formato**, pilas cómodas para revelar papel, **nevera** para conservar papel y película en buen estado, armario de secado de negativos, esmaltadora y todos los **productos químicos** necesarios para trabajar en película y papel. Además del laboratorio hay un **pequeño plató** con fondos de papel y flashes de calidad.
 
-- Ampliadoras de **medio formato y gran formato**
-- Pilas cómodas para revelar papel
-- **Nevera** para conservar papel y película en buen estado
-- Armario de secado de negativos
-- Esmaltadora para acabados de calidad
-- Todos los **productos químicos** para revelar en película y papel
+Contamos también con una pequeña pero muy interesante **biblioteca**: una colección de libros de autores y de técnicas fotográficas a disposición de los alumnos.
 
-Además del laboratorio hay un **pequeño plató** con fondos de papel y flashes de calidad, disponible para los alumnos en sesiones prácticas.
-
-## Joan Linux
-
-Joan Linux Martínez (Barcelona, 1972) lleva más de **quince años enseñando fotografía analógica** en Barcelona. Ha aprendido fotografía de manera autodidacta y junto a maestros como **Manuel Castro Prieto**, **Rubén Morales** y **Alfonso de Castro**. Además de la docencia, trabaja diariamente como fotógrafo: blues, jazz, artes escénicas, fotografía urbana y procesos alternativos. En 2020 fundó **112 Books**, editorial independiente de fotobooks.
-
-Si quieres saber más sobre su trayectoria: [about.pocallum.cat](https://about.pocallum.cat)
+**El espacio es de trabajo, no un escaparate.** Solo aceptamos visitas concertadas.
 
 ## Cómo entendemos la fotografía
 
-No somos teóricos. No venimos de las facultades de Bellas Artes ni creemos que la fotografía se aprenda leyendo. Creemos que se aprende haciendo, equivocándose, revelando el negativo que no ha salido bien y entendiendo por qué.
+La fotografía tiene dos partes inseparables.
 
-La química, el proceso, el tiempo de espera delante de la cubeta: todo esto no es un obstáculo sino el corazón de la cuestión. La fotografía analógica obliga a pensar antes de disparar, a respetar la luz, a entender la relación entre luz, tiempo y materia. Eso, cuando se aprende bien, cambia cómo se ve el mundo. Y por extensión, cómo se fotografía con cualquier cámara.
+La **técnica** se aprende con una base teórica sólida y mucha práctica. No hay atajos: hay que entender la luz, la química, la relación entre tiempo de exposición y temperatura de revelado. Aquí sí somos rigurosos y, si hace falta, teóricos —de hecho, estamos escribiendo un libro bastante teórico sobre la edición gráfica en el mundo editorial.
 
-Hacemos talleres de grupos reducidos, normalmente **entre 4 y 6 personas**, porque el laboratorio es pequeño y porque creemos que la atención individual no es un lujo sino una condición básica para aprender.
+La **conceptual** viene de todas las artes existentes y hay que regarla y cultivarla día a día. Recomendamos siempre ver exposiciones —de todo tipo, no hace falta que sean fotográficas—, leer mucho, mirar libros de autores, comprar fotolibros ([en 112books.eu, por ejemplo](https://112books.eu)), y hacer lo que llamamos **análisis forense**: detenerse ante cualquier fotografía que llame la atención y preguntarse por qué.
+
+La fotografía documental y de calle nos interesa mucho, y sobre todo desde el punto de vista conceptual: como forma de comunicación, no como exhibición técnica.
+
+No venimos de la facultad de Bellas Artes. Pero sí hemos impartido clases y conferencias sobre fotografía experimental en espacios muy diversos. Y seguimos aprendiendo.
+
+Los grupos de **4 a 6 personas** no es un límite de capacidad: es una condición pedagógica. Aprendiendo fotografía química, la atención individual no es un lujo, es el mínimo.
