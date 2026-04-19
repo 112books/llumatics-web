@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="section container">
 
-  {{/* Capçalera de la secció */}}
+  {{/* Capçalera */}}
   <div class="section__header" style="max-width:720px;">
     {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
     <h1 class="section__title">{{ .Title }}</h1>
@@ -9,48 +9,105 @@
     {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
   </div>
 
-  {{/* Navegació per blocs */}}
+  {{/* Navegació per blocs — filtre visual */}}
   {{ $blocs := hugo.Data.blocs }}
   {{ if $blocs }}
   <nav class="blocs-nav" aria-label="Filtrar per àmbit">
-    <a href="{{ .RelPermalink }}" class="bloc-pill {{ if not .Params.bloc }}bloc-pill--active{{ end }}">
+    <a href="#tots" class="bloc-pill bloc-pill--active js-bloc-filter" data-bloc="tots">
       Tots
     </a>
     {{ range $blocs }}
-    <a href="{{ "/blocs/" | relLangURL }}{{ .slug }}/"
-       class="bloc-pill">
+    <a href="#{{ .slug }}" class="bloc-pill js-bloc-filter" data-bloc="{{ .slug }}">
       <span aria-hidden="true">{{ .icon }}</span> {{ .nom }}
     </a>
     {{ end }}
   </nav>
   {{ end }}
 
-  {{/* Grid de tallers */}}
-  {{ $tallers := .Pages }}
-  {{ if $tallers }}
+  {{/* Tallers agrupats per bloc */}}
+  {{ $tallersInterns := where .Pages ".Params.extern" false }}
+  {{ $tallersInterns = where $tallersInterns ".Params.extern" "ne" true }}
+
+  {{ if $blocs }}
+    {{ range $blocs }}
+      {{ $blocSlug := .slug }}
+      {{ $blocNom  := .nom }}
+      {{ $blocIcon := .icon }}
+      {{ $blocDesc := .desc }}
+
+      {{/* Filtra tallers d'aquest bloc que NO siguin externs */}}
+      {{ $blocTallers := slice }}
+      {{ range $tallersInterns }}
+        {{ if in .Params.blocs $blocSlug }}
+          {{ $blocTallers = $blocTallers | append . }}
+        {{ end }}
+      {{ end }}
+
+      {{ if $blocTallers }}
+      <section class="bloc-section" id="{{ $blocSlug }}" data-bloc="{{ $blocSlug }}" style="margin-top:3.5rem;">
+        <div class="bloc-section__header">
+          <span class="bloc-icon" aria-hidden="true">{{ $blocIcon }}</span>
+          <div>
+            <h2 class="bloc-section__title">{{ $blocNom }}</h2>
+            <p class="bloc-section__desc">{{ $blocDesc }}</p>
+          </div>
+        </div>
+        <div class="courses-grid">
+          {{/* Ordre dins el bloc: iniciació primer, avançat últim */}}
+          {{ range sort $blocTallers ".Params.price" "asc" }}
+            {{ partial "course-card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{/* Fallback pla si no hi ha data de blocs */}}
     <div class="courses-grid" style="margin-top:2rem;">
-      {{ range $tallers }}
+      {{ range $tallersInterns }}
         {{ partial "course-card.html" . }}
       {{ end }}
     </div>
-  {{ else }}
-    <p style="color:var(--color-text-muted); margin-top:3rem;">Aviat hi haurà nous tallers disponibles.</p>
   {{ end }}
 
-  {{/* Tallers externs */}}
+  {{/* Tallers externs — secció separada */}}
   {{ $externs := where .Pages ".Params.extern" true }}
   {{ if $externs }}
-  <div style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
+  <section style="margin-top:5rem; padding-top:3rem; border-top:1px solid var(--color-border);">
     <p class="section__eyebrow">Col·laboracions</p>
     <h2 class="section__title" style="font-size:1.875rem; margin-bottom:0.5rem;">Tallers externs</h2>
-    <p class="section__subtitle" style="margin-bottom:2rem;">Tallers impartits fora de Llumàtics, en col·laboració amb altres espais.</p>
+    <p class="section__subtitle" style="margin-bottom:2rem;">
+      Tallers impartits en col·laboració amb altres espais. Mateix enfocament, entorn diferent.
+    </p>
     <div class="courses-grid">
       {{ range $externs }}
         {{ partial "course-card.html" . }}
       {{ end }}
     </div>
-  </div>
+  </section>
   {{ end }}
 
 </div>
+
+{{/* JS per al filtre per bloc (sense recàrrega de pàgina) */}}
+<script>
+(function(){
+  var pills   = document.querySelectorAll('.js-bloc-filter');
+  var seccions = document.querySelectorAll('.bloc-section');
+
+  pills.forEach(function(pill){
+    pill.addEventListener('click', function(e){
+      e.preventDefault();
+      var bloc = this.dataset.bloc;
+
+      pills.forEach(function(p){ p.classList.remove('bloc-pill--active'); });
+      this.classList.add('bloc-pill--active');
+
+      seccions.forEach(function(s){
+        s.style.display = (bloc === 'tots' || s.dataset.bloc === bloc) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
 {{ end }}

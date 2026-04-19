@@ -902,6 +902,37 @@ button, input, select, textarea {
   border-color: var(--color-text);
 }
 
+/* ── Seccions de bloc (llista tallers agrupada) ──────────────────────────── */
+.bloc-section__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bloc-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  opacity: 0.5;
+}
+
+.bloc-section__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+
+.bloc-section__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
 /* ── Fitxa pedagògica (dins single taller) ───────────────────────────────── */
 .fitxa-pedagogica {
   background: var(--color-bg-alt);
