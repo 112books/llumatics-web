@@ -60,6 +60,15 @@ No es tracta de fer rareses per fer-les. Es tracta d'entendre la química per do
 - Altres fòrmules: Rodinal casolà, D-76 alternatiu
 - Registre de resultats i calibratge personal
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els productes químics, el material per fer les fòrmules i la pel·lícula de prova estan inclosos. Porta els teus propis carretes si vols treballar amb material personal.
+- Tots els productes experimentals: components per a Caffenol, fòrmula Beers, stand developer, etc.
+- Pel·lícula de prova per a les comparatives
+
+## Cal portar
+
+- Carretes propis exposats si vols treballar amb material personal (opcional però recomanat)
+
+## No inclòs
+
+- Carretes addicionals per a proves extra (~5€/unitat)

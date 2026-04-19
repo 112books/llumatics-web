@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{ $isExtern := .Params.extern | default false }}
+{{ $courseSlug := .File.ContentBaseName }}
+{{ $agendaDates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
+{{ $upcomingDates := where $agendaDates ".Params.status" "active" }}
+
 <div class="course-single container">
 
   {{/* Breadcrumb */}}
@@ -34,10 +39,11 @@
         <span class="tag tag--level-{{ . | urlize }}">{{ . | title }}</span>
       {{ end }}
       {{ range .Params.formats }}
-        <span class="tag">{{ . | title }}</span>
+        {{ if eq . "curs" }}<span class="tag tag--format">Recorregut</span>
+        {{ else }}<span class="tag">{{ . | title }}</span>{{ end }}
       {{ end }}
-      {{ if .Params.extern }}
-        <span class="tag" style="background:#FFF7ED;color:#92400E;">Taller extern</span>
+      {{ if $isExtern }}
+        <span class="tag tag--extern">Col·laboració Cameras & Films</span>
       {{ end }}
     </div>
 
@@ -50,9 +56,10 @@
     {{ end }}
   </header>
 
+  {{/* Imatge principal */}}
   {{ if .Params.image }}
-  <div style="margin-bottom:3rem; border-radius:4px; overflow:hidden; max-height:520px;">
-    <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width:100%; object-fit:cover; max-height:520px;">
+  <div class="course-single__cover">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="eager">
   </div>
   {{ end }}
 
@@ -62,7 +69,18 @@
     <div class="prose">
       {{ .Content }}
 
-      {{/* Fitxa pedagògica expandida */}}
+      {{/* Galeria d'imatges secundàries */}}
+      {{ with .Params.images }}
+      <div class="course-single__gallery">
+        {{ range . }}
+        <div class="gallery__item">
+          <img src="{{ . }}" alt="" loading="lazy">
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* Fitxa pedagògica */}}
       {{ if or .Params.objective .Params.methodology .Params.result .Params.target }}
       <div class="fitxa-pedagogica">
         <h2>Fitxa del taller</h2>
@@ -128,9 +146,16 @@
     {{/* Caixa lateral */}}
     <aside class="course-single__info-box">
       <div class="info-box__price">
-        {{ with .Params.price }}
-          {{ if gt . 0 }}{{ . }}€{{ else }}A consultar{{ end }}
-        {{ else }}A consultar{{ end }}
+        {{ if and .Params.price (gt (.Params.price | int) 0) }}
+          {{ if in (.Params.formats | default slice) "curs" }}
+            <span class="course-card__format-badge">Recorregut</span>
+          {{ end }}
+          {{ .Params.price }}€
+        {{ else if and .Params.price (eq (.Params.price | int) 0) }}
+          Gratuït
+        {{ else }}
+          A consultar
+        {{ end }}
       </div>
 
       {{ with .Params.duration }}
@@ -150,7 +175,7 @@
       <div class="info-box__row">
         <span class="info-box__label">Lloc</span>
         <span class="info-box__value">
-          {{ if .Params.extern }}
+          {{ if $isExtern }}
             {{ .Params.extern_location | default .Params.location }}
           {{ else }}
             {{ .Params.location | default "Nau Bostik, Barcelona" }}
@@ -163,57 +188,88 @@
         <span class="info-box__value">Màx. {{ .Params.max_places | default 4 }}</span>
       </div>
 
-      {{ range .Params.levels }}
+      {{ range first 1 .Params.levels }}
       <div class="info-box__row">
         <span class="info-box__label">Nivell</span>
         <span class="info-box__value">{{ . | title }}</span>
       </div>
       {{ end }}
 
-      {{/* Properes dates */}}
-      {{ $courseSlug := .File.ContentBaseName }}
-      {{ $dates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
-      {{ if $dates }}
-      <div style="margin-top:1.5rem; margin-bottom:1rem;">
-        <p style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:0.75rem;">
-          Properes dates
-        </p>
-        {{ range $dates | first 3 }}
-          <div style="font-size:0.875rem; padding:0.5rem 0; border-bottom:1px solid var(--color-border);">
-            {{ with .Params.date_start }}{{ . | time.Format "2 Jan 2006" }}{{ end }}
-            {{ with .Params.time_start }} · {{ . }}h{{ end }}
-          </div>
-        {{ end }}
-      </div>
-      {{ end }}
+      {{/* ── Dates i CTA: lògica on-demand vs. C&F ── */}}
+      {{ if $isExtern }}
 
-      <div class="info-box__cta">
-        {{ $status := .Params.status | default "soon" }}
-        {{ if eq $status "active" }}
-          {{ if $.Site.Params.tallyFormContact }}
-            <a href="https://tally.so/r/{{ $.Site.Params.tallyFormContact }}?curs={{ .File.ContentBaseName }}"
-               target="_blank" rel="noopener"
-               class="btn btn--primary">
-              Inscripció
-            </a>
+        {{/* Taller gestionat per Cameras & Films */}}
+        <div class="info-box__scheduling info-box__scheduling--extern">
+          <p class="info-box__scheduling-label">Dates i inscripció</p>
+          <p class="info-box__scheduling-text">
+            Aquest taller el programa i gestiona directament <strong>Cameras & Films</strong>. Les dates les anuncia la botiga.
+          </p>
+          {{ if $upcomingDates }}
+          <div class="info-box__dates">
+            {{ range $upcomingDates | first 3 }}
+              <div class="info-box__date-item">
+                <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
+                {{ with .Params.time_start }}<span>{{ . }}h</span>{{ end }}
+                {{ if .Params.purchase_url }}
+                  <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Comprar</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+          {{ end }}
+          <a href="https://www.instagram.com/camerasandfilms/" target="_blank" rel="noopener"
+             class="btn btn--outline btn--sm" style="margin-top:0.75rem; width:100%;">
+            Cameras & Films a Instagram →
+          </a>
+        </div>
+
+      {{ else }}
+
+        {{/* Taller sota demanda */}}
+        {{ if $upcomingDates }}
+        <div class="info-box__dates" style="margin-top:1.5rem; margin-bottom:1rem;">
+          <p class="info-box__scheduling-label">Properes dates</p>
+          {{ range $upcomingDates | first 3 }}
+            <div class="info-box__date-item">
+              <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
+              {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
+              {{ if .Params.purchase_url }}
+                <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Comprar</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}" class="btn btn--outline btn--xs">Info</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        {{ else }}
+        <div class="info-box__scheduling info-box__scheduling--ondemand">
+          <p class="info-box__scheduling-label">Taller sota demanda</p>
+          <p class="info-box__scheduling-text">
+            No hi ha dates fixes. Escriu-nos i busquem una data que t'encaixi.
+          </p>
+          <p class="info-box__scheduling-text" style="margin-top:0.5rem;">
+            Pots fer-ho en grup (màx. {{ .Params.max_places | default 4 }} persones) o en <strong>classe particular</strong>, que resulta més econòmica per participant si sou 1 o 2.
+          </p>
+        </div>
+        {{ end }}
+
+        <div class="info-box__cta">
+          {{ $status := .Params.status | default "soon" }}
+          {{ if eq $status "full" }}
+            <button class="btn btn--secondary" disabled>Complet</button>
           {{ else }}
-            <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Inscripció: {{ .Title }}"
+            <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Reserva: {{ .Title }}"
                class="btn btn--primary">
-              Inscripció
+              Sol·licita una data
             </a>
           {{ end }}
-        {{ else if eq $status "full" }}
-          <button class="btn btn--secondary" disabled>Complet</button>
-        {{ else }}
-          <button class="btn btn--secondary" disabled>Pròximament</button>
-        {{ end }}
+          <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Consulta: {{ .Title }}"
+             class="btn btn--secondary">
+            Fer una consulta
+          </a>
+        </div>
 
-        <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Consulta: {{ .Title }}"
-           class="btn btn--secondary">
-          Fer una consulta
-        </a>
-      </div>
-
+      {{ end }}
     </aside>
   </div>
 

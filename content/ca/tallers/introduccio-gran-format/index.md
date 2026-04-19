@@ -56,6 +56,18 @@ Aquest taller és el primer pas. No el definitiu, però sí el necessari per sab
 - Exposició de les primeres plànxes al plató o exterior
 - Revelat en cubeta i lectura del resultat
 
-## Materials inclosos
+## Inclòs en el preu
 
-Ús de la càmera, els objectius i els portaplànxes. Plànxes 4×5\" i productes químics inclosos.
+- Ús de la càmera de plànxes, objectius i portaplànxes
+- 2–4 plànxes 4×5" per participant
+- Productes químics de revelat
+- Ús del laboratori
+
+## Cal portar
+
+- Res. Tot el material és del laboratori.
+
+## No inclòs
+
+- Plànxes addicionals (+4€/plànxa)
+- Si vols continuar, el taller de Gran Format 4×5" és el pas natural

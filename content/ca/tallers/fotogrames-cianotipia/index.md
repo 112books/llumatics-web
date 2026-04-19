@@ -52,6 +52,16 @@ Aquest és el taller d'entrada. Si t'enganxa —i normalment enganxa—, el tall
 - Revelat amb aigua i oxidació: aparició de la imatge
 - Variacions possibles: superposició, moviment, transparències
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els materials estan inclosos. No cal portar res. **L'accés és gratuït amb inscripció prèvia obligatòria.**
+- Tot: paper sensibilitzat, productes químics, objectes per als fotogrames
+- **Accés completament gratuït**
+
+## Cal portar
+
+- Res. Tot el material es facilita.
+- Si vols, pots portar objectes personals per als teus fotogrames: fulles, plomes, claus, teixits, qualsevol cosa amb forma interessant.
+
+## No inclòs
+
+- N/A — el taller és gratuït. Inscripció prèvia obligatòria (places limitades).

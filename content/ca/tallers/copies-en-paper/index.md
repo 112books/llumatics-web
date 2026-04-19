@@ -52,6 +52,17 @@ Aquest taller és la continuació natural del revelat de pel·lícula. Portes el
 - Controls locals: esquivar (aclarir zones) i cremar (enfosquir zones)
 - Acabats: esmaltadora, assecat i presentació
 
-## Materials inclosos
+## Inclòs en el preu
 
-Paper fotogràfic, productes químics i ús del laboratori inclosos. Porta els teus negatius de 35mm o mig format.
+- Paper fotogràfic RC multigrau (4–6 fulls)
+- Productes químics: revelador de paper, stop, fixador
+- Ús de l'ampliadora i el laboratori
+
+## Cal portar
+
+- Negatius revelats de 35mm o mig format. Si no en tens, treballem amb negatius de mostra.
+
+## No inclòs
+
+- Paper addicional (+2€/full RC, +4€/full fibra)
+- Paper de fibra de gran format (consultar)

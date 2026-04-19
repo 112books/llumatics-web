@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="section container">
+
+  <div class="section__header" style="max-width:720px;">
+    {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="section__title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+  </div>
+
+  <div class="prose espais-prose">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}

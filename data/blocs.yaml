@@ -25,6 +25,15 @@
   desc_en: "Image-making in real contexts: portrait, street, scene."
   icon: "◎"
 
+- slug: mig-format
+  nom: "Mig format"
+  nom_es: "Medio formato"
+  nom_en: "Medium format"
+  desc: "Fotografia 6×6 i 120. Un pas més enrere per mirar diferent."
+  desc_es: "Fotografía 6×6 y 120. Un paso atrás para mirar diferente."
+  desc_en: "6×6 and 120 photography. A step back to see differently."
+  icon: "▣"
+
 - slug: gran-format
   nom: "Gran format"
   nom_es: "Gran formato"

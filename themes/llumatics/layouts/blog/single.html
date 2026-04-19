@@ -1,0 +1,54 @@
+{{ define "main" }}
+<article class="section container">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="{{ "/blog" | relLangURL }}">Blog</a>
+    <span class="breadcrumb__sep">›</span>
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <header class="blog-post__header">
+    <p class="blog-post__date">{{ .Date | time.Format "2 January 2006" }}</p>
+    {{ with .Params.tags }}
+    <div class="blog-card__tags" style="margin-bottom:1rem;">
+      {{ range . }}<span class="bloc-pill bloc-pill--sm">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    <h1 class="blog-post__title">{{ .Title }}</h1>
+    {{ with .Params.lead }}
+    <p class="blog-post__lead">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Params.image }}
+  <div class="blog-post__cover">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="eager">
+  </div>
+  {{ end }}
+
+  <div class="prose blog-post__content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.course_ref }}
+  {{ $taller := site.GetPage (printf "/ca/tallers/%s" .) }}
+  {{ if $taller }}
+  <div class="blog-post__related-course">
+    <p class="blog-post__related-label">{{ i18n "blog_related_course" | default "Taller relacionat" }}</p>
+    <a href="{{ $taller.RelPermalink }}" class="btn btn--outline btn--sm">
+      {{ $taller.Title }} →
+    </a>
+  </div>
+  {{ end }}
+  {{ end }}
+
+  <footer class="blog-post__footer">
+    <a href="{{ "/blog" | relLangURL }}" class="blog-post__back">
+      ← {{ i18n "blog_back" | default "Tornar al blog" }}
+    </a>
+  </footer>
+
+</article>
+{{ end }}

@@ -54,6 +54,16 @@ En aquest taller sortim al carrer. Amb càmera analògica, carret carregat i la 
 - Composició en moviment: decisió ràpida vs. anticipació
 - Revisió col·lectiva: analitzem el que hem fet i per què
 
-## Materials inclosos
+## Inclòs en el preu
 
-Carret de 35mm B/N inclòs. Si tens càmera analògica, porta-la; si no, en podem deixar una. El revelat del carret no és inclòs en aquesta sessió, però es pot fer en un taller posterior o com a sessió privada addicional.
+- Carret de 35mm B/N
+- Revelat del carret el mateix dia
+- Digitalització de tots els fotogrames del carret
+
+## Cal portar
+
+- Càmera analògica de 35mm pròpia (imprescindible per a aquest taller; no deixem càmeres per a sortides al carrer)
+
+## No inclòs
+
+- Còpies en paper dels fotogrames (taller de Còpies en paper)

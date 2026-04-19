@@ -1,0 +1,85 @@
+{{/* Partial: recorregut.html — Línia del temps del recorregut formatiu
+     Ús: {{ partial "recorregut.html" . }}
+*/}}
+{{ $rec := hugo.Data.recorregut }}
+{{ if not $rec }}{{ return }}{{ end }}
+
+{{ $lang := site.Language.Lang }}
+
+<section class="recorregut" id="recorregut">
+  <div class="recorregut__header">
+    <p class="section__eyebrow">
+      {{ if eq $lang "es" }}Itinerario{{ else if eq $lang "en" }}Learning path{{ else }}Recorregut{{ end }}
+    </p>
+    <h2 class="recorregut__title">
+      {{ if eq $lang "es" }}El camino ideal{{ else if eq $lang "en" }}The ideal journey{{ else }}El camí ideal{{ end }}
+    </h2>
+    <p class="recorregut__subtitle">
+      {{ if eq $lang "es" }}Orden recomendado para profundizar progresivamente en la fotografía analógica.
+      {{ else if eq $lang "en" }}Recommended order to progressively deepen your analogue photography practice.
+      {{ else }}Ordre recomanat per aprofundir progressivament en la fotografia analògica.{{ end }}
+    </p>
+  </div>
+
+  {{/* ── Camí principal ──────────────────────────────── */}}
+  <div class="recorregut__timeline" role="list">
+    {{ range $rec.core }}
+    {{ $title := .title }}
+    {{ if eq $lang "es" }}{{ $title = .title_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
+    {{ $desc := .desc }}
+    {{ if eq $lang "es" }}{{ $desc = .desc_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $desc = .desc_en }}{{ end }}
+    {{ $aviat := .aviat | default false }}
+
+    <div class="recorregut__step{{ if $aviat }} recorregut__step--aviat{{ end }}" data-bloc="{{ .bloc }}" role="listitem">
+      <div class="recorregut__connector" aria-hidden="true"></div>
+      <div class="recorregut__node" aria-hidden="true">
+        <span class="recorregut__num">{{ .step }}</span>
+      </div>
+      <div class="recorregut__step-body">
+        {{ if and .slug (not $aviat) }}
+          <a href="{{ "/tallers/" | relLangURL }}{{ .slug }}/" class="recorregut__step-title">{{ $title }}</a>
+        {{ else }}
+          <span class="recorregut__step-title">{{ $title }}</span>
+        {{ end }}
+        {{ with $desc }}<p class="recorregut__step-desc">{{ . }}</p>{{ end }}
+        {{ if $aviat }}
+          <span class="recorregut__badge">
+            {{ if eq $lang "es" }}Próximamente{{ else if eq $lang "en" }}Coming soon{{ else }}Aviat{{ end }}
+          </span>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* ── Especialitzacions ───────────────────────────── */}}
+  {{ if $rec.tematic }}
+  <div class="recorregut__tematic">
+    <p class="recorregut__tematic-label" aria-hidden="true">
+      {{ if eq $lang "es" }}Especializaciones{{ else if eq $lang "en" }}Specialisations{{ else }}Especialitzacions{{ end }}
+    </p>
+    <div class="recorregut__tematic-grid" role="list">
+      {{ range $rec.tematic }}
+      {{ $title := .title }}
+      {{ if eq $lang "es" }}{{ $title = .title_es }}{{ end }}
+      {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
+      <div class="recorregut__tematic-item" data-bloc="{{ .bloc }}" role="listitem">
+        {{ if .slug }}
+          <a href="{{ "/tallers/" | relLangURL }}{{ .slug }}/" class="recorregut__tematic-link">
+            {{ $title }}
+            {{ with .desc }}<span class="recorregut__tematic-sub">{{ . }}</span>{{ end }}
+          </a>
+        {{ else }}
+          <span class="recorregut__tematic-link recorregut__tematic-link--aviat">
+            {{ $title }}
+          </span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+</section>

@@ -6,8 +6,8 @@ description: "Taller pràctic de la càmera Hasselblad sèrie 500. Mig format 6�
 image: "/images/tallers/hasselblad-500.jpg"
 
 blocs:
+  - mig-format
   - practica
-  - gran-format
 levels:
   - intermedi
 formats:
@@ -16,7 +16,7 @@ tags: ["hasselblad", "mig format", "6x6", "120", "retrat", "doble exposició", "
 
 duration: "3,5 hores"
 sessions: 1
-price: 99
+price: 110
 max_places: 4
 location: "Nau Bostik, Barcelona"
 extern: false
@@ -55,6 +55,19 @@ En aquest taller hi ha temps per a tot: per entendre el sistema, per disparar am
 - Pràctica: un rodet complet de 120 (12 fotogrames 6×6)
 - Revelat del rodet i digitalització de tots els fotogrames
 
-## Materials inclosos
+## Inclòs en el preu
 
-Un rodet de 120 en B/N, revelat i digitalització dels fotogrames inclosos. Piscolabis al final. Si tens Hasselblad 500 porta-la; si no, en podem deixar una.
+- Un rodet de 120 B/N (12 fotogrames 6×6)
+- Revelat del rodet el mateix dia
+- Digitalització dels 12 fotogrames
+- Piscolabis al final de la sessió
+- Càmera Hasselblad 500 disponible si no en tens
+
+## Cal portar
+
+- Hasselblad 500 pròpia si en tens (no és obligatori)
+
+## No inclòs
+
+- Rodet addicional de 120 (+12€)
+- Còpies en paper dels fotogrames (taller de Còpies en paper)

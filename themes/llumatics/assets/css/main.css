@@ -39,6 +39,7 @@
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
@@ -110,7 +111,7 @@ button, input, select, textarea {
   z-index: 100;
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
-  padding-block: var(--space-4);
+  padding-block: var(--space-3);
 }
 
 .site-header__inner {
@@ -125,28 +126,31 @@ button, input, select, textarea {
   align-items: center;
   gap: var(--space-3);
   flex-shrink: 0;
+  color: var(--color-text);
 }
 
 .site-logo img {
-  height: 44px;
-  width: 44px;
+  height: 56px;
+  width: 56px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .site-logo__text {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
+  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1;
+  color: var(--color-text);
 }
 
 /* Al footer el logo es mostra sobre fons fosc —
    no cal filter: la marca ja té cercle fosc,
    posem un fons blanc darrere per fer-lo llegible */
 .site-footer__brand .site-logo-img {
-  height: 44px;
-  width: 44px;
+  height: 56px;
+  width: 56px;
   object-fit: contain;
   background: #fff;
   border-radius: 50%;
@@ -230,13 +234,13 @@ button, input, select, textarea {
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
-  padding-block: var(--space-24);
+  padding-block: var(--space-16);
   position: relative;
   overflow: hidden;
 }
 
 .hero--with-image {
-  min-height: 80vh;
+  min-height: 72vh;
   display: flex;
   align-items: center;
 }
@@ -248,7 +252,7 @@ button, input, select, textarea {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.25;
+  opacity: 0.18;
 }
 
 .hero__content {
@@ -267,18 +271,19 @@ button, input, select, textarea {
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(var(--text-3xl), 6vw, var(--text-5xl));
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-6);
-  max-width: 800px;
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+  max-width: 760px;
 }
 
 .hero__subtitle {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
-  max-width: 600px;
+  max-width: 540px;
   margin-bottom: var(--space-8);
+  line-height: 1.6;
 }
 
 /* ── Botons ─────────────────────────────────────────────────────────────── */
@@ -345,18 +350,32 @@ button, input, select, textarea {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Franja de color per bloc (s'assigna via data-bloc) */
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--bloc-color, var(--color-border));
+  z-index: 1;
 }
 
 .course-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+  border-color: var(--bloc-color, var(--color-border));
 }
 
 .course-card__image {
-  aspect-ratio: 16/9;
+  aspect-ratio: 3/2;
   overflow: hidden;
   background: var(--color-bg-alt);
 }
@@ -365,15 +384,15 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 400ms ease;
+  transition: transform 500ms ease;
 }
 
 .course-card:hover .course-card__image img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .course-card__body {
-  padding: var(--space-6);
+  padding: var(--space-5) var(--space-6) var(--space-6);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -382,7 +401,8 @@ button, input, select, textarea {
 .course-card__meta {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   margin-bottom: var(--space-3);
@@ -397,16 +417,17 @@ button, input, select, textarea {
 
 .course-card__title {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   line-height: 1.3;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .course-card__excerpt {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   flex: 1;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+  line-height: 1.6;
 }
 
 .course-card__footer {
@@ -419,8 +440,23 @@ button, input, select, textarea {
 }
 
 .course-card__price {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 700;
+  color: var(--color-text);
+}
+
+.course-card__cta {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color var(--transition);
+}
+
+.course-card:hover .course-card__cta {
+  color: var(--color-text);
 }
 
 .course-card__status {
@@ -793,7 +829,6 @@ button, input, select, textarea {
 }
 
 .site-footer__brand { color: var(--color-bg); }
-.site-footer__brand img { height: 32px; margin-bottom: var(--space-4); filter: brightness(0) invert(1); }
 
 .site-footer__tagline {
   font-size: var(--text-sm);
@@ -855,6 +890,42 @@ button, input, select, textarea {
   margin-bottom: var(--space-8);
 }
 
+/* ── Colors per bloc ─────────────────────────────────────────────────────── */
+/* Paleta suau: cada bloc té color d'accent, bg clar i text */
+:root {
+  --bloc-fonaments-color:      #C8A96E;  /* daurat — la llum */
+  --bloc-fonaments-bg:         #FFF8EE;
+  --bloc-fonaments-text:       #7C5C1E;
+
+  --bloc-proces-color:         #B5673A;  /* terracota — la química */
+  --bloc-proces-bg:            #FFF4EE;
+  --bloc-proces-text:          #8B3E1D;
+
+  --bloc-practica-color:       #4D8B6F;  /* verd fosc — el carrer */
+  --bloc-practica-bg:          #F0FAF5;
+  --bloc-practica-text:        #1D5C3F;
+
+  --bloc-mig-format-color:     #4A72B8;  /* blau — el visor quadrat */
+  --bloc-mig-format-bg:        #EEF4FF;
+  --bloc-mig-format-text:      #1E3A70;
+
+  --bloc-gran-format-color:    #5C5C5C;  /* gris carbó — la placa */
+  --bloc-gran-format-bg:       #F4F4F2;
+  --bloc-gran-format-text:     #2C2C2C;
+
+  --bloc-processos-alternatius-color: #7C5EA8;  /* malva — l'experiment */
+  --bloc-processos-alternatius-bg:    #F7F1FF;
+  --bloc-processos-alternatius-text:  #3D1A72;
+}
+
+/* Assignació del color de bloc als cards i seccions */
+[data-bloc="fonaments"]             { --bloc-color: var(--bloc-fonaments-color); --bloc-bg: var(--bloc-fonaments-bg); --bloc-text: var(--bloc-fonaments-text); }
+[data-bloc="proces"]                { --bloc-color: var(--bloc-proces-color);    --bloc-bg: var(--bloc-proces-bg);    --bloc-text: var(--bloc-proces-text); }
+[data-bloc="practica"]              { --bloc-color: var(--bloc-practica-color);  --bloc-bg: var(--bloc-practica-bg);  --bloc-text: var(--bloc-practica-text); }
+[data-bloc="mig-format"]            { --bloc-color: var(--bloc-mig-format-color); --bloc-bg: var(--bloc-mig-format-bg); --bloc-text: var(--bloc-mig-format-text); }
+[data-bloc="gran-format"]           { --bloc-color: var(--bloc-gran-format-color); --bloc-bg: var(--bloc-gran-format-bg); --bloc-text: var(--bloc-gran-format-text); }
+[data-bloc="processos-alternatius"] { --bloc-color: var(--bloc-processos-alternatius-color); --bloc-bg: var(--bloc-processos-alternatius-bg); --bloc-text: var(--bloc-processos-alternatius-text); }
+
 /* ── Tags i badges ───────────────────────────────────────────────────────── */
 .tag {
   display: inline-block;
@@ -869,7 +940,7 @@ button, input, select, textarea {
 .tag--level-iniciacio  { background: #ECFDF5; color: #065F46; }
 .tag--level-intermedi  { background: #EFF6FF; color: #1E40AF; }
 .tag--level-avançat    { background: #FDF4FF; color: #6B21A8; }
-.tag--bloc             { background: #FFF7ED; color: #92400E; }
+.tag--bloc             { background: var(--bloc-bg, #FFF7ED); color: var(--bloc-text, #92400E); }
 
 /* ── Navegació per blocs (llista tallers) ────────────────────────────────── */
 .blocs-nav {
@@ -895,36 +966,55 @@ button, input, select, textarea {
   white-space: nowrap;
 }
 
-.bloc-pill:hover,
+.bloc-pill:hover {
+  border-color: var(--bloc-color, var(--color-text));
+  color: var(--bloc-color, var(--color-text));
+  background: var(--bloc-bg, transparent);
+}
+
 .bloc-pill--active {
-  background: var(--color-text);
-  color: var(--color-bg);
-  border-color: var(--color-text);
+  background: var(--bloc-color, var(--color-text));
+  color: #fff;
+  border-color: var(--bloc-color, var(--color-text));
 }
 
 /* ── Seccions de bloc (llista tallers agrupada) ──────────────────────────── */
+.bloc-section {
+  border-radius: var(--radius-md);
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  background: var(--bloc-bg, var(--color-bg-alt));
+}
+
 .bloc-section__header {
   display: flex;
   align-items: flex-start;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .bloc-icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1;
   flex-shrink: 0;
-  margin-top: 0.25rem;
-  opacity: 0.5;
+  margin-top: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bloc-color, var(--color-border));
+  color: #fff;
+  border-radius: 6px;
 }
 
 .bloc-section__title {
   font-family: var(--font-serif);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   line-height: 1.2;
   margin-bottom: var(--space-1);
+  color: var(--bloc-text, var(--color-text));
 }
 
 .bloc-section__desc {
@@ -969,6 +1059,389 @@ button, input, select, textarea {
 }
 
 .fitxa-row dd { margin: 0; }
+
+/* ── Bloc tiles (home — àmbits de formació) ─────────────────────────────── */
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.blocs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-block: var(--space-8);
+}
+
+.bloc-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--bloc-bg, var(--color-bg-alt));
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.bloc-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  border-color: var(--bloc-color, var(--color-border));
+}
+
+.bloc-tile__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--bloc-color, var(--color-text-muted));
+  margin-bottom: var(--space-1);
+}
+
+.bloc-tile__name {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  color: var(--bloc-text, var(--color-text));
+  margin: 0;
+}
+
+.bloc-tile__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.bloc-tile__arrow {
+  font-size: var(--text-sm);
+  color: var(--bloc-color, var(--color-text-muted));
+  margin-top: var(--space-3);
+  transition: transform var(--transition);
+}
+
+.bloc-tile:hover .bloc-tile__arrow {
+  transform: translateX(4px);
+}
+
+/* ── Recorregut formatiu (línia del temps) ───────────────────────────────── */
+.recorregut {
+  margin-block: var(--space-12);
+}
+
+.recorregut__header {
+  max-width: 620px;
+  margin-bottom: var(--space-10);
+}
+
+.recorregut__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  line-height: 1.15;
+  margin-bottom: var(--space-3);
+}
+
+.recorregut__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Timeline — camí principal */
+.recorregut__timeline {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0;
+  position: relative;
+  margin-bottom: var(--space-12);
+}
+
+/* Línia horitzontal de fons */
+.recorregut__timeline::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: calc(100% / 16);
+  right: calc(100% / 16);
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.recorregut__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--space-2);
+}
+
+.recorregut__connector {
+  display: none; /* used only in mobile vertical layout */
+}
+
+.recorregut__node {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bloc-color, var(--color-border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: var(--space-3);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.recorregut__step--aviat .recorregut__node {
+  background: var(--color-bg-alt);
+  border: 2px dashed var(--color-border);
+}
+
+.recorregut__num {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.recorregut__step--aviat .recorregut__num {
+  color: var(--color-text-muted);
+}
+
+.recorregut__step:not(.recorregut__step--aviat):hover .recorregut__node {
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.recorregut__step-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.recorregut__step-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a.recorregut__step-title:hover {
+  color: var(--color-accent);
+}
+
+.recorregut__step--aviat .recorregut__step-title {
+  color: var(--color-text-muted);
+}
+
+.recorregut__step-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.recorregut__badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  padding: 2px 6px;
+  border-radius: var(--radius);
+  margin-top: var(--space-1);
+}
+
+/* Especialitzacions */
+.recorregut__tematic {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+}
+
+.recorregut__tematic-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.recorregut__tematic-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.recorregut__tematic-item {
+  /* inherits --bloc-color, --bloc-bg, --bloc-text via data-bloc */
+}
+
+.recorregut__tematic-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bloc-bg, var(--color-bg-alt));
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--bloc-text, var(--color-text));
+  text-decoration: none;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+a.recorregut__tematic-link:hover {
+  border-color: var(--bloc-color, var(--color-border));
+  transform: translateY(-1px);
+}
+
+.recorregut__tematic-link--aviat {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.recorregut__tematic-sub {
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Responsive — timeline vertical en mòbil */
+@media (max-width: 900px) {
+  .recorregut__timeline {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .recorregut__timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 19px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .recorregut__step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: var(--space-2) 0;
+    gap: var(--space-4);
+  }
+
+  .recorregut__node {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .recorregut__step-body {
+    align-items: flex-start;
+    padding-top: var(--space-2);
+  }
+
+  .recorregut__step-title {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ── Blog preview (home) ─────────────────────────────────────────────────── */
+.blog-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-block: var(--space-8);
+}
+
+.blog-preview-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.blog-preview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+}
+
+.blog-preview-card__image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  display: block;
+  background: var(--color-bg-alt);
+}
+
+.blog-preview-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.blog-preview-card:hover .blog-preview-card__image img {
+  transform: scale(1.03);
+}
+
+.blog-preview-card__body {
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-preview-card__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.blog-preview-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+}
+
+.blog-preview-card__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-preview-card__title a:hover {
+  color: var(--color-accent);
+}
+
+.blog-preview-card__lead {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
 
 /* ── Breadcrumb ──────────────────────────────────────────────────────────── */
 .breadcrumb {
@@ -1041,7 +1514,348 @@ button, input, select, textarea {
   .agenda-item:last-child > *:last-child { grid-column: 2; }
 }
 
+@media (max-width: 768px) {
+  .blocs-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-preview-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 480px) {
   .container, .container--narrow { padding-inline: var(--space-4); }
   .courses-grid { grid-template-columns: 1fr; }
+  .blocs-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Blog ──────────────────────────────────────────────────────────────────── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.blog-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s ease;
+}
+.blog-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+
+.blog-card__image-link { display: block; }
+.blog-card__image {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.blog-card:hover .blog-card__image img { transform: scale(1.03); }
+
+.blog-card__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.blog-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  line-height: 1.3;
+  margin-bottom: var(--space-3);
+}
+.blog-card__title a { color: inherit; text-decoration: none; }
+.blog-card__title a:hover { color: var(--color-accent); }
+
+.blog-card__lead {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.blog-card__more {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.blog-card__more:hover { text-decoration: underline; }
+
+/* Blog single */
+.blog-post__header {
+  max-width: 720px;
+  margin-bottom: var(--space-10);
+}
+
+.blog-post__date {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-3);
+}
+
+.blog-post__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.blog-post__lead {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.blog-post__cover {
+  margin-bottom: var(--space-12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.blog-post__cover img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.blog-post__content { max-width: 720px; }
+
+.blog-post__related-course {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.blog-post__related-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.blog-post__footer {
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.blog-post__back {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.blog-post__back:hover { color: var(--color-text); }
+
+/* ── Agenda single ─────────────────────────────────────────────────────────── */
+.agenda-single {
+  max-width: 680px;
+}
+
+.agenda-single__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agenda-single__date-badge {
+  flex-shrink: 0;
+  width: 72px;
+  text-align: center;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: var(--space-3) var(--space-2);
+  line-height: 1.1;
+}
+
+.agenda-single__day {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.agenda-single__month {
+  display: block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.agenda-single__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.agenda-single__taller-link {
+  margin-top: var(--space-8);
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.agenda-item__cta { flex-shrink: 0; }
+.agenda-item__price { font-weight: 600; }
+
+/* ── Taller single — galeria + scheduling ───────────────────────────────── */
+.course-single__cover {
+  margin-bottom: 3rem;
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 520px;
+}
+.course-single__cover img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.course-single__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+.gallery__item {
+  border-radius: 3px;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery__item:hover img { transform: scale(1.04); }
+
+.info-box__scheduling {
+  margin-top: 1.5rem;
+  padding: var(--space-4);
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.info-box__scheduling--ondemand {
+  background: var(--color-bg-alt);
+}
+.info-box__scheduling--extern {
+  background: #FFF7ED;
+  border-color: #FED7AA;
+}
+.info-box__scheduling-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+.info-box__scheduling-text {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+.info-box__dates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.info-box__date-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.info-box__date-item:last-child { border-bottom: none; }
+
+.btn--xs {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  margin-left: auto;
+}
+
+.tag--extern {
+  background: #FFF7ED;
+  color: #92400E;
+  border: 1px solid #FED7AA;
+}
+.tag--format {
+  background: var(--color-bg-alt);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.course-card__status--ondemand {
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.course-card__status--extern {
+  color: #92400E;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.course-card__tag--extern {
+  background: #FFF7ED;
+  color: #92400E;
+  border: 1px solid #FED7AA;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.course-card__format-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-right: 0.4rem;
+  vertical-align: middle;
 }

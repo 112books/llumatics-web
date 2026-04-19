@@ -58,4 +58,16 @@ Funciona amb una conversa prèvia —breu, per correu o telèfon— per entendre
 
 Contacta'ns explicant breument el que t'interessa treballar. Concretem la durada i el contingut de la sessió i us proposem una data. Mínim 2 hores, màxim 4 hores per sessió.
 
-Els materials i productes químics necessaris per a la sessió estan inclosos al preu.
+## Inclòs en el preu
+
+- Sessió 1:1 amb Joan (2 a 4 hores, a acordar)
+- Materials de laboratori habituals si la sessió inclou pràctica (químics, paper, film)
+
+## Cal portar
+
+- Tot allò que vulguis treballar: càmera, negatius, còpies, projecte, preguntes. La sessió es dissenya a partir d'una conversa prèvia.
+
+## No inclòs
+
+- Materials específics no habituals (es consulten i es cotitzen prèviament)
+- Carretes de 35mm addicionals (~5€/unitat)

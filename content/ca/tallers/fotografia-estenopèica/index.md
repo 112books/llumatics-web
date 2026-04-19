@@ -51,6 +51,16 @@ La càmera estenopèica —o *pinhole*— no és un exercici nostàlgic. És la 
 - El negatiu i el positiu: el procés de còpia per contacte
 - Variacions i possibilitats creatives de la tècnica
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els materials de construcció, el paper fotogràfic, els productes químics i l'ús del laboratori estan inclosos. No cal portar res.
+- Tots els materials de construcció de la càmera estenopèica
+- Paper fotogràfic i productes químics de revelat
+- Ús del laboratori
+
+## Cal portar
+
+- Res. El taller és autònom: tot el material es facilita.
+
+## No inclòs
+
+- Còpies addicionals en paper (paper extra disponible a Llumàtics)

@@ -1,0 +1,85 @@
+---
+title: "Iniciació al revelat"
+subtitle: "Carrega el rodet, surt a disparar i revela-ho tu mateix."
+lead: "El procés fotogràfic complet en tres hores: carreguem un rodet, sortim al barri a disparar-lo, tornem i el revelem. Sense experiència prèvia. A Cameras & Films."
+description: "Taller d'iniciació al revelat analògic a Cameras & Films, Barcelona. Carregar rodet, sortida fotogràfica i revelat bàsic en B/N. 3 hores, sense experiència prèvia."
+image: "/images/tallers/iniciacio-revelat.jpg"
+
+blocs:
+  - proces
+  - fonaments
+levels:
+  - iniciacio
+formats:
+  - puntual
+tags: ["revelat", "iniciació", "bàsic", "35mm", "blanc i negre", "Cameras & Films", "sortida fotogràfica"]
+
+duration: "3 hores"
+sessions: 1
+price: 55
+max_places: 10
+location: "Cameras & Films, Barcelona"
+extern: true
+extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+
+objective: "Viure el procés fotogràfic complet de primera mà: carregar un rodet, sortir a fotografiar i revelar la pel·lícula al laboratori."
+methodology: "Tres parts encadenades: càrrega del rodet, sortida fotogràfica al barri i revelat al laboratori de Cameras & Films."
+result: "Un carret de 35mm exposat i revelat per l'alumne. Comprensió bàsica del procés de revelat i els negatius escanejats en dies posteriors."
+prerequisites: "Cap. No cal cap experiència prèvia en fotografia ni en laboratori."
+target: "Tothom que vol entendre per primera vegada com funciona la fotografia analògica de principi a fi. Ideal per a qui mai ha revelat."
+related:
+  - revelat-bn
+  - copies-en-paper
+  - introduccio-al-positivat
+  - camera-i-exposicio
+
+status: "active"
+date: 2024-01-01
+draft: false
+---
+
+## Tot en tres hores
+
+La fotografia analògica té tres moments: carregar la càmera, fotografiar i revelar. En aquest taller els fem tots tres, sense interrupcions i sense separar-los en dies ni tallers distints.
+
+Comencem a Cameras & Films: expliquem com funciona un carret de 35mm i com es carrega a la càmera. Sortim al barri a disparar-lo —la Ribera, el Raval, el que el dia ens doni. Tornem al laboratori, barregem la química i el revelem. Mentre s'asseca el negatiu, ja se sap si ha funcionat.
+
+No és un curs complet de revelat. És la millor manera d'entendre per primera vegada de quin material estan fetes les fotos.
+
+## Com s'estructura la sessió
+
+**1. Càrrega i càmera** (20 min)
+- Com funciona un carret de 35mm
+- Carregar la pel·lícula a la càmera
+- Configuració bàsica: ISO, velocitat, diafragma
+
+**2. Sortida fotogràfica** (60 min)
+- Sortim al barri amb el rodet carregat
+- Disparar amb intenció: llum, composició, moment
+- L'objectiu és exposar tot el rodet
+
+**3. Revelat al laboratori** (60 min)
+- Preparació dels productes químics
+- Càrrega de la bobina en foscor
+- Revelat pas a pas: revelador, stop, fixador, rentat
+- Inspecció del negatiu sec
+
+## Inclòs en el preu
+
+- Carret de 35mm B/N
+- Productes químics de revelat
+- Ús del laboratori de Cameras & Films
+- Escaneig dels negatius (lliurat en dies posteriors)
+
+## Cal portar
+
+- Càmera analògica de 35mm si en tens. Si no, Cameras & Films en té de disponibles per al dia.
+
+## No inclòs
+
+- Còpies en paper dels fotogrames
+- Càmera analògica (disponible a Cameras & Films si no en tens)
+
+---
+
+*Les dates les programa i gestiona directament **Cameras & Films**. Consulta la seva agenda o escriu-los per saber quan és la propera sessió.*

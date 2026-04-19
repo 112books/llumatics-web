@@ -51,6 +51,16 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 - Lectura de la llum: el fotòmetre i l'ull
 - Pràctica: fotografiem amb càmera analògica en mode manual
 
-## Materials inclosos
+## Inclòs en el preu
 
-Càmera analògica (si no en tens, en podem deixar una), carret de 35mm B/N inclòs. En la mateixa sessió exposem el carret; el revelat es pot fer en un taller posterior o en una sessió privada addicional.
+- Ús del laboratori i material teòric
+- Càmera analògica disponible si no en tens
+- Carret de 35mm B/N
+
+## Cal portar
+
+- Càmera analògica pròpia si en tens (no és obligatori)
+
+## No inclòs
+
+- Revelat del carret exposat (disponible al taller de Revelat B/N o com a tutoria, des de 20€)

@@ -59,6 +59,18 @@ El resultat, tant si surt bé com si no, ensenya infinitament més que cent foto
 - Possibilitats de còpia: contacte directe i ampliació
 - Comparació de resultats i ajustos per a la propera vegada
 
-## Materials inclosos
+## Inclòs en el preu
 
-Ús de la càmera de gran format, objectius, plànxes 4×5\" (film sheet), portaplànxes, productes químics i laboratori inclosos.
+- Ús de la càmera de gran format, objectius i portaplànxes
+- 4 plànxes 4×5" (film sheet) per participant
+- Productes químics de revelat
+- Ús del laboratori (cambra fosca, cubetes, assecat)
+
+## Cal portar
+
+- Res. Tot el material és del laboratori.
+
+## No inclòs
+
+- Plànxes addicionals (+4€/plànxa)
+- Còpies en paper per contacte (paper + químics, consultar)

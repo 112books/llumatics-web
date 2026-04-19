@@ -60,6 +60,16 @@ No és un taller de química acadèmica. És un taller molt pràctic on l'object
 - Comparació de resultats: densitat, gra i to
 - Documentació pròpia: com registrar i reproduir els resultats
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els productes químics, reactius i materials de laboratori. Pel·lícula de prova inclosa. Si vols treballar amb el teu material personal, porta'l.
+- Tots els reactius i productes químics: metol, hidroquinona, fenidona, vitamina C, carbonats, sulfits...
+- Pel·lícula de prova per a totes les fòrmules del taller
+- Ús del laboratori i material de documentació
+
+## Cal portar
+
+- Carretes propis exposats si vols provar les fòrmules amb el teu material (opcional)
+
+## No inclòs
+
+- Reactius per a fòrmules personalitzades molt específiques (consultar prèviament)

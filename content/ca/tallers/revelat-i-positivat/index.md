@@ -15,7 +15,7 @@ tags: ["revelat", "positivat", "combinat", "dia complet", "blanc i negre", "labo
 
 duration: "8 hores (10:00–14:00 i 16:00–20:00)"
 sessions: 2
-price: 99
+price: 125
 max_places: 4
 location: "Nau Bostik, Barcelona"
 extern: false
@@ -58,6 +58,19 @@ No cal experiència prèvia. És un bon punt d'entrada per a qui vol entendre el
 - Controls bàsics: contrast i ajustos de zona
 - Acabat i presentació
 
-## Materials inclosos
+## Inclòs en el preu
 
-Un carret de 35mm B/N, tots els productes químics (revelat i positivat), paper fotogràfic i ús del laboratori inclosos. Porta els teus propis carretes addicionals si vols practicar més material.
+- Un carret de 35mm B/N
+- Tots els productes químics: revelador de pel·lícula, stop, fixador (sessió de matí)
+- Productes per al positivat: revelador de paper, stop, fixador (sessió de tarda)
+- Paper fotogràfic RC (2–3 còpies)
+- Ús complet del laboratori tot el dia
+
+## Cal portar
+
+- Res. Si tens carretes exposats addicionals que vulguis revelar, porta'ls.
+
+## No inclòs
+
+- Carretes addicionals de 35mm B/N (+5€/unitat)
+- Paper extra per a còpies addicionals (+2€/full RC, +4€/full fibra)

@@ -52,6 +52,17 @@ Si vols anar més lluny —aprendre controls locals, esquivar i cremar, treballa
 - Rentat i assecat de la còpia
 - Lectura del resultat i ajustos bàsics
 
-## Materials inclosos
+## Inclòs en el preu
 
-Paper fotogràfic, productes químics i ús del laboratori inclosos. Porta els teus negatius si en tens; si no, treballem amb negatius de mostra.
+- Paper fotogràfic RC (2–3 fulls)
+- Productes químics: revelador de paper, stop, fixador
+- Ús de l'ampliadora i el laboratori
+
+## Cal portar
+
+- Negatius de 35mm revelats si en tens. Si no, treballem amb negatius de mostra.
+
+## No inclòs
+
+- Paper addicional (+2€/full RC, +4€/full fibra)
+- Revelat de pel·lícula (si no tens negatius, fes primer el taller de Revelat B/N)

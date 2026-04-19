@@ -55,6 +55,17 @@ No és un taller de nostalgia. És una manera de tocar els orígens del medi per
 - Revelat del paper i lectura del resultat
 - El positiu directe: singularitat i materialitat de la imatge
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els materials (paper fotosensible, productes químics, ús de la càmera i l'espai) estan inclosos. El taller es realitza a Cameras & Films; no cal desplaçar-se fins a la Nau Bostik.
+- Ús de la càmera de gran format del s.XIX
+- Paper fotosensible i productes químics
+- Espai i equipament a Cameras & Films
+
+## Cal portar
+
+- Res. El taller es realitza íntegrament a Cameras & Films (c/ Tallers, Barcelona).
+
+## No inclòs
+
+- Còpies addicionals sobre paper fotosensible (materials a part, consultar)
+- Desplaçament fins a Cameras & Films

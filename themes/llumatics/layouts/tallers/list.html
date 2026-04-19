@@ -9,6 +9,9 @@
     {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
   </div>
 
+  {{/* Recorregut formatiu — línia del temps */}}
+  {{ partial "recorregut.html" . }}
+
   {{/* Navegació per blocs — filtre visual */}}
   {{ $blocs := hugo.Data.blocs }}
   {{ if $blocs }}

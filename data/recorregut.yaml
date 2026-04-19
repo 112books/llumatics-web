@@ -1,0 +1,130 @@
+# Recorregut formatiu Llumàtics
+# Ordre recomanat per progressar en la fotografia analògica.
+# slug: "" si el taller encara no és actiu al web.
+
+core:
+  - step: 1
+    title: "Iniciació a la fotografia"
+    title_es: "Iniciación a la fotografía"
+    title_en: "Introduction to photography"
+    slug: "camera-i-exposicio"
+    bloc: "fonaments"
+    desc: "Càmera, llum i exposició. La base de tot."
+    desc_es: "Cámara, luz y exposición. La base de todo."
+    desc_en: "Camera, light and exposure. The foundation of everything."
+
+  - step: 2
+    title: "Revelat en B/N"
+    title_es: "Revelado en B/N"
+    title_en: "B&W film developing"
+    slug: "iniciacio-revelat"
+    bloc: "proces"
+    desc: "Del carret exposat al negatiu humit. Primera vegada al laboratori."
+    desc_es: "Del carrete expuesto al negativo húmedo. Primera vez en el laboratorio."
+    desc_en: "From exposed roll to wet negative. First time in the lab."
+
+  - step: 3
+    title: "Iniciació a l'ampliadora"
+    title_es: "Iniciación a la ampliadora"
+    title_en: "Introduction to the enlarger"
+    slug: "introduccio-al-positivat"
+    bloc: "proces"
+    desc: "Primera còpia en paper. El laboratori fosc t'espera."
+    desc_es: "Primera copia en papel. El laboratorio oscuro te espera."
+    desc_en: "Your first paper print. The darkroom awaits."
+
+  - step: 4
+    title: "Escaneig de negatius"
+    title_es: "Escaneado de negativos"
+    title_en: "Scanning negatives"
+    slug: "digitalitzacio-escaner"
+    bloc: "fonaments"
+    desc: "Del negatiu al fitxer. Flux digital per a imatge analògica."
+    desc_es: "Del negativo al archivo. Flujo digital para imagen analógica."
+    desc_en: "From negative to file. Digital workflow for analogue images."
+
+  - step: 5
+    title: "Edició d'imatges fotoquímiques"
+    title_es: "Edición de imágenes fotoquímicas"
+    title_en: "Editing photochemical images"
+    slug: ""
+    bloc: "fonaments"
+    desc: "Lightroom i eines d'edició pensades per a imatge analògica digitalitzada."
+    desc_es: "Lightroom y herramientas de edición para imagen analógica digitalizada."
+    desc_en: "Lightroom and editing tools designed for scanned analogue images."
+    aviat: true
+
+  - step: 6
+    title: "Forçats i control del negatiu"
+    title_es: "Forzados y control del negativo"
+    title_en: "Push/pull and negative control"
+    slug: "revelat-bn"
+    bloc: "proces"
+    desc: "Push, pull i densitat. Revelar amb criteri per obtenir el negatiu que vols."
+    desc_es: "Push, pull y densidad. Revelar con criterio para obtener el negativo que quieres."
+    desc_en: "Push, pull and density. Developing with intention to get the negative you want."
+
+  - step: 7
+    title: "Còpies a l'ampliadora — filtratge"
+    title_es: "Copias en ampliadora — filtraje"
+    title_en: "Darkroom printing — filtration"
+    slug: "copies-en-paper"
+    bloc: "proces"
+    desc: "Tapat, revelit, filtratge de contrast. El control de llums i ombres."
+    desc_es: "Tapado, revelado, filtrado de contraste. El control de luces y sombras."
+    desc_en: "Dodging, burning, contrast filtration. Controlling highlights and shadows."
+
+  - step: 8
+    title: "Còpies avançades"
+    title_es: "Copias avanzadas"
+    title_en: "Advanced printing"
+    slug: ""
+    bloc: "proces"
+    desc: "Revelador a mida, doble revelat, virats i seleni."
+    desc_es: "Revelador a medida, doble revelado, virados y selenio."
+    desc_en: "Custom developer, split development, toning and selenium."
+    aviat: true
+
+tematic:
+  - title: "Fotografia de carrer"
+    title_es: "Fotografía de calle"
+    title_en: "Street photography"
+    slug: "fotografia-de-carrer"
+    bloc: "practica"
+
+  - title: "Revelats experimentals"
+    title_es: "Revelados experimentales"
+    title_en: "Experimental developing"
+    slug: "revelats-experimentals"
+    bloc: "processos-alternatius"
+    desc: "Cafènol, guinesol, wineol."
+
+  - title: "Cianotipia — Fotogrames"
+    title_es: "Cianotipía — Fotogramas"
+    title_en: "Cyanotype — Photograms"
+    slug: "fotogrames-cianotipia"
+    bloc: "processos-alternatius"
+
+  - title: "Cianotipia gran format"
+    title_es: "Cianotipía gran formato"
+    title_en: "Large format cyanotype"
+    slug: "cianotipia"
+    bloc: "processos-alternatius"
+
+  - title: "Retrat en mig format"
+    title_es: "Retrato en medio formato"
+    title_en: "Medium format portrait"
+    slug: "retrat-6x6"
+    bloc: "practica"
+
+  - title: "Retrat en gran format"
+    title_es: "Retrato en gran formato"
+    title_en: "Large format portrait"
+    slug: "retrat-gran-format"
+    bloc: "practica"
+
+  - title: "Hasselblad 500"
+    title_es: "Hasselblad 500"
+    title_en: "Hasselblad 500"
+    slug: "hasselblad-500"
+    bloc: "mig-format"

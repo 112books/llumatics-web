@@ -52,6 +52,16 @@ En aquest taller treballem al plató de Llumàtics: fons de paper, flaixos de qu
 - Composició i encuadrament en retrat
 - Variacions: retrat sencer, mig cos i primer pla
 
-## Materials inclosos
+## Inclòs en el preu
 
-Ús del plató, els flaixos i tots els fons de paper. Carret de 35mm inclòs. Porta la teva càmera analògica amb sincronitzador de flaix o zapata.
+- Ús del plató: fons de paper, flaixos, suports i modificadors de llum
+- Carret de 35mm B/N
+
+## Cal portar
+
+- Càmera analògica 35mm amb connector de sincronització de flaix (PC sync o zapata). Si no tens sinc de flaix, consulta'ns abans.
+
+## No inclòs
+
+- Revelat del carret (disponible com a afegit, +20€, o al taller de Revelat B/N)
+- Còpies en paper dels fotogrames (taller de Còpies en paper)

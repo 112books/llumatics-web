@@ -54,6 +54,20 @@ En aquest taller preparem la solució, emulsionem el paper, exposem amb llum sol
 - Variacions: impressió sobre teixits, fusta i altres suports
 - Fotogrames: treballar sense càmera ni negatiu
 
-## Materials inclosos
+## Inclòs en el preu
 
-Tots els materials estan inclosos: chemicals, papers de diversos gramatges, negatius de mostra i objectes per a fotogrames.
+- Productes químics: ferricinat amònic i ferricianur de potassi
+- Papers de diversos gramatges (aquarel·la, kraft, llis)
+- Negatius de mostra en acetat
+- Objectes per a fotogrames
+- Ús del laboratori i espai d'exposició solar/UV
+
+## Cal portar
+
+- Fotografies pròpies convertides a negatiu en acetat (opcional; si no en tens, les generem a la sessió)
+- Objectes personals per a fotogrames si en vols usar (fulles, teixits, transparències...)
+
+## No inclòs
+
+- Impressió de negatius en acetat addicionals (+materials, consultar)
+- Suports alternatius com teixit o fusta (disponibles com a opció extra)

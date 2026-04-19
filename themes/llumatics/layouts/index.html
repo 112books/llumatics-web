@@ -8,16 +8,12 @@
   <div class="container hero__content">
     <p class="hero__eyebrow">{{ i18n "hero_eyebrow" | default "Escola de fotografia" }}</p>
     <h1 class="hero__title">
-      {{ if .Content }}
-        {{ .Title }}
-      {{ else }}
-        {{ i18n "hero_title" | default "La fotografia com a<br>procés i forma de veure." | safeHTML }}
-      {{ end }}
+      {{ i18n "hero_title" | default "La fotografia com a<br>procés i forma de veure." | safeHTML }}
     </h1>
     <p class="hero__subtitle">
       {{ i18n "hero_subtitle" | default "Tallers de revelat, laboratori analògic i formació tècnica a Barcelona." }}
     </p>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+    <div class="hero__actions">
       <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--primary btn--lg">
         {{ i18n "cta_courses" | default "Veure tallers" }}
       </a>
@@ -28,27 +24,35 @@
   </div>
 </section>
 
-{{/* ── Tallers destacats ────────────────────────────────────────────────── */}}
-{{ $tallers := where .Site.RegularPages "Type" "tallers" }}
-{{ if $tallers }}
+{{/* ── Àmbits de formació ───────────────────────────────────────────────── */}}
+{{ $blocs := hugo.Data.blocs }}
+{{ if $blocs }}
 <section class="section container">
   <div class="section__header">
-    <p class="section__eyebrow">{{ i18n "section_courses_eyebrow" | default "Formació" }}</p>
-    <h2 class="section__title">{{ i18n "section_courses_title" | default "Tallers" }}</h2>
-    <p class="section__subtitle">{{ i18n "section_courses_subtitle" | default "Del procés a la visió. Formació tècnica i conceptual en fotografia analògica." }}</p>
+    <p class="section__eyebrow">{{ i18n "section_blocs_eyebrow" | default "Formació" }}</p>
+    <h2 class="section__title">{{ i18n "section_blocs_title" | default "Àmbits" }}</h2>
+    <p class="section__subtitle">{{ i18n "section_blocs_subtitle" | default "Sis línies de treball. De la iniciació tècnica a l'experimentació." }}</p>
   </div>
-  <div class="courses-grid">
-    {{ range first 6 $tallers }}
-      {{ partial "course-card.html" . }}
+  <div class="blocs-grid">
+    {{ $lang := site.Language.Lang }}
+    {{ range $blocs }}
+    {{ $nomBloc := .nom }}
+    {{ $descBloc := .desc }}
+    {{ if eq $lang "es" }}{{ $nomBloc = .nom_es }}{{ $descBloc = .desc_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $nomBloc = .nom_en }}{{ $descBloc = .desc_en }}{{ end }}
+    <a href="{{ "/tallers/" | relLangURL }}#{{ .slug }}" class="bloc-tile" data-bloc="{{ .slug }}">
+      <span class="bloc-tile__icon" aria-hidden="true">{{ .icon }}</span>
+      <h3 class="bloc-tile__name">{{ $nomBloc }}</h3>
+      <p class="bloc-tile__desc">{{ $descBloc }}</p>
+      <span class="bloc-tile__arrow" aria-hidden="true">→</span>
+    </a>
     {{ end }}
   </div>
-  {{ if gt (len $tallers) 6 }}
-  <div style="text-align:center; margin-top:2rem;">
+  <div style="text-align:center; margin-top:var(--space-8);">
     <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--secondary">
       {{ i18n "see_all_courses" | default "Veure tots els tallers" }}
     </a>
   </div>
-  {{ end }}
 </section>
 {{ end }}
 
@@ -66,7 +70,7 @@
         {{ partial "agenda-item.html" . }}
       {{ end }}
     </div>
-    <div style="margin-top:2rem;">
+    <div style="margin-top:var(--space-8);">
       <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary">
         {{ i18n "see_full_agenda" | default "Veure agenda completa" }}
       </a>
@@ -75,27 +79,40 @@
 </section>
 {{ end }}
 
-{{/* ── Espais ───────────────────────────────────────────────────────────── */}}
-{{ $espais := where .Site.RegularPages "Type" "espais" }}
-{{ if $espais }}
+{{/* ── Blog — últimes entrades ──────────────────────────────────────────── */}}
+{{ $posts := where .Site.RegularPages "Type" "blog" | first 3 }}
+{{ if $posts }}
 <section class="section container">
   <div class="section__header">
-    <p class="section__eyebrow">{{ i18n "section_spaces_eyebrow" | default "Instal·lacions" }}</p>
-    <h2 class="section__title">{{ i18n "section_spaces_title" | default "Els nostres espais" }}</h2>
-    <p class="section__subtitle">{{ i18n "section_spaces_subtitle" | default "Plató, laboratori fosc i biblioteca especialitzada." }}</p>
+    <p class="section__eyebrow">{{ i18n "section_blog_eyebrow" | default "Blog" }}</p>
+    <h2 class="section__title">{{ i18n "section_blog_title" | default "Del laboratori" }}</h2>
   </div>
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem;">
-    {{ range $espais }}
-    <a href="{{ .RelPermalink }}" style="display:block; background:var(--color-surface); border:1px solid var(--color-border); border-radius:4px; overflow:hidden; transition:transform 200ms ease;">
+  <div class="blog-preview-grid">
+    {{ range $posts }}
+    <article class="blog-preview-card">
       {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+      <a href="{{ .RelPermalink }}" class="blog-preview-card__image" tabindex="-1" aria-hidden="true">
+        <img src="{{ .Params.image }}" alt="" loading="lazy">
+      </a>
       {{ end }}
-      <div style="padding:1.5rem;">
-        <h3 style="font-family:var(--font-serif); font-size:1.25rem; margin-bottom:0.5rem;">{{ .Title }}</h3>
-        <p style="font-size:0.875rem; color:var(--color-text-muted);">{{ .Summary | truncate 100 }}</p>
+      <div class="blog-preview-card__body">
+        <time class="blog-preview-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "2 Jan 2006" }}
+        </time>
+        <h3 class="blog-preview-card__title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        {{ with .Params.lead }}
+          <p class="blog-preview-card__lead">{{ . | truncate 120 }}</p>
+        {{ end }}
       </div>
-    </a>
+    </article>
     {{ end }}
+  </div>
+  <div style="text-align:center; margin-top:var(--space-8);">
+    <a href="{{ "/blog/" | relLangURL }}" class="btn btn--secondary">
+      {{ i18n "read_more" | default "Llegir més" }}
+    </a>
   </div>
 </section>
 {{ end }}

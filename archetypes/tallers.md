@@ -5,7 +5,7 @@ lead: ""               # 1-2 frases per a cards i xarxes
 
 # ── Classificació ─────────────────────────────────────────────────────────
 blocs:
-  - ""                 # fonaments | proces | practica | gran-format | processos-alternatius
+  - ""                 # fonaments | proces | practica | mig-format | gran-format | processos-alternatius
 levels:
   - ""                 # iniciacio | intermedi | avançat
 formats:
@@ -18,8 +18,17 @@ sessions: 1            # nombre de sessions
 price: 0               # preu en EUR (0 = a consultar)
 max_places: 4          # màxim d'alumnes (defecte: 4)
 location: "Nau Bostik, Barcelona"
-extern: false          # true si és taller extern (Cameras & Films, instituts, etc.)
-extern_location: ""    # si extern: true, on es realitza
+extern: false          # true = taller gestionat per Cameras & Films (dates les gestiona C&F)
+extern_location: ""    # si extern: true, on es realitza (ex: "Cameras & Films, c/ Tallers")
+
+# ── Imatges ───────────────────────────────────────────────────────────────
+# Imatge principal: static/images/tallers/[slug].jpg  (recomanat 1200×800px, ratio 3:2)
+# Imatges secundàries: apareixen com a galeria al final del contingut
+image: ""              # /images/tallers/nom.jpg
+images:                # galeria secundària (opcional)
+  - ""                 # /images/tallers/nom-1.jpg
+  - ""                 # /images/tallers/nom-2.jpg
+  - ""                 # /images/tallers/nom-3.jpg
 
 # ── Fitxa pedagògica ──────────────────────────────────────────────────────
 objective: ""          # Competència principal que adquireix l'alumne
@@ -30,7 +39,6 @@ target: ""             # Públic objectiu concret
 related: []            # Slugs de tallers relacionats per continuïtat
 
 # ── Publicació ────────────────────────────────────────────────────────────
-image: ""              # /images/tallers/nom.jpg
 status: "soon"         # active | full | soon
 date: {{ .Date }}
 draft: true
@@ -46,6 +54,14 @@ Escriu aquí la descripció completa del taller.
 - 
 - 
 
-## Materials inclosos
+## Inclòs en el preu
 
-Indica si tot és inclòs o si l'alumne ha de portar alguna cosa.
+- 
+
+## Cal portar
+
+- 
+
+## No inclòs
+
+- 

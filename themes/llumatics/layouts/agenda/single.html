@@ -1,0 +1,90 @@
+{{ define "main" }}
+{{ $status := .Params.status | default "active" }}
+{{ $purchaseURL := .Params.purchase_url }}
+{{ $courseRef := .Params.course_ref }}
+{{ $taller := "" }}
+{{ if $courseRef }}
+  {{ $taller = site.GetPage (printf "/ca/tallers/%s" $courseRef) }}
+{{ end }}
+
+<article class="section container">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="{{ "/agenda" | relLangURL }}">{{ i18n "nav_agenda" | default "Agenda" }}</a>
+    <span class="breadcrumb__sep">›</span>
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <div class="agenda-single">
+
+    <div class="agenda-single__header">
+      {{ with .Params.date_start }}
+      <div class="agenda-single__date-badge">
+        <span class="agenda-single__day">{{ . | time.Format "2" }}</span>
+        <span class="agenda-single__month">{{ . | time.Format "January 2006" }}</span>
+      </div>
+      {{ end }}
+      <div>
+        <h1 class="agenda-single__title">{{ .Title }}</h1>
+        <div class="agenda-item__meta" style="margin-top:0.75rem;">
+          {{ with .Params.time_start }}<span>{{ . }}{{ with $.Params.time_end }}–{{ . }}{{ end }}</span>{{ end }}
+          {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
+          {{ if .Params.price }}
+            {{ if eq (.Params.price | int) 0 }}
+              <span class="agenda-item__price">{{ i18n "price_free" | default "Gratuït" }}</span>
+            {{ else }}
+              <span class="agenda-item__price"><strong>{{ .Params.price }}€</strong></span>
+            {{ end }}
+          {{ end }}
+          {{ with .Params.max_places }}<span>Màxim {{ . }} persones</span>{{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ with .Content }}
+    <div class="prose" style="margin:2rem 0;">{{ . }}</div>
+    {{ end }}
+
+    {{ if $taller }}
+    <div class="agenda-single__taller-link">
+      <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:0.5rem;">
+        {{ i18n "agenda_course_info" | default "Taller" }}
+      </p>
+      <a href="{{ $taller.RelPermalink }}" class="btn btn--outline btn--sm">
+        {{ i18n "agenda_see_course" | default "Veure la fitxa del taller" }} →
+      </a>
+    </div>
+    {{ end }}
+
+    <div class="agenda-single__cta" style="margin-top:2.5rem;">
+      {{ if eq $status "active" }}
+        {{ if $purchaseURL }}
+          <a href="{{ $purchaseURL }}" class="btn btn--primary" target="_blank" rel="noopener">
+            {{ i18n "cta_buy" | default "Comprar plaça" }}
+          </a>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:0.75rem;">
+            {{ i18n "agenda_buy_note" | default "La compra es fa a través de la plataforma de pagament segur. Rebràs confirmació per correu." }}
+          </p>
+        {{ else }}
+          <a href="{{ "/contact" | relLangURL }}" class="btn btn--primary">
+            {{ i18n "cta_register" | default "Inscripció" }}
+          </a>
+        {{ end }}
+      {{ else if eq $status "full" }}
+        <p class="course-card__status course-card__status--full" style="font-size:1rem; padding:0.75rem 1.5rem;">
+          {{ i18n "status_full" | default "Complet" }}
+        </p>
+      {{ else if eq $status "cancelled" }}
+        <p style="color:var(--color-text-muted);">
+          {{ i18n "status_cancelled" | default "Aquesta sessió ha estat cancel·lada." }}
+        </p>
+      {{ end }}
+    </div>
+
+  </div>
+
+</article>
+{{ end }}
