@@ -1,0 +1,106 @@
+{{ define "main" }}
+
+{{/* ── Hero ───────────────────────────────────────────────────────────── */}}
+<section class="hero hero--with-image">
+  {{ with .Params.heroImage }}
+    <img class="hero__bg" src="{{ . }}" alt="" aria-hidden="true">
+  {{ end }}
+  <div class="container hero__content">
+    <p class="hero__eyebrow">{{ i18n "hero_eyebrow" | default "Escola de fotografia" }}</p>
+    <h1 class="hero__title">
+      {{ if .Content }}
+        {{ .Title }}
+      {{ else }}
+        {{ i18n "hero_title" | default "La fotografia com a<br>procés i forma de veure." | safeHTML }}
+      {{ end }}
+    </h1>
+    <p class="hero__subtitle">
+      {{ i18n "hero_subtitle" | default "Tallers de revelat, laboratori analògic i formació tècnica a Barcelona." }}
+    </p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--primary btn--lg">
+        {{ i18n "cta_courses" | default "Veure tallers" }}
+      </a>
+      <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary btn--lg">
+        {{ i18n "cta_schedule" | default "Properes dates" }}
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* ── Tallers destacats ────────────────────────────────────────────────── */}}
+{{ $tallers := where .Site.RegularPages "Type" "tallers" }}
+{{ if $tallers }}
+<section class="section container">
+  <div class="section__header">
+    <p class="section__eyebrow">{{ i18n "section_courses_eyebrow" | default "Formació" }}</p>
+    <h2 class="section__title">{{ i18n "section_courses_title" | default "Tallers" }}</h2>
+    <p class="section__subtitle">{{ i18n "section_courses_subtitle" | default "Del procés a la visió. Formació tècnica i conceptual en fotografia analògica." }}</p>
+  </div>
+  <div class="courses-grid">
+    {{ range first 6 $tallers }}
+      {{ partial "course-card.html" . }}
+    {{ end }}
+  </div>
+  {{ if gt (len $tallers) 6 }}
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--secondary">
+      {{ i18n "see_all_courses" | default "Veure tots els tallers" }}
+    </a>
+  </div>
+  {{ end }}
+</section>
+{{ end }}
+
+{{/* ── Properes dates (Agenda) ─────────────────────────────────────────── */}}
+{{ $upcoming := where (where .Site.RegularPages "Type" "agenda") ".Params.date_start" "ge" now | first 4 }}
+{{ if $upcoming }}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__eyebrow">{{ i18n "section_agenda_eyebrow" | default "Calendari" }}</p>
+      <h2 class="section__title">{{ i18n "section_agenda_title" | default "Properes dates" }}</h2>
+    </div>
+    <div class="agenda-grid">
+      {{ range $upcoming }}
+        {{ partial "agenda-item.html" . }}
+      {{ end }}
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary">
+        {{ i18n "see_full_agenda" | default "Veure agenda completa" }}
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Espais ───────────────────────────────────────────────────────────── */}}
+{{ $espais := where .Site.RegularPages "Type" "espais" }}
+{{ if $espais }}
+<section class="section container">
+  <div class="section__header">
+    <p class="section__eyebrow">{{ i18n "section_spaces_eyebrow" | default "Instal·lacions" }}</p>
+    <h2 class="section__title">{{ i18n "section_spaces_title" | default "Els nostres espais" }}</h2>
+    <p class="section__subtitle">{{ i18n "section_spaces_subtitle" | default "Plató, laboratori fosc i biblioteca especialitzada." }}</p>
+  </div>
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem;">
+    {{ range $espais }}
+    <a href="{{ .RelPermalink }}" style="display:block; background:var(--color-surface); border:1px solid var(--color-border); border-radius:4px; overflow:hidden; transition:transform 200ms ease;">
+      {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+      {{ end }}
+      <div style="padding:1.5rem;">
+        <h3 style="font-family:var(--font-serif); font-size:1.25rem; margin-bottom:0.5rem;">{{ .Title }}</h3>
+        <p style="font-size:0.875rem; color:var(--color-text-muted);">{{ .Summary | truncate 100 }}</p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Newsletter ───────────────────────────────────────────────────────── */}}
+{{ partial "newsletter.html" . }}
+
+{{ end }}

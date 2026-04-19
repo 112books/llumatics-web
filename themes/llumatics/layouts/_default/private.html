@@ -1,0 +1,60 @@
+{{/* Layout: private.html
+     Pàgina privada per a alumnes.
+     Fase 1: URL oculta + formulari per descarregar PDF.
+     noindex: true garanteix que no s'indexi als cercadors.
+*/}}
+{{ define "main" }}
+<div class="section container">
+
+  <div class="private-gate">
+    <div class="private-gate__box">
+      <div class="private-gate__icon">🔒</div>
+      <h1 class="private-gate__title">{{ i18n "private_title" | default "Contingut per a alumnes" }}</h1>
+      <p class="private-gate__desc">{{ i18n "private_desc" | default "Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir i rebre el PDF personalitzat." }}</p>
+
+      {{/* Si hi ha un form Tally configurat per a PDF */}}
+      {{ if .Site.Params.tallyFormContact }}
+        <div style="max-width:420px; margin:0 auto;">
+          <iframe
+            data-tally-src="https://tally.so/embed/{{ .Site.Params.tallyFormContact }}?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&curs={{ .File.Dir | path.Base }}"
+            loading="lazy"
+            width="100%"
+            height="200"
+            frameborder="0"
+            title="{{ i18n "private_gate_label" | default "Accés alumnes" }}"
+            style="border:none;">
+          </iframe>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        </div>
+      {{ else }}
+        {{/* Formulari placeholder mentre no hi ha Tally */}}
+        <form class="private-form" style="display:flex; flex-direction:column; gap:0.75rem; max-width:360px; margin:0 auto;">
+          <input type="text" name="name" placeholder="El teu nom"
+            style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:2px; font-size:1rem; background:var(--color-surface);">
+          <input type="email" name="email" placeholder="{{ i18n "private_placeholder" | default "el teu correu" }}"
+            style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:2px; font-size:1rem; background:var(--color-surface);">
+          <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.875rem; color:var(--color-text-muted); text-align:left;">
+            <input type="checkbox" name="newsletter" style="margin-top:0.2rem; flex-shrink:0;">
+            {{ i18n "newsletter_opt_in" | default "Vull rebre informació sobre nous tallers i continguts de Llumàtics." }}
+          </label>
+          <button type="submit" class="btn btn--primary" style="width:100%;">
+            {{ i18n "private_cta" | default "Accedir al material" }}
+          </button>
+        </form>
+      {{ end }}
+
+      <p style="margin-top:2rem; font-size:0.75rem; color:var(--color-text-muted);">
+        {{ i18n "private_footer" | default "Rebràs el PDF al teu correu. El document és personal i intransferible." }}
+      </p>
+
+    </div>
+  </div>
+
+  {{/* Contingut visible (visible un cop s'ha fet el procés extern — ara sempre visible per testing) */}}
+  {{/* En producció, el PDF es genera i envia per email. El contingut web és el resum. */}}
+  <div class="prose container--narrow" style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}

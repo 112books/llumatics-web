@@ -1,0 +1,51 @@
+<header class="site-header">
+  <div class="container">
+    <div class="site-header__inner">
+
+      {{/* Logo */}}
+      <a href="{{ "/" | relLangURL }}" class="site-logo">
+        {{ if fileExists "static/images/logo.png" }}
+          <img src="/images/logo.png" alt="{{ .Site.Params.logoAlt }}" height="40">
+        {{ else }}
+          <span class="site-logo__text">{{ .Site.Title }}</span>
+        {{ end }}
+      </a>
+
+      {{/* Nav principal */}}
+      <nav class="site-nav" id="site-nav" aria-label="Navegació principal">
+        {{ range .Site.Menus.main }}
+          {{ $isHighlight := .Params.highlight | default false }}
+          <a href="{{ .URL | relLangURL }}"
+             class="site-nav__link{{ if $isHighlight }} site-nav__link--highlight{{ end }}"
+             {{ if hasPrefix $.RelPermalink .URL }}aria-current="page"{{ end }}>
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </nav>
+
+      {{/* Selector idioma + hamburguesa */}}
+      <div style="display:flex; align-items:center; gap:1rem;">
+
+        {{/* Language switcher */}}
+        {{ if .IsTranslated }}
+        <div class="lang-switcher">
+          <span class="lang-switcher__current">{{ .Language.Lang | upper }}</span>
+          {{ range .Translations }}
+            <span class="lang-switcher__sep">·</span>
+            <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* Hamburguesa mòbil */}}
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Obrir menú">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</header>

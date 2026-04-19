@@ -1,0 +1,65 @@
+# Translations — English
+
+home: "Home"
+nav_courses: "Workshops"
+nav_schedule: "Schedule"
+nav_spaces: "Spaces"
+nav_blog: "Blog"
+nav_about: "About"
+gift_course: "Gift a course"
+contact: "Contact"
+
+hero_eyebrow: "Photography school"
+hero_title: "Photography as<br>process and way of seeing."
+hero_subtitle: "Darkroom workshops, analogue laboratory and technical training in Barcelona."
+
+cta_courses: "See workshops"
+cta_schedule: "Upcoming dates"
+cta_register: "Register"
+cta_ask: "Ask a question"
+
+section_courses_eyebrow: "Training"
+section_courses_title: "Workshops"
+section_courses_subtitle: "From process to vision. Technical and conceptual training in analogue photography."
+
+section_agenda_eyebrow: "Calendar"
+section_agenda_title: "Upcoming dates"
+
+section_spaces_eyebrow: "Facilities"
+section_spaces_title: "Our spaces"
+section_spaces_subtitle: "Studio, darkroom and specialist library."
+
+see_all_courses: "See all workshops"
+see_full_agenda: "See full schedule"
+read_more: "Read more"
+related_courses: "Other workshops"
+
+status_available: "Places available"
+status_full: "Full"
+status_soon: "Coming soon"
+
+duration: "Duration"
+location: "Location"
+max_places: "Max places"
+level: "Level"
+next_dates: "Upcoming dates"
+
+newsletter_title: "Light in your inbox"
+newsletter_desc: "New workshops, photography reflections and darkroom news. No noise."
+newsletter_placeholder: "your email"
+newsletter_cta: "Subscribe"
+
+private_title: "Student content"
+private_desc: "This material is exclusive to workshop students. Enter your email to access."
+private_cta: "Access material"
+private_placeholder: "your email"
+private_gate_label: "Student access"
+
+gift_title: "Gift an experience"
+gift_desc: "Give the best gift: learning to see through photography."
+gift_cta: "Request gift voucher"
+
+footer_tagline: "Photography as process and way of seeing."
+footer_sub: "Photography school in Barcelona."
+footer_legal: "Content from this website may not be reproduced without permission."
+rights_reserved: "All rights reserved."

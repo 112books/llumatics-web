@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="section container">
+
+  <div class="section__header">
+    {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="section__title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose" style="margin-top:1rem;">{{ . }}</div>{{ end }}
+  </div>
+
+  {{ if eq .Type "tallers" }}
+    <div class="courses-grid">
+      {{ range .Pages }}
+        {{ partial "course-card.html" . }}
+      {{ end }}
+    </div>
+
+  {{ else if eq .Type "agenda" }}
+    <div class="agenda-grid">
+      {{ range .Pages }}
+        {{ partial "agenda-item.html" . }}
+      {{ end }}
+    </div>
+
+  {{ else }}
+    <div style="display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top:2rem;">
+      {{ range .Pages }}
+      <article style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:4px; padding:1.5rem;">
+        {{ if .Params.image }}
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:2px; margin-bottom:1rem;">
+        {{ end }}
+        <h2 style="font-family:var(--font-serif); font-size:1.25rem; margin-bottom:0.5rem;">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <p style="font-size:0.875rem; color:var(--color-text-muted);">{{ .Summary | truncate 140 }}</p>
+        <a href="{{ .RelPermalink }}" style="display:inline-block; margin-top:1rem; font-size:0.875rem; font-weight:600;">
+          {{ i18n "read_more" | default "Llegir més" }} →
+        </a>
+      </article>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{/* Paginació */}}
+  {{ template "_internal/pagination.html" . }}
+
+</div>
+{{ end }}

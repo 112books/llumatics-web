@@ -1,0 +1,56 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        {{ if fileExists "static/images/logo.png" }}
+          <img src="/images/logo.png" alt="{{ .Site.Title }}">
+        {{ else }}
+          <div style="font-family: var(--font-serif); font-size: 1.25rem; color: white; margin-bottom: 1rem;">{{ .Site.Title }}</div>
+        {{ end }}
+        <p>{{ i18n "footer_tagline" | default "La fotografia com a procés i forma de veure." }}</p>
+        <p class="site-footer__tagline">{{ i18n "footer_sub" | default "Escola de fotografia a Barcelona." }}</p>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">{{ i18n "nav_courses" | default "Tallers" }}</p>
+        <ul class="site-footer__links">
+          {{ range (where .Site.RegularPages "Type" "tallers") | first 5 }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">{{ i18n "nav_spaces" | default "Espais" }}</p>
+        <ul class="site-footer__links">
+          {{ range (where .Site.RegularPages "Type" "espais") }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">{{ i18n "contact" | default "Contacte" }}</p>
+        <ul class="site-footer__links">
+          <li><a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></li>
+          {{ with .Site.Params.instagram }}
+            <li><a href="{{ . }}" target="_blank" rel="noopener">Instagram</a></li>
+          {{ end }}
+          <li><a href="{{ "/regala/" | relLangURL }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
+          <li><a href="{{ "/sobre/" | relLangURL }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "rights_reserved" | default "Tots els drets reservats." }}</span>
+      <span>{{ i18n "footer_legal" | default "Els continguts d'aquesta web no es poden reproduir sense autorització." }}</span>
+    </div>
+  </div>
+</footer>
+
+{{/* JS */}}
+{{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>

@@ -1,0 +1,182 @@
+baseURL = "https://llumatics.com/"
+title = "Llumàtics"
+theme = "llumatics"
+enableRobotsTXT = true
+enableGitInfo = false
+summaryLength = 70
+
+defaultContentLanguage = "ca"
+defaultContentLanguageInSubdir = false
+
+[pagination]
+  pagerSize = 12
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+
+# ── Idiomes ──────────────────────────────────────────────────────────────────
+
+[languages]
+
+  [languages.ca]
+    contentDir = "content/ca"
+    languageName = "Català"
+    languageCode = "ca"
+    weight = 1
+    title = "Llumàtics"
+    [languages.ca.params]
+      description = "Escola de fotografia. Tallers, laboratori i formació."
+      locale = "ca_ES"
+
+  [languages.es]
+    contentDir = "content/es"
+    languageName = "Castellano"
+    languageCode = "es"
+    weight = 2
+    title = "Llumàtics"
+    [languages.es.params]
+      description = "Escuela de fotografía. Talleres, laboratorio y formación."
+      locale = "es_ES"
+
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    languageCode = "en"
+    weight = 3
+    title = "Llumàtics"
+    [languages.en.params]
+      description = "Photography school. Workshops, darkroom and training."
+      locale = "en_US"
+
+# ── Paràmetres globals ────────────────────────────────────────────────────────
+
+[params]
+  author = "Llumàtics"
+  logo = "/images/logo.png"
+  logoAlt = "Llumàtics"
+  contactEmail = "info@llumatics.com"
+  instagram = "https://www.instagram.com/llumaticscat"
+  newsletterService = "brevo"
+  formService = "tally"
+  tallyFormNewsletter = ""
+  tallyFormContact = ""
+  tallyFormGiftVoucher = ""
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  level = "levels"
+  technique = "techniques"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+
+# ── Menús per idioma ──────────────────────────────────────────────────────────
+
+[[languages.ca.menus.main]]
+  name = "Tallers"
+  url = "/tallers/"
+  weight = 1
+
+[[languages.ca.menus.main]]
+  name = "Agenda"
+  url = "/agenda/"
+  weight = 2
+
+[[languages.ca.menus.main]]
+  name = "Espais"
+  url = "/espais/"
+  weight = 3
+
+[[languages.ca.menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+
+[[languages.ca.menus.main]]
+  name = "Sobre"
+  url = "/sobre/"
+  weight = 5
+
+[[languages.ca.menus.main]]
+  name = "Regala un curs"
+  url = "/regala/"
+  weight = 6
+  [languages.ca.menus.main.params]
+    highlight = true
+
+[[languages.es.menus.main]]
+  name = "Talleres"
+  url = "/tallers/"
+  weight = 1
+
+[[languages.es.menus.main]]
+  name = "Agenda"
+  url = "/agenda/"
+  weight = 2
+
+[[languages.es.menus.main]]
+  name = "Espacios"
+  url = "/espais/"
+  weight = 3
+
+[[languages.es.menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+
+[[languages.es.menus.main]]
+  name = "Sobre nosotros"
+  url = "/sobre/"
+  weight = 5
+
+[[languages.es.menus.main]]
+  name = "Regala un curso"
+  url = "/regala/"
+  weight = 6
+  [languages.es.menus.main.params]
+    highlight = true
+
+[[languages.en.menus.main]]
+  name = "Workshops"
+  url = "/tallers/"
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = "Schedule"
+  url = "/agenda/"
+  weight = 2
+
+[[languages.en.menus.main]]
+  name = "Spaces"
+  url = "/espais/"
+  weight = 3
+
+[[languages.en.menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+
+[[languages.en.menus.main]]
+  name = "About"
+  url = "/sobre/"
+  weight = 5
+
+[[languages.en.menus.main]]
+  name = "Gift a course"
+  url = "/regala/"
+  weight = 6
+  [languages.en.menus.main.params]
+    highlight = true

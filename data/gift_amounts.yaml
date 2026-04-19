@@ -1,0 +1,6 @@
+- amount: 80
+  description: "Taller d'iniciació"
+- amount: 120
+  description: "Taller estàndard (2 sessions)"
+- amount: 200
+  description: "Taller avançat o experiència completa"

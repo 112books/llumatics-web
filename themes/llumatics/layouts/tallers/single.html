@@ -1,0 +1,137 @@
+{{ define "main" }}
+<div class="course-single container">
+
+  {{/* Breadcrumb */}}
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="{{ "/tallers/" | relLangURL }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
+    <span class="breadcrumb__sep">›</span>
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <header class="course-single__header">
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1rem;">
+      {{ with .Params.technique }}
+        <span class="course-card__tag">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.level }}
+        <span class="tag tag--level-{{ . | lower | urlize }}">{{ . }}</span>
+      {{ end }}
+    </div>
+    <h1 class="course-single__title">{{ .Title }}</h1>
+    {{ with .Params.lead }}
+      <p class="course-single__lead">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Params.image }}
+  <div style="margin-bottom:3rem; border-radius:4px; overflow:hidden; max-height:520px;">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width:100%; object-fit:cover; max-height:520px;">
+  </div>
+  {{ end }}
+
+  <div class="course-single__layout">
+
+    {{/* Contingut principal */}}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{/* Caixa lateral d'inscripció */}}
+    <aside class="course-single__info-box">
+      <div class="info-box__price">
+        {{ with .Params.price }}{{ . }}€{{ else }}&mdash;{{ end }}
+      </div>
+
+      {{ with .Params.duration }}
+      <div class="info-box__row">
+        <span class="info-box__label">{{ i18n "duration" | default "Durada" }}</span>
+        <span class="info-box__value">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.location }}
+      <div class="info-box__row">
+        <span class="info-box__label">{{ i18n "location" | default "Lloc" }}</span>
+        <span class="info-box__value">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.max_places }}
+      <div class="info-box__row">
+        <span class="info-box__label">{{ i18n "max_places" | default "Places" }}</span>
+        <span class="info-box__value">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.level }}
+      <div class="info-box__row">
+        <span class="info-box__label">{{ i18n "level" | default "Nivell" }}</span>
+        <span class="info-box__value">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{/* Properes dates d'aquest curs */}}
+      {{ $courseSlug := .File.ContentBaseName }}
+      {{ $dates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
+      {{ if $dates }}
+      <div style="margin-top:1.5rem; margin-bottom:1rem;">
+        <p style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:0.75rem;">
+          {{ i18n "next_dates" | default "Properes dates" }}
+        </p>
+        {{ range $dates | first 3 }}
+          <div style="font-size:0.875rem; padding:0.5rem 0; border-bottom:1px solid var(--color-border);">
+            {{ with .Params.date_start }}{{ . | time.Format "2 Jan 2006" }}{{ end }}
+            {{ with .Params.time_start }} · {{ . }}{{ end }}
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <div class="info-box__cta">
+        {{ $status := .Params.status | default "active" }}
+        {{ if eq $status "active" }}
+          {{ if .Site.Params.tallyFormContact }}
+            <a href="https://tally.so/r/{{ .Site.Params.tallyFormContact }}?curs={{ .File.ContentBaseName }}"
+               target="_blank" rel="noopener"
+               class="btn btn--primary">
+              {{ i18n "cta_register" | default "Inscripció" }}
+            </a>
+          {{ else }}
+            <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Inscripció {{ .Title }}"
+               class="btn btn--primary">
+              {{ i18n "cta_register" | default "Inscripció" }}
+            </a>
+          {{ end }}
+        {{ else if eq $status "full" }}
+          <button class="btn btn--secondary" disabled>{{ i18n "status_full" | default "Complet" }}</button>
+        {{ else if eq $status "soon" }}
+          <button class="btn btn--secondary" disabled>{{ i18n "status_soon" | default "Pròximament" }}</button>
+        {{ end }}
+
+        <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Consulta {{ .Title }}" class="btn btn--secondary">
+          {{ i18n "cta_ask" | default "Fer una consulta" }}
+        </a>
+      </div>
+
+    </aside>
+  </div>
+
+  {{/* Cursos relacionats */}}
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{ if $related }}
+  <div class="section" style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
+    <h2 style="font-family:var(--font-serif); font-size:1.875rem; margin-bottom:2rem;">
+      {{ i18n "related_courses" | default "Altres tallers" }}
+    </h2>
+    <div class="courses-grid">
+      {{ range $related }}
+        {{ if eq .Type "tallers" }}{{ partial "course-card.html" . }}{{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}

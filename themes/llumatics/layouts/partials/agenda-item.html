@@ -1,0 +1,38 @@
+{{/* Partial: agenda-item.html — una entrada d'agenda */}}
+{{ $date := .Params.date_start }}
+<div class="agenda-item">
+  <div class="agenda-item__date">
+    {{ if $date }}
+      <div class="agenda-item__day">{{ $date | time.Format "2" }}</div>
+      <div class="agenda-item__month">{{ $date | time.Format "Jan" | upper }}</div>
+    {{ end }}
+  </div>
+
+  <div class="agenda-item__info">
+    <h3 class="agenda-item__title">
+      {{ with .Params.course_ref }}
+        <a href="{{ relref $ . }}">{{ $.Title }}</a>
+      {{ else }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </h3>
+    <div class="agenda-item__meta">
+      {{ with .Params.time_start }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
+    </div>
+  </div>
+
+  <div>
+    {{ $status := .Params.status | default "active" }}
+    {{ if eq $status "active" }}
+      <a href="{{ .RelPermalink }}" class="btn btn--primary btn--sm">
+        {{ i18n "cta_register" | default "Inscripció" }}
+      </a>
+    {{ else if eq $status "full" }}
+      <span class="course-card__status course-card__status--full">
+        {{ i18n "status_full" | default "Complet" }}
+      </span>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,57 @@
+{{/* Partial: course-card.html
+     Context: una pàgina de tipus "tallers"
+     Ús: {{ partial "course-card.html" . }}
+*/}}
+<article class="course-card">
+  <a href="{{ .RelPermalink }}" class="course-card__image">
+    {{ if .Params.image }}
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+    {{ else }}
+      <div style="width:100%;height:100%;background:var(--color-bg-alt);display:flex;align-items:center;justify-content:center;">
+        <span style="color:var(--color-border);font-size:2rem;">◻</span>
+      </div>
+    {{ end }}
+  </a>
+
+  <div class="course-card__body">
+    <div class="course-card__meta">
+      {{ with .Params.technique }}
+        <span class="course-card__tag">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.level }}
+        <span class="tag tag--level-{{ . | lower | urlize }}">{{ . }}</span>
+      {{ end }}
+    </div>
+
+    <h3 class="course-card__title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+
+    {{ with .Params.lead }}
+      <p class="course-card__excerpt">{{ . | truncate 120 }}</p>
+    {{ else }}
+      <p class="course-card__excerpt">{{ .Summary | truncate 120 }}</p>
+    {{ end }}
+
+    <div class="course-card__footer">
+      <span class="course-card__price">
+        {{ with .Params.price }}{{ . }}€{{ else }}&mdash;{{ end }}
+      </span>
+
+      {{ $status := .Params.status | default "active" }}
+      {{ if eq $status "active" }}
+        <span class="course-card__status course-card__status--available">
+          {{ i18n "status_available" | default "Places disponibles" }}
+        </span>
+      {{ else if eq $status "full" }}
+        <span class="course-card__status course-card__status--full">
+          {{ i18n "status_full" | default "Complet" }}
+        </span>
+      {{ else if eq $status "soon" }}
+        <span class="course-card__status course-card__status--soon">
+          {{ i18n "status_soon" | default "Pròximament" }}
+        </span>
+      {{ end }}
+    </div>
+  </div>
+</article>

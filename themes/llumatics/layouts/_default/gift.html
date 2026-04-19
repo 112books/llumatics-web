@@ -1,0 +1,69 @@
+{{/* Layout: gift.html — Pàgina "Regala un curs" */}}
+{{ define "main" }}
+<div class="gift-section container">
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+
+    <div>
+      <p class="section__eyebrow">{{ i18n "gift_title" | default "Regala experiència" }}</p>
+      <h1 style="font-family:var(--font-serif); font-size:clamp(2rem,5vw,3rem); line-height:1.2; letter-spacing:-0.02em; margin-bottom:1.5rem;">
+        {{ .Title }}
+      </h1>
+      <div class="prose">{{ .Content }}</div>
+
+      <div style="margin-top:2rem; display:flex; flex-direction:column; gap:0.75rem;">
+        <p style="font-weight:600;">Imports disponibles:</p>
+
+        {{ range hugo.Data.gift_amounts }}
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border:1px solid var(--color-border); border-radius:4px;">
+          <div>
+            <strong style="font-size:1.25rem;">{{ .amount }}€</strong>
+            {{ with .description }}<p style="font-size:0.875rem; color:var(--color-text-muted); margin-top:0.25rem;">{{ . }}</p>{{ end }}
+          </div>
+          {{ if $.Site.Params.tallyFormGiftVoucher }}
+          <a href="https://tally.so/r/{{ $.Site.Params.tallyFormGiftVoucher }}?import={{ .amount }}"
+             target="_blank" rel="noopener"
+             class="btn btn--primary btn--sm">
+            {{ i18n "gift_cta" | default "Sol·licitar" }}
+          </a>
+          {{ else }}
+          <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Val regal {{ .amount }}€"
+             class="btn btn--primary btn--sm">
+            {{ i18n "gift_cta" | default "Sol·licitar" }}
+          </a>
+          {{ end }}
+        </div>
+        {{ else }}
+        {{/* Fallback si no hi ha data */}}
+        {{ range slice 80 120 200 }}
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border:1px solid var(--color-border); border-radius:4px;">
+          <strong style="font-size:1.25rem;">{{ . }}€</strong>
+          <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Val regal {{ . }}€"
+             class="btn btn--primary btn--sm">
+            {{ i18n "gift_cta" | default "Sol·licitar" }}
+          </a>
+        </div>
+        {{ end }}
+        {{ end }}
+
+      </div>
+    </div>
+
+    {{/* Preview visual del val */}}
+    <div>
+      <div class="gift-card-preview">
+        <div class="gift-card-preview__logo">Llumàtics</div>
+        <div class="gift-card-preview__amount">Val Regal</div>
+        <div class="gift-card-preview__label">
+          {{ i18n "gift_card_label" | default "Canjeable per qualsevol taller · Vàlid 12 mesos" }}
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:var(--color-text-muted); margin-top:1rem;">
+        {{ i18n "gift_info" | default "El val s'envia per correu electrònic en format PDF imprimible. Pot aplicar-se a qualsevol taller disponible." }}
+      </p>
+    </div>
+
+  </div>
+
+</div>
+{{ end }}

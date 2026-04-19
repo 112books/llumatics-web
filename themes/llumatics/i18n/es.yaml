@@ -1,0 +1,65 @@
+# Traduccions — Castellano
+
+home: "Inicio"
+nav_courses: "Talleres"
+nav_schedule: "Agenda"
+nav_spaces: "Espacios"
+nav_blog: "Blog"
+nav_about: "Sobre nosotros"
+gift_course: "Regala un curso"
+contact: "Contacto"
+
+hero_eyebrow: "Escuela de fotografía"
+hero_title: "La fotografía como<br>proceso y forma de ver."
+hero_subtitle: "Talleres de revelado, laboratorio analógico y formación técnica en Barcelona."
+
+cta_courses: "Ver talleres"
+cta_schedule: "Próximas fechas"
+cta_register: "Inscripción"
+cta_ask: "Hacer una consulta"
+
+section_courses_eyebrow: "Formación"
+section_courses_title: "Talleres"
+section_courses_subtitle: "Del proceso a la visión. Formación técnica y conceptual en fotografía analógica."
+
+section_agenda_eyebrow: "Calendario"
+section_agenda_title: "Próximas fechas"
+
+section_spaces_eyebrow: "Instalaciones"
+section_spaces_title: "Nuestros espacios"
+section_spaces_subtitle: "Plató, laboratorio oscuro y biblioteca especializada."
+
+see_all_courses: "Ver todos los talleres"
+see_full_agenda: "Ver agenda completa"
+read_more: "Leer más"
+related_courses: "Otros talleres"
+
+status_available: "Plazas disponibles"
+status_full: "Completo"
+status_soon: "Próximamente"
+
+duration: "Duración"
+location: "Lugar"
+max_places: "Plazas máximas"
+level: "Nivel"
+next_dates: "Próximas fechas"
+
+newsletter_title: "Luz en tu bandeja de entrada"
+newsletter_desc: "Nuevos talleres, reflexiones sobre fotografía y noticias del laboratorio. Sin ruido."
+newsletter_placeholder: "tu correo"
+newsletter_cta: "Suscribirme"
+
+private_title: "Contenido para alumnos"
+private_desc: "Este material es exclusivo para los alumnos del taller. Introduce tu correo para acceder."
+private_cta: "Acceder al material"
+private_placeholder: "tu correo"
+private_gate_label: "Acceso alumnos"
+
+gift_title: "Regala experiencia"
+gift_desc: "Da el mejor regalo: aprender a ver a través de la fotografía."
+gift_cta: "Solicitar vale-regalo"
+
+footer_tagline: "La fotografía como proceso y forma de ver."
+footer_sub: "Escuela de fotografía en Barcelona."
+footer_legal: "Los contenidos de esta web no pueden reproducirse sin autorización."
+rights_reserved: "Todos los derechos reservados."
