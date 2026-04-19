@@ -66,9 +66,9 @@ defaultContentLanguageInSubdir = false
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
-  level = "levels"
-  technique = "techniques"
+  bloc = "blocs"       # fonaments | proces | practica | gran-format | processos-alternatius
+  level = "levels"     # iniciacio | intermedi | avançat
+  format = "formats"   # puntual | curs | intensiu | personalitzat
 
 [markup]
   [markup.goldmark]

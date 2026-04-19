@@ -6,20 +6,45 @@
     <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
     <a href="{{ "/tallers/" | relLangURL }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
+    {{ with .Params.blocs }}
+      <span class="breadcrumb__sep">›</span>
+      {{ $slug := index . 0 }}
+      {{ range hugo.Data.blocs }}
+        {{ if eq .slug $slug }}
+          <a href="{{ "/blocs/" | relLangURL }}{{ $slug }}/">{{ .nom }}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
     <span class="breadcrumb__sep">›</span>
     <span>{{ .Title }}</span>
   </nav>
 
   <header class="course-single__header">
-    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1rem;">
-      {{ with .Params.technique }}
-        <span class="course-card__tag">{{ . }}</span>
+    {{/* Badges */}}
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
+      {{ range .Params.blocs }}
+        {{ $slug := . }}
+        {{ range hugo.Data.blocs }}
+          {{ if eq .slug $slug }}
+            <span class="tag tag--bloc">{{ .icon }} {{ .nom }}</span>
+          {{ end }}
+        {{ end }}
       {{ end }}
-      {{ with .Params.level }}
-        <span class="tag tag--level-{{ . | lower | urlize }}">{{ . }}</span>
+      {{ range .Params.levels }}
+        <span class="tag tag--level-{{ . | urlize }}">{{ . | title }}</span>
+      {{ end }}
+      {{ range .Params.formats }}
+        <span class="tag">{{ . | title }}</span>
+      {{ end }}
+      {{ if .Params.extern }}
+        <span class="tag" style="background:#FFF7ED;color:#92400E;">Taller extern</span>
       {{ end }}
     </div>
+
     <h1 class="course-single__title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+      <p style="font-size:1.125rem; color:var(--color-text-muted); margin-bottom:0.5rem;">{{ . }}</p>
+    {{ end }}
     {{ with .Params.lead }}
       <p class="course-single__lead">{{ . }}</p>
     {{ end }}
@@ -36,102 +61,161 @@
     {{/* Contingut principal */}}
     <div class="prose">
       {{ .Content }}
+
+      {{/* Fitxa pedagògica expandida */}}
+      {{ if or .Params.objective .Params.methodology .Params.result .Params.target }}
+      <div class="fitxa-pedagogica">
+        <h2>Fitxa del taller</h2>
+
+        {{ with .Params.objective }}
+        <div class="fitxa-row">
+          <dt>Objectiu</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.methodology }}
+        <div class="fitxa-row">
+          <dt>Metodologia</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.result }}
+        <div class="fitxa-row">
+          <dt>Resultat</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.prerequisites }}
+        <div class="fitxa-row">
+          <dt>Prerequisits</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.target }}
+        <div class="fitxa-row">
+          <dt>A qui va dirigit</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* Tallers relacionats */}}
+      {{ with .Params.related }}
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--color-border);">
+        <h3 style="font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">Continua aprenent</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+          {{ range . }}
+            {{ $related := $.Site.GetPage (printf "/tallers/%s" .) }}
+            {{ if $related }}
+            <li>
+              <a href="{{ $related.RelPermalink }}" style="display:flex; justify-content:space-between; padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:4px; transition:border-color 200ms;">
+                <span>{{ $related.Title }}</span>
+                <span style="color:var(--color-text-muted);">→</span>
+              </a>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
     </div>
 
-    {{/* Caixa lateral d'inscripció */}}
+    {{/* Caixa lateral */}}
     <aside class="course-single__info-box">
       <div class="info-box__price">
-        {{ with .Params.price }}{{ . }}€{{ else }}&mdash;{{ end }}
+        {{ with .Params.price }}
+          {{ if gt . 0 }}{{ . }}€{{ else }}A consultar{{ end }}
+        {{ else }}A consultar{{ end }}
       </div>
 
       {{ with .Params.duration }}
       <div class="info-box__row">
-        <span class="info-box__label">{{ i18n "duration" | default "Durada" }}</span>
+        <span class="info-box__label">Durada</span>
         <span class="info-box__value">{{ . }}</span>
       </div>
       {{ end }}
 
-      {{ with .Params.location }}
+      {{ if gt (.Params.sessions | default 1) 1 }}
       <div class="info-box__row">
-        <span class="info-box__label">{{ i18n "location" | default "Lloc" }}</span>
-        <span class="info-box__value">{{ . }}</span>
+        <span class="info-box__label">Sessions</span>
+        <span class="info-box__value">{{ .Params.sessions }}</span>
       </div>
       {{ end }}
 
-      {{ with .Params.max_places }}
       <div class="info-box__row">
-        <span class="info-box__label">{{ i18n "max_places" | default "Places" }}</span>
-        <span class="info-box__value">{{ . }}</span>
+        <span class="info-box__label">Lloc</span>
+        <span class="info-box__value">
+          {{ if .Params.extern }}
+            {{ .Params.extern_location | default .Params.location }}
+          {{ else }}
+            {{ .Params.location | default "Nau Bostik, Barcelona" }}
+          {{ end }}
+        </span>
       </div>
-      {{ end }}
 
-      {{ with .Params.level }}
       <div class="info-box__row">
-        <span class="info-box__label">{{ i18n "level" | default "Nivell" }}</span>
-        <span class="info-box__value">{{ . }}</span>
+        <span class="info-box__label">Alumnes</span>
+        <span class="info-box__value">Màx. {{ .Params.max_places | default 4 }}</span>
+      </div>
+
+      {{ range .Params.levels }}
+      <div class="info-box__row">
+        <span class="info-box__label">Nivell</span>
+        <span class="info-box__value">{{ . | title }}</span>
       </div>
       {{ end }}
 
-      {{/* Properes dates d'aquest curs */}}
+      {{/* Properes dates */}}
       {{ $courseSlug := .File.ContentBaseName }}
       {{ $dates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
       {{ if $dates }}
       <div style="margin-top:1.5rem; margin-bottom:1rem;">
         <p style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:0.75rem;">
-          {{ i18n "next_dates" | default "Properes dates" }}
+          Properes dates
         </p>
         {{ range $dates | first 3 }}
           <div style="font-size:0.875rem; padding:0.5rem 0; border-bottom:1px solid var(--color-border);">
             {{ with .Params.date_start }}{{ . | time.Format "2 Jan 2006" }}{{ end }}
-            {{ with .Params.time_start }} · {{ . }}{{ end }}
+            {{ with .Params.time_start }} · {{ . }}h{{ end }}
           </div>
         {{ end }}
       </div>
       {{ end }}
 
       <div class="info-box__cta">
-        {{ $status := .Params.status | default "active" }}
+        {{ $status := .Params.status | default "soon" }}
         {{ if eq $status "active" }}
-          {{ if .Site.Params.tallyFormContact }}
-            <a href="https://tally.so/r/{{ .Site.Params.tallyFormContact }}?curs={{ .File.ContentBaseName }}"
+          {{ if $.Site.Params.tallyFormContact }}
+            <a href="https://tally.so/r/{{ $.Site.Params.tallyFormContact }}?curs={{ .File.ContentBaseName }}"
                target="_blank" rel="noopener"
                class="btn btn--primary">
-              {{ i18n "cta_register" | default "Inscripció" }}
+              Inscripció
             </a>
           {{ else }}
-            <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Inscripció {{ .Title }}"
+            <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Inscripció: {{ .Title }}"
                class="btn btn--primary">
-              {{ i18n "cta_register" | default "Inscripció" }}
+              Inscripció
             </a>
           {{ end }}
         {{ else if eq $status "full" }}
-          <button class="btn btn--secondary" disabled>{{ i18n "status_full" | default "Complet" }}</button>
-        {{ else if eq $status "soon" }}
-          <button class="btn btn--secondary" disabled>{{ i18n "status_soon" | default "Pròximament" }}</button>
+          <button class="btn btn--secondary" disabled>Complet</button>
+        {{ else }}
+          <button class="btn btn--secondary" disabled>Pròximament</button>
         {{ end }}
 
-        <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Consulta {{ .Title }}" class="btn btn--secondary">
-          {{ i18n "cta_ask" | default "Fer una consulta" }}
+        <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Consulta: {{ .Title }}"
+           class="btn btn--secondary">
+          Fer una consulta
         </a>
       </div>
 
     </aside>
   </div>
-
-  {{/* Cursos relacionats */}}
-  {{ $related := .Site.RegularPages.Related . | first 3 }}
-  {{ if $related }}
-  <div class="section" style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
-    <h2 style="font-family:var(--font-serif); font-size:1.875rem; margin-bottom:2rem;">
-      {{ i18n "related_courses" | default "Altres tallers" }}
-    </h2>
-    <div class="courses-grid">
-      {{ range $related }}
-        {{ if eq .Type "tallers" }}{{ partial "course-card.html" . }}{{ end }}
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
 
 </div>
 {{ end }}

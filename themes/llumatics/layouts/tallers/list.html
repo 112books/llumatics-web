@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="section container">
+
+  {{/* Capçalera de la secció */}}
+  <div class="section__header" style="max-width:720px;">
+    {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="section__title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
+  </div>
+
+  {{/* Navegació per blocs */}}
+  {{ $blocs := hugo.Data.blocs }}
+  {{ if $blocs }}
+  <nav class="blocs-nav" aria-label="Filtrar per àmbit">
+    <a href="{{ .RelPermalink }}" class="bloc-pill {{ if not .Params.bloc }}bloc-pill--active{{ end }}">
+      Tots
+    </a>
+    {{ range $blocs }}
+    <a href="{{ "/blocs/" | relLangURL }}{{ .slug }}/"
+       class="bloc-pill">
+      <span aria-hidden="true">{{ .icon }}</span> {{ .nom }}
+    </a>
+    {{ end }}
+  </nav>
+  {{ end }}
+
+  {{/* Grid de tallers */}}
+  {{ $tallers := .Pages }}
+  {{ if $tallers }}
+    <div class="courses-grid" style="margin-top:2rem;">
+      {{ range $tallers }}
+        {{ partial "course-card.html" . }}
+      {{ end }}
+    </div>
+  {{ else }}
+    <p style="color:var(--color-text-muted); margin-top:3rem;">Aviat hi haurà nous tallers disponibles.</p>
+  {{ end }}
+
+  {{/* Tallers externs */}}
+  {{ $externs := where .Pages ".Params.extern" true }}
+  {{ if $externs }}
+  <div style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
+    <p class="section__eyebrow">Col·laboracions</p>
+    <h2 class="section__title" style="font-size:1.875rem; margin-bottom:0.5rem;">Tallers externs</h2>
+    <p class="section__subtitle" style="margin-bottom:2rem;">Tallers impartits fora de Llumàtics, en col·laboració amb altres espais.</p>
+    <div class="courses-grid">
+      {{ range $externs }}
+        {{ partial "course-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}

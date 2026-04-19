@@ -38,4 +38,4 @@ La fotografia documental i de carrer ens interessa molt, i sobretot des del punt
 
 No venim de la facultat de Belles Arts. Però sí que hem impartit classes i conferències sobre fotografia experimental en espais molt diversos. I continuem aprenent.
 
-Els grups de **4 a 6 persones** no és un límit de capacitat: és una condició pedagògica. Aprenent fotografia química, l'atenció individual no és un luxe, és el mínim.
+Els grups de \*\*màxim 4 persones\*\* no és un límit de capacitat: és una condició pedagògica. Aprenent fotografia química, l'atenció individual no és un luxe, és el mínim.

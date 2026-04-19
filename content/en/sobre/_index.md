@@ -38,4 +38,4 @@ Documentary and street photography interest us a great deal, especially from a c
 
 We didn't come from fine arts school. But we have taught classes and given talks on experimental photography in many different contexts. And we're still learning.
 
-Groups of **4 to 6 people** isn't a capacity limit — it's a pedagogical condition. When learning chemical photography, individual attention isn't a luxury, it's the minimum.
+Groups of **maximum 4 people** isn't a capacity limit — it's a pedagogical condition. When learning chemical photography, individual attention isn't a luxury, it's the minimum.

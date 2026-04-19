@@ -1,0 +1,44 @@
+- slug: fonaments
+  nom: "Fonaments"
+  nom_es: "Fundamentos"
+  nom_en: "Foundations"
+  desc: "Iniciació i comprensió de la càmera, la llum i l'exposició."
+  desc_es: "Iniciación y comprensión de la cámara, la luz y la exposición."
+  desc_en: "Introduction to the camera, light and exposure."
+  icon: "○"
+
+- slug: proces
+  nom: "Procés analògic"
+  nom_es: "Proceso analógico"
+  nom_en: "Analogue process"
+  desc: "Revelat de pel·lícula i còpia en paper. El nucli de Llumàtics."
+  desc_es: "Revelado de película y copia en papel. El núcleo de Llumàtics."
+  desc_en: "Film development and paper printing. The core of Llumàtics."
+  icon: "◑"
+
+- slug: practica
+  nom: "Pràctica fotogràfica"
+  nom_es: "Práctica fotográfica"
+  nom_en: "Photographic practice"
+  desc: "Presa d'imatges en context real: retrat, carrer, escena."
+  desc_es: "Toma de imágenes en contexto real: retrato, calle, escena."
+  desc_en: "Image-making in real contexts: portrait, street, scene."
+  icon: "◎"
+
+- slug: gran-format
+  nom: "Gran format"
+  nom_es: "Gran formato"
+  nom_en: "Large format"
+  desc: "Fotografia lenta i conscient amb equipaments de gran format."
+  desc_es: "Fotografía lenta y consciente con equipos de gran formato."
+  desc_en: "Slow, intentional photography with large format equipment."
+  icon: "□"
+
+- slug: processos-alternatius
+  nom: "Processos alternatius"
+  nom_es: "Procesos alternativos"
+  nom_en: "Alternative processes"
+  desc: "Experimentació: cianotípia, reveladors artesanals, suports no convencionals."
+  desc_es: "Experimentación: cianotipia, reveladores artesanales, soportes no convencionales."
+  desc_en: "Experimentation: cyanotype, artisanal developers, unconventional surfaces."
+  icon: "◈"

@@ -38,4 +38,4 @@ La fotografía documental y de calle nos interesa mucho, y sobre todo desde el p
 
 No venimos de la facultad de Bellas Artes. Pero sí hemos impartido clases y conferencias sobre fotografía experimental en espacios muy diversos. Y seguimos aprendiendo.
 
-Los grupos de **4 a 6 personas** no es un límite de capacidad: es una condición pedagógica. Aprendiendo fotografía química, la atención individual no es un lujo, es el mínimo.
+Los grupos de **máximo 4 personas** no es un límite de capacidad: es una condición pedagógica. Aprendiendo fotografía química, la atención individual no es un lujo, es el mínimo.

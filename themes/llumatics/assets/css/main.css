@@ -869,6 +869,75 @@ button, input, select, textarea {
 .tag--level-iniciacio  { background: #ECFDF5; color: #065F46; }
 .tag--level-intermedi  { background: #EFF6FF; color: #1E40AF; }
 .tag--level-avançat    { background: #FDF4FF; color: #6B21A8; }
+.tag--bloc             { background: #FFF7ED; color: #92400E; }
+
+/* ── Navegació per blocs (llista tallers) ────────────────────────────────── */
+.blocs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bloc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.bloc-pill:hover,
+.bloc-pill--active {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+/* ── Fitxa pedagògica (dins single taller) ───────────────────────────────── */
+.fitxa-pedagogica {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.fitxa-pedagogica h2 {
+  font-size: var(--text-base);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.fitxa-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--space-3) var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.fitxa-row:last-child { border-bottom: none; }
+
+.fitxa-row dt {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.fitxa-row dd { margin: 0; }
 
 /* ── Breadcrumb ──────────────────────────────────────────────────────────── */
 .breadcrumb {
