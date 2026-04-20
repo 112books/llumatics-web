@@ -5,35 +5,36 @@ lead: "Un taller per fotografiar al carrer amb consciència: com mirar, com apro
 description: "Taller de fotografia de carrer analògica a Barcelona. Tècnica, mirada i ètica de la imatge documental. Grups de màxim 4 persones."
 image: "/images/tallers/fotografia-de-carrer.jpg"
 
-blocs:
-  - practica
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-  - intensiu
-tags: ["carrer", "documental", "mirada", "analògica", "Barcelona", "35mm"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "3,5 hores (teoria + sortida + revelat)"
-sessions: 1
-price: 99
-max_places: 4
-location: "Barcelona (sortida des de Nau Bostik)"
+# Fitxa tècnica
+preu_1: 195
+preu_2: 111
+preu_3: 83
+preu_4: 70
+durada_hores: 3.5
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Desenvolupar una mirada pròpia al carrer i entendre les decisions tècniques i ètiques de la fotografia documental."
 methodology: "Sortida fotogràfica per Barcelona amb càmera analògica, seguida de revisió col·lectiva dels fotogrames exposats."
 result: "Un carret exposat i revelat el mateix dia, amb els negatius digitalitzats. Comprensió pràctica de la mirada de carrer."
-prerequisites: "Saber fotografiar en mode manual. Recomanable haver fet el taller d'Iniciació o tenir experiència equivalent."
+prerequisits: "Saber fotografiar en mode manual. Recomanable haver fet el taller d'Iniciació o tenir experiència equivalent."
 target: "Fotògrafs que volen fer el pas del control tècnic a la mirada: aprendre a veure abans de disparar."
-related:
-  - camera-i-exposicio
-  - retrat-analogic
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "carrer-i-mirada"
+  - "tutoria-fotografica"
+tags: ["carrer", "documental", "mirada", "analògica", "Barcelona"]
 draft: false
 ---
 

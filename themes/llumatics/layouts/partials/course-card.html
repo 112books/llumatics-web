@@ -17,14 +17,24 @@
 
   <div class="course-card__body">
     <div class="course-card__meta">
-      {{ range first 1 .Params.levels }}
-        <span class="tag tag--level-{{ . | lower | urlize }}">{{ . | title }}</span>
+      {{/* Nivell — nou camp string, amb fallback a levels (array antic) */}}
+      {{ if .Params.nivell }}
+        <span class="tag tag--level-{{ .Params.nivell | lower | urlize }}">{{ .Params.nivell }}</span>
+      {{ else }}
+        {{ range first 1 .Params.levels }}
+          <span class="tag tag--level-{{ . | lower | urlize }}">{{ . | title }}</span>
+        {{ end }}
       {{ end }}
-      {{ with .Params.duration }}
-        <span style="opacity:0.5;">{{ . }}</span>
+
+      {{/* Durada — nou camp numèric, amb fallback a duration (string antic) */}}
+      {{ if .Params.durada_hores }}
+        <span style="opacity:0.5;">{{ .Params.durada_hores }}h</span>
+      {{ else if .Params.duration }}
+        <span style="opacity:0.5;">{{ .Params.duration }}</span>
       {{ end }}
+
       {{ if $isExtern }}
-        <span class="course-card__tag course-card__tag--extern">C&F</span>
+        <span class="course-card__tag course-card__tag--extern">C&amp;F</span>
       {{ end }}
     </div>
 
@@ -40,24 +50,37 @@
 
     <div class="course-card__footer">
       <span class="course-card__price">
-        {{ if and .Params.price (gt (.Params.price | int) 0) }}
+        {{/* Preu — nou sistema preu_1/tipus, amb fallback a price/formats (antic) */}}
+        {{ if .Params.preu_1 }}
+          {{ if eq (.Params.tipus | default "") "curs" }}
+            <span class="course-card__format-badge">Recorregut</span>
+          {{ end }}
+          {{ if gt (.Params.preu_1 | int) 0 }}
+            des de {{ .Params.preu_4 | default .Params.preu_1 }}€
+          {{ else }}
+            {{ i18n "price_free" | default "Gratuït" }}
+          {{ end }}
+        {{ else if .Params.price }}
           {{ if in (.Params.formats | default slice) "curs" }}
             <span class="course-card__format-badge">Recorregut</span>
           {{ end }}
-          {{ .Params.price }}€
-        {{ else if and .Params.price (eq (.Params.price | int) 0) }}
-          {{ i18n "price_free" | default "Gratuït" }}
+          {{ if gt (.Params.price | int) 0 }}
+            {{ .Params.price }}€
+          {{ else }}
+            {{ i18n "price_free" | default "Gratuït" }}
+          {{ end }}
         {{ else }}
           &mdash;
         {{ end }}
       </span>
 
-      {{ $status := .Params.status | default "soon" }}
+      {{/* CTA — usa estat (nou) amb fallback a status (antic) */}}
+      {{ $estat := .Params.estat | default (.Params.status | default "actiu") }}
       {{ if $isExtern }}
         <a href="{{ .RelPermalink }}" class="course-card__cta">
           Veure dates <span aria-hidden="true">→</span>
         </a>
-      {{ else if eq $status "full" }}
+      {{ else if eq $estat "full" }}
         <span class="course-card__status course-card__status--full">
           {{ i18n "status_full" | default "Complet" }}
         </span>

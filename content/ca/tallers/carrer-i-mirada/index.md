@@ -5,35 +5,36 @@ lead: "No és un taller de street photography. És un recorregut: conèixer un b
 description: "Recorregut fotogràfic per Barcelona. Street photography humanista en quatre fases: reconeixement, execució, laboratori i edició. Culmina amb un fotollibre 112books. Màxim 3 persones."
 image: "/images/tallers/carrer-i-mirada.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-  - avancat
-formats:
-  - curs
-tags: ["carrer", "street photography", "Leica", "rangefinder", "humanista", "Barcelona", "barris", "contacte", "edició", "fotollibre", "112books"]
+# Classificació
+tipus: "curs"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Avançat"
+estat: "en-preparacio"
 
-duration: "4 sessions · 3–4 setmanes"
-sessions: 4
-price: 350
-max_places: 3
-location: "Barcelona — barri rotatiu · sessions a Nau Bostik"
+# Fitxa tècnica
+preu_1: 880
+preu_2: 502
+preu_3: 376
+preu_4: 315
+durada_hores: 16
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 3
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Construir un treball fotogràfic complet sobre un barri de Barcelona: des del coneixement profund del lloc fins a la seqüència final d'un fotollibre. Amb mètode, discurs propi i producte tangible."
 methodology: "Quatre fases progressives: reconeixement sense càmera, execució fotogràfica, treball de laboratori i edició del discurs. Cada fase informa la següent. S'acaba amb un fotollibre digital editat amb 112books."
 result: "Un cos de treball coherent sobre un barri de Barcelona: negatius revelats, contactes llegits, edició raonada i un fotollibre digital (impressió opcional). L'experiència completa de portar un projecte de principi a fi."
-prerequisites: "Experiència sòlida en fotografia analògica. Haver fotografiat al carrer prèviament. Càmera analògica de 35mm pròpia imprescindible —Leica M o rangefinder és l'eina recomanada."
+prerequisits: "Experiència sòlida en fotografia analògica. Haver fotografiat al carrer prèviament. Càmera analògica de 35mm pròpia imprescindible —Leica M o rangefinder és l'eina recomanada."
 target: "Fotògrafs analògics que volen anar més lluny: no fer fotos soltes sinó construir un projecte amb coherència, discurs i resultat publicable."
-related:
-  - fotografia-de-carrer
-  - tutoria-fotografica
-  - digitalitzacio-escaner
 
-status: "soon"
-date: 2024-01-01
-draft: false
+# Tallers relacionats
+continua_aprenent: 
+  - "tutoria-fotografica"
+tags: ["carrer", "street photography", "Barcelona", "fotollibre", "112books"]
+draft: true
 ---
 
 ## Un recorregut, no un workshop

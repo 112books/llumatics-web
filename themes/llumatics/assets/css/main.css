@@ -37,6 +37,7 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
@@ -130,8 +131,8 @@ button, input, select, textarea {
 }
 
 .site-logo img {
-  height: 56px;
-  width: 56px;
+  height: 67px;
+  width: 67px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -149,8 +150,8 @@ button, input, select, textarea {
    no cal filter: la marca ja té cercle fosc,
    posem un fons blanc darrere per fer-lo llegible */
 .site-footer__brand .site-logo-img {
-  height: 56px;
-  width: 56px;
+  height: 67px;
+  width: 67px;
   object-fit: contain;
   background: #fff;
   border-radius: 50%;
@@ -252,7 +253,7 @@ button, input, select, textarea {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.18;
+  opacity: 0.28;
 }
 
 .hero__content {
@@ -787,6 +788,35 @@ button, input, select, textarea {
 }
 
 .section__header {
+  margin-bottom: var(--space-8);
+}
+
+/* ── Tallers hero (capçalera + recorregut) ───────────────────────────────── */
+.tallers-hero {
+  position: relative;
+  background-image: url('/images/tallers-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--space-16);
+}
+
+.tallers-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.tallers-hero .container {
+  position: relative;
+}
+
+.tallers-hero__inner {
+  width: 66.666%;
+  margin-left: auto;
+}
+
+.tallers-hero__header {
   margin-bottom: var(--space-8);
 }
 

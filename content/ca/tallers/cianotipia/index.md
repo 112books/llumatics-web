@@ -5,34 +5,35 @@ lead: "Una de les tècniques fotogràfiques més antigues i més accessibles: em
 description: "Taller de cianotípia a Barcelona. Procés alternatiu de impressió fotogràfica sense cambra fosca: emulsió, exposició solar i revelat amb aigua."
 image: "/images/tallers/cianotipia.jpg"
 
-blocs:
-  - processos-alternatius
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["cianotípia", "cyanotype", "procés alternatiu", "impressió", "blau", "solar", "sense càmera"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "8 hores (10:00–14:00 i 15:00–19:00)"
-sessions: 2
-price: 129
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Dominar el procés complet de cianotípia: preparació de la fórmula, sensibilització, exposició i revelat, incloent tècniques de virat i impressió sobre negatius propis."
 methodology: "Jornada completa en dues parts amb pausa de migdia. Matí: fonaments i fotogrames. Tarda: impressió amb negatius en acetat i variacions tècniques."
 result: "6-10 peces en cianotípia: fotogrames, impressions de negatius, experimentació amb virats i suports alternatius."
-prerequisites: "Cap coneixement tècnic previ. Els participants han de portar fotografies convertides a negatiu en acetate (o les generem a la sessió)."
+prerequisits: "Cap coneixement tècnic previ. Els participants han de portar fotografies convertides a negatiu en acetate (o les generem a la sessió)."
 target: "Qualsevol persona curiosa per la fotografia química sense càmera. Artistes, dissenyadors, fotògrafs i no fotògrafs."
-related:
-  - fotogrames-cianotipia
-  - reveladors-artesanals
-  - fotografia-estenopèica
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "reveladors-artesanals"
+tags: ["cianotípia", "procés alternatiu", "impressió", "blau", "solar"]
 draft: false
 ---
 

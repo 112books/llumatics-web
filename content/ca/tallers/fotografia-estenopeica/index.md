@@ -5,34 +5,37 @@ lead: "Construïm una càmera estenopèica, exposem sobre paper fotogràfic i re
 description: "Taller de fotografia estenopèica a Barcelona: construcció de la càmera, exposició i revelat. Del forat de la llum a la còpia en paper."
 image: "/images/tallers/fotografia-estenopèica.jpg"
 
-blocs:
-  - fonaments
-  - processos-alternatius
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["estenopèica", "pinhole", "paper", "revelat", "construcció", "experimental"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["fonaments", "processos-alternatius"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 80
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
+ideal_institucions: true
 
+# Fitxa pedagògica
 objective: "Entendre el principi òptic de la càmera i obtenir imatges estenopèiques revelades en paper fotogràfic."
 methodology: "Construcció manual de la càmera, exposició en exterior i revelat al laboratori. Tot en una sessió."
 result: "Una càmera estenopèica construïda per l'alumne i 2-3 còpies en paper revelades."
-prerequisites: "Cap. És un dels millors punts de partida per a qualsevol persona sense experiència."
+prerequisits: "Cap. És un dels millors punts de partida per a qualsevol persona sense experiència."
 target: "Persones de qualsevol edat i nivell que volen entendre la fotografia des del principi absolut. Ideal com a primera experiència analògica."
-related:
-  - camera-i-exposicio
-  - copies-en-paper
-  - cianotipia
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "fonaments-iniciacio-puntual"
+  - "cianotipia"
+tags: ["estenopèica", "pinhole", "paper", "revelat", "construcció", "experimental"]
 draft: false
 ---
 

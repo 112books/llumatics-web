@@ -5,35 +5,32 @@ lead: "Una sessió individual pensada per a tu: portes les teves preguntes, el t
 description: "Tutoria individual de fotografia analògica a Barcelona. Acompanyament personalitzat de laboratori, tècnica o projecte fotogràfic."
 image: "/images/tallers/tutoria-fotografica.jpg"
 
-blocs:
-  - practica
-levels:
-  - iniciacio
-  - intermedi
-  - avançat
-formats:
-  - personalitzat
-tags: ["tutoria", "individual", "personalitzat", "projecte", "acompanyament"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Tots els nivells"
+estat: "actiu"
 
-duration: "2-4 hores (a acordar)"
-sessions: 1
-price: 70
-max_places: 1
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 120
+nota_preu: "Sessió mínima 2 hores. Es pot ampliar a 4h per 220€."
+durada_hores: 2
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 1
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Resoldre els dubtes o bloquejos concrets de cada alumne, sigui en tècnica, laboratori, mirada o projecte personal."
 methodology: "Sessió individual adaptada completament als interessos i necessitats de la persona."
 result: "Variable segons l'objectiu: pot ser un carret revelat, una sèrie de còpies, un projecte avançat o simplement respostes clares a preguntes que porten temps sense resposta."
-prerequisites: "Cap requisit previ. La tutoria es dissenya a partir d'una conversa prèvia sobre on ets i cap a on vols anar."
+prerequisits: "Cap requisit previ. La tutoria es dissenya a partir d'una conversa prèvia sobre on ets i cap a on vols anar."
 target: "Qualsevol persona que vulgui atenció individual, ja sigui per complementar altres tallers, per treballar un projecte concret o per aprendre a un ritme diferent del dels grups."
-related:
-  - revelat-bn
-  - fotografia-de-carrer
-  - copies-en-paper
 
-status: "active"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: []
+tags: ["tutoria", "individual", "personalitzat", "projecte", "acompanyament"]
 draft: false
 ---
 

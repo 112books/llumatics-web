@@ -5,36 +5,37 @@ lead: "Retratar una persona amb una càmera de finals del segle XIX, treballant 
 description: "Taller de retrat en gran format amb càmera del s.XIX i paper fotosensible. Impartit a Cameras & Films, Barcelona."
 image: "/images/tallers/retrat-gran-format.jpg"
 
-blocs:
-  - gran-format
-  - practica
-levels:
-  - intermedi
-  - avançat
-formats:
-  - puntual
-tags: ["gran format", "retrat", "segle XIX", "paper fotosensible", "humà", "analògic", "historic"]
+# Classificació
+tipus: "taller"
+canal: "externs"
+blocs: ["gran-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Cameras & Films, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Cameras & Films (c/ Tallers, Barcelona)"
 extern: true
 extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+max_places: 4
+sota_demanda: false
 
+# Fitxa pedagògica
 objective: "Comprendre el procés fotogràfic en el seu estat històric més proper als orígens i obtenir retrats sobre paper fotosensible."
 methodology: "Treball directe amb la càmera de gran format del segle XIX. Cada alumne exposa i revela la seva pròpia còpia."
 result: "1-2 retrats en paper fotosensible, un procés que combina el retrat fotogràfic amb la seva dimensió històrica."
-prerequisites: "Recomanable tenir nocions bàsiques de fotografia analògica. No cal experiència prèvia en gran format."
+prerequisits: "Recomanable tenir nocions bàsiques de fotografia analògica. No cal experiència prèvia en gran format."
 target: "Fotògrafs i no fotògrafs que volen viure el procés fotogràfic en la seva forma més lenta i material, i que els interessa el retrat com a relació."
-related:
-  - gran-format-4x5
-  - retrat-analogic
-  - copies-en-paper
 
-status: "active"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "gran-format-4x5"
+  - "retrat-analogic"
+tags: ["gran format", "retrat", "segle XIX", "paper fotosensible"]
 draft: false
 ---
 

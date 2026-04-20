@@ -5,35 +5,35 @@ lead: "Més enllà del revelador estàndard: push i pull, stand development, Caf
 description: "Taller de revelats experimentals: push/pull, stand development, Caffenol, fòrmula Beers i reveladors artesanals. Laboratori fotogràfic a Barcelona."
 image: "/images/tallers/revelats-experimentals.jpg"
 
-blocs:
-  - proces
-  - processos-alternatius
-levels:
-  - intermedi
-  - avançat
-formats:
-  - curs
-tags: ["revelat", "experimental", "push", "pull", "caffenol", "beers", "artesanal", "fòrmules"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces", "processos-alternatius"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 130
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Entendre com les variables químiques alteren el resultat de la imatge i experimentar amb reveladors alternatius i processos no estàndard."
 methodology: "Experimentació directa: es revelen diverses tires amb paràmetres diferents per comparar resultats."
 result: "Diverses tires revelades amb processos distints i un registre personal de resultats per a cada tècnica provada."
-prerequisites: "Saber revelar pel·lícula en B/N. Cal haver fet el taller de Revelat B/N o tenir experiència equivalent."
+prerequisits: "Saber revelar pel·lícula en B/N. Cal haver fet el taller de Revelat B/N o tenir experiència equivalent."
 target: "Fotògrafs analògics que volen anar més lluny del revelat estàndard i entendre com manipular químicament el resultat."
-related:
-  - revelat-bn
-  - cianotipia
-  - reveladors-artesanals
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "reveladors-artesanals"
+tags: ["revelat", "experimental", "caffenol", "beers", "artesanal"]
 draft: false
 ---
 

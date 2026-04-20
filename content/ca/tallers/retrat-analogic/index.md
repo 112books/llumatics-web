@@ -5,35 +5,36 @@ lead: "Treballem el retrat al plató amb càmera analògica i flaixos: la llum, 
 description: "Taller de retrat analògic al plató de Llumàtics. Llum de flaix, relació amb el model i tècnica fotogràfica. Barcelona."
 image: "/images/tallers/retrat-analogic.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["retrat", "plató", "flaix", "analògic", "llum artificial", "35mm"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Retratar una persona en plató amb llum de flaix analògica, controlant exposició, temperatura de color i relació amb el model."
 methodology: "Pràctica de plató per torns: cada alumne fotografía i fa de model. Revisió dels fotogrames en grup."
 result: "Un carret de retrats exposat en condicions de plató i la comprensió del procés des de la llum fins a la relació."
-prerequisites: "Saber fotografiar en mode manual. Recomanable haver fet el taller de Càmera i exposició."
+prerequisits: "Saber fotografiar en mode manual. Recomanable haver fet el taller de Càmera i exposició."
 target: "Fotògrafs analògics que volen aprendre a treballar amb llum artificial i a construir una sessió de retrat."
-related:
-  - camera-i-exposicio
-  - gran-format-4x5
-  - retrat-gran-format
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["retrat", "plató", "flaix", "analògic", "llum artificial"]
 draft: false
 ---
 

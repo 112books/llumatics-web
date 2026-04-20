@@ -5,33 +5,36 @@ lead: "Portes negatius revelats i vols veure com es converteixen en còpies en p
 description: "Taller bàsic d'introducció al positivat fotogràfic. Primera sessió a l'ampliadora, revelat de paper i lectura del resultat. Barcelona."
 image: "/images/tallers/introduccio-al-positivat.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["positivat", "ampliadora", "paper", "laboratori", "iniciació", "blanc i negre"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "3 hores"
-sessions: 1
-price: 65
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 170
+preu_2: 97
+preu_3: 72
+preu_4: 61
+durada_hores: 3
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Fer la primera còpia en paper fotogràfic amb una ampliadora, entenent el procés des de la projecció fins al revelat."
 methodology: "Pràctica directa: cada alumne treballa a l'ampliadora amb els seus propis negatius o amb negatius de mostra."
 result: "1-2 còpies en paper fetes per l'alumne. Comprensió del cicle complet negatiu → còpia."
-prerequisites: "No cal haver revelat mai. Si tens negatius propis, millor; si no, treballem amb material de mostra."
+prerequisits: "No cal haver revelat mai. Si tens negatius propis, millor; si no, treballem amb material de mostra."
 target: "Persones que mai han entrat a un laboratori de positivat i volen descobrir com es fa una còpia en paper."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - revelat-i-positivat
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "copies-en-paper"
+  - "revelat-i-positivat"
+tags: ["positivat", "ampliadora", "paper", "laboratori", "iniciació"]
 draft: false
 ---
 

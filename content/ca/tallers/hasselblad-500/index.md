@@ -5,35 +5,36 @@ lead: "Una sessió dedicada en cos i ànima a les Hasselblad de la sèrie 500: f
 description: "Taller pràctic de la càmera Hasselblad sèrie 500. Mig format 6×6, rodet 120, tècniques avançades i revelat inclòs. Nau Bostik, Barcelona."
 image: "/images/tallers/hasselblad-500.jpg"
 
-blocs:
-  - mig-format
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["hasselblad", "mig format", "6x6", "120", "retrat", "doble exposició", "analògica"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["mig-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "3,5 hores"
-sessions: 1
-price: 110
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 195
+preu_2: 111
+preu_3: 83
+preu_4: 70
+durada_hores: 3.5
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Dominar el funcionament de la Hasselblad 500 i les seves particularitats: cos intercanviable, dos disparadors, dobles exposicions i disparador remot."
 methodology: "Classe teòrica sobre la càmera, pràctica immediata amb un rodet de 120, i revelat i digitalització del material produït a la sessió."
 result: "Un rodet de 120 (12 fotogrames 6×6) exposat, revelat i digitalitzat. Coneixement pràctic i directe de la càmera."
-prerequisites: "Saber fotografiar en mode manual. No cal tenir Hasselblad —en podem deixar una si cal."
+prerequisits: "Saber fotografiar en mode manual. No cal tenir Hasselblad —en podem deixar una si cal."
 target: "Fotògrafs analògics que volen fer el pas al mig format o que ja tenen una Hasselblad i volen treure-li tot el partit."
-related:
-  - retrat-analogic
-  - gran-format-4x5
-  - retrat-gran-format
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["hasselblad", "mig format", "6x6", "120", "doble exposició"]
 draft: false
 ---
 

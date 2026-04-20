@@ -5,34 +5,35 @@ lead: "Una primera presa de contacte amb la càmera de plànxes: entendre per qu
 description: "Taller introductori al gran format fotogràfic. Primera sessió amb càmera de plànxes, mesura de la llum i exposició. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["gran format", "plànxes", "lent", "introductori", "4x5", "conscient"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Entendre el sistema de gran format, ser capaç de muntar la càmera, mesurar la llum i exposar les primeres plànxes."
 methodology: "Treball directe amb la càmera des del principi. Teoria mínima explicada mentre es treballa amb l'equipament."
 result: "2-4 plànxes exposades i revelades. Comprensió del sistema i criteri per decidir si el gran format és el proper pas."
-prerequisites: "Saber fotografiar en mode manual. No cal cap experiència prèvia en gran format."
+prerequisits: "Saber fotografiar en mode manual. No cal cap experiència prèvia en gran format."
 target: "Fotògrafs analògics de 35mm o mig format que senten curiositat pel gran format però no saben per on começar."
-related:
-  - gran-format-4x5
-  - revelat-bn
-  - retrat-gran-format
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "gran-format-4x5"
+tags: ["gran format", "plànxes", "introductori", "4x5"]
 draft: false
 ---
 

@@ -1,16 +1,21 @@
 {{ define "main" }}
-<div class="section container">
 
-  {{/* Capçalera */}}
-  <div class="section__header" style="max-width:720px;">
-    {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
-    <h1 class="section__title">{{ .Title }}</h1>
-    {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
+{{/* Hero: capçalera + recorregut amb fons fotogràfic suau */}}
+<div class="tallers-hero">
+  <div class="container">
+    <div class="tallers-hero__inner">
+      <div class="tallers-hero__header">
+        {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+        <h1 class="section__title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+        {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
+      </div>
+      {{ partial "recorregut.html" . }}
+    </div>
   </div>
+</div>
 
-  {{/* Recorregut formatiu — línia del temps */}}
-  {{ partial "recorregut.html" . }}
+<div class="section container">
 
   {{/* Navegació per blocs — filtre visual */}}
   {{ $blocs := hugo.Data.blocs }}

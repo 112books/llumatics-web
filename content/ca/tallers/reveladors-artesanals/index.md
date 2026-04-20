@@ -5,34 +5,35 @@ lead: "Un taller per a qui vol entendre la química del revelat fins al punt de 
 description: "Taller de reveladors fotogràfics artesanals: fòrmula Beers, Caffenol i receptes alternatives. Fotografia analògica avançada a Barcelona."
 image: "/images/tallers/reveladors-artesanals.jpg"
 
-blocs:
-  - processos-alternatius
-  - proces
-levels:
-  - avançat
-formats:
-  - curs
-tags: ["reveladors", "artesanals", "fòrmules", "química", "Beers", "Caffenol", "DIY"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius", "proces"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 140
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Preparar i avaluar reveladors fotogràfics artesanals, entendre els seus components actius i ser capaç d'adaptar-los a les pròpies necessitats."
 methodology: "Laboratori pràctic: es preparen i proven diverses fòrmules, es comparen els resultats i es documenta el procés per a ús personal."
 result: "Diverses fòrmules preparades i provades, un registre personal de resultats i la capacitat de formular reveladors adaptats a les pròpies necessitats."
-prerequisites: "Saber revelar pel·lícula amb reveladors comercials. Recomanable haver fet el taller de Revelats Experimentals."
+prerequisits: "Saber revelar pel·lícula amb reveladors comercials. Recomanable haver fet el taller de Revelats Experimentals."
 target: "Fotògrafs analògics avançats que volen entendre la química del revelat en profunditat i treballar amb fòrmules pròpies."
-related:
-  - revelats-experimentals
-  - revelat-bn
-  - cianotipia
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "revelats-experimentals"
+tags: ["reveladors", "artesanals", "fòrmules", "química", "Beers", "Caffenol"]
 draft: false
 ---
 

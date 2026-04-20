@@ -5,34 +5,34 @@ lead: "Tens negatius revelats i vols digitalitzar-los bé. No per compartir-los 
 description: "Taller de digitalització de negatius analògics amb escàner. Configuració òptima, gestió del color i edició professional amb Photoshop i Lightroom. Barcelona."
 image: "/images/tallers/digitalitzacio-escaner.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["escàner", "digitalització", "negatius", "Photoshop", "Lightroom", "edició", "arxiu", "35mm", "mig format"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Digitalitzar negatius analògics amb qualitat professional: configuració òptima de l'escàner, gestió del color i edició dels arxius resultants a Photoshop i Lightroom."
 methodology: "Treball directe amb l'escàner del laboratori. Cada participant treballa amb els seus propis negatius (o material de mostra) des de la primera escanejada fins a l'arxiu final editat."
 result: "4-8 negatius digitalitzats amb qualitat d'arxiu. Flux de treball complet: escaner → gestió del color → edició → exportació. Configuració exportable per a l'escàner propi."
-prerequisites: "Tenir negatius revelats (propis o de mostra). Nocions bàsiques de Lightroom o Photoshop recomanables, però no imprescindibles."
+prerequisits: "Tenir negatius revelats (propis o de mostra). Nocions bàsiques de Lightroom o Photoshop recomanables, però no imprescindibles."
 target: "Fotògrafs analògics que volen digitalitzar el seu arxiu amb criteris professionals, sense intermediaris i sense perdre qualitat en el procés."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: []
+tags: ["escàner", "digitalització", "negatius", "Photoshop", "Lightroom"]
 draft: false
 ---
 

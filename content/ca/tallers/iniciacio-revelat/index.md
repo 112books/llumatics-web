@@ -1,40 +1,42 @@
 ---
 title: "Iniciació al revelat"
-subtitle: "Carrega el rodet, surt a disparar i revela-ho tu mateix."
+subtitle: "Carrega el rodet, surt a disparar i revela-ho tu mateix"
 lead: "El procés fotogràfic complet en tres hores: carreguem un rodet, sortim al barri a disparar-lo, tornem i el revelem. Sense experiència prèvia. A Cameras & Films."
 description: "Taller d'iniciació al revelat analògic a Cameras & Films, Barcelona. Carregar rodet, sortida fotogràfica i revelat bàsic en B/N. 3 hores, sense experiència prèvia."
 image: "/images/tallers/iniciacio-revelat.jpg"
 
-blocs:
-  - proces
-  - fonaments
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["revelat", "iniciació", "bàsic", "35mm", "blanc i negre", "Cameras & Films", "sortida fotogràfica"]
+# Classificació
+tipus: "taller"
+canal: "externs"
+blocs: ["proces", "fonaments"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "3 hores"
-sessions: 1
-price: 55
-max_places: 10
-location: "Cameras & Films, Barcelona"
+# Fitxa tècnica
+preu_1: 170
+preu_2: 97
+preu_3: 72
+preu_4: 61
+durada_hores: 3
+lloc: "Cameras & Films (c/ Tallers, Barcelona)"
 extern: true
 extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+max_places: 10
+sota_demanda: false
 
+# Fitxa pedagògica
 objective: "Viure el procés fotogràfic complet de primera mà: carregar un rodet, sortir a fotografiar i revelar la pel·lícula al laboratori."
 methodology: "Tres parts encadenades: càrrega del rodet, sortida fotogràfica al barri i revelat al laboratori de Cameras & Films."
 result: "Un carret de 35mm exposat i revelat per l'alumne. Comprensió bàsica del procés de revelat i els negatius escanejats en dies posteriors."
-prerequisites: "Cap. No cal cap experiència prèvia en fotografia ni en laboratori."
+prerequisits: "Cap. No cal cap experiència prèvia en fotografia ni en laboratori."
 target: "Tothom que vol entendre per primera vegada com funciona la fotografia analògica de principi a fi. Ideal per a qui mai ha revelat."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - introduccio-al-positivat
-  - camera-i-exposicio
 
-status: "active"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "revelat-bn"
+  - "copies-en-paper"
+  - "introduccio-al-positivat"
+tags: ["revelat", "iniciació", "35mm", "Cameras and Films"]
 draft: false
 ---
 

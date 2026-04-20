@@ -1,37 +1,41 @@
 ---
 title: "Revelat de pel·lícula B/N"
-subtitle: "Push, pull i el control de la densitat. Revelar amb criteri."
+subtitle: "Push, pull i el control de la densitat"
 lead: "No hi ha un sol revelat correcte. Hi ha el que necessita cada foto. En aquest taller aprens a controlar la densitat del negatiu: revelat estàndard, forçat (push) i compensat (pull). Dos rodets, quatre hores."
 description: "Taller de revelat de pel·lícula B/N a Barcelona. Push i pull, control de temperatura i densitat, lectura del negatiu. Inclou 2 carretes. Llumàtics, Nau Bostik."
 image: "/images/tallers/revelat-bn.jpg"
 
-blocs:
-  - proces
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["revelat", "blanc i negre", "push", "pull", "forçat", "densitat", "laboratori", "35mm"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Dominar el revelat de pel·lícula en B/N amb criteris propis: entendre la relació entre exposició, temperatura i temps per obtenir el negatiu que la fotografia necessita."
 methodology: "Treball de laboratori directe amb dos carretes per participant. Un es revela en estàndard; l'altre s'usa per experimentar amb push, pull i variacions de temperatura."
 result: "Dos carretes revelats amb processos distints. Comprensió pràctica de com les variables del revelat afecten la densitat, el gra i el contrast del negatiu."
-prerequisites: "Haver revelat pel·lícula alguna vegada. Saber carregar la bobina i seguir els temps de manera autònoma. Si no has revelat mai, comença pel taller de Iniciació al revelat."
+prerequisits: "Haver revelat pel·lícula alguna vegada. Saber carregar la bobina i seguir els temps de manera autònoma. Si no has revelat mai, comença pel taller de Iniciació al revelat."
 target: "Fotògrafs analògics que ja revelen i volen anar més lluny: entendre per quin motiu el negatiu surt fosc, pla o amb massa gra, i saber corregir-ho."
-related:
-  - revelats-experimentals
-  - reveladors-artesanals
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "copies-en-paper"
+  - "revelats-experimentals"
+  - "reveladors-artesanals"
+tags: ["revelat", "blanc i negre", "push", "pull", "laboratori"]
 draft: false
 ---
 

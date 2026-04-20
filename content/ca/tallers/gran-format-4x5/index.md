@@ -1,38 +1,39 @@
 ---
-title: "Gran format 4×5\""
+title: "Gran format 4×5 polzades"
 subtitle: "Fotografia lenta i conscient. Una exposició, una decisió."
 lead: "La càmera de plànxes obliga a fer fotografia d'una altra manera: preparar, mesurar, decidir i disparar una sola vegada. Un taller per entendre per què això canvia tot."
 description: "Taller d'iniciació al gran format 4×5 pulgades. Càmera de plànxes, film sheet, mesura de la llum i revelat. Barcelona."
 image: "/images/tallers/gran-format-4x5.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - intermedi
-formats:
-  - curs
-tags: ["gran format", "4x5", "plànxes", "film sheet", "lent", "conscient"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Ser capaç d'usar una càmera de gran format 4×5\" de manera autònoma: càrrega, mesura, exposició i revelat de les plànxes."
 methodology: "Treball directe amb la càmera des de la primera sessió. Cada alumne exposa i revela les seves pròpies plànxes."
 result: "4-6 plànxes de 4×5\" exposades i revelades per l'alumne."
-prerequisites: "Tenir experiència en fotografia analògica i saber exposar en mode manual. Recomanable haver fet el taller de Revelat B/N."
+prerequisits: "Tenir experiència en fotografia analògica i saber exposar en mode manual. Recomanable haver fet el taller de Revelat B/N."
 target: "Fotògrafs analògics que volen donar el pas al gran format i entendre la fotografia lenta i conscient."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - retrat-gran-format
-  - retrat-analogic
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "retrat-gran-format"
+tags: ["gran format", "4x5", "plànxes", "lent", "conscient"]
 draft: false
 ---
 

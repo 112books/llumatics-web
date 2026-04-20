@@ -38,59 +38,127 @@ Això genera el fitxer a partir de `archetypes/tallers.md` amb tots els camps pr
 Camps obligatoris:
 
 ```yaml
-title: "Nom del taller"
+title: "Títol suggerent i atractiu"
 subtitle: "Una línia descriptiva"
 lead: "1-2 frases per a les cards i xarxes socials."
+description: "Descripció SEO (màx. 155 caràcters)"
+image: "/images/tallers/slug-del-taller.jpg"
+
+# Classificació
+tipus: "taller"         # taller | curs
+canal: "llumatics"      # llumatics | externs | institucions
 blocs:
-  - proces          # fonaments | proces | practica | mig-format | gran-format | processos-alternatius
-levels:
-  - iniciacio       # iniciacio | intermedi | avançat
-formats:
-  - puntual         # puntual | curs | intensiu | personalitzat
-duration: "4 hores"
-price: 85
+  - proces              # fonaments | proces | practica | mig-format | gran-format | processos-alternatius
+nivell: "Iniciació"     # Iniciació | Intermedi | Avançat | Tots els nivells
+estat: "actiu"          # actiu | en-preparacio | idea
+
+# Fitxa tècnica
+preu_1: 220             # Preu per 1 alumne (€, sense IVA — formació exempta)
+preu_2: 125             # Preu per persona si venen 2
+preu_3: 94              # Preu per persona si venen 3
+preu_4: 79              # Preu per persona si venen 4
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
-location: "Nau Bostik, Barcelona"
-extern: false
+sota_demanda: true
+
+# Fitxa pedagògica (apareix automàticament a la pàgina)
+objective: "..."
+methodology: "..."
+result: "..."
+prerequisits: "..."
+target: "..."
+
+# Tallers relacionats (apareixen com a "Continua aprenent")
+continua_aprenent:
+  - slug-taller-1
+  - slug-taller-2
+
+tags: []
+draft: true
 ```
 
-**Tallers de Cameras & Films:** posar `extern: true`. Aquests tallers els programa i gestiona directament Cameras & Films; la web mostra un avís i envia a la seva agenda. Els tallers interns de Llumàtics són tots **sota demanda**: l'alumne escriu i es busca una data.
+**Per a tallers de Cameras & Films** (`canal: externs`):
+```yaml
+canal: "externs"
+extern: true
+extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+sota_demanda: false
+```
 
-### 3. Imatges
+**Per a tallers ideals per a institucions** (centres cívics, instituts, centres d'art):
+```yaml
+ideal_institucions: true
+preu_institucions: "A convenir segons assistència"
+```
+
+---
+
+### 3. Fórmula de preus
+
+Base de càlcul: **50€/hora + 20€ de cost fix per persona** (refrigeri, espai, despeses mínimes).
+
+```
+cost_base = (durada_hores × 50) + 20
+
+preu_1 = cost_base
+preu_2 = round((cost_base × 1.14) / 2)
+preu_3 = round((cost_base × 1.28) / 3)
+preu_4 = round((cost_base × 1.43) / 4)
+```
+
+Exemple per a un taller de 4 hores:
+```
+cost_base = (4 × 50) + 20 = 220€
+preu_1 = 220€  /  preu_2 = 125€  /  preu_3 = 94€  /  preu_4 = 79€
+```
+
+La card del taller mostra "des de Xè" (el `preu_4`, el més econòmic per participant).  
+Els preus no porten IVA — l'activitat de formació n'està exempta (art. 20.1.9 LIVA).  
+Si el client necessita factura, s'indica a les FAQ generals del web.
+
+**Casos especials fora de la fórmula:**
+- `tutoria-fotografica` — 120€/sessió de 2h (1 persona). Ampliable a 4h per 220€.
+- `revelat-i-positivat` — 375€/persona (paquet 2×1, preu arrodonit).
+- `carrer-i-mirada` — curs de 4 sessions, calculat per bloc de 4×4h.
+- Tallers `externs` — preu fixat per Cameras & Films (habitualment 55€, fins a 10 persones).
+
+---
+
+### 4. Imatges
 
 #### Imatge principal
 - Ruta: `static/images/tallers/[slug].jpg`
-- Format: JPG, ratio **3:2** (recomanat 1200×800px)
-- Nom de fitxer: igual que el slug del taller (`revelat-bn.jpg`)
+- Format: JPG o WebP, ratio **3:2** (recomanat 1200×800px, màx. 500KB)
+- Nom de fitxer: igual que el slug del taller
 
 ```yaml
-# Al frontmatter:
 image: "/images/tallers/revelat-bn.jpg"
 ```
 
 #### Imatges secundàries (galeria)
 - Rutes: `static/images/tallers/[slug]-1.jpg`, `[slug]-2.jpg`, etc.
 - Apareixen com a galeria en graella sota el contingut principal
-- Màxim recomanat: 6 imatges per no sobrecarregar la pàgina
+- Màxim recomanat: 6 imatges
 
 ```yaml
-# Al frontmatter:
 images:
   - "/images/tallers/revelat-bn-1.jpg"
   - "/images/tallers/revelat-bn-2.jpg"
-  - "/images/tallers/revelat-bn-3.jpg"
 ```
 
-#### Criteris de qualitat per a les imatges
+#### Criteris de qualitat
 - Fotos del taller en acció (alumnes treballant, no posant)
-- Primeres en plans de detall: mans en la química, negatiu a contrallum, ampliadora encesa
+- Primers plans de detall: mans en la química, negatiu a contrallum, ampliadora encesa
 - B/N preferible per a tallers de laboratori; color per als de carrer i retrat
 - Sense marques d'aigua ni text sobreimposat
 - Comprimits a menys de 500KB per imatge
 
-### 4. Contingut
+---
 
-L'estructura recomanada del cos del fitxer:
+### 5. Contingut (cos del fitxer)
+
+L'estructura recomanada:
 
 ```markdown
 ## Títol evocador (no "Descripció")
@@ -104,38 +172,71 @@ Paràgraf d'entrada: el "per què" del taller, no el "què".
 
 ## Inclòs en el preu
 
-- Material 1
-- Material 2
+- Refrigeri (cafè o te i fruita)
+- Material específic
+- Ús del laboratori / plató
 
 ## Cal portar
 
-- Cosa 1
+- Cosa necessària (o "Res — tot el material es facilita")
 
 ## No inclòs
 
-- Cosa extra (disponible a Llumàtics, preu)
+- Cosa extra disponible a Llumàtics (+preu)
 ```
 
-### 5. Fitxa pedagògica
+La fitxa pedagògica (`objective`, `methodology`, `result`, `prerequisits`, `target`) apareix automàticament com a "Fitxa del taller" — no cal repetir-la al cos del text.
 
-Els camps `objective`, `methodology`, `result`, `prerequisites` i `target` del frontmatter apareixen automàticament com a "Fitxa del taller" al final del contingut. No cal repetir-los al cos del text.
+---
 
-### 6. Tallers relacionats
+### 6. Material privat per a alumnes
 
-El camp `related` accepta un array de slugs. Apareixen com a "Continua aprenent" amb enllaç directe:
+Cada taller pot tenir una pàgina privada accessible només als alumnes que han fet el curs.
+
+```bash
+# Crear manualment:
+content/ca/tallers/nom-del-taller/privat/index.md
+```
 
 ```yaml
-related:
-  - revelat-bn
-  - copies-en-paper
+---
+title: "Material per a alumnes — [Nom del taller]"
+layout: "private"
+course_ref: "slug-del-taller"
+noindex: true
+sitemap:
+  disable: true
+robots: "noindex, nofollow"
+draft: false
+---
 ```
 
-### 7. Publicar
+**Flux de generació de PDF personalitzat:**
+1. Alumne accedeix a `/tallers/[slug]/privat/`
+2. Omple formulari Tally (nom + email + opt-in newsletter)
+3. Make.com genera un PDF amb el nom de l'alumne al peu i l'envia per email
+4. El contacte s'afegeix a Brevo amb el tag del curs
+
+---
+
+### 7. Estats i visibilitat
+
+| `estat` | `draft` | Visible al web |
+|---------|---------|----------------|
+| `actiu` | `false` | Sí |
+| `en-preparacio` | `true` | No |
+| `idea` | `true` | No |
+
+---
+
+### 8. Publicar
 
 ```yaml
-draft: false    # canviar de true a false
-status: "soon"  # soon | active | full
+estat: "actiu"
+draft: false
 ```
+
+Push a `develop` → staging → revisar → merge a `main` → producció.
 
 ---
 
@@ -150,29 +251,26 @@ hugo new content ca/agenda/revelat-bn-cameras-films-maig-2026.md
 ```yaml
 ---
 title: "Revelat bàsic de pel·lícula B/N"
-course_ref: "revelat-bn"          # slug del taller relacionat
+course_ref: "revelat-bn"
 date_start: "2026-05-09"
 time_start: "10:00"
 time_end: "14:00"
-location: "Cameras & Films, Barcelona"
-organizer: "Cameras & Films"       # si no és Llumàtics qui organitza
-duration: "3 hores"
-price: 55
+lloc: "Cameras & Films, Barcelona"
+preu_1: 55
 max_places: 10
 status: "active"
-purchase_url: "https://..."        # si hi ha compra directa (Square, etc.)
+purchase_url: "https://..."
 draft: false
 ---
 ```
 
-**Nota important:** Els tallers de Cameras & Films tenen el seu propi sistema de dates i venda. Les entrades d'agenda de C&F porten sempre `purchase_url` amb el link de compra de la botiga.
+Els tallers de Cameras & Films porten sempre `purchase_url` amb el link de compra.
 
 ---
 
 ## Crear un post de blog
 
 ```bash
-# Crear manualment a:
 content/ca/blog/nom-del-post.md
 ```
 
@@ -182,17 +280,12 @@ title: "Títol del post"
 lead: "1-2 frases de resum"
 description: "Descripció SEO"
 image: "/images/blog/nom-del-post.jpg"
-date: 2026-04-19
+date: 2026-04-20
 tags: ["revelat", "laboratori"]
 course_ref: "revelat-bn"    # opcional: vincula al taller relacionat
 draft: true
 ---
 ```
-
-**Tipus de posts recomanats:**
-- Crònica d'un taller acabat (fotos incloses)
-- Article tècnic sobre un procés
-- Notícia d'un nou taller o col·laboració
 
 **Imatges de blog:** `static/images/blog/[slug].jpg` (ratio 3:2, 1200×800px)
 
@@ -207,11 +300,9 @@ static/images/
 │   ├── revelat-bn.jpg           ← imatge principal
 │   ├── revelat-bn-1.jpg         ← galeria secundària
 │   ├── revelat-bn-2.jpg
-│   ├── revelat-bn-3.jpg
 │   ├── copies-en-paper.jpg
 │   └── ...
 ├── blog/
-│   ├── revelat-bn-primera-sessio.jpg
 │   └── ...
 └── espais/
     ├── laboratori.jpg
@@ -221,63 +312,64 @@ static/images/
 
 ---
 
-## Lògica de tallers: sota demanda vs. Cameras & Films
+## Canals de tallers
 
-| | Tallers Llumàtics | Tallers Cameras & Films |
-|--|--|--|
-| `extern` | `false` | `true` |
-| Qui gestiona les dates | Joan (sota demanda) | Cameras & Films |
-| CTA a la web | "Sol·licita una data" + email | "Consulta C&F" + IG link |
-| Compra | Email a Llumàtics | Plataforma de C&F (Square) |
-| Preu habitual | 65–165€ | 55€ (fins a 10 persones) |
+| Canal | `canal` | Qui gestiona les dates | CTA al web | `sota_demanda` |
+|-------|---------|----------------------|------------|----------------|
+| Llumàtics | `llumatics` | Joan, sota demanda | "Sol·licita una data" | `true` |
+| Cameras & Films | `externs` | Cameras & Films | "Consulta C&F" + IG | `false` |
+| Institucions | `institucions` | Joan, a convenir | "Contacta'ns" | `true` |
 
-**Tots els tallers de Llumàtics funcionen sota demanda:** l'alumne escriu, es mira la disponibilitat i es confirma una data. No hi ha calendari fix publicat (excepte els de C&F).
+Els tallers de Llumàtics no tenen calendari fix publicat. L'alumne escriu, es mira disponibilitat i es confirma data. Els de C&F es gestionen externament — la web mostra avís i redirigeix.
 
 ---
 
 ## Multilingüisme
 
 - Contingut per defecte: **CA** (`content/ca/`)
-- Contingut en castellà: `content/es/` (duplicar i traduir)
-- Contingut en anglès: `content/en/`
+- Castellà: `content/es/` — duplicar i traduir
+- Anglès: `content/en/`
 - Traduccions d'interfície: `themes/llumatics/i18n/ca.yaml`, `es.yaml`, `en.yaml`
+- Prioritat: consolidar CA primer. ES i EN en fase posterior.
 
 ---
 
 ## Comandes útils
 
 ```bash
-hugo server -D                          # servidor local amb drafts
-hugo --minify                           # build de producció
+hugo server -D                              # servidor local amb drafts
+hugo --minify                               # build de producció
 hugo new content ca/tallers/slug/index.md   # nou taller
-hugo new content ca/agenda/slug.md      # nova entrada d'agenda
-./sync-llumatics.sh                     # menú interactiu de deploy
+hugo new content ca/agenda/slug.md          # nova entrada d'agenda
+hugo list all                               # llistat de tot el contingut
+hugo --templateMetricsHints                 # verificar build sense errors
+./sync-llumatics.sh                         # menú interactiu de deploy
 ```
 
 ---
 
-## Tallers actuals (20 tallers)
+## Tallers actuals (21 tallers)
 
-| Slug | Bloc | Preu | Durada | Extern |
-|------|------|------|--------|--------|
-| `fotogrames-cianotipia` | processos-alternatius | Gratuït | 2h | — |
-| `introduccio-al-positivat` | proces | 65€ | 3h | — |
-| `tutoria-fotografica` | practica | 70€ | 2-4h | — |
-| `camera-i-exposicio` | fonaments | 75€ | 4h | — |
-| `fotografia-estenopèica` | fonaments | 80€ | 4h | — |
-| `copies-en-paper` | proces | 85€ | 4h | — |
-| `retrat-analogic` | practica | 85€ | 4h | — |
-| `digitalitzacio-escaner` | proces | 85€ | 4h | — |
-| `introduccio-gran-format` | gran-format | 95€ | 4h | — |
-| `retrat-gran-format` | gran-format | 95€ | 4h | ✓ C&F |
-| `fotografia-de-carrer` | practica | 99€ | 3,5h | — |
-| `hasselblad-500` | mig-format | 110€ | 3,5h | — |
-| `retrat-6x6` | mig-format | 110€ | 4h | — |
-| `iniciacio-revelat` | proces + fonaments | 55€ | 3h | ✓ C&F |
-| `revelat-bn` | proces | 150€ | 4h | — |
-| `revelat-i-positivat` | proces | 125€ | 8h | — |
-| `cianotipia` | processos-alternatius | 129€ | 8h | — |
-| `revelats-experimentals` | proces | 130€ | 8h | — |
-| `reveladors-artesanals` | processos-alternatius | 140€ | 8h | — |
-| `gran-format-4x5` | gran-format | 150€ | 8h | — |
-| `carrer-i-mirada` | practica | 350€ | 4 sessions | — |
+| Slug | Bloc | preu_1 | preu_4 | Hores | Canal | Estat |
+|------|------|--------|--------|-------|-------|-------|
+| `fonaments-iniciacio-puntual` | fonaments | 220€ | 79€ | 4h | llumatics | actiu |
+| `revelat-bn` | proces | 220€ | 79€ | 4h | llumatics | actiu |
+| `copies-en-paper` | proces | 220€ | 79€ | 4h | llumatics | actiu |
+| `retrat-analogic` | practica | 220€ | 79€ | 4h | llumatics | actiu |
+| `digitalitzacio-escaner` | proces | 220€ | 79€ | 4h | llumatics | actiu |
+| `fotografia-estenopeica` | fonaments | 220€ | 79€ | 4h | llumatics | actiu |
+| `introduccio-gran-format` | gran-format | 220€ | 79€ | 4h | llumatics | actiu |
+| `retrat-6x6` | mig-format | 220€ | 79€ | 4h | llumatics | actiu |
+| `fotografia-de-carrer` | practica | 195€ | 70€ | 3.5h | llumatics | actiu |
+| `hasselblad-500` | mig-format | 195€ | 70€ | 3.5h | llumatics | actiu |
+| `introduccio-al-positivat` | proces | 170€ | 61€ | 3h | llumatics | actiu |
+| `fotogrames-cianotipia` | processos-alternatius | 120€ | 43€ | 2h | llumatics | actiu |
+| `tutoria-fotografica` | practica | 120€ | — | 2h | llumatics | actiu |
+| `revelat-i-positivat` | proces | 375€ | 134€ | 8h | llumatics | actiu |
+| `revelats-experimentals` | proces | 420€ | 150€ | 8h | llumatics | actiu |
+| `reveladors-artesanals` | processos-alternatius | 420€ | 150€ | 8h | llumatics | actiu |
+| `cianotipia` | processos-alternatius | 420€ | 150€ | 8h | llumatics | actiu |
+| `gran-format-4x5` | gran-format | 420€ | 150€ | 8h | llumatics | actiu |
+| `iniciacio-revelat` | proces + fonaments | 170€ | 61€ | 3h | externs (C&F) | actiu |
+| `retrat-gran-format` | gran-format + practica | 220€ | 79€ | 4h | externs (C&F) | actiu |
+| `carrer-i-mirada` | practica | 880€ | 315€ | 16h | llumatics | en-preparacio |

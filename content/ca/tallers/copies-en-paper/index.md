@@ -5,35 +5,36 @@ lead: "Tens negatius revelats i vols fer-ne còpies? Aquest taller és el segon 
 description: "Taller de còpies fotogràfiques en paper. Ampliadora, tipus de paper, revelat i controls locals. Laboratori analògic a Barcelona."
 image: "/images/tallers/copies-en-paper.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["ampliadora", "paper", "còpies", "laboratori", "blanc i negre", "revelat"]
+# Classificació
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Fitxa tècnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Fitxa pedagògica
 objective: "Obtenir còpies en paper a partir dels propis negatius, controlant exposició, contrast i tonalitat."
 methodology: "Treball directe a l'ampliadora des del primer minut. Cada alumne treballa amb els seus propis negatius."
 result: "3-5 còpies en paper blanc i negre, fetes i acabades per l'alumne."
-prerequisites: "Tenir negatius revelats de 35mm o mig format. Si no en tens, fes primer el taller de Revelat B/N."
+prerequisits: "Tenir negatius revelats de 35mm o mig format. Si no en tens, fes primer el taller de Revelat B/N."
 target: "Persones que ja han revelat pel·lícula i volen completar el procés fins a la còpia en paper."
-related:
-  - revelat-bn
-  - gran-format-4x5
-  - revelats-experimentals
 
-status: "soon"
-date: 2024-01-01
+# Tallers relacionats
+continua_aprenent: 
+  - "revelats-experimentals"
+  - "gran-format-4x5"
+tags: ["ampliadora", "paper", "còpies", "laboratori", "blanc i negre"]
 draft: false
 ---
 
