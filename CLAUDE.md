@@ -413,3 +413,72 @@ hugo list all
 # Verificar el build sense errors
 hugo --templateMetricsHints
 ```
+
+---
+
+# Sessió 2026-04-20 — Resum de canvis
+
+## Fitxers nous
+
+### Tallers
+- `content/ca/tallers/revelat-color-bn/index.md` — taller nou: revelat C-41 amb procés B/N
+- `content/ca/tallers/guinneol/index.md` — taller nou: revelat amb cervesa Guinness
+- `content/ca/tallers/copies-beers-developer/index.md` — taller nou: còpies a l'ampliadora amb Beers Developer
+
+### Blog
+- `content/ca/blog/guinneol-revelat-cervesa.md` — post: crònica del Guinneol (2017)
+- `content/ca/blog/beers-paper-developer.md` — post: fórmula Beers Developer (2017)
+
+## Fitxers modificats
+
+### Templates
+- `themes/llumatics/layouts/tallers/single.html` — afegida galeria amb lightbox, taula de preus preu_1/2/3/4, camps nous (nivell, continua_aprenent, prerequisits, lloc)
+- `themes/llumatics/layouts/partials/course-card.html` — migrat a camps nous (nivell, durada_hores, preu_1/preu_4, estat)
+- `themes/llumatics/layouts/blog/single.html` — afegida galeria amb lightbox i camp images
+
+### Dades i configuració
+- `themes/llumatics/i18n/ca.yaml` — hero_title, hero_subtitle, hero_eyebrow, section_blocs_subtitle, footer_tagline, footer_sub
+- `CLAUDE.md` — actualitzat amb nous camps, fórmula de preus, sistema de galeria/lightbox, canals, estats
+
+### Contingut (migració frontmatter)
+- Tots els tallers existents migrats del frontmatter antic (levels/formats/price/related) al nou (nivell/tipus/preu_1-4/continua_aprenent)
+- `camera-i-exposicio` eliminat (duplicat de fonaments-iniciacio-puntual)
+- `fotografia-estenopèica` reanomenat a `fotografia-estenopeica` (slug sense accent)
+
+## Estat actual dels tallers
+
+| Slug | Estat |
+|------|-------|
+| fonaments-iniciacio-puntual | actiu |
+| revelat-bn | actiu |
+| revelat-color-bn | actiu ← NOU |
+| guinneol | actiu ← NOU |
+| copies-beers-developer | actiu ← NOU |
+| copies-en-paper | actiu |
+| revelat-i-positivat | actiu |
+| revelats-experimentals | actiu |
+| reveladors-artesanals | actiu |
+| introduccio-al-positivat | actiu |
+| digitalitzacio-escaner | actiu |
+| fotografia-estenopeica | actiu |
+| fotogrames-cianotipia | actiu |
+| cianotipia | actiu |
+| retrat-analogic | actiu |
+| retrat-6x6 | actiu |
+| hasselblad-500 | actiu |
+| gran-format-4x5 | actiu |
+| introduccio-gran-format | actiu |
+| retrat-gran-format | actiu (externs) |
+| iniciacio-revelat | actiu (externs) |
+| fotografia-de-carrer | actiu |
+| tutoria-fotografica | actiu |
+| carrer-i-mirada | en-preparacio |
+
+## Pendent
+
+- Caffenol i Wineol — tallers independents per fer (com el Guinneol)
+- Imatges que falten per a tallers nous (revelat-color-bn, guinneol, copies-beers-developer)
+- Traduccions ES i EN — pendent per a tots els tallers
+- `archetypes/tallers.md` — actualitzar amb el nou frontmatter
+- `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
+- README.md — afegir els 3 tallers nous a la taula
