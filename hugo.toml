@@ -63,6 +63,7 @@ defaultContentLanguageInSubdir = false
   tallyFormNewsletter = ""
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
+  formspreeId = ""          # ID de Formspree per al formulari de contacte
 
 [taxonomies]
   tag = "tags"
