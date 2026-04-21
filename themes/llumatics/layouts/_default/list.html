@@ -27,7 +27,7 @@
       {{ range .Pages }}
       <article style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:4px; padding:1.5rem;">
         {{ if .Params.image }}
-          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:2px; margin-bottom:1rem;">
+          <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="lazy" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:2px; margin-bottom:1rem;">
         {{ end }}
         <h2 style="font-family:var(--font-serif); font-size:1.25rem; margin-bottom:0.5rem;">
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>

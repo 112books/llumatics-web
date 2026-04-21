@@ -7,7 +7,7 @@
 <article class="course-card" {{ with $bloc }}data-bloc="{{ . }}"{{ end }}>
   <a href="{{ .RelPermalink }}" class="course-card__image" tabindex="-1" aria-hidden="true">
     {{ if .Params.image }}
-      <img src="{{ .Params.image | relURL }}" alt="" loading="lazy">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="" loading="lazy">
     {{ else }}
       <div style="width:100%;height:100%;background:var(--bloc-bg,var(--color-bg-alt));display:flex;align-items:center;justify-content:center;">
         <span style="color:var(--bloc-color,var(--color-border));font-size:2rem;opacity:0.4;">◻</span>

@@ -4,7 +4,7 @@
 
       <div class="site-footer__brand">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
-          <img src="{{ "/images/llumatics-logo.svg" | relURL }}" alt="{{ .Site.Title }}" class="site-logo-img">
+          <img src="{{ site.BaseURL }}images/llumatics-logo.svg" alt="{{ .Site.Title }}" class="site-logo-img">
         {{ else }}
           <div style="font-family: var(--font-serif); font-size: 1.25rem; color: white; margin-bottom: 1rem;">{{ .Site.Title }}</div>
         {{ end }}

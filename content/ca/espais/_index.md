@@ -38,6 +38,7 @@ El laboratori compta amb ventilació forçada, extractor de vapors químics i pr
 ---
 
 ## El plató {#plato}
+![Plato de Llumàtics](/images/espais/plato.jpg)
 
 El plató de Llumàtics és un espai de treball, no un estudi de producció. Petit, funcional, equipat per a retrat i fotografia de producte.
 
@@ -55,6 +56,7 @@ El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions 
 ---
 
 ## Zona d'escaneig i retoc {#escaneig}
+![Zona d'escaneig de Llumàtics](/images/espais/macM1.jpg)
 
 L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatius i positius de totes les mides amb precisió.
 
@@ -72,6 +74,7 @@ L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sess
 ---
 
 ## La biblioteca {#biblioteca}
+![La Biblioteca de Llumàtics](/images/espais/biblioteca.jpg)
 
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 

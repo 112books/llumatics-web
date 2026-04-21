@@ -23,16 +23,16 @@
   </header>
 
   {{ if .Params.image }}
-  <div class="blog-post__cover js-lightbox-trigger" data-src="{{ .Params.image | relURL }}" style="cursor:zoom-in;">
-    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="eager">
+  <div class="blog-post__cover js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" style="cursor:zoom-in;">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
   </div>
   {{ end }}
 
   {{ with .Params.images }}
   <div class="course-single__gallery" style="margin-bottom:2rem;">
     {{ range . }}
-    <div class="gallery__item js-lightbox-trigger" data-src="{{ . | relURL }}" style="cursor:zoom-in;">
-      <img src="{{ . | relURL }}" alt="" loading="lazy">
+    <div class="gallery__item js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" style="cursor:zoom-in;">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
     </div>
     {{ end }}
   </div>

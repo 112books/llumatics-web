@@ -49,15 +49,18 @@ jobs:
           hugo --minify --baseURL "$HUGO_BASEURL"
 
       - name: Encrypt with staticrypt
-        # SITE_PASSWORD és un GitHub Secret: Settings → Secrets → Actions → New
-        # Nom: SITE_PASSWORD  Valor: la contrasenya que vulguis
         run: |
-          npx staticrypt public/**/*.html \
-            --password "${{ secrets.SITE_PASSWORD }}" \
-            --config .staticrypt.json \
-            --directory public
+          shopt -s globstar
+          html_files=(public/**/*.html)
+          if [ ${#html_files[@]} -gt 0 ]; then
+            npx staticrypt "${html_files[@]}" \
+              --password "$SITE_PASSWORD" \
+              --config .staticrypt.json \
+              --directory public
+          fi
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        shell: bash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
