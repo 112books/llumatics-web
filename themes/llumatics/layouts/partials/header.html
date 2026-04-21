@@ -3,7 +3,7 @@
     <div class="site-header__inner">
 
       {{/* Logo */}}
-      <a href="{{ "/" | relLangURL }}" class="site-logo" aria-label="{{ .Site.Title }}">
+      <a href="{{ site.BaseURL }}" class="site-logo" aria-label="{{ .Site.Title }}">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
           <img src="{{ site.BaseURL }}images/llumatics-logo.svg" alt="" aria-hidden="true" height="44" width="44">
         {{ end }}
