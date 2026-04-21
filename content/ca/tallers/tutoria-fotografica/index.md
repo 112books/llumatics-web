@@ -67,4 +67,4 @@ Contacta'ns explicant breument el que t'interessa treballar. Concretem la durada
 ## No inclòs
 
 - Materials específics no habituals (es consulten i es cotitzen prèviament)
-- Carretes de 35mm addicionals (~5€/unitat)
+- Carretes de 35mm addicionals (~10€/unitat)

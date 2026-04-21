@@ -4,6 +4,17 @@ subtitle: "La càmera sense objectiu. El principi de tot."
 lead: "Construïm una càmera estenopèica, exposem sobre paper fotogràfic i revelem en directe. El procés fotogràfic en el seu estat més pur."
 description: "Taller de fotografia estenopèica a Barcelona: construcció de la càmera, exposició i revelat. Del forat de la llum a la còpia en paper."
 image: "/images/tallers/fotografia-estenopèica.jpg"
+images:
+  - "/images/tallers/fotografia-estenopèica-1.jpg"
+  - "/images/tallers/fotografia-estenopèica-2.jpg"
+  - "/images/tallers/fotografia-estenopèica-3.jpg"
+  - "/images/tallers/fotografia-estenopèica-4.jpg"
+  - "/images/tallers/fotografia-estenopèica-5.jpg"
+  - "/images/tallers/fotografia-estenopèica-6.jpg"
+  - "/images/tallers/fotografia-estenopèica-7.jpg"
+  - "/images/tallers/fotografia-estenopèica-8.jpg"
+  - "/images/tallers/fotografia-estenopèica-9.jpg"
+  - "/images/tallers/fotografia-estenopèica-10.jpg"
 
 # Classificació
 tipus: "taller"
@@ -63,6 +74,7 @@ La càmera estenopèica —o *pinhole*— no és un exercici nostàlgic. És la 
 ## Cal portar
 
 - Res. El taller és autònom: tot el material es facilita.
+- Opcionalment es pot portar una caixa de llauna (la forma i mida pensada per que hi capigui un paper fotogràfic).
 
 ## No inclòs
 

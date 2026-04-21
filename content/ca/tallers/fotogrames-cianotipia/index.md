@@ -4,6 +4,12 @@ subtitle: "Imatges sense càmera. Primer contacte amb la cianotípia."
 lead: "Una primera experiència en cianotípia: col·loquem objectes sobre paper sensibilitzat, exposem al sol i revelem amb aigua. Sense càmera, sense cambra fosca, sense experiència prèvia."
 description: "Taller introductori gratuït de fotogrames amb cianotípia a Barcelona. Sense càmera ni experiència prèvia. Nau Bostik."
 image: "/images/tallers/fotogrames-cianotipia.jpg"
+images:
+  - "/images/tallers/fotogrames-cianotipia-1.jpg"
+  - "/images/tallers/fotogrames-cianotipia-2.jpg"
+  - "/images/tallers/fotogrames-cianotipia-3.jpg"
+  - "/images/tallers/fotogrames-cianotipia-4.jpg"
+  - "/images/tallers/fotogrames-cianotipia-5.jpg"
 
 # Classificació
 tipus: "taller"

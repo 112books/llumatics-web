@@ -14,7 +14,7 @@
       {{ if .Params.image }}
       <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">
         <div class="blog-card__image">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
         </div>
       </a>
       {{ end }}

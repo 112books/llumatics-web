@@ -821,7 +821,7 @@ button, input, select, textarea {
 /* ── Tallers hero (capçalera + recorregut) ───────────────────────────────── */
 .tallers-hero {
   position: relative;
-  background-image: url('/images/tallers-bg.jpg');
+  background-image: url('../images/tallers-bg.jpg');
   background-size: cover;
   background-position: center;
   padding-block: var(--space-16);

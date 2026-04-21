@@ -4,6 +4,10 @@ subtitle: "Una càmera del segle XIX, paper fotosensible i una persona al davant
 lead: "Retratar una persona amb una càmera de finals del segle XIX, treballant directament sobre paper fotosensible. Una experiència única que explica d'on ve tot."
 description: "Taller de retrat en gran format amb càmera del s.XIX i paper fotosensible. Impartit a Cameras & Films, Barcelona."
 image: "/images/tallers/retrat-gran-format.jpg"
+images:
+  - "/images/tallers/retrat-gran-format-1.jpg"
+  - "/images/tallers/retrat-gran-format-2.jpg"
+  - "/images/tallers/retrat-gran-format-3.jpg"
 
 # Classificació
 tipus: "taller"
@@ -13,22 +17,22 @@ nivell: "Intermedi"
 estat: "actiu"
 
 # Fitxa tècnica
-preu_1: 220
-preu_2: 125
-preu_3: 94
-preu_4: 79
-durada_hores: 4
-lloc: "Cameras & Films (c/ Tallers, Barcelona)"
+preu_1: 55
+preu_2: 55
+preu_3: 55
+preu_4: 55
+durada_hores: 3
+lloc: "Cameras & Films"
 extern: true
-extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
-max_places: 4
+extern_location: "Cameras & Films"
+max_places: 10
 sota_demanda: false
 
 # Fitxa pedagògica
-objective: "Comprendre el procés fotogràfic en el seu estat històric més proper als orígens i obtenir retrats sobre paper fotosensible."
-methodology: "Treball directe amb la càmera de gran format del segle XIX. Cada alumne exposa i revela la seva pròpia còpia."
-result: "1-2 retrats en paper fotosensible, un procés que combina el retrat fotogràfic amb la seva dimensió històrica."
-prerequisits: "Recomanable tenir nocions bàsiques de fotografia analògica. No cal experiència prèvia en gran format."
+objective: "Comprendre el procés fotogràfic en el seu estat històric més proper als orígens i obtenir retrats sobre paper fotosensible. Apendre el funcionament d'una càmera fotografica de gran format (mesurar la llum, encuadrar, enfocar, carregar el xassis, disparar). Taller molt intens i divertit on es fa tot el procès i s'obté un resultats inmediats."
+methodology: "Treball directe amb la càmera de gran format del segle XIX. Cada alumne fa de model, realitza la fotografia i revela la seva pròpia còpia."
+result: "2-5 retrats en paper fotosensible, un procés que combina el retrat fotogràfic amb la seva dimensió històrica."
+prerequisits: "Recomanable tenir nocions bàsiques de fotografia analògica, encara que no cal experiència prèvia."
 target: "Fotògrafs i no fotògrafs que volen viure el procés fotogràfic en la seva forma més lenta i material, i que els interessa el retrat com a relació."
 
 # Tallers relacionats
@@ -70,3 +74,13 @@ No és un taller de nostalgia. És una manera de tocar els orígens del medi per
 
 - Còpies addicionals sobre paper fotosensible (materials a part, consultar)
 - Desplaçament fins a Cameras & Films
+
+---
+
+*Les dates les programa i gestiona directament **Cameras & Films**. Consulta la seva agenda o escriu-los per saber quan és la propera sessió.*<br> 
+- Cameras + Films
+- Carrer d’en Rosic, 3
+- Barcelona, Barcelona 08003
+- [tel:+34935160545](tel:+34935160545)
+- [@camerasandfilms](https://www.instagram.com/camerasandfilms.barcelona/)
+- tienda@camerasandfilms.com

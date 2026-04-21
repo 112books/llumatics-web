@@ -64,8 +64,8 @@
 
   {{/* Imatge principal */}}
   {{ if .Params.image }}
-  <div class="course-single__cover js-lightbox-trigger" data-src="{{ .Params.image }}" style="cursor:zoom-in;">
-    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="eager">
+  <div class="course-single__cover js-lightbox-trigger" data-src="{{ .Params.image | relURL }}" style="cursor:zoom-in;">
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="eager">
   </div>
   {{ end }}
 
@@ -73,8 +73,8 @@
   {{ with .Params.images }}
   <div class="course-single__gallery">
     {{ range . }}
-    <div class="gallery__item js-lightbox-trigger" data-src="{{ . }}" style="cursor:zoom-in;">
-      <img src="{{ . }}" alt="" loading="lazy">
+    <div class="gallery__item js-lightbox-trigger" data-src="{{ . | relURL }}" style="cursor:zoom-in;">
+      <img src="{{ . | relURL }}" alt="" loading="lazy">
     </div>
     {{ end }}
   </div>

@@ -1,7 +1,7 @@
 ---
 title: "Aprèn a controlar la llum"
-subtitle: "Iniciació a la fotografia analògica"
-lead: "El punt de partida per a tothom. Entenem com funciona una càmera i per què les fotos surten com surten. Treballem amb càmera analògica perquè obliga a pensar, però el que s'aprèn aquí s'aplica a qualsevol càmera."
+subtitle: "Cóm inciar-se en la fotografia tradicional o també anomenada analògica"
+lead: "El punt de partida per a tothom. Entenem com funciona una càmera i per què les fotos surten com surten. Treballem amb càmera analògica perquè obliga a pensar, però el que s'aprèn aquí s'aplica a qualsevol tipus de càmera."
 description: "Taller d'iniciació a la fotografia analògica a Barcelona. Aprèn el triangle d'exposició i fotografía en mode manual. Màx. 4 alumnes, sota demanda."
 image: "/images/tallers/fonaments-iniciacio-puntual.jpg"
 
@@ -56,10 +56,11 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 
 ## Inclòs en el preu
 
-- Ús del laboratori i material teòric
+- Ús del Plató
 - Càmera analògica disponible si no en tens
 - Carret de 35mm B/N
 - Refrigeri (cafè o te i fruita)
+- Material teòric en format PDF
 
 ## Cal portar
 
@@ -67,4 +68,4 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 
 ## No inclòs
 
-- Revelat del carret exposat — disponible al [Taller de Revelat B/N](/tallers/revelat-pelicula-bn/) o com a tutoria des de 20€
+- Revelat del carret exposat — disponible al [Taller de Revelat B/N](/tallers/revelat-pelicula-bn/) o com a tutoria.

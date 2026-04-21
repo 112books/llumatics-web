@@ -4,6 +4,13 @@ subtitle: "La teva primera vegada a l'ampliadora"
 lead: "Portes negatius revelats i vols veure com es converteixen en còpies en paper? Aquesta és la primera sessió: una introducció pràctica i directa al laboratori de positivat."
 description: "Taller bàsic d'introducció al positivat fotogràfic. Primera sessió a l'ampliadora, revelat de paper i lectura del resultat. Barcelona."
 image: "/images/tallers/introduccio-al-positivat.jpg"
+images:
+  - "/images/tallers/introduccio-al-positivat-1.jpg"
+  - "/images/tallers/introduccio-al-positivat-2.jpg"
+  - "/images/tallers/introduccio-al-positivat-3.jpg"
+  - "/images/tallers/introduccio-al-positivat-4.jpg"
+  - "/images/tallers/introduccio-al-positivat-5.jpg"
+
 
 # Classificació
 tipus: "taller"
@@ -42,14 +49,14 @@ draft: false
 
 Entrar a un laboratori fosc, amb la llum vermella encesa, i veure com apareix una imatge a la cubeta de revelador és una experiència que no s'oblida. No hi ha cap aplicació que s'hi assembli.
 
-Aquesta sessió és per a qui mai ho ha fet. Treballem a l'ampliadora: projectem el negatiu sobre el paper, exposem, revelam i veiem el resultat. Senzill, però molt més satisfactori del que sembla.
+Aquesta sessió és per a qui mai ho ha fet. Treballem a l'ampliadora: projectem el negatiu sobre el paper, enfoquem, exposem, revelam i veiem el resultat. Senzill, però molt més satisfactori del que sembla.
 
 Si vols anar més lluny —aprendre controls locals, esquivar i cremar, treballar amb papers de fibra— el taller de Còpies en paper és el pas següent.
 
 ## Continguts
 
 - Orientació al laboratori fosc: materials, seguretat i ordre de treball
-- L'ampliadora: parts, focus i mesura de la llum
+- L'ampliadora: tipus, parts, focus i mesura de la llum
 - Tira de proves: com llegir-la i decidir l'exposició
 - Revelat en cubeta: revelador, stop i fixador
 - Rentat i assecat de la còpia
@@ -57,9 +64,9 @@ Si vols anar més lluny —aprendre controls locals, esquivar i cremar, treballa
 
 ## Inclòs en el preu
 
-- Paper fotogràfic RC (2–3 fulls)
+- Paper fotogràfic RC (10 fulls)
 - Productes químics: revelador de paper, stop, fixador
-- Ús de l'ampliadora i el laboratori
+- Ús de l'ampliadores i el laboratori
 
 ## Cal portar
 

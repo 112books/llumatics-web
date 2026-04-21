@@ -554,6 +554,7 @@ git pull origin main
 - En iniciar una sessió, llegeix `MEMORY.md` si existeix per recuperar el context previ.
 - En tancar o en arribar a un punt de pausa significatiu, actualitza `MEMORY.md` afegint
   una entrada nova al principi del fitxer amb aquest format:
+  
 YYYY-MM-DD
 Fet: resum breu de les accions completades
 Decisions: canvis d'arquitectura o criteris adoptats
