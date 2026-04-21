@@ -906,6 +906,10 @@ button, input, select, textarea {
 
 .site-footer__links a:hover { color: var(--color-bg); }
 
+.site-footer__heading--sub {
+  margin-top: var(--space-8);
+}
+
 .site-footer__bottom {
   padding-top: var(--space-6);
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -1941,7 +1945,7 @@ a.recorregut__tematic-link:hover {
 .contact-details {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4) var(--space-8);
+  gap: var(--space-5) var(--space-10);
   margin-bottom: var(--space-12);
   padding-bottom: var(--space-8);
   border-bottom: 1px solid var(--color-border);
@@ -1951,7 +1955,7 @@ a.recorregut__tematic-link:hover {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
 }
 
@@ -2031,18 +2035,18 @@ a.recorregut__tematic-link:hover {
 }
 
 .transport-card__name {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 600;
   color: var(--color-text);
 }
 
 .transport-card__lines {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
 
 .transport-card__detail {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text);
 }
 
@@ -2055,7 +2059,9 @@ a.recorregut__tematic-link:hover {
 
 .contact-form-section__lead {
   color: var(--color-text-muted);
+  font-size: var(--text-base);
   margin-bottom: var(--space-8);
+  margin-top: var(--space-3);
 }
 
 .contact-form {
@@ -2207,6 +2213,18 @@ a.recorregut__tematic-link:hover {
 .faq-answer p + p { margin-top: var(--space-3); }
 .faq-answer a { color: var(--color-accent-dark); text-decoration: underline; text-underline-offset: 2px; }
 .faq-answer strong { color: var(--color-text); }
+
+.contact-form-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 480px;
+}
+
+.contact-form-placeholder p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
 
 /* Responsive contacte */
 @media (max-width: 768px) {
