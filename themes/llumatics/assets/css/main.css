@@ -215,6 +215,11 @@ button, input, select, textarea {
 
 .lang-switcher__sep { opacity: 0.3; }
 
+.lang-switcher__current {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 /* Menú hamburguesa (mòbil) */
 .nav-toggle {
   display: none;

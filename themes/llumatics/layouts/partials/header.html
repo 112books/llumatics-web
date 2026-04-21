@@ -25,16 +25,23 @@
       {{/* Selector idioma + hamburguesa */}}
       <div style="display:flex; align-items:center; gap:1rem;">
 
-        {{/* Language switcher */}}
-        {{ if .IsTranslated }}
+        {{/* Language switcher — sempre visible */}}
         <div class="lang-switcher">
-          <span class="lang-switcher__current">{{ .Language.Lang | upper }}</span>
-          {{ range .Translations }}
-            <span class="lang-switcher__sep">·</span>
-            <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+          {{ range .Site.Languages }}
+            {{ $lang := .Lang }}
+            {{ if eq $lang $.Language.Lang }}
+              <span class="lang-switcher__current" aria-current="true">{{ $lang | upper }}</span>
+            {{ else }}
+              {{/* Cerca la traducció; si no existeix, apunta a l'arrel de l'idioma */}}
+              {{ $url := print "/" $lang "/" }}
+              {{ range $.Translations }}
+                {{ if eq .Language.Lang $lang }}{{ $url = .Permalink }}{{ end }}
+              {{ end }}
+              <span class="lang-switcher__sep">·</span>
+              <a href="{{ $url }}" hreflang="{{ $lang }}">{{ $lang | upper }}</a>
+            {{ end }}
           {{ end }}
         </div>
-        {{ end }}
 
         {{/* Hamburguesa mòbil */}}
         <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Obrir menú">
