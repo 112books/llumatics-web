@@ -11,7 +11,7 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les v
 
 ---
 
-## El laboratori fosc
+## El laboratori fosc {#laboratori}
 
 ![Laboratori fosc de Llumàtics](/images/espais/laboratori.jpg)
 
@@ -37,7 +37,7 @@ El laboratori compta amb ventilació forçada, extractor de vapors químics i pr
 
 ---
 
-## El plató
+## El plató {#plato}
 
 El plató de Llumàtics és un espai de treball, no un estudi de producció. Petit, funcional, equipat per a retrat i fotografia de producte.
 
@@ -52,7 +52,26 @@ El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions 
 
 ---
 
-## La biblioteca
+---
+
+## Zona d'escaneig i retoc {#escaneig}
+
+L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatius i positius de totes les mides amb precisió.
+
+**Escànners disponibles:**
+- Escànner de pel·lícula Epson Perfection V850 Pro (negatius fins a 4×5", diapositives, paper)
+- Escànner pla A4 per a còpies i documents fotogràfics
+
+**Retoc digital:**
+- Estació de treball amb pantalla calibrada (sRGB/Adobe RGB)
+- Software: Lightroom Classic, Capture One, Photoshop
+- Perfils ICC per als principals tipus de paper i pel·lícula
+
+L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sessions de **Tutoria fotogràfica**. Disponible durant els tallers per als alumnes inscrits.
+
+---
+
+## La biblioteca {#biblioteca}
 
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 

@@ -24,9 +24,10 @@
       <div>
         <p class="site-footer__heading">{{ i18n "nav_spaces" | default "Espais" }}</p>
         <ul class="site-footer__links">
-          {{ range (where .Site.RegularPages "Type" "espais") }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
+          <li><a href="{{ "/espais/#laboratori" | relLangURL }}">{{ i18n "space_lab" | default "El laboratori" }}</a></li>
+          <li><a href="{{ "/espais/#plato" | relLangURL }}">{{ i18n "space_studio" | default "El plató" }}</a></li>
+          <li><a href="{{ "/espais/#escaneig" | relLangURL }}">{{ i18n "space_scan" | default "Zona d'escaneig i retoc" }}</a></li>
+          <li><a href="{{ "/espais/#biblioteca" | relLangURL }}">{{ i18n "space_library" | default "La biblioteca" }}</a></li>
         </ul>
       </div>
 
@@ -39,6 +40,15 @@
           {{ end }}
           <li><a href="{{ "/regala/" | relLangURL }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
           <li><a href="{{ "/sobre/" | relLangURL }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">{{ i18n "legal" | default "Legal" }}</p>
+        <ul class="site-footer__links">
+          <li><a href="{{ "/avis-legal/" | relLangURL }}">{{ i18n "legal_notice" | default "Avís legal" }}</a></li>
+          <li><a href="{{ "/privacitat/" | relLangURL }}">{{ i18n "privacy_policy" | default "Política de privacitat" }}</a></li>
+          <li><a href="{{ "/cookies/" | relLangURL }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></li>
         </ul>
       </div>
 
