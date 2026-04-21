@@ -86,4 +86,80 @@
     });
   }
 
+  // ── Lightbox amb navegació ───────────────────────────────────────────
+  const lb        = document.getElementById('js-lightbox');
+  const lbImg     = document.getElementById('js-lb-img');
+  const lbPrev    = document.getElementById('js-lb-prev');
+  const lbNext    = document.getElementById('js-lb-next');
+  const lbClose   = document.getElementById('js-lb-close');
+  const lbCounter = document.getElementById('js-lb-counter');
+
+  if (lb && lbImg) {
+    let gallery = [];
+    let current = 0;
+
+    function openLightbox(images, index) {
+      gallery = images;
+      current = index;
+      showImage();
+      lb.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lb.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function showImage() {
+      lbImg.src = gallery[current];
+      lbImg.alt = '';
+      if (lbCounter) lbCounter.textContent = (current + 1) + ' / ' + gallery.length;
+      if (lbPrev) lbPrev.style.visibility = gallery.length > 1 ? 'visible' : 'hidden';
+      if (lbNext) lbNext.style.visibility = gallery.length > 1 ? 'visible' : 'hidden';
+    }
+
+    function navigate(dir) {
+      current = (current + dir + gallery.length) % gallery.length;
+      showImage();
+    }
+
+    // Clic en qualsevol trigger
+    document.addEventListener('click', function(e) {
+      const trigger = e.target.closest('.js-lightbox-trigger');
+      if (!trigger) return;
+      e.preventDefault();
+
+      const groupId = trigger.dataset.gallery;
+      let images;
+      if (groupId) {
+        images = Array.from(
+          document.querySelectorAll('.js-lightbox-trigger[data-gallery="' + groupId + '"]')
+        ).map(el => el.dataset.src);
+      } else {
+        images = [trigger.dataset.src];
+      }
+      const index = images.indexOf(trigger.dataset.src);
+      openLightbox(images, index >= 0 ? index : 0);
+    });
+
+    // Botons
+    if (lbClose) lbClose.addEventListener('click', closeLightbox);
+    if (lbPrev)  lbPrev.addEventListener('click',  function(e) { e.stopPropagation(); navigate(-1); });
+    if (lbNext)  lbNext.addEventListener('click',  function(e) { e.stopPropagation(); navigate(1); });
+
+    // Clic al fons tanca
+    lb.addEventListener('click', function(e) {
+      if (e.target === lb || e.target === lbImg) closeLightbox();
+    });
+
+    // Teclat
+    document.addEventListener('keydown', function(e) {
+      if (lb.style.display !== 'flex') return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  }
+
 })();

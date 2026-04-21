@@ -1816,6 +1816,11 @@ a.recorregut__tematic-link:hover {
   border-radius: 3px;
   overflow: hidden;
   aspect-ratio: 3/2;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  background: none;
+  display: block;
 }
 .gallery__item img {
   width: 100%;
@@ -1824,6 +1829,77 @@ a.recorregut__tematic-link:hover {
   transition: transform 0.3s ease;
 }
 .gallery__item:hover img { transform: scale(1.04); }
+
+/* Galeria per a espais i altres pàgines de contingut */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+/* Lightbox compartit */
+#js-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#js-lb-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 2px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+  display: block;
+}
+
+.lb-btn {
+  position: fixed;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.75rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+.lb-btn:hover { background: rgba(255,255,255,0.25); }
+
+.lb-btn--prev  { left: 1.5rem;  top: 50%; transform: translateY(-50%); }
+.lb-btn--next  { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+.lb-btn--close { top: 1.5rem;   right: 1.5rem; font-size: 1.5rem; }
+
+.lb-counter {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.6);
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+}
+
+/* Imatge principal del taller com a botó */
+.course-single__cover {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+}
 
 .info-box__scheduling {
   margin-top: 1.5rem;

@@ -13,7 +13,9 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les v
 
 ## El laboratori fosc {#laboratori}
 
-![Laboratori fosc de Llumàtics](/images/espais/laboratori.jpg)
+{{< galeria id="laboratori" >}}
+/images/espais/laboratori.jpg
+{{< /galeria >}}
 
 El laboratori és l'eix central de Llumàtics. No és un laboratori d'iniciació: és un espai equipat per treballar de veritat, amb criteri, des de la primera sessió fins a la còpia final.
 
@@ -165,7 +167,7 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Anònim** – *Una Bèstia i una Sola Llum*
 - **Anònim** – *Anònims: Més enllà de les apariències*
 
-## *Fotollibres:* col·lecció de fotollibres editorials, principalment de 112books i altres editors independents europeus.
+### *Fotollibres:* col·lecció de fotollibres editorials, principalment de 112books i altres editors independents europeus.
 
 La biblioteca és accessible als alumnes durant els tallers. No és una biblioteca de consulta pública.
 

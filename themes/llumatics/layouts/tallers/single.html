@@ -64,41 +64,27 @@
 
   {{/* Imatge principal */}}
   {{ if .Params.image }}
-  <div class="course-single__cover js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" style="cursor:zoom-in;">
+  <button class="course-single__cover js-lightbox-trigger"
+          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="Veure imatge en gran">
     <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
-  </div>
+  </button>
   {{ end }}
 
   {{/* Galeria secundària */}}
   {{ with .Params.images }}
   <div class="course-single__gallery">
     {{ range . }}
-    <div class="gallery__item js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" style="cursor:zoom-in;">
+    <button class="gallery__item js-lightbox-trigger"
+            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
+            data-gallery="{{ $.File.ContentBaseName }}"
+            aria-label="Veure imatge en gran">
       <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
-    </div>
+    </button>
     {{ end }}
   </div>
   {{ end }}
-
-  {{/* Lightbox */}}
-  <div id="js-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="this.style.display='none';">
-    <img id="js-lightbox-img" src="" alt="" style="max-width:92vw;max-height:92vh;object-fit:contain;border-radius:2px;box-shadow:0 8px 48px rgba(0,0,0,0.6);">
-  </div>
-  <script>
-  (function(){
-    var lb = document.getElementById('js-lightbox');
-    var lbImg = document.getElementById('js-lightbox-img');
-    document.querySelectorAll('.js-lightbox-trigger').forEach(function(el){
-      el.addEventListener('click', function(){
-        lbImg.src = el.dataset.src;
-        lb.style.display = 'flex';
-      });
-    });
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape') lb.style.display = 'none';
-    });
-  })();
-  </script>
 
   <div class="course-single__layout">
 
