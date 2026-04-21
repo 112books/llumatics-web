@@ -392,6 +392,39 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ---
 
+## Registre de canvis
+
+### 2026-04-19
+**Redisseny home + pàgina tallers + línia del temps del recorregut**
+
+- **Home page** (`layouts/index.html`): substituïda la graella genèrica de 6 tallers per 6 tiles de colors (un per àmbit de formació), preview de les 3 últimes entrades del blog, i secció de properes dates. Eliminada la secció d'espais de la home.
+- **Sistema de colors per blocs** (`main.css`): custom properties `--bloc-color`, `--bloc-bg`, `--bloc-text` assignades via `data-bloc="[slug]"` a cada element. Colors definits per a 6 blocs: fonaments (daurat), proces (terracota), practica (verd), mig-format (blau), gran-format (gris), processos-alternatius (violeta).
+- **Course card** (`partials/course-card.html`): franja de color superior via `::before`, CTA "El vull →" per a tallers propis i "Veure dates →" per a tallers externs (C&F).
+- **Pàgina de tallers** (`layouts/tallers/list.html`): afegida línia del temps del recorregut formatiu ideal dalt de tot, seguida del filtre per blocs i les seccions acolorides per àmbit.
+- **Línia del temps** (`partials/recorregut.html` + `data/recorregut.yaml`): 8 passos del camí core (passos 5 i 8 marcats com "Aviat") + 7 especialitzacions temàtiques en pills de color. Horitzontal en desktop, vertical en mòbil. Multilingüe CA/ES/EN.
+- **Logo** (`main.css`): ampliat de 44px a 56px per millor llegibilitat.
+- **Imatges** baixades del lloc antic: 21 imatges de tallers a `static/images/tallers/`, 8+ imatges de blog a `static/images/blog/`.
+- **Blog** (`layouts/blog/`): nou layout list i single. 10 entrades noves a `content/ca/blog/` (algunes publicades, altres draft).
+- **Traduccions** (`i18n/ca.yaml`, `es.yaml`, `en.yaml`): afegides keys per a blocs, blog, recorregut, agenda i elements de preu/estat.
+- **Contingut multilingüe**: tots els tallers duplicats a `content/es/` i `content/en/` (21 tallers × 3 idiomes). Pàgines d'índex per a agenda, blog, espais i regala en ES i EN.
+- **Data**: `data/blocs.yaml` (6 blocs amb nom, icon, desc en 3 idiomes), `data/recorregut.yaml` (recorregut formatiu en 3 idiomes).
+- **Remote GitHub** afegit: `git@github.com:112books/llumatics-web.git` (branca `main`).
+
+---
+
+## Pendent / Properes sessions
+
+- [ ] Revisió de textos de tots els tallers (CA)
+- [ ] Sistema de documentació per a alumnes (pàgines privades + PDF via Make.com)
+- [ ] Newsletter: configurar Brevo + Tally (omplir IDs a `hugo.toml`)
+- [ ] Connexió xarxes socials (Instagram embed o feed)
+- [ ] Tallers sense taller actiu al recorregut (passos 5 i 8): crear les fitxes quan estiguin llestes
+- [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
+- [ ] Formularis Tally: inscripcions, contacte, val-regal
+- [ ] Branca `develop` per a staging abans de pujar a producció
+
+---
+
 ## Comandes útils
 
 ```bash
@@ -482,3 +515,38 @@ hugo --templateMetricsHints
 - `archetypes/tallers.md` — actualitzar amb el nou frontmatter
 - `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
 - README.md — afegir els 3 tallers nous a la taula
+
+---
+
+## Comportament de l'agent
+
+### Abans de qualsevol implementació
+- **Cerca prèvia obligatòria:** Abans d'implementar qualsevol biblioteca, API, patró o
+  tecnologia externa, cerca a internet la documentació oficial i casos d'ús reals actuals.
+  No assumeixis que el que saps és la versió vigent.
+- **Seguretat del 100%:** No implementis cap dependència externa, crida a API o integració
+  de tercers fins que hagis confirmat que funciona tal com s'espera en la versió actual.
+  Si tens dubtes, pregunta abans d'actuar.
+- **Comprova la compatibilitat** amb les versions exactes del projecte abans de proposar
+  qualsevol canvi que afecti dependències.
+
+### Memòria de sessió (MEMORY.md)
+- En iniciar una sessió, llegeix `MEMORY.md` si existeix per recuperar el context previ.
+- En tancar o en arribar a un punt de pausa significatiu, actualitza `MEMORY.md` afegint
+  una entrada nova al principi del fitxer amb aquest format:
+YYYY-MM-DD
+Fet: resum breu de les accions completades
+Decisions: canvis d'arquitectura o criteris adoptats
+Pendent: tasques que queden obertes per a la propera sessió
+
+- No esborris entrades anteriors. `MEMORY.md` és un log acumulatiu de totes les sessions.
+- `MEMORY.md` no s'inclou al build de Hugo (afegeix-lo a `.gitignore` si no vols que
+aparegui al repositori públic).
+
+### Sub-agents per a tasques feixugues
+Utilitza sub-agents per a:
+- Exploració àmplia del codebase (més de 5 fitxers implicats)
+- Recerca web que requereixi múltiples cerques i síntesi
+- Tasques paral·lelitzables independents (anàlisi de templates, traduccions, validació)
+- Qualsevol tasca que pugui saturar el context principal
+Mantén el context principal net i delega el treball pesat als sub-agents.
