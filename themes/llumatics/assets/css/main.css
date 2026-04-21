@@ -2178,9 +2178,9 @@ a.recorregut__tematic-link:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-4) 0;
+  padding: var(--space-5) 0;
   cursor: pointer;
-  font-size: var(--text-base);
+  font-size: var(--text-xl);
   font-weight: 500;
   color: var(--color-text);
   list-style: none;
@@ -2203,9 +2203,9 @@ a.recorregut__tematic-link:hover {
 }
 
 .faq-answer {
-  padding-bottom: var(--space-5);
+  padding-bottom: var(--space-6);
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
   line-height: 1.8;
   max-width: 65ch;
 }
