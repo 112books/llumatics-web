@@ -82,4 +82,4 @@ Bici: Bicing disponible a 200m
 
 Las sesiones empiezan puntuales. Si es la primera vez que vienes, llega cinco minutos antes para encontrar el acceso al espacio.
 
-**Visitas:** escribe a [info@llumatics.com](mailto:info@llumatics.com) para concertar una visita fuera de los días de taller.
+**Llumàtics no es un espacio de libre acceso.** Abrimos exclusivamente para los talleres y para visitas concertadas. Si quieres conocer el espacio, [solicita una visita](/es/contacte/) desde la página de contacto y lo organizamos.

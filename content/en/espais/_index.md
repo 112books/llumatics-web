@@ -82,4 +82,4 @@ Bike: Bicing available 200m away
 
 Sessions start on time. If it's your first visit, arrive five minutes early to find the entrance to the space.
 
-**Visits:** write to [info@llumatics.com](mailto:info@llumatics.com) to arrange a visit outside workshop days.
+**Llumàtics is not an open-access space.** We open exclusively for workshops and pre-arranged visits. If you'd like to see the space, [request a visit](/en/contacte/) from the contact page and we'll sort it out.

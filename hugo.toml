@@ -56,7 +56,7 @@ defaultContentLanguageInSubdir = false
   author = "Llumàtics"
   logo = "/images/llumatics-logo.svg"
   logoAlt = "Llumàtics"
-  contactEmail = "info@llumatics.com"
+  contactEmail = "hola@llumatics.com"
   instagram = "https://www.instagram.com/llumaticscat"
   newsletterService = "brevo"
   formService = "tally"
@@ -111,9 +111,14 @@ defaultContentLanguageInSubdir = false
   weight = 5
 
 [[languages.ca.menus.main]]
+  name = "Contacte"
+  url = "/contacte/"
+  weight = 6
+
+[[languages.ca.menus.main]]
   name = "Regala un curs"
   url = "/regala/"
-  weight = 6
+  weight = 7
   [languages.ca.menus.main.params]
     highlight = true
 
@@ -143,9 +148,14 @@ defaultContentLanguageInSubdir = false
   weight = 5
 
 [[languages.es.menus.main]]
+  name = "Contacto"
+  url = "/contacte/"
+  weight = 6
+
+[[languages.es.menus.main]]
   name = "Regala un curso"
   url = "/regala/"
-  weight = 6
+  weight = 7
   [languages.es.menus.main.params]
     highlight = true
 
@@ -175,8 +185,13 @@ defaultContentLanguageInSubdir = false
   weight = 5
 
 [[languages.en.menus.main]]
+  name = "Contact"
+  url = "/contacte/"
+  weight = 6
+
+[[languages.en.menus.main]]
   name = "Gift a course"
   url = "/regala/"
-  weight = 6
+  weight = 7
   [languages.en.menus.main.params]
     highlight = true

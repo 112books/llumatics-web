@@ -6,20 +6,22 @@
     <img class="hero__bg" src="{{ . }}" alt="" aria-hidden="true">
   {{ end }}
   <div class="container hero__content">
-    <p class="hero__eyebrow">{{ i18n "hero_eyebrow" | default "Escola de fotografia" }}</p>
-    <h1 class="hero__title">
-      {{ i18n "hero_title" | default "La fotografia com a<br>procés i forma de veure." | safeHTML }}
-    </h1>
-    <p class="hero__subtitle">
-      {{ i18n "hero_subtitle" | default "Tallers de revelat, laboratori analògic i formació tècnica a Barcelona." }}
-    </p>
-    <div class="hero__actions">
-      <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--primary btn--lg">
-        {{ i18n "cta_courses" | default "Veure tallers" }}
-      </a>
-      <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary btn--lg">
-        {{ i18n "cta_schedule" | default "Properes dates" }}
-      </a>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">{{ i18n "hero_eyebrow" | default "Escola de fotografia" }}</p>
+      <h1 class="hero__title">
+        {{ i18n "hero_title" | default "La fotografia com a<br>procés i forma de veure." | safeHTML }}
+      </h1>
+      <p class="hero__subtitle">
+        {{ i18n "hero_subtitle" | default "Tallers de revelat, laboratori analògic i formació tècnica a Barcelona." }}
+      </p>
+      <div class="hero__actions">
+        <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--primary btn--lg">
+          {{ i18n "cta_courses" | default "Veure tallers" }}
+        </a>
+        <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary btn--lg">
+          {{ i18n "cta_schedule" | default "Properes dates" }}
+        </a>
+      </div>
     </div>
   </div>
 </section>
