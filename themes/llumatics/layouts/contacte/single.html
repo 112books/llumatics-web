@@ -152,8 +152,12 @@
     <h2 class="contact-section__title">{{ i18n "contact_form_title" | default "Escriu-nos" }}</h2>
     <p class="contact-form-section__lead">{{ i18n "contact_form_lead" | default "Intentem contestar en un màxim de 48 hores en dies feiners." }}</p>
 
-    {{ if site.Params.formspreeId }}
-    <form class="contact-form" action="https://formspree.io/f/{{ site.Params.formspreeId }}" method="POST" novalidate>
+    {{ if site.Params.web3formsKey }}
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
+      <input type="hidden" name="subject" value="Contacte Llumàtics">
+      <input type="hidden" name="from_name" value="Web Llumàtics">
+      <input type="checkbox" name="botcheck" style="display:none;">
 
       {{/* Tipus de consulta */}}
       <fieldset class="contact-form__fieldset">
@@ -256,6 +260,7 @@
       <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn--primary btn--lg">{{ site.Params.contactEmail }}</a>
     </div>
     {{ end }}
+
   </section>
 
   {{/* ── FAQ ────────────────────────────────────────────────────────────── */}}

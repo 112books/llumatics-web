@@ -63,7 +63,7 @@ defaultContentLanguageInSubdir = false
   tallyFormNewsletter = ""
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
-  formspreeId = ""          # ID de Formspree per al formulari de contacte
+  web3formsKey = ""         # Clau d'accés de Web3Forms (web3forms.com)
 
 [taxonomies]
   tag = "tags"
