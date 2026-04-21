@@ -14,7 +14,15 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les v
 ## El laboratori fosc {#laboratori}
 
 {{< galeria id="laboratori" >}}
-/images/espais/laboratori.jpg
+/images/espais/laboratori.jpeg
+/images/espais/laboratori-1.jpeg
+/images/espais/laboratori-2.jpeg
+/images/espais/laboratori-3.jpeg
+/images/espais/laboratori-4.jpeg
+/images/espais/laboratori-5.jpeg
+/images/espais/laboratori-6.jpeg
+/images/espais/laboratori-7.jpeg
+/images/espais/laboratori-8.jpeg
 {{< /galeria >}}
 
 El laboratori és l'eix central de Llumàtics. No és un laboratori d'iniciació: és un espai equipat per treballar de veritat, amb criteri, des de la primera sessió fins a la còpia final.
@@ -40,7 +48,12 @@ El laboratori compta amb ventilació forçada, extractor de vapors químics i pr
 ---
 
 ## El plató {#plato}
-![Plato de Llumàtics](/images/espais/plato.jpg)
+{{< galeria id="plato" >}}
+/images/espais/plato.jpeg
+/images/espais/plato-1.jpeg
+/images/espais/plato-2.jpeg
+/images/espais/plato-3.jpeg
+{{< /galeria >}}
 
 El plató de Llumàtics és un espai de treball, no un estudi de producció. Petit, funcional, equipat per a retrat i fotografia de producte.
 
@@ -58,7 +71,7 @@ El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions 
 ---
 
 ## Zona d'escaneig i retoc {#escaneig}
-![Zona d'escaneig de Llumàtics](/images/espais/macM1.jpg)
+![Zona d'escaneig de Llumàtics](/images/espais/scan-zone.jpeg)
 
 L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatius i positius de totes les mides amb precisió.
 
