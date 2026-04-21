@@ -153,16 +153,57 @@ Els camps de taller (4-7: taller, data, horari, alumnes) s'amaguen/mostren via J
 
 ---
 
+---
+
+## 6. Footer — Secció Legal
+
+Afegir una cinquena columna (o fila inferior) al footer amb el títol **"Legal"** i 3 links:
+
+| Link | Pàgina |
+|---|---|
+| Avís legal | `/avis-legal/` |
+| Política de privacitat | `/privacitat/` |
+| Política de cookies | `/cookies/` |
+
+### 6.1 Contingut de les pàgines legals
+
+Tres pàgines noves en Markdown (`layout: single`, `noindex: false`). Contingut adaptat de les pàgines ES existents a `llumatics.com`, traduït al CA i actualitzat per al nou stack tècnic.
+
+**Dades del responsable** (comunes a les 3 pàgines):
+- Titular: Joan Martínez Serres
+- NIF: 38121766W
+- Adreça: Nau Bostik, Carrer Ferran Turné, 1-11, 08027 Barcelona
+- Email: info@llumatics.com
+- Web: https://llumatics.com
+
+**Avís legal** (`content/ca/avis-legal/index.md`)
+Condicions d'ús, propietat intel·lectual, limitació de responsabilitat, jurisdicció (legislació espanyola / tribunals de Barcelona).
+
+**Política de privacitat** (`content/ca/privacitat/index.md`)
+Responsable del tractament, base jurídica (RGPD + LOPDGDD), finalitats (atenció consultes, gestió de tallers), drets dels interessats (accés, rectificació, supressió, limitació), terminis de conservació, via de reclamació (AEPD).
+- Formularis: Formspree rep nom + email + missatge. Dades usades exclusivament per respondre la consulta.
+- No es comparteixen dades amb tercers tret d'obligació legal.
+
+**Política de cookies** (`content/ca/cookies/index.md`)
+Stack nou (Hugo estàtic): sense cookies de sessió PHP ni WordPress.
+Cookies presents:
+- **Tally.so** (formularis embed): cookies tècniques de sessió pròpies de Tally
+- **OpenStreetMap** (iframe mapa): cookies tècniques de sessió
+- Cap cookie de publicitat ni analítica (sense Google Analytics)
+Gestió: instruccions per Firefox, Chrome, Safari, Edge.
+
+---
+
 ## Fitxers a modificar
 
 | Fitxer | Canvi |
 |---|---|
 | `themes/llumatics/layouts/partials/header.html` | Language switcher sempre visible |
 | `themes/llumatics/layouts/_default/baseof.html` | Wrapper 1/3+2/3 global |
-| `themes/llumatics/layouts/partials/footer.html` | Espais com a links estàtics |
+| `themes/llumatics/layouts/partials/footer.html` | Espais estàtics + secció Legal |
 | `themes/llumatics/layouts/contacte/list.html` | Redisseny complet |
 | `themes/llumatics/assets/css/main.css` | Nous estils: page-layout, transport cards, FAQ, form |
-| `content/ca/espais/_index.md` | Afegir IDs als títols |
+| `content/ca/espais/_index.md` | Afegir IDs als títols + secció escaneig |
 | `content/ca/contacte/index.md` | Netejar contingut (mapa i transport al template) |
 | `hugo.toml` | Afegir `params.formspreeId` |
 
@@ -170,7 +211,9 @@ Els camps de taller (4-7: taller, data, horari, alumnes) s'amaguen/mostren via J
 
 | Fitxer | Contingut |
 |---|---|
-| *(cap)* | Tot va als fitxers existents |
+| `content/ca/avis-legal/index.md` | Avís legal en CA |
+| `content/ca/privacitat/index.md` | Política de privacitat en CA |
+| `content/ca/cookies/index.md` | Política de cookies en CA |
 
 ---
 
@@ -181,3 +224,4 @@ Els camps de taller (4-7: taller, data, horari, alumnes) s'amaguen/mostren via J
 - **`<details>/<summary>`** per a FAQ: sense JS, accessible, progressivament millorable.
 - **SVG inline** per a icones de transport: sense dependència externa, color controlat per CSS.
 - **Hugo template** per a llista de tallers al `<select>`: manteniment zero, sincronitzat amb el contingut.
+- **Cookies adaptades al nou stack**: Hugo estàtic elimina totes les cookies de WordPress/PHP. Només Tally i OSM.
