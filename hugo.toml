@@ -64,6 +64,7 @@ defaultContentLanguageInSubdir = false
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
+  sitePassword = "LinuxBCN"  # Deixar buit per desactivar la protecció
 
 [taxonomies]
   tag = "tags"

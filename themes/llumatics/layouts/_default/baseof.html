@@ -4,6 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  {{ partial "password-gate.html" . }}
   {{ partial "header.html" . }}
 
   <main id="main-content"{{ if and (ne .Kind "home") (ne .Type "tallers") }} class="page-main--offset"{{ end }}>
