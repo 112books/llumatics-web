@@ -520,6 +520,26 @@ hugo --templateMetricsHints
 
 ## Comportament de l'agent
 
+### Inici de sessió (casa o estudi)
+Abans de fer qualsevol altra cosa, sincronitza amb GitHub:
+
+```bash
+git fetch origin
+git status
+```
+
+Si la branca local va per darrere del remote, fes pull i resol els conflictes:
+
+```bash
+git pull origin main
+# Si hi ha conflictes a CLAUDE.md o altres fitxers, resol'ls manualment
+# i fes commit de la resolució abans de continuar
+```
+
+> Treballem des de dos ordinadors (casa i estudi). Sempre pot haver-hi canvis al remote que no tenim en local.
+
+---
+
 ### Abans de qualsevol implementació
 - **Cerca prèvia obligatòria:** Abans d'implementar qualsevol biblioteca, API, patró o
   tecnologia externa, cerca a internet la documentació oficial i casos d'ús reals actuals.
