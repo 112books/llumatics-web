@@ -415,13 +415,20 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 ## Pendent / Properes sessions
 
 - [ ] Revisió de textos de tots els tallers (CA)
-- [ ] Sistema de documentació per a alumnes (pàgines privades + PDF via Make.com)
-- [ ] Newsletter: configurar Brevo + Tally (omplir IDs a `hugo.toml`)
+- [ ] PDF alumnes: model en preparació (usuari). Pipeline: Make.com → Pandoc → email. Pàgines privades ja definides.
+- [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
+- [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
+- [ ] Cercador (Fuse.js + JSON index Hugo)
+- [ ] Responsive: revisió pendent (mòbil)
+- [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
-- [ ] Tallers sense taller actiu al recorregut (passos 5 i 8): crear les fitxes quan estiguin llestes
+- [ ] Tallers passos 5 i 8 del recorregut: crear fitxes quan estiguin llestes
 - [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
-- [ ] Formularis Tally: inscripcions, contacte, val-regal
 - [ ] Branca `develop` per a staging abans de pujar a producció
+- [ ] Caffenol i Wineol — tallers independents per fer (com el Guinneol)
+- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
+- [ ] `archetypes/tallers.md` — actualitzar amb el nou frontmatter
+- [ ] `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
 
 ---
 
@@ -507,14 +514,13 @@ hugo --templateMetricsHints
 | tutoria-fotografica | actiu |
 | carrer-i-mirada | en-preparacio |
 
-## Pendent
+## Pendent (sessió 2026-04-20)
 
 - Caffenol i Wineol — tallers independents per fer (com el Guinneol)
 - Imatges que falten per a tallers nous (revelat-color-bn, guinneol, copies-beers-developer)
 - Traduccions ES i EN — pendent per a tots els tallers
 - `archetypes/tallers.md` — actualitzar amb el nou frontmatter
 - `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
-- README.md — afegir els 3 tallers nous a la taula
 
 ---
 
@@ -571,3 +577,60 @@ Utilitza sub-agents per a:
 - Tasques paral·lelitzables independents (anàlisi de templates, traduccions, validació)
 - Qualsevol tasca que pugui saturar el context principal
 Mantén el context principal net i delega el treball pesat als sub-agents.
+
+---
+
+# Sessió 2026-04-22 — Resum de canvis
+
+## Correccions
+
+- **Galeria espais (bug crític):** `strings.Split` al shortcode `galeria.html` tenia els arguments invertits via pipe → galleries renderitzaven buides. Fix: `strings.Split .Inner "\n"` sense pipe.
+- **Lloc als tallers:** camp "Lloc" a la info-box ara és un link. Llumàtics → `/espais/#com-arribar-hi`. Extern (Cameras & Films) → Google Maps amb adreça Carrer d'en Rosic 3.
+
+## Funcionalitats noves
+
+### Biblioteca collapsible (espais)
+- Nou shortcode `{{% seccions-collapsibles %}}` — wrapa contingut Markdown en un `<div class="collapsible-sections">`
+- JS a `main.js`: agrupa el contingut de cada `h2` en un panel i afegeix toggle al clic (FAQ-style)
+- CSS: estil amb `+` / `−`, tot tancat per defecte
+- Aplicat a les categories de la biblioteca a `content/ca/espais/_index.md`
+
+### Sistema d'avisos per taller ("Avisa'm")
+- Botó "Avisa'm quan hi hagi places →" a la info-box de cada taller (CTA terciari, estil ghost)
+- Nou param `tallyFormAvisa` a `hugo.toml` (buit fins crear el formulari Tally)
+- Fallback: mailto si el param no està configurat
+- Concepte: waitlist per taller → tag a Brevo → avís quan es programi
+
+### Newsletter al footer
+- Banda horitzontal al footer amb formulari de subscripció inline
+- Connectat a **web3forms** (clau ja existent a `hugo.toml`) → envia email a `hola@llumatics.com`
+- Quan `tallyFormNewsletter` tingui ID → mostra botó Tally en lloc del formulari nadiu
+- Responsive: columna en mòbil
+
+## Arquitectura del sistema d'avisos (concepte documentat)
+
+```
+Visitant al taller
+  ├── "Sol·licita una data"  → vol reservar ara     → Tally form → Brevo
+  ├── "Fer una consulta"     → vol parlar           → Tally form / mailto
+  └── "Avisa'm"             → interès futur        → Tally form → Brevo (tag = slug-taller)
+
+Quan hi ha 2+ interessats en un taller:
+  → Filtrar a Brevo per tag
+  → Enviar avís als interessats
+  → Promo a xarxes socials per omplir places
+  → Si s'omple → crear entrada d'agenda (estat: active)
+```
+
+## Fitxers modificats
+
+| Fitxer | Canvi |
+|--------|-------|
+| `themes/llumatics/layouts/shortcodes/galeria.html` | Fix strings.Split |
+| `themes/llumatics/layouts/shortcodes/seccions-collapsibles.html` | NOU |
+| `themes/llumatics/layouts/tallers/single.html` | Lloc amb links + botó Avisa'm |
+| `themes/llumatics/layouts/partials/footer.html` | Banda newsletter |
+| `themes/llumatics/assets/css/main.css` | Collapsible + newsletter-band + btn--ghost |
+| `themes/llumatics/assets/js/main.js` | Collapsible JS + web3forms real |
+| `content/ca/espais/_index.md` | Biblioteca amb shortcode collapsible |
+| `hugo.toml` | tallyFormAvisa + comentari |
