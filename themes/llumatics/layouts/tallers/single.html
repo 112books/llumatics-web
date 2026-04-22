@@ -238,9 +238,9 @@
         <span class="info-box__label">Lloc</span>
         <span class="info-box__value">
           {{ if $isExtern }}
-            {{ .Params.extern_location | default "Cameras &amp; Films, Barcelona" }}
+            <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            {{ .Params.lloc | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" }}
+            <a href="{{ "/espais/#com-arribar-hi" | relLangURL }}">Nau Bostik, La Sagrera</a>
           {{ end }}
         </span>
       </div>

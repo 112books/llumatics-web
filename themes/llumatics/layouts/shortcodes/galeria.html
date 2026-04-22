@@ -1,5 +1,5 @@
 {{ $id := .Get "id" | default "galeria" }}
-{{ $images := .Inner | strings.Split "\n" }}
+{{ $images := strings.Split .Inner "\n" }}
 <div class="gallery-grid" data-gallery="{{ $id }}" data-inner-len="{{ len .Inner }}" data-count="{{ len $images }}">
 {{ range $images }}
   {{ $img := . | strings.TrimSpace }}
