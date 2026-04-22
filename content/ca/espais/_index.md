@@ -93,6 +93,7 @@ L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sess
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 
 {{% seccions-collapsibles %}}
+
 ## Història i Teoria de la Fotografia
 - **Susan Sontag** – *Sobre la fotografía*
 - **Walter Benjamin** – *Breve historia de la fotografía*
@@ -100,7 +101,7 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Picasso** – *la fotografía como documento*
 - **Alejandro Pradera** – *El libro de la fotografía*
 - **Joan Fontcuberta** – *Historia de la fotografía española*
-- **Antonini, Minitti, Gómez, Lungarella, Bendandi** – *Fotografía Experimental: Manual de Procesos Alternativos*
+- **Antonini, Minitti, Gómez, Lungarella, Bendandi** – *Fotografía Experimental - Manual de Procesos Alternativos*
 - **David Präkel** – *Developing Vision & Style* (Enric de Santos)
 - **Michael Langford** – *La fotografía paso a paso*
 - **Michael Langford** – *Food Photography: From Snapshots to Great Shots*
@@ -111,7 +112,7 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Henri Cartier-Bresson** – *Henri Cartier-Bresson* (Photo Poche)
 - **André Kertész** – *André Kertész* (Photo Poche)
 - **Lee Friedlander** – *Lee Friedlander* (Photo Poche)
-- **Anònim** – *Incoherències: Una pequeña historia del absurdo*
+
 
 ## Ansel Adams (Sèrie Tècnica)
 - **Ansel Adams** – *The Camera* (vol. 1)
@@ -137,7 +138,8 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Ajuntament de Barcelona** – *Compromís Públic: Veus del personal de l'Ajuntament de Barcelona durant la pandèmia*
 
 ## Fotografia Espanyola
-- **Castro Prieto** – *Aspectos*
+- **Juan Manuel Castro Prieto** – *Caín 2025 (signat i amb còpia)*
+- **Juan Manuel Castro Prieto** – *Cospedosa 2016*
 - **Carme García** – *Des del terci*
 
 ## Fotografia Japonesa
@@ -159,6 +161,17 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Shomei Tomatsu** – *Shomei Tomatsu*
 - **Helmut Newton** – *Private Property*
 
+## Editorial 112 Books
+- **Joan Linux** – *La sacsejada interior: Antropoformologies III*
+- **Joan Linux** – *Una bèstia i una sola llum: Antropoformologies II*
+- **Joan Linux** – *El naixement d’una bèstia: Antropoformologies I*
+- **Sakura** – *Medatsu: Li de Sakura Jorn*
+- **Mario Ortiz + Joan Linux** – *Anònims: Més enllà de les apariències*
+- **Joan Linux** – *Preses Falses – 40 anys de Blues a Barcelona*
+- **Joan Linux** – *aCarrejant*
+- **A. de Castro + Joan Linux** – *Incoherències: Una pequeña historia del absurdo*
+- **Joan Linux** – *Pedrola: Wet shadows*
+
 ## Revistes i Catàlegs
 - **La Fábrica** – *La Fotografía Magazine* (diversos números)
 - **Visa pour l'Image Perpignan 2023**
@@ -173,10 +186,8 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Merçè Salvador** – *Les músic chiens* (Biblioteca Secreta)
 - **Joan Miró** – *El arte de mirar*
 - **Esenciales del Arte** (col·lecció)
-- **The Cameras / The Story** (llibres de càmeres, a la dreta primera foto)
-- **Anònim** – *El Naixement d'una Bèstia*
-- **Anònim** – *Una Bèstia i una Sola Llum*
-- **Anònim** – *Anònims: Més enllà de les apariències*
+- **The Cameras / The Story** (llibres de càmeres)
+
 
 ### *Fotollibres:* col·lecció de fotollibres editorials, principalment de 112books i altres editors independents europeus.
 {{% /seccions-collapsibles %}}
