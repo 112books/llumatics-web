@@ -32,22 +32,25 @@
     </div>
   </div>
 
-  {{/* ── Mapa OpenStreetMap ──────────────────────────────────────────────── */}}
+
+  {{/* ── Mapa OpenStreetMap ──────────────────────────────────────────── ──── */}}
+
+
   <section class="contact-map">
     <h2 class="contact-section__title">{{ i18n "how_to_get_here" | default "Com arribar-hi" }}</h2>
     <div class="contact-map__embed">
       <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=2.1872%2C41.4265%2C2.1952%2C41.4305&amp;layer=mapnik&amp;marker=41.4285%2C2.1912"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=2.187737840468822%2C41.419881946160295%2C2.1981662691187247%2C41.42885994297936&amp;layer=mapnik"
         width="100%"
         height="380"
-        style="border:0;"
+        style="border:1px solid black"
         loading="lazy"
         title="Mapa Nau Bostik, Ferran Turné 1-11, Barcelona"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
     <p class="contact-map__link">
-      <a href="https://www.openstreetmap.org/?mlat=41.4285&amp;mlon=2.1912#map=17/41.4285/2.1912" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
+      <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
     </p>
   </section>
 
