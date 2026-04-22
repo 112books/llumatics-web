@@ -14,7 +14,6 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les v
 ## El laboratori fosc {#laboratori}
 
 {{< galeria id="laboratori" >}}
-/images/espais/laboratori.jpeg
 /images/espais/laboratori-1.jpeg
 /images/espais/laboratori-2.jpeg
 /images/espais/laboratori-3.jpeg
@@ -93,8 +92,7 @@ L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sess
 
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 
-**Àrees principals:**
-
+{{% seccions-collapsibles %}}
 ## Història i Teoria de la Fotografia
 - **Susan Sontag** – *Sobre la fotografía*
 - **Walter Benjamin** – *Breve historia de la fotografía*
@@ -181,6 +179,7 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **Anònim** – *Anònims: Més enllà de les apariències*
 
 ### *Fotollibres:* col·lecció de fotollibres editorials, principalment de 112books i altres editors independents europeus.
+{{% /seccions-collapsibles %}}
 
 La biblioteca és accessible als alumnes durant els tallers. No és una biblioteca de consulta pública.
 

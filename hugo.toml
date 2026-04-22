@@ -63,6 +63,7 @@ defaultContentLanguageInSubdir = false
   tallyFormNewsletter = ""
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
+  tallyFormAvisa = ""       # Waitlist "Avisa'm quan hi hagi places"
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
 
 [taxonomies]

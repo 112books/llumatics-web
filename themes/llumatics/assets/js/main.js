@@ -162,4 +162,23 @@
     });
   }
 
+  // ── Seccions collapsibles (biblioteca, FAQ-style) ────────────────────────
+  document.querySelectorAll('.collapsible-sections').forEach(function(container) {
+    container.querySelectorAll('h2').forEach(function(h2) {
+      var panel = document.createElement('div');
+      panel.className = 'collapsible__panel';
+      var next = h2.nextElementSibling;
+      while (next && next.tagName !== 'H2') {
+        var sibling = next;
+        next = next.nextElementSibling;
+        panel.appendChild(sibling);
+      }
+      h2.parentNode.insertBefore(panel, h2.nextElementSibling);
+      h2.addEventListener('click', function() {
+        this.classList.toggle('is-open');
+        panel.classList.toggle('is-open');
+      });
+    });
+  });
+
 })();

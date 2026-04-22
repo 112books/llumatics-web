@@ -340,6 +340,17 @@
                 Fer una consulta
               </a>
             {{ end }}
+            {{ if $.Site.Params.tallyFormAvisa }}
+              <a href="https://tally.so/r/{{ $.Site.Params.tallyFormAvisa }}?taller={{ $courseSlug }}"
+                 class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:var(--space-2);">
+                Avisa'm quan hi hagi places →
+              </a>
+            {{ else }}
+              <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Avisa%27m%3A%20{{ .Title | urlize }}"
+                 class="btn btn--ghost" style="margin-top:var(--space-2);">
+                Avisa'm quan hi hagi places →
+              </a>
+            {{ end }}
           {{ end }}
         </div>
 
