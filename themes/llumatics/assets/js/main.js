@@ -64,25 +64,40 @@
     lazyImages.forEach(img => imageObserver.observe(img));
   }
 
-  // ── Formulari newsletter (si no es fa servir Tally embed) ───────────
+  // ── Formulari newsletter → web3forms ────────────────────────────────
   const newsletterForm = document.querySelector('.newsletter-form--native');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async e => {
+    newsletterForm.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const email = newsletterForm.querySelector('[type="email"]').value;
-      const btn   = newsletterForm.querySelector('[type="submit"]');
-      const msg   = newsletterForm.querySelector('.newsletter-form__msg');
+      var email = newsletterForm.querySelector('[type="email"]').value;
+      var btn   = newsletterForm.querySelector('[type="submit"]');
+      var msg   = newsletterForm.querySelector('.newsletter-form__msg');
 
       btn.disabled = true;
       btn.textContent = '...';
 
-      // Aquí connectaríem amb l'API de Brevo o el webhook de Tally
-      // Per ara simulem resposta OK
-      setTimeout(() => {
-        msg.textContent = 'Subscripció confirmada. Gràcies!';
-        msg.style.color = '#C8A96E';
-        btn.style.display = 'none';
-      }, 800);
+      try {
+        var body = new FormData();
+        body.append('access_key',  newsletterForm.dataset.key);
+        body.append('email',       email);
+        body.append('subject',     'Nova subscripció al butlletí — Llumàtics');
+        body.append('from_name',   'Web Llumàtics');
+
+        var res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: body });
+        var data = await res.json();
+
+        if (data.success) {
+          msg.textContent  = 'Subscripció confirmada. Gràcies!';
+          msg.style.color  = '#C8A96E';
+          btn.style.display = 'none';
+        } else {
+          throw new Error('error');
+        }
+      } catch (_) {
+        msg.textContent = 'Alguna cosa ha fallat. Prova-ho de nou.';
+        btn.disabled    = false;
+        btn.textContent = 'Subscriu-me';
+      }
     });
   }
 

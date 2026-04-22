@@ -2343,6 +2343,63 @@ a.recorregut__tematic-link:hover {
   display: block;
 }
 
+/* ── Newsletter band (footer) ────────────────────────────────────────────── */
+.newsletter-band {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-block: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+.newsletter-band__intro { flex: 1; min-width: 0; }
+.newsletter-band__label {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-bg);
+  margin-bottom: var(--space-1);
+}
+.newsletter-band__desc {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.5);
+}
+.newsletter-band__form  { flex: 1; min-width: 0; }
+.newsletter-band__tally { white-space: nowrap; }
+.newsletter-band__fields {
+  display: flex;
+  gap: var(--space-2);
+}
+.newsletter-band__input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.08);
+  color: var(--color-bg);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition);
+}
+.newsletter-band__input::placeholder { color: rgba(255,255,255,0.35); }
+.newsletter-band__input:focus        { border-color: var(--color-accent); }
+.newsletter-band__submit             { white-space: nowrap; }
+.newsletter-form__msg {
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+  min-height: 1.2em;
+}
+@media (max-width: 768px) {
+  .newsletter-band {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .newsletter-band__form,
+  .newsletter-band__tally { width: 100%; }
+}
+
 /* ── Botó ghost (Avisa'm) ────────────────────────────────────────────────── */
 .btn--ghost {
   background: transparent;

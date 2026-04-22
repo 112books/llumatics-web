@@ -52,6 +52,32 @@
 
     </div>
 
+    {{/* Banda newsletter */}}
+    <div class="newsletter-band">
+      <div class="newsletter-band__intro">
+        <p class="newsletter-band__label">Rep novetats de Llumàtics</p>
+        <p class="newsletter-band__desc">Nous tallers, dates obertes i entrades al blog. Sense soroll.</p>
+      </div>
+      {{ if $.Site.Params.tallyFormNewsletter }}
+        <a href="https://tally.so/r/{{ $.Site.Params.tallyFormNewsletter }}"
+           class="btn btn--primary newsletter-band__tally"
+           target="_blank" rel="noopener">
+          Subscriu-te →
+        </a>
+      {{ else }}
+        <form class="newsletter-form--native newsletter-band__form"
+              data-key="{{ $.Site.Params.web3formsKey }}"
+              novalidate>
+          <div class="newsletter-band__fields">
+            <input type="email" name="email" placeholder="El teu correu" required
+                   class="newsletter-band__input">
+            <button type="submit" class="btn btn--primary newsletter-band__submit">Subscriu-me</button>
+          </div>
+          <p class="newsletter-form__msg" aria-live="polite"></p>
+        </form>
+      {{ end }}
+    </div>
+
     <div class="site-footer__bottom">
       <span>&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "rights_reserved" | default "Tots els drets reservats." }}</span>
       <span>{{ i18n "footer_legal" | default "Els continguts d'aquesta web no es poden reproduir sense autorització." }}</span>
