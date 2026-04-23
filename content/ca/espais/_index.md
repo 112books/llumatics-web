@@ -24,24 +24,41 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. Les vis
 /images/espais/laboratori-8.jpeg
 {{< /galeria >}}
 
-El laboratori és l’eix central de Llumàtics. No és un laboratori d’iniciació, sinó un espai equipat per treballar amb criteri, des de la primera sessió fins a la còpia final.
+El laboratori és l’eix central de Llumàtics. No és un espai d’iniciació, sinó un entorn de treball complet, pensat per acompanyar el procés fotogràfic des de la primera prova fins a la còpia final.
 
-**Ampliadores:** disposem d’ampliadores per a 35 mm, mig format i gran format. La darrera permet treballar planxes de 4×5" directament sobre paper. Les de mig format admeten tots els formats de 120 (6×4,5, 6×6, 6×7 i 6×9).
+**Ampliadores:** 
+Disposem d’ampliadores per a 35 mm, mig format i gran format. La darrera permet treballar planxes de 4×5” directament sobre paper. Les de mig format admeten tots els formats de 120 (6×4,5, 6×6, 6×7 i 6×9), permetent un control precís de la còpia en paper.
 
 **Química:**
-Tot el que necessites per revelar i positivar en B/N: reveladors (Kodak D-76, Ilford ID-11, Rodinal), bany de parada, fixadors, anticontaminants, agents d'humectació. La química es renova regularment i es controla la temperatura amb termòmetre de precisió.
+Tot el necessari per al revelat i positivat en blanc i negre: reveladors (Rodinal, Kodak HC-110, D-76, Micropen, 510 Pyto i algún més.), bany de parada, fixadors, agents antiestàtics i humectants. 
+El control de temperatura es fa amb instrumentació de precisió i la renovació de productes és constant.
+* 510 Pyro és un revelador que elaborem en un procès totalment manual i som dels pocs laboratoris que en disposen. Estem preparant un taller per fer-ne, si estàn interesant, només tens que contactar amb nosaltres.
+
+### Zona humida
+
+La zona humida articula el moment més físic del procés: cubetes per a diferents formats, rentat de paper i negatius, manipulació controlada i transicions entre químic i assecat. És un espai de ritme lent, on el temps deixa de ser digital i torna a ser mecànic i químic.
+
+Inclou tancs de revelat (Paterson, Jobo i AP), sistemes de rentat, cubetes de de mutitud d emides i control d’aigua per a estabilització de còpies.
 
 **Equipament de laboratori:**
-- Cubetes per a 35mm, mig format i gran format
+- Llum bermell de seguretat
+- Guerres amb mesura de 1, 3 i 5 litres de capacitat
+- Provetes graduades de diverses capaciats (per mesurar els reveladors amb precissió)
+- Vas de Precipitats per 1/2 litre i 1 l.
+- Placa agitadora magnètica
+- Safates de revelat de molts tamanys, de petites a més de 50 x 70 cm
 - Nevera per a pel·lícules i solucions químiques
 - Armari d'assecat per als negatius
-- Esmaltadora per a còpies en paper RC
-- Lupa de gra i llum de visió de negatius
-- Tancs de revelat de diverses mides (Paterson, Jobo, cubeta)
+- Esmaltadora per a còpies en paper RC i Fibra
+- Lupa de gra
+- Placa de llum LED de visió de negatius
+- Tancs de revelat de diverses mides (Paterson, Jobo, cubeta) de 1 a 12 espirals de capacitat
+- Tancs per a plaques de 4x5, diversos models
 - Mesuradors de pH i termòmetres de laboratori
+- Cartulines negres per fer les mascares
 
 **Seguretat:**
-El laboratori compta amb ventilació forçada, extractor de vapors químics i protocol de gestió de residus. Els productes fotogràfics es tracten com a residus especials.
+El laboratori compta mascaretes, guants de seguretat, ulleres de seugetat, amb ventilació forçada, extractor de vapors químics i protocol de gestió de residus. Els productes fotogràfics es tracten com a residus especials.
 
 ---
 
