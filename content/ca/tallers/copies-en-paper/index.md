@@ -3,7 +3,12 @@ title: "Còpies en paper"
 subtitle: "De negatiu a còpia: treballar amb l'ampliadora"
 lead: "Tens negatius revelats i vols fer-ne còpies? Aquest taller és el segon pas natural del procés analògic: l'ampliadora, el paper i la cubeta."
 description: "Taller de còpies fotogràfiques en paper. Ampliadora, tipus de paper, revelat i controls locals. Laboratori analògic a Barcelona."
-image: "/images/tallers/copies-en-paper.jpg"
+image: "/images/tallers/introduccio-al-positivat-2.jpg"
+images:
+  - "/images/tallers/introduccio-al-positivat-3.jpg"
+  - "/images/tallers/introduccio-al-positivat-5.jpg"
+  - "/images/tallers/introduccio-al-positivat-1.jpg"
+  - "/images/tallers/introduccio-al-positivat-4.jpg"
 
 # Classificació
 tipus: "taller"

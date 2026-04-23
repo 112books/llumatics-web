@@ -3,14 +3,13 @@ title: "Introducció al positivat"
 subtitle: "La teva primera vegada a l'ampliadora"
 lead: "Portes negatius revelats i vols veure com es converteixen en còpies en paper? Aquesta és la primera sessió: una introducció pràctica i directa al laboratori de positivat."
 description: "Taller bàsic d'introducció al positivat fotogràfic. Primera sessió a l'ampliadora, revelat de paper i lectura del resultat. Barcelona."
-image: "/images/tallers/introduccio-al-positivat.jpg"
+image: "/images/tallers/introduccio-al-positivat-10.jpg"
 images:
-  - "/images/tallers/introduccio-al-positivat-1.jpg"
-  - "/images/tallers/introduccio-al-positivat-2.jpg"
-  - "/images/tallers/introduccio-al-positivat-3.jpg"
-  - "/images/tallers/introduccio-al-positivat-4.jpg"
-  - "/images/tallers/introduccio-al-positivat-5.jpg"
-
+  - "/images/tallers/introduccio-al-positivat-15.jpg"
+  - "/images/tallers/introduccio-al-positivat-10.jpg"
+  - "/images/tallers/introduccio-al-positivat-11.jpg"
+  - "/images/tallers/introduccio-al-positivat-13.jpg"
+  - "/images/tallers/introduccio-al-positivat-14.jpg"
 
 # Classificació
 tipus: "taller"

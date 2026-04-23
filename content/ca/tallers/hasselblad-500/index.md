@@ -55,14 +55,14 @@ En aquest taller hi ha temps per a tot: per entendre el sistema, per disparar am
 - Trucs i particularitats del sistema que no surten als manuals
 - Pràctica: un rodet complet de 120 (12 fotogrames 6×6)
 - Revelat del rodet i digitalització de tots els fotogrames
+- Anelles d'extensió per fer fotografies de més aprop dels 80 cm
 
 ## Inclòs en el preu
 
 - Un rodet de 120 B/N (12 fotogrames 6×6)
 - Revelat del rodet el mateix dia
-- Digitalització dels 12 fotogrames
-- Piscolabis al final de la sessió
-- Càmera Hasselblad 500 disponible si no en tens
+- Digitalització dels 12 fotogrames (en pocs dies) 
+- Càmera Hasselblad 500C/M disponible si no en tens
 
 ## Cal portar
 

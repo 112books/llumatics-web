@@ -7,6 +7,9 @@ image: "/images/tallers/copies-beers-developer.jpg"
 images:
   - "/images/tallers/copies-beers-developer-1.jpg"
   - "/images/tallers/copies-beers-developer-2.jpg"
+  - "/images/tallers/copies-beers-developer-3.jpg"
+  - "/images/tallers/copies-beers-developer-4.jpg"
+  - "/images/tallers/copies-beers-developer-5.jpg"
 
 # Classificació
 tipus: "taller"
@@ -21,7 +24,7 @@ preu_2: 125
 preu_3: 94
 preu_4: 79
 durada_hores: 4
-lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
+lloc: "Llumàtics"
 max_places: 4
 sota_demanda: true
 extern: false
@@ -29,7 +32,7 @@ extern: false
 # Fitxa pedagògica
 objective: "Preparar el revelador Beers Developer en dues parts, entendre com la proporció A/B controla el contrast, i usar-lo directament a l'ampliadora per obtenir còpies amb criteris propis."
 methodology: "Primera part: preparació de les solucions A i B i càlcul de les dilucions. Segona part: sessió d'ampliadora comparant còpies a diferents graus de contrast amb el revelador propi."
-result: "3-5 còpies en paper fetes amb Beers Developer a dilucions diferents, comprensió pràctica del control de contrast per química, i una petita quantitat de revelador per continuar a casa."
+result: "3–5 còpies en paper fetes amb Beers Developer a dilucions diferents, comprensió pràctica del control de contrast per química, i una petita quantitat de revelador per continuar a casa."
 prerequisits: "Obligatori saber revelar pel·lícula B/N de manera autònoma — recomanable haver fet el taller de Revelat B/N o el de Revelats experimentals. Obligatori haver fet còpies a l'ampliadora prèviament — recomanable haver fet el taller de Còpies en paper o equivalent."
 target: "Fotògrafs analògics que ja dominen el procés bàsic i volen anar més lluny: controlar el contrast de la còpia des de la química, no des dels filtres."
 
@@ -49,7 +52,7 @@ Quan fas còpies a l'ampliadora, el contrast el controles habitualment amb filtr
 
 El Beers Developer és una fórmula de dues parts, dissenyada pel Dr. Roland F. Beers, que permet obtenir set graus de contrast diferents barrejant les parts A i B en proporcions variables. El grau #1 dóna el contrast més baix; el #7, el més alt. La mateixa química, resultats completament diferents.
 
-En aquest taller preparem la fórmula des de zero i l'usem immediatament a l'ampliadora. No és teoria — és pràctica directa amb resultats comparables sobre la taula de llum.
+En aquest taller preparem la fórmula des de zero i l'usem immediatament a l'ampliadora. No és teoria — és pràctica directa amb resultats comparables.
 
 ## Com s'estructura la sessió
 
@@ -80,7 +83,6 @@ La comparació directa de les tres còpies sobre la taula de llum és la millor 
 - Paper fotogràfic RC multigrau (6-8 fulls per participant)
 - Ús de l'ampliadora i el laboratori
 - Una petita quantitat de revelador Beers preparat per emportar-se a casa
-- Refrigeri (cafè o te i fruita)
 
 ## Cal portar
 
@@ -89,7 +91,7 @@ La comparació directa de les tres còpies sobre la taula de llum és la millor 
 ## No inclòs
 
 - Paper addicional (+2€/full RC, +4€/full fibra)
-- Components químics per preparar Beers a casa (disponibles a Químics Dalmau, Barcelona)
+- Components químics per preparar Beers a casa (disponibles a [Químics Dalmau](https://quimicsdalmauonline.com/categoria-producto/taller-fotografia/), Barcelona)
 
 ---
 
