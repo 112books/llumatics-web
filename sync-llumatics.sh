@@ -66,14 +66,16 @@ status() {
 
 sync() {
   CURRENT=$(git branch --show-current)
-  print "Sincronitzant branca ${YLW}${CURRENT}${RST}..."
-  git fetch "$REMOTE" 2>/dev/null
-  git pull "$REMOTE" "$CURRENT" --rebase || {
-    err "Pull fallat. Resol els conflictes i torna a executar."
-    exit 1
-  }
+  print "Pujant canvis locals (${CURRENT})..."
+
+  git add -A
+
+  if ! git diff --cached --quiet; then
+    git commit -m "Auto-sync"
+  fi
+
   git push "$REMOTE" "$CURRENT" || exit 1
-  ok "Sync complet (${CURRENT})"
+  ok "Push complet (${CURRENT})"
 }
 
 build_local() {

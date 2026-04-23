@@ -67,10 +67,8 @@ El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions 
 
 ---
 
----
-
 ## Zona d'escaneig i retoc {#escaneig}
-![Zona d'escaneig de Llumàtics](/images/espais/scan-zone.jpeg)
+![Zona d'escaneig de Llumàtics](images/espais/scan-zone.jpeg)
 
 L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatius i positius de totes les mides amb precisió.
 
@@ -88,7 +86,7 @@ L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sess
 ---
 
 ## La biblioteca {#biblioteca}
-![La Biblioteca de Llumàtics](/images/espais/biblioteca.jpg)
+![La Biblioteca de Llumàtics](images/espais/biblioteca.jpg)
 
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 
