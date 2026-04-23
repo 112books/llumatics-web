@@ -7,7 +7,7 @@ eyebrow: "Instal·lacions"
 
 Llumàtics és a la **Nau Bostik**, al carrer Ferran Turné 1-11, al barri de La Sagrera de Barcelona. Un espai industrial rehabilitat on conviuen artistes, tallers i projectes culturals.
 
-Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les visites són amb cita prèvia**, i els tallers es fan sempre en grups de màxim quatre persones.
+Els espais de Llumàtics no estan oberts al públic de manera permanent. Les visites es fan amb cita prèvia i els tallers es desenvolupen sempre en grups de màxim quatre persones.
 
 ---
 
@@ -24,10 +24,9 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. **Les v
 /images/espais/laboratori-8.jpeg
 {{< /galeria >}}
 
-El laboratori és l'eix central de Llumàtics. No és un laboratori d'iniciació: és un espai equipat per treballar de veritat, amb criteri, des de la primera sessió fins a la còpia final.
+El laboratori és l’eix central de Llumàtics. No és un laboratori d’iniciació, sinó un espai equipat per treballar amb criteri, des de la primera sessió fins a la còpia final.
 
-**Ampliadores:**
-Tenim ampliadores per a **35mm**, **mig format** i **gran format**. La de gran format permet treballar plànxes de 4×5" directament sobre paper. Les de mig format accepten tots els formats de 120 (6×4,5, 6×6, 6×7, 6×9).
+**Ampliadores:** disposem d’ampliadores per a 35 mm, mig format i gran format. La darrera permet treballar planxes de 4×5" directament sobre paper. Les de mig format admeten tots els formats de 120 (6×4,5, 6×6, 6×7 i 6×9).
 
 **Química:**
 Tot el que necessites per revelar i positivar en B/N: reveladors (Kodak D-76, Ilford ID-11, Rodinal), bany de parada, fixadors, anticontaminants, agents d'humectació. La química es renova regularment i es controla la temperatura amb termòmetre de precisió.
