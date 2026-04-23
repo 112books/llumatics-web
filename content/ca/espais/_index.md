@@ -67,7 +67,7 @@ El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions 
 ---
 
 ## Zona d'escaneig i retoc {#escaneig}
-![Zona d'escaneig de Llumàtics](images/espais/scan-zone.jpeg)
+![Zona d'escaneig de Llumàtics](/images/espais/scan-zone.jpeg)
 
 L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatius i positius de totes les mides amb precisió.
 
