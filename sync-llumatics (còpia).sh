@@ -4,25 +4,6 @@
 #  Ús: ./sync-llumatics.sh
 # ═══════════════════════════════════════════════════════════════════════
 
-
-# --- nove funcio variable d'entorn --------
-get_baseurl() {
-  CURRENT=$(git branch --show-current)
-
-  case "$CURRENT" in
-    main)
-      echo "https://llumatics.com/"
-      ;;
-    develop)
-      echo "https://112books.github.io/llumatics-web/"
-      ;;
-    *)
-      echo "http://localhost:1313/"
-      ;;
-  esac
-}
-# --- fi nova funció variable d'entorn
-
 set -euo pipefail
 
 # ── Variables ────────────────────────────────────────────────────────────
@@ -112,24 +93,16 @@ server_local() {
 
 build_staging() {
   print "Build staging..."
-
-  BASEURL=$(get_baseurl)
-
   hugo --minify \
-       --baseURL "$BASEURL" \
-       --buildDrafts
-
+       --baseURL "${REPO_STAGING}" \
+       --buildDrafts || exit 1
   ok "Build staging correcte → ./${BUILD_DIR}/"
 }
 
 build_prod() {
   print "Build producció..."
-
-  BASEURL=$(get_baseurl)
-
   hugo --minify \
-       --baseURL "$BASEURL"
-
+       --baseURL "${REPO_PROD}" || exit 1
   ok "Build producció correcte → ./${BUILD_DIR}/"
 }
 
