@@ -864,8 +864,9 @@ button, input, select, textarea {
 }
 
 .section__subtitle {
-  font-size: var(--text-lg);
-  color: var(--color-text-muted);
+  font-size: var(--text-xl);
+  font-family: var(--font-serif);
+  color: var(--color-error);
   margin-top: var(--space-3);
   max-width: 580px;
 }
