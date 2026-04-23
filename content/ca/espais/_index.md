@@ -86,7 +86,7 @@ L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sess
 ---
 
 ## La biblioteca {#biblioteca}
-![La Biblioteca de Llumàtics](/images/espais/biblioteca.jpg)
+![La Biblioteca de Llumàtics](images/espais/biblioteca.jpg)
 
 Una biblioteca petita però triada. Res de decoració: tots els llibres s'han llegit o es llegiran.
 
