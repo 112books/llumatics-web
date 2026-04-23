@@ -5,9 +5,9 @@ description: "Les instal·lacions de Llumàtics a la Nau Bostik: laboratori fosc
 eyebrow: "Instal·lacions"
 ---
 
-Llumàtics és a la **Nau Bostik**, al carrer Ferran Turné 1-11, al barri de La Sagrera de Barcelona. Un espai industrial rehabilitat on conviuen artistes, tallers i projectes culturals.
+Llumàtics està dins la **Nau Bostik**, al carrer Ferran Turné 1-11, al barri de La Sagrera de Barcelona. Un espai industrial rehabilitat i autogestionat on conviuen artistes, tallers i projectes culturals.
 
-Els espais de Llumàtics no estan oberts al públic de manera permanent. Les visites es fan amb cita prèvia i els tallers es desenvolupen sempre en grups de màxim quatre persones.
+Els espais de Llumàtics no estan oberts al públic de manera permanent. Les visites es fan amb [cita prèvia](contacte) i els tallers es desenvolupen sempre en grups de màxim quatre persones.
 
 ---
 
@@ -26,6 +26,8 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. Les vis
 
 El laboratori és l’eix central de Llumàtics. No és un espai d’iniciació, sinó un entorn de treball complet, pensat per acompanyar el procés fotogràfic des de la primera prova fins a la còpia final.
 
+### "Zona seca"
+
 **Ampliadores:** 
 Disposem d’ampliadores per a 35 mm, mig format i gran format. La darrera permet treballar planxes de 4×5” directament sobre paper. Les de mig format admeten tots els formats de 120 (6×4,5, 6×6, 6×7 i 6×9), permetent un control precís de la còpia en paper.
 
@@ -34,7 +36,7 @@ Tot el necessari per al revelat i positivat en blanc i negre: reveladors (Rodina
 El control de temperatura es fa amb instrumentació de precisió i la renovació de productes és constant.
 * 510 Pyro és un revelador que elaborem en un procès totalment manual i som dels pocs laboratoris que en disposen. Estem preparant un taller per fer-ne, si estàn interesant, només tens que contactar amb nosaltres.
 
-### Zona humida
+### "Zona humida"
 
 La zona humida articula el moment més físic del procés: cubetes per a diferents formats, rentat de paper i negatius, manipulació controlada i transicions entre químic i assecat. És un espai de ritme lent, on el temps deixa de ser digital i torna a ser mecànic i químic.
 
@@ -73,11 +75,12 @@ El laboratori compta mascaretes, guants de seguretat, ulleres de seugetat, amb v
 El plató de Llumàtics és un espai de treball, no un estudi de producció. Petit, funcional, equipat per a retrat i fotografia de producte.
 
 **Equipament disponible:**
-- Flaixos d'estudi (2 caps) amb disparadors ràdio
-- Fons de paper en diversos colors (blanc, negre, gris, kraft)
+- Flaixos d'estudi amb disparadors ràdio i cable Sync: Elichrome D.Kute4, Godox i lagun Bowens
+- Finestres de diverses mides, snort amb filtres de colors
+- Fons de paper en diversos colors (blanc, negre)
 - Reflectors, difusors i modificadors bàsics
 - Trípodes i brides de subjecció
-- Mesuradors de llum de flaix
+- Fotòmetres
 
 El plató s'usa als tallers de **Retrat analògic**, **Retrat 6×6** i sessions de **Tutoria fotogràfica**. No es lloga per separat.
 
@@ -196,7 +199,6 @@ Una biblioteca petita però triada. Res de decoració: tots els llibres s'han ll
 - **1909: Fotografía, Ciudad, Comité*
 
 ## Altres / Miscel·lània
-- **La sacsejada interior** – *Antropoformologia...*
 - **Merçè Salvador** – *Les músic chiens* (Biblioteca Secreta)
 - **Joan Miró** – *El arte de mirar*
 - **Esenciales del Arte** (col·lecció)
