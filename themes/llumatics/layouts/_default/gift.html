@@ -1,68 +1,47 @@
 {{/* Layout: gift.html — Pàgina "Regala un curs" */}}
 {{ define "main" }}
-<div class="gift-section container">
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+{{/* Dades dels tallers actius per al questionaire JS */}}
+{{- $data := slice -}}
+{{- range where (where .Site.RegularPages "Type" "tallers") "Params.estat" "actiu" -}}
+  {{- $slug := .RelPermalink | strings.TrimSuffix "/" | path.Base -}}
+  {{- $data = $data | append (dict "slug" $slug "title" .Title "lead" (.Params.lead | default "") "preu_1" (.Params.preu_1 | default 0) "url" .RelPermalink) -}}
+{{- end -}}
+<script type="text/plain" id="gift-data">{{ $data | jsonify }}</script>
 
-    <div>
-      <p class="section__eyebrow">{{ i18n "gift_title" | default "Regala experiència" }}</p>
-      <h1 style="font-family:var(--font-serif); font-size:clamp(2rem,5vw,3rem); line-height:1.2; letter-spacing:-0.02em; margin-bottom:1.5rem;">
-        {{ .Title }}
-      </h1>
-      <div class="prose">{{ .Content }}</div>
+<div class="gift-page container">
 
-      <div style="margin-top:2rem; display:flex; flex-direction:column; gap:0.75rem;">
-        <p style="font-weight:600;">Imports disponibles:</p>
+  {{/* Hero */}}
+  <div class="gift-hero">
+    <svg class="gift-hero__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+    </svg>
+    <p class="section__eyebrow">{{ i18n "gift_title" | default "Vals-regal" }}</p>
+    <h1 class="gift-hero__title">{{ .Title }}</h1>
+    <div class="prose gift-hero__content">{{ .Content }}</div>
+    <p class="gift-hero__sub">No cal saber res de fotografia. En dues preguntes, t'ajudem a trobar el taller perfecte per regalar.</p>
+  </div>
 
-        {{ range hugo.Data.gift_amounts }}
-        <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border:1px solid var(--color-border); border-radius:4px;">
-          <div>
-            <strong style="font-size:1.25rem;">{{ .amount }}€</strong>
-            {{ with .description }}<p style="font-size:0.875rem; color:var(--color-text-muted); margin-top:0.25rem;">{{ . }}</p>{{ end }}
-          </div>
-          {{ if $.Site.Params.tallyFormGiftVoucher }}
-          <a href="https://tally.so/r/{{ $.Site.Params.tallyFormGiftVoucher }}?import={{ .amount }}"
-             target="_blank" rel="noopener"
-             class="btn btn--primary btn--sm">
-            {{ i18n "gift_cta" | default "Sol·licitar" }}
-          </a>
-          {{ else }}
-          <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Val regal {{ .amount }}€"
-             class="btn btn--primary btn--sm">
-            {{ i18n "gift_cta" | default "Sol·licitar" }}
-          </a>
-          {{ end }}
-        </div>
-        {{ else }}
-        {{/* Fallback si no hi ha data */}}
-        {{ range slice 80 120 200 }}
-        <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border:1px solid var(--color-border); border-radius:4px;">
-          <strong style="font-size:1.25rem;">{{ . }}€</strong>
-          <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Val regal {{ . }}€"
-             class="btn btn--primary btn--sm">
-            {{ i18n "gift_cta" | default "Sol·licitar" }}
-          </a>
-        </div>
-        {{ end }}
-        {{ end }}
+  {{/* Questionaire */}}
+  <div class="gift-quiz-wrap">
+    <div id="gift-quiz" class="gift-quiz"
+         data-tally="{{ $.Site.Params.tallyFormGiftVoucher }}"
+         data-email="{{ $.Site.Params.contactEmail }}"></div>
+    <div id="gift-result" class="gift-result" hidden></div>
+  </div>
 
+  {{/* Preview del val físic */}}
+  <div class="gift-preview-section">
+    <div class="gift-card-preview">
+      <div class="gift-card-preview__logo">Llumàtics</div>
+      <div class="gift-card-preview__amount">Val Regal</div>
+      <div class="gift-card-preview__label">
+        {{ i18n "gift_card_label" | default "Canjeable per qualsevol taller · Vàlid 12 mesos" }}
       </div>
     </div>
-
-    {{/* Preview visual del val */}}
-    <div>
-      <div class="gift-card-preview">
-        <div class="gift-card-preview__logo">Llumàtics</div>
-        <div class="gift-card-preview__amount">Val Regal</div>
-        <div class="gift-card-preview__label">
-          {{ i18n "gift_card_label" | default "Canjeable per qualsevol taller · Vàlid 12 mesos" }}
-        </div>
-      </div>
-      <p style="font-size:0.75rem; color:var(--color-text-muted); margin-top:1rem;">
-        {{ i18n "gift_info" | default "El val s'envia per correu electrònic en format PDF imprimible. Pot aplicar-se a qualsevol taller disponible." }}
-      </p>
-    </div>
-
+    <p class="gift-info">
+      {{ i18n "gift_info" | default "El val s'envia per correu electrònic en format PDF imprimible. Recomanem imprimir-lo i posar-lo en un sobre — fa molt més efecte." }}
+    </p>
   </div>
 
 </div>

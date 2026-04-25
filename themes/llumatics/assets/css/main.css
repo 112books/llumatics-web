@@ -2420,6 +2420,142 @@ a.recorregut__tematic-link:hover {
   color: var(--color-text);
 }
 
+/* ── Val-regal: pàgina i questionaire ───────────────────────────────────── */
+.gift-page { max-width: 720px; margin: 0 auto; padding: var(--space-12) var(--space-4); }
+
+.gift-hero { text-align: center; margin-bottom: var(--space-12); }
+.gift-hero__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+.gift-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+.gift-hero__content { margin-bottom: var(--space-4); }
+.gift-hero__sub { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+/* Quiz */
+.gift-quiz-wrap { margin-bottom: var(--space-16); }
+.gift-step { text-align: center; }
+.gift-step__counter {
+  font-size: var(--text-xs, 0.75rem);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+.gift-step__question {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: var(--space-6);
+  line-height: 1.3;
+}
+.gift-step__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+.gift-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+.gift-option:hover {
+  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 5%, transparent);
+}
+.gift-option__label { font-weight: 600; font-size: var(--text-base); color: var(--color-text); }
+.gift-option__hint  { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+.gift-back {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: 0;
+  margin-top: var(--space-2);
+}
+.gift-back:hover { color: var(--color-text); }
+
+/* Resultats */
+.gift-result__header { text-align: center; margin-bottom: var(--space-8); }
+.gift-result__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--space-3);
+}
+.gift-result__sub { color: var(--color-text-muted); font-size: var(--text-sm); max-width: 480px; margin: 0 auto; }
+
+.gift-result__courses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.gift-course-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  position: relative;
+}
+.gift-course-card--featured {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+.gift-course-card__badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+.gift-course-card__title { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2); }
+.gift-course-card__lead  { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-3); line-height: 1.55; }
+.gift-course-card__price { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4); }
+.gift-course-card__price strong { color: var(--color-text); font-size: var(--text-base); }
+.gift-course-card__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+.gift-restart {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gift-restart:hover { color: var(--color-text); }
+
+/* Preview del val */
+.gift-preview-section { text-align: center; border-top: 1px solid var(--color-border); padding-top: var(--space-12); }
+.gift-info { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-4); max-width: 400px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 600px) {
+  .gift-course-card__actions { flex-direction: column; }
+  .gift-course-card__actions .btn { width: 100%; text-align: center; }
+}
+
 /* ── Cerca ───────────────────────────────────────────────────────────────── */
 .search-toggle {
   background: none;
