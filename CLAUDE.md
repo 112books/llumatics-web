@@ -418,7 +418,15 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - [ ] PDF alumnes: model en preparació (usuari). Pipeline: Make.com → Pandoc → email. Pàgines privades ja definides.
 - [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
 - [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
-- [ ] Cercador (Fuse.js + JSON index Hugo)
+- [x] Cercador intern: JSON index Hugo + overlay vanilla JS + icona lupa al menú
+- [x] Pàgina Regala: questionaire de recomanació + icona Heroicons + link des de fitxes de taller
+- [ ] Val regal — pipeline pendent:
+  - [ ] Connectar webhook Tally → Make.com (URL: `https://hook.eu1.make.com/oq2j1m7ya89as3qtl32lxnvmxgq8qthg`)
+  - [ ] Configurar emails a Make.com (notificació Joan + confirmació comprador)
+  - [ ] Afegir ID formulari Tally a `hugo.toml` → `tallyFormGiftVoucher`
+  - [ ] Dissenyar i generar PDF bonic (Make.com + plantilla)
+- [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`
+- [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
