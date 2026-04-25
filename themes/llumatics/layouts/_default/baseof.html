@@ -12,6 +12,20 @@
 
   {{ partial "footer.html" . }}
 
+  {{/* Overlay de cerca */}}
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="{{ i18n "search_label" | default "Cercar" }}" hidden>
+    <div class="search-box">
+      <input id="search-input" class="search-input" type="search"
+             placeholder="{{ i18n "search_placeholder" | default "Cerca tallers i entrades…" }}"
+             autocomplete="off" spellcheck="false">
+      <button class="search-close" aria-label="{{ i18n "search_close" | default "Tancar cerca" }}">&#215;</button>
+      <ul id="search-results" class="search-results" role="listbox" aria-live="polite"></ul>
+    </div>
+  </div>
+  <script>
+    window.__searchURL = "{{ "index.json" | relLangURL }}";
+  </script>
+
   {{/* Lightbox compartit */}}
   <div id="js-lightbox" role="dialog" aria-modal="true" aria-label="Imatge ampliada" style="display:none;">
     <button class="lb-btn lb-btn--prev" id="js-lb-prev" aria-label="Anterior">&#8249;</button>
