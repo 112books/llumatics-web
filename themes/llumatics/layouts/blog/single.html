@@ -23,8 +23,9 @@
   </header>
 
   {{ if .Params.image }}
-  <div class="blog-post__cover js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" style="cursor:zoom-in;">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+  {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
+  <div class="blog-post__cover js-lightbox-trigger" data-src="{{ $imgSrc }}" style="cursor:zoom-in;">
+    <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="eager">
   </div>
   {{ end }}
 
