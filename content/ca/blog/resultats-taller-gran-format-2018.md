@@ -1,16 +1,14 @@
 ---
-title: "Resultats del taller de Gran Format"
-lead: "Feu click a la fotografia per veure'n la resta. Resultats del taller d'introducció al Gran Format de setembre del 2018."
-description: "Fotografies fetes pels alumnes al taller d'introducció al Gran Format de Llumàtics. Plaques 4×5 en blanc i negre."
+title: "Resultats del taller d'introducció al gran format"
+lead: "Primeres plaques 4×5 dels alumnes del taller d'introducció al gran format. Octubre 2018."
+description: "Resultats del taller d'introducció al gran format de Llumàtics. Primeres plaques 4×5 dels participants. Barcelona, octubre 2018."
 image: "/images/blog/resultats-taller-gran-format-2018.jpg"
 date: 2018-10-01
-tags: ["gran-format", "4x5", "resultats", "taller", "alumnes"]
-course_ref: "gran-format-4x5"
+tags: ["gran format", "4x5", "resultats", "taller"]
+course_ref: "introduccio-gran-format"
 draft: false
 ---
 
-Resultats del taller d'introducció al Gran Format impartit a Llumàtics.
+Aquí teniu alguns dels resultats del darrer taller d'introducció al gran format. Primeres plaques 4×5, primers contactes amb una càmera de banc òptic i una visió del món al revés i capgirada al visor.
 
-Plaques 4×5" en blanc i negre, revelades en cubeta. La qualitat de la imatge que dóna el gran format és difícil d'explicar fins que no el tens a les mans.
-
-<!-- Joan: si tens les fotos dels alumnes d'aquell dia, afegeix-les aquí com a galeria (frontmatter: images: []). -->
+Clic a la imatge per veure la galeria completa.
