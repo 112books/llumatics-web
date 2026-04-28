@@ -2,7 +2,6 @@
 title: "Inscripció oberta per a sessions individuals"
 lead: "T'agradaria una sessió individual 100% analògica? Ara és el moment."
 description: "Llumàtics obre inscripcions per a sessions individuals de fotografia analògica personalitzades, amb còpies en paper a mida. Tardor 2020."
-image: "/images/blog/sessions-individuals-2020.jpg"
 date: 2020-10-21
 tags: ["sessions", "individual", "analògica", "gran format", "retrat"]
 draft: false

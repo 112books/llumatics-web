@@ -14,7 +14,8 @@
       {{ if .Params.image }}
       <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">
         <div class="blog-card__image">
-          <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="lazy">
+          {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
+          <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="lazy">
         </div>
       </a>
       {{ end }}

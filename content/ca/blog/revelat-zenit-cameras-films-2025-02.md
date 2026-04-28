@@ -2,7 +2,6 @@
 title: "Un dia de revelat analògic: pluja, càmeres Zenit i molta passió per la fotografia"
 lead: "Pluja al Born, Zenits amb Helios, Fomapan 100 forçat a 800 i un revelat de 90 minuts. Crònica del taller d'iniciació al revelat a Cameras & Films."
 description: "Crònica del taller d'iniciació al revelat B/N del 2 de febrer de 2025 a Cameras & Films (Barcelona). Zenit, Fomapan 100, carrer del Born i laboratori en una sola jornada."
-image: "/images/blog/revelat-zenit-cameras-films-2025-02.jpg"
 date: 2025-02-07
 tags: ["revelat", "taller", "cameras and films", "zenit", "fomapan", "born", "carrer"]
 course_ref: "iniciacio-revelat"
