@@ -5,6 +5,7 @@ description: "Crònica del taller gratuït de fotogrames amb cianotípia del 15 
 date: 2025-11-15
 tags: ["cianotípia", "fotogrames", "sense càmera", "Nau Bostik", "gratuït", "comunitat", "crònica"]
 course_ref: "fotogrames-cianotipia"
+image: "https://llumatics.com/wp-content/uploads/2025/10/IMG_6406.jpg"
 draft: false
 ---
 

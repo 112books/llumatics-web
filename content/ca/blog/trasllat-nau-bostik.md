@@ -4,6 +4,7 @@ lead: "Després de tres anys al Poble Sec, Llumàtics obre una nova etapa dins l
 description: "Llumàtics Fotoespai anuncia el seu trasllat del Poble Sec a la Nau Bostik (Carrer Ferran Turné, 1-11), on continuarà l'activitat formativa de fotografia química. Setembre 2020."
 date: 2020-09-04
 tags: ["nau bostik", "trasllat", "poble sec", "la sagrera", "notícia"]
+image: "https://llumatics.com/wp-content/uploads/2020/09/IMG_9929-2-scaled.jpg"
 draft: false
 ---
 

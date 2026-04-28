@@ -5,6 +5,7 @@ description: "Resultats del taller de revelat forçat al Festival de Blues de Ba
 date: 2019-07-18
 tags: ["revelat", "forçat", "festival", "blues", "carrer", "resultats"]
 course_ref: "revelat-bn"
+image: "https://llumatics.com/wp-content/uploads/2019/07/13-JUL-2019_FESTBLUESBCN_M6_VMSKOPAR35_KodakP3200_034.jpg"
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Resultats del taller de retrat analògic de Llumàtics del 22 de f
 date: 2019-02-25
 tags: ["retrat", "resultats", "taller", "analògica"]
 course_ref: "retrat-analogic"
+image: "https://llumatics.com/wp-content/uploads/2019/02/T-Retrat22-2-19-054-1.jpg"
 draft: false
 ---
 
