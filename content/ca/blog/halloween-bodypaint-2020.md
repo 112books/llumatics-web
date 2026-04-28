@@ -11,3 +11,5 @@ draft: false
 Per Halloween 2020 vam combinar dues coses que ens agraden: pintura corporal i fotografia analògica.
 
 Quatre opcions de sessió — pintura facial o corporal, per a una o dues persones — cadascuna amb 30 minuts de sessió fotogràfica analògica inclosa. Les sessions es van fer a la Nau Bostik.
+
+[Veure les fotografies →](https://photos.app.goo.gl/wNVXMdLGDrq1CT2a8)
