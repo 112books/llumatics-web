@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="page-with-bg">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/agenda-2024-08-12-LM6-Minitar-Fomapan100@400-Bera-C-0013.jpg" }}" alt="" aria-hidden="true">
+
+  <div style="position:relative; z-index:1; padding-block: var(--space-16);">
+
+    <div class="container">
+      <div class="section__header">
+        {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+        <h1 class="section__title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+        {{ with .Content }}<div class="prose" style="margin-top:1rem;">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+
+    {{/* Properes dates — sense paginar */}}
+    {{ $upcoming := where .Pages ".Params.status" "ne" "past" }}
+    {{ if $upcoming }}
+    <div class="agenda-grid agenda-grid--wide">
+      {{ range $upcoming }}
+        {{ partial "agenda-item.html" . }}
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="container">
+      <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" | default "Ara mateix no hi ha dates programades. Escriu-nos per acordar una sessió." }}</p>
+    </div>
+    {{ end }}
+
+    {{/* Tallers anteriors — paginats */}}
+    {{ $past := where .Pages ".Params.status" "eq" "past" }}
+    {{ if $past }}
+    {{ $paginator := .Paginate $past }}
+    <section class="agenda-historic" id="historic">
+      <div class="container">
+        <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" | default "Tallers anteriors" }}</h2>
+      </div>
+      <div class="agenda-grid agenda-grid--wide agenda-grid--past">
+        {{ range $paginator.Pages }}
+          {{ partial "agenda-item.html" . }}
+        {{ end }}
+      </div>
+      <div class="container" style="margin-top:var(--space-8);">
+        {{ template "_internal/pagination.html" . }}
+      </div>
+    </section>
+    {{ end }}
+
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,46 @@
+name: Crea esborrany de butlletí
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/ca/tallers/**/index.md'
+      - 'content/ca/blog/**.md'
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detecta fitxers nous (no drafts)
+        id: detect
+        run: |
+          # Fitxers afegits en aquest push
+          NEW=$(git diff --name-only --diff-filter=A HEAD~1 HEAD \
+            | grep -E 'content/ca/(tallers/.+/index|blog/[^/]+)\.md' || true)
+
+          if [ -z "$NEW" ]; then
+            echo "Cap fitxer nou de taller o blog."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Fitxers nous detectats:"
+            echo "$NEW"
+            # Escriu a fitxer per passar-ho entre steps sense problemes de multiline
+            echo "$NEW" > /tmp/new_files.txt
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Instal·la dependències Python
+        if: steps.detect.outputs.found == 'true'
+        run: pip install python-frontmatter requests
+
+      - name: Genera esborranys a Brevo
+        if: steps.detect.outputs.found == 'true'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          SITE_URL: https://llumatics.com
+        run: python .github/scripts/newsletter_draft.py /tmp/new_files.txt

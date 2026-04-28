@@ -274,6 +274,27 @@ button, input, select, textarea {
   opacity: 0.28;
 }
 
+.page-with-bg {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.agenda-grid--wide {
+  padding-inline: var(--space-6);
+  margin-block: var(--space-6);
+}
+
 .hero__content {
   position: relative;
   z-index: 1;

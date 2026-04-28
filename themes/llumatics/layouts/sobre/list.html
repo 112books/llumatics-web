@@ -1,19 +1,14 @@
 {{ define "main" }}
 <div class="page-with-bg">
-  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/els-espais-2025-01-29-LCa+-kokdak-X-Plus125-Varies-0032.jpg" }}" alt="" aria-hidden="true">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/sobre-2025-03-07-LC-a+-Foma100@800-varies-0024.jpg" }}" alt="" aria-hidden="true">
 
   <div class="section container" style="position:relative; z-index:1;">
-
     <div class="section__header" style="max-width:720px;">
       {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
       <h1 class="section__title">{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
     </div>
-
-    <div class="prose espais-prose">
-      {{ .Content }}
-    </div>
-
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
   </div>
 </div>
 {{ end }}

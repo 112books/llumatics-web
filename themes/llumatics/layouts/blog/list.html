@@ -1,48 +1,52 @@
 {{ define "main" }}
-<div class="section container">
+<div class="page-with-bg">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/tallers-bg.jpg" }}" alt="" aria-hidden="true">
 
-  <div class="section__header">
-    {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
-    <h1 class="section__title">{{ .Title }}</h1>
-    {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose" style="margin-top:1rem; max-width:640px;">{{ . }}</div>{{ end }}
-  </div>
+  <div class="section container" style="position:relative; z-index:1;">
 
-  <div class="blog-grid">
-    {{ range .Paginator.Pages }}
-    <article class="blog-card">
-      {{ if .Params.image }}
-      <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">
-        <div class="blog-card__image">
-          {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
-          <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="lazy">
-        </div>
-      </a>
-      {{ end }}
-      <div class="blog-card__body">
-        <p class="blog-card__date">{{ .Date | time.Format "2 January 2006" }}</p>
-        {{ with .Params.tags }}
-        <div class="blog-card__tags">
-          {{ range . }}<span class="bloc-pill bloc-pill--sm">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
-        <h2 class="blog-card__title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-        {{ with .Params.lead }}
-        <p class="blog-card__lead">{{ . }}</p>
-        {{ else }}
-        <p class="blog-card__lead">{{ .Summary | truncate 160 }}</p>
-        {{ end }}
-        <a href="{{ .RelPermalink }}" class="blog-card__more">
-          {{ i18n "read_more" | default "Llegir més" }} →
+    <div class="section__header">
+      {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="section__title">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+      {{ with .Content }}<div class="prose" style="margin-top:1rem; max-width:640px;">{{ . }}</div>{{ end }}
+    </div>
+
+    <div class="blog-grid">
+      {{ range .Paginator.Pages }}
+      <article class="blog-card">
+        {{ if .Params.image }}
+        <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">
+          <div class="blog-card__image">
+            {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
+            <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="lazy">
+          </div>
         </a>
-      </div>
-    </article>
-    {{ end }}
+        {{ end }}
+        <div class="blog-card__body">
+          <p class="blog-card__date">{{ .Date | time.Format "2 January 2006" }}</p>
+          {{ with .Params.tags }}
+          <div class="blog-card__tags">
+            {{ range . }}<span class="bloc-pill bloc-pill--sm">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <h2 class="blog-card__title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          {{ with .Params.lead }}
+          <p class="blog-card__lead">{{ . }}</p>
+          {{ else }}
+          <p class="blog-card__lead">{{ .Summary | truncate 160 }}</p>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="blog-card__more">
+            {{ i18n "read_more" | default "Llegir més" }} →
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+
   </div>
-
-  {{ template "_internal/pagination.html" . }}
-
 </div>
 {{ end }}

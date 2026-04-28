@@ -9,7 +9,9 @@
 {{- end -}}
 <script type="text/plain" id="gift-data">{{ $data | jsonify }}</script>
 
-<div class="gift-page container">
+<div class="page-with-bg">
+<img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/regala-un-curs-2025-01-07-LCa-Foma100@200-R1+50-varies-0020.jpg" }}" alt="" aria-hidden="true">
+<div class="gift-page container" style="position:relative; z-index:1;">
 
   {{/* Hero */}}
   <div class="gift-hero">
@@ -44,5 +46,6 @@
     </p>
   </div>
 
+</div>
 </div>
 {{ end }}
