@@ -9,7 +9,7 @@
   </div>
 
   <div class="blog-grid">
-    {{ range .Pages }}
+    {{ range .Paginator.Pages }}
     <article class="blog-card">
       {{ if .Params.image }}
       <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">

@@ -2,7 +2,7 @@
 title: "Halloween 2020 — Bodypaint i fotografia analògica"
 lead: "Pintura corporal i sessió fotogràfica analògica de 30 minuts. Una proposta per a Halloween a la Nau Bostik."
 description: "Per Halloween 2020, Llumàtics va oferir sessions de bodypaint amb fotografia analògica a la Nau Bostik de Barcelona. Pintura facial o corporal i 30 minuts de sessió analògica."
-image: "https://lh3.googleusercontent.com/pw/AP1GczNa6bCL_y5alaP4iw-qAQBtrQ0Ca_FB1GTzlHn2b4ouCwcLPPbdZy7x-kFXdHCPczLcR7Rs3W6JI_kOym7XSXogNH3KxzSAyZozJKmdchTmR4PNUFhs=w1200"
+image: "/images/blog/halloween-bodypaint-2020.jpg"
 date: 2020-10-26
 tags: ["halloween", "bodypaint", "retrat", "sessió", "nau bostik"]
 draft: false
