@@ -16,11 +16,35 @@
     </div>
 
   {{ else if eq .Type "agenda" }}
+    {{/* Separa upcoming i past */}}
+    {{ $upcoming := where .Pages ".Params.status" "ne" "past" }}
+    {{ $past     := where .Pages ".Params.status" "eq" "past" }}
+
+    {{ if $upcoming }}
     <div class="agenda-grid">
-      {{ range .Pages }}
+      {{ range $upcoming }}
         {{ partial "agenda-item.html" . }}
       {{ end }}
     </div>
+    {{ else }}
+    <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" | default "Ara mateix no hi ha dates programades. Escriu-nos per acordar una sessió." }}</p>
+    {{ end }}
+
+    {{ if $past }}
+    <section class="agenda-historic" id="historic">
+      <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" | default "Historial de sessions" }}</h2>
+      {{ range $past.GroupByDate "2006" }}
+      <div class="agenda-historic__year">
+        <h3 class="agenda-historic__year-label">{{ .Key }}</h3>
+        <div class="agenda-grid agenda-grid--past">
+          {{ range .Pages.ByParam "date_start" | collections.Reverse }}
+            {{ partial "agenda-item.html" . }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
 
   {{ else }}
     <div style="display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top:2rem;">

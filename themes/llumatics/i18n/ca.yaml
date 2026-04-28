@@ -120,3 +120,8 @@ faq_cat_workshops: "Sobre els tallers"
 faq_cat_space: "Sobre l'espai"
 faq_cat_payment: "Sobre preus i pagament"
 faq_cat_external: "Tallers externs i institucions"
+
+# Agenda — historial
+status_past: "Realitzat"
+section_agenda_past_title: "Historial de sessions"
+agenda_no_upcoming: "Ara mateix no hi ha dates programades. Escriu-nos per acordar una sessió."

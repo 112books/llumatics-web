@@ -120,3 +120,8 @@ faq_cat_workshops: "About the workshops"
 faq_cat_space: "About the space"
 faq_cat_payment: "Pricing and payment"
 faq_cat_external: "External workshops and institutions"
+
+# Agenda — history
+status_past: "Completed"
+section_agenda_past_title: "Session history"
+agenda_no_upcoming: "No upcoming dates at the moment. Write to us to arrange a session."

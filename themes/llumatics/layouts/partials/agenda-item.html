@@ -56,6 +56,8 @@
       <span class="course-card__status course-card__status--soon">
         {{ i18n "status_soon" | default "Properament" }}
       </span>
+    {{ else if eq $status "past" }}
+      <span class="agenda-item__past-badge">{{ i18n "status_past" | default "Realitzat" }}</span>
     {{ end }}
   </div>
 </div>
