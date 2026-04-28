@@ -35,7 +35,6 @@
 
   {{/* ── Mapa OpenStreetMap ──────────────────────────────────────────── ──── */}}
 
-
   <section class="contact-map">
     <h2 class="contact-section__title">{{ i18n "how_to_get_here" | default "Com arribar-hi" }}</h2>
     <div class="contact-map__embed">
@@ -66,7 +65,7 @@
         <div>
           <strong class="transport-card__name">Metro</strong>
           <span class="transport-card__lines">L1, L5, L9N, L10N — La Sagrera</span>
-          <span class="transport-card__detail">8–10 min caminant</span>
+          <span class="transport-card__detail">{{ i18n "transport_walk_8_10" | default "8–10 min caminant" }}</span>
         </div>
       </div>
 
@@ -75,9 +74,9 @@
           <img src="{{ "images/transport/tren.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">Rodalies</strong>
+          <strong class="transport-card__name">{{ i18n "transport_commuter_rail" | default "Rodalies" }}</strong>
           <span class="transport-card__lines">R4 — La Sagrera</span>
-          <span class="transport-card__detail">10 min caminant</span>
+          <span class="transport-card__detail">{{ i18n "transport_walk_10" | default "10 min caminant" }}</span>
         </div>
       </div>
 
@@ -98,8 +97,8 @@
         </span>
         <div>
           <strong class="transport-card__name">Bicing</strong>
-          <span class="transport-card__lines">Estació a Av. Meridiana / Pont del Treball</span>
-          <span class="transport-card__detail">~5 min caminant fins a la nau</span>
+          <span class="transport-card__lines">{{ i18n "transport_bicing_station" | default "Estació a Av. Meridiana / Pont del Treball" }}</span>
+          <span class="transport-card__detail">{{ i18n "transport_bicing_detail" | default "~5 min caminant fins a la nau" }}</span>
         </div>
       </div>
 
@@ -108,9 +107,9 @@
           <img src="{{ "images/transport/parquing-bici.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">Pàrquing de bicicleta</strong>
+          <strong class="transport-card__name">{{ i18n "transport_bike_parking" | default "Pàrquing de bicicleta" }}</strong>
           <span class="transport-card__lines"></span>
-          <span class="transport-card__detail">Aparcament a l'entrada de la Nau Bostik</span>
+          <span class="transport-card__detail">{{ i18n "transport_bike_parking_detail" | default "Aparcament a l'entrada de la Nau Bostik" }}</span>
         </div>
       </div>
 
@@ -119,8 +118,8 @@
           <img src="{{ "images/transport/avio.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">Aeroport El Prat</strong>
-          <span class="transport-card__lines">TMB + Rodalies</span>
+          <strong class="transport-card__name">{{ i18n "transport_airport" | default "Aeroport El Prat" }}</strong>
+          <span class="transport-card__lines">TMB + {{ i18n "transport_commuter_rail" | default "Rodalies" }}</span>
           <span class="transport-card__detail">45–60 min</span>
         </div>
       </div>
@@ -130,8 +129,8 @@
           <img src="{{ "images/transport/port.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">Port de Barcelona</strong>
-          <span class="transport-card__lines">Rodalies + Metro</span>
+          <strong class="transport-card__name">{{ i18n "transport_port" | default "Port de Barcelona" }}</strong>
+          <span class="transport-card__lines">{{ i18n "transport_commuter_rail" | default "Rodalies" }} + Metro</span>
           <span class="transport-card__detail">30–45 min</span>
         </div>
       </div>
@@ -141,8 +140,8 @@
           <img src="{{ "images/transport/parquing.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">Pàrquing</strong>
-          <span class="transport-card__lines">Zona blava propera</span>
+          <strong class="transport-card__name">{{ i18n "transport_parking" | default "Pàrquing" }}</strong>
+          <span class="transport-card__lines">{{ i18n "transport_parking_lines" | default "Zona blava propera" }}</span>
           <span class="transport-card__detail">~2,50 €/hora</span>
         </div>
       </div>
@@ -193,9 +192,9 @@
       <div class="contact-form__taller-fields" id="taller-fields" hidden>
 
         <div class="contact-form__field">
-          <label class="contact-form__label" for="taller">{{ i18n "form_workshop" | default "Taller d'interès" }}</label>
+          <label class="contact-form__label" for="taller">{{ i18n "form_workshop_label" | default "Taller d'interès" }}</label>
           <select class="contact-form__select" id="taller" name="taller">
-            <option value="">— Escull un taller —</option>
+            <option value="">{{ i18n "form_workshop_placeholder" | default "— Escull un taller —" }}</option>
             {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
             {{ range sort $tallers ".Title" "asc" }}
               {{ if not .Params.extern }}
@@ -221,10 +220,10 @@
           <div class="contact-form__field">
             <label class="contact-form__label" for="alumnes">{{ i18n "form_students" | default "Nombre d'alumnes" }}</label>
             <select class="contact-form__select" id="alumnes" name="alumnes">
-              <option value="1">1 alumne</option>
-              <option value="2">2 alumnes</option>
-              <option value="3">3 alumnes</option>
-              <option value="4">4 alumnes</option>
+              <option value="1">1 {{ i18n "form_student_singular" | default "alumne" }}</option>
+              <option value="2">2 {{ i18n "form_student_plural" | default "alumnes" }}</option>
+              <option value="3">3 {{ i18n "form_student_plural" | default "alumnes" }}</option>
+              <option value="4">4 {{ i18n "form_student_plural" | default "alumnes" }}</option>
             </select>
           </div>
         </div>
@@ -246,9 +245,8 @@
     {{/* JS mínim per mostrar/amagar camps de taller */}}
     <script>
     (function(){
-      var radioTaller = document.getElementById('radio-taller');
-      var tallerFields = document.getElementById('taller-fields');
       var radios = document.querySelectorAll('input[name="tipus"]');
+      var tallerFields = document.getElementById('taller-fields');
       radios.forEach(function(r){
         r.addEventListener('change', function(){
           tallerFields.hidden = (this.value !== 'sol·licitar-taller');
@@ -267,103 +265,12 @@
   </section>
 
   {{/* ── FAQ ────────────────────────────────────────────────────────────── */}}
+  {{ if .Content }}
   <section class="contact-faq" id="faq">
-    <h2 class="contact-section__title">{{ i18n "faq_title" | default "FAQ — Preguntes freqüents" }}</h2>
-
-    <div class="faq-group">
-      <h3 class="faq-group__title">{{ i18n "faq_cat_workshops" | default "Sobre els tallers" }}</h3>
-
-      <details class="faq-item">
-        <summary class="faq-question">Quants alumnes hi ha per sessió? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Tots els tallers de Llumàtics tenen un <strong>màxim de quatre alumnes per sessió</strong>. Aquest format reduït permet un acompanyament proper, adaptat al ritme i interessos de cada participant, i garanteix una experiència pràctica real en l'ús del laboratori i dels equips.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Cal tenir experiència prèvia en fotografia analògica? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Depèn del taller. Els tallers d'iniciació (com <em>Fonaments de la fotografia</em> o <em>Revelat en blanc i negre</em>) no requereixen experiència prèvia. Els tallers intermedis i avançats sí que demanen haver fet els de nivell anterior o tenir coneixements equivalents. Cada fitxa de taller indica clarament els prerequisits.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Quin equipament he de portar? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>En general, <strong>no cal portar res</strong>: Llumàtics disposa del material tècnic necessari (química, paper, cubetes, mesuradors). Per als tallers de càmera (retrat, carrer) cal portar la pròpia càmera analògica. La fitxa de cada taller especifica exactament el que cal portar a la secció <em>Cal portar</em>.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Els tallers tenen dates fixes o es fan sota demanda? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Els tallers a Llumàtics (Nau Bostik) <strong>es fan sota demanda</strong>: no hi ha calendari fix. Quan ens escriviu, busquem conjuntament una data que s'adapti a la vostra disponibilitat. Alguns tallers externs (com els de Cameras & Films) sí que tenen dates programades; les trobareu a la secció <a href="/agenda/">Agenda</a>.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="faq-group">
-      <h3 class="faq-group__title">{{ i18n "faq_cat_space" | default "Sobre l'espai" }}</h3>
-
-      <details class="faq-item">
-        <summary class="faq-question">On és Llumàtics exactament? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Llumàtics és a la <strong>Nau Bostik</strong>, al <strong>Carrer Ferran Turné, 1-11</strong>, al barri de La Sagrera de Barcelona (08027). És un espai industrial rehabilitat que acull artistes, tallers i projectes culturals. S'hi accedeix per l'entrada principal de la nau; a la recepció t'indicaran on som.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Puc visitar l'espai abans de fer un taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Sí, amb cita prèvia. <strong>Llumàtics no és un espai d'accés lliure</strong>: obrim exclusivament per als tallers i per a visites concertades. Si vols conèixer el laboratori, el plató o la biblioteca abans d'inscriure't, escriu-nos i ho organitzem sense compromís.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="faq-group">
-      <h3 class="faq-group__title">{{ i18n "faq_cat_payment" | default "Sobre preus i pagament" }}</h3>
-
-      <details class="faq-item">
-        <summary class="faq-question">Com es fa el pagament? Necessito factura? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>El pagament es fa per <strong>transferència bancària</strong> o <strong>Bizum</strong> prèvia confirmació de la data. Els tallers de formació estan <strong>exempts d'IVA</strong> (art. 20.1.9 LIVA). Si necessiteu factura, indiqueu-ho quan contacteu i us la preparem amb totes les dades fiscals.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Hi ha descomptes per grup o per repetir taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Els preus ja incorporen un descompte progressiu per grup: com més alumnes veniu junts, menor és el cost per persona (vegeu la taula de preus a cada fitxa de taller). No hi ha descomptes addicionals per repetir, però els alumnes que han fet un taller previ tindran prioritat en la gestió de dates.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Quina és la política de cancel·lació? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Si cancel·leu amb <strong>més de 72 hores d'antelació</strong>, podeu canviar la data sense cap cost. Per sota de 72 hores, Llumàtics es reserva el dret de retenir el 50% de l'import com a compensació per la reserva de l'espai i el material preparat. En cas de causa de força major, ho gestionem cas per cas.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="faq-group">
-      <h3 class="faq-group__title">{{ i18n "faq_cat_external" | default "Tallers externs i institucions" }}</h3>
-
-      <details class="faq-item">
-        <summary class="faq-question">Feu tallers fora de la Nau Bostik? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Sí. Llumàtics té una línia de <strong>tallers externs</strong> impartits en col·laboració amb altres espais. Actualment col·laborem establement amb <a href="https://www.camerasandfilms.com" target="_blank" rel="noopener">Cameras & Films</a> (antiga Lomography Embassy Barcelona), on impartim tallers de retrat en gran format, revelat i processos experimentals.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Organitzeu tallers per a escoles o centres culturals? <span class="faq-icon" aria-hidden="true">+</span></summary>
-        <div class="faq-answer">
-          <p>Sí. Llumàtics dissenya i imparteix <strong>tallers per a institucions</strong>: instituts, centres cívics, centres d'art i entitats culturals. El format i contingut s'adapta a les necessitats del centre. Si esteu interessats en una proposta a mida, escriviu-nos a <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a> indicant el tipus de centre, l'edat del grup i els objectius.</p>
-        </div>
-      </details>
-    </div>
-
+    <h2 class="contact-section__title">{{ i18n "faq_title" | default "FAQ" }}</h2>
+    {{ .Content }}
   </section>
+  {{ end }}
 
 </div>
 {{ end }}
