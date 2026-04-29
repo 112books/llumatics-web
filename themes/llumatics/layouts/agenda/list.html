@@ -13,9 +13,10 @@
       </div>
     </div>
 
-    {{/* Sempre usem la secció CA com a font canònica de l'agenda */}}
-    {{ $caAgenda := site.GetPage "/ca/agenda" }}
-    {{ $allPages := $caAgenda.Pages }}
+    {{/* Sempre usem els items CA com a font canònica de l'agenda */}}
+    {{ $caSite := site }}
+    {{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end }}
+    {{ $allPages := where $caSite.RegularPages "Type" "agenda" }}
 
     {{/* Properes dates — sense paginar */}}
     {{ $upcoming := where $allPages ".Params.status" "ne" "past" }}
