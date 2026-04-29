@@ -123,5 +123,6 @@ faq_cat_external: "External workshops and institutions"
 
 # Agenda — history
 status_past: "Completed"
+cta_more_info: "View workshop"
 section_agenda_past_title: "Session history"
 agenda_no_upcoming: "No upcoming dates at the moment. Write to us to arrange a session."

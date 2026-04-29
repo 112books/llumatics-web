@@ -2,7 +2,40 @@
 {{ $date := .Params.date_start }}
 {{ $status := .Params.status | default "active" }}
 {{ $purchaseURL := .Params.purchase_url }}
-<div class="agenda-item">
+
+{{/* Dades del taller de referència com a fallback */}}
+{{ $taller := false }}
+{{ with .Params.course_ref }}
+  {{ $taller = site.GetPage (printf "/ca/tallers/%s" .) }}
+{{ end }}
+
+{{/* Preu: primer del frontmatter, si no del taller */}}
+{{ $preuLabel := "" }}
+{{ if .Params.price }}
+  {{ if eq (.Params.price | int) 0 }}
+    {{ $preuLabel = i18n "price_free" | default "Gratuït" }}
+  {{ else }}
+    {{ $preuLabel = printf "%v€" .Params.price }}
+  {{ end }}
+{{ else if $taller }}
+  {{ with $taller.Params.preu_1 }}
+    {{ $preuLabel = printf "%v€" . }}
+  {{ end }}
+{{ end }}
+
+{{/* Durada: primer del frontmatter, si no del taller */}}
+{{ $duradaLabel := "" }}
+{{ with .Params.duration }}
+  {{ $duradaLabel = . }}
+{{ else }}
+  {{ if $taller }}
+    {{ with $taller.Params.durada_hores }}
+      {{ $duradaLabel = printf "%.0f h" (float .) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="agenda-item{{ if eq $status "past" }} agenda-item--past{{ end }}">
   <div class="agenda-item__date">
     {{ if $date }}
       <div class="agenda-item__day">{{ $date | time.Format "2" }}</div>
@@ -12,13 +45,8 @@
 
   <div class="agenda-item__info">
     <h3 class="agenda-item__title">
-      {{ with .Params.course_ref }}
-        {{ $taller := site.GetPage (printf "/ca/tallers/%s" .) }}
-        {{ if $taller }}
-          <a href="{{ $taller.RelPermalink }}">{{ $.Title }}</a>
-        {{ else }}
-          {{ $.Title }}
-        {{ end }}
+      {{ if $taller }}
+        <a href="{{ $taller.RelPermalink }}">{{ .Title }}</a>
       {{ else }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
@@ -26,14 +54,8 @@
     <div class="agenda-item__meta">
       {{ with .Params.time_start }}<span>{{ . }}{{ with $.Params.time_end }}–{{ . }}{{ end }}</span>{{ end }}
       {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
-      {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
-      {{ if .Params.price }}
-        {{ if eq (.Params.price | int) 0 }}
-          <span class="agenda-item__price">{{ i18n "price_free" | default "Gratuït" }}</span>
-        {{ else }}
-          <span class="agenda-item__price">{{ .Params.price }}€</span>
-        {{ end }}
-      {{ end }}
+      {{ if $duradaLabel }}<span>{{ $duradaLabel }}</span>{{ end }}
+      {{ if $preuLabel }}<span class="agenda-item__price">{{ $preuLabel }}</span>{{ end }}
     </div>
   </div>
 
@@ -44,9 +66,11 @@
           {{ i18n "cta_buy" | default "Comprar plaça" }}
         </a>
       {{ else }}
-        <a href="{{ .RelPermalink }}" class="btn btn--primary btn--sm">
-          {{ i18n "cta_register" | default "Inscripció" }}
-        </a>
+        {{ with $taller }}
+          <a href="{{ .RelPermalink }}" class="btn btn--primary btn--sm">
+            {{ i18n "cta_register" | default "Inscripció" }}
+          </a>
+        {{ end }}
       {{ end }}
     {{ else if eq $status "full" }}
       <span class="course-card__status course-card__status--full">
@@ -58,6 +82,11 @@
       </span>
     {{ else if eq $status "past" }}
       <span class="agenda-item__past-badge">{{ i18n "status_past" | default "Realitzat" }}</span>
+      {{ with $taller }}
+        <a href="{{ .RelPermalink }}" class="btn btn--ghost btn--sm" style="margin-top:.5rem;">
+          {{ i18n "cta_more_info" | default "Veure taller" }}
+        </a>
+      {{ end }}
     {{ end }}
   </div>
 </div>

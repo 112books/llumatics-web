@@ -123,5 +123,6 @@ faq_cat_external: "Tallers externs i institucions"
 
 # Agenda — historial
 status_past: "Realitzat"
+cta_more_info: "Veure taller"
 section_agenda_past_title: "Tallers anteriors"
 agenda_no_upcoming: "Ara mateix no hi ha dates programades. Escriu-nos per acordar una sessió."

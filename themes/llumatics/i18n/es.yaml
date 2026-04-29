@@ -123,5 +123,6 @@ faq_cat_external: "Talleres externos e instituciones"
 
 # Agenda — historial
 status_past: "Realizado"
+cta_more_info: "Ver taller"
 section_agenda_past_title: "Historial de sesiones"
 agenda_no_upcoming: "Ahora mismo no hay fechas programadas. Escríbenos para acordar una sesión."

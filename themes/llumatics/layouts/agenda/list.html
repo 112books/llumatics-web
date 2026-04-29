@@ -13,8 +13,12 @@
       </div>
     </div>
 
+    {{/* Sempre usem la secció CA com a font canònica de l'agenda */}}
+    {{ $caAgenda := site.GetPage "/ca/agenda" }}
+    {{ $allPages := $caAgenda.Pages }}
+
     {{/* Properes dates — sense paginar */}}
-    {{ $upcoming := where .Pages ".Params.status" "ne" "past" }}
+    {{ $upcoming := where $allPages ".Params.status" "ne" "past" }}
     {{ if $upcoming }}
     <div class="agenda-grid agenda-grid--wide">
       {{ range $upcoming }}
@@ -28,7 +32,7 @@
     {{ end }}
 
     {{/* Tallers anteriors — paginats */}}
-    {{ $past := where .Pages ".Params.status" "eq" "past" }}
+    {{ $past := where $allPages ".Params.status" "eq" "past" }}
     {{ if $past }}
     {{ $paginator := .Paginate $past }}
     <section class="agenda-historic" id="historic">
