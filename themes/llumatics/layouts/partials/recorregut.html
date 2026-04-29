@@ -39,7 +39,7 @@
       </div>
       <div class="recorregut__step-body">
         {{ if and .slug (not $aviat) }}
-          <a href="{{ "/tallers/" | relLangURL }}{{ .slug }}/" class="recorregut__step-title">{{ $title }}</a>
+          <a href="{{ printf "%s%s/tallers/%s/" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix .slug }}" class="recorregut__step-title">{{ $title }}</a>
         {{ else }}
           <span class="recorregut__step-title">{{ $title }}</span>
         {{ end }}
@@ -67,7 +67,7 @@
       {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
       <div class="recorregut__tematic-item" data-bloc="{{ .bloc }}" role="listitem">
         {{ if .slug }}
-          <a href="{{ "/tallers/" | relLangURL }}{{ .slug }}/" class="recorregut__tematic-link">
+          <a href="{{ printf "%s%s/tallers/%s/" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix .slug }}" class="recorregut__tematic-link">
             {{ $title }}
             {{ with .desc }}<span class="recorregut__tematic-sub">{{ . }}</span>{{ end }}
           </a>

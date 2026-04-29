@@ -2,10 +2,15 @@
   <div class="container">
     <div class="site-header__inner">
 
+      {{/* URL helpers: site.BaseURL always has the correct subpath, .Site.LanguagePrefix = "/en" | "/es" | "" */}}
+      {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+      {{ $langPfx  := $.Site.LanguagePrefix }}
+      {{ $basePath := (urls.Parse site.BaseURL).Path }}
+
       {{/* Logo */}}
-      <a href="{{ site.BaseURL }}" class="site-logo" aria-label="{{ .Site.Title }}">
+      <a href="{{ printf "%s%s/" $siteRoot $langPfx }}" class="site-logo" aria-label="{{ .Site.Title }}">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
-          <img src="{{ site.BaseURL }}images/llumatics-logo.svg" alt="" aria-hidden="true" height="44" width="44">
+          <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" aria-hidden="true" height="44" width="44">
         {{ end }}
         <span class="site-logo__text">{{ .Site.Title }}</span>
       </a>
@@ -14,7 +19,9 @@
       <nav class="site-nav" id="site-nav" aria-label="Navegació principal">
         {{ range .Site.Menus.main }}
           {{ $isHighlight := .Params.highlight | default false }}
-          <a href="{{ .URL | relLangURL }}"
+          {{ $cleanPath := strings.TrimPrefix $basePath .URL }}
+          {{ $url := printf "%s%s/%s" $siteRoot $langPfx $cleanPath }}
+          <a href="{{ $url }}"
              class="site-nav__link{{ if $isHighlight }} site-nav__link--highlight{{ end }}"
              {{ if hasPrefix $.RelPermalink .URL }}aria-current="page"{{ end }}>
             {{ .Name }}
@@ -40,8 +47,8 @@
             {{ if eq $lang $.Language.Lang }}
               <span class="lang-switcher__current" aria-current="true">{{ $lang | upper }}</span>
             {{ else }}
-              {{/* Cerca la traducció; si no existeix, apunta a l'arrel de l'idioma */}}
-              {{ $url := print "/" $lang "/" }}
+              {{/* Fallback: language root. Override with actual translation permalink if exists. */}}
+              {{ $url := printf "%s/%s/" $siteRoot $lang }}
               {{ range $.Translations }}
                 {{ if eq .Language.Lang $lang }}{{ $url = .Permalink }}{{ end }}
               {{ end }}

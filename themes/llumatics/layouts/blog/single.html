@@ -1,10 +1,12 @@
 {{ define "main" }}
+{{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+{{ $lp       := $.Site.LanguagePrefix }}
 <article class="section container">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
-    <a href="{{ "/blog" | relLangURL }}">Blog</a>
+    <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}">Blog</a>
     <span class="breadcrumb__sep">›</span>
     <span>{{ .Title }}</span>
   </nav>
@@ -75,7 +77,7 @@
   {{ end }}
 
   <footer class="blog-post__footer">
-    <a href="{{ "/blog" | relLangURL }}" class="blog-post__back">
+    <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}" class="blog-post__back">
       ← {{ i18n "blog_back" | default "Tornar al blog" }}
     </a>
   </footer>

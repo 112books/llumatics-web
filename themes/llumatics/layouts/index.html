@@ -1,5 +1,8 @@
 {{ define "main" }}
 
+{{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+{{ $lp       := $.Site.LanguagePrefix }}
+
 {{/* ── Hero ───────────────────────────────────────────────────────────── */}}
 <section class="hero hero--with-image">
   {{ with .Params.heroImage }}
@@ -15,10 +18,10 @@
         {{ i18n "hero_subtitle" | default "Tallers de revelat, laboratori analògic i formació tècnica a Barcelona." }}
       </p>
       <div class="hero__actions">
-        <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--primary btn--lg">
+        <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}" class="btn btn--primary btn--lg">
           {{ i18n "cta_courses" | default "Veure tallers" }}
         </a>
-        <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary btn--lg">
+        <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}" class="btn btn--secondary btn--lg">
           {{ i18n "cta_schedule" | default "Properes dates" }}
         </a>
       </div>
@@ -42,7 +45,7 @@
     {{ $descBloc := .desc }}
     {{ if eq $lang "es" }}{{ $nomBloc = .nom_es }}{{ $descBloc = .desc_es }}{{ end }}
     {{ if eq $lang "en" }}{{ $nomBloc = .nom_en }}{{ $descBloc = .desc_en }}{{ end }}
-    <a href="{{ "/tallers/" | relLangURL }}#{{ .slug }}" class="bloc-tile" data-bloc="{{ .slug }}">
+    <a href="{{ printf "%s%s/tallers/#%s" $siteRoot $lp .slug }}" class="bloc-tile" data-bloc="{{ .slug }}">
       <span class="bloc-tile__icon" aria-hidden="true">{{ .icon }}</span>
       <h3 class="bloc-tile__name">{{ $nomBloc }}</h3>
       <p class="bloc-tile__desc">{{ $descBloc }}</p>
@@ -51,7 +54,7 @@
     {{ end }}
   </div>
   <div style="text-align:center; margin-top:var(--space-8);">
-    <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--secondary">
+    <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}" class="btn btn--secondary">
       {{ i18n "see_all_courses" | default "Veure tots els tallers" }}
     </a>
   </div>
@@ -73,7 +76,7 @@
       {{ end }}
     </div>
     <div style="margin-top:var(--space-8);">
-      <a href="{{ "/agenda/" | relLangURL }}" class="btn btn--secondary">
+      <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}" class="btn btn--secondary">
         {{ i18n "see_full_agenda" | default "Veure agenda completa" }}
       </a>
     </div>
@@ -112,7 +115,7 @@
     {{ end }}
   </div>
   <div style="text-align:center; margin-top:var(--space-8);">
-    <a href="{{ "/blog/" | relLangURL }}" class="btn btn--secondary">
+    <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}" class="btn btn--secondary">
       {{ i18n "read_more" | default "Llegir més" }}
     </a>
   </div>

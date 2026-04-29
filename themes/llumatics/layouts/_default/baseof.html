@@ -23,7 +23,7 @@
     </div>
   </div>
   <script>
-    window.__searchURL = "{{ "index.json" | relLangURL }}";
+    window.__searchURL = "{{ printf "%s%s/index.json" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix }}";
   </script>
 
   {{/* Lightbox compartit */}}

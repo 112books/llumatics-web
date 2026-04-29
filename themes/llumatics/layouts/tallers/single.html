@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+{{ $lp       := $.Site.LanguagePrefix }}
 {{ $isExtern := .Params.extern | default false }}
 {{ $courseSlug := .File.ContentBaseName }}
 {{ $agendaDates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
@@ -20,15 +22,15 @@
 
       {{/* Breadcrumb */}}
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+        <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
         <span class="breadcrumb__sep">›</span>
-        <a href="{{ "/tallers/" | relLangURL }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
+        <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
         {{ with .Params.blocs }}
           <span class="breadcrumb__sep">›</span>
           {{ $slug := index . 0 }}
           {{ range hugo.Data.blocs }}
             {{ if eq .slug $slug }}
-              <a href="{{ "/tallers/" | relLangURL }}#{{ $slug }}">{{ .nom }}</a>
+              <a href="{{ printf "%s%s/tallers/#%s" $siteRoot $lp $slug }}">{{ .nom }}</a>
             {{ end }}
           {{ end }}
         {{ end }}
@@ -145,7 +147,7 @@
           {{ if $isExtern }}
             <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            <a href="{{ "/espais/#com-arribar-hi" | relLangURL }}">Nau Bostik, La Sagrera</a>
+            <a href="{{ printf "%s%s/espais/#com-arribar-hi" $siteRoot $lp }}">Nau Bostik, La Sagrera</a>
           {{ end }}
         </span>
       </div>
@@ -257,7 +259,7 @@
               </a>
             {{ end }}
           {{ end }}
-          <a href="{{ "regala/" | relLangURL }}?taller={{ $courseSlug }}"
+          <a href="{{ printf "%s%s/regala/?taller=%s" $siteRoot $lp $courseSlug }}"
              class="btn btn--ghost" style="margin-top:var(--space-2);">
             Regala aquest taller →
           </a>

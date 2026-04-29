@@ -2,9 +2,12 @@
   <div class="container">
     <div class="site-footer__grid">
 
+      {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+      {{ $lp       := $.Site.LanguagePrefix }}
+
       <div class="site-footer__brand">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
-          <img src="{{ site.BaseURL }}images/llumatics-logo.svg" alt="{{ .Site.Title }}" class="site-logo-img">
+          <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="{{ .Site.Title }}" class="site-logo-img">
         {{ else }}
           <div style="font-family: var(--font-serif); font-size: 1.25rem; color: white; margin-bottom: 1rem;">{{ .Site.Title }}</div>
         {{ end }}
@@ -24,10 +27,10 @@
       <div>
         <p class="site-footer__heading">{{ i18n "nav_spaces" | default "Espais" }}</p>
         <ul class="site-footer__links">
-          <li><a href="{{ "/espais/#laboratori" | relLangURL }}">{{ i18n "space_lab" | default "El laboratori" }}</a></li>
-          <li><a href="{{ "/espais/#plato" | relLangURL }}">{{ i18n "space_studio" | default "El plató" }}</a></li>
-          <li><a href="{{ "/espais/#escaneig" | relLangURL }}">{{ i18n "space_scan" | default "Zona d'escaneig i retoc" }}</a></li>
-          <li><a href="{{ "/espais/#biblioteca" | relLangURL }}">{{ i18n "space_library" | default "La biblioteca" }}</a></li>
+          <li><a href="{{ printf "%s%s/espais/#laboratori" $siteRoot $lp }}">{{ i18n "space_lab" | default "El laboratori" }}</a></li>
+          <li><a href="{{ printf "%s%s/espais/#plato" $siteRoot $lp }}">{{ i18n "space_studio" | default "El plató" }}</a></li>
+          <li><a href="{{ printf "%s%s/espais/#escaneig" $siteRoot $lp }}">{{ i18n "space_scan" | default "Zona d'escaneig i retoc" }}</a></li>
+          <li><a href="{{ printf "%s%s/espais/#biblioteca" $siteRoot $lp }}">{{ i18n "space_library" | default "La biblioteca" }}</a></li>
         </ul>
       </div>
 
@@ -38,15 +41,15 @@
           {{ with .Site.Params.instagram }}
             <li><a href="{{ . }}" target="_blank" rel="noopener">Instagram</a></li>
           {{ end }}
-          <li><a href="{{ "/regala/" | relLangURL }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
-          <li><a href="{{ "/sobre/" | relLangURL }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
+          <li><a href="{{ printf "%s%s/regala/" $siteRoot $lp }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
+          <li><a href="{{ printf "%s%s/sobre/" $siteRoot $lp }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
         </ul>
 
         <p class="site-footer__heading site-footer__heading--sub">{{ i18n "legal" | default "Legal" }}</p>
         <ul class="site-footer__links">
-          <li><a href="{{ "/avis-legal/" | relLangURL }}">{{ i18n "legal_notice" | default "Avís legal" }}</a></li>
-          <li><a href="{{ "/privacitat/" | relLangURL }}">{{ i18n "privacy_policy" | default "Política de privacitat" }}</a></li>
-          <li><a href="{{ "/cookies/" | relLangURL }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></li>
+          <li><a href="{{ printf "%s%s/avis-legal/" $siteRoot $lp }}">{{ i18n "legal_notice" | default "Avís legal" }}</a></li>
+          <li><a href="{{ printf "%s%s/privacitat/" $siteRoot $lp }}">{{ i18n "privacy_policy" | default "Política de privacitat" }}</a></li>
+          <li><a href="{{ printf "%s%s/cookies/" $siteRoot $lp }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></li>
         </ul>
       </div>
 
@@ -55,23 +58,23 @@
     {{/* Banda newsletter */}}
     <div class="newsletter-band">
       <div class="newsletter-band__intro">
-        <p class="newsletter-band__label">Rep novetats de Llumàtics</p>
-        <p class="newsletter-band__desc">Nous tallers, dates obertes i entrades al blog. Sense soroll.</p>
+        <p class="newsletter-band__label">{{ i18n "newsletter_label" | default "Rep novetats de Llumàtics" }}</p>
+        <p class="newsletter-band__desc">{{ i18n "newsletter_desc" | default "Nous tallers, dates obertes i entrades al blog. Sense soroll." }}</p>
       </div>
       {{ if $.Site.Params.tallyFormNewsletter }}
         <a href="https://tally.so/r/{{ $.Site.Params.tallyFormNewsletter }}"
            class="btn btn--primary newsletter-band__tally"
            target="_blank" rel="noopener">
-          Subscriu-te →
+          {{ i18n "newsletter_cta" | default "Subscriu-te →" }}
         </a>
       {{ else }}
         <form class="newsletter-form--native newsletter-band__form"
               data-key="{{ $.Site.Params.web3formsKey }}"
               novalidate>
           <div class="newsletter-band__fields">
-            <input type="email" name="email" placeholder="El teu correu" required
+            <input type="email" name="email" placeholder="{{ i18n "newsletter_placeholder" | default "El teu correu" }}" required
                    class="newsletter-band__input">
-            <button type="submit" class="btn btn--primary newsletter-band__submit">Subscriu-me</button>
+            <button type="submit" class="btn btn--primary newsletter-band__submit">{{ i18n "newsletter_submit" | default "Subscriu-me" }}</button>
           </div>
           <p class="newsletter-form__msg" aria-live="polite"></p>
         </form>

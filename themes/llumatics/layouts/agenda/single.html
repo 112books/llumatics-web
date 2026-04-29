@@ -9,10 +9,12 @@
 
 <article class="section container">
 
+  {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+  {{ $lp       := $.Site.LanguagePrefix }}
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
-    <a href="{{ "/agenda" | relLangURL }}">{{ i18n "nav_agenda" | default "Agenda" }}</a>
+    <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}">{{ i18n "nav_agenda" | default "Agenda" }}</a>
     <span class="breadcrumb__sep">›</span>
     <span>{{ .Title }}</span>
   </nav>
@@ -69,7 +71,7 @@
             {{ i18n "agenda_buy_note" | default "La compra es fa a través de la plataforma de pagament segur. Rebràs confirmació per correu." }}
           </p>
         {{ else }}
-          <a href="{{ "/contact" | relLangURL }}" class="btn btn--primary">
+          <a href="{{ printf "%s%s/contacte/" $siteRoot $lp }}" class="btn btn--primary">
             {{ i18n "cta_register" | default "Inscripció" }}
           </a>
         {{ end }}

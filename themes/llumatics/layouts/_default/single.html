@@ -1,9 +1,11 @@
 {{ define "main" }}
+{{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
+{{ $lp       := $.Site.LanguagePrefix }}
 <article class="section container">
 
   {{/* Breadcrumb */}}
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
     {{ with .Parent }}
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
