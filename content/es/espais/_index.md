@@ -7,13 +7,22 @@ eyebrow: "Instalaciones"
 
 Llumàtics está en la **Nau Bostik**, en la calle Ferran Turné 1-11, en el barrio de La Sagrera de Barcelona. Un espacio industrial rehabilitado donde conviven artistas, talleres y proyectos culturales.
 
-Los espacios de Llumàtics no están abiertos al público de manera permanente. **Las visitas son con cita previa**, y los talleres se realizan siempre en grupos de máximo cuatro personas.
+Los espacios de Llumàtics no están abiertos al público de manera permanente. Las visitas se hacen con [cita previa](contacte) y los talleres se desarrollan siempre en grupos de máximo cuatro personas.
 
 ---
 
-## El laboratorio oscuro
+## El laboratorio oscuro {#laboratori}
 
-![Laboratorio oscuro de Llumàtics](/images/espais/laboratori.jpg)
+{{< galeria id="laboratori" >}}
+/images/espais/laboratori-1.jpeg
+/images/espais/laboratori-2.jpeg
+/images/espais/laboratori-3.jpeg
+/images/espais/laboratori-4.jpeg
+/images/espais/laboratori-5.jpeg
+/images/espais/laboratori-6.jpeg
+/images/espais/laboratori-7.jpeg
+/images/espais/laboratori-8.jpeg
+{{< /galeria >}}
 
 El laboratorio es el eje central de Llumàtics. No es un laboratorio de iniciación: es un espacio equipado para trabajar de verdad, con criterio, desde la primera sesión hasta la copia final.
 
@@ -37,22 +46,47 @@ El laboratorio cuenta con ventilación forzada, extractor de vapores químicos y
 
 ---
 
-## El plató
+## El plató {#plato}
+{{< galeria id="plato" >}}
+/images/espais/plato.jpeg
+/images/espais/plato-1.jpeg
+/images/espais/plato-2.jpeg
+/images/espais/plato-3.jpeg
+{{< /galeria >}}
 
 El plató de Llumàtics es un espacio de trabajo, no un estudio de producción. Pequeño, funcional, equipado para retrato y fotografía de producto.
 
 **Equipamiento disponible:**
-- Flashes de estudio (2 cabezas) con disparadores radio
-- Fondos de papel en varios colores (blanco, negro, gris, kraft)
+- Flashes de estudio con disparadores radio y cable Sync
+- Fondos de papel en varios colores (blanco, negro)
 - Reflectores, difusores y modificadores básicos
-- Trípodes y rieles de sujeción
-- Medidores de luz de flash
+- Trípodes y soportes de sujeción
+- Fotómetros
 
 El plató se usa en los talleres de **Retrato analógico**, **Retrato 6×6** y sesiones de **Tutoría fotográfica**. No se alquila por separado.
 
 ---
 
-## La biblioteca
+## Zona de escaneado y retoque {#escaneig}
+![Zona de escaneado de Llumàtics](/images/espais/scan-zone.jpeg)
+
+El espacio de escaneado es funcional, no decorativo. Pensado para trabajar con negativos y positivos de todos los tamaños con precisión.
+
+**Escáneres disponibles:**
+- Escáner de película Epson Perfection V850 Pro (negativos hasta 4×5", diapositivas, papel)
+- Escáner plano A4 para copias y documentos fotográficos
+
+**Retoque digital:**
+- Estación de trabajo con pantalla calibrada (sRGB/Adobe RGB)
+- Software: Lightroom Classic, Capture One, Photoshop
+- Perfiles ICC para los principales tipos de papel y película
+
+El espacio de escaneado se usa en los talleres de **Digitalización con escáner** y sesiones de **Tutoría fotográfica**.
+
+---
+
+## La biblioteca {#biblioteca}
+![La Biblioteca de Llumàtics](/images/espais/biblioteca.jpg)
 
 Una biblioteca pequeña pero cuidada. Nada de decoración: todos los libros se han leído o se leerán.
 
@@ -68,18 +102,9 @@ Una biblioteca pequeña pero cuidada. Nada de decoración: todos los libros se h
 
 La biblioteca es accesible a los alumnos durante los talleres. No es una biblioteca de consulta pública.
 
+
 ---
 
 ## Cómo llegar
-
-**Nau Bostik**
-Calle Ferran Turné, 1-11
-08027 Barcelona (La Sagrera)
-
-Metro: L1 La Sagrera · L9/L10 La Sagrera
-Bus: V23, 62, B23
-Bici: Bicing disponible a 200m
-
-Las sesiones empiezan puntuales. Si es la primera vez que vienes, llega cinco minutos antes para encontrar el acceso al espacio.
 
 **Llumàtics no es un espacio de libre acceso.** Abrimos exclusivamente para los talleres y para visitas concertadas. Si quieres conocer el espacio, [solicita una visita](/es/contacte/) desde la página de contacto y lo organizamos.

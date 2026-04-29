@@ -7,13 +7,22 @@ eyebrow: "Facilities"
 
 Llumàtics is at **Nau Bostik**, Carrer Ferran Turné 1-11, in the La Sagrera neighbourhood of Barcelona. A converted industrial space shared by artists, workshops and cultural projects.
 
-The Llumàtics spaces are not open to the public on a drop-in basis. **All visits are by appointment**, and workshops always run in groups of maximum four people.
+The Llumàtics spaces are not open to the public on a drop-in basis. All visits are [by appointment](contacte) and workshops always run in groups of maximum four people.
 
 ---
 
-## The darkroom
+## The darkroom {#laboratori}
 
-![Llumàtics darkroom](/images/espais/laboratori.jpg)
+{{< galeria id="laboratori" >}}
+/images/espais/laboratori-1.jpeg
+/images/espais/laboratori-2.jpeg
+/images/espais/laboratori-3.jpeg
+/images/espais/laboratori-4.jpeg
+/images/espais/laboratori-5.jpeg
+/images/espais/laboratori-6.jpeg
+/images/espais/laboratori-7.jpeg
+/images/espais/laboratori-8.jpeg
+{{< /galeria >}}
 
 The darkroom is the heart of Llumàtics. This isn't a beginner's lab: it's a fully equipped space for serious work, from the first session through to the final print.
 
@@ -37,13 +46,19 @@ The darkroom has forced ventilation, a chemical vapour extractor and a waste man
 
 ---
 
-## The studio
+## The studio {#plato}
+{{< galeria id="plato" >}}
+/images/espais/plato.jpeg
+/images/espais/plato-1.jpeg
+/images/espais/plato-2.jpeg
+/images/espais/plato-3.jpeg
+{{< /galeria >}}
 
 The Llumàtics studio is a working space, not a production set. Small, functional, equipped for portrait and product photography.
 
 **Available equipment:**
-- Studio flash heads (×2) with radio triggers
-- Paper backdrops in various colours (white, black, grey, kraft)
+- Studio flash heads with radio and sync-cable triggers
+- Paper backdrops in various colours (white, black)
 - Reflectors, diffusers and basic light modifiers
 - Tripods and grip accessories
 - Flash light meters
@@ -52,7 +67,26 @@ The studio is used in the **Analogue portrait**, **6×6 portrait** and **Photogr
 
 ---
 
-## The library
+## Scanning and editing station {#escaneig}
+![Llumàtics scanning station](/images/espais/scan-zone.jpeg)
+
+A functional scanning space, built for precision work with negatives and positives in all formats.
+
+**Available scanners:**
+- Epson Perfection V850 Pro film scanner (negatives up to 4×5", slides, paper)
+- A4 flatbed scanner for prints and photographic documents
+
+**Digital editing:**
+- Colour-calibrated workstation (sRGB/Adobe RGB)
+- Software: Lightroom Classic, Capture One, Photoshop
+- ICC profiles for major paper and film types
+
+The scanning station is used in **Scanning and digitalisation** workshops and **Photography tutorial** sessions.
+
+---
+
+## The library {#biblioteca}
+![Llumàtics library](/images/espais/biblioteca.jpg)
 
 A small but carefully chosen library. No decoration: every book here has been read or will be read.
 
@@ -68,18 +102,9 @@ A small but carefully chosen library. No decoration: every book here has been re
 
 The library is available to students during workshops. It is not a public reference library.
 
+
 ---
 
 ## Getting here
-
-**Nau Bostik**
-Carrer Ferran Turné, 1-11
-08027 Barcelona (La Sagrera)
-
-Metro: L1 La Sagrera · L9/L10 La Sagrera
-Bus: V23, 62, B23
-Bike: Bicing available 200m away
-
-Sessions start on time. If it's your first visit, arrive five minutes early to find the entrance to the space.
 
 **Llumàtics is not an open-access space.** We open exclusively for workshops and pre-arranged visits. If you'd like to see the space, [request a visit](/en/contacte/) from the contact page and we'll sort it out.
