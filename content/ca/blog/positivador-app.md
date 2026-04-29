@@ -8,7 +8,7 @@ images:
   - "/images/blog/positivador-app-2.jpg"
   - "/images/blog/positivador-app-3.jpg"
 date: 2026-04-29
-tags: ["poritivador", "paper fotogràfic", "app", "laboratori", "telèfon", "química", "artesanal"]
+tags: ["positivador", "paper fotogràfic", "app", "laboratori", "telèfon", "química", "artesanal"]
 course_ref: "fotografia-estenopeica, iniciacio-revelat, retrat-gran-format, introduccio-gran-format, revelat-bn, revelat-i-positivat, copies-en-paper, introduccio-al-positivat"
 draft: false
 ---
