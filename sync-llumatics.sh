@@ -231,8 +231,7 @@ echo " 2) Sync (git pull + push)"
 echo " 3) Servidor local  →  localhost:1313"
 echo " 4) Build local"
 echo " 5) Deploy staging  →  GitHub Pages (develop)"
-echo " 6) Deploy producció → GitHub Pages (main)"
-echo " 7) Deploy VPS       [futur]"
+echo " 6) Deploy producció → llumatics.com (SSH + rsync)"
 echo "───────────────────────────────"
 echo " n) Nou taller"
 echo " d) Nova data d'agenda"
@@ -249,8 +248,7 @@ case $opt in
   3) server_local ;;
   4) build_local ;;
   5) deploy_staging ;;
-  6) deploy_prod ;;
-  7) deploy_vps ;;
+  6) deploy_vps ;;
   n) new_taller ;;
   d) new_data ;;
   0) exit 0 ;;
