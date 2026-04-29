@@ -33,13 +33,10 @@ BRANCH_PROD="main"
 REPO_STAGING="https://112books.github.io/llumatics-web/"
 REPO_PROD="https://llumatics.com/"
 
-# VPS — omplir amb les dades de Dinahosting
-# SSH_USER: l'usuari del teu compte d'allotjament
-# SSH_HOST: ftp.dinahosting.com o el host SSH que t'indica Dinahosting
-# SSH_PATH: ruta absoluta a la carpeta web (ex: /home/usuari/public_html/)
-SSH_USER=""
-SSH_HOST=""
-SSH_PATH=""
+# VPS — Dinahosting (autenticació per clau SSH, sense contrasenya)
+SSH_USER="llumatics"
+SSH_HOST="llumatics.com"
+SSH_PATH="/home/llumatics/www/"
 
 # ── Colors i helpers ─────────────────────────────────────────────────────
 RED='\033[0;31m'
@@ -192,7 +189,7 @@ deploy_vps() {
   rsync -avz --delete \
     --exclude='.well-known' \
     --exclude='ssl' \
-    --exclude='.htaccess' \
+    --exclude='cgi-bin' \
     -e "ssh -o StrictHostKeyChecking=accept-new" \
     "${BUILD_DIR}/" "${SSH_USER}@${SSH_HOST}:${SSH_PATH}" || exit 1
   ok "Deploy VPS fet → ${REPO_PROD}"
