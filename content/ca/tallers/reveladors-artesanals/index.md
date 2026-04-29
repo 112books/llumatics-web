@@ -4,6 +4,10 @@ subtitle: "Formular, barrejar i entendre el que revela les teves imatges"
 lead: "Un taller per a qui vol entendre la química del revelat fins al punt de poder preparar el seu propi revelador. La fòrmula Beers, el Caffenol i altres receptes artesanals."
 description: "Taller de reveladors fotogràfics artesanals: fòrmula Beers, Caffenol i receptes alternatives. Fotografia analògica avançada a Barcelona."
 image: "/images/tallers/reveladors-artesanals.jpg"
+images:
+  - "/images/tallers/reveladors-artesanals-1.jpg"
+  - "/images/tallers/reveladors-artesanals-2.jpg"
+  - "/images/tallers/reveladors-artesanals-3.jpg"
 
 # Classificació
 tipus: "taller"

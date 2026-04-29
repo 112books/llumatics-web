@@ -4,6 +4,10 @@ subtitle: "Descobreix la fotografia lenta abans de submergir-t'hi de ple"
 lead: "Una primera presa de contacte amb la càmera de plànxes: entendre per què existeix, com funciona i quina és la lògica d'un sistema que obliga a fotografiar d'una manera completament diferent."
 description: "Taller introductori al gran format fotogràfic. Primera sessió amb càmera de plànxes, mesura de la llum i exposició. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
+images:
+  - "/images/tallers/introduccio-gran-format-1.jpg"
+  - "/images/tallers/introduccio-gran-format-2.jpg"
+  - "/images/tallers/introduccio-gran-format-3.jpg"
 
 # Classificació
 tipus: "taller"

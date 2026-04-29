@@ -59,7 +59,6 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 - Ús del Plató
 - Càmera analògica disponible si no en tens
 - Carret de 35mm B/N
-- Refrigeri (cafè o te i fruita)
 - Material teòric en format PDF
 
 ## Cal portar
