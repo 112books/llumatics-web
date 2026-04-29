@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — {{ .Site.Title }}</title>
+  <meta name="robots" content="noindex">
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <style>
+    .e404 {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .e404__bg {
+      position: fixed;
+      inset: 0;
+      background-image: url('{{ "images/404.jpg" | absURL }}');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .e404__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center,
+        rgba(0,0,0,0.35) 0%,
+        rgba(0,0,0,0.72) 55%,
+        rgba(0,0,0,0.92) 100%);
+    }
+
+    .e404__content {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+    }
+
+    .e404__logo {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      margin-bottom: 3rem;
+      letter-spacing: .02em;
+    }
+
+    .e404__logo img {
+      height: 36px;
+      width: 36px;
+      opacity: .9;
+    }
+
+    .e404__code {
+      font-family: var(--font-serif);
+      font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      opacity: .15;
+      letter-spacing: -.04em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .e404__eyebrow {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--color-accent, #C8A96E);
+      margin-bottom: 1.2rem;
+    }
+
+    .e404__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      color: #fff;
+    }
+
+    .e404__body {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 2.4rem;
+    }
+
+    .e404__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .e404__btn {
+      display: inline-block;
+      padding: .65rem 1.6rem;
+      border-radius: 2px;
+      font-size: .875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+
+    .e404__btn--primary {
+      background: var(--color-accent, #C8A96E);
+      color: #1A1A18;
+    }
+
+    .e404__btn--ghost {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .e404__btn:hover { opacity: .8; }
+  </style>
+</head>
+<body>
+
+<div class="e404">
+  <div class="e404__bg"></div>
+
+  <div class="e404__content">
+
+    <a href="{{ "/" | absURL }}" class="e404__logo">
+      {{ if fileExists "static/images/llumatics-logo.svg" }}
+        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" aria-hidden="true">
+      {{ end }}
+      <span>{{ .Site.Title }}</span>
+    </a>
+
+    <p class="e404__eyebrow">Vel·lada total</p>
+
+    <h1 class="e404__title">El negatiu no existeix.</h1>
+
+    <p class="e404__body">
+      Potser vas escriure malament la URL.<br>
+      Potser la vam moure nosaltres sense avisar.<br>
+      En qualsevol cas, la culpa és de la química.
+    </p>
+
+    <div class="e404__actions">
+      <a href="{{ "/" | absURL }}" class="e404__btn e404__btn--primary">Tornar a l'inici</a>
+      <a href="#" class="e404__btn e404__btn--ghost" onclick="document.querySelector('.search-toggle')?.click(); return false;">Cercar</a>
+    </div>
+
+  </div>
+</div>
+
+{{/* Overlay de cerca (reutilitzem el del site) */}}
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" hidden>
+  <div class="search-box">
+    <input id="search-input" class="search-input" type="search"
+           placeholder="Cerca tallers i entrades…"
+           autocomplete="off" spellcheck="false">
+    <button class="search-close" aria-label="Tancar cerca">&#215;</button>
+    <ul id="search-results" class="search-results" role="listbox" aria-live="polite"></ul>
+  </div>
+</div>
+<script>
+  window.__searchURL = "{{ printf "%s/index.json" (strings.TrimSuffix "/" site.BaseURL) }}";
+</script>
+{{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
+</body>
+</html>
