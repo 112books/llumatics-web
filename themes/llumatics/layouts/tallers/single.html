@@ -11,159 +11,65 @@
 {{ $preu4 := .Params.preu_4 | default 0 }}
 {{ $tenimPreus := and (gt $preu1 0) (gt $preu2 0) }}
 
-<div class="course-single container">
+<div class="course-single">
 
-  {{/* Breadcrumb */}}
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
-    <span class="breadcrumb__sep">›</span>
-    <a href="{{ "/tallers/" | relLangURL }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
-    {{ with .Params.blocs }}
-      <span class="breadcrumb__sep">›</span>
-      {{ $slug := index . 0 }}
-      {{ range hugo.Data.blocs }}
-        {{ if eq .slug $slug }}
-          <a href="{{ "/tallers/" | relLangURL }}#{{ $slug }}">{{ .nom }}</a>
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    <span class="breadcrumb__sep">›</span>
-    <span>{{ .Title }}</span>
-  </nav>
+  {{/* ── TOP: 1/3 blanc · 2/3 [header | info-box] ────────────────────────── */}}
+  <div class="course-single__top">
 
-  <header class="course-single__header">
-    {{/* Badges */}}
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
-      {{ range .Params.blocs }}
-        {{ $slug := . }}
-        {{ range hugo.Data.blocs }}
-          {{ if eq .slug $slug }}
-            <span class="tag tag--bloc">{{ .icon }} {{ .nom }}</span>
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ with .Params.nivell }}
-        <span class="tag tag--level-{{ . | urlize }}">{{ . }}</span>
-      {{ end }}
-      {{ with .Params.tipus }}
-        {{ if eq . "curs" }}<span class="tag tag--format">Recorregut</span>{{ end }}
-      {{ end }}
-      {{ if $isExtern }}
-        <span class="tag tag--extern">Col·laboració Cameras &amp; Films</span>
-      {{ end }}
-    </div>
+    <div class="course-single__header-area">
 
-    <h1 class="course-single__title">{{ .Title }}</h1>
-    {{ with .Params.subtitle }}
-      <p style="font-size:1.25rem; font-weight:700; color:var(--color-accent); margin-bottom:0.5rem;">{{ . }}</p>
-    {{ end }}
-    {{ with .Params.lead }}
-      <p class="course-single__lead">{{ . }}</p>
-    {{ end }}
-  </header>
-
-  {{/* Imatge principal */}}
-  {{ if .Params.image }}
-  <button class="course-single__cover js-lightbox-trigger"
-          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
-          data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="Veure imatge en gran">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
-  </button>
-  {{ end }}
-
-  {{/* Galeria secundària */}}
-  {{ with .Params.images }}
-  <div class="course-single__gallery">
-    {{ range . }}
-    <button class="gallery__item js-lightbox-trigger"
-            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
-            data-gallery="{{ $.File.ContentBaseName }}"
-            aria-label="Veure imatge en gran">
-      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
-    </button>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  <div class="course-single__layout">
-
-    {{/* Contingut principal */}}
-    <div class="prose">
-      {{ .Content }}
-
-      {{/* Fitxa pedagògica */}}
-      {{ if or .Params.objective .Params.methodology .Params.result .Params.target .Params.prerequisits }}
-      <div class="fitxa-pedagogica">
-        <h2>Fitxa del taller</h2>
-
-        {{ with .Params.objective }}
-        <div class="fitxa-row">
-          <dt>Objectiu</dt>
-          <dd>{{ . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.methodology }}
-        <div class="fitxa-row">
-          <dt>Metodologia</dt>
-          <dd>{{ . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.result }}
-        <div class="fitxa-row">
-          <dt>Resultat</dt>
-          <dd>{{ . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.prerequisits }}
-        <div class="fitxa-row">
-          <dt>Prerequisits</dt>
-          <dd>{{ . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.target }}
-        <div class="fitxa-row">
-          <dt>A qui va dirigit</dt>
-          <dd>{{ . }}</dd>
-        </div>
-        {{ end }}
-      </div>
-      {{ end }}
-
-      {{/* Continua aprenent */}}
-      {{ with .Params.continua_aprenent }}
-      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--color-border);">
-        <h3 style="font-size:var(--text-sm); text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">Continua aprenent</h3>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
-          {{ range . }}
-            {{ $related := $.Site.GetPage (printf "/tallers/%s" .) }}
-            {{ if $related }}
-            <li>
-              <a href="{{ $related.RelPermalink }}" style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:4px; transition:border-color 200ms; text-decoration:none;">
-                <span>{{ $related.Title }}</span>
-                <span style="color:var(--color-text-muted);">→</span>
-              </a>
-            </li>
+      {{/* Breadcrumb */}}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ "/" | relLangURL }}">{{ i18n "home" | default "Inici" }}</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="{{ "/tallers/" | relLangURL }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
+        {{ with .Params.blocs }}
+          <span class="breadcrumb__sep">›</span>
+          {{ $slug := index . 0 }}
+          {{ range hugo.Data.blocs }}
+            {{ if eq .slug $slug }}
+              <a href="{{ "/tallers/" | relLangURL }}#{{ $slug }}">{{ .nom }}</a>
             {{ end }}
           {{ end }}
-        </ul>
-      </div>
-      {{ end }}
+        {{ end }}
+        <span class="breadcrumb__sep">›</span>
+        <span>{{ .Title }}</span>
+      </nav>
 
-      {{/* Botó material alumnes */}}
-      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--color-border);">
-        <p style="font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:1rem;">Ja has fet aquest taller?</p>
-        <a href="{{ .RelPermalink }}privat/" class="btn btn--secondary">
-          Accedeix al material per a alumnes →
-        </a>
-      </div>
-    </div>
+      <header class="course-single__header">
+        {{/* Badges */}}
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
+          {{ range .Params.blocs }}
+            {{ $slug := . }}
+            {{ range hugo.Data.blocs }}
+              {{ if eq .slug $slug }}
+                <span class="tag tag--bloc">{{ .icon }} {{ .nom }}</span>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ with .Params.nivell }}
+            <span class="tag tag--level-{{ . | urlize }}">{{ . }}</span>
+          {{ end }}
+          {{ with .Params.tipus }}
+            {{ if eq . "curs" }}<span class="tag tag--format">Recorregut</span>{{ end }}
+          {{ end }}
+          {{ if $isExtern }}
+            <span class="tag tag--extern">Col·laboració Cameras &amp; Films</span>
+          {{ end }}
+        </div>
 
-    {{/* Caixa lateral */}}
+        <h1 class="course-single__title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+          <p style="font-size:1.25rem; font-weight:700; color:var(--color-accent); margin-bottom:0.5rem;">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.lead }}
+          <p class="course-single__lead">{{ . }}</p>
+        {{ end }}
+      </header>
+
+    </div>{{/* fi header-area */}}
+
+    {{/* ── Info-box ────────────────────────────────────────────────────────── */}}
     <aside class="course-single__info-box">
 
       {{/* Preu — taula per nombre d'alumnes */}}
@@ -205,7 +111,6 @@
           <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar.</p>
         </div>
       {{ else if and .Params.price (gt (.Params.price | int) 0) }}
-        {{/* Fallback per a tallers amb preu únic (externs) */}}
         <div class="info-box__price">
           {{ if in (.Params.formats | default slice) "curs" }}
             <span class="course-card__format-badge">Recorregut</span>
@@ -359,8 +264,110 @@
         </div>
 
       {{ end }}
-    </aside>
-  </div>
+    </aside>{{/* fi info-box */}}
 
-</div>
+  </div>{{/* fi course-single__top */}}
+
+  {{/* ── Imatge principal — ample complet ──────────────────────────────────── */}}
+  {{ if .Params.image }}
+  <button class="course-single__cover js-lightbox-trigger"
+          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="Veure imatge en gran">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+  </button>
+  {{ end }}
+
+  {{/* Galeria secundària */}}
+  {{ with .Params.images }}
+  <div class="course-single__gallery">
+    {{ range . }}
+    <button class="gallery__item js-lightbox-trigger"
+            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
+            data-gallery="{{ $.File.ContentBaseName }}"
+            aria-label="Veure imatge en gran">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* ── Cos — ample complet ─────────────────────────────────────────────── */}}
+  <div class="course-single__body">
+    <div class="prose">
+      {{ .Content }}
+
+      {{/* Fitxa pedagògica */}}
+      {{ if or .Params.objective .Params.methodology .Params.result .Params.target .Params.prerequisits }}
+      <div class="fitxa-pedagogica">
+        <h2>Fitxa del taller</h2>
+
+        {{ with .Params.objective }}
+        <div class="fitxa-row">
+          <dt>Objectiu</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.methodology }}
+        <div class="fitxa-row">
+          <dt>Metodologia</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.result }}
+        <div class="fitxa-row">
+          <dt>Resultat</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.prerequisits }}
+        <div class="fitxa-row">
+          <dt>Prerequisits</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+
+        {{ with .Params.target }}
+        <div class="fitxa-row">
+          <dt>A qui va dirigit</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* Continua aprenent */}}
+      {{ with .Params.continua_aprenent }}
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--color-border);">
+        <h3 style="font-size:var(--text-sm); text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">Continua aprenent</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+          {{ range . }}
+            {{ $related := $.Site.GetPage (printf "/tallers/%s" .) }}
+            {{ if $related }}
+            <li>
+              <a href="{{ $related.RelPermalink }}" style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:4px; transition:border-color 200ms; text-decoration:none;">
+                <span>{{ $related.Title }}</span>
+                <span style="color:var(--color-text-muted);">→</span>
+              </a>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{/* Botó material alumnes */}}
+      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--color-border);">
+        <p style="font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:1rem;">Ja has fet aquest taller?</p>
+        <a href="{{ .RelPermalink }}privat/" class="btn btn--secondary">
+          Accedeix al material per a alumnes →
+        </a>
+      </div>
+    </div>{{/* fi prose */}}
+  </div>{{/* fi course-single__body */}}
+
+</div>{{/* fi course-single */}}
 {{ end }}

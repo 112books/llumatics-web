@@ -116,6 +116,7 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .page-main--offset { margin-left: 0; }
+  .course-single__top { margin-left: 0; padding-inline: var(--space-4); }
 }
 
 /* ── Header i navegació ─────────────────────────────────────────────────── */
@@ -553,6 +554,19 @@ button, input, select, textarea {
   max-width: 680px;
 }
 
+.course-single__top {
+  margin-left: 33.333%;
+  padding: var(--space-10) var(--space-6) var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.course-single__body {
+  padding-inline: var(--space-6);
+}
+
 .course-single__layout {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -939,6 +953,8 @@ button, input, select, textarea {
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
 .site-footer {
+  position: relative;
+  z-index: 1;
   background: var(--color-text);
   color: rgba(255,255,255,0.6);
   padding-block: var(--space-12);
@@ -1609,6 +1625,7 @@ a.recorregut__tematic-link:hover {
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
+  .course-single__top { margin-left: 20%; grid-template-columns: 1fr; }
   .course-single__layout { grid-template-columns: 1fr; }
   .course-single__info-box { position: static; }
   .site-footer__grid { grid-template-columns: 1fr 1fr; }

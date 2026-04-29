@@ -85,7 +85,7 @@ status() {
 
 sync() {
   CURRENT=$(git branch --show-current)
-  print "Pujant canvis locals (${CURRENT})..."
+  print "Sincronitzant amb ${REMOTE}/${CURRENT}..."
 
   git add -A
 
@@ -93,8 +93,13 @@ sync() {
     git commit -m "Auto-sync"
   fi
 
+  git pull --rebase "$REMOTE" "$CURRENT" || {
+    err "Pull/rebase fallat. Resol els conflictes manualment."
+    exit 1
+  }
+
   git push "$REMOTE" "$CURRENT" || exit 1
-  ok "Push complet (${CURRENT})"
+  ok "Sync complet (${CURRENT})"
 }
 
 build_local() {

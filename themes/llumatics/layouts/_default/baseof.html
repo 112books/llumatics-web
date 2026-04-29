@@ -6,7 +6,7 @@
 <body>
   {{ partial "header.html" . }}
 
-  <main id="main-content"{{ if and (ne .Kind "home") (not (and (eq .Type "tallers") (eq .Kind "section"))) }} class="page-main--offset"{{ end }}>
+  <main id="main-content"{{ if and (ne .Kind "home") (ne .Type "tallers") }} class="page-main--offset"{{ end }}>
     {{ block "main" . }}{{ end }}
   </main>
 
