@@ -272,7 +272,7 @@ button, input, select, textarea {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.28;
+  opacity: 0.10;
 }
 
 .page-with-bg {
