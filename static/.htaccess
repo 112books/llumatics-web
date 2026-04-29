@@ -1,11 +1,5 @@
-# HTTPS redirect
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# www → sense www
-RewriteCond %{HTTP_HOST} ^www\.llumatics\.com [NC]
-RewriteRule ^(.*)$ https://llumatics.com/$1 [L,R=301]
+# Dinahosting ja gestiona HTTPS i www→no-www a nivell de servidor.
+# Aquí només configurem opcions específiques del site estàtic.
 
 # Pàgina d'error 404 personalitzada
 ErrorDocument 404 /404.html
