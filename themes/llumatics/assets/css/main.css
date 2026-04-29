@@ -1921,6 +1921,13 @@ a.recorregut__tematic-link:hover {
   gap: var(--space-3);
   margin-top: var(--space-6);
   margin-bottom: var(--space-8);
+  max-width: none;
+}
+/* Evitar que .prose img interfereixi amb les imatges de galeria */
+.gallery-grid .gallery__item img {
+  margin-block: 0;
+  border-radius: 0;
+  height: 100%;
 }
 
 /* Lightbox compartit */
