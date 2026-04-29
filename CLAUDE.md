@@ -7,8 +7,8 @@
 Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada en fotografia fotoquímica i processos alternatius. Construïda amb Hugo (static site generator), tema custom i continguts en Markdown.
 
 - **Repositori:** `github.com/112books/llumatics-web`
-- **Producció:** `https://llumatics.com` → branca `main` → GitHub Pages
-- **Staging:** `https://112books.github.io/llumatics-web` → branca `develop`
+- **Producció:** `https://llumatics.com` → VPS Dinahosting (`vl28359.dinaserver.com`) → rsync manual
+- **Staging:** `https://112books.github.io/llumatics-web` → branca `develop` → GitHub Pages
 - **Local:** `hugo server -D` → `http://localhost:1313`
 
 ---
