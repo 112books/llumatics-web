@@ -30,7 +30,68 @@
 {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 <meta property="og:locale" content="{{ .Site.Params.locale | default "ca_ES" }}">
 
-{{/* JSON-LD per cursos */}}
+{{/* JSON-LD — EducationalOrganization (home) */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Llumàtics",
+  "description": "Escola de fotografia analògica a Barcelona. Tallers de revelat, laboratori fosc i formació tècnica en petit grup.",
+  "url": "https://llumatics.com",
+  "logo": "https://llumatics.com/images/llumatics-logo.svg",
+  "email": "hola@llumatics.com",
+  "foundingDate": "2017",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer de Ferran Turné 1-11",
+    "addressLocality": "Barcelona",
+    "addressRegion": "Catalunya",
+    "postalCode": "08031",
+    "addressCountry": "ES"
+  },
+  "areaServed": "Barcelona",
+  "sameAs": [
+    "https://www.instagram.com/llumatics"
+  ]
+}
+</script>
+{{ end }}
+
+{{/* JSON-LD — Person (pàgina Sobre) */}}
+{{ if eq .RelPermalink "/sobre/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joan Linux Martínez",
+  "birthPlace": "Barcelona",
+  "jobTitle": "Fotògraf i professor de fotografia analògica",
+  "worksFor": {
+    "@type": "EducationalOrganization",
+    "name": "Llumàtics",
+    "url": "https://llumatics.com"
+  },
+  "knowsAbout": [
+    "fotografia analògica",
+    "revelat de pel·lícula en B/N",
+    "revelat C-41 en B/N",
+    "tècniques alternatives de fotografia",
+    "cianotipia",
+    "fotogrames",
+    "gran format 4x5",
+    "reveladors artesanals"
+  ],
+  "url": "https://about.pocallum.cat",
+  "sameAs": [
+    "https://about.pocallum.cat",
+    "https://www.instagram.com/llumatics"
+  ]
+}
+</script>
+{{ end }}
+
+{{/* JSON-LD — Course (fitxa de taller) */}}
 {{ if eq .Type "tallers" }}
 <script type="application/ld+json">
 {
@@ -39,11 +100,11 @@
   "name": "{{ .Title }}",
   "description": "{{ .Description }}",
   "provider": {
-    "@type": "Organization",
-    "name": "{{ .Site.Title }}",
+    "@type": "EducationalOrganization",
+    "name": "Llumàtics",
     "url": "{{ .Site.BaseURL }}"
   }
-  {{ with .Params.price }}, "offers": { "@type": "Offer", "price": "{{ . }}", "priceCurrency": "EUR" }{{ end }}
+  {{ with .Params.preu_1 }}, "offers": { "@type": "Offer", "price": "{{ . }}", "priceCurrency": "EUR" }{{ end }}
 }
 </script>
 {{ end }}
