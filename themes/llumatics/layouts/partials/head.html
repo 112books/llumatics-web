@@ -3,6 +3,7 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
 
 {{/* CSS via Hugo Pipes */}}
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
@@ -87,6 +88,33 @@
     "https://about.pocallum.cat",
     "https://www.instagram.com/llumatics"
   ]
+}
+</script>
+{{ end }}
+
+{{/* JSON-LD — BlogPosting (posts de blog) */}}
+{{ if and (eq .Type "blog") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  {{ with .Params.image }}"image": "{{ . | absURL }}",{{ end }}
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Joan Linux Martínez",
+    "url": "https://about.pocallum.cat"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Llumàtics",
+    "url": "https://llumatics.com"
+  },
+  "url": "{{ .Permalink }}"
+  {{ with .Params.tags }}, "keywords": {{ jsonify . }}{{ end }}
 }
 </script>
 {{ end }}
