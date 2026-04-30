@@ -2,7 +2,7 @@
 title: "Positivador WebApp, una petita eina per ajudar-nos al laboratori"
 lead: "Son molts els cursos que impartim dins el laboratori. Hi ha algun truc per fer que el telèfon positivi el paper o pel·lícula negativa per poder fer-nos una idea del resultat obtingut, però ara tens el Positivador App."
 description: "Pesentem la aplicació per telèfons que us ajudarà a entendre que és una imatge en negatiu u traduir-ma al positiu."
-image: "/images/blog/positivador-app.jpg"
+image: "/images/blog/positivador-app.png"
 images:
   - "/images/blog/positivador-app-1.jpg"
   - "/images/blog/positivador-app-2.jpg"

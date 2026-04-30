@@ -2,7 +2,7 @@
 title: "Positivador WebApp, una pequeña herramienta para ayudarnos en el laboratorio"
 lead: "Son muchos los cursos que impartimos dentro del laboratorio. Existía algún truco para hacer que el teléfono positivara el papel o película negativa para hacernos una idea del resultado obtenido, pero ahora tienes el Positivador App."
 description: "Presentamos la aplicación para teléfonos que te ayudará a entender qué es una imagen en negativo y traducirla al positivo."
-image: "/images/blog/positivador-app.jpg"
+image: "/images/blog/positivador-app.png"
 images:
   - "/images/blog/positivador-app-1.jpg"
   - "/images/blog/positivador-app-2.jpg"

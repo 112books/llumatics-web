@@ -2,7 +2,7 @@
 title: "Positivador WebApp, a small tool to help us in the darkroom"
 lead: "We teach many courses inside the darkroom. There used to be a trick to make your phone invert a negative paper or film to get an idea of the result, but now you have the Positivador App."
 description: "Introducing the phone app that will help you understand what a negative image is and translate it into a positive."
-image: "/images/blog/positivador-app.jpg"
+image: "/images/blog/positivador-app.png"
 images:
   - "/images/blog/positivador-app-1.jpg"
   - "/images/blog/positivador-app-2.jpg"
