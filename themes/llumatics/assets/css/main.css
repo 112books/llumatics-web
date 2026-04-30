@@ -1653,6 +1653,9 @@ a.recorregut__tematic-link:hover {
   .site-nav.open { display: flex; }
   .nav-toggle { display: block; position: relative; z-index: 101; }
 
+  .lang-switcher__current { display: none; }
+  .lang-switcher__current + .lang-switcher__sep { display: none; }
+
   .newsletter-form { flex-direction: column; }
   .site-footer__grid { grid-template-columns: 1fr; }
   .agenda-item { grid-template-columns: 60px 1fr; }

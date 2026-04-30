@@ -71,36 +71,7 @@
 
     </div>{{/* fi header-area */}}
 
-  </div>{{/* fi course-single__top */}}
-
-  {{/* ── Imatge principal — ample complet ──────────────────────────────────── */}}
-  {{ if .Params.image }}
-  <button class="course-single__cover js-lightbox-trigger"
-          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
-          data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="Veure imatge en gran">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
-  </button>
-  {{ end }}
-
-  {{/* Galeria secundària */}}
-  {{ with .Params.images }}
-  <div class="course-single__gallery">
-    {{ range . }}
-    <button class="gallery__item js-lightbox-trigger"
-            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
-            data-gallery="{{ $.File.ContentBaseName }}"
-            aria-label="Veure imatge en gran">
-      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
-    </button>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  {{/* ── Layout: info-box esquerra + contingut dreta ────────────────────────── */}}
-  <div class="course-single__layout">
-
-    {{/* Caixa lateral */}}
+    {{/* ── Info-box ────────────────────────────────────────────────────────── */}}
     <aside class="course-single__info-box">
 
       {{/* Preu — taula per nombre d'alumnes */}}
@@ -296,9 +267,36 @@
         </div>
 
       {{ end }}
-    </aside>
+    </aside>{{/* fi info-box */}}
 
-    {{/* Contingut principal */}}
+  </div>{{/* fi course-single__top */}}
+
+  {{/* ── Imatge principal — ample complet ──────────────────────────────────── */}}
+  {{ if .Params.image }}
+  <button class="course-single__cover js-lightbox-trigger"
+          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="Veure imatge en gran">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+  </button>
+  {{ end }}
+
+  {{/* Galeria secundària */}}
+  {{ with .Params.images }}
+  <div class="course-single__gallery">
+    {{ range . }}
+    <button class="gallery__item js-lightbox-trigger"
+            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
+            data-gallery="{{ $.File.ContentBaseName }}"
+            aria-label="Veure imatge en gran">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* ── Cos — ample complet ─────────────────────────────────────────────── */}}
+  <div class="course-single__body">
     <div class="prose">
       {{ .Content }}
 
@@ -372,8 +370,7 @@
         </a>
       </div>
     </div>{{/* fi prose */}}
-
-  </div>{{/* fi course-single__layout */}}
+  </div>{{/* fi course-single__body */}}
 
 </div>{{/* fi course-single */}}
 {{ end }}
