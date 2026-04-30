@@ -294,7 +294,7 @@ Ordre dels blocs al template `layouts/tallers/single.html`:
 ```toml
 [params]
   contactEmail = "info@llumatics.com"
-  instagram = "https://www.instagram.com/llumaticscat"
+  instagram = "https://www.instagram.com/llumatics"
   tallyFormNewsletter = ""    # ID del formulari Tally per newsletter
   tallyFormContact = ""       # ID del formulari Tally per inscripcions/PDF
   tallyFormGiftVoucher = ""   # ID del formulari Tally per vals-regal
