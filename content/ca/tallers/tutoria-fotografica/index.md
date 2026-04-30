@@ -53,7 +53,7 @@ Funciona amb una conversa prèvia —breu, per correu o telèfon— per entendre
 
 ## Com funciona
 
-Contacta'ns explicant breument el que t'interessa treballar. Concretem la durada i el contingut de la sessió i us proposem una data. Mínim 2 hores, màxim 4 hores per sessió.
+[Contacta'ns](/contacte/) explicant breument el que t'interessa treballar. Concretem la durada i el contingut de la sessió i us proposem una data. Mínim 2 hores, màxim 4 hores per sessió.
 
 ## Inclòs en el preu
 
@@ -67,4 +67,4 @@ Contacta'ns explicant breument el que t'interessa treballar. Concretem la durada
 ## No inclòs
 
 - Materials específics no habituals (es consulten i es cotitzen prèviament)
-- Carretes de 35mm addicionals (~10€/unitat)
+- Carretes de 35mm / 120 addicionals (~10€/unitat)
