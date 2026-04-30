@@ -569,7 +569,7 @@ button, input, select, textarea {
 
 .course-single__layout {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 360px 1fr;
   gap: var(--space-12);
   align-items: start;
 }

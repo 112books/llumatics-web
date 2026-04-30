@@ -15,7 +15,7 @@
 
 <div class="course-single">
 
-  {{/* ── TOP: 1/3 blanc · 2/3 [header | info-box] ────────────────────────── */}}
+  {{/* ── TOP: header ────────────────────────────────────────────────────── */}}
   <div class="course-single__top">
 
     <div class="course-single__header-area">
@@ -71,7 +71,36 @@
 
     </div>{{/* fi header-area */}}
 
-    {{/* ── Info-box ────────────────────────────────────────────────────────── */}}
+  </div>{{/* fi course-single__top */}}
+
+  {{/* ── Imatge principal — ample complet ──────────────────────────────────── */}}
+  {{ if .Params.image }}
+  <button class="course-single__cover js-lightbox-trigger"
+          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="Veure imatge en gran">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+  </button>
+  {{ end }}
+
+  {{/* Galeria secundària */}}
+  {{ with .Params.images }}
+  <div class="course-single__gallery">
+    {{ range . }}
+    <button class="gallery__item js-lightbox-trigger"
+            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
+            data-gallery="{{ $.File.ContentBaseName }}"
+            aria-label="Veure imatge en gran">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* ── Layout: info-box esquerra + contingut dreta ────────────────────────── */}}
+  <div class="course-single__layout">
+
+    {{/* Caixa lateral */}}
     <aside class="course-single__info-box">
 
       {{/* Preu — taula per nombre d'alumnes */}}
@@ -113,6 +142,7 @@
           <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar.</p>
         </div>
       {{ else if and .Params.price (gt (.Params.price | int) 0) }}
+        {{/* Fallback per a tallers amb preu únic (externs) */}}
         <div class="info-box__price">
           {{ if in (.Params.formats | default slice) "curs" }}
             <span class="course-card__format-badge">Recorregut</span>
@@ -147,7 +177,7 @@
           {{ if $isExtern }}
             <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            <a href="{{ printf "%s%s/espais/#com-arribar-hi" $siteRoot $lp }}">Nau Bostik, La Sagrera</a>
+            <a href="{{ "/espais/#com-arribar-hi" | relLangURL }}">Nau Bostik, La Sagrera</a>
           {{ end }}
         </span>
       </div>
@@ -259,43 +289,16 @@
               </a>
             {{ end }}
           {{ end }}
-          <a href="{{ printf "%s%s/regala/?taller=%s" $siteRoot $lp $courseSlug }}"
+          <a href="{{ "regala/" | relLangURL }}?taller={{ $courseSlug }}"
              class="btn btn--ghost" style="margin-top:var(--space-2);">
             Regala aquest taller →
           </a>
         </div>
 
       {{ end }}
-    </aside>{{/* fi info-box */}}
+    </aside>
 
-  </div>{{/* fi course-single__top */}}
-
-  {{/* ── Imatge principal — ample complet ──────────────────────────────────── */}}
-  {{ if .Params.image }}
-  <button class="course-single__cover js-lightbox-trigger"
-          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
-          data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="Veure imatge en gran">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
-  </button>
-  {{ end }}
-
-  {{/* Galeria secundària */}}
-  {{ with .Params.images }}
-  <div class="course-single__gallery">
-    {{ range . }}
-    <button class="gallery__item js-lightbox-trigger"
-            data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
-            data-gallery="{{ $.File.ContentBaseName }}"
-            aria-label="Veure imatge en gran">
-      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
-    </button>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  {{/* ── Cos — ample complet ─────────────────────────────────────────────── */}}
-  <div class="course-single__body">
+    {{/* Contingut principal */}}
     <div class="prose">
       {{ .Content }}
 
@@ -369,7 +372,8 @@
         </a>
       </div>
     </div>{{/* fi prose */}}
-  </div>{{/* fi course-single__body */}}
+
+  </div>{{/* fi course-single__layout */}}
 
 </div>{{/* fi course-single */}}
 {{ end }}
