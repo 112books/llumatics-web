@@ -557,10 +557,6 @@ button, input, select, textarea {
 .course-single__top {
   margin-left: 33.333%;
   padding: var(--space-10) var(--space-6) var(--space-8);
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: var(--space-12);
-  align-items: start;
 }
 
 .course-single__body {
@@ -570,9 +566,13 @@ button, input, select, textarea {
 .course-single__layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--space-12);
+  gap: var(--space-8);
   align-items: start;
   padding: var(--space-10) var(--space-6) var(--space-16);
+}
+
+.course-single__layout .prose {
+  max-width: none;
 }
 
 .course-single__info-box {
@@ -1647,6 +1647,66 @@ a.recorregut__tematic-link:hover {
 
 .pagination a:hover { border-color: var(--color-text); }
 .pagination .active { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
+
+/* ── Back to top ─────────────────────────────────────────────────────────── */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms, transform 300ms;
+  z-index: 50;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover { transform: translateY(-2px); }
+
+.back-to-top svg {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+
+.back-to-top__track {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 2.5;
+}
+
+.back-to-top__progress {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 131.95;
+  stroke-dashoffset: 131.95;
+  transition: stroke-dashoffset 80ms linear;
+}
+
+.back-to-top__arrow {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {

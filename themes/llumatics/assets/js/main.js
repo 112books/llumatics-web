@@ -410,4 +410,34 @@
     });
   }
 
+  // ── Back to top amb progrés de scroll ───────────────────────────────
+  var bttBtn      = document.getElementById('js-back-to-top');
+  var bttProgress = document.getElementById('js-btt-progress');
+
+  if (bttBtn) {
+    var circumference = 131.95; // 2 * π * 21 (r=21 en viewBox 48px)
+
+    function updateBtt() {
+      var scrollTop  = window.scrollY || document.documentElement.scrollTop;
+      var docHeight  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress   = docHeight > 0 ? scrollTop / docHeight : 0;
+
+      if (scrollTop > 150) {
+        bttBtn.classList.add('is-visible');
+      } else {
+        bttBtn.classList.remove('is-visible');
+      }
+
+      if (bttProgress) {
+        bttProgress.style.strokeDashoffset = circumference * (1 - progress);
+      }
+    }
+
+    window.addEventListener('scroll', updateBtt, { passive: true });
+
+    bttBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 })();
