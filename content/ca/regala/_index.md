@@ -7,4 +7,4 @@ layout: "gift"
 
 Regala l'experiència d'aprendre a veure a través de la fotografia.
 
-Els nostres vals-regal permeten que la persona que els rep triï el taller que més li interessa, en la data que li va millor. Sense caducitat durant 12 mesos.
+Els nostres vals-regal permeten que la persona que els rep triï el taller que més li interessa, en la data que li va millor. Vàlids durant 6 mesos des de la data de compra.

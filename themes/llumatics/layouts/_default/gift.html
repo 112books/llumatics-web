@@ -35,10 +35,22 @@
   {{/* Preview del val físic */}}
   <div class="gift-preview-section">
     <div class="gift-card-preview">
-      <div class="gift-card-preview__logo">Llumàtics</div>
-      <div class="gift-card-preview__amount">Val Regal</div>
-      <div class="gift-card-preview__label">
-        {{ i18n "gift_card_label" | default "Canjeable per qualsevol taller · Vàlid 12 mesos" }}
+      <div class="gift-card-preview__bg" aria-hidden="true">
+        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="">
+      </div>
+      <div class="gift-card-preview__content">
+        <div class="gift-card-preview__header">
+          <span class="gift-card-preview__brand">Llumàtics</span>
+          <span class="gift-card-preview__school">Escola de fotografia · Barcelona</span>
+        </div>
+        <div class="gift-card-preview__main">
+          <div class="gift-card-preview__title">{{ i18n "gift_card_title" | default "Val Regal" }}</div>
+          <div class="gift-card-preview__divider"></div>
+        </div>
+        <div class="gift-card-preview__footer">
+          <span class="gift-card-preview__validity">{{ i18n "gift_card_validity" | default "Vàlid 6 mesos" }}</span>
+          <span class="gift-card-preview__tag">{{ i18n "gift_card_any_workshop" | default "Qualsevol taller" }}</span>
+        </div>
       </div>
     </div>
     <p class="gift-info">
