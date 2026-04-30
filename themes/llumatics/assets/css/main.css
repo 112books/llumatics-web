@@ -994,6 +994,29 @@ button, input, select, textarea {
   margin-top: var(--space-8);
 }
 
+.site-footer__powered {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(200,100,80,0.15);
+  font-size: var(--text-xs);
+  color: rgba(255,220,210,0.35);
+  letter-spacing: 0.04em;
+}
+
+.site-footer__powered a {
+  color: #c87070;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.site-footer__powered a:hover { color: #e8a090; }
+
+.site-footer__powered-sep { opacity: 0.4; }
+
 .site-footer__bottom {
   padding-top: var(--space-6);
   border-top: 1px solid rgba(200,100,80,0.2);
