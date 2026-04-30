@@ -569,9 +569,10 @@ button, input, select, textarea {
 
 .course-single__layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 1fr 360px;
   gap: var(--space-12);
   align-items: start;
+  padding: var(--space-10) var(--space-6) var(--space-16);
 }
 
 .course-single__info-box {
@@ -955,8 +956,8 @@ button, input, select, textarea {
 .site-footer {
   position: relative;
   z-index: 1;
-  background: var(--color-text);
-  color: rgba(255,255,255,0.6);
+  background: #170c0c;
+  color: rgba(255,220,210,0.55);
   padding-block: var(--space-12);
   font-size: var(--text-sm);
 }
@@ -968,7 +969,7 @@ button, input, select, textarea {
   margin-bottom: var(--space-8);
 }
 
-.site-footer__brand { color: var(--color-bg); }
+.site-footer__brand { color: rgba(255,220,210,0.9); }
 
 .site-footer__tagline {
   font-size: var(--text-sm);
@@ -980,14 +981,14 @@ button, input, select, textarea {
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-bg);
+  color: #c87070;
   font-weight: 600;
   margin-bottom: var(--space-4);
 }
 
 .site-footer__links { display: flex; flex-direction: column; gap: var(--space-2); }
 
-.site-footer__links a:hover { color: var(--color-bg); }
+.site-footer__links a:hover { color: #e8a090; }
 
 .site-footer__heading--sub {
   margin-top: var(--space-8);
@@ -995,7 +996,7 @@ button, input, select, textarea {
 
 .site-footer__bottom {
   padding-top: var(--space-6);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(200,100,80,0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1655,6 +1656,8 @@ a.recorregut__tematic-link:hover {
 
   .lang-switcher__current { display: none; }
   .lang-switcher__current + .lang-switcher__sep { display: none; }
+  .site-logo__text { display: none; }
+  .course-single__top { margin-left: 0 !important; }
 
   .newsletter-form { flex-direction: column; }
   .site-footer__grid { grid-template-columns: 1fr; }
@@ -2444,8 +2447,8 @@ a.recorregut__tematic-link:hover {
   display: flex;
   align-items: center;
   gap: var(--space-8);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(200,100,80,0.2);
+  border-bottom: 1px solid rgba(200,100,80,0.2);
   padding-block: var(--space-8);
   margin-bottom: var(--space-8);
 }
