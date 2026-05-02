@@ -135,3 +135,8 @@ contact_anchor_details: "Contact"
 contact_anchor_form: "Write to us"
 contact_anchor_map: "How to get here"
 contact_anchor_transport: "Public transport"
+
+# Footer — legal links
+legal_notice: "Legal notice"
+privacy_policy: "Privacy policy"
+cookie_policy: "Cookie policy"
