@@ -79,10 +79,13 @@ footer_tagline: "Photography as process and way of seeing."
 footer_sub: "Photography school in Barcelona."
 footer_legal: "Content from this website may not be reproduced without permission."
 rights_reserved: "All rights reserved."
+footer_no_cookies: "No tracking cookies."
 
 # Contact page
 how_to_get_here: "Getting here"
 open_in_osm: "Open in map"
+map_consent_text: "The map is interactive (OpenStreetMap). Click to load it."
+map_consent_btn: "Show map"
 transport_motto: "Llumàtics always recommends public transport"
 transport_walk_8_10: "8–10 min walk"
 transport_walk_10: "10 min walk"

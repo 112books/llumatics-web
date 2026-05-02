@@ -1,7 +1,7 @@
 ---
 title: "Política de cookies"
 description: "Política de cookies de Llumàtics: quines cookies s'utilitzen i com gestionar-les."
-date: 2026-04-21
+date: 2026-05-02
 draft: false
 ---
 
@@ -13,28 +13,37 @@ Una cookie és un petit fitxer de text que un lloc web emmagatzema al vostre nav
 
 ## Cookies que utilitza aquest web
 
-Aquest web està construït amb **Hugo** (generador de llocs estàtics) i allotjat a **GitHub Pages**. No utilitza servidor propi ni llenguatge de servidor (no hi ha PHP, WordPress ni base de dades). Això significa que el nombre de cookies és molt reduït.
+Aquest web està construït amb **Hugo** (generador de llocs estàtics). No utilitza WordPress, bases de dades ni scripts de seguiment. Les fonts tipogràfiques estan autoallotjades al nostre servidor (cap petició a Google Fonts).
 
-### Cookies de tercers
+### Analítica
 
-| Proveïdor | Cookie | Finalitat | Durada |
-|-----------|--------|-----------|--------|
-| **Tally.so** | Cookies tècniques de sessió | Necessàries per al funcionament dels formularis de contacte empotrats al web | Sessió |
-| **OpenStreetMap** | Cookies tècniques de sessió | Necessàries per mostrar el mapa interactiu de la pàgina de contacte | Sessió |
+Utilitzem **GoatCounter** per comptar visites de manera anònima. GoatCounter **no estableix cap cookie** i no recull dades personals. [goatcounter.com/help/privacy](https://www.goatcounter.com/help/privacy)
+
+### Formularis
+
+Quan envieu el formulari de contacte, la petició es processa per **web3forms.com**. Web3forms rep l'adreça IP i el contingut del missatge per enviar el correu, però **no estableix cookies al vostre navegador**.
+
+### Mapa interactiu
+
+La pàgina de contacte conté un mapa d'**OpenStreetMap**. El mapa **no es carrega per defecte**: heu de fer clic al botó "Mostra el mapa" per activar-lo. Si l'activeu, OpenStreetMap pot emmagatzemar cookies tècniques de sessió al vostre navegador.
 
 ### Cookies pròpies
 
-Aquest web **no genera cookies pròpies**.
+Aquest web **no genera cap cookie pròpia**.
 
-### Cookies d'analítica i publicitat
+### Resum
 
-Aquest web **no utilitza Google Analytics, píxels de seguiment, ni cap cookie de publicitat o màrqueting**.
+| Proveïdor | Cookie | Consentiment requerit |
+|-----------|--------|----------------------|
+| GoatCounter (analítica) | Cap | No |
+| web3forms (formulari) | Cap | No |
+| OpenStreetMap (mapa) | Sessió (si l'activeu) | Activació manual |
 
 ---
 
-## Base jurídica
+## Conclusió
 
-Les cookies tècniques de sessió que utilitzen Tally i OpenStreetMap són estrictament necessàries per al funcionament dels serveis empotrats. No requereixen consentiment previ d'acord amb l'article 22.2 de la LSSICE.
+En condicions normals d'ús d'aquest web, **cap cookie és establerta al vostre navegador** sense acció explícita vostra. No és necessari cap bàner de cookies perquè no hi ha tracking de tercers actiu en carregar la pàgina.
 
 ---
 
@@ -47,10 +56,8 @@ Podeu configurar el vostre navegador per bloquejar o eliminar cookies en qualsev
 - **Safari:** Preferències → Privadesa → Gestionar les dades del lloc web
 - **Edge:** Configuració → Cookies i permisos del lloc → Cookies i dades emmagatzemades
 
-Tingueu en compte que bloquejar les cookies de tercers pot impedir el correcte funcionament dels formularis o del mapa de la pàgina de contacte.
-
 ---
 
-## Actualitzacions d'aquesta política
+## Actualitzacions
 
-Ens reservem el dret d'actualitzar aquesta política si el stack tecnològic del web canvia (per exemple, si s'incorporen serveis d'analítica o nous formularis). La data de l'última revisió apareix a sota del títol d'aquesta pàgina.
+Ens reservem el dret d'actualitzar aquesta política si el stack tecnològic del web canvia. La data de revisió apareix a sota del títol d'aquesta pàgina.

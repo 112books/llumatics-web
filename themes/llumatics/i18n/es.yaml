@@ -79,10 +79,13 @@ footer_tagline: "La fotografía como proceso y forma de ver."
 footer_sub: "Escuela de fotografía en Barcelona."
 footer_legal: "Los contenidos de esta web no pueden reproducirse sin autorización."
 rights_reserved: "Todos los derechos reservados."
+footer_no_cookies: "Sin cookies de seguimiento."
 
 # Página de contacto
 how_to_get_here: "Cómo llegar"
 open_in_osm: "Abrir en el mapa"
+map_consent_text: "El mapa es interactivo (OpenStreetMap). Haz clic para cargarlo."
+map_consent_btn: "Mostrar el mapa"
 transport_motto: "Llumàtics apuesta siempre por el transporte público"
 transport_walk_8_10: "8–10 min andando"
 transport_walk_10: "10 min andando"

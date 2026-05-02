@@ -84,6 +84,7 @@
     <div class="site-footer__bottom">
       <span>&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "rights_reserved" | default "Tots els drets reservats." }}</span>
       <span>{{ i18n "footer_legal" | default "Els continguts d'aquesta web no es poden reproduir sense autorització." }}</span>
+      <span class="site-footer__privacy-note">{{ i18n "footer_no_cookies" | default "Sense cookies de seguiment." }} <a href="{{ printf "%s%s/cookies/" $siteRoot $lp }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></span>
     </div>
 
     <div class="site-footer__powered">

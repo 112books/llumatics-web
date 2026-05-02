@@ -54,7 +54,7 @@ No recollim dades especialment protegides (salut, ideologia, origen racial, etc.
 Les vostres dades **no es cedeixen a tercers**, excepte:
 
 - Quan existeixi una obligació legal
-- Al proveïdor del servei de formularis (**Formspree Inc.**), que actua com a encarregat del tractament i gestiona l'enviament dels missatges. Podeu consultar la seva política de privacitat a [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy).
+- Al proveïdor del servei de formularis (**web3forms.com**), que actua com a encarregat del tractament i gestiona l'enviament dels missatges. Podeu consultar la seva política de privacitat a [web3forms.com/privacy](https://web3forms.com/privacy).
 
 ---
 

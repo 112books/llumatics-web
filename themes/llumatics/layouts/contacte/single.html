@@ -166,12 +166,16 @@
       <section class="contact-map" id="com-arribar-hi">
         <h2 class="contact-section__title">{{ i18n "how_to_get_here" | default "Com arribar-hi" }}</h2>
         <div class="contact-map__embed">
+          <div class="map-consent" id="map-consent">
+            <p class="map-consent__text">{{ i18n "map_consent_text" | default "El mapa és interactiu (OpenStreetMap). Fes clic per carregar-lo." }}</p>
+            <button class="map-consent__btn btn btn--secondary" onclick="loadMap()">{{ i18n "map_consent_btn" | default "Mostra el mapa" }}</button>
+          </div>
           <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=2.1885%2C41.4215%2C2.1975%2C41.4275&amp;layer=mapnik&amp;marker=41.424371%2C2.192952"
+            id="osm-map"
+            data-src="https://www.openstreetmap.org/export/embed.html?bbox=2.1885%2C41.4215%2C2.1975%2C41.4275&amp;layer=mapnik&amp;marker=41.424371%2C2.192952"
             width="100%"
             height="280"
-            style="border:0"
-            loading="lazy"
+            style="border:0;display:none"
             title="Mapa Nau Bostik, Ferran Turné 1-11, Barcelona"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -180,6 +184,15 @@
           <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
         </p>
       </section>
+      <script>
+      function loadMap() {
+        var iframe = document.getElementById('osm-map');
+        var consent = document.getElementById('map-consent');
+        iframe.src = iframe.dataset.src;
+        iframe.style.display = 'block';
+        consent.style.display = 'none';
+      }
+      </script>
 
     </aside>
 
