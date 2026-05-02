@@ -126,3 +126,9 @@ status_past: "Completed"
 cta_more_info: "View workshop"
 section_agenda_past_title: "Session history"
 agenda_no_upcoming: "No upcoming dates at the moment. Write to us to arrange a session."
+
+# Contact — anchor nav
+contact_anchor_details: "Contact"
+contact_anchor_form: "Write to us"
+contact_anchor_map: "How to get here"
+contact_anchor_transport: "Public transport"
