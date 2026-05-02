@@ -363,6 +363,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Títols de tallers:** atractius i suggerents, no tècnics ni descriptius secs.
 - **Tone of voice:** directe, sense floritures, expert però accessible. Res de corporatiu.
 - **Preus:** sense menció d'IVA. Remetre a FAQ per a facturació.
+- **⚠️ `.htaccess` — NO afegir redirect HTTPS.** Dinahosting fa SSL termination al proxy: Apache veu HTTP tot i que el client ve per HTTPS. Afegir `RewriteCond %{HTTPS} off` causa bucle infinit de redireccions i cau el site. Dinahosting ja força HTTPS a nivell de servidor.
 
 ---
 
