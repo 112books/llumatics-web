@@ -17,6 +17,14 @@
 {{/* Favicon */}}
 <link rel="icon" type="image/png" href="{{ "images/logo.png" | absURL }}">
 
+{{/* humans.txt */}}
+<link rel="author" href="{{ "humans.txt" | absURL }}">
+
+{{/* GoatCounter — sense cookies, GDPR-compliant */}}
+{{ with site.Params.goatcounterSite }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{ end }}
+
 {{/* Hreflang per SEO multilingüe */}}
 {{ range .Translations }}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">

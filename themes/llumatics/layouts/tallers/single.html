@@ -363,6 +363,15 @@
              class="btn btn--ghost" style="margin-top:var(--space-2);">
             Regala aquest taller →
           </a>
+          <p class="info-box__newsletter-note">
+            O
+            {{ if site.Params.tallyFormNewsletter }}
+              <a href="https://tally.so/r/{{ site.Params.tallyFormNewsletter }}" target="_blank" rel="noopener">subscriu-te al butlletí</a>
+            {{ else }}
+              <a href="{{ "contacte/" | relLangURL }}#formulari">subscriu-te al butlletí</a>
+            {{ end }}
+            per estar al cas de quan es programi.
+          </p>
         </div>
 
       {{ end }}

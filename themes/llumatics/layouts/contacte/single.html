@@ -10,6 +10,15 @@
     {{ with .Params.subtitle }}<p class="contact-header__subtitle">{{ . }}</p>{{ end }}
   </header>
 
+  {{/* ── Navegació d'ancores ─────────────────────────────────────────────── */}}
+  <nav class="contact-anchors" aria-label="Seccions de la pàgina">
+    <a class="contact-anchor__link" href="#dades">{{ i18n "contact_anchor_details" | default "Contacte" }}</a>
+    <a class="contact-anchor__link" href="#formulari">{{ i18n "contact_anchor_form" | default "Escriu-nos" }}</a>
+    <a class="contact-anchor__link" href="#com-arribar-hi">{{ i18n "contact_anchor_map" | default "Com arribar-hi" }}</a>
+    <a class="contact-anchor__link" href="#transport">{{ i18n "contact_anchor_transport" | default "Transport públic" }}</a>
+    <a class="contact-anchor__link" href="#faq">FAQ</a>
+  </nav>
+
   {{/* ── Layout 2 columnes: formulari (esquerra) + info+mapa (dreta) ────── */}}
   <div class="contact-layout">
 
@@ -129,7 +138,7 @@
     </section>
 
     {{/* ── Sidebar: dades + mapa ─────────────────────────────────────────── */}}
-    <aside class="contact-sidebar">
+    <aside class="contact-sidebar" id="dades">
 
       <div class="contact-details">
         <a href="mailto:{{ site.Params.contactEmail }}" class="contact-detail">
@@ -154,7 +163,7 @@
         </div>
       </div>
 
-      <section class="contact-map">
+      <section class="contact-map" id="com-arribar-hi">
         <h2 class="contact-section__title">{{ i18n "how_to_get_here" | default "Com arribar-hi" }}</h2>
         <div class="contact-map__embed">
           <iframe
@@ -177,7 +186,7 @@
   </div>{{/* fi contact-layout */}}
 
   {{/* ── Cards de transport ──────────────────────────────────────────────── */}}
-  <section class="contact-transport">
+  <section class="contact-transport" id="transport">
     <h2 class="contact-section__title">{{ i18n "transport_motto" | default "Llumàtics aposta sempre per el transport públic" }}</h2>
     <div class="transport-grid">
 
@@ -270,121 +279,6 @@
       </div>
 
     </div>
-  </section>
-
-  {{/* ── Formulari de contacte ───────────────────────────────────────────── */}}
-  <section class="contact-form-section" id="formulari">
-    <h2 class="contact-section__title">{{ i18n "contact_form_title" | default "Escriu-nos" }}</h2>
-    <p class="contact-form-section__lead">{{ i18n "contact_form_lead" | default "Intentem contestar en un màxim de 48 hores en dies feiners." }}</p>
-
-    {{ if site.Params.web3formsKey }}
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-      <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
-      <input type="hidden" name="subject" value="Contacte Llumàtics">
-      <input type="hidden" name="from_name" value="Web Llumàtics">
-      <input type="checkbox" name="botcheck" style="display:none;">
-
-      {{/* Tipus de consulta */}}
-      <fieldset class="contact-form__fieldset">
-        <legend class="contact-form__legend">{{ i18n "inquiry_type" | default "Tipus de consulta" }}</legend>
-        <div class="contact-form__radios">
-          <label class="contact-form__radio">
-            <input type="radio" name="tipus" value="consulta-general" checked>
-            <span>{{ i18n "inquiry_general" | default "Consulta general" }}</span>
-          </label>
-          <label class="contact-form__radio">
-            <input type="radio" name="tipus" value="sol·licitar-taller" id="radio-taller">
-            <span>{{ i18n "inquiry_workshop" | default "Sol·licitar un taller" }}</span>
-          </label>
-        </div>
-      </fieldset>
-
-      {{/* Dades personals */}}
-      <div class="contact-form__row">
-        <div class="contact-form__field">
-          <label class="contact-form__label" for="nom">{{ i18n "form_name" | default "Nom i cognoms" }} <span aria-hidden="true">*</span></label>
-          <input class="contact-form__input" type="text" id="nom" name="nom" required autocomplete="name">
-        </div>
-        <div class="contact-form__field">
-          <label class="contact-form__label" for="email">{{ i18n "form_email" | default "Correu electrònic" }} <span aria-hidden="true">*</span></label>
-          <input class="contact-form__input" type="email" id="email" name="email" required autocomplete="email">
-        </div>
-      </div>
-
-      {{/* Camps de taller — visibles només si s'escull "Sol·licitar un taller" */}}
-      <div class="contact-form__taller-fields" id="taller-fields" hidden>
-
-        <div class="contact-form__field">
-          <label class="contact-form__label" for="taller">{{ i18n "form_workshop_label" | default "Taller d'interès" }}</label>
-          <select class="contact-form__select" id="taller" name="taller">
-            <option value="">{{ i18n "form_workshop_placeholder" | default "— Escull un taller —" }}</option>
-            {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
-            {{ range sort $tallers ".Title" "asc" }}
-              {{ if not .Params.extern }}
-              <option value="{{ .Title }}">{{ .Title }}{{ if .Params.preu_1 }} — des de {{ .Params.preu_1 }}€{{ end }}</option>
-              {{ end }}
-            {{ end }}
-          </select>
-        </div>
-
-        <div class="contact-form__row">
-          <div class="contact-form__field">
-            <label class="contact-form__label" for="data">{{ i18n "form_date" | default "Data ideal" }}</label>
-            <input class="contact-form__input" type="date" id="data" name="data">
-          </div>
-          <div class="contact-form__field">
-            <label class="contact-form__label" for="horari">{{ i18n "form_schedule" | default "Horari preferit" }}</label>
-            <select class="contact-form__select" id="horari" name="horari">
-              <option value="mati">{{ i18n "schedule_morning" | default "Matí (10–14h)" }}</option>
-              <option value="tarda">{{ i18n "schedule_afternoon" | default "Tarda (16–18h)" }}</option>
-              <option value="indiferent" selected>{{ i18n "schedule_any" | default "Indiferent" }}</option>
-            </select>
-          </div>
-          <div class="contact-form__field">
-            <label class="contact-form__label" for="alumnes">{{ i18n "form_students" | default "Nombre d'alumnes" }}</label>
-            <select class="contact-form__select" id="alumnes" name="alumnes">
-              <option value="1">1 {{ i18n "form_student_singular" | default "alumne" }}</option>
-              <option value="2">2 {{ i18n "form_student_plural" | default "alumnes" }}</option>
-              <option value="3">3 {{ i18n "form_student_plural" | default "alumnes" }}</option>
-              <option value="4">4 {{ i18n "form_student_plural" | default "alumnes" }}</option>
-            </select>
-          </div>
-        </div>
-
-      </div>
-
-      {{/* Missatge */}}
-      <div class="contact-form__field">
-        <label class="contact-form__label" for="missatge">{{ i18n "form_message" | default "Missatge" }}</label>
-        <textarea class="contact-form__textarea" id="missatge" name="missatge" rows="4"></textarea>
-      </div>
-
-      <input type="hidden" name="_language" value="{{ .Language.Lang }}">
-
-      <button type="submit" class="btn btn--primary">{{ i18n "form_send" | default "Enviar" }}</button>
-
-    </form>
-
-    {{/* JS mínim per mostrar/amagar camps de taller */}}
-    <script>
-    (function(){
-      var radios = document.querySelectorAll('input[name="tipus"]');
-      var tallerFields = document.getElementById('taller-fields');
-      radios.forEach(function(r){
-        r.addEventListener('change', function(){
-          tallerFields.hidden = (this.value !== 'sol·licitar-taller');
-        });
-      });
-    })();
-    </script>
-
-    {{ else }}
-    <div class="contact-form-placeholder">
-      <p>{{ i18n "contact_form_soon" | default "El formulari s'activarà aviat. Mentrestant, escriu-nos directament:" }}</p>
-      <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn--primary btn--lg">{{ site.Params.contactEmail }}</a>
-    </div>
-    {{ end }}
-
   </section>
 
   {{/* ── FAQ ────────────────────────────────────────────────────────────── */}}

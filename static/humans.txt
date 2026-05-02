@@ -16,6 +16,8 @@ Idiomes: Català, Castellà, Anglès
 
 Hugo (gohugo.io) — generador de llocs estàtics
 Nau Bostik (naubostik.com) — espai on opera l'escola
+OpenStreetMap — openstreetmap.org
+web3forms — web3forms.com
 
 /* TECHNOLOGY COLOPHON */
 
