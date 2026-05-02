@@ -1,5 +1,9 @@
-# Dinahosting ja gestiona HTTPS i www→no-www a nivell de servidor.
-# Aquí només configurem opcions específiques del site estàtic.
+# Forçar HTTPS (301 permanent)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Opcions específiques del site estàtic.
 
 # Pàgina d'error 404 personalitzada
 ErrorDocument 404 /404.html
