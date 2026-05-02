@@ -414,29 +414,42 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Pendent / Properes sessions
 
-- [ ] Revisió de textos de tots els tallers (CA)
-- [ ] PDF alumnes: model en preparació (usuari). Pipeline: Make.com → Pandoc → email. Pàgines privades ja definides.
+### Infraestructura i deploy
+- [ ] VPS: donar permís d'escriptura a `/admin/` per al PHP del dashboard: `chmod 775 /ruta/public/admin/`
+- [ ] VPS: verificar que "↻ actualitzar" al dashboard funciona (PHP + cURL requerits, no funciona a GitHub Pages)
+- [ ] Branca `develop` per a staging abans de pujar a producció
+
+### Formularis i integracions
 - [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
 - [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
-- [x] Cercador intern: JSON index Hugo + overlay vanilla JS + icona lupa al menú
-- [x] Pàgina Regala: questionaire de recomanació + icona Heroicons + link des de fitxes de taller
 - [ ] Val regal — pipeline pendent:
   - [ ] Connectar webhook Tally → Make.com (URL: `https://hook.eu1.make.com/oq2j1m7ya89as3qtl32lxnvmxgq8qthg`)
   - [ ] Configurar emails a Make.com (notificació Joan + confirmació comprador)
-  - [ ] Afegir ID formulari Tally a `hugo.toml` → `tallyFormGiftVoucher`
   - [ ] Dissenyar i generar PDF bonic (Make.com + plantilla)
-- [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`
-- [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
+- [ ] PDF alumnes: pipeline Make.com → Pandoc → email. Pàgines privades ja definides.
+
+### Contingut
+- [ ] Revisió de textos de tots els tallers (CA)
+- [ ] Caffenol i Wineol — tallers independents per fer (com el Guinneol)
+- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
+- [ ] Tallers passos 5 i 8 del recorregut: crear fitxes quan estiguin llestes
+- [ ] `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
+- [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
+- [ ] `archetypes/tallers.md` — actualitzar amb el nou frontmatter
+
+### Qualitat i acabats
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
-- [ ] Tallers passos 5 i 8 del recorregut: crear fitxes quan estiguin llestes
-- [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
-- [ ] Branca `develop` per a staging abans de pujar a producció
-- [ ] Caffenol i Wineol — tallers independents per fer (com el Guinneol)
-- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
-- [ ] `archetypes/tallers.md` — actualitzar amb el nou frontmatter
-- [ ] `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
+
+### Fet aquesta sessió (2026-05-02)
+- [x] Dashboard `/admin/` amb estadístiques GoatCounter (password: `llumatics`)
+- [x] GoatCounter tracking a totes les pàgines (`goatcounterSite = "llumatics"`)
+- [x] robots.txt custom + humans.txt + `<link rel="author">`
+- [x] 404: el "404" ara és visible + eyebrow "Error 404 · Vel·lada total"
+- [x] Pàgina contacte: formulari duplicat eliminat, layout 2 columnes, anchor nav darkroom
+- [x] Anchor nav contacte traduïda CA/ES/EN
+- [x] Nota newsletter sota botó "Avisa'm" a les fitxes de taller
 
 ---
 
