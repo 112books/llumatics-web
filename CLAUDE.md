@@ -420,7 +420,16 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - [ ] Branca `develop` per a staging abans de pujar a producció
 
 ### Formularis i integracions
-- [ ] Formularis Tally: crear i omplir IDs a `hugo.toml` — `tallyFormNewsletter`, `tallyFormAvisa`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
+
+#### "Avisa'm" per taller — flux complet (PRIORITAT ALTA)
+El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configurar els serveis:
+1. **Brevo:** crear llista "Avisos de tallers" + atribut de contacte `TALLER` (text)
+2. **Tally:** crear formulari "Avisa'm" amb camp email + camp ocult `taller` (captura `@taller` de la URL) + integració nativa → Brevo (mapeja `taller` → atribut `TALLER`)
+3. **Hugo:** omplir `tallyFormAvisa = "XXXX"` a `hugo.toml` amb l'ID del formulari Tally
+4. **Brevo automation:** disparador = contacte afegit a la llista → envia email de confirmació
+5. **Waitlist manual:** importar `waitlist.csv` a Brevo quan el formulari estigui actiu (la Nuria Graell Bullich ja hi és anotada per al taller `retrat-6x6`)
+
+- [ ] Formularis Tally restants: `tallyFormNewsletter`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
 - [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
 - [ ] Val regal — pipeline pendent:
   - [ ] Connectar webhook Tally → Make.com (URL: `https://hook.eu1.make.com/oq2j1m7ya89as3qtl32lxnvmxgq8qthg`)
@@ -450,6 +459,9 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - [x] Pàgina contacte: formulari duplicat eliminat, layout 2 columnes, anchor nav darkroom
 - [x] Anchor nav contacte traduïda CA/ES/EN
 - [x] Nota newsletter sota botó "Avisa'm" a les fitxes de taller
+- [x] GDPR/LOPD: fonts autoallotjades (Inter + Playfair Display), OSM mapa lazy-load
+- [x] Pàgines legals en ES i EN (avís legal, privacitat, cookies)
+- [x] `waitlist.csv` (no a git) — Nuria Graell Bullich apuntada per a `retrat-6x6`
 
 ---
 
