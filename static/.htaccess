@@ -1,7 +1,5 @@
-# Forçar HTTPS (301 permanent)
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Dinahosting gestiona HTTPS a nivell de servidor (SSL termination al proxy).
+# NO afegir redirect HTTPS aquí — causaria bucle infinit de redireccions.
 
 # Opcions específiques del site estàtic.
 
