@@ -1,0 +1,27 @@
+/* TEAM */
+
+Fotografia i docència: Joan Linux Martínez
+Lloc: Barcelona, Catalunya
+Instagram: https://www.instagram.com/llumatics
+Web personal: https://about.pocallum.cat
+
+/* SITE */
+
+Nom: Llumàtics — Escola de fotografia
+URL: https://llumatics.com
+Descripció: Escola de fotografia analògica i química a Barcelona. Tallers de petit grup, laboratori fosc i formació tècnica.
+Idiomes: Català, Castellà, Anglès
+
+/* THANKS */
+
+Hugo (gohugo.io) — generador de llocs estàtics
+Nau Bostik (naubostik.com) — espai on opera l'escola
+OpenStreetMap — openstreetmap.org
+web3forms — web3forms.com
+
+/* TECHNOLOGY COLOPHON */
+
+Standards: HTML5, CSS3
+Components: Hugo, Vanilla JS, Vanilla CSS
+Hosting: Dinahosting VPS + GitHub Pages (staging)
+Software: Built with Claude Code

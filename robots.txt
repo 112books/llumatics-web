@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /tallers/*/privat/
+Disallow: /es/tallers/*/privat/
+Disallow: /en/tallers/*/privat/
+
+Sitemap: https://112books.github.io/llumatics-web/sitemap.xml
