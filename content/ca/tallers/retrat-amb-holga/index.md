@@ -93,6 +93,7 @@ Al final, escaneig de comprovació dels fotogrames per veure els resultats en se
 
 ## No inclòs
 
+- Model (disponible per +50€, o porta el teu / la teva)
 - Rodets addicionals (+5€/rodet de 120)
 - Escaneig complet d'alta resolució (disponible com a servei a Llumàtics des de 15€)
 

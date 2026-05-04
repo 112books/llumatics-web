@@ -42,7 +42,7 @@
 
         {{/* Language switcher — sempre visible */}}
         <div class="lang-switcher">
-          {{ range .Site.Languages }}
+          {{ range site.Languages }}
             {{ $lang := .Lang }}
             {{ if eq $lang $.Language.Lang }}
               <span class="lang-switcher__current" aria-current="true">{{ $lang | upper }}</span>
