@@ -19,6 +19,7 @@ durada_hores: 4
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
 sota_demanda: true
+preu_model: 50
 extern: false
 
 objective: "Hacer retratos expresivos en medio formato 120 con Holga, entender las limitaciones y posibilidades de la cámara, y revelar y escanear el carrete al final de la sesión."

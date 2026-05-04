@@ -211,6 +211,9 @@
             </tbody>
           </table>
           <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar.</p>
+          {{ with .Params.preu_model }}
+          <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-2); line-height:1.5;">+ {{ . }}€ {{ i18n "preu_model_note" }}</p>
+          {{ end }}
         </div>
       {{ else if and .Params.price (gt (.Params.price | int) 0) }}
         <div class="info-box__price">
@@ -247,7 +250,7 @@
           {{ if $isExtern }}
             <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            <a href="{{ "/espais/#com-arribar-hi" | relLangURL }}">Nau Bostik, La Sagrera</a>
+            <a href="{{ "/contacte/#com-arribar-hi" | relLangURL }}">Llumàtics</a>
           {{ end }}
         </span>
       </div>

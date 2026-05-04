@@ -140,3 +140,6 @@ contact_anchor_transport: "Public transport"
 legal_notice: "Legal notice"
 privacy_policy: "Privacy policy"
 cookie_policy: "Cookie policy"
+
+# Workshop — optional model
+preu_model_note: "model (optional) — or bring your own"

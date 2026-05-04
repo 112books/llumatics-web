@@ -140,3 +140,6 @@ contact_anchor_transport: "Transport públic"
 legal_notice: "Avís legal"
 privacy_policy: "Política de privacitat"
 cookie_policy: "Política de cookies"
+
+# Taller — model opcional
+preu_model_note: "model (opcional) — o porta'l/la tu"

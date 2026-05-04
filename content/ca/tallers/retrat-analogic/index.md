@@ -22,6 +22,7 @@ lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 4
 sota_demanda: true
+preu_model: 50
 
 # Fitxa pedagògica
 objective: "Retratar una persona en plató amb llum de flaix analògica, controlant exposició, temperatura de color i relació amb el model."

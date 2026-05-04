@@ -22,6 +22,7 @@ lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 4
 sota_demanda: true
+preu_model: 50
 
 # Fitxa pedagògica
 objective: "Fer retrat en format 6×6 de manera conscient: entendre com el format quadrat i el visor de cintura canvien la composició, el ritme de treball i la relació amb el model."

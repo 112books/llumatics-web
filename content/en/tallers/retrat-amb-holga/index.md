@@ -19,6 +19,7 @@ durada_hores: 4
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
 sota_demanda: true
+preu_model: 50
 extern: false
 
 objective: "Make expressive medium format portraits with the Holga, understand the camera's limitations and possibilities, and develop and scan the roll at the end of the session."

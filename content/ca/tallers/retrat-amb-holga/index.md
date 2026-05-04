@@ -21,6 +21,7 @@ durada_hores: 4
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
 sota_demanda: true
+preu_model: 50
 extern: false
 
 # Fitxa pedagògica

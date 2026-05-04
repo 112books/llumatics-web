@@ -18,6 +18,7 @@ duration: "4 hores"
 sessions: 1
 price: 85
 max_places: 4
+preu_model: 50
 location: "Nau Bostik, Barcelona"
 extern: false
 
