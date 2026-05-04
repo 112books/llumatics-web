@@ -418,7 +418,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 ### Infraestructura i deploy
 - [ ] VPS: donar permís d'escriptura a `/admin/` per al PHP del dashboard: `chmod 775 /ruta/public/admin/`
 - [ ] VPS: verificar que "↻ actualitzar" al dashboard funciona (PHP + cURL requerits, no funciona a GitHub Pages)
-- [ ] Branca `develop` per a staging abans de pujar a producció
+- [x] Branca `develop` per a staging — ja configurada
 
 ### Formularis i integracions
 
@@ -447,10 +447,26 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
 - [ ] `archetypes/tallers.md` — actualitzar amb el nou frontmatter
 
+#### Tallers nous a crear (idees apuntades)
+- [ ] **Edició d'imatges fotoquímiques** — retoc digital específic per a digitalitzacions de negatius i positius analògics (Lightroom/Capture One enfocats a film)
+- [ ] **Il·luminació bàsica** — fonaments de llum en plató per a retrat analògic: flaixos, modificadors i relació llum/ombra
+
 ### Qualitat i acabats
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
+
+### Fet aquesta sessió (2026-05-04)
+- [x] Tallers de retrat: camp `preu_model: 50` (CA/ES/EN) — model opcional +50€ o el porta l'alumne
+- [x] Info-box tallers: fila "Model" explícita (+50€ opcional / o portes el teu·la teva)
+- [x] Secció "No inclòs" dels 3 tallers de retrat: afegida línia de model
+- [x] Tallers info-box: "Lloc" → link "Llumàtics" amb color accent + subratllat, apunta a `/contacte/#com-arribar-hi`
+- [x] Pàgina contacte: bloc dades (adreça/correu/instagram) mogut sota "Com arribar-hi", ordre adreça → correu → instagram
+- [x] Pàgina `/gracies/` (CA/ES/EN, noindex) amb missatge contextual per `?from=contacte` i `?from=newsletter`
+- [x] Formulari contacte: redirect a `/gracies/?from=contacte` via web3forms
+- [x] Newsletter: redirect a `/gracies/?from=newsletter` (en lloc de missatge inline)
+- [x] header.html: `.Site.Languages` → `site.Languages` (deprecation Hugo v0.156)
+- [x] Flux de branques: sincronització `develop` ↔ `main` regularitzada
 
 ### Fet aquesta sessió (2026-05-02)
 - [x] Dashboard `/admin/` amb estadístiques GoatCounter (password: `llumatics`)
