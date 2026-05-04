@@ -211,9 +211,6 @@
             </tbody>
           </table>
           <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar.</p>
-          {{ with .Params.preu_model }}
-          <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-2); line-height:1.5;">+ {{ . }}€ {{ i18n "preu_model_note" }}</p>
-          {{ end }}
         </div>
       {{ else if and .Params.price (gt (.Params.price | int) 0) }}
         <div class="info-box__price">
@@ -244,13 +241,20 @@
       </div>
       {{ end }}
 
+      {{ with .Params.preu_model }}
+      <div class="info-box__row">
+        <span class="info-box__label">Model</span>
+        <span class="info-box__value" style="text-align:right;">{{ i18n "preu_model_note_label" | default "No inclòs" }}<br><span style="font-size:var(--text-xs); color:var(--color-text-muted);">+{{ . }}€ {{ i18n "preu_model_note_option" | default "opcional, o portes el teu" }}</span></span>
+      </div>
+      {{ end }}
+
       <div class="info-box__row">
         <span class="info-box__label">Lloc</span>
         <span class="info-box__value">
           {{ if $isExtern }}
-            <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
+            <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener" style="color:var(--color-accent); text-decoration:underline;">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            <a href="{{ "/contacte/#com-arribar-hi" | relLangURL }}">Llumàtics</a>
+            <a href="{{ "/contacte/#com-arribar-hi" | relLangURL }}" style="color:var(--color-accent); text-decoration:underline;">Llumàtics</a>
           {{ end }}
         </span>
       </div>

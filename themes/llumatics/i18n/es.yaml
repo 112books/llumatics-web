@@ -143,3 +143,5 @@ cookie_policy: "Política de cookies"
 
 # Taller — modelo opcional
 preu_model_note: "modelo (opcional) — o lo/la traes tú"
+preu_model_note_label: "No incluido"
+preu_model_note_option: "opcional, o lo/la traes tú"

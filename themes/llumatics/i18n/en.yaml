@@ -143,3 +143,5 @@ cookie_policy: "Cookie policy"
 
 # Workshop — optional model
 preu_model_note: "model (optional) — or bring your own"
+preu_model_note_label: "Not included"
+preu_model_note_option: "optional, or bring your own"
