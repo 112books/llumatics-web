@@ -87,9 +87,8 @@
         var data = await res.json();
 
         if (data.success) {
-          msg.textContent  = 'Subscripció confirmada. Gràcies!';
-          msg.style.color  = '#C8A96E';
-          btn.style.display = 'none';
+          var base = document.documentElement.lang === 'ca' ? '' : '/' + document.documentElement.lang;
+          window.location.href = base + '/gracies/?from=newsletter';
         } else {
           throw new Error('error');
         }
