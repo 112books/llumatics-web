@@ -65,5 +65,6 @@ En aquest taller treballem al plató de Llumàtics: fons de paper, flaixos de qu
 
 ## No inclòs
 
+- Model (disponible per +50€, o porta el teu / la teva)
 - Revelat del carret (disponible com a afegit, +20€, o al taller de Revelat B/N)
 - Còpies en paper dels fotogrames (taller de Còpies en paper)

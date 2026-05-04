@@ -70,5 +70,6 @@ En aquest taller treballem amb model. Primera part: repassem la tècnica i la re
 
 ## No inclòs
 
+- Model (disponible per +50€, o porta el teu / la teva)
 - Rodet addicional de 120 (+12€)
 - Còpies en paper dels fotogrames (taller de Còpies en paper)
