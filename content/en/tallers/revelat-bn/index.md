@@ -81,6 +81,6 @@ Each participant works with two rolls. The first is developed at standard — as
 
 ## Not included
 
-- Additional rolls (available at Llumàtics, ~€5/roll)
+- Additional rolls (available at Llumàtics, €12/roll)
 - Paper prints of the negatives (Darkroom Printing workshop)
 - Digitisation (optional, +€15)

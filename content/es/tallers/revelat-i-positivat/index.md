@@ -72,5 +72,5 @@ No hace falta experiencia previa. Es un buen punto de entrada para quien quiere 
 
 ## No incluido
 
-- Carretes adicionales de 35mm B/N (+5€/unidad)
+- Carretes adicionales de 35mm B/N (+12€/unidad)
 - Papel extra para copias adicionales (+2€/hoja RC, +4€/hoja fibra)

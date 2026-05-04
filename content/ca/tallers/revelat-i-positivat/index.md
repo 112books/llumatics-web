@@ -75,5 +75,5 @@ No cal experiència prèvia. És un bon punt d'entrada per a qui vol entendre el
 
 ## No inclòs
 
-- Carretes addicionals de 35mm B/N (+5€/unitat)
+- Carretes addicionals de 35mm B/N (+12€/unitat)
 - Paper extra per a còpies addicionals (+2€/full RC, +4€/full fibra)

@@ -124,5 +124,5 @@ La impressió del fotollibre —enquadernat, en paper de qualitat, tirada de 1 a
 ## No inclòs
 
 - Impressió física del fotollibre: tirada de 1–5 còpies, cotitzada a part segons format i paper
-- Carretes addicionals si el projecte en requereix més de 2 (+5€/unitat)
+- Carretes addicionals si el projecte en requereix més de 2 (+12€/unitat)
 - Enquadernació especial o edició en format gran (consultar)

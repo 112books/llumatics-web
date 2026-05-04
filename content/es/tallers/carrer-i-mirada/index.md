@@ -123,5 +123,5 @@ La impresión del fotolibro —encuadernado, en papel de calidad, tirada de 1 a 
 ## No incluido
 
 - Impresión física del fotolibro: tirada de 1–5 copias, cotizada aparte según formato y papel
-- Carretes adicionales si el proyecto requiere más de 2 (+5€/unidad)
+- Carretes adicionales si el proyecto requiere más de 2 (+12€/unidad)
 - Encuadernación especial o edición en formato grande (consultar)

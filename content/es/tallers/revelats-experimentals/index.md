@@ -71,4 +71,4 @@ No se trata de hacer rarezas por hacerlas. Se trata de entender la química para
 
 ## No incluido
 
-- Carretes adicionales para pruebas extra (~5€/unidad)
+- Carretes adicionales para pruebas extra (12€/unidad)

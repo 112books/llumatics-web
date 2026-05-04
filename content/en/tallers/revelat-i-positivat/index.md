@@ -72,5 +72,5 @@ No prior experience needed. It's a great entry point for anyone who wants to und
 
 ## Not included
 
-- Additional 35mm B&W rolls (+€5/roll)
+- Additional 35mm B&W rolls (+€12/roll)
 - Extra paper for additional prints (+€2/sheet RC, +€4/sheet fibre)

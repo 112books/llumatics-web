@@ -71,4 +71,4 @@ No es tracta de fer rareses per fer-les. Es tracta d'entendre la química per do
 
 ## No inclòs
 
-- Carretes addicionals per a proves extra (~5€/unitat)
+- Carretes addicionals per a proves extra (12€/unitat)
