@@ -5,35 +5,37 @@ lead: "Photographing people in medium format is a decision. The waist-level find
 description: "Analogue portrait workshop in medium format 6×6 in Barcelona. Waist-level camera, square composition, connection with the subject and development included."
 image: "/images/tallers/retrat-6x6.jpg"
 
-blocs:
-  - mig-format
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["portrait", "medium format", "6x6", "120", "Hasselblad", "waist-level finder", "analogue"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["mig-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 110
-max_places: 4
-preu_model: 50
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
+preu_model: 50
 
+# Pedagogical notes
 objective: "Shoot portraits in 6×6 format with intention: understand how the square format and waist-level finder change composition, working rhythm and the relationship with your subject."
 methodology: "Practical session with a model. First part: camera and technique. Second part: directed portrait session. Roll developed and digitised the same day."
 result: "A 120 roll (12 frames 6×6) exposed, developed and digitised. Direct experience of portrait work with a waist-level camera."
-prerequisites: "Having done The Wonderful World of Hasselblad workshop, or prior experience with medium format cameras. Able to shoot in manual mode."
+prerequisits: "Having done The Wonderful World of Hasselblad workshop, or prior experience with medium format cameras. Able to shoot in manual mode."
 target: "Photographers who already know medium format and want to deepen their portrait work: the relationship with the subject, square composition and slowness as a tool."
-related:
-  - hasselblad-500
-  - retrat-analogic
-  - retrat-gran-format
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "hasselblad-500"
+  - "gran-format-4x5"
+tags: ["portrait", "medium format", "6x6", "120", "Hasselblad"]
 draft: false
 ---
 

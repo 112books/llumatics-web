@@ -4,35 +4,40 @@ subtitle: "Descubre la fotografía lenta antes de sumergirte de lleno"
 lead: "Un primer contacto con la cámara de placas: entender por qué existe, cómo funciona y cuál es la lógica de un sistema que obliga a fotografiar de una manera completamente diferente."
 description: "Taller introductorio al gran formato fotográfico. Primera sesión con cámara de placas, medida de la luz y exposición. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
+images:
+  - "/images/tallers/introduccio-gran-format-1.jpg"
+  - "/images/tallers/introduccio-gran-format-2.jpg"
+  - "/images/tallers/introduccio-gran-format-3.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["gran formato", "placas", "lento", "introductorio", "4x5", "consciente"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Entender el sistema de gran formato, ser capaz de montar la cámara, medir la luz y exponer las primeras placas."
 methodology: "Trabajo directo con la cámara desde el principio. Teoría mínima explicada mientras se trabaja con el equipamiento."
 result: "2-4 placas expuestas y reveladas. Comprensión del sistema y criterio para decidir si el gran formato es el próximo paso."
-prerequisites: "Saber fotografiar en modo manual. No hace falta ninguna experiencia previa en gran formato."
+prerequisits: "Saber fotografiar en modo manual. No hace falta ninguna experiencia previa en gran formato."
 target: "Fotógrafos analógicos de 35mm o medio formato que sienten curiosidad por el gran formato pero no saben por dónde empezar."
-related:
-  - gran-format-4x5
-  - revelat-bn
-  - retrat-gran-format
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "gran-format-4x5"
+tags: ["gran formato", "placas", "introductorio", "4x5"]
 draft: false
 ---
 

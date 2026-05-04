@@ -4,37 +4,42 @@ subtitle: "A 19th-century camera, photosensitive paper and a person in front"
 lead: "Photographing a person with a late-19th-century camera, working directly onto photosensitive paper. A unique experience that shows where it all comes from."
 description: "Large-format portrait workshop using a 19th-century camera and photosensitive paper. Held at Cameras & Films, Barcelona."
 image: "/images/tallers/retrat-gran-format.jpg"
+images:
+  - "/images/tallers/retrat-gran-format-1.jpg"
+  - "/images/tallers/retrat-gran-format-2.jpg"
+  - "/images/tallers/retrat-gran-format-3.jpg"
 
-blocs:
-  - gran-format
-  - practica
-levels:
-  - intermedi
-  - avançat
-formats:
-  - puntual
-tags: ["large format", "portrait", "19th century", "photosensitive paper", "human", "analogue", "historic"]
+# Classification
+tipus: "taller"
+canal: "externs"
+blocs: ["gran-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Cameras & Films, Barcelona"
+# Technical details
+preu_1: 55
+preu_2: 55
+preu_3: 55
+preu_4: 55
+durada_hores: 3
+lloc: "Cameras & Films"
 extern: true
-extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+extern_location: "Cameras & Films"
+max_places: 10
+sota_demanda: false
 
-objective: "Understand the photographic process in its historical form closest to its origins and produce portraits on photosensitive paper."
-methodology: "Direct work with the 19th-century large-format camera. Each student exposes and develops their own print."
-result: "1–2 portraits on photosensitive paper — a process that combines photographic portraiture with its historical dimension."
-prerequisites: "Basic knowledge of analogue photography is recommended. No prior large-format experience needed."
+# Pedagogical notes
+objective: "Understand the photographic process in its historical form closest to its origins and produce portraits on photosensitive paper. Learn to operate a large-format camera (metering, framing, focusing, loading the film holder, shooting)."
+methodology: "Direct work with the 19th-century large-format camera. Each student acts as both photographer and subject, and develops their own print."
+result: "2–5 portraits on photosensitive paper — a process that combines photographic portraiture with its historical dimension."
+prerequisits: "Basic knowledge of analogue photography is recommended. No prior large-format experience needed."
 target: "Photographers and non-photographers who want to experience the photographic process in its slowest and most material form, and who are drawn to portraiture as a relationship."
-related:
-  - gran-format-4x5
-  - retrat-analogic
-  - copies-en-paper
 
-status: "active"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "gran-format-4x5"
+  - "retrat-analogic"
+tags: ["large format", "portrait", "19th century", "photosensitive paper"]
 draft: false
 ---
 

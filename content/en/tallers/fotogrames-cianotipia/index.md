@@ -2,36 +2,45 @@
 title: "Cyanotype photograms"
 subtitle: "Images without a camera. Step into the world of cyanotype."
 lead: "A first experience with cyanotype: we place objects on sensitised paper, expose to sunlight and develop with water. No camera, no darkroom, no previous experience needed."
-description: "Free introductory cyanotype photogram workshop in Barcelona. No camera or prior experience needed. Nau Bostik."
+description: "Introductory cyanotype photogram workshop in Barcelona. No camera or prior experience needed. Nau Bostik."
 image: "/images/tallers/fotogrames-cianotipia.jpg"
+images:
+  - "/images/tallers/fotogrames-cianotipia-1.jpg"
+  - "/images/tallers/fotogrames-cianotipia-2.jpg"
+  - "/images/tallers/fotogrames-cianotipia-3.jpg"
+  - "/images/tallers/fotogrames-cianotipia-4.jpg"
+  - "/images/tallers/fotogrames-cianotipia-5.jpg"
 
-blocs:
-  - processos-alternatius
-  - fonaments
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["cyanotype", "photograms", "camera-free", "free", "introductory", "blue", "solar"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius", "fonaments"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "2 hores"
-sessions: 1
-price: 0
-max_places: 15
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 120
+preu_2: 68
+preu_3: 51
+preu_4: 43
+durada_hores: 2
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 15
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Experience a chemical photographic printing process for the first time and understand the principle of cyanotype."
 methodology: "Fully hands-on from the first moment: each participant prepares and exposes their own piece."
 result: "1–2 cyanotype photograms made by the student, with an understanding of the basic process."
-prerequisites: "None. No knowledge, no materials needed. Just curiosity and a desire to make something."
+prerequisits: "None. No knowledge, no materials needed. Just curiosity and a desire to make something."
 target: "Everyone: photographers, non-photographers, curious people, artists, anyone who has never done chemical photography."
-related:
-  - cianotipia
-  - fotografia-estenopèica
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "cianotipia"
+  - "fotografia-estenopeica"
+tags: ["cyanotype", "photograms", "camera-free", "solar"]
 draft: false
 ---
 

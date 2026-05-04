@@ -4,35 +4,40 @@ subtitle: "Formulate, mix and understand what develops your images"
 lead: "A workshop for anyone who wants to understand the chemistry of development well enough to make their own developer from scratch. The Beers formula, Caffenol and other artisan recipes."
 description: "Handmade photographic developer workshop: Beers formula, Caffenol and alternative recipes. Advanced analogue photography in Barcelona."
 image: "/images/tallers/reveladors-artesanals.jpg"
+images:
+  - "/images/tallers/reveladors-artesanals-1.jpg"
+  - "/images/tallers/reveladors-artesanals-2.jpg"
+  - "/images/tallers/reveladors-artesanals-3.jpg"
 
-blocs:
-  - processos-alternatius
-  - proces
-levels:
-  - avançat
-formats:
-  - curs
-tags: ["developers", "DIY", "formulas", "chemistry", "Beers", "Caffenol", "handmade"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius", "proces"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 140
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Prepare and evaluate handmade photographic developers, understand their active components and be able to adapt them to your own needs."
 methodology: "Hands-on lab work: various formulas are prepared and tested, results compared and the process documented for personal use."
 result: "Several formulas prepared and tested, a personal record of results and the ability to formulate developers tailored to your own needs."
-prerequisites: "Able to develop film using commercial developers. Having done the Experimental Development workshop is recommended."
+prerequisits: "Able to develop film using commercial developers. Having done the Experimental Development workshop is recommended."
 target: "Advanced analogue photographers who want to understand the chemistry of development in depth and work with their own formulas."
-related:
-  - revelats-experimentals
-  - revelat-bn
-  - cianotipia
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "revelats-experimentals"
+tags: ["developers", "DIY", "formulas", "chemistry", "Beers", "Caffenol"]
 draft: false
 ---
 

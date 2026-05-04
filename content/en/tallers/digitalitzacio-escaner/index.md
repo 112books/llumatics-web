@@ -5,34 +5,34 @@ lead: "You have developed negatives and want to scan them properly. Not to share
 description: "Analogue negative digitisation workshop using a flatbed scanner. Optimal settings, colour management and professional editing in Photoshop and Lightroom. Barcelona."
 image: "/images/tallers/digitalitzacio-escaner.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["scanner", "digitisation", "negatives", "Photoshop", "Lightroom", "editing", "archive", "35mm", "medium format"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Digitise analogue negatives to professional quality: optimal scanner settings, colour management and editing of the resulting files in Photoshop and Lightroom."
 methodology: "Hands-on work with the lab's flatbed scanner. Each participant works with their own negatives (or sample material) from the first scan to the final edited file."
 result: "4–8 negatives digitised to archive quality. Complete workflow: scanner → colour management → editing → export. Exportable settings for your own scanner."
-prerequisites: "Developed negatives (your own or sample material). Basic Lightroom or Photoshop knowledge is helpful but not required."
+prerequisits: "Developed negatives (your own or sample material). Basic Lightroom or Photoshop knowledge is helpful but not required."
 target: "Analogue photographers who want to digitise their archive to professional standards, without going through a third party and without losing quality."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent: []
+tags: ["scanner", "digitisation", "negatives", "Photoshop", "Lightroom"]
 draft: false
 ---
 

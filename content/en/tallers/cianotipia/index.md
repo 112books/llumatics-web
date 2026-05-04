@@ -4,35 +4,40 @@ subtitle: "The blue of light. Photographic printing without camera or enlarger."
 lead: "One of the oldest and most accessible photographic techniques: we coat the paper, expose it to sunlight and develop with water. Simple chemistry, surprisingly beautiful results."
 description: "Cyanotype workshop in Barcelona. Alternative photographic printing process without a darkroom: emulsion, solar exposure and water development."
 image: "/images/tallers/cianotipia.jpg"
+images:
+  - "/images/tallers/cianotipia-1.png"
+  - "/images/tallers/cianotipia-2.jpg"
+  - "/images/tallers/cianotipia-3.jpg"
 
-blocs:
-  - processos-alternatius
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["cyanotype", "alternative process", "printing", "blue", "solar", "camera-free"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "8 hores (10:00–14:00 i 15:00–19:00)"
-sessions: 2
-price: 129
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Master the complete cyanotype process: formula preparation, sensitisation, exposure and development, including toning techniques and printing from your own negatives."
 methodology: "Full day in two parts with a midday break. Morning: fundamentals and photograms. Afternoon: printing from acetate negatives and technical variations."
 result: "6–10 cyanotype pieces: photograms, negative prints, experimentation with toning and alternative supports."
-prerequisites: "No prior technical knowledge. Participants should bring photographs converted to negative on acetate (or we generate them in the session)."
+prerequisits: "No prior technical knowledge. Participants should bring photographs converted to negative on acetate (or we generate them in the session)."
 target: "Anyone curious about camera-free chemical photography. Artists, designers, photographers and non-photographers alike."
-related:
-  - fotogrames-cianotipia
-  - reveladors-artesanals
-  - fotografia-estenopèica
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "reveladors-artesanals"
+tags: ["cyanotype", "alternative process", "printing", "blue", "solar"]
 draft: false
 ---
 

@@ -4,37 +4,44 @@ subtitle: "Carga el carrete, sal a disparar y revélalo tú mismo."
 lead: "El proceso fotográfico completo en tres horas: cargamos un carrete, salimos al barrio a dispararlo, volvemos y lo revelamos. Sin experiencia previa. En Cameras & Films."
 description: "Taller de iniciación al revelado analógico en Cameras & Films, Barcelona. Cargar carrete, salida fotográfica y revelado básico en B/N. 3 horas, sin experiencia previa."
 image: "/images/tallers/iniciacio-revelat.jpg"
+images:
+  - "/images/tallers/iniciacio-revelat-1.jpg"
+  - "/images/tallers/iniciacio-revelat-2.jpg"
+  - "/images/tallers/iniciacio-revelat-3.jpg"
+  - "/images/tallers/iniciacio-revelat-4.jpg"
+  - "/images/tallers/iniciacio-revelat-5.jpg"
 
-blocs:
-  - proces
-  - fonaments
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["revelado", "iniciación", "básico", "35mm", "blanco y negro", "Cameras & Films", "salida fotográfica"]
+# Clasificación
+tipus: "taller"
+canal: "externs"
+blocs: ["proces", "fonaments"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "3 hores"
-sessions: 1
-price: 55
-max_places: 10
-location: "Cameras & Films, Barcelona"
+# Ficha técnica
+preu_1: 55
+preu_2: 55
+preu_3: 55
+preu_4: 55
+durada_hores: 3
+lloc: "Cameras & Films (c/ Tallers, Barcelona)"
 extern: true
-extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+extern_location: "Cameras + Films"
+max_places: 10
+sota_demanda: false
 
+# Ficha pedagógica
 objective: "Vivir el proceso fotográfico completo de primera mano: cargar un carrete, salir a fotografiar y revelar la película en el laboratorio."
 methodology: "Tres partes encadenadas: carga del carrete, salida fotográfica al barrio y revelado en el laboratorio de Cameras & Films."
 result: "Un carrete de 35mm expuesto y revelado por el alumno. Comprensión básica del proceso de revelado y los negativos escaneados en días posteriores."
-prerequisites: "Ninguno. No hace falta ninguna experiencia previa en fotografía ni en laboratorio."
+prerequisits: "Ninguno. No hace falta ninguna experiencia previa en fotografía ni en laboratorio."
 target: "Todo el mundo que quiere entender por primera vez cómo funciona la fotografía analógica de principio a fin. Ideal para quien nunca ha revelado."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - introduccio-al-positivat
-  - camera-i-exposicio
 
-status: "active"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "revelat-bn"
+  - "copies-en-paper"
+tags: ["revelado", "iniciación", "35mm", "Cameras and Films"]
 draft: false
 ---
 

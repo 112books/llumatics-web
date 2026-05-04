@@ -4,35 +4,46 @@ subtitle: "La cámara sin objetivo. El principio de todo."
 lead: "Construimos una cámara estenopeica, exponemos sobre papel fotográfico y revelamos en directo. El proceso fotográfico en su estado más puro."
 description: "Taller de fotografía estenopeica en Barcelona: construcción de la cámara, exposición y revelado. Del agujero de luz a la copia en papel."
 image: "/images/tallers/fotografia-estenopèica.jpg"
+images:
+  - "/images/tallers/fotografia-estenopèica-1.jpg"
+  - "/images/tallers/fotografia-estenopèica-2.jpg"
+  - "/images/tallers/fotografia-estenopèica-3.jpg"
+  - "/images/tallers/fotografia-estenopèica-4.jpg"
+  - "/images/tallers/fotografia-estenopèica-5.jpg"
+  - "/images/tallers/fotografia-estenopèica-6.jpg"
+  - "/images/tallers/fotografia-estenopèica-7.jpg"
+  - "/images/tallers/fotografia-estenopèica-8.jpg"
+  - "/images/tallers/fotografia-estenopèica-9.jpg"
+  - "/images/tallers/fotografia-estenopèica-10.jpg"
 
-blocs:
-  - fonaments
-  - processos-alternatius
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["estenopeica", "pinhole", "papel", "revelado", "construcción", "experimental"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["fonaments", "processos-alternatius"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 80
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Entender el principio óptico de la cámara y obtener imágenes estenopeicas reveladas en papel fotográfico."
 methodology: "Construcción manual de la cámara, exposición en exterior y revelado en el laboratorio. Todo en una sesión."
 result: "Una cámara estenopeica construida por el alumno y 2-3 copias en papel reveladas."
-prerequisites: "Ninguno. Es uno de los mejores puntos de partida para cualquier persona sin experiencia."
+prerequisits: "Ninguno. Es uno de los mejores puntos de partida para cualquier persona sin experiencia."
 target: "Personas de cualquier edad y nivel que quieren entender la fotografía desde el principio absoluto. Ideal como primera experiencia analógica."
-related:
-  - camera-i-exposicio
-  - copies-en-paper
-  - cianotipia
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent: []
+tags: ["estenopeica", "pinhole", "papel", "revelado", "construcción"]
 draft: false
 ---
 

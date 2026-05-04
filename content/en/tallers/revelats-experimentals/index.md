@@ -5,35 +5,35 @@ lead: "Beyond the standard developer: push and pull, stand development, Caffenol
 description: "Experimental film development workshop: push/pull, stand development, Caffenol, Beers formula and artisan developers. Photography lab in Barcelona."
 image: "/images/tallers/revelats-experimentals.jpg"
 
-blocs:
-  - proces
-  - processos-alternatius
-levels:
-  - intermedi
-  - avançat
-formats:
-  - curs
-tags: ["development", "experimental", "push", "pull", "caffenol", "beers", "DIY", "formulas"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces", "processos-alternatius"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 130
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Understand how chemical variables alter the image result and experiment with alternative developers and non-standard processes."
 methodology: "Direct experimentation: strips are developed with different parameters to compare results."
 result: "Several strips developed with different processes and a personal record of results for each technique tested."
-prerequisites: "Able to develop B&W film. Must have done the Film Development workshop or have equivalent experience."
+prerequisits: "Able to develop B&W film. Must have done the Film Development workshop or have equivalent experience."
 target: "Analogue photographers who want to go beyond standard development and understand how to chemically manipulate the result."
-related:
-  - revelat-bn
-  - cianotipia
-  - reveladors-artesanals
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "reveladors-artesanals"
+tags: ["development", "experimental", "caffenol", "beers", "DIY"]
 draft: false
 ---
 

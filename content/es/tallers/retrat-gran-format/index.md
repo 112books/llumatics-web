@@ -4,37 +4,42 @@ subtitle: "Una cámara del siglo XIX, papel fotosensible y una persona delante"
 lead: "Retratar a una persona con una cámara de finales del siglo XIX, trabajando directamente sobre papel fotosensible. Una experiencia única que explica de dónde viene todo."
 description: "Taller de retrato en gran formato con cámara del s.XIX y papel fotosensible. Impartido en Cameras & Films, Barcelona."
 image: "/images/tallers/retrat-gran-format.jpg"
+images:
+  - "/images/tallers/retrat-gran-format-1.jpg"
+  - "/images/tallers/retrat-gran-format-2.jpg"
+  - "/images/tallers/retrat-gran-format-3.jpg"
 
-blocs:
-  - gran-format
-  - practica
-levels:
-  - intermedi
-  - avançat
-formats:
-  - puntual
-tags: ["gran formato", "retrato", "siglo XIX", "papel fotosensible", "humano", "analógico", "histórico"]
+# Clasificación
+tipus: "taller"
+canal: "externs"
+blocs: ["gran-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Cameras & Films, Barcelona"
+# Ficha técnica
+preu_1: 55
+preu_2: 55
+preu_3: 55
+preu_4: 55
+durada_hores: 3
+lloc: "Cameras & Films"
 extern: true
-extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+extern_location: "Cameras & Films"
+max_places: 10
+sota_demanda: false
 
-objective: "Comprender el proceso fotográfico en su estado histórico más cercano a los orígenes y obtener retratos sobre papel fotosensible."
-methodology: "Trabajo directo con la cámara de gran formato del siglo XIX. Cada alumno expone y revela su propia copia."
-result: "1-2 retratos en papel fotosensible, un proceso que combina el retrato fotográfico con su dimensión histórica."
-prerequisites: "Recomendable tener nociones básicas de fotografía analógica. No hace falta experiencia previa en gran formato."
+# Ficha pedagógica
+objective: "Comprender el proceso fotográfico en su estado histórico más cercano a los orígenes y obtener retratos sobre papel fotosensible. Aprender el funcionamiento de una cámara de gran formato (medir la luz, encuadrar, enfocar, cargar el chasis, disparar)."
+methodology: "Trabajo directo con la cámara de gran formato del siglo XIX. Cada alumno hace de modelo, realiza la fotografía y revela su propia copia."
+result: "2-5 retratos en papel fotosensible, un proceso que combina el retrato fotográfico con su dimensión histórica."
+prerequisits: "Recomendable tener nociones básicas de fotografía analógica. No hace falta experiencia previa en gran formato."
 target: "Fotógrafos y no fotógrafos que quieren vivir el proceso fotográfico en su forma más lenta y material, y que les interesa el retrato como relación."
-related:
-  - gran-format-4x5
-  - retrat-analogic
-  - copies-en-paper
 
-status: "active"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "gran-format-4x5"
+  - "retrat-analogic"
+tags: ["gran formato", "retrato", "siglo XIX", "papel fotosensible"]
 draft: false
 ---
 

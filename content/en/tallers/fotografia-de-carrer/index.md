@@ -5,35 +5,36 @@ lead: "A workshop for photographing on the street with awareness: how to look, h
 description: "Analogue street photography workshop in Barcelona. Technique, vision and ethics of documentary photography. Groups of maximum 4 people."
 image: "/images/tallers/fotografia-de-carrer.jpg"
 
-blocs:
-  - practica
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-  - intensiu
-tags: ["street", "documentary", "gaze", "analogue", "Barcelona", "35mm"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "3,5 hores (teoria + sortida + revelat)"
-sessions: 1
-price: 99
-max_places: 4
-location: "Barcelona (sortida des de Nau Bostik)"
+# Technical details
+preu_1: 195
+preu_2: 111
+preu_3: 83
+preu_4: 70
+durada_hores: 3.5
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Develop your own eye on the street and understand the technical and ethical decisions of documentary photography."
 methodology: "Photographic walk through Barcelona with an analogue camera, followed by a collective review of the exposed frames."
 result: "A roll shot and developed the same day, with all frames digitised. Practical understanding of the street photography mindset."
-prerequisites: "Able to shoot in manual mode. Recommended to have done the Introduction workshop or have equivalent experience."
+prerequisits: "Able to shoot in manual mode. Recommended to have done the Introduction workshop or have equivalent experience."
 target: "Photographers who want to move from technical control to having a genuine eye: learning to see before you shoot."
-related:
-  - camera-i-exposicio
-  - retrat-analogic
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "carrer-i-mirada"
+  - "tutoria-fotografica"
+tags: ["street", "documentary", "gaze", "analogue", "Barcelona"]
 draft: false
 ---
 

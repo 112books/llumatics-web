@@ -1,37 +1,41 @@
 ---
 title: "Revelado de película B/N"
-subtitle: "Push, pull y el control de la densidad. Revelar con criterio."
+subtitle: "Push, pull y el control de la densidad"
 lead: "No hay un solo revelado correcto. Hay el que necesita cada foto. En este taller aprendes a controlar la densidad del negativo: revelado estándar, forzado (push) y compensado (pull). Dos carretes, cuatro horas."
 description: "Taller de revelado de película B/N en Barcelona. Push y pull, control de temperatura y densidad, lectura del negativo. Incluye 2 carretes. Llumàtics, Nau Bostik."
 image: "/images/tallers/revelat-bn.jpg"
 
-blocs:
-  - proces
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["revelado", "blanco y negro", "push", "pull", "forzado", "densidad", "laboratorio", "35mm"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Dominar el revelado de película en B/N con criterios propios: entender la relación entre exposición, temperatura y tiempo para obtener el negativo que la fotografía necesita."
 methodology: "Trabajo de laboratorio directo con dos carretes por participante. Uno se revela en estándar; el otro se usa para experimentar con push, pull y variaciones de temperatura."
 result: "Dos carretes revelados con procesos distintos. Comprensión práctica de cómo las variables del revelado afectan la densidad, el grano y el contraste del negativo."
-prerequisites: "Haber revelado película alguna vez. Saber cargar la espiral y seguir los tiempos de manera autónoma. Si nunca has revelado, empieza por el taller de Iniciación al revelado."
+prerequisits: "Haber revelado película alguna vez. Saber cargar la espiral y seguir los tiempos de manera autónoma. Si nunca has revelado, empieza por el taller de Iniciación al revelado."
 target: "Fotógrafos analógicos que ya revelan y quieren ir más lejos: entender por qué el negativo sale oscuro, plano o con demasiado grano, y saber corregirlo."
-related:
-  - revelats-experimentals
-  - reveladors-artesanals
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "copies-en-paper"
+  - "revelats-experimentals"
+  - "reveladors-artesanals"
+tags: ["revelado", "blanco y negro", "push", "pull", "laboratorio"]
 draft: false
 ---
 

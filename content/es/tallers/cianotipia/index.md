@@ -4,35 +4,40 @@ subtitle: "El azul de la luz. Impresión fotográfica sin cámara ni ampliadora.
 lead: "Una de las técnicas fotográficas más antiguas y más accesibles: emulsionamos el papel, exponemos con luz solar y revelamos con agua. Química simple, resultados que sorprenden."
 description: "Taller de cianotipía en Barcelona. Proceso alternativo de impresión fotográfica sin cuarto oscuro: emulsión, exposición solar y revelado con agua."
 image: "/images/tallers/cianotipia.jpg"
+images:
+  - "/images/tallers/cianotipia-1.png"
+  - "/images/tallers/cianotipia-2.jpg"
+  - "/images/tallers/cianotipia-3.jpg"
 
-blocs:
-  - processos-alternatius
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["cianotipía", "cyanotype", "proceso alternativo", "impresión", "azul", "solar", "sin cámara"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "8 hores (10:00–14:00 i 15:00–19:00)"
-sessions: 2
-price: 129
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Dominar el proceso completo de cianotipía: preparación de la fórmula, sensibilización, exposición y revelado, incluyendo técnicas de virado e impresión sobre negativos propios."
 methodology: "Jornada completa en dos partes con pausa de mediodía. Mañana: fundamentos y fotogramas. Tarde: impresión con negativos en acetato y variaciones técnicas."
 result: "6-10 piezas en cianotipía: fotogramas, impresiones de negativos, experimentación con virados y soportes alternativos."
-prerequisites: "Ningún conocimiento técnico previo. Los participantes deben traer fotografías convertidas a negativo en acetato (o las generamos en la sesión)."
+prerequisits: "Ningún conocimiento técnico previo. Los participantes deben traer fotografías convertidas a negativo en acetato (o las generamos en la sesión)."
 target: "Cualquier persona curiosa por la fotografía química sin cámara. Artistas, diseñadores, fotógrafos y no fotógrafos."
-related:
-  - fotogrames-cianotipia
-  - reveladors-artesanals
-  - fotografia-estenopèica
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "reveladors-artesanals"
+tags: ["cianotipía", "proceso alternativo", "impresión", "azul", "solar"]
 draft: false
 ---
 

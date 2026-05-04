@@ -3,37 +3,43 @@ title: "Copias en papel"
 subtitle: "De negativo a copia: trabajar con la ampliadora"
 lead: "¿Tienes negativos revelados y quieres hacer copias? Este taller es el segundo paso natural del proceso analógico: la ampliadora, el papel y la cubeta."
 description: "Taller de copias fotográficas en papel. Ampliadora, tipos de papel, revelado y controles locales. Laboratorio analógico en Barcelona."
-image: "/images/tallers/copies-en-paper.jpg"
+image: "/images/tallers/introduccio-al-positivat-2.jpg"
+images:
+  - "/images/tallers/introduccio-al-positivat-3.jpg"
+  - "/images/tallers/introduccio-al-positivat-5.jpg"
+  - "/images/tallers/introduccio-al-positivat-1.jpg"
+  - "/images/tallers/introduccio-al-positivat-4.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["ampliadora", "papel", "copias", "laboratorio", "blanco y negro", "revelado"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Obtener copias en papel a partir de los propios negativos, controlando exposición, contraste y tonalidad."
 methodology: "Trabajo directo en la ampliadora desde el primer minuto. Cada alumno trabaja con sus propios negativos."
 result: "3-5 copias en papel blanco y negro, hechas y acabadas por el alumno."
-prerequisites: "Tener negativos revelados de 35mm o medio formato. Si no tienes, haz primero el taller de Revelado B/N."
+prerequisits: "Tener negativos revelados de 35mm o medio formato. Si no tienes, haz primero el taller de Revelado B/N."
 target: "Personas que ya han revelado película y quieren completar el proceso hasta la copia en papel."
-related:
-  - revelat-bn
-  - gran-format-4x5
-  - revelats-experimentals
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "revelats-experimentals"
+  - "gran-format-4x5"
+tags: ["ampliadora", "papel", "copias", "laboratorio", "blanco y negro"]
 draft: false
 ---
 

@@ -5,35 +5,36 @@ lead: "Una sesión dedicada en cuerpo y alma a las Hasselblad de la serie 500: f
 description: "Taller práctico de la cámara Hasselblad serie 500. Medio formato 6×6, rollo 120, técnicas avanzadas y revelado incluido. Nau Bostik, Barcelona."
 image: "/images/tallers/hasselblad-500.jpg"
 
-blocs:
-  - mig-format
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["hasselblad", "medio formato", "6x6", "120", "retrato", "doble exposición", "analógica"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["mig-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "3,5 hores"
-sessions: 1
-price: 110
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 195
+preu_2: 111
+preu_3: 83
+preu_4: 70
+durada_hores: 3.5
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Dominar el funcionamiento de la Hasselblad 500 y sus particularidades: cuerpo intercambiable, dos disparadores, dobles exposiciones y disparador remoto."
 methodology: "Clase teórica sobre la cámara, práctica inmediata con un rollo de 120, y revelado y digitalización del material producido en la sesión."
 result: "Un rollo de 120 (12 fotogramas 6×6) expuesto, revelado y digitalizado. Conocimiento práctico y directo de la cámara."
-prerequisites: "Saber fotografiar en modo manual. No hace falta tener Hasselblad —podemos dejar una si hace falta."
+prerequisits: "Saber fotografiar en modo manual. No hace falta tener Hasselblad —podemos dejar una si hace falta."
 target: "Fotógrafos analógicos que quieren dar el paso al medio formato o que ya tienen una Hasselblad y quieren sacarle todo el partido."
-related:
-  - retrat-analogic
-  - gran-format-4x5
-  - retrat-gran-format
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["hasselblad", "medio formato", "6x6", "120", "doble exposición"]
 draft: false
 ---
 

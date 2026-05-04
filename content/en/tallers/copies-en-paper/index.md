@@ -3,37 +3,43 @@ title: "Darkroom printing"
 subtitle: "From negative to print: working with the enlarger"
 lead: "Got developed negatives and want to make prints? This workshop is the natural second step of the analogue process: the enlarger, the paper and the tray."
 description: "Darkroom printing workshop. Enlarger, paper types, development and local controls. Analogue lab in Barcelona."
-image: "/images/tallers/copies-en-paper.jpg"
+image: "/images/tallers/introduccio-al-positivat-2.jpg"
+images:
+  - "/images/tallers/introduccio-al-positivat-3.jpg"
+  - "/images/tallers/introduccio-al-positivat-5.jpg"
+  - "/images/tallers/introduccio-al-positivat-1.jpg"
+  - "/images/tallers/introduccio-al-positivat-4.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["enlarger", "paper", "prints", "darkroom", "black and white", "development"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Produce paper prints from your own negatives, controlling exposure, contrast and tonality."
 methodology: "Hands-on work at the enlarger from the very first minute. Each student works with their own negatives."
 result: "3–5 finished black-and-white prints, made by the student."
-prerequisites: "You need developed 35mm or medium format negatives. If you don't have any, do the Film Development workshop first."
+prerequisits: "You need developed 35mm or medium format negatives. If you don't have any, do the Film Development workshop first."
 target: "People who have already developed film and want to complete the process through to a finished print."
-related:
-  - revelat-bn
-  - gran-format-4x5
-  - revelats-experimentals
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "revelats-experimentals"
+  - "gran-format-4x5"
+tags: ["enlarger", "paper", "prints", "darkroom", "black and white"]
 draft: false
 ---
 

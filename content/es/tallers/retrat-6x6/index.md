@@ -5,35 +5,37 @@ lead: "Fotografiar personas en medio formato es una decisión. El visor de cintu
 description: "Taller de retrato analógico en medio formato 6×6 en Barcelona. Cámara de cintura, composición cuadrada, relación con el modelo y revelado incluido."
 image: "/images/tallers/retrat-6x6.jpg"
 
-blocs:
-  - mig-format
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["retrato", "medio formato", "6x6", "120", "Hasselblad", "visor de cintura", "analógica"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["mig-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 110
-max_places: 4
-preu_model: 50
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
+preu_model: 50
 
+# Ficha pedagógica
 objective: "Hacer retrato en formato 6×6 de manera consciente: entender cómo el formato cuadrado y el visor de cintura cambian la composición, el ritmo de trabajo y la relación con el modelo."
 methodology: "Sesión práctica con modelo. Primera parte: cámara y técnica. Segunda parte: sesión de retrato dirigida. Revelado y digitalización del rollo el mismo día."
 result: "Un rollo de 120 (12 fotogramas 6×6) expuesto, revelado y digitalizado. Experiencia directa de trabajar en retrato con cámara de cintura."
-prerequisites: "Haber hecho el taller de El maravilloso mundo Hasselblad o tener experiencia previa con cámaras de medio formato. Saber fotografiar en modo manual."
+prerequisits: "Haber hecho el taller de El maravilloso mundo Hasselblad o tener experiencia previa con cámaras de medio formato. Saber fotografiar en modo manual."
 target: "Fotógrafos que ya conocen el medio formato y quieren profundizar en el retrato: la relación con el modelo, la composición cuadrada y la lentitud como herramienta."
-related:
-  - hasselblad-500
-  - retrat-analogic
-  - retrat-gran-format
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "hasselblad-500"
+  - "gran-format-4x5"
+tags: ["retrato", "medio formato", "6x6", "120", "Hasselblad"]
 draft: false
 ---
 

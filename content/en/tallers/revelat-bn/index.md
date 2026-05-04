@@ -1,37 +1,41 @@
 ---
 title: "B&W film development"
-subtitle: "Push, pull and density control. Developing with intention."
+subtitle: "Push, pull and density control"
 lead: "There's no single correct development. There's the one each photograph needs. In this workshop you learn to control negative density: standard development, push and pull. Two rolls, four hours."
 description: "B&W film development workshop in Barcelona. Push and pull, temperature and density control, reading the negative. Includes 2 rolls. Llumàtics, Nau Bostik."
 image: "/images/tallers/revelat-bn.jpg"
 
-blocs:
-  - proces
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["development", "black and white", "push", "pull", "density", "darkroom", "35mm"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Master B&W film development with your own criteria: understand the relationship between exposure, temperature and time to get the negative your photograph needs."
 methodology: "Hands-on lab work with two rolls per participant. One is developed at standard; the other is used to experiment with push, pull and temperature variations."
 result: "Two rolls developed with different processes. Practical understanding of how development variables affect negative density, grain and contrast."
-prerequisites: "Having developed film at least once before. Able to load the spiral and follow timings independently. If you've never developed, start with the Introduction to Film Development workshop."
+prerequisits: "Having developed film at least once before. Able to load the spiral and follow timings independently. If you've never developed, start with the Introduction to Film Development workshop."
 target: "Analogue photographers who already develop and want to go further: understanding why a negative comes out too dense, flat or grainy — and knowing how to fix it."
-related:
-  - revelats-experimentals
-  - reveladors-artesanals
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "copies-en-paper"
+  - "revelats-experimentals"
+  - "reveladors-artesanals"
+tags: ["development", "black and white", "push", "pull", "darkroom"]
 draft: false
 ---
 

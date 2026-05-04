@@ -5,36 +5,37 @@ lead: "Trabajamos el retrato en el plató con cámara analógica y flashes: la l
 description: "Taller de retrato analógico en el plató de Llumàtics. Luz de flash, relación con el modelo y técnica fotográfica. Barcelona."
 image: "/images/tallers/retrat-analogic.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["retrato", "plató", "flash", "analógico", "luz artificial", "35mm"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-preu_model: 50
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
+preu_model: 50
 
+# Ficha pedagógica
 objective: "Retratar a una persona en plató con luz de flash analógica, controlando exposición, temperatura de color y relación con el modelo."
 methodology: "Práctica de plató por turnos: cada alumno fotografía y hace de modelo. Revisión de los fotogramas en grupo."
 result: "Un carrete de retratos expuesto en condiciones de plató y la comprensión del proceso desde la luz hasta la relación."
-prerequisites: "Saber fotografiar en modo manual. Recomendable haber hecho el taller de Cámara y exposición."
+prerequisits: "Saber fotografiar en modo manual. Recomendable haber hecho el taller de Cámara y exposición."
 target: "Fotógrafos analógicos que quieren aprender a trabajar con luz artificial y a construir una sesión de retrato."
-related:
-  - camera-i-exposicio
-  - gran-format-4x5
-  - retrat-gran-format
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["retrato", "plató", "flash", "analógico", "luz artificial"]
 draft: false
 ---
 
@@ -64,5 +65,6 @@ En este taller trabajamos en el plató de Llumàtics: fondos de papel, flashes d
 
 ## No incluido
 
+- Modelo (disponible por +50€, o trae el tuyo / la tuya)
 - Revelado del carrete (disponible como añadido, +20€, o en el taller de Revelado B/N)
 - Copias en papel de los fotogramas (taller de Copias en papel)

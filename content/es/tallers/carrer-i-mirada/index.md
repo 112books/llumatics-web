@@ -5,35 +5,36 @@ lead: "No es un taller de street photography. Es un recorrido: conocer un barrio
 description: "Recorrido fotográfico por Barcelona. Street photography humanista en cuatro fases: reconocimiento, ejecución, laboratorio y edición. Culmina con un fotolibro 112books. Máximo 3 personas."
 image: "/images/tallers/carrer-i-mirada.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-  - avancat
-formats:
-  - curs
-tags: ["calle", "street photography", "Leica", "rangefinder", "humanista", "Barcelona", "barrios", "contacto", "edición", "fotolibro", "112books"]
+# Clasificación
+tipus: "curs"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Avançat"
+estat: "en-preparacio"
 
-duration: "4 sessions · 3–4 setmanes"
-sessions: 4
-price: 350
-max_places: 3
-location: "Barcelona — barri rotatiu · sessions a Nau Bostik"
+# Ficha técnica
+preu_1: 880
+preu_2: 502
+preu_3: 376
+preu_4: 315
+durada_hores: 16
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 3
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Construir un trabajo fotográfico completo sobre un barrio de Barcelona: desde el conocimiento profundo del lugar hasta la secuencia final de un fotolibro. Con método, discurso propio y producto tangible."
 methodology: "Cuatro fases progresivas: reconocimiento sin cámara, ejecución fotográfica, trabajo de laboratorio y edición del discurso. Cada fase informa a la siguiente. Se termina con un fotolibro digital editado con 112books."
 result: "Un cuerpo de trabajo coherente sobre un barrio de Barcelona: negativos revelados, contactos leídos, edición razonada y un fotolibro digital (impresión opcional). La experiencia completa de llevar un proyecto de principio a fin."
-prerequisites: "Experiencia sólida en fotografía analógica. Haber fotografiado en la calle previamente. Cámara analógica de 35mm propia imprescindible —Leica M o rangefinder es la herramienta recomendada."
+prerequisits: "Experiencia sólida en fotografía analógica. Haber fotografiado en la calle previamente. Cámara analógica de 35mm propia imprescindible —Leica M o rangefinder es la herramienta recomendada."
 target: "Fotógrafos analógicos que quieren ir más lejos: no hacer fotos sueltas sino construir un proyecto con coherencia, discurso y resultado publicable."
-related:
-  - fotografia-de-carrer
-  - tutoria-fotografica
-  - digitalitzacio-escaner
 
-status: "soon"
-date: 2024-01-01
-draft: false
+# Talleres relacionados
+continua_aprenent:
+  - "tutoria-fotografica"
+tags: ["calle", "street photography", "Barcelona", "fotolibro", "112books"]
+draft: true
 ---
 
 ## Un recorrido, no un workshop

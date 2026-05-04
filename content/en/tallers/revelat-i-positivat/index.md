@@ -5,33 +5,36 @@ lead: "A full day in the darkroom: in the morning you develop your own roll, in 
 description: "Combined film development and darkroom printing workshop in one day. Morning + afternoon in the lab. Barcelona."
 image: "/images/tallers/revelat-i-positivat.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-formats:
-  - intensiu
-tags: ["development", "printing", "combined", "full day", "black and white", "darkroom", "intensive"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "8 hores (10:00–14:00 i 16:00–20:00)"
-sessions: 2
-price: 125
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 375
+preu_2: 210
+preu_3: 160
+preu_4: 134
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Complete the entire analogue process in a single day: from exposed film to a finished, dried paper print."
 methodology: "Morning session for film development + afternoon session for darkroom printing. Two-hour break between sessions."
 result: "A developed roll and 2–3 paper prints made and finished by the student on the same day."
-prerequisites: "No prior darkroom experience. You need to bring an exposed 35mm B&W roll — or buy one at Llumàtics."
+prerequisits: "No prior darkroom experience. You need to bring an exposed 35mm B&W roll — or buy one at Llumàtics."
 target: "Anyone who wants to experience the complete analogue process in a single day, without spreading the learning across two separate dates."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - introduccio-al-positivat
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "revelat-bn"
+  - "copies-en-paper"
+tags: ["development", "printing", "combined", "full day", "darkroom"]
 draft: false
 ---
 

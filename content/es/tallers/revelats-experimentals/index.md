@@ -5,35 +5,35 @@ lead: "Más allá del revelador estándar: push y pull, stand development, Caffe
 description: "Taller de revelados experimentales: push/pull, stand development, Caffenol, fórmula Beers y reveladores artesanales. Laboratorio fotográfico en Barcelona."
 image: "/images/tallers/revelats-experimentals.jpg"
 
-blocs:
-  - proces
-  - processos-alternatius
-levels:
-  - intermedi
-  - avançat
-formats:
-  - curs
-tags: ["revelado", "experimental", "push", "pull", "caffenol", "beers", "artesanal", "fórmulas"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces", "processos-alternatius"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 130
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Entender cómo las variables químicas alteran el resultado de la imagen y experimentar con reveladores alternativos y procesos no estándar."
 methodology: "Experimentación directa: se revelan diversas tiras con parámetros diferentes para comparar resultados."
 result: "Diversas tiras reveladas con procesos distintos y un registro personal de resultados para cada técnica probada."
-prerequisites: "Saber revelar película en B/N. Es necesario haber hecho el taller de Revelado B/N o tener experiencia equivalente."
+prerequisits: "Saber revelar película en B/N. Es necesario haber hecho el taller de Revelado B/N o tener experiencia equivalente."
 target: "Fotógrafos analógicos que quieren ir más allá del revelado estándar y entender cómo manipular químicamente el resultado."
-related:
-  - revelat-bn
-  - cianotipia
-  - reveladors-artesanals
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "reveladors-artesanals"
+tags: ["revelado", "experimental", "caffenol", "beers", "artesanal"]
 draft: false
 ---
 

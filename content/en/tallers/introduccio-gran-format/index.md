@@ -4,35 +4,40 @@ subtitle: "Discover slow photography before diving in completely"
 lead: "A first encounter with the view camera: understanding why it exists, how it works and what makes a system that forces you to photograph in a completely different way."
 description: "Introductory large-format photography workshop. First session with a view camera, light metering and exposure. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
+images:
+  - "/images/tallers/introduccio-gran-format-1.jpg"
+  - "/images/tallers/introduccio-gran-format-2.jpg"
+  - "/images/tallers/introduccio-gran-format-3.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["large format", "view camera", "slow", "introductory", "4x5", "deliberate"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 95
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Understand the large-format system, be able to set up the camera, meter the light and expose your first sheets."
 methodology: "Hands-on with the camera from the start. Theory explained as you work with the equipment."
 result: "2–4 sheets exposed and developed. Understanding of the system and a clear sense of whether large format is your next step."
-prerequisites: "Able to shoot in manual mode. No prior large-format experience needed."
+prerequisits: "Able to shoot in manual mode. No prior large-format experience needed."
 target: "35mm or medium format analogue photographers who are curious about large format but don't know where to start."
-related:
-  - gran-format-4x5
-  - revelat-bn
-  - retrat-gran-format
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "gran-format-4x5"
+tags: ["large format", "view camera", "introductory", "4x5"]
 draft: false
 ---
 

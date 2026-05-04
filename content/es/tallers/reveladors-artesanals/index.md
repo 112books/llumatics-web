@@ -4,35 +4,40 @@ subtitle: "Formular, mezclar y entender lo que revela tus imágenes"
 lead: "Un taller para quien quiere entender la química del revelado hasta el punto de poder preparar su propio revelador. La fórmula Beers, el Caffenol y otras recetas artesanales."
 description: "Taller de reveladores fotográficos artesanales: fórmula Beers, Caffenol y recetas alternativas. Fotografía analógica avanzada en Barcelona."
 image: "/images/tallers/reveladors-artesanals.jpg"
+images:
+  - "/images/tallers/reveladors-artesanals-1.jpg"
+  - "/images/tallers/reveladors-artesanals-2.jpg"
+  - "/images/tallers/reveladors-artesanals-3.jpg"
 
-blocs:
-  - processos-alternatius
-  - proces
-levels:
-  - avançat
-formats:
-  - curs
-tags: ["reveladores", "artesanales", "fórmulas", "química", "Beers", "Caffenol", "DIY"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["processos-alternatius", "proces"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 140
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Preparar y evaluar reveladores fotográficos artesanales, entender sus componentes activos y ser capaz de adaptarlos a las propias necesidades."
 methodology: "Laboratorio práctico: se preparan y prueban diversas fórmulas, se comparan los resultados y se documenta el proceso para uso personal."
 result: "Diversas fórmulas preparadas y probadas, un registro personal de resultados y la capacidad de formular reveladores adaptados a las propias necesidades."
-prerequisites: "Saber revelar película con reveladores comerciales. Recomendable haber hecho el taller de Revelados Experimentales."
+prerequisits: "Saber revelar película con reveladores comerciales. Recomendable haber hecho el taller de Revelados Experimentales."
 target: "Fotógrafos analógicos avanzados que quieren entender la química del revelado en profundidad y trabajar con fórmulas propias."
-related:
-  - revelats-experimentals
-  - revelat-bn
-  - cianotipia
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "revelats-experimentals"
+tags: ["reveladores", "artesanales", "fórmulas", "química", "Beers", "Caffenol"]
 draft: false
 ---
 

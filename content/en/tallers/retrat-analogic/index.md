@@ -5,36 +5,37 @@ lead: "We work on studio portraiture with an analogue camera and studio flash: t
 description: "Analogue portrait workshop in the Llumàtics studio. Studio flash, relationship with the subject and photographic technique. Barcelona."
 image: "/images/tallers/retrat-analogic.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-  - curs
-tags: ["portrait", "studio", "flash", "analogue", "artificial light", "35mm"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-preu_model: 50
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
+preu_model: 50
 
+# Pedagogical notes
 objective: "Photograph a person in the studio with analogue flash lighting, controlling exposure, colour temperature and the relationship with the subject."
 methodology: "Studio practice in turns: each student photographs and acts as subject. Group review of the frames at the end."
 result: "A roll of portraits exposed under studio conditions and an understanding of the process from light to relationship."
-prerequisites: "Able to shoot in manual mode. Recommended to have done the Camera and Exposure workshop."
+prerequisits: "Able to shoot in manual mode. Recommended to have done the Camera and Exposure workshop."
 target: "Analogue photographers who want to learn to work with artificial light and build a portrait session."
-related:
-  - camera-i-exposicio
-  - gran-format-4x5
-  - retrat-gran-format
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["portrait", "studio", "flash", "analogue", "artificial light"]
 draft: false
 ---
 
@@ -64,5 +65,6 @@ In this workshop we work in the Llumàtics studio: paper backgrounds, quality fl
 
 ## Not included
 
+- Model (available for +€50, or bring your own)
 - Roll development (available as an add-on, +€20, or at the Film Development workshop)
 - Paper prints of the frames (Darkroom Printing workshop)

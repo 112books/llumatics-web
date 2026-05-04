@@ -4,37 +4,44 @@ subtitle: "Load the roll, go out and shoot, develop it yourself."
 lead: "The complete photographic process in three hours: we load a roll, head out to the neighbourhood to shoot it, come back and develop it. No experience needed. At Cameras & Films."
 description: "Introduction to analogue film development at Cameras & Films, Barcelona. Load a roll, go out shooting and develop B&W film. 3 hours, no prior experience needed."
 image: "/images/tallers/iniciacio-revelat.jpg"
+images:
+  - "/images/tallers/iniciacio-revelat-1.jpg"
+  - "/images/tallers/iniciacio-revelat-2.jpg"
+  - "/images/tallers/iniciacio-revelat-3.jpg"
+  - "/images/tallers/iniciacio-revelat-4.jpg"
+  - "/images/tallers/iniciacio-revelat-5.jpg"
 
-blocs:
-  - proces
-  - fonaments
-levels:
-  - iniciacio
-formats:
-  - puntual
-tags: ["development", "beginner", "basics", "35mm", "black and white", "Cameras & Films", "photo walk"]
+# Classification
+tipus: "taller"
+canal: "externs"
+blocs: ["proces", "fonaments"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "3 hores"
-sessions: 1
-price: 55
-max_places: 10
-location: "Cameras & Films, Barcelona"
+# Technical details
+preu_1: 55
+preu_2: 55
+preu_3: 55
+preu_4: 55
+durada_hores: 3
+lloc: "Cameras & Films (c/ Tallers, Barcelona)"
 extern: true
-extern_location: "Cameras & Films (c/ Tallers, Barcelona)"
+extern_location: "Cameras + Films"
+max_places: 10
+sota_demanda: false
 
+# Pedagogical notes
 objective: "Experience the complete photographic process first-hand: load a roll, go out shooting and develop the film in the lab."
 methodology: "Three linked parts: loading the roll, photo walk through the neighbourhood, and development in the Cameras & Films lab."
 result: "A 35mm roll exposed and developed by the student. Basic understanding of the development process, with scanned negatives delivered in the following days."
-prerequisites: "None. No prior experience in photography or darkroom work is needed."
+prerequisits: "None. No prior experience in photography or darkroom work is needed."
 target: "Anyone who wants to understand for the first time how analogue photography works from start to finish. Perfect for people who have never developed film."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - introduccio-al-positivat
-  - camera-i-exposicio
 
-status: "active"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "revelat-bn"
+  - "copies-en-paper"
+tags: ["development", "beginner", "35mm", "Cameras and Films"]
 draft: false
 ---
 

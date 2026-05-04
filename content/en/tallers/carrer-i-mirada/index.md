@@ -5,35 +5,36 @@ lead: "This isn't a street photography workshop. It's a journey: getting to know
 description: "Photographic journey through Barcelona. Humanist street photography in four phases: reconnaissance, execution, darkroom and editing. Culminates in a 112books photobook. Maximum 3 people."
 image: "/images/tallers/carrer-i-mirada.jpg"
 
-blocs:
-  - practica
-levels:
-  - intermedi
-  - avancat
-formats:
-  - curs
-tags: ["street", "street photography", "Leica", "rangefinder", "humanist", "Barcelona", "neighbourhoods", "contact sheet", "editing", "photobook", "112books"]
+# Classification
+tipus: "curs"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Avançat"
+estat: "en-preparacio"
 
-duration: "4 sessions · 3–4 setmanes"
-sessions: 4
-price: 350
-max_places: 3
-location: "Barcelona — barri rotatiu · sessions a Nau Bostik"
+# Technical details
+preu_1: 880
+preu_2: 502
+preu_3: 376
+preu_4: 315
+durada_hores: 16
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 3
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Build a complete photographic body of work on a Barcelona neighbourhood: from deep knowledge of the place to the final sequence of a photobook. With method, your own voice, and a tangible result."
 methodology: "Four progressive phases: reconnaissance without a camera, photographic execution, darkroom work and editorial editing. Each phase informs the next. Ends with a digital photobook edited with 112books."
 result: "A coherent body of work on a Barcelona neighbourhood: developed negatives, read contact sheets, reasoned edit and a digital photobook (print optional). The complete experience of taking a project from start to finish."
-prerequisites: "Solid experience in analogue photography. Prior street photography experience. Your own 35mm analogue camera is essential — a Leica M or rangefinder is the recommended tool."
+prerequisits: "Solid experience in analogue photography. Prior street photography experience. Your own 35mm analogue camera is essential — a Leica M or rangefinder is the recommended tool."
 target: "Analogue photographers who want to go further: not taking isolated shots but building a project with coherence, a clear voice, and a publishable result."
-related:
-  - fotografia-de-carrer
-  - tutoria-fotografica
-  - digitalitzacio-escaner
 
-status: "soon"
-date: 2024-01-01
-draft: false
+# Related workshops
+continua_aprenent:
+  - "tutoria-fotografica"
+tags: ["street", "street photography", "Barcelona", "photobook", "112books"]
+draft: true
 ---
 
 ## A journey, not a workshop

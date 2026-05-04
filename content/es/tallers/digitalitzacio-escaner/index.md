@@ -5,34 +5,34 @@ lead: "Tienes negativos revelados y quieres digitalizarlos bien. No para compart
 description: "Taller de digitalización de negativos analógicos con escáner. Configuración óptima, gestión del color y edición profesional con Photoshop y Lightroom. Barcelona."
 image: "/images/tallers/digitalitzacio-escaner.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-  - intermedi
-formats:
-  - puntual
-tags: ["escáner", "digitalización", "negativos", "Photoshop", "Lightroom", "edición", "archivo", "35mm", "medio formato"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "4 hores"
-sessions: 1
-price: 85
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 220
+preu_2: 125
+preu_3: 94
+preu_4: 79
+durada_hores: 4
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Digitalizar negativos analógicos con calidad profesional: configuración óptima del escáner, gestión del color y edición de los archivos resultantes en Photoshop y Lightroom."
 methodology: "Trabajo directo con el escáner del laboratorio. Cada participante trabaja con sus propios negativos (o material de muestra) desde el primer escaneado hasta el archivo final editado."
 result: "4-8 negativos digitalizados con calidad de archivo. Flujo de trabajo completo: escáner → gestión del color → edición → exportación. Configuración exportable para el escáner propio."
-prerequisites: "Tener negativos revelados (propios o de muestra). Nociones básicas de Lightroom o Photoshop recomendables, pero no imprescindibles."
+prerequisits: "Tener negativos revelados (propios o de muestra). Nociones básicas de Lightroom o Photoshop recomendables, pero no imprescindibles."
 target: "Fotógrafos analógicos que quieren digitalizar su archivo con criterios profesionales, sin intermediarios y sin perder calidad en el proceso."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - tutoria-fotografica
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent: []
+tags: ["escáner", "digitalización", "negativos", "Photoshop", "Lightroom"]
 draft: false
 ---
 

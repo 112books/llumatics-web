@@ -5,34 +5,35 @@ lead: "The large-format camera forces you to photograph differently: prepare, me
 description: "Introduction to 4×5 inch large format photography. View camera, sheet film, light metering and development. Barcelona."
 image: "/images/tallers/gran-format-4x5.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - intermedi
-formats:
-  - curs
-tags: ["large format", "4x5", "sheet film", "view camera", "slow", "deliberate"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Be able to use a 4×5\" large-format camera independently: loading, metering, exposing and developing your own sheets."
 methodology: "Hands-on work with the camera from the first session. Each student exposes and develops their own sheets."
 result: "4–6 4×5\" sheets exposed and developed by the student."
-prerequisites: "Experience in analogue photography and ability to shoot in manual mode. Having done the Film Development workshop is recommended."
+prerequisits: "Experience in analogue photography and ability to shoot in manual mode. Having done the Film Development workshop is recommended."
 target: "Analogue photographers who want to move into large format and experience slow, deliberate photography."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - retrat-gran-format
-  - retrat-analogic
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "retrat-gran-format"
+tags: ["large format", "4x5", "sheet film", "view camera", "slow"]
 draft: false
 ---
 

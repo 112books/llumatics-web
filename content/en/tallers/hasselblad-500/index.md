@@ -5,35 +5,36 @@ lead: "A session devoted entirely to the Hasselblad 500 series: how it works, ti
 description: "Practical Hasselblad 500 series camera workshop. Medium format 6×6, 120 roll, advanced techniques and development included. Nau Bostik, Barcelona."
 image: "/images/tallers/hasselblad-500.jpg"
 
-blocs:
-  - mig-format
-  - practica
-levels:
-  - intermedi
-formats:
-  - puntual
-tags: ["hasselblad", "medium format", "6x6", "120", "portrait", "double exposure", "analogue"]
+# Classification
+tipus: "taller"
+canal: "llumatics"
+blocs: ["mig-format", "practica"]
+nivell: "Intermedi"
+estat: "actiu"
 
-duration: "3,5 hores"
-sessions: 1
-price: 110
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Technical details
+preu_1: 195
+preu_2: 111
+preu_3: 83
+preu_4: 70
+durada_hores: 3.5
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Pedagogical notes
 objective: "Master the Hasselblad 500 and its particular features: interchangeable back, dual shutter releases, double exposures and remote shutter."
 methodology: "Theory on the camera, then immediate practice with a 120 roll, finishing with development and digitisation of all the frames from the session."
 result: "A 120 roll (12 frames 6×6) exposed, developed and digitised. Practical, hands-on knowledge of the camera."
-prerequisites: "Able to shoot in manual mode. No need to own a Hasselblad — we can lend you one."
+prerequisits: "Able to shoot in manual mode. No need to own a Hasselblad — we can lend you one."
 target: "Analogue photographers who want to move into medium format, or who already own a Hasselblad and want to get more out of it."
-related:
-  - retrat-analogic
-  - gran-format-4x5
-  - retrat-gran-format
-  - copies-en-paper
 
-status: "soon"
-date: 2024-01-01
+# Related workshops
+continua_aprenent:
+  - "retrat-6x6"
+  - "gran-format-4x5"
+tags: ["hasselblad", "medium format", "6x6", "120", "double exposure"]
 draft: false
 ---
 

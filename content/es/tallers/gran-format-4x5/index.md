@@ -5,34 +5,35 @@ lead: "La cámara de placas obliga a hacer fotografía de otra manera: preparar,
 description: "Taller de iniciación al gran formato 4×5 pulgadas. Cámara de placas, film sheet, medida de la luz y revelado. Barcelona."
 image: "/images/tallers/gran-format-4x5.jpg"
 
-blocs:
-  - gran-format
-levels:
-  - intermedi
-formats:
-  - curs
-tags: ["gran formato", "4x5", "placas", "film sheet", "lento", "consciente"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["gran-format"]
+nivell: "Avançat"
+estat: "actiu"
 
-duration: "8 hores (2 sessions de 4h)"
-sessions: 2
-price: 150
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Ser capaz de usar una cámara de gran formato 4×5\" de manera autónoma: carga, medida, exposición y revelado de las placas."
 methodology: "Trabajo directo con la cámara desde la primera sesión. Cada alumno expone y revela sus propias placas."
 result: "4-6 placas de 4×5\" expuestas y reveladas por el alumno."
-prerequisites: "Tener experiencia en fotografía analógica y saber exponer en modo manual. Recomendable haber hecho el taller de Revelado B/N."
+prerequisits: "Tener experiencia en fotografía analógica y saber exponer en modo manual. Recomendable haber hecho el taller de Revelado B/N."
 target: "Fotógrafos analógicos que quieren dar el paso al gran formato y entender la fotografía lenta y consciente."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - retrat-gran-format
-  - retrat-analogic
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "retrat-gran-format"
+tags: ["gran formato", "4x5", "placas", "film sheet", "lento"]
 draft: false
 ---
 

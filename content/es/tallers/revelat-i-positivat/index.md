@@ -5,33 +5,36 @@ lead: "Un día entero en el laboratorio: por la mañana revelas tu propio carret
 description: "Taller combinado de revelado de película y positivado en papel en un solo día. Mañana + tarde en el laboratorio. Barcelona."
 image: "/images/tallers/revelat-i-positivat.jpg"
 
-blocs:
-  - proces
-levels:
-  - iniciacio
-formats:
-  - intensiu
-tags: ["revelado", "positivado", "combinado", "día completo", "blanco y negro", "laboratorio", "intensivo"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["proces"]
+nivell: "Iniciació"
+estat: "actiu"
 
-duration: "8 hores (10:00–14:00 i 16:00–20:00)"
-sessions: 2
-price: 125
-max_places: 4
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_1: 375
+preu_2: 210
+preu_3: 160
+preu_4: 134
+durada_hores: 8
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 4
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Completar todo el proceso analógico en un solo día: de la película expuesta a la copia en papel acabada y secada."
 methodology: "Sesión de mañana para el revelado de película + sesión de tarde para el positivado en papel. Pausa de dos horas entre sesiones."
 result: "Un carrete revelado y 2-3 copias en papel hechas y acabadas por el alumno el mismo día."
-prerequisites: "Ninguna experiencia previa en laboratorio. Hay que traer un carrete de 35mm B/N expuesto —o comprar uno en Llumàtics."
+prerequisits: "Ninguna experiencia previa en laboratorio. Hay que traer un carrete de 35mm B/N expuesto —o comprar uno en Llumàtics."
 target: "Quien quiere vivir el proceso analógico completo en un solo día, sin dilatar el aprendizaje en dos fechas separadas."
-related:
-  - revelat-bn
-  - copies-en-paper
-  - introduccio-al-positivat
 
-status: "soon"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent:
+  - "revelat-bn"
+  - "copies-en-paper"
+tags: ["revelado", "positivado", "combinado", "día completo", "laboratorio"]
 draft: false
 ---
 
