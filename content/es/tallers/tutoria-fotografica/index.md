@@ -2,38 +2,37 @@
 title: "Tutoría fotográfica"
 subtitle: "Acompañamiento personalizado a tu ritmo e intereses"
 lead: "Una sesión individual pensada para ti: traes tus preguntas, tu proyecto o tus dificultades, y trabajamos exactamente lo que necesitas."
-description: "Tutoría individual de fotografía analógica en Barcelona. Acompañamiento personalizado de laboratorio, técnica o proyecto fotográfico."
+description: "Tutoría individual de fotografía analógica en Barcelona. Acompañamiento personalizado de laboratorio, técnica o proyecto fotográfico. 60€/hora, mínimo 2 horas."
 image: "/images/tallers/tutoria-fotografica.jpg"
 
-blocs:
-  - practica
-levels:
-  - iniciacio
-  - intermedi
-  - avançat
-formats:
-  - personalitzat
-tags: ["tutoría", "individual", "personalizado", "proyecto", "acompañamiento"]
+# Clasificación
+tipus: "taller"
+canal: "llumatics"
+blocs: ["practica"]
+nivell: "Tots els nivells"
+estat: "actiu"
 
-duration: "2-4 hores (a acordar)"
-sessions: 1
-price: 70
-max_places: 1
-location: "Nau Bostik, Barcelona"
+# Ficha técnica
+preu_hora: 60
+preu_1: 120
+preu_2: 170
+preu_3: 220
+duration: "2 a 4 horas (a acordar)"
+lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
+max_places: 1
+sota_demanda: true
 
+# Ficha pedagógica
 objective: "Resolver las dudas o bloqueos concretos de cada alumno, ya sea en técnica, laboratorio, mirada o proyecto personal."
 methodology: "Sesión individual adaptada completamente a los intereses y necesidades de la persona."
 result: "Variable según el objetivo: puede ser un carrete revelado, una serie de copias, un proyecto avanzado o simplemente respuestas claras a preguntas que llevan tiempo sin respuesta."
-prerequisites: "Ningún requisito previo. La tutoría se diseña a partir de una conversación previa sobre dónde estás y hacia dónde quieres ir."
+prerequisits: "Ningún requisito previo. La tutoría se diseña a partir de una conversación previa sobre dónde estás y hacia dónde quieres ir."
 target: "Cualquier persona que quiera atención individual, ya sea para complementar otros talleres, para trabajar un proyecto concreto o para aprender a un ritmo diferente al de los grupos."
-related:
-  - revelat-bn
-  - fotografia-de-carrer
-  - copies-en-paper
 
-status: "active"
-date: 2024-01-01
+# Talleres relacionados
+continua_aprenent: []
+tags: ["tutoría", "individual", "personalizado", "proyecto", "acompañamiento"]
 draft: false
 ---
 
@@ -43,7 +42,7 @@ No todos los aprendizajes funcionan igual. Hay personas que aprenden mejor en gr
 
 Puede ser para resolver una duda que lleva tiempo sin respuesta. Para aprender a revelar película por primera vez sin la presión de un grupo. Para trabajar un proyecto fotográfico personal con alguien que lo entiende. Para revisar una serie y saber dónde mejorar.
 
-Funciona con una conversación previa —breve, por correo o teléfono— para entender de qué punto se parte y qué objetivo tiene la sesión.
+Funciona con una conversación previa —breve, por correo o teléfono— para entender de qué punto se parte y qué objetivo tiene la sesión. La duración mínima es de **2 horas**; se puede ampliar a 3 o 4 horas según el objetivo.
 
 ## Ejemplos de contenidos posibles
 
@@ -56,18 +55,23 @@ Funciona con una conversación previa —breve, por correo o teléfono— para e
 
 ## Cómo funciona
 
-Contáctanos explicando brevemente lo que te interesa trabajar. Concretamos la duración y el contenido de la sesión y te proponemos una fecha. Mínimo 2 horas, máximo 4 horas por sesión.
+Escríbenos explicando brevemente lo que te interesa trabajar. Concretamos la duración y el contenido de la sesión y te proponemos una fecha.
+
+La sesión es siempre individual (1:1) y se factura por horas: **60€/hora, mínimo 2 horas**. Puedes reservar bloques de 2, 3 o 4 horas.
 
 ## Incluido en el precio
 
-- Sesión 1:1 con Joan (2 a 4 horas, a acordar)
-- Materiales de laboratorio habituales si la sesión incluye práctica (químicos, papel, film)
+- Sesión individual (1:1) con Joan
+- Uso del laboratorio y el equipamiento de Llumàtics
+- Químicos de revelado convencionales (si la sesión incluye revelado de película)
 
 ## Qué traer
 
-- Todo lo que quieras trabajar: cámara, negativos, copias, proyecto, preguntas. La sesión se diseña a partir de una conversación previa.
+- Todo lo que quieras trabajar: cámara, negativos, copias, proyecto, preguntas
+- La sesión se diseña a partir de una conversación previa, no hace falta preparar nada especial
 
 ## No incluido
 
-- Materiales específicos no habituales (se consultan y se cotizan previamente)
-- Carretes de 35mm adicionales (~5€/unidad)
+- Papel fotográfico — puedes traer el que necesites; te podemos orientar si hace falta
+- Película / carretes — Fomapan 35mm y 120 disponibles a 12€/unidad
+- Papeles fotográficos — precio a consultar según tipo, tamaño y acabado

@@ -144,6 +144,14 @@ cookie_policy: "Política de cookies"
 # Taller — model opcional
 preu_model_note: "model (opcional) — o porta'l/la tu"
 
+# Taller — preu per hora (tutoria)
+preu_hora_minim: "mínim 2h"
+durada_col: "Durada"
+preu_col: "Preu"
+preu_2h: "2 hores"
+preu_3h: "3 hores"
+preu_4h: "4 hores"
+
 # Pàgina gràcies
 gracies_msg_contacte: "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners."
 gracies_msg_newsletter: "Ja ets a la llista. T'escriurem quan hi hagi novetats que valguin la pena."
