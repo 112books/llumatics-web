@@ -146,6 +146,14 @@ preu_model_note: "modelo (opcional) — o lo/la traes tú"
 preu_model_note_label: "No incluido"
 preu_model_note_option: "opcional, o lo/la traes tú"
 
+# Taller — precio por hora (tutoría)
+preu_hora_minim: "mínimo 2h"
+durada_col: "Duración"
+preu_col: "Precio"
+preu_2h: "2 horas"
+preu_3h: "3 horas"
+preu_4h: "4 horas"
+
 # Página gracias
 gracies_msg_contacte: "Hemos recibido tu mensaje. Te escribiremos en un máximo de 48 horas en días laborables."
 gracies_msg_newsletter: "Ya estás en la lista. Te escribiremos cuando haya novedades que valgan la pena."

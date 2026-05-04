@@ -81,6 +81,6 @@ Cada participante trabaja con dos carretes. El primero se revela en estándar �
 
 ## No incluido
 
-- Carretes adicionales (disponibles en Llumàtics, ~5€/unidad)
+- Carretes adicionales (disponibles en Llumàtics, 12€/unidad)
 - Copias en papel de los negativos (taller de Copias en papel)
 - Digitalización (opcional, +15€)

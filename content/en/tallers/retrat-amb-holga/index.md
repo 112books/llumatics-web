@@ -89,5 +89,5 @@ At the end, a verification scan of the frames to see the dry results.
 
 ## Not included
 
-- Additional rolls (+€5/120 roll)
+- Additional rolls (+€12/120 roll)
 - Full high-resolution scanning (available as a service at Llumàtics from €15)

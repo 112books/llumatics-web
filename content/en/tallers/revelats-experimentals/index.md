@@ -71,4 +71,4 @@ This isn't about making things weird for the sake of it. It's about understandin
 
 ## Not included
 
-- Additional rolls for extra tests (~€5/roll)
+- Additional rolls for extra tests (€12/roll)

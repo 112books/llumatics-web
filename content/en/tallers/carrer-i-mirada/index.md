@@ -123,5 +123,5 @@ The printed photobook — bound, on quality paper, run of 1 to 5 copies — is p
 ## Not included
 
 - Physical printing of the photobook: run of 1–5 copies, priced separately according to format and paper
-- Additional rolls if the project requires more than 2 (+€5/roll)
+- Additional rolls if the project requires more than 2 (+€12/roll)
 - Special binding or large format edition (enquire)

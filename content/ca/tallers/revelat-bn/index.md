@@ -85,6 +85,6 @@ Cada participant treballa amb dos carretes. El primer es revela en estàndard �
 
 ## No inclòs
 
-- Carretes addicionals (disponibles a Llumàtics, ~10€/unitat)
+- Carretes addicionals (disponibles a Llumàtics, 12€/unitat)
 - Còpies en paper dels negatius (taller de Còpies en paper)
 - Digitalització (opcional, +15€)

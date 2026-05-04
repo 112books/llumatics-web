@@ -89,5 +89,5 @@ Al final, escaneo de comprobación de los fotogramas para ver los resultados en 
 
 ## No incluido
 
-- Carretes adicionales (+5€/carrete de 120)
+- Carretes adicionales (+12€/carrete de 120)
 - Escaneo completo de alta resolución (disponible como servicio en Llumàtics desde 15€)
