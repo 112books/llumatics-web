@@ -143,3 +143,8 @@ cookie_policy: "Cookie policy"
 
 # Workshop — optional model
 preu_model_note: "model (optional) — or bring your own"
+
+# Thank you page
+gracies_msg_contacte: "We've received your message. We'll get back to you within 48 hours on business days."
+gracies_msg_newsletter: "You're on the list. We'll write when there's something worth sharing."
+gracies_msg_default: "All good. Thanks for getting in touch with Llumàtics."

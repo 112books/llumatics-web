@@ -3097,3 +3097,33 @@ a.recorregut__tematic-link:hover {
   color: var(--color-accent);
   margin-bottom: 0.15rem;
 }
+
+/* ── Pàgina gràcies ────────────────────────────────────────────────────── */
+.gracies-page {
+  max-width: 480px;
+  margin: 6rem auto;
+  text-align: center;
+  padding-inline: var(--space-4);
+}
+.gracies-page__icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+.gracies-page__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+.gracies-page__msg {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+  min-height: 3em;
+}
+.gracies-page__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -143,3 +143,8 @@ cookie_policy: "Política de cookies"
 
 # Taller — model opcional
 preu_model_note: "model (opcional) — o porta'l/la tu"
+
+# Pàgina gràcies
+gracies_msg_contacte: "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners."
+gracies_msg_newsletter: "Ja ets a la llista. T'escriurem quan hi hagi novetats que valguin la pena."
+gracies_msg_default: "Tot ha anat bé. Gràcies per contactar amb Llumàtics."
