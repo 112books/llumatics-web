@@ -1143,6 +1143,19 @@ button, input, select, textarea {
   opacity: 0.5;
   margin-top: var(--space-2);
 }
+.site-footer__address {
+  font-size: var(--text-sm);
+  opacity: 0.55;
+  margin-top: var(--space-3);
+}
+.site-footer__address a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer__address a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 
 .site-footer__heading {
   font-size: var(--text-xs);
