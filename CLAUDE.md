@@ -462,6 +462,13 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-05-05)
+- [x] Adreça al footer sota el logo ("Nau Bostik, La Sagrera · Barcelona") → link a `/contacte/#com-arribar-hi`
+- [x] Dashboard `/admin/`: KPI pàgines/sessió + secció localització de visites
+- [x] Dashboard `/admin/`: token GoatCounter actualitzat, parsing `daily` corregit
+- [x] Deploy admin: documentat que `static/admin/` cal scp directe (rsync els salta per exit 23)
+- [x] linuxbcn.com/admin: mateixos canvis (localitzacions + pàg./sessió) pendents de scp
+
 ### Fet aquesta sessió (2026-05-04 tarda)
 - [x] Tutoria fotogràfica: preu per hora (`preu_hora: 60`), blocs de 2h/3h/4h, inclou químics, no inclou paper ni pel·lícula (12€/unitat)
 - [x] Template `single.html`: taula de preus condicional per a tallers per hora vs. per alumnes (i18n complet CA/ES/EN)
