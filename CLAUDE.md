@@ -416,8 +416,14 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 ## Pendent / Properes sessions
 
 ### Infraestructura i deploy
-- [ ] VPS: donar permís d'escriptura a `/admin/` per al PHP del dashboard: `ssh llumatics@llumatics.com "chmod 775 /home/llumatics/www/admin/"` → després clicar "↻ actualitzar" al dashboard per generar `analytics-cache.json` per primera vegada
-- [ ] VPS: verificar que "↻ actualitzar" al dashboard funciona (PHP + cURL requerits, no funciona a GitHub Pages)
+- [x] VPS: `/admin/` té `chmod 777` — PHP pot escriure `analytics-cache.json`
+- [x] Dashboard `/admin/` funciona — clicar "↻ actualitzar" per regenerar dades
+- ⚠️ `static/admin/` NO es despleguen via rsync (exit 23). Usar sempre `scp` directe:
+  ```bash
+  hugo --minify --baseURL "https://llumatics.com/"
+  scp public/admin/fetch-analytics.php llumatics@llumatics.com:www/admin/fetch-analytics.php
+  scp public/admin/index.html llumatics@llumatics.com:www/admin/index.html
+  ```
 - [x] Branca `develop` per a staging — ja configurada
 
 ### Formularis i integracions
