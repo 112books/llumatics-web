@@ -8,11 +8,6 @@
  *     → retorna JSON {status, total, generated} o {error}
  *
  * Requereix: PHP + cURL + permisos d'escriptura al directori /admin/
- *
- * CONFIGURACIÓ:
- *   1. Crea compte a https://www.goatcounter.com (codi: llumatics)
- *   2. Settings → API tokens → genera un token amb permís "Read statistics"
- *   3. Substitueix GC_TOKEN per sota amb el token generat
  */
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
@@ -31,11 +26,11 @@ if (!function_exists('curl_init')) {
     exit;
 }
 
-// ══ CONFIGURA AQUÍ ═══════════════════════════════════════════════════════════
-define('GC_TOKEN',  'VZNYROZDKI7MEGLJW7VDRJOFKHXV2BTP');
+// ══ CONFIGURACIÓ ════════════════════════════════════════════════════════════
+define('GC_TOKEN',  '1ocyv2uxc6caw1toqjtd0pqw231vj8tb843vpx611u5b0wkzm7dn');
 define('GC_BASE',   'https://llumatics.goatcounter.com/api/v0');
 define('CACHE_FILE', __DIR__ . '/analytics-cache.json');
-// ═════════════════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════════════════
 
 function gc_fetch(string $path, array $params = []): ?array {
     $url = GC_BASE . $path;
@@ -67,7 +62,7 @@ function extract_lang(string $path): string {
 }
 
 function extract_section(string $path): string {
-    $parts   = array_values(array_filter(explode('/', $path)));
+    $parts    = array_values(array_filter(explode('/', $path)));
     $lang_idx = -1;
     foreach ($parts as $i => $p) {
         if (in_array($p, ['ca', 'en', 'es'], true)) { $lang_idx = $i; break; }
@@ -94,20 +89,22 @@ function norm_items(array $items, string $name_field): array {
     return $out;
 }
 
-// ── Fetch seqüencial ──────────────────────────────────────────────────────────
-$end   = date('Y-m-d');
-$start = date('Y-m-d', strtotime('-365 days'));
+// ── Fetch ────────────────────────────────────────────────────────────────────
+$end         = date('Y-m-d');
+$start       = date('Y-m-d', strtotime('-365 days'));
 $base_params = ['start' => $start, 'end' => $end, 'limit' => 200];
 
-$hits_raw = gc_fetch('/stats/hits', $base_params);
+$hits_raw  = gc_fetch('/stats/hits',      $base_params);
 usleep(400000);
-$refs_raw = gc_fetch('/stats/refs', array_merge($base_params, ['limit' => 20]));
+$refs_raw  = gc_fetch('/stats/refs',      array_merge($base_params, ['limit' => 20]));
 usleep(400000);
-$brow_raw = gc_fetch('/stats/browsers', $base_params);
+$brow_raw  = gc_fetch('/stats/browsers',  $base_params);
 usleep(400000);
-$sys_raw  = gc_fetch('/stats/systems',  $base_params);
+$sys_raw   = gc_fetch('/stats/systems',   $base_params);
 usleep(400000);
-$size_raw = gc_fetch('/stats/sizes',    $base_params);
+$size_raw  = gc_fetch('/stats/sizes',     $base_params);
+usleep(400000);
+$loc_raw   = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 20]));
 
 // ── Processa hits ─────────────────────────────────────────────────────────────
 $hits_by_day = [];
@@ -157,6 +154,9 @@ foreach (($refs_raw['refs'] ?? []) as $ref) {
     if ($count > 0) $refs_list[] = ['name' => $ref['name'] ?? '(directe)', 'count' => $count];
 }
 
+// ── Processa localitzacions ───────────────────────────────────────────────────
+$locations_list = norm_items($loc_raw['locations'] ?? [], 'location');
+
 // ── Sortida ───────────────────────────────────────────────────────────────────
 $output = [
     'generated'   => gmdate('Y-m-d\TH:i:s\Z'),
@@ -170,6 +170,7 @@ $output = [
     'browsers'    => norm_items($brow_raw['browsers'] ?? [], 'browser'),
     'systems'     => norm_items($sys_raw['systems']   ?? [], 'system'),
     'sizes'       => norm_items($size_raw['sizes']    ?? [], 'size'),
+    'locations'   => $locations_list,
 ];
 
 $json = json_encode($output, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
