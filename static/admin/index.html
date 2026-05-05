@@ -171,7 +171,7 @@
     /* ── KPIs ───────────────────────────────────────── */
     .kpis {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 1rem;
       margin-bottom: 2rem;
       list-style: none;
@@ -391,6 +391,9 @@
     }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1080px) {
+      .kpis { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 860px) {
       .kpis { grid-template-columns: repeat(2, 1fr); }
       .grid-2 { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -455,6 +458,10 @@
       <div class="kpi">
         <dt>total any</dt>
         <dd><div class="kpi-value" id="kpi-total">—</div><div class="kpi-sub" id="sub-total"></div></dd>
+      </div>
+      <div class="kpi">
+        <dt>pàg./sessió</dt>
+        <dd><div class="kpi-value" id="kpi-pps">—</div><div class="kpi-sub">pàgines per visita única</div></dd>
       </div>
     </dl>
 
@@ -721,6 +728,10 @@ function renderAll(data) {
   setText('kpi-30d',   fmt(mes30));
   setText('kpi-total', fmt(total));
   setText('sub-total', p.start && p.end ? fmtPeriod(p.start, p.end) : '');
+
+  const unique = data.total_unique || 0;
+  const pps = unique > 0 ? (total / unique).toFixed(1) : '—';
+  setText('kpi-pps', pps);
 
   setTopbarGen(data.generated);
   renderChart(data);
