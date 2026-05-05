@@ -504,6 +504,9 @@
         El trànsit directe (URL escrita, marcadors, navegació privada) no genera referrer.
         A mesura que creixin els links externs i la indexació orgànica, apareixeran aquí els orígens.
       </div>
+
+      <h2 class="section-title">localització de les visites</h2>
+      <div id="locations-wrap" class="bars"></div>
     </div>
 
     <!-- TAB: Dispositius -->
@@ -726,6 +729,7 @@ function renderAll(data) {
   renderTallers(data);
   renderPages(data);
   renderRefs(data);
+  renderLocations(data);
   renderDevices(data);
   renderBrowsersSystems(data);
   renderDispositiusInsight(data);
@@ -909,6 +913,10 @@ function renderPages(data) {
   const hits  = (data.hits || []).slice(0, 10);
   const items = hits.map(h => ({ name: h.path, count: h.count, href: h.path }));
   renderBars('pages-wrap', items, 'name', true);
+}
+
+function renderLocations(data) {
+  renderBars('locations-wrap', (data.locations || []).slice(0, 15), 'name');
 }
 
 function renderRefs(data) {
