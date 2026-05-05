@@ -123,7 +123,8 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
 
     foreach (($path_item['stats'] ?? []) as $stat) {
         $date  = substr((string)($stat['day'] ?? ''), 0, 10);
-        $count = (int)($stat['daily'] ?? 0);
+        $daily = $stat['daily'] ?? 0;
+        $count = is_array($daily) ? array_sum($daily) : (int)$daily;
         if (!$count || strlen($date) !== 10) continue;
         $total               += $count;
         $path_total          += $count;
