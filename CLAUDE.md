@@ -416,7 +416,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 ## Pendent / Properes sessions
 
 ### Infraestructura i deploy
-- [ ] VPS: donar permís d'escriptura a `/admin/` per al PHP del dashboard: `chmod 775 /ruta/public/admin/`
+- [ ] VPS: donar permís d'escriptura a `/admin/` per al PHP del dashboard: `ssh llumatics@llumatics.com "chmod 775 /home/llumatics/www/admin/"` → després clicar "↻ actualitzar" al dashboard per generar `analytics-cache.json` per primera vegada
 - [ ] VPS: verificar que "↻ actualitzar" al dashboard funciona (PHP + cURL requerits, no funciona a GitHub Pages)
 - [x] Branca `develop` per a staging — ja configurada
 
@@ -455,6 +455,16 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
+
+### Fet aquesta sessió (2026-05-04 tarda)
+- [x] Tutoria fotogràfica: preu per hora (`preu_hora: 60`), blocs de 2h/3h/4h, inclou químics, no inclou paper ni pel·lícula (12€/unitat)
+- [x] Template `single.html`: taula de preus condicional per a tallers per hora vs. per alumnes (i18n complet CA/ES/EN)
+- [x] i18n CA/ES/EN: keys noves `preu_hora_minim`, `durada_col`, `preu_col`, `preu_2h`, `preu_3h`, `preu_4h`
+- [x] Tutoria fotogràfica: traduccions ES i EN amb nou frontmatter
+- [x] Introducció al positivat: traduccions ES i EN (preu_1:170/2:97/3:72/4:61, 10 fulls RC)
+- [x] Preus dels carretes unificats a 12€ en tots els tallers (CA/ES/EN)
+- [x] 36 fitxers ES/EN (18 tallers) migrats del frontmatter antic al nou format (preu_1-4, durada_hores, estat, etc.)
+- [x] Deploy a producció (llumatics.com) via rsync al VPS Dinahosting
 
 ### Fet aquesta sessió (2026-05-04)
 - [x] Tallers de retrat: camp `preu_model: 50` (CA/ES/EN) — model opcional +50€ o el porta l'alumne
