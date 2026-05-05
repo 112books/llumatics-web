@@ -82,7 +82,10 @@ function norm_items(array $items, string $name_field): array {
         $name  = $item[$name_field] ?? $item['id'] ?? 'Desconegut';
         $count = 0;
         if (isset($item['stats']) && is_array($item['stats'])) {
-            foreach ($item['stats'] as $s) $count += (int)($s['daily'] ?? 0);
+            foreach ($item['stats'] as $s) {
+                $d = $s['daily'] ?? 0;
+                $count += is_array($d) ? array_sum($d) : (int)$d;
+            }
         }
         if (!$count) $count = (int)($item['total'] ?? 0);
         if ($count > 0) $out[] = ['name' => $name, 'id' => $item['id'] ?? $name, 'count' => $count];
@@ -123,7 +126,8 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
 
     foreach (($path_item['stats'] ?? []) as $stat) {
         $date  = substr((string)($stat['day'] ?? ''), 0, 10);
-        $count = (int)($stat['daily'] ?? 0);
+        $daily = $stat['daily'] ?? 0;
+        $count = is_array($daily) ? array_sum($daily) : (int)$daily;
         if (!$count || strlen($date) !== 10) continue;
         $total               += $count;
         $path_total          += $count;
