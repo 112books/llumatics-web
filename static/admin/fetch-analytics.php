@@ -111,7 +111,8 @@ $hits_by_day = [];
 $by_lang     = [];
 $by_section  = [];
 $hits_list   = [];
-$total       = 0;
+$total        = 0;
+$total_unique = 0;
 
 foreach (($hits_raw['hits'] ?? []) as $path_item) {
     $path = (string)($path_item['path'] ?? '');
@@ -131,6 +132,10 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
         $by_lang[$lang]       = ($by_lang[$lang] ?? 0) + $count;
         $by_section[$section] = ($by_section[$section] ?? 0) + $count;
         $hits_by_day[$date]   = ($hits_by_day[$date] ?? 0) + $count;
+    }
+    foreach (($path_item['stats_unique'] ?? []) as $stat) {
+        $daily = $stat['daily'] ?? 0;
+        $total_unique += is_array($daily) ? array_sum($daily) : (int)$daily;
     }
     if ($path_total > 0) {
         $hits_list[] = ['path' => $path, 'count' => $path_total];
@@ -161,7 +166,8 @@ $locations_list = norm_items($loc_raw['locations'] ?? [], 'location');
 $output = [
     'generated'   => gmdate('Y-m-d\TH:i:s\Z'),
     'period'      => ['start' => $start, 'end' => $end],
-    'total'       => $total,
+    'total'        => $total,
+    'total_unique' => $total_unique,
     'hits_by_day' => $hbd_arr,
     'hits'        => array_slice($hits_list, 0, 50),
     'by_lang'     => $by_lang,
