@@ -1,12 +1,7 @@
 <?php
 /**
  * Genera analytics-cache.json a partir de la API de GoatCounter.
- * S'executa des del botó "↻ actualitzar" del dashboard /admin/.
- *
  * Ús: GET /admin/fetch-analytics.php?token=llumatics
- *     → escriu analytics-cache.json al mateix directori
- *     → retorna JSON {status, total, generated} o {error}
- *
  * Requereix: PHP + cURL + permisos d'escriptura al directori /admin/
  */
 header('Content-Type: application/json; charset=utf-8');
@@ -26,11 +21,9 @@ if (!function_exists('curl_init')) {
     exit;
 }
 
-// ══ CONFIGURACIÓ ════════════════════════════════════════════════════════════
 define('GC_TOKEN',  '1ocyv2uxc6caw1toqjtd0pqw231vj8tb843vpx611u5b0wkzm7dn');
 define('GC_BASE',   'https://llumatics.goatcounter.com/api/v0');
 define('CACHE_FILE', __DIR__ . '/analytics-cache.json');
-// ════════════════════════════════════════════════════════════════════════════
 
 function gc_fetch(string $path, array $params = []): ?array {
     $url = GC_BASE . $path;
@@ -77,10 +70,7 @@ function norm_items(array $items, string $name_field): array {
         $name  = $item[$name_field] ?? $item['id'] ?? 'Desconegut';
         $count = 0;
         if (isset($item['stats']) && is_array($item['stats'])) {
-            foreach ($item['stats'] as $s) {
-                $d = $s['daily'] ?? 0;
-                $count += is_array($d) ? array_sum($d) : (int)$d;
-            }
+            foreach ($item['stats'] as $s) $count += (int)($s['daily'] ?? 0);
         }
         if (!$count) $count = (int)($item['total'] ?? 0);
         if ($count > 0) $out[] = ['name' => $name, 'id' => $item['id'] ?? $name, 'count' => $count];
@@ -94,23 +84,18 @@ $end         = date('Y-m-d');
 $start       = date('Y-m-d', strtotime('-365 days'));
 $base_params = ['start' => $start, 'end' => $end, 'limit' => 200];
 
-$hits_raw  = gc_fetch('/stats/hits',      $base_params);
-usleep(400000);
-$refs_raw  = gc_fetch('/stats/refs',      array_merge($base_params, ['limit' => 20]));
-usleep(400000);
-$brow_raw  = gc_fetch('/stats/browsers',  $base_params);
-usleep(400000);
-$sys_raw   = gc_fetch('/stats/systems',   $base_params);
-usleep(400000);
-$size_raw  = gc_fetch('/stats/sizes',     $base_params);
-usleep(400000);
-$loc_raw   = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 20]));
+$hits_raw = gc_fetch('/stats/hits',      $base_params); usleep(400000);
+$refs_raw = gc_fetch('/stats/refs',      array_merge($base_params, ['limit' => 20])); usleep(400000);
+$brow_raw = gc_fetch('/stats/browsers',  $base_params); usleep(400000);
+$sys_raw  = gc_fetch('/stats/systems',   $base_params); usleep(400000);
+$size_raw = gc_fetch('/stats/sizes',     $base_params); usleep(400000);
+$loc_raw  = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 20]));
 
 // ── Processa hits ─────────────────────────────────────────────────────────────
-$hits_by_day = [];
-$by_lang     = [];
-$by_section  = [];
-$hits_list   = [];
+$hits_by_day  = [];
+$by_lang      = [];
+$by_section   = [];
+$hits_list    = [];
 $total        = 0;
 $total_unique = 0;
 
@@ -118,14 +103,14 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
     $path = (string)($path_item['path'] ?? '');
     if (str_starts_with($path, '/admin') || str_ends_with($path, '.php')) continue;
 
-    $lang       = extract_lang($path);
-    $section    = extract_section($path);
-    $path_total = 0;
+    $lang        = extract_lang($path);
+    $section     = extract_section($path);
+    $path_total  = 0;
+    $path_unique = (int)($path_item['total_unique'] ?? 0);
 
     foreach (($path_item['stats'] ?? []) as $stat) {
         $date  = substr((string)($stat['day'] ?? ''), 0, 10);
-        $daily = $stat['daily'] ?? 0;
-        $count = is_array($daily) ? array_sum($daily) : (int)$daily;
+        $count = (int)($stat['daily'] ?? 0);
         if (!$count || strlen($date) !== 10) continue;
         $total               += $count;
         $path_total          += $count;
@@ -133,12 +118,9 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
         $by_section[$section] = ($by_section[$section] ?? 0) + $count;
         $hits_by_day[$date]   = ($hits_by_day[$date] ?? 0) + $count;
     }
-    foreach (($path_item['stats_unique'] ?? []) as $stat) {
-        $daily = $stat['daily'] ?? 0;
-        $total_unique += is_array($daily) ? array_sum($daily) : (int)$daily;
-    }
+    $total_unique += $path_unique;
     if ($path_total > 0) {
-        $hits_list[] = ['path' => $path, 'count' => $path_total];
+        $hits_list[] = ['path' => $path, 'count' => $path_total, 'count_unique' => $path_unique];
     }
 }
 
@@ -159,31 +141,28 @@ foreach (($refs_raw['refs'] ?? []) as $ref) {
     if ($count > 0) $refs_list[] = ['name' => $ref['name'] ?? '(directe)', 'count' => $count];
 }
 
-// ── Processa localitzacions ───────────────────────────────────────────────────
-$locations_list = norm_items($loc_raw['locations'] ?? [], 'location');
-
 // ── Sortida ───────────────────────────────────────────────────────────────────
 $output = [
-    'generated'   => gmdate('Y-m-d\TH:i:s\Z'),
-    'period'      => ['start' => $start, 'end' => $end],
+    'generated'    => gmdate('Y-m-d\TH:i:s\Z'),
+    'period'       => ['start' => $start, 'end' => $end],
     'total'        => $total,
     'total_unique' => $total_unique,
-    'hits_by_day' => $hbd_arr,
-    'hits'        => array_slice($hits_list, 0, 50),
-    'by_lang'     => $by_lang,
-    'by_section'  => $by_section,
-    'refs'        => $refs_list,
-    'browsers'    => norm_items($brow_raw['browsers'] ?? [], 'browser'),
-    'systems'     => norm_items($sys_raw['systems']   ?? [], 'system'),
-    'sizes'       => norm_items($size_raw['sizes']    ?? [], 'size'),
-    'locations'   => $locations_list,
+    'hits_by_day'  => $hbd_arr,
+    'hits'         => array_slice($hits_list, 0, 50),
+    'by_lang'      => $by_lang,
+    'by_section'   => $by_section,
+    'refs'         => $refs_list,
+    'locations'    => norm_items($loc_raw['locations'] ?? [], 'location'),
+    'browsers'     => norm_items($brow_raw['browsers'] ?? [], 'browser'),
+    'systems'      => norm_items($sys_raw['systems']   ?? [], 'system'),
+    'sizes'        => norm_items($size_raw['sizes']    ?? [], 'size'),
 ];
 
 $json = json_encode($output, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
 if (file_put_contents(CACHE_FILE, $json) === false) {
     http_response_code(500);
-    echo json_encode(['error' => 'No s\'ha pogut escriure analytics-cache.json. Comprova els permisos de /admin/.']);
+    echo json_encode(['error' => 'No s\'ha pogut escriure analytics-cache.json. Comprova els permisos del directori /admin/.']);
     exit;
 }
 
