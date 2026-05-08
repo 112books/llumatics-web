@@ -462,12 +462,20 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-05-09)
+- [x] `fetch-analytics.php`: fix GoatCounter API v0 — endpoints i keys de resposta incorrectes
+  - `/stats/refs` → `/stats/toprefs`
+  - `$raw['browsers']` → `$raw['stats']` (ídem systems, sizes, locations, refs)
+  - `norm_items`: llegir `item['count']` directament (no `stats[].daily`)
+  - **Resultat:** navegadors, SO i dispositius ja apareixen al dashboard
+- [x] `index.html`: KPI "pàg./sessió" → "mitjana/dia" (GoatCounter API v0 no exposa `total_unique`)
+- [x] Deploy: rsync (exit 23 per admin) + `scp` directe de `fetch-analytics.php` i `index.html` al VPS
+
 ### Fet aquesta sessió (2026-05-05)
 - [x] Adreça al footer sota el logo ("Nau Bostik, La Sagrera · Barcelona") → link a `/contacte/#com-arribar-hi`
 - [x] Dashboard `/admin/`: KPI pàgines/sessió + secció localització de visites
 - [x] Dashboard `/admin/`: token GoatCounter actualitzat, parsing `daily` corregit
 - [x] Deploy admin: documentat que `static/admin/` cal scp directe (rsync els salta per exit 23)
-- [x] linuxbcn.com/admin: mateixos canvis (localitzacions + pàg./sessió) pendents de scp
 
 ### Fet aquesta sessió (2026-05-04 tarda)
 - [x] Tutoria fotogràfica: preu per hora (`preu_hora: 60`), blocs de 2h/3h/4h, inclou químics, no inclou paper ni pel·lícula (12€/unitat)
