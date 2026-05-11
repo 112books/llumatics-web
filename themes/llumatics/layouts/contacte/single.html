@@ -29,10 +29,9 @@
 
       {{ if site.Params.web3formsKey }}
       <form class="contact-form" id="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
-        <input type="hidden" name="subject" value="Contacte Llumàtics">
+        <input type="hidden" name="_subject" value="Contacte Llumàtics">
         <input type="hidden" name="from_name" value="Web Llumàtics">
-        <input type="checkbox" name="botcheck" style="display:none;">
+        <input type="hidden" name="botcheck" value="">
         <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
 
         {{/* Tipus de consulta */}}
@@ -54,7 +53,7 @@
         <div class="contact-form__row">
           <div class="contact-form__field">
             <label class="contact-form__label" for="nom">{{ i18n "form_name" | default "Nom i cognoms" }} <span aria-hidden="true">*</span></label>
-            <input class="contact-form__input" type="text" id="nom" name="nom" required autocomplete="name">
+            <input class="contact-form__input" type="text" id="nom" name="name" required autocomplete="name">
           </div>
           <div class="contact-form__field">
             <label class="contact-form__label" for="email">{{ i18n "form_email" | default "Correu electrònic" }} <span aria-hidden="true">*</span></label>
@@ -107,7 +106,7 @@
         {{/* Missatge */}}
         <div class="contact-form__field">
           <label class="contact-form__label" for="missatge">{{ i18n "form_message" | default "Missatge" }}</label>
-          <textarea class="contact-form__textarea" id="missatge" name="missatge" rows="4"></textarea>
+          <textarea class="contact-form__textarea" id="missatge" name="message" rows="4"></textarea>
         </div>
 
         <input type="hidden" name="_language" value="{{ .Language.Lang }}">
