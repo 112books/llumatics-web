@@ -707,3 +707,135 @@ Quan hi ha 2+ interessats en un taller:
 | `themes/llumatics/assets/js/main.js` | Collapsible JS + web3forms real |
 | `content/ca/espais/_index.md` | Biblioteca amb shortcode collapsible |
 | `hugo.toml` | tallyFormAvisa + comentari |
+
+
+## incidència amb formulari de contacte 11/04/2026
+
+Entesos. Versió sobria i directa.
+
+⸻
+
+Llumàtics — Formulari de contacte Web3Forms
+
+Incidència resolta i documentació
+
+Context
+
+El formulari de contacte no enviava missatges correctament en producció. El navegador retornava:
+
+* POST https://api.web3forms.com/submit 400 (Bad Request)
+* Missatge d’error a la interfície: “Error enviant el formulari”
+
+El problema afectava només el formulari de contacte, no el newsletter.
+
+⸻
+
+Causes identificades
+
+1. Duplicació de access_key
+
+Es trobaven dues declaracions del mateix camp:
+
+<input type="hidden" name="access_key" ...>
+
+Això generava un payload inconsistent per Web3Forms.
+
+Solució: eliminació d’un dels camps i manteniment d’una única clau.
+
+⸻
+
+2. Camp botcheck incorrecte
+
+Inicialment definit com a checkbox ocult:
+
+<input type="checkbox" name="botcheck">
+
+Aquest format podia generar valors inesperats o ser interpretat com spam.
+
+Solució: substitució per:
+
+<input type="hidden" name="botcheck" value="">
+
+⸻
+
+3. Camp de missatge no estàndard
+
+El camp utilitzava:
+
+name="missatge"
+
+Web3Forms espera preferentment:
+
+name="message"
+
+Solució: normalització del nom del camp.
+
+⸻
+
+4. Errors residuals de JavaScript
+
+Es van detectar i eliminar:
+
+* fragments de codi invàlid (...)
+* duplicació de listeners de submit
+* possibles conflictes d’abast del formulari
+
+⸻
+
+5. Error secundari de consola
+
+A listener indicated an asynchronous response...
+
+No està relacionat amb el formulari. Prové d’extensions del navegador o eines de desenvolupament.
+
+⸻
+
+Estat final
+
+* Enviament de formulari operatiu
+* Web3Forms accepta correctament les peticions
+* Sense errors 400
+* Newsletter sense afectació
+* JavaScript estable
+
+⸻
+
+Aprenentatges
+
+* Web3Forms és sensible a duplicats i camps no esperats
+* Un sol camp incorrecte pot invalidar tot el request
+* Els errors 400 en aquest context són gairebé sempre de payload, no de JS
+* Cal evitar duplicacions en hidden inputs i normalitzar noms de camps
+
+⸻
+
+Tasques pendents
+
+Interfície
+
+* Afegir feedback d’estat clar en enviament (èxit/error)
+* Millorar estat de “loading” del botó
+* Substituir alertes per missatges inline
+
+⸻
+
+Formulari
+
+* Millorar validació abans d’enviament
+* Evitar doble submit (bloqueig del botó)
+* Opcional: millorar sistema anti-spam (honeypot o temps mínim)
+
+⸻
+
+Depuració i manteniment
+
+* Opcional: logging de payload en entorn de desenvolupament
+* Revisió futura d’unificació de formularis del lloc
+
+⸻
+
+Conclusió
+
+El problema no era estructural del projecte sinó una combinació de camps duplicats i incompatibilitats amb l’esquema esperat per Web3Forms. Un cop corregit, el sistema funciona de forma estable.
+
+⸻
