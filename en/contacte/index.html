@@ -17,11 +17,11 @@
 <a class=contact-anchor__link href=#formulari>Write to us</a>
 <a class=contact-anchor__link href=#com-arribar-hi>How to get here</a>
 <a class=contact-anchor__link href=#transport>Public transport</a>
-<a class=contact-anchor__link href=#faq>FAQ</a></nav><div class=contact-layout><section class=contact-form-section id=formulari><h2 class=contact-section__title>Get in touch</h2><p class=contact-form-section__lead>We aim to reply within 48 hours on business days.</p><form class=contact-form action=https://api.web3forms.com/submit method=POST novalidate><input type=hidden name=access_key value=31b4da8e-2f87-4909-8019-67ed2df04295>
+<a class=contact-anchor__link href=#faq>FAQ</a></nav><div class=contact-layout><section class=contact-form-section id=formulari><h2 class=contact-section__title>Get in touch</h2><p class=contact-form-section__lead>We aim to reply within 48 hours on business days.</p><form class=contact-form id=contact-form novalidate><input type=hidden name=access_key value=31b4da8e-2f87-4909-8019-67ed2df04295>
 <input type=hidden name=subject value="Contacte Llumàtics">
 <input type=hidden name=from_name value="Web Llumàtics">
 <input type=checkbox name=botcheck style=display:none>
-<input type=hidden name=redirect value="https://112books.github.io/llumatics-web/en/gracies/?from=contacte"><fieldset class=contact-form__fieldset><legend class=contact-form__legend>Type of enquiry</legend><div class=contact-form__radios><label class=contact-form__radio><input type=radio name=tipus value=consulta-general checked>
+<input type=hidden name=access_key value=31b4da8e-2f87-4909-8019-67ed2df04295><fieldset class=contact-form__fieldset><legend class=contact-form__legend>Type of enquiry</legend><div class=contact-form__radios><label class=contact-form__radio><input type=radio name=tipus value=consulta-general checked>
 <span>General enquiry</span>
 </label><label class=contact-form__radio><input type=radio name=tipus value=sol·licitar-taller id=radio-taller>
 <span>Request a workshop</span></label></div></fieldset><div class=contact-form__row><div class=contact-form__field><label class=contact-form__label for=nom>Full name <span aria-hidden=true>*</span></label>
@@ -32,11 +32,29 @@
 <select class=contact-form__select id=horari name=horari><option value=mati>Morning (10am–2pm)</option><option value=tarda>Afternoon (4pm–6pm)</option><option value=indiferent selected>No preference</option></select></div><div class=contact-form__field><label class=contact-form__label for=alumnes>Number of students</label>
 <select class=contact-form__select id=alumnes name=alumnes><option value=1>1 student</option><option value=2>2 students</option><option value=3>3 students</option><option value=4>4 students</option></select></div></div></div><div class=contact-form__field><label class=contact-form__label for=missatge>Message</label>
 <textarea class=contact-form__textarea id=missatge name=missatge rows=4></textarea></div><input type=hidden name=_language value=en>
-<button type=submit class="btn btn--primary">Send</button></form><script>(function(){var e=document.querySelectorAll('input[name="tipus"]'),t=document.getElementById("taller-fields");e.forEach(function(e){e.addEventListener("change",function(){t.hidden=this.value!=="sol·licitar-taller"})})})()</script></section><aside class=contact-sidebar id=dades><section class=contact-map id=com-arribar-hi><h2 class=contact-section__title>Getting here</h2><div class=contact-details><div class=contact-detail><span class=contact-detail__icon aria-hidden=true><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<button type=submit class="btn btn--primary">Send</button></form><script>
+      (function(){
+        var radios = document.querySelectorAll('input[name="tipus"]');
+        var tallerFields = document.getElementById('taller-fields');
+        radios.forEach(function(r){
+          r.addEventListener('change', function(){
+            tallerFields.hidden = (this.value !== 'sol·licitar-taller');
+          });
+        });
+      })();
+      </script></section><aside class=contact-sidebar id=dades><section class=contact-map id=com-arribar-hi><h2 class=contact-section__title>Getting here</h2><div class=contact-details><div class=contact-detail><span class=contact-detail__icon aria-hidden=true><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
 </span><span>Ferran Turné, 1-11 · 08027 Barcelona<br><small>dins la Nau Bostik</small></span></div><a href=mailto:hola@llumatics.com class=contact-detail><span class=contact-detail__icon aria-hidden=true><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94.0 01-2.06.0L2 7"/></svg>
 </span><span>hola@llumatics.com</span>
 </a><a href=https://www.instagram.com/llumatics class=contact-detail target=_blank rel="noopener noreferrer"><span class=contact-detail__icon aria-hidden=true><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
-</span><span>@llumatics</span></a></div><div class=contact-map__embed><div class=map-consent id=map-consent><p class=map-consent__text>The map is interactive (OpenStreetMap). Click to load it.</p><button class="map-consent__btn btn btn--secondary" onclick=loadMap()>Show map</button></div><iframe id=osm-map data-src="https://www.openstreetmap.org/export/embed.html?bbox=2.1885%2C41.4215%2C2.1975%2C41.4275&amp;layer=mapnik&amp;marker=41.424371%2C2.192952" width=100% height=280 style=border:0;display:none title="Mapa Nau Bostik, Ferran Turné 1-11, Barcelona" referrerpolicy=no-referrer-when-downgrade></iframe></div><p class=contact-map__link><a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target=_blank rel="noopener noreferrer">Open in map →</a></p></section><script>function loadMap(){var e=document.getElementById("osm-map"),t=document.getElementById("map-consent");e.src=e.dataset.src,e.style.display="block",t.style.display="none"}</script></aside></div><section class=contact-transport id=transport><h2 class=contact-section__title>Llumàtics always recommends public transport</h2><div class=transport-grid><div class=transport-card><span class=transport-card__icon aria-hidden=true><img src=/llumatics-web/images/transport/metro.svg alt width=32 height=32></span><div><strong class=transport-card__name>Metro</strong>
+</span><span>@llumatics</span></a></div><div class=contact-map__embed><div class=map-consent id=map-consent><p class=map-consent__text>The map is interactive (OpenStreetMap). Click to load it.</p><button class="map-consent__btn btn btn--secondary" onclick=loadMap()>Show map</button></div><iframe id=osm-map data-src="https://www.openstreetmap.org/export/embed.html?bbox=2.1885%2C41.4215%2C2.1975%2C41.4275&amp;layer=mapnik&amp;marker=41.424371%2C2.192952" width=100% height=280 style=border:0;display:none title="Mapa Nau Bostik, Ferran Turné 1-11, Barcelona" referrerpolicy=no-referrer-when-downgrade></iframe></div><p class=contact-map__link><a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target=_blank rel="noopener noreferrer">Open in map →</a></p></section><script>
+      function loadMap() {
+        var iframe = document.getElementById('osm-map');
+        var consent = document.getElementById('map-consent');
+        iframe.src = iframe.dataset.src;
+        iframe.style.display = 'block';
+        consent.style.display = 'none';
+      }
+      </script></aside></div><section class=contact-transport id=transport><h2 class=contact-section__title>Llumàtics always recommends public transport</h2><div class=transport-grid><div class=transport-card><span class=transport-card__icon aria-hidden=true><img src=/llumatics-web/images/transport/metro.svg alt width=32 height=32></span><div><strong class=transport-card__name>Metro</strong>
 <span class=transport-card__lines>L1, L5, L9N, L10N — La Sagrera</span>
 <span class=transport-card__detail>8–10 min walk</span></div></div><div class=transport-card><span class=transport-card__icon aria-hidden=true><img src=/llumatics-web/images/transport/tren.svg alt width=32 height=32></span><div><strong class=transport-card__name>Commuter train</strong>
 <span class=transport-card__lines>R4 — La Sagrera</span>
@@ -56,10 +74,12 @@
 <button type=submit class="btn btn--primary newsletter-band__submit">Subscriu-me</button></div><p class=newsletter-form__msg aria-live=polite></p></form></div><div class=site-footer__bottom><span>&copy; 2026 Llumàtics. All rights reserved.</span>
 <span>Content from this website may not be reproduced without permission.</span>
 <span class=site-footer__privacy-note>No tracking cookies. <a href=https://112books.github.io/llumatics-web/en/cookies/>Cookie policy</a></span></div><div class=site-footer__powered><a href=https://linuxbcn.com target=_blank rel=noopener>Powered by LinuxBCN.com</a>
-<span class=site-footer__powered-services>Consultancy · Development · Hosting · Design</span></div></div></footer><script src=/llumatics-web/js/main.min.d0ea87c77d4ae2d7b1debc41b65ed45b5937d7e81d45cbd58eec7fa1122e161b.js defer></script><button class=back-to-top id=js-back-to-top aria-label="Tornar al principi">
+<span class=site-footer__powered-services>Consultancy · Development · Hosting · Design</span></div></div></footer><script src=/llumatics-web/js/main.min.340d8f18f3846f66576b5961f88d9ee678521e4d6e2ed14e9ca73adabae679b8.js defer></script><button class=back-to-top id=js-back-to-top aria-label="Tornar al principi">
 <svg class="back-to-top__ring" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle class="back-to-top__track" cx="24" cy="24" r="21"/><circle class="back-to-top__progress" cx="24" cy="24" r="21" id="js-btt-progress"/></svg>
 <span class=back-to-top__arrow><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="6,1 12,11 0,11"/></svg></span></button><div id=search-overlay class=search-overlay role=dialog aria-modal=true aria-label=Cercar hidden><div class=search-box><input id=search-input class=search-input type=search placeholder="Cerca tallers i entrades…" autocomplete=off spellcheck=false>
-<button class=search-close aria-label="Tancar cerca">&#215;</button><ul id=search-results class=search-results role=listbox aria-live=polite></ul></div></div><script>window.__searchURL="https://112books.github.io/llumatics-web/en/index.json"</script><div id=js-lightbox role=dialog aria-modal=true aria-label="Imatge ampliada" style=display:none><button class="lb-btn lb-btn--prev" id=js-lb-prev aria-label=Anterior>&#8249;</button>
+<button class=search-close aria-label="Tancar cerca">&#215;</button><ul id=search-results class=search-results role=listbox aria-live=polite></ul></div></div><script>
+    window.__searchURL = "https:\/\/112books.github.io\/llumatics-web\/en\/index.json";
+  </script><div id=js-lightbox role=dialog aria-modal=true aria-label="Imatge ampliada" style=display:none><button class="lb-btn lb-btn--prev" id=js-lb-prev aria-label=Anterior>&#8249;</button>
 <img id=js-lb-img src alt>
 <button class="lb-btn lb-btn--next" id=js-lb-next aria-label=Següent>&#8250;</button>
 <button class="lb-btn lb-btn--close" id=js-lb-close aria-label=Tancar>&#215;</button>
