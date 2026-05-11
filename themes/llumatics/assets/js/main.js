@@ -127,57 +127,46 @@
   }
 
   // ─────────────────────────────────────────────────────────────
-  // CONTACT FORM (Web3Forms)
-  // ─────────────────────────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.querySelector('#contact-form');
+// CONTACT FORM (Web3Forms)
+// ─────────────────────────────────────────────────────────────
+const contactForm = document.querySelector('#contact-form');
 
-    if (!contactForm) return;
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
 
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      ...
-    });
-  });
+    const btn = contactForm.querySelector('button[type="submit"]');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', async e => {
-      e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Enviant...';
 
-      const btn = contactForm.querySelector('button[type="submit"]');
+    try {
+      const body = new FormData(contactForm);
+      body.append('subject', 'Contacte Llumàtics');
+      body.append('from_name', 'Web Llumàtics');
 
-      btn.disabled = true;
-      btn.textContent = '...';
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body
+      });
 
-      try {
-        const body = new FormData(contactForm);
+      const data = await res.json();
 
-        body.append('subject', 'Contacte Llumàtics');
-        body.append('from_name', 'Web Llumàtics');
-
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-          const lang = document.documentElement.lang;
-          const base = lang === 'ca' ? '' : '/' + lang;
-
-          window.location.href = base + '/gracies/?from=contacte';
-        } else {
-          throw new Error('submit error');
-        }
-
-      } catch (err) {
-        alert('Error enviant el formulari');
-        btn.disabled = false;
-        btn.textContent = 'Enviar';
+      if (data.success) {
+        const lang = document.documentElement.lang;
+        const base = lang === 'ca' ? '' : '/' + lang;
+        window.location.href = base + '/gracies/?from=contacte';
+      } else {
+        throw new Error('submit error');
       }
-    });
-  }
+
+    } catch (err) {
+      alert('Error enviant el formulari');
+      btn.disabled = false;
+      btn.textContent = 'Enviar';
+    }
+  });
+}
 
   // ─────────────────────────────────────────────────────────────
   // BACK TO TOP

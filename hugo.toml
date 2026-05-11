@@ -84,7 +84,7 @@ defaultContentLanguageInSubdir = false
 [minify]
   disableCSS = false
   disableHTML = false
-  disableJS = false
+  disableJS = true
 
 # ── Menús per idioma ──────────────────────────────────────────────────────────
 
