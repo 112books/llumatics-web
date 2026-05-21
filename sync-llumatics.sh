@@ -201,7 +201,7 @@ new_taller() {
     err "El slug no pot estar buit."
     exit 1
   fi
-  hugo new content "ca/tallers/${slug}/index.md"
+  hugo new content "tallers/${slug}/index.md"
   ok "Creat: content/ca/tallers/${slug}/index.md"
   dim "Recorda crear també la pàgina privada: content/ca/tallers/${slug}/privat/index.md"
 }
@@ -212,8 +212,23 @@ new_data() {
     err "El slug no pot estar buit."
     exit 1
   fi
-  hugo new content "ca/agenda/${slug}.md"
+  read -r -p "  Data del taller (YYYY-MM-DD, ex: 2026-06-15): " data
+  if [[ -z "$data" ]]; then
+    err "La data no pot estar buida."
+    exit 1
+  fi
+  if ! [[ "$data" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+    err "Format de data incorrecte. Usa YYYY-MM-DD."
+    exit 1
+  fi
+  hugo new content "agenda/${slug}.md"
+  FILE="content/ca/agenda/${slug}.md"
+  sed -i.bak "s/^date_start: .*/date_start: \"${data}\"/" "$FILE"
+  sed -i.bak "s/^date: .*/date: \"${data}\"/" "$FILE"
+  rm -f "${FILE}.bak"
   ok "Creat: content/ca/agenda/${slug}.md"
+  ok "Data: ${data}"
+  dim "Obre el fitxer i omple: course_ref, time_start, time_end, price, etc."
 }
 
 # ── Menú ─────────────────────────────────────────────────────────────────
