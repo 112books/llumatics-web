@@ -1,6 +1,10 @@
 {{/* Partial: agenda-item.html — una entrada d'agenda */}}
 {{ $date := .Params.date_start }}
+{{ $today := now.Format "2006-01-02" }}
 {{ $status := .Params.status | default "active" }}
+{{ if and .Params.date_start (lt .Params.date_start $today) }}
+  {{ $status = "past" }}
+{{ end }}
 {{ $purchaseURL := .Params.purchase_url }}
 
 {{/* Dades del taller de referència com a fallback */}}
