@@ -4,6 +4,7 @@ theme = "llumatics"
 enableRobotsTXT = true
 enableGitInfo = false
 summaryLength = 70
+buildFuture = true
 
 defaultContentLanguage = "ca"
 defaultContentLanguageInSubdir = false
