@@ -2994,6 +2994,142 @@ a.recorregut__tematic-link:hover {
   .gift-course-card__actions .btn { width: 100%; text-align: center; }
 }
 
+/* ── Val-regal: formulari inline ──────────────────────────────────────── */
+.gift-form-wrap {
+  margin-bottom: var(--space-12);
+}
+.gift-form-header {
+  margin-bottom: var(--space-6);
+}
+.gift-form-back {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+.gift-form-back:hover { color: var(--color-text); }
+.gift-form-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-1);
+}
+.gift-form-subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.gift-form__row {
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.gift-form__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.gift-form__input,
+.gift-form__textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: border-color 0.15s;
+}
+.gift-form__input:focus,
+.gift-form__textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+.gift-form__textarea { resize: vertical; }
+.gift-form__amount-wrap {
+  position: relative;
+}
+.gift-form__currency {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  pointer-events: none;
+}
+.gift-form__amount { padding-left: 1.75rem; }
+.gift-form__hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.gift-form__error {
+  background: #fff1f1;
+  border: 1px solid #f87171;
+  border-radius: var(--radius-sm);
+  color: #b91c1c;
+  font-size: var(--text-sm);
+  padding: 0.6rem 0.85rem;
+  margin-bottom: var(--space-4);
+}
+.gift-form__paypal-wrap {
+  margin-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+}
+.gift-form__paypal-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+.gift-form__paypal-error {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: #b91c1c;
+  text-align: center;
+}
+/* ── Val-regal: èxit ────────────────────────────────────────────────────── */
+.gift-success {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  margin-bottom: var(--space-12);
+}
+.gift-success__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+.gift-success__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+}
+.gift-success__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-3);
+  line-height: 1.65;
+}
+.gift-success__sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
 /* ── Cerca ───────────────────────────────────────────────────────────────── */
 .search-toggle {
   background: none;
