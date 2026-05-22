@@ -32,6 +32,87 @@
     <div id="gift-result" class="gift-result" hidden></div>
   </div>
 
+  {{/* ── Formulari de compra del val-regal ─────────────────────────────── */}}
+  <div id="gift-form-wrap"
+       class="gift-form-wrap"
+       data-webhook="{{ $.Site.Params.makecomGiftWebhook | default "" }}"
+       hidden>
+    <div class="gift-form-header">
+      <button class="gift-form-back" id="gift-form-back">← Torna a les recomanacions</button>
+      <h2 class="gift-form-title">Personalitza el val-regal</h2>
+      <p class="gift-form-subtitle" id="gift-form-subtitle"></p>
+    </div>
+
+    <form class="gift-form" id="gift-form" novalidate>
+      <input type="hidden" id="gift-taller" name="taller_nom">
+
+      <div class="gift-form__row">
+        <label class="gift-form__label" for="gift-per-a">Per a (nom del destinatari) *</label>
+        <input class="gift-form__input" type="text" id="gift-per-a" name="per_a" required
+               placeholder="Ex: Marta">
+      </div>
+
+      <div class="gift-form__row">
+        <label class="gift-form__label" for="gift-de">De (el teu nom) *</label>
+        <input class="gift-form__input" type="text" id="gift-de" name="de" required
+               placeholder="Ex: Joan">
+      </div>
+
+      <div class="gift-form__row">
+        <label class="gift-form__label" for="gift-missatge">Missatge personal (opcional)</label>
+        <textarea class="gift-form__textarea" id="gift-missatge" name="missatge"
+                  rows="3" maxlength="220"
+                  placeholder="Feliç aniversari! T'he regalat el taller que sempre havies volgut fer."></textarea>
+        <span class="gift-form__hint">Apareixerà imprès al val. Màx. 220 caràcters.</span>
+      </div>
+
+      <div class="gift-form__row">
+        <label class="gift-form__label" for="gift-email">El teu correu electrònic *</label>
+        <input class="gift-form__input" type="email" id="gift-email" name="email" required
+               placeholder="tu@exemple.com">
+        <span class="gift-form__hint">Aquí t'enviarem el PDF del val-regal.</span>
+      </div>
+
+      <div class="gift-form__row">
+        <label class="gift-form__label" for="gift-import">Import del val (€) *</label>
+        <div class="gift-form__amount-wrap">
+          <span class="gift-form__currency">€</span>
+          <input class="gift-form__input gift-form__amount" type="number" id="gift-import"
+                 name="import" required min="20" step="1" placeholder="155">
+        </div>
+        <span class="gift-form__hint">Mínim 20€. Pots modificar l'import suggerit.</span>
+      </div>
+
+      <p class="gift-form__error" id="gift-form-error" hidden></p>
+
+      <button type="button" class="btn btn--primary" id="gift-form-submit"
+              style="width:100%; margin-bottom:var(--space-4);">Continuar al pagament →</button>
+
+      <div class="gift-form__paypal-wrap" id="gift-paypal-wrap" hidden>
+        <p class="gift-form__paypal-label">Tria com vols pagar:</p>
+        <div id="paypal-button-container"></div>
+        <p class="gift-form__paypal-error" id="gift-paypal-error" hidden>
+          Hi ha hagut un error amb el pagament. Torna-ho a intentar o escriu-nos a
+          <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
+        </p>
+      </div>
+    </form>
+  </div>
+
+  {{/* ── Estat d'èxit post-pagament ──────────────────────────────────────── */}}
+  <div id="gift-success" class="gift-success" hidden>
+    <div class="gift-success__icon">✓</div>
+    <h2 class="gift-success__title">Pagament completat!</h2>
+    <p class="gift-success__text">
+      En uns minuts rebràs el val-regal en PDF a <strong id="gift-success-email"></strong>.<br>
+      Comprova la carpeta de correu no desitjat si no el trobes en 15 minuts.
+    </p>
+    <p class="gift-success__sub">
+      Qualsevol dubte, escriu-nos a
+      <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
+    </p>
+  </div>
+
   {{/* Preview del val físic */}}
   <div class="gift-preview-section">
     <div class="gift-card-preview">
@@ -60,4 +141,143 @@
 
 </div>
 </div>
+
+  {{/* SDK PayPal — només si el Client ID està configurat */}}
+  {{ with $.Site.Params.paypalClientID }}
+  <script src="https://www.paypal.com/sdk/js?client-id={{ . }}&currency=EUR&locale=ca_ES&intent=capture&components=buttons"></script>
+  {{ end }}
+
+  <script>
+  (function () {
+    var formWrap    = document.getElementById('gift-form-wrap');
+    var successDiv  = document.getElementById('gift-success');
+    var quizWrap    = document.querySelector('.gift-quiz-wrap');
+    if (!formWrap) return;
+
+    var webhookUrl     = formWrap.dataset.webhook || '';
+    var paypalRendered = false;
+
+    /* ── Mostrar formulari en clicar qualsevol .gift-regala-btn ── */
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.gift-regala-btn');
+      if (!btn) return;
+
+      document.getElementById('gift-taller').value         = btn.dataset.title || '';
+      document.getElementById('gift-import').value         = btn.dataset.preu  || '';
+      document.getElementById('gift-form-subtitle').textContent =
+        btn.dataset.title ? 'Val per a: ' + btn.dataset.title : "Val d'import lliure";
+
+      document.getElementById('gift-form-error').setAttribute('hidden', '');
+      document.getElementById('gift-paypal-wrap').setAttribute('hidden', '');
+      document.getElementById('gift-form-submit').removeAttribute('hidden');
+      document.getElementById('gift-paypal-error').setAttribute('hidden', '');
+
+      quizWrap  && quizWrap.setAttribute('hidden', '');
+      formWrap.removeAttribute('hidden');
+      formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    /* ── Tornar a les recomanacions ── */
+    document.getElementById('gift-form-back').addEventListener('click', function () {
+      formWrap.setAttribute('hidden', '');
+      quizWrap && quizWrap.removeAttribute('hidden');
+    });
+
+    /* ── Validar i mostrar PayPal ── */
+    document.getElementById('gift-form-submit').addEventListener('click', function () {
+      var errorEl = document.getElementById('gift-form-error');
+      var perA    = document.getElementById('gift-per-a').value.trim();
+      var de      = document.getElementById('gift-de').value.trim();
+      var email   = document.getElementById('gift-email').value.trim();
+      var importV = parseFloat(document.getElementById('gift-import').value);
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!perA || !de || !email || !importV) {
+        errorEl.textContent = 'Omple tots els camps obligatoris.';
+        errorEl.removeAttribute('hidden');
+        return;
+      }
+      if (!emailRe.test(email)) {
+        errorEl.textContent = "L'adreça de correu no és vàlida.";
+        errorEl.removeAttribute('hidden');
+        return;
+      }
+      if (importV < 20) {
+        errorEl.textContent = "L'import mínim és 20€.";
+        errorEl.removeAttribute('hidden');
+        return;
+      }
+
+      errorEl.setAttribute('hidden', '');
+      this.setAttribute('hidden', '');
+      document.getElementById('gift-paypal-wrap').removeAttribute('hidden');
+      if (!paypalRendered) renderPayPal();
+    });
+
+    /* ── Inicialitzar PayPal Smart Buttons ── */
+    function renderPayPal() {
+      if (!window.paypal) {
+        document.getElementById('gift-paypal-error').removeAttribute('hidden');
+        return;
+      }
+      paypalRendered = true;
+
+      paypal.Buttons({
+        style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'pay' },
+
+        createOrder: function (data, actions) {
+          var importV   = parseFloat(document.getElementById('gift-import').value) || 0;
+          var tallerNom = document.getElementById('gift-taller').value || 'Val regal Llumàtics';
+          return actions.order.create({
+            purchase_units: [{
+              description: 'Val regal Llumàtics — ' + tallerNom,
+              amount: { value: importV.toFixed(2), currency_code: 'EUR' }
+            }]
+          });
+        },
+
+        onApprove: function (data, actions) {
+          return actions.order.capture().then(function (details) {
+            var payload = {
+              per_a:              document.getElementById('gift-per-a').value.trim(),
+              de:                 document.getElementById('gift-de').value.trim(),
+              missatge:           document.getElementById('gift-missatge').value.trim(),
+              email:              document.getElementById('gift-email').value.trim(),
+              import:             parseFloat(document.getElementById('gift-import').value),
+              taller_nom:         document.getElementById('gift-taller').value.trim(),
+              paypal_order_id:    details.id,
+              paypal_payer_email: details.payer.email_address,
+              data:               new Date().toISOString().split('T')[0]
+            };
+            var successEmail = payload.email;
+            var req = webhookUrl
+              ? fetch(webhookUrl, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload)
+                })
+              : Promise.resolve();
+            req.catch(function () {}).then(function () {
+              showSuccess(successEmail);
+            });
+          });
+        },
+
+        onError: function (err) {
+          console.error('PayPal error:', err);
+          document.getElementById('gift-paypal-error').removeAttribute('hidden');
+        }
+      }).render('#paypal-button-container');
+    }
+
+    /* ── Mostrar pantalla d'èxit ── */
+    function showSuccess(email) {
+      formWrap.setAttribute('hidden', '');
+      successDiv.removeAttribute('hidden');
+      document.getElementById('gift-success-email').textContent = email;
+      successDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+  }());
+  </script>
 {{ end }}
