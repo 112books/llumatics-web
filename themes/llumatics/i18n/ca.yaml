@@ -158,3 +158,51 @@ preu_4h: "4 hores"
 gracies_msg_contacte: "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners."
 gracies_msg_newsletter: "Ja ets a la llista. T'escriurem quan hi hagi novetats que valguin la pena."
 gracies_msg_default: "Tot ha anat bé. Gràcies per contactar amb Llumàtics."
+
+# Fitxa del taller (single.html)
+fitxa_taller: "Fitxa del taller"
+fitxa_objectiu: "Objectiu"
+fitxa_metodologia: "Metodologia"
+fitxa_resultat: "Resultat"
+fitxa_prerequisits: "Prerequisits"
+fitxa_target: "A qui va dirigit"
+continua_aprenent: "Continua aprenent"
+material_alumnes_question: "Ja has fet aquest taller?"
+material_alumnes_cta: "Accedeix al material per a alumnes →"
+
+# Info-box — preus
+preu_per_persona: "Preu per persona"
+preu_col_alumnes: "Alumnes"
+preu_col_per_persona: "Per persona"
+preu_1_alumne: "1 alumne"
+preu_2_alumnes: "2 alumnes"
+preu_3_alumnes: "3 alumnes"
+preu_4_alumnes: "4 alumnes"
+preu_vat_note: "Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar."
+
+# Info-box — dades tècniques
+duration_hours: "hores"
+optional: "opcional"
+info_sessions: "Sessions"
+info_model: "Model"
+info_model_optional: "o portes el teu / la teva"
+info_alumnes: "Alumnes"
+info_max_abbrev: "Màx."
+
+# Info-box — extern
+extern_dates_label: "Dates i inscripció"
+extern_dates_text: "Aquest taller el programa i gestiona directament <strong>Cameras &amp; Films</strong>. Les dates les anuncia la botiga."
+extern_instagram_cta: "Cameras &amp; Films a Instagram →"
+
+# Info-box — sota demanda
+ondemand_label: "Taller sota demanda"
+ondemand_text: "No hi ha dates fixes. Escriu-nos i busquem una data que t'encaixi."
+ondemand_group_text: "Pots fer-ho en grup (màx. %d persones) o en <strong>classe particular</strong>, que resulta més econòmica per participant si sou 1 o 2."
+
+# Info-box — CTAs
+cta_solicita_data: "Sol·licita una data"
+cta_avisa: "Avisa'm quan hi hagi places →"
+cta_regala: "Regala aquest taller →"
+cta_newsletter_pre: "O"
+cta_newsletter_link: "subscriu-te al butlletí"
+cta_newsletter_post: "per estar al cas de quan es programi."

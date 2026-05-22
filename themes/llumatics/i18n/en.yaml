@@ -158,3 +158,51 @@ preu_4h: "4 hours"
 gracies_msg_contacte: "We've received your message. We'll get back to you within 48 hours on business days."
 gracies_msg_newsletter: "You're on the list. We'll write when there's something worth sharing."
 gracies_msg_default: "All good. Thanks for getting in touch with Llumàtics."
+
+# Workshop details (single.html)
+fitxa_taller: "Workshop details"
+fitxa_objectiu: "Objective"
+fitxa_metodologia: "Methodology"
+fitxa_resultat: "Outcome"
+fitxa_prerequisits: "Prerequisites"
+fitxa_target: "Who it's for"
+continua_aprenent: "Keep learning"
+material_alumnes_question: "Already done this workshop?"
+material_alumnes_cta: "Access student materials →"
+
+# Info-box — pricing
+preu_per_persona: "Price per person"
+preu_col_alumnes: "Students"
+preu_col_per_persona: "Per person"
+preu_1_alumne: "1 student"
+preu_2_alumnes: "2 students"
+preu_3_alumnes: "3 students"
+preu_4_alumnes: "4 students"
+preu_vat_note: "VAT-exempt training. If you need an invoice, let us know when requesting."
+
+# Info-box — technical details
+duration_hours: "hours"
+optional: "optional"
+info_sessions: "Sessions"
+info_model: "Model"
+info_model_optional: "or bring your own"
+info_alumnes: "Students"
+info_max_abbrev: "Max."
+
+# Info-box — external
+extern_dates_label: "Dates and booking"
+extern_dates_text: "This workshop is programmed and managed directly by <strong>Cameras &amp; Films</strong>. Dates are announced by the shop."
+extern_instagram_cta: "Cameras &amp; Films on Instagram →"
+
+# Info-box — on demand
+ondemand_label: "On-demand workshop"
+ondemand_text: "No fixed dates. Write to us and we'll find a date that works for you."
+ondemand_group_text: "You can do it in a group (max %d people) or as a <strong>private lesson</strong>, which works out cheaper per person for 1 or 2 students."
+
+# Info-box — CTAs
+cta_solicita_data: "Request a date"
+cta_avisa: "Notify me when places open →"
+cta_regala: "Gift this workshop →"
+cta_newsletter_pre: "Or"
+cta_newsletter_link: "subscribe to the newsletter"
+cta_newsletter_post: "to be the first to know when it's scheduled."

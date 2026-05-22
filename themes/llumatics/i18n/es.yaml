@@ -158,3 +158,51 @@ preu_4h: "4 horas"
 gracies_msg_contacte: "Hemos recibido tu mensaje. Te escribiremos en un máximo de 48 horas en días laborables."
 gracies_msg_newsletter: "Ya estás en la lista. Te escribiremos cuando haya novedades que valgan la pena."
 gracies_msg_default: "Todo ha ido bien. Gracias por contactar con Llumàtics."
+
+# Ficha del taller (single.html)
+fitxa_taller: "Ficha del taller"
+fitxa_objectiu: "Objetivo"
+fitxa_metodologia: "Metodología"
+fitxa_resultat: "Resultado"
+fitxa_prerequisits: "Prerrequisitos"
+fitxa_target: "A quién va dirigido"
+continua_aprenent: "Continúa aprendiendo"
+material_alumnes_question: "¿Ya has hecho este taller?"
+material_alumnes_cta: "Accede al material para alumnos →"
+
+# Info-box — precios
+preu_per_persona: "Precio por persona"
+preu_col_alumnes: "Alumnos"
+preu_col_per_persona: "Por persona"
+preu_1_alumne: "1 alumno"
+preu_2_alumnes: "2 alumnos"
+preu_3_alumnes: "3 alumnos"
+preu_4_alumnes: "4 alumnos"
+preu_vat_note: "Formación exenta de IVA. Si necesitas factura, indícalo al solicitar."
+
+# Info-box — datos técnicos
+duration_hours: "horas"
+optional: "opcional"
+info_sessions: "Sesiones"
+info_model: "Modelo"
+info_model_optional: "o lo/la traes tú"
+info_alumnes: "Alumnos"
+info_max_abbrev: "Máx."
+
+# Info-box — externo
+extern_dates_label: "Fechas e inscripción"
+extern_dates_text: "Este taller lo programa y gestiona directamente <strong>Cameras &amp; Films</strong>. Las fechas las anuncia la tienda."
+extern_instagram_cta: "Cameras &amp; Films en Instagram →"
+
+# Info-box — bajo demanda
+ondemand_label: "Taller bajo demanda"
+ondemand_text: "No hay fechas fijas. Escríbenos y buscamos una fecha que te vaya bien."
+ondemand_group_text: "Puedes hacerlo en grupo (máx. %d personas) o en <strong>clase particular</strong>, que resulta más económica por participante si sois 1 o 2."
+
+# Info-box — CTAs
+cta_solicita_data: "Solicita una fecha"
+cta_avisa: "Avísame cuando haya plazas →"
+cta_regala: "Regala este taller →"
+cta_newsletter_pre: "O"
+cta_newsletter_link: "suscríbete al boletín"
+cta_newsletter_post: "para estar al tanto de cuándo se programe."

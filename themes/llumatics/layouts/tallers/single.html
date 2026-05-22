@@ -103,39 +103,39 @@
       {{/* Fitxa pedagògica */}}
       {{ if or .Params.objective .Params.methodology .Params.result .Params.target .Params.prerequisits }}
       <div class="fitxa-pedagogica">
-        <h2>Fitxa del taller</h2>
+        <h2>{{ i18n "fitxa_taller" }}</h2>
 
         {{ with .Params.objective }}
         <div class="fitxa-row">
-          <dt>Objectiu</dt>
+          <dt>{{ i18n "fitxa_objectiu" }}</dt>
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
 
         {{ with .Params.methodology }}
         <div class="fitxa-row">
-          <dt>Metodologia</dt>
+          <dt>{{ i18n "fitxa_metodologia" }}</dt>
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
 
         {{ with .Params.result }}
         <div class="fitxa-row">
-          <dt>Resultat</dt>
+          <dt>{{ i18n "fitxa_resultat" }}</dt>
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
 
         {{ with .Params.prerequisits }}
         <div class="fitxa-row">
-          <dt>Prerequisits</dt>
+          <dt>{{ i18n "fitxa_prerequisits" }}</dt>
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
 
         {{ with .Params.target }}
         <div class="fitxa-row">
-          <dt>A qui va dirigit</dt>
+          <dt>{{ i18n "fitxa_target" }}</dt>
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
@@ -145,7 +145,7 @@
       {{/* Continua aprenent */}}
       {{ with .Params.continua_aprenent }}
       <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--color-border);">
-        <h3 style="font-size:var(--text-sm); text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">Continua aprenent</h3>
+        <h3 style="font-size:var(--text-sm); text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">{{ i18n "continua_aprenent" }}</h3>
         <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
           {{ range . }}
             {{ $related := $.Site.GetPage (printf "/tallers/%s" .) }}
@@ -164,9 +164,9 @@
 
       {{/* Botó material alumnes */}}
       <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--color-border);">
-        <p style="font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:1rem;">Ja has fet aquest taller?</p>
+        <p style="font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:1rem;">{{ i18n "material_alumnes_question" }}</p>
         <a href="{{ .RelPermalink }}privat/" class="btn btn--secondary">
-          Accedeix al material per a alumnes →
+          {{ i18n "material_alumnes_cta" }}
         </a>
       </div>
     </div>{{/* fi prose */}}
@@ -181,41 +181,41 @@
           {{ if $isPerHora }}
             <p style="font-size:var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:var(--space-3);">{{ $isPerHora }}€/hora · {{ i18n "preu_hora_minim" | default "mínim 2h" }}</p>
           {{ else }}
-            <p style="font-size:var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:var(--space-3);">Preu per persona</p>
+            <p style="font-size:var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-muted); margin-bottom:var(--space-3);">{{ i18n "preu_per_persona" }}</p>
           {{ end }}
           <table style="width:100%; border-collapse:collapse; font-size:var(--text-sm);">
             <thead>
               <tr style="border-bottom:1px solid var(--color-border);">
-                <th style="text-align:left; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "durada_col" | default "Durada" }}{{ else }}Alumnes{{ end }}</th>
-                <th style="text-align:right; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "preu_col" | default "Preu" }}{{ else }}Per persona{{ end }}</th>
+                <th style="text-align:left; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "durada_col" | default "Durada" }}{{ else }}{{ i18n "preu_col_alumnes" }}{{ end }}</th>
+                <th style="text-align:right; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "preu_col" | default "Preu" }}{{ else }}{{ i18n "preu_col_per_persona" }}{{ end }}</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom:1px solid var(--color-border);">
-                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_2h" | default "2 hores" }}{{ else }}1 alumne{{ end }}</td>
+                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_2h" | default "2 hores" }}{{ else }}{{ i18n "preu_1_alumne" }}{{ end }}</td>
                 <td style="padding:var(--space-2) 0; text-align:right; font-weight:700; font-family:var(--font-serif); font-size:var(--text-base);">{{ $preu1 }}€</td>
               </tr>
               {{ if gt $preu2 0 }}
               <tr style="border-bottom:1px solid var(--color-border);">
-                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_3h" | default "3 hores" }}{{ else }}2 alumnes{{ end }}</td>
+                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_3h" | default "3 hores" }}{{ else }}{{ i18n "preu_2_alumnes" }}{{ end }}</td>
                 <td style="padding:var(--space-2) 0; text-align:right; font-weight:700; font-family:var(--font-serif); font-size:var(--text-base);">{{ $preu2 }}€</td>
               </tr>
               {{ end }}
               {{ if gt $preu3 0 }}
               <tr style="border-bottom:1px solid var(--color-border);">
-                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_4h" | default "4 hores" }}{{ else }}3 alumnes{{ end }}</td>
+                <td style="padding:var(--space-2) 0;">{{ if $isPerHora }}{{ i18n "preu_4h" | default "4 hores" }}{{ else }}{{ i18n "preu_3_alumnes" }}{{ end }}</td>
                 <td style="padding:var(--space-2) 0; text-align:right; font-weight:700; font-family:var(--font-serif); font-size:var(--text-base);">{{ $preu3 }}€</td>
               </tr>
               {{ end }}
               {{ if gt $preu4 0 }}
               <tr>
-                <td style="padding:var(--space-2) 0;">4 alumnes</td>
+                <td style="padding:var(--space-2) 0;">{{ i18n "preu_4_alumnes" }}</td>
                 <td style="padding:var(--space-2) 0; text-align:right; font-weight:700; font-family:var(--font-serif); font-size:var(--text-base);">{{ $preu4 }}€</td>
               </tr>
               {{ end }}
             </tbody>
           </table>
-          <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar.</p>
+          <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">{{ i18n "preu_vat_note" }}</p>
           {{ with .Params.preu_model }}
           <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-2); line-height:1.5;">+ {{ . }}€ {{ i18n "preu_model_note" }}</p>
           {{ end }}
@@ -232,32 +232,32 @@
       {{/* Dades tècniques */}}
       {{ with .Params.durada_hores }}
       <div class="info-box__row">
-        <span class="info-box__label">Durada</span>
-        <span class="info-box__value">{{ . }} hores</span>
+        <span class="info-box__label">{{ i18n "duration" }}</span>
+        <span class="info-box__value">{{ . }} {{ i18n "duration_hours" | default "hores" }}</span>
       </div>
       {{ else }}{{ with .Params.duration }}
       <div class="info-box__row">
-        <span class="info-box__label">Durada</span>
+        <span class="info-box__label">{{ i18n "duration" }}</span>
         <span class="info-box__value">{{ . }}</span>
       </div>
       {{ end }}{{ end }}
 
       {{ if gt (.Params.sessions | default 1) 1 }}
       <div class="info-box__row">
-        <span class="info-box__label">Sessions</span>
+        <span class="info-box__label">{{ i18n "info_sessions" }}</span>
         <span class="info-box__value">{{ .Params.sessions }}</span>
       </div>
       {{ end }}
 
       {{ with .Params.preu_model }}
       <div class="info-box__row">
-        <span class="info-box__label">Model</span>
-        <span class="info-box__value" style="text-align:right;">+{{ . }}€ opcional<br><span style="font-size:var(--text-xs); color:var(--color-text-muted);">o portes el teu / la teva</span></span>
+        <span class="info-box__label">{{ i18n "info_model" }}</span>
+        <span class="info-box__value" style="text-align:right;">+{{ . }}€ {{ i18n "optional" | default "opcional" }}<br><span style="font-size:var(--text-xs); color:var(--color-text-muted);">{{ i18n "info_model_optional" }}</span></span>
       </div>
       {{ end }}
 
       <div class="info-box__row">
-        <span class="info-box__label">Lloc</span>
+        <span class="info-box__label">{{ i18n "location" }}</span>
         <span class="info-box__value">
           {{ if $isExtern }}
             <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener" style="color:var(--color-accent); text-decoration:underline;">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
@@ -268,13 +268,13 @@
       </div>
 
       <div class="info-box__row">
-        <span class="info-box__label">Alumnes</span>
-        <span class="info-box__value">Màx. {{ .Params.max_places | default 4 }}</span>
+        <span class="info-box__label">{{ i18n "info_alumnes" }}</span>
+        <span class="info-box__value">{{ i18n "info_max_abbrev" }} {{ .Params.max_places | default 4 }}</span>
       </div>
 
       {{ with .Params.nivell }}
       <div class="info-box__row">
-        <span class="info-box__label">Nivell</span>
+        <span class="info-box__label">{{ i18n "level" }}</span>
         <span class="info-box__value">{{ . }}</span>
       </div>
       {{ end }}
@@ -283,9 +283,9 @@
       {{ if $isExtern }}
 
         <div class="info-box__scheduling info-box__scheduling--extern">
-          <p class="info-box__scheduling-label">Dates i inscripció</p>
+          <p class="info-box__scheduling-label">{{ i18n "extern_dates_label" }}</p>
           <p class="info-box__scheduling-text">
-            Aquest taller el programa i gestiona directament <strong>Cameras &amp; Films</strong>. Les dates les anuncia la botiga.
+            {{ i18n "extern_dates_text" | safeHTML }}
           </p>
           {{ if $upcomingDates }}
           <div class="info-box__dates">
@@ -302,7 +302,7 @@
           {{ end }}
           <a href="https://www.instagram.com/camerasandfilms/" target="_blank" rel="noopener"
              class="btn btn--outline btn--sm" style="margin-top:0.75rem; width:100%; text-align:center;">
-            Cameras &amp; Films a Instagram →
+            {{ i18n "extern_instagram_cta" | safeHTML }}
           </a>
         </div>
 
@@ -310,7 +310,7 @@
 
         {{ if $upcomingDates }}
         <div class="info-box__dates" style="margin-top:1.5rem; margin-bottom:1rem;">
-          <p class="info-box__scheduling-label">Properes dates</p>
+          <p class="info-box__scheduling-label">{{ i18n "next_dates" }}</p>
           {{ range $upcomingDates | first 3 }}
             <div class="info-box__date-item">
               <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
@@ -325,12 +325,12 @@
         </div>
         {{ else }}
         <div class="info-box__scheduling info-box__scheduling--ondemand">
-          <p class="info-box__scheduling-label">Taller sota demanda</p>
+          <p class="info-box__scheduling-label">{{ i18n "ondemand_label" }}</p>
           <p class="info-box__scheduling-text">
-            No hi ha dates fixes. Escriu-nos i busquem una data que t'encaixi.
+            {{ i18n "ondemand_text" }}
           </p>
           <p class="info-box__scheduling-text" style="margin-top:0.5rem;">
-            Pots fer-ho en grup (màx. {{ .Params.max_places | default 4 }} persones) o en <strong>classe particular</strong>, que resulta més econòmica per participant si sou 1 o 2.
+            {{ printf (i18n "ondemand_group_text") (.Params.max_places | default 4) | safeHTML }}
           </p>
         </div>
         {{ end }}
@@ -338,54 +338,54 @@
         <div class="info-box__cta">
           {{ $status := .Params.estat | default (.Params.status | default "actiu") }}
           {{ if eq $status "full" }}
-            <button class="btn btn--secondary" disabled>Complet</button>
+            <button class="btn btn--secondary" disabled>{{ i18n "status_full" }}</button>
           {{ else }}
             {{ if $.Site.Params.tallyFormSolicitud }}
               <a href="https://tally.so/r/{{ $.Site.Params.tallyFormSolicitud }}?taller={{ $courseSlug }}"
                  class="btn btn--primary" target="_blank" rel="noopener">
-                Sol·licita una data
+                {{ i18n "cta_solicita_data" }}
               </a>
             {{ else }}
               <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Sol·licitud%20de%20data%3A%20{{ .Title | urlize }}"
                  class="btn btn--primary">
-                Sol·licita una data
+                {{ i18n "cta_solicita_data" }}
               </a>
             {{ end }}
             {{ if $.Site.Params.tallyFormContact }}
               <a href="https://tally.so/r/{{ $.Site.Params.tallyFormContact }}?taller={{ $courseSlug }}"
                  class="btn btn--secondary" target="_blank" rel="noopener">
-                Fer una consulta
+                {{ i18n "cta_ask" }}
               </a>
             {{ else }}
               <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Consulta%3A%20{{ .Title | urlize }}"
                  class="btn btn--secondary">
-                Fer una consulta
+                {{ i18n "cta_ask" }}
               </a>
             {{ end }}
             {{ if $.Site.Params.tallyFormAvisa }}
               <a href="https://tally.so/r/{{ $.Site.Params.tallyFormAvisa }}?taller={{ $courseSlug }}"
                  class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:var(--space-2);">
-                Avisa'm quan hi hagi places →
+                {{ i18n "cta_avisa" }}
               </a>
             {{ else }}
               <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Avisa%27m%3A%20{{ .Title | urlize }}"
                  class="btn btn--ghost" style="margin-top:var(--space-2);">
-                Avisa'm quan hi hagi places →
+                {{ i18n "cta_avisa" }}
               </a>
             {{ end }}
           {{ end }}
           <a href="{{ "regala/" | relLangURL }}?taller={{ $courseSlug }}"
              class="btn btn--ghost" style="margin-top:var(--space-2);">
-            Regala aquest taller →
+            {{ i18n "cta_regala" }}
           </a>
           <p class="info-box__newsletter-note">
-            O
+            {{ i18n "cta_newsletter_pre" }}
             {{ if site.Params.tallyFormNewsletter }}
-              <a href="https://tally.so/r/{{ site.Params.tallyFormNewsletter }}" target="_blank" rel="noopener">subscriu-te al butlletí</a>
+              <a href="https://tally.so/r/{{ site.Params.tallyFormNewsletter }}" target="_blank" rel="noopener">{{ i18n "cta_newsletter_link" }}</a>
             {{ else }}
-              <a href="{{ "contacte/" | relLangURL }}#formulari">subscriu-te al butlletí</a>
+              <a href="{{ "contacte/" | relLangURL }}#formulari">{{ i18n "cta_newsletter_link" }}</a>
             {{ end }}
-            per estar al cas de quan es programi.
+            {{ i18n "cta_newsletter_post" }}
           </p>
         </div>
 
