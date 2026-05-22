@@ -395,6 +395,18 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-05-22
+**Val-regal complet (front-end) + agenda externs + hover quiz**
+
+- **Val-regal `gift.html`**: formulari inline de compra (destinatari, remitent, missatge opcional, email, import editable min 20€), PayPal Smart Buttons SDK JS v2, pantalla d'èxit inline sense redirecció. Webhook Make.com s'envia a `onApprove` amb totes les dades (per_a, de, missatge, email, import, taller_nom, paypal_order_id, paypal_payer_email, data).
+- **PayPal locale**: CA → `en_US` (preferència política, no `ca_ES` que PayPal no suporta), ES → `es_ES`, EN → `en_US`.
+- **`hugo.toml`**: afegit `paypalClientID` (sandbox actiu, verificat) i `makecomGiftWebhook` (buit, pendent Make.com).
+- **Hover quiz** (`main.css`): `.gift-option` amb barra accent esquerra animada `scaleY`, fletxa `→` que llisca des de la dreta, lift `translateY(-2px)`, tint de fons accent 7%. `focus-visible` per accessibilitat.
+- **Agenda tallers externs** (`single.html`): llista dates properes des de CA com a font de veritat (`hugo.Sites`), filtre futur per data ISO, CTA genèric → Instagram `camerasandfilms.barcelona/` (sense `purchase_url` per data).
+- **Instagram URL** Cameras & Films: corregida de `camerasandfilms/` a `camerasandfilms.barcelona/`.
+- **`static/val-regal/marc-val-regal.png`**: fons del PDF val-regal (1491×1055px, ja al repo).
+- **Sandbox verificat**: flux complet formulari → PayPal → success screen funciona.
+
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
 
@@ -426,6 +438,39 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
   ```
 - [x] Branca `develop` per a staging — ja configurada
 
+### Val-regal — PRIORITAT ALTA (flux implementat, falta backend)
+
+El formulari inline + PayPal Smart Buttons funciona (verificat en sandbox 2026-05-22).
+Falta tancar el circuit backend perquè arribi el PDF al comprador.
+
+**Pas 1 — Make.com (escenari nou):**
+1. Trigger: Webhook → URL a afegir a `hugo.toml` com `makecomGiftWebhook`
+2. Google Sheets: llegir últim codi `LLM-YYYY-NNNNN`, incrementar, desar fila nova (codi, data, import, comprador, destinatari, estat)
+3. Generar PDF: plantilla sobre `static/val-regal/marc-val-regal.png` (1491×1055px) + logo `static/images/llumatics-logo.svg`
+4. Email comprador: assumpte `Val-regal Llumàtics — per a [per_a]`, cos breu + instruccions, PDF adjunt
+5. Email Llumàtics `hola@llumatics.com`: assumpte `[Val-regal] [import]€ — [per_a] — [codi]`, totes les dades + PayPal order ID per a factura
+
+**Dades que rep el webhook (POST JSON):**
+```json
+{ "per_a": "…", "de": "…", "missatge": "…", "email": "…",
+  "import": 155, "taller_nom": "…",
+  "paypal_order_id": "…", "paypal_payer_email": "…", "data": "2026-05-22" }
+```
+
+**Pas 2 — PayPal live:**
+- Compte Business a developer.paypal.com (el sandbox ja funciona)
+- Obtenir Client ID de producció i substituir a `hugo.toml` → `paypalClientID`
+
+**Pas 3 — Deploy a producció** (quan els dos passos anteriors estiguin llestos)
+
+- [ ] Crear escenari Make.com (webhook → Sheet → PDF → 2 emails)
+- [ ] Omplir `makecomGiftWebhook` a `hugo.toml` amb la URL del webhook
+- [ ] Activar compte PayPal Business + obtenir Client ID live
+- [ ] Substituir `paypalClientID` sandbox → live a `hugo.toml`
+- [ ] Deploy a producció i prova real de compra
+
+---
+
 ### Formularis i integracions
 
 #### "Avisa'm" per taller — flux complet (PRIORITAT ALTA)
@@ -436,18 +481,14 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 4. **Brevo automation:** disparador = contacte afegit a la llista → envia email de confirmació
 5. **Waitlist manual:** importar `waitlist.csv` a Brevo quan el formulari estigui actiu (la Nuria Graell Bullich ja hi és anotada per al taller `retrat-6x6`)
 
-- [ ] Formularis Tally restants: `tallyFormNewsletter`, `tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`
+- [ ] Formularis Tally restants: `tallyFormNewsletter`, `tallyFormSolicitud`, `tallyFormContact`
 - [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
-- [ ] Val regal — pipeline pendent:
-  - [ ] Connectar webhook Tally → Make.com (URL: `https://hook.eu1.make.com/oq2j1m7ya89as3qtl32lxnvmxgq8qthg`)
-  - [ ] Configurar emails a Make.com (notificació Joan + confirmació comprador)
-  - [ ] Dissenyar i generar PDF bonic (Make.com + plantilla)
 - [ ] PDF alumnes: pipeline Make.com → Pandoc → email. Pàgines privades ja definides.
 
 ### Contingut
+- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
 - [ ] Revisió de textos de tots els tallers (CA)
 - [ ] Caffenol i Wineol — tallers independents per fer (com el Guinneol)
-- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
 - [ ] Tallers passos 5 i 8 del recorregut: crear fitxes quan estiguin llestes
 - [ ] `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
 - [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
@@ -462,12 +503,20 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-05-09)
+- [x] `fetch-analytics.php`: fix GoatCounter API v0 — endpoints i keys de resposta incorrectes
+  - `/stats/refs` → `/stats/toprefs`
+  - `$raw['browsers']` → `$raw['stats']` (ídem systems, sizes, locations, refs)
+  - `norm_items`: llegir `item['count']` directament (no `stats[].daily`)
+  - **Resultat:** navegadors, SO i dispositius ja apareixen al dashboard
+- [x] `index.html`: KPI "pàg./sessió" → "mitjana/dia" (GoatCounter API v0 no exposa `total_unique`)
+- [x] Deploy: rsync (exit 23 per admin) + `scp` directe de `fetch-analytics.php` i `index.html` al VPS
+
 ### Fet aquesta sessió (2026-05-05)
 - [x] Adreça al footer sota el logo ("Nau Bostik, La Sagrera · Barcelona") → link a `/contacte/#com-arribar-hi`
 - [x] Dashboard `/admin/`: KPI pàgines/sessió + secció localització de visites
 - [x] Dashboard `/admin/`: token GoatCounter actualitzat, parsing `daily` corregit
 - [x] Deploy admin: documentat que `static/admin/` cal scp directe (rsync els salta per exit 23)
-- [x] linuxbcn.com/admin: mateixos canvis (localitzacions + pàg./sessió) pendents de scp
 
 ### Fet aquesta sessió (2026-05-04 tarda)
 - [x] Tutoria fotogràfica: preu per hora (`preu_hora: 60`), blocs de 2h/3h/4h, inclou químics, no inclou paper ni pel·lícula (12€/unitat)

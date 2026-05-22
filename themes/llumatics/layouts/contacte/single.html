@@ -29,10 +29,10 @@
 
       {{ if site.Params.web3formsKey }}
       <form class="contact-form" id="contact-form" novalidate>
-        <input type="hidden" name="_subject" value="Contacte Llumàtics">
+        <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
+        <input type="hidden" name="subject" value="Contacte Llumàtics">
         <input type="hidden" name="from_name" value="Web Llumàtics">
         <input type="hidden" name="botcheck" value="">
-        <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
 
         {{/* Tipus de consulta */}}
         <fieldset class="contact-form__fieldset">

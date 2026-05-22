@@ -4,6 +4,7 @@ theme = "llumatics"
 enableRobotsTXT = true
 enableGitInfo = false
 summaryLength = 70
+buildFuture = true
 
 defaultContentLanguage = "ca"
 defaultContentLanguageInSubdir = false
@@ -64,6 +65,8 @@ defaultContentLanguageInSubdir = false
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
   tallyFormAvisa = ""       # Waitlist "Avisa'm quan hi hagi places"
+  paypalClientID   = "AckPx9MniaW0u-aGTBznyIaxn8E2OEheeToUDl9DrUHnV3heGHXmBBjV0iLAYgNBB1iCcBSbnR2dSiSz"     # PayPal JS SDK client-id (LIVE)
+  makecomGiftWebhook = ""   # URL webhook Make.com escenari val-regal
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
   goatcounterSite = "llumatics"  # llumatics.goatcounter.com
 

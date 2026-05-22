@@ -18,8 +18,25 @@
     {{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end }}
     {{ $allPages := where $caSite.RegularPages "Type" "agenda" }}
 
+    {{/* Separació automàtica: past si date_start < avui o status=past explícit */}}
+    {{ $today := now.Format "2006-01-02" }}
+    {{ $upcoming := slice }}
+    {{ $past := slice }}
+    {{ range $allPages }}
+      {{ $isPast := false }}
+      {{ if eq (.Params.status | default "active") "past" }}
+        {{ $isPast = true }}
+      {{ else if and .Params.date_start (lt .Params.date_start $today) }}
+        {{ $isPast = true }}
+      {{ end }}
+      {{ if $isPast }}
+        {{ $past = $past | append . }}
+      {{ else }}
+        {{ $upcoming = $upcoming | append . }}
+      {{ end }}
+    {{ end }}
+
     {{/* Properes dates — sense paginar */}}
-    {{ $upcoming := where $allPages ".Params.status" "ne" "past" }}
     {{ if $upcoming }}
     <div class="agenda-grid agenda-grid--wide">
       {{ range $upcoming }}
@@ -33,7 +50,6 @@
     {{ end }}
 
     {{/* Tallers anteriors — paginats */}}
-    {{ $past := where $allPages ".Params.status" "eq" "past" }}
     {{ if $past }}
     {{ $paginator := .Paginate $past }}
     <section class="agenda-historic" id="historic">
