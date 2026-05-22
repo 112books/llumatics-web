@@ -65,6 +65,8 @@ defaultContentLanguageInSubdir = false
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
   tallyFormAvisa = ""       # Waitlist "Avisa'm quan hi hagi places"
+  paypalClientID   = ""     # PayPal JS SDK client-id (sandbox o live)
+  makecomGiftWebhook = ""   # URL webhook Make.com escenari val-regal
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
   goatcounterSite = "llumatics"  # llumatics.goatcounter.com
 
