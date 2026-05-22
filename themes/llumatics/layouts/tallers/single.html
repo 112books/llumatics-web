@@ -148,7 +148,7 @@
         <h3 style="font-size:var(--text-sm); text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-muted); margin-bottom:1rem;">{{ i18n "continua_aprenent" }}</h3>
         <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
           {{ range . }}
-            {{ $related := $.Site.GetPage (printf "/tallers/%s" .) }}
+            {{ $related := $.Site.GetPage (printf "tallers/%s" .) }}
             {{ if $related }}
             <li>
               <a href="{{ $related.RelPermalink }}" style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:4px; transition:border-color 200ms; text-decoration:none;">

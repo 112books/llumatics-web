@@ -6,7 +6,7 @@
 {{/* Dades del taller de referència com a fallback */}}
 {{ $taller := false }}
 {{ with .Params.course_ref }}
-  {{ $taller = site.GetPage (printf "/ca/tallers/%s" .) }}
+  {{ $taller = site.GetPage (printf "tallers/%s" .) }}
 {{ end }}
 
 {{/* Preu: primer del frontmatter, si no del taller */}}
