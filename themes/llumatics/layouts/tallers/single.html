@@ -3,8 +3,13 @@
 {{ $lp       := $.Site.LanguagePrefix }}
 {{ $isExtern := .Params.extern | default false }}
 {{ $courseSlug := .File.ContentBaseName }}
-{{ $agendaDates := where (where .Site.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
-{{ $upcomingDates := where $agendaDates ".Params.status" "active" }}
+{{/* Agenda: sempre usem CA com a font de veritat — les dates no són per idioma */}}
+{{ $agendaSite := site }}
+{{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $agendaSite = . }}{{ end }}{{ end }}
+{{ $agendaDates := where (where $agendaSite.RegularPages "Type" "agenda") ".Params.course_ref" $courseSlug }}
+{{ $today := now.Format "2006-01-02" }}
+{{ $upcomingDates := where (where $agendaDates ".Params.status" "active") ".Params.date_start" "ge" $today }}
+{{ $upcomingDates = sort $upcomingDates ".Params.date_start" "asc" }}
 
 {{/* Preus per nombre d'alumnes */}}
 {{ $preu1 := .Params.preu_1 | default 0 }}
@@ -292,15 +297,13 @@
             {{ range $upcomingDates | first 3 }}
               <div class="info-box__date-item">
                 <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
-                {{ with .Params.time_start }}<span>{{ . }}h</span>{{ end }}
-                {{ if .Params.purchase_url }}
-                  <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Comprar</a>
-                {{ end }}
+                {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
+                <a href="https://www.instagram.com/camerasandfilms.barcelona/" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Inscripció →</a>
               </div>
             {{ end }}
           </div>
           {{ end }}
-          <a href="https://www.instagram.com/camerasandfilms/" target="_blank" rel="noopener"
+          <a href="https://www.instagram.com/camerasandfilms.barcelona/" target="_blank" rel="noopener"
              class="btn btn--outline btn--sm" style="margin-top:0.75rem; width:100%; text-align:center;">
             Cameras &amp; Films a Instagram →
           </a>
