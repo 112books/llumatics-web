@@ -67,10 +67,13 @@ function extract_section(string $path): string {
 function norm_items(array $items, string $name_field): array {
     $out = [];
     foreach ($items as $item) {
-        $name  = $item[$name_field] ?? $item['id'] ?? 'Desconegut';
-        $count = 0;
-        if (isset($item['stats']) && is_array($item['stats'])) {
-            foreach ($item['stats'] as $s) $count += (int)($s['daily'] ?? 0);
+        // GoatCounter API v0 stats/{page} retorna {name, id, count} directament
+        $name  = $item['name'] ?? $item[$name_field] ?? $item['id'] ?? 'Desconegut';
+        $count = (int)($item['count'] ?? 0);
+        if (!$count) {
+            if (isset($item['stats']) && is_array($item['stats'])) {
+                foreach ($item['stats'] as $s) $count += (int)($s['daily'] ?? $s['count'] ?? 0);
+            }
         }
         if (!$count) $count = (int)($item['total'] ?? 0);
         if ($count > 0) $out[] = ['name' => $name, 'id' => $item['id'] ?? $name, 'count' => $count];
@@ -85,10 +88,10 @@ $start       = date('Y-m-d', strtotime('-365 days'));
 $base_params = ['start' => $start, 'end' => $end, 'limit' => 200];
 
 $hits_raw = gc_fetch('/stats/hits',      $base_params); usleep(400000);
-$refs_raw = gc_fetch('/stats/refs',      array_merge($base_params, ['limit' => 20])); usleep(400000);
-$brow_raw = gc_fetch('/stats/browsers',  $base_params); usleep(400000);
-$sys_raw  = gc_fetch('/stats/systems',   $base_params); usleep(400000);
-$size_raw = gc_fetch('/stats/sizes',     $base_params); usleep(400000);
+$refs_raw = gc_fetch('/stats/toprefs',   array_merge($base_params, ['limit' => 20])); usleep(400000);
+$brow_raw = gc_fetch('/stats/browsers',  array_merge($base_params, ['limit' => 10])); usleep(400000);
+$sys_raw  = gc_fetch('/stats/systems',   array_merge($base_params, ['limit' => 10])); usleep(400000);
+$size_raw = gc_fetch('/stats/sizes',     array_merge($base_params, ['limit' => 10])); usleep(400000);
 $loc_raw  = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 20]));
 
 // ── Processa hits ─────────────────────────────────────────────────────────────
@@ -136,9 +139,9 @@ foreach ($hits_by_day as $date => $count) {
 
 // ── Processa refs ─────────────────────────────────────────────────────────────
 $refs_list = [];
-foreach (($refs_raw['refs'] ?? []) as $ref) {
+foreach (($refs_raw['stats'] ?? []) as $ref) {
     $count = (int)($ref['count'] ?? 0);
-    if ($count > 0) $refs_list[] = ['name' => $ref['name'] ?? '(directe)', 'count' => $count];
+    if ($count > 0) $refs_list[] = ['name' => $ref['name'] ?? $ref['id'] ?? '(directe)', 'count' => $count, 'id' => $ref['id'] ?? ''];
 }
 
 // ── Sortida ───────────────────────────────────────────────────────────────────
@@ -152,10 +155,10 @@ $output = [
     'by_lang'      => $by_lang,
     'by_section'   => $by_section,
     'refs'         => $refs_list,
-    'locations'    => norm_items($loc_raw['locations'] ?? [], 'location'),
-    'browsers'     => norm_items($brow_raw['browsers'] ?? [], 'browser'),
-    'systems'      => norm_items($sys_raw['systems']   ?? [], 'system'),
-    'sizes'        => norm_items($size_raw['sizes']    ?? [], 'size'),
+    'locations'    => norm_items($loc_raw['stats']  ?? [], 'location'),
+    'browsers'     => norm_items($brow_raw['stats'] ?? [], 'browser'),
+    'systems'      => norm_items($sys_raw['stats']  ?? [], 'system'),
+    'sizes'        => norm_items($size_raw['stats'] ?? [], 'size'),
 ];
 
 $json = json_encode($output, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

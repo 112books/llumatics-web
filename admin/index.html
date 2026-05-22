@@ -460,8 +460,8 @@
         <dd><div class="kpi-value" id="kpi-total">—</div><div class="kpi-sub" id="sub-total"></div></dd>
       </div>
       <div class="kpi">
-        <dt>pàg./sessió</dt>
-        <dd><div class="kpi-value" id="kpi-pps">—</div><div class="kpi-sub">pàgines per visita única</div></dd>
+        <dt>mitjana/dia</dt>
+        <dd><div class="kpi-value" id="kpi-pps">—</div><div class="kpi-sub">visites diàries (mitjana)</div></dd>
       </div>
     </dl>
 
@@ -729,9 +729,8 @@ function renderAll(data) {
   setText('kpi-total', fmt(total));
   setText('sub-total', p.start && p.end ? fmtPeriod(p.start, p.end) : '');
 
-  const unique = data.total_unique || 0;
-  const pps = unique > 0 ? (total / unique).toFixed(1) : '—';
-  setText('kpi-pps', pps);
+  const daysWithData = hbd.filter(d => d.count > 0).length;
+  setText('kpi-pps', daysWithData > 0 ? (total / daysWithData).toFixed(1) : '—');
 
   setTopbarGen(data.generated);
   renderChart(data);
