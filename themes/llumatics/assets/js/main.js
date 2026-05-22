@@ -297,10 +297,10 @@
       html += '<div class="gift-result__courses">';
 
       courses.forEach(function(c, i) {
-        var subject = encodeURIComponent('Val regal — ' + c.title);
-        var cta = giftTally
-          ? '<a href="https://tally.so/r/' + giftTally + '?curs=' + encodeURIComponent(c.title) + '" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Regala aquest taller</a>'
-          : '<a href="mailto:' + giftEmail + '?subject=' + subject + '" class="btn btn--primary btn--sm">Regala aquest taller</a>';
+        var cta = '<button class="btn btn--primary btn--sm gift-regala-btn"'
+          + ' data-title="' + c.title.replace(/"/g, '&quot;') + '"'
+          + ' data-preu="' + (c.preu_1 || '') + '"'
+          + '>Regala aquest taller</button>';
 
         html += '<div class="gift-course-card' + (i === 0 ? ' gift-course-card--featured' : '') + '">';
         if (i === 0) html += '<div class="gift-course-card__badge">Recomanació principal</div>';
