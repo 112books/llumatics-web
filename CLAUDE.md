@@ -420,6 +420,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Ordre bloc Fonaments** per camp `weight` (substitueix ordenació per preu): 10-iniciació, 20-digitalitzacio-escaner (afegit a fonaments + manté proces), 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
 - **Camp `extern: false`**: obligatori al frontmatter per aparèixer a la secció de tallers. Documentat al manual.
 - **Camp `weight`**: controla l'ordre dins cada bloc. Valors en múltiples de 10 per deixar marge d'inserció. Documentat al manual.
+- **Val-regal live** (sessió tarda 2026-05-23): Make.com eliminat completament. Flux nou: PayPal `onApprove` → genera codi `LLM-YYYY-XXXXX` al browser → 2 POSTs web3forms (notificació a `hola@llumatics.com` + confirmació al comprador). PayPal live Client ID `ARfv0r9Y...` configurat. Provat i funcionant en producció. PDF no generat — emails text pla amb el codi. Pendent: verificar que `to` de web3forms envia correctament al comprador (vs. compte `linuxbcn@gmail.com`).
 
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
