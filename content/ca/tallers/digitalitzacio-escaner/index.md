@@ -8,7 +8,8 @@ image: "/images/tallers/digitalitzacio-scanner.jpg"
 # Classificació
 tipus: "taller"
 canal: "llumatics"
-blocs: ["proces"]
+blocs: ["fonaments", "proces"]
+weight: 20
 nivell: "Iniciació"
 estat: "actiu"
 

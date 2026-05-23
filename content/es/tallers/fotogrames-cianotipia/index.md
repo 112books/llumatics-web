@@ -15,6 +15,7 @@ images:
 tipus: "taller"
 canal: "llumatics"
 blocs: ["processos-alternatius", "fonaments"]
+weight: 50
 nivell: "Iniciació"
 estat: "actiu"
 

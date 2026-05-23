@@ -62,7 +62,7 @@
         </div>
         <div class="courses-grid">
           {{/* Ordre dins el bloc: iniciació primer, avançat últim */}}
-          {{ range sort $blocTallers ".Params.price" "asc" }}
+          {{ range sort $blocTallers ".Params.weight" "asc" }}
             {{ partial "course-card.html" . }}
           {{ end }}
         </div>

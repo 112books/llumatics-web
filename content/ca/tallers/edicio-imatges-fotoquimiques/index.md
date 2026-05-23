@@ -27,6 +27,7 @@ continua_aprenent:
   - revelat-bn
 
 blocs: ["fonaments"]
+weight: 30
 tags: []
 draft: false
 ---

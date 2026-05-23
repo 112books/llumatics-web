@@ -9,6 +9,7 @@ image: "/images/tallers/fonaments-iniciacio-puntual.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["fonaments"]
+weight: 10
 nivell: "Iniciació"
 estat: "actiu"
 
