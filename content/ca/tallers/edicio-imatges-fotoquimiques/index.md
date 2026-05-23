@@ -35,7 +35,7 @@ Aquest taller és per a qui digitalitza els seus negatius i no sap ben bé com c
 
 ## Continguts
 
-- **El flux de treball** — de l'arxiu RAW o TIFF a la imatge final: importació, organització i exportació
+- **El flux de treball** — de l'arxiu a la imatge final: formats, importació, organització i exportació
 - **Correcció de defectes** — eliminació de pols i partícules, reparació de ratllades i marques del negatiu, correcció de la grana digital de l'escàner
 - **Retall i composició** — reenquadrar sense perdre qualitat, corregir horitzons i perspectives
 - **Edició tonal** — exposició, altes llums, ombres, blancs i negres: el domini de la lluminositat
@@ -58,7 +58,7 @@ El taller ensenya la lògica subjacent — que és la mateixa en tots els progra
 ## Inclòs en el preu
 
 - Ordinador i monitor calibrat a l'estudi
-- Escàner de transparències (35mm i mig format) si el necessites
+- Escàner de transparències si el necessites (agafa fins a 8×10 polzades: 35mm, 120, 4×5 i 5×8)
 - Accés a Lightroom i Photoshop durant el taller
 - Material de pràctica (negatius digitalitzats en alta resolució per practicar)
 
