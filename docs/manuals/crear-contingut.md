@@ -45,6 +45,7 @@ image: "/images/tallers/nom-del-taller.jpg"
 
 tipus: "taller"
 canal: "llumatics"          # llumatics | externs | institucions
+extern: false               # OBLIGATORI per aparèixer a la llista de tallers
 categoria: "iniciacio"      # iniciacio | intermedi | avançat | tematic
 estat: "en-preparacio"      # actiu | en-preparacio | idea
 

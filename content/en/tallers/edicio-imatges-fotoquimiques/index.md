@@ -6,6 +6,7 @@ image: "/images/tallers/edicio-imatges-fotoquimiques.png"
 
 tipus: "taller"
 canal: "llumatics"
+extern: false
 categoria: "tematic"
 estat: "actiu"
 
