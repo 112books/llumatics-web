@@ -443,12 +443,30 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 El formulari inline + PayPal Smart Buttons funciona (verificat en sandbox 2026-05-22).
 Falta tancar el circuit backend perquè arribi el PDF al comprador.
 
-**Pas 1 — Make.com (escenari nou):**
-1. Trigger: Webhook → URL a afegir a `hugo.toml` com `makecomGiftWebhook`
-2. Google Sheets: llegir últim codi `LLM-YYYY-NNNNN`, incrementar, desar fila nova (codi, data, import, comprador, destinatari, estat)
-3. Generar PDF: plantilla sobre `static/val-regal/marc-val-regal.png` (1491×1055px) + logo `static/images/llumatics-logo.svg`
-4. Email comprador: assumpte `Val-regal Llumàtics — per a [per_a]`, cos breu + instruccions, PDF adjunt
-5. Email Llumàtics `hola@llumatics.com`: assumpte `[Val-regal] [import]€ — [per_a] — [codi]`, totes les dades + PayPal order ID per a factura
+**Estat Make.com (sessió 2026-05-23):**
+- Escenari creat i desat a Make.com
+- Webhook URL configurada a `hugo.toml` → `makecomGiftWebhook`
+- Dades de prova rebudes i estructura determinada correctament
+- Data Store "Vals-regal" creat (data structure "comptador-vals": `counter: Number`, `last_updated: Text`)
+- Mòdul 1: Webhook (trigger) ✅
+- Mòdul 2: Data Store → Get a record (key: `counter`) ✅
+- Mòdul 3: Data Store → Add/Replace a record (key: `counter`, `counter: {{1.counter + 1}}`, `last_updated: {{now}}`) ✅
+- Mòdul 4: Email SMTP → **PENDENT** (Gmail i Brevo OAuth rebutjats per permisos excessius)
+- Mòdul 5: Email SMTP notificació Llumàtics → **PENDENT**
+- PDF → **PENDENT** (a decidir si fer-lo o enviar email HTML elegant com a alternativa)
+
+**⚠️ Decisió pendent: permisos OAuth**
+Google Sheets i Gmail OAuth demanen accés a tot el Drive/correu. Rebutjat.
+Estratègia aprovada: **no usar OAuth de Google**. Alternatives per als emails:
+- **SMTP directe** via Brevo: mòdul "Email" → "Send an email (SMTP)" a Make.com. Cal obtenir credencials SMTP de Brevo (host, port, usuari, contrasenya d'app).
+- Credencials SMTP Brevo: login a app.brevo.com → SMTP & API → "Generate a new SMTP key"
+
+**⚠️ Inicialització del Data Store**
+Abans del primer ús real, cal crear el registre inicial manualment:
+- Make.com → Data stores → Vals-regal → Add record → key: `counter`, counter: `0`
+
+**Webhook URL:** `https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb`
+(ja configurada a `hugo.toml` i desplegada a producció)
 
 **Dades que rep el webhook (POST JSON):**
 ```json
@@ -457,14 +475,22 @@ Falta tancar el circuit backend perquè arribi el PDF al comprador.
   "paypal_order_id": "…", "paypal_payer_email": "…", "data": "2026-05-22" }
 ```
 
+**El codi del val** es genera com `LLM-YYYY-NNNNN` on NNNNN és el valor de `counter` formatat amb zeros. A Make.com: `LLM-{{formatDate(now; "YYYY")}}-{{lpad(3.counter; 5; "0")}}` (mòdul 3 és el Add/Replace).
+
 **Pas 2 — PayPal live:**
 - Compte Business a developer.paypal.com (el sandbox ja funciona)
 - Obtenir Client ID de producció i substituir a `hugo.toml` → `paypalClientID`
 
 **Pas 3 — Deploy a producció** (quan els dos passos anteriors estiguin llestos)
 
-- [ ] Crear escenari Make.com (webhook → Sheet → PDF → 2 emails)
-- [ ] Omplir `makecomGiftWebhook` a `hugo.toml` amb la URL del webhook
+- [x] Crear escenari Make.com i webhook URL
+- [x] Omplir `makecomGiftWebhook` a `hugo.toml` amb la URL del webhook
+- [x] Data Store comptador creat
+- [ ] Inicialitzar Data Store: afegir registre `counter: 0` manualment
+- [ ] Configurar mòdul Email SMTP (Brevo) per al comprador
+- [ ] Configurar mòdul Email SMTP (Brevo) per a notificació Llumàtics
+- [ ] Decidir: PDF adjunt (PDFMonkey) o email HTML elegant (més ràpid)
+- [ ] Activar l'escenari a Make.com
 - [ ] Activar compte PayPal Business + obtenir Client ID live
 - [ ] Substituir `paypalClientID` sandbox → live a `hugo.toml`
 - [ ] Deploy a producció i prova real de compra
