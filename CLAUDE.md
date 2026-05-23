@@ -408,19 +408,18 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Sandbox verificat**: flux complet formulari → PayPal → success screen funciona.
 
 ### 2026-05-23
-**Sincronització multi-ordinador + val-regal backend parcial + nous continguts**
+**Sincronització multi-ordinador + val-regal complet en producció + nous continguts**
 
 - **Sincronització**: fusió de 11 commits de l'estudi (origin/main) a develop. Conflictes resolts: `main.js` (quiz + cerca), `contacte/single.html` (access_key duplicat), `agenda-item.html` (GetPage sense `/` inicial).
 - **Imatge hero portada**: canviada a `taller-revelat-CandF.jpeg` (CA/ES/EN). Efecte vignette invertit: màscara radial `transparent` al centre → `black` a les vores, `opacity: 0.35`.
-- **Make.com val-regal** (parcial): webhook URL `https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb` activa i configurada a `hugo.toml`. Data Store "Vals-regal" creat. 3 mòduls configurats (webhook + get record + add/replace record). Pendent: email SMTP Brevo (rebutjat OAuth de Gmail i Google Sheets per permisos excessius). Estratègia: SMTP directe via Brevo.
-- **Val-regal avís**: missatge "en preparació" + link a contacte al final del resultat del quiz (`main.js` + `.gift-wip-notice` CSS).
-- **Nou taller**: `edicio-imatges-fotoquimiques` — Lightroom/Photoshop + Affinity/GIMP per a negatius digitalitzats. 4h, intermedi, 220/125/94/79€. Publicat en CA/ES/EN. Bloc: `fonaments`. Recorregut: pas 5 actiu (eliminat `aviat: true`).
-- **Manual de continguts**: `docs/manuals/crear-contingut.md` creat. Inclou: crear taller pas a pas, càlcul de preus, assignació de bloc (`blocs:`), posicionament al Camí Ideal i Especialitzacions (`data/recorregut.yaml`), crear entrada d'agenda, taula de slugs actius.
-- **Nou taller `edicio-imatges-fotoquimiques`**: publicat CA/ES/EN, `blocs: ["fonaments"]`, `weight: 30`, `extern: false` (camp obligatori per aparèixer a la llista). Pas 5 del recorregut actiu.
-- **Ordre bloc Fonaments** per camp `weight` (substitueix ordenació per preu): 10-iniciació, 20-digitalitzacio-escaner (afegit a fonaments + manté proces), 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
-- **Camp `extern: false`**: obligatori al frontmatter per aparèixer a la secció de tallers. Documentat al manual.
-- **Camp `weight`**: controla l'ordre dins cada bloc. Valors en múltiples de 10 per deixar marge d'inserció. Documentat al manual.
-- **Val-regal live** (sessió tarda 2026-05-23): Make.com eliminat completament. Flux nou: PayPal `onApprove` → genera codi `LLM-YYYY-XXXXX` al browser → 2 POSTs web3forms (notificació a `hola@llumatics.com` + confirmació al comprador). PayPal live Client ID `ARfv0r9Y...` configurat. Provat i funcionant en producció. PDF no generat — emails text pla amb el codi. Pendent: verificar que `to` de web3forms envia correctament al comprador (vs. compte `linuxbcn@gmail.com`).
+- **Val-regal live**: Make.com eliminat completament. Flux definitiu: PayPal `onApprove` → genera codi `LLM-YYYY-XXXXX` al browser → 2 POSTs web3forms. Email 1: notificació completa a `hola@llumatics.com`. Email 2: confirmació al comprador (web3forms free plan no respecta el camp `to` — arriba a `linuxbcn@gmail.com`, cal reenviar manualment). PayPal live Client ID `ARfv0r9Y...` configurat i verificat.
+- **Voucher imprimible**: `#gift-voucher-print` amb disseny centrat, header lleuger (poc tinta), nom del taller en gran (display font), import eliminat del val, codi en pill. `@media print` amaga tot menys el val. Botó "Imprimeix el val / Desa com a PDF →" → `window.print()`.
+- **Textos actualitzats**: hint email del formulari corregit. `gift_info` CA/ES/EN: informa que el val s'imprimeix des del navegador i recomana posar-lo en un sobre.
+- **Manual d'operacions pagaments**: `docs/manuals/operacions-pagaments.md` — com enviar link de pagament PayPal, gestionar vals-regal rebuts, bescanviar vals, reemborsaments, facturació.
+- **Nou taller `edicio-imatges-fotoquimiques`**: publicat CA/ES/EN, `blocs: ["fonaments"]`, `weight: 30`. Pas 5 del recorregut actiu.
+- **Manual de continguts**: `docs/manuals/crear-contingut.md` creat.
+- **Ordre bloc Fonaments** per camp `weight`: 10-iniciació, 20-digitalitzacio-escaner, 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
+- **Camps obligatoris al frontmatter**: `extern: false` (per aparèixer a la llista), `weight` (ordre dins bloc).
 
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
@@ -453,62 +452,31 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
   ```
 - [x] Branca `develop` per a staging — ja configurada
 
-### Val-regal — PRIORITAT ALTA (flux implementat, falta backend)
+### Val-regal — LLEST EN PRODUCCIÓ ✅
 
-El formulari inline + PayPal Smart Buttons funciona (verificat en sandbox 2026-05-22).
-Falta tancar el circuit backend perquè arribi el PDF al comprador.
+Flux complet funcionant a `llumatics.com/regala/` des de 2026-05-23.
 
-**Estat Make.com (sessió 2026-05-23):**
-- Escenari creat i desat a Make.com
-- Webhook URL configurada a `hugo.toml` → `makecomGiftWebhook`
-- Dades de prova rebudes i estructura determinada correctament
-- Data Store "Vals-regal" creat (data structure "comptador-vals": `counter: Number`, `last_updated: Text`)
-- Mòdul 1: Webhook (trigger) ✅
-- Mòdul 2: Data Store → Get a record (key: `counter`) ✅
-- Mòdul 3: Data Store → Add/Replace a record (key: `counter`, `counter: {{1.counter + 1}}`, `last_updated: {{now}}`) ✅
-- Mòdul 4: Email SMTP → **PENDENT** (Gmail i Brevo OAuth rebutjats per permisos excessius)
-- Mòdul 5: Email SMTP notificació Llumàtics → **PENDENT**
-- PDF → **PENDENT** (a decidir si fer-lo o enviar email HTML elegant com a alternativa)
+**Com funciona:**
+1. Comprador omple el quiz → selecciona taller i import → omple formulari (Per a, De part de, missatge, email)
+2. PayPal Smart Buttons → pagament live
+3. `onApprove` → genera codi `LLM-YYYY-XXXXX` (random al browser) → 2 POSTs web3forms:
+   - **Email 1** → `hola@llumatics.com`: totes les dades de la venda (per_a, de, missatge, email, import, taller, codi, paypal_order_id)
+   - **Email 2** → intent d'enviar al comprador (web3forms free no respecta `to` → arriba a `linuxbcn@gmail.com`)
+4. Pantalla d'èxit inline amb el val imprimible
+5. Botó "Imprimeix / Desa com a PDF" → `window.print()`
 
-**⚠️ Decisió pendent: permisos OAuth**
-Google Sheets i Gmail OAuth demanen accés a tot el Drive/correu. Rebutjat.
-Estratègia aprovada: **no usar OAuth de Google**. Alternatives per als emails:
-- **SMTP directe** via Brevo: mòdul "Email" → "Send an email (SMTP)" a Make.com. Cal obtenir credencials SMTP de Brevo (host, port, usuari, contrasenya d'app).
-- Credencials SMTP Brevo: login a app.brevo.com → SMTP & API → "Generate a new SMTP key"
+**⚠️ Limitació web3forms (pla gratuït):**
+El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (compte propietari).
+**Workaround manual:** quan arriba l'Email 1 a `hola@llumatics.com`, copiar l'email del comprador i reenviar-li el codi. Veure `docs/manuals/operacions-pagaments.md` per al text exacte.
 
-**⚠️ Inicialització del Data Store**
-Abans del primer ús real, cal crear el registre inicial manualment:
-- Make.com → Data stores → Vals-regal → Add record → key: `counter`, counter: `0`
+**Configuració a `hugo.toml`:**
+- `paypalClientID` → Client ID live `ARfv0r9Y...` ✅
+- `makecomGiftWebhook` → URL webhook Make.com (ja no s'usa, pot quedar buit) ✅
+- `web3formsKey` → `31b4da8e-2f87-4909-8019-67ed2df04295` ✅
 
-**Webhook URL:** `https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb`
-(ja configurada a `hugo.toml` i desplegada a producció)
-
-**Dades que rep el webhook (POST JSON):**
-```json
-{ "per_a": "…", "de": "…", "missatge": "…", "email": "…",
-  "import": 155, "taller_nom": "…",
-  "paypal_order_id": "…", "paypal_payer_email": "…", "data": "2026-05-22" }
-```
-
-**El codi del val** es genera com `LLM-YYYY-NNNNN` on NNNNN és el valor de `counter` formatat amb zeros. A Make.com: `LLM-{{formatDate(now; "YYYY")}}-{{lpad(3.counter; 5; "0")}}` (mòdul 3 és el Add/Replace).
-
-**Pas 2 — PayPal live:**
-- Compte Business a developer.paypal.com (el sandbox ja funciona)
-- Obtenir Client ID de producció i substituir a `hugo.toml` → `paypalClientID`
-
-**Pas 3 — Deploy a producció** (quan els dos passos anteriors estiguin llestos)
-
-- [x] Crear escenari Make.com i webhook URL
-- [x] Omplir `makecomGiftWebhook` a `hugo.toml` amb la URL del webhook
-- [x] Data Store comptador creat (Data Store "Vals-regal", structure "comptador-vals")
-- [x] Mòduls 1-3 configurats (webhook → get record → add/replace record)
-- [x] Avís "en preparació" al quiz + link a contacte
-- [ ] **PROPER PAS**: Inicialitzar Data Store manualment: Make.com → Data stores → Vals-regal → Add record → key: `counter`, counter: `0`
-- [ ] Configurar mòdul 4: Email SMTP Brevo al comprador. Credencials: app.brevo.com → SMTP & API → "Generate a new SMTP key"
-- [ ] Configurar mòdul 5: Email SMTP Brevo notificació a `hola@llumatics.com`
-- [ ] Activar l'escenari a Make.com
-- [ ] Activar compte PayPal Business live (developer.paypal.com) + substituir `paypalClientID` sandbox → live a `hugo.toml`
-- [ ] Prova real de compra i deploy final
+**Pendent val-regal (millores futures, no bloquejants):**
+- [ ] Actualitzar nom/adreça de PayPal Business → `paypal.com → Settings → Business Information` (ara surt el nom personal del titular)
+- [ ] Considerar upgrade web3forms de pagament si es vol email automàtic al comprador
 
 ---
 
@@ -526,18 +494,35 @@ El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configur
 - [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
 - [ ] PDF alumnes: pipeline Make.com → Pandoc → email. Pàgines privades ja definides.
 
-### Contingut
-- [ ] Imatges tallers: revelat-color-bn, guinneol, copies-beers-developer
-- [ ] Revisió de textos de tots els tallers (CA)
-- [ ] Caffenol i Wineol — tallers independents per fer (com el Guinneol)
-- [ ] Tallers passos 5 i 8 del recorregut: crear fitxes quan estiguin llestes
-- [ ] `continua_aprenent` de `revelats-experimentals` — afegir guinneol, revelat-color-bn
-- [ ] Imatge hero a la home (`heroImage` al frontmatter de `content/ca/_index.md`)
-- [ ] `archetypes/tallers.md` — actualitzar amb el nou frontmatter
+### Formularis — PRIORITAT ALTA
 
-#### Tallers nous a crear (idees apuntades)
-- [ ] **Edició d'imatges fotoquímiques** — retoc digital específic per a digitalitzacions de negatius i positius analògics (Lightroom/Capture One enfocats a film)
-- [ ] **Il·luminació bàsica** — fonaments de llum en plató per a retrat analògic: flaixos, modificadors i relació llum/ombra
+#### "Avisa'm" per taller
+El botó ja existeix i passa `?taller=slug` a la URL. Falta configurar:
+1. **Brevo:** crear llista "Avisos de tallers" + atribut `TALLER` (text)
+2. **Tally:** formulari amb camp email + camp ocult `taller` → integració Brevo
+3. **Hugo:** omplir `tallyFormAvisa = "XXXX"` a `hugo.toml`
+4. **Brevo automation:** contacte afegit → email de confirmació automàtic
+5. **Waitlist manual:** importar `waitlist.csv` (Nuria Graell Bullich → `retrat-6x6`)
+
+#### Altres formularis Tally pendents
+- [ ] `tallyFormNewsletter` — subscripció al butlletí
+- [ ] `tallyFormSolicitud` — sol·licitar data de taller
+- [ ] `tallyFormContact` — formulari de contacte general
+- [ ] Brevo: configurar llistes i integració Tally → Brevo
+
+#### PDF alumnes
+- [ ] Pipeline Make.com → Pandoc → email. Pàgines privades ja definides (`layout: private`).
+
+---
+
+### Contingut
+
+- [ ] Imatges tallers que falten: `revelat-color-bn`, `guinneol`, `copies-beers-developer`
+- [ ] Revisió de textos de tots els tallers (CA)
+- [ ] Caffenol i Wineol — tallers independents (com el Guinneol)
+- [ ] `continua_aprenent` de `revelats-experimentals` — afegir `guinneol`, `revelat-color-bn`
+- [ ] `archetypes/tallers.md` — actualitzar amb el frontmatter actual
+- [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
 
 ### Qualitat i acabats
 - [ ] Responsive: revisió pendent (mòbil)
