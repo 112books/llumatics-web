@@ -3210,72 +3210,79 @@ a.recorregut__tematic-link:hover {
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  max-width: 580px;
+  max-width: 560px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
 }
 .gvp__header {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-5) var(--space-7);
-  background: var(--color-ink);
-  color: var(--color-bg);
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
-.gvp__logo { height: 36px; width: auto; filter: brightness(0) invert(1); flex-shrink: 0; }
-.gvp__name { display: block; font-weight: 700; font-size: var(--text-xl); letter-spacing: 0.01em; }
-.gvp__school { display: block; font-size: var(--text-xs); opacity: 0.6; margin-top: 2px; }
+.gvp__logo { height: 28px; width: auto; opacity: 0.7; flex-shrink: 0; }
+.gvp__name { font-weight: 700; font-size: var(--text-base); letter-spacing: 0.04em; color: var(--color-ink); }
 .gvp__body {
-  padding: var(--space-7) var(--space-7) var(--space-5);
+  padding: var(--space-8) var(--space-7) var(--space-6);
   background: var(--color-bg);
 }
 .gvp__title {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: var(--space-2);
   color: var(--color-ink);
 }
 .gvp__divider {
-  width: 3rem;
+  width: 2.5rem;
   height: 2px;
   background: var(--color-accent);
-  margin-bottom: var(--space-6);
+  margin: 0 auto var(--space-7);
 }
-.gvp__codi {
-  font-size: var(--text-3xl);
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-6);
-  font-variant-numeric: tabular-nums;
-}
-.gvp__table { border-collapse: collapse; width: 100%; margin-bottom: var(--space-4); }
-.gvp__table tr { border-bottom: 1px solid var(--color-border); }
-.gvp__table tr:last-child { border-bottom: none; }
-.gvp__table td { padding: var(--space-2) var(--space-1); font-size: var(--text-sm); }
-.gvp__table td:first-child {
-  color: var(--color-text-muted);
-  width: 5rem;
+.gvp__destinatari { margin-bottom: var(--space-6); }
+.gvp__field { margin: 0; line-height: 1.8; }
+.gvp__label {
+  display: block;
   font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+.gvp__value { font-size: var(--text-lg); font-weight: 600; }
+.gvp__taller-wrap { margin-bottom: var(--space-7); }
+.gvp__taller-nom {
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-top: var(--space-1);
+  line-height: 1.2;
+}
+.gvp__codi {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-4);
+  margin-top: 0;
 }
 .gvp__missatge {
   font-style: italic;
   font-size: var(--text-base);
   color: var(--color-text-muted);
-  border-left: 3px solid var(--color-accent);
-  padding: var(--space-2) var(--space-4);
   margin-top: var(--space-5);
-  background: var(--color-surface);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 0 var(--space-6);
 }
 .gvp__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-3) var(--space-7);
+  padding: var(--space-3) var(--space-6);
   background: var(--color-surface);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -3300,15 +3307,9 @@ a.recorregut__tematic-link:hover {
     box-shadow: none;
     page-break-inside: avoid;
   }
-  .gvp__header {
-    background: #111 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    padding: 16pt 24pt;
-  }
+  .gvp__header { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .gvp__body { padding: 24pt; }
-  .gvp__codi { color: #222 !important; }
-  .gvp__footer { padding: 8pt 24pt; }
+  .gvp__footer { background: #f5f5f5 !important; }
 }
 
 /* ── Cerca ───────────────────────────────────────────────────────────────── */

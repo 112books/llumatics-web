@@ -120,20 +120,20 @@
     <div id="gift-voucher-print" class="gift-voucher-print">
       <div class="gvp__header">
         <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}" alt="Llumàtics">
-        <div class="gvp__brand">
-          <span class="gvp__name">Llumàtics</span>
-          <span class="gvp__school">Escola de fotografia · Barcelona</span>
-        </div>
+        <span class="gvp__name">Llumàtics</span>
       </div>
       <div class="gvp__body">
         <h2 class="gvp__title">Val Regal</h2>
         <div class="gvp__divider"></div>
-        <div class="gvp__codi" id="gvp-codi"></div>
-        <table class="gvp__table">
-          <tr><td>Per a</td><td><strong id="gvp-per-a"></strong></td></tr>
-          <tr><td>De</td><td><strong id="gvp-de"></strong></td></tr>
-          <tr><td>Taller</td><td><strong id="gvp-taller"></strong></td></tr>
-        </table>
+        <div class="gvp__destinatari">
+          <p class="gvp__field"><span class="gvp__label">Per a</span><strong class="gvp__value" id="gvp-per-a"></strong></p>
+          <p class="gvp__field"><span class="gvp__label">De part de</span><strong class="gvp__value" id="gvp-de"></strong></p>
+        </div>
+        <div class="gvp__taller-wrap">
+          <span class="gvp__label">Taller</span>
+          <div class="gvp__taller-nom" id="gvp-taller"></div>
+        </div>
+        <p class="gvp__codi" id="gvp-codi"></p>
         <p class="gvp__missatge" id="gvp-missatge" hidden></p>
       </div>
       <div class="gvp__footer">
