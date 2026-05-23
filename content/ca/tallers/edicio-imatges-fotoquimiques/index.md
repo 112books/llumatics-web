@@ -2,12 +2,12 @@
 title: "Del negatiu a la imatge — edició digital per a fotografia analògica"
 lead: "Lightroom, Photoshop i alternatives sense subscripció per treure el màxim dels teus negatius digitalitzats: eliminar pols i ratllades, ajustar contrast i color, revelar el potencial de cada fotografia."
 description: "Taller pràctic d'edició digital per a fotografia analògica. Lightroom, Photoshop, Affinity Photo i GIMP aplicats a la correcció i edició de negatius digitalitzats. Barcelona."
-image: "/images/tallers/edicio-imatges-fotoquimiques.jpg"
+image: "/images/tallers/edicio-imatges-fotoquimiques.png"
 
 tipus: "taller"
 canal: "llumatics"
 categoria: "tematic"
-estat: "en-preparacio"
+estat: "actiu"
 
 preu_1: 220
 preu_2: 125
@@ -26,7 +26,7 @@ continua_aprenent:
   - revelat-bn
 
 tags: []
-draft: true
+draft: false
 ---
 
 La fotografia analògica no acaba al laboratori humit. El negatiu revelat és la matèria primera; l'edició digital és el segon revelat. Igual que al laboratori triàvem el temps d'exposició al paper i el contrast del filtre, a Lightroom i Photoshop fem el mateix — però amb una precisió i una capacitat de correcció que cap ampliadora no pot oferir.
