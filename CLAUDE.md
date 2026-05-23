@@ -416,6 +416,10 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Val-regal avís**: missatge "en preparació" + link a contacte al final del resultat del quiz (`main.js` + `.gift-wip-notice` CSS).
 - **Nou taller**: `edicio-imatges-fotoquimiques` — Lightroom/Photoshop + Affinity/GIMP per a negatius digitalitzats. 4h, intermedi, 220/125/94/79€. Publicat en CA/ES/EN. Bloc: `fonaments`. Recorregut: pas 5 actiu (eliminat `aviat: true`).
 - **Manual de continguts**: `docs/manuals/crear-contingut.md` creat. Inclou: crear taller pas a pas, càlcul de preus, assignació de bloc (`blocs:`), posicionament al Camí Ideal i Especialitzacions (`data/recorregut.yaml`), crear entrada d'agenda, taula de slugs actius.
+- **Nou taller `edicio-imatges-fotoquimiques`**: publicat CA/ES/EN, `blocs: ["fonaments"]`, `weight: 30`, `extern: false` (camp obligatori per aparèixer a la llista). Pas 5 del recorregut actiu.
+- **Ordre bloc Fonaments** per camp `weight` (substitueix ordenació per preu): 10-iniciació, 20-digitalitzacio-escaner (afegit a fonaments + manté proces), 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
+- **Camp `extern: false`**: obligatori al frontmatter per aparèixer a la secció de tallers. Documentat al manual.
+- **Camp `weight`**: controla l'ordre dins cada bloc. Valors en múltiples de 10 per deixar marge d'inserció. Documentat al manual.
 
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
