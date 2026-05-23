@@ -104,12 +104,16 @@
     <div class="gift-success__icon">✓</div>
     <h2 class="gift-success__title">Pagament completat!</h2>
     <p class="gift-success__text">
-      En uns minuts rebràs el val-regal en PDF a <strong id="gift-success-email"></strong>.<br>
+      Hem enviat la confirmació a <strong id="gift-success-email"></strong>.<br>
       Comprova la carpeta de correu no desitjat si no el trobes en 15 minuts.
     </p>
+    <p class="gift-success__codi">
+      Codi del val: <strong id="gift-success-codi"></strong>
+    </p>
     <p class="gift-success__sub">
-      Qualsevol dubte, escriu-nos a
-      <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
+      Per fer efectiu el val, contacta'ns a
+      <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>
+      indicant el codi. Vàlid 6 mesos.
     </p>
   </div>
 
@@ -156,7 +160,6 @@
     var quizWrap    = document.querySelector('.gift-quiz-wrap');
     if (!formWrap) return;
 
-    var webhookUrl     = formWrap.dataset.webhook || '';
     var paypalRendered = false;
 
     /* ── Mostrar formulari en clicar qualsevol .gift-regala-btn ── */
@@ -240,27 +243,53 @@
 
         onApprove: function (data, actions) {
           return actions.order.capture().then(function (details) {
-            var payload = {
-              per_a:              document.getElementById('gift-per-a').value.trim(),
-              de:                 document.getElementById('gift-de').value.trim(),
-              missatge:           document.getElementById('gift-missatge').value.trim(),
-              email:              document.getElementById('gift-email').value.trim(),
-              import:             parseFloat(document.getElementById('gift-import').value),
-              taller_nom:         document.getElementById('gift-taller').value.trim(),
-              paypal_order_id:    details.id,
-              paypal_payer_email: details.payer.email_address,
-              data:               new Date().toISOString().split('T')[0]
-            };
-            var successEmail = payload.email;
-            var req = webhookUrl
-              ? fetch(webhookUrl, {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(payload)
-                })
-              : Promise.resolve();
-            req.catch(function () {}).then(function () {
-              showSuccess(successEmail);
+            var codi      = 'LLM-' + new Date().getFullYear() + '-' + Math.random().toString(36).slice(2,7).toUpperCase();
+            var perA      = document.getElementById('gift-per-a').value.trim();
+            var de        = document.getElementById('gift-de').value.trim();
+            var missatge  = document.getElementById('gift-missatge').value.trim();
+            var email     = document.getElementById('gift-email').value.trim();
+            var importV   = parseFloat(document.getElementById('gift-import').value);
+            var tallerNom = document.getElementById('gift-taller').value.trim() || 'Llumàtics';
+            var w3key     = '31b4da8e-2f87-4909-8019-67ed2df04295';
+
+            var notif = new FormData();
+            notif.append('access_key', w3key);
+            notif.append('subject', 'Nou val-regal — ' + codi);
+            notif.append('from_name', 'Web Llumàtics');
+            notif.append('message',
+              'Codi: ' + codi + '\n' +
+              'Per a: ' + perA + '\n' +
+              'De: ' + de + '\n' +
+              'Taller: ' + tallerNom + '\n' +
+              'Import: ' + importV + '€\n' +
+              'Email comprador: ' + email + '\n' +
+              (missatge ? 'Missatge: ' + missatge + '\n' : '') +
+              'PayPal order: ' + details.id + '\n' +
+              'Pagador PayPal: ' + details.payer.email_address
+            );
+
+            var conf = new FormData();
+            conf.append('access_key', w3key);
+            conf.append('to', email);
+            conf.append('subject', 'El teu val-regal Llumàtics — ' + codi);
+            conf.append('from_name', 'Llumàtics');
+            conf.append('message',
+              'Hola ' + de + ',\n\n' +
+              'Gràcies per la teva compra! El teu val-regal per a ' + perA + ' ja és vàlid.\n\n' +
+              'Codi del val: ' + codi + '\n' +
+              'Taller: ' + tallerNom + '\n' +
+              'Import: ' + importV + '€\n' +
+              (missatge ? 'Missatge: ' + missatge + '\n\n' : '\n') +
+              'Per fer efectiu el val, contacta\'ns a hola@llumatics.com indicant el codi.\n' +
+              'El val és vàlid durant 6 mesos a partir d\'avui.\n\n' +
+              'Llumàtics — llumatics.com'
+            );
+
+            Promise.allSettled([
+              fetch('https://api.web3forms.com/submit', { method: 'POST', body: notif }),
+              fetch('https://api.web3forms.com/submit', { method: 'POST', body: conf })
+            ]).then(function () {
+              showSuccess(email, codi);
             });
           });
         },
@@ -277,10 +306,12 @@
     }
 
     /* ── Mostrar pantalla d'èxit ── */
-    function showSuccess(email) {
+    function showSuccess(email, codi) {
       formWrap.setAttribute('hidden', '');
       successDiv.removeAttribute('hidden');
       document.getElementById('gift-success-email').textContent = email;
+      var codiEl = document.getElementById('gift-success-codi');
+      if (codiEl && codi) codiEl.textContent = codi;
       successDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 

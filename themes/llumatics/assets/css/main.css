@@ -3183,6 +3183,16 @@ a.recorregut__tematic-link:hover {
   margin-bottom: var(--space-3);
   line-height: 1.65;
 }
+.gift-success__codi {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  font-size: var(--text-lg);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
 .gift-success__sub {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
