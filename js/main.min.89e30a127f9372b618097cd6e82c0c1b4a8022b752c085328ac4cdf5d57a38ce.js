@@ -288,6 +288,10 @@ if (contactForm) {
 
       html += '</div>';
       html += '<button class="gift-restart">Tornar a començar</button>';
+      html += '<div class="gift-wip-notice">'
+        + '<p>⚠️ El sistema de pagament en línia està en preparació.</p>'
+        + '<p>Si vols regalar un curs ja ara, <a href="/contacte/">contacta\'ns directament</a> i ho gestionem a mà en menys de 24h.</p>'
+        + '</div>';
       giftResult.innerHTML = html;
 
       giftResult.querySelector('.gift-restart').addEventListener('click', function() {
