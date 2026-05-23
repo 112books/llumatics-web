@@ -25,6 +25,7 @@ continua_aprenent:
   - digitalitzacio-escaner
   - revelat-bn
 
+blocs: ["fonaments"]
 tags: []
 draft: false
 ---
