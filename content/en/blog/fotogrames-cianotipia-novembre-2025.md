@@ -2,7 +2,7 @@
 title: "Cameraless cyanotype prints at Nau Bostik"
 lead: "Fifteen people, sensitised paper, sunlight and whatever everyone had in their pockets. Two hours and fifteen unique Prussian blues."
 description: "Chronicle of the free cameraless cyanotype workshop on 15 November 2025 at Nau Bostik, Barcelona."
-image: "/images/blog/fotogrames-cianotipia-novembre-2025.jpg"
+image: "/images/tallers/fotogrames-cianotipia-2.jpg"
 date: 2025-11-15
 tags: ["cyanotype", "photograms", "cameraless", "Nau Bostik", "free", "community", "chronicle"]
 course_ref: "fotogrames-cianotipia"

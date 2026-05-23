@@ -2,7 +2,7 @@
 title: "Fotogramas con cianotipia en la Nau Bostik"
 lead: "Quince personas, papel sensibilizado, luz solar y lo que cada uno tenía en el bolsillo. Dos horas y quince azules de Prusia únicos."
 description: "Crónica del taller gratuito de fotogramas con cianotipia del 15 de noviembre de 2025 en la Nau Bostik, Barcelona."
-image: "/images/blog/fotogrames-cianotipia-novembre-2025.jpg"
+image: "/images/tallers/fotogrames-cianotipia-2.jpg"
 date: 2025-11-15
 tags: ["cianotipia", "fotogramas", "sin cámara", "Nau Bostik", "gratuito", "comunidad", "crónica"]
 course_ref: "fotogrames-cianotipia"
