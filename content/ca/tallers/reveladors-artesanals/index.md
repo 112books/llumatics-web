@@ -13,6 +13,7 @@ images:
 tipus: "taller"
 canal: "llumatics"
 blocs: ["processos-alternatius", "proces"]
+weight: 20
 nivell: "Avançat"
 estat: "actiu"
 

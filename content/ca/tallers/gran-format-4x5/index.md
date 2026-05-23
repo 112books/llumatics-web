@@ -9,6 +9,7 @@ image: "/images/tallers/gran-format-4x5.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["gran-format"]
+weight: 20
 nivell: "Avançat"
 estat: "actiu"
 

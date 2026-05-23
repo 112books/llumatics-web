@@ -9,6 +9,7 @@ image: "/images/tallers/tutoria-fotografica.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["practica"]
+weight: 30
 nivell: "Tots els nivells"
 estat: "actiu"
 

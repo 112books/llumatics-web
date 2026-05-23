@@ -9,6 +9,7 @@ image: "/images/tallers/retrat-amb-holga.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["practica", "mig-format"]
+weight: 30
 nivell: "Iniciació"
 estat: "actiu"
 

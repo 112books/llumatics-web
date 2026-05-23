@@ -9,6 +9,7 @@ image: "/images/tallers/retrat-6x6.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["mig-format", "practica"]
+weight: 20
 nivell: "Intermedi"
 estat: "actiu"
 

@@ -9,6 +9,7 @@ image: "/images/tallers/retrat-analogic.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["practica"]
+weight: 10
 nivell: "Intermedi"
 estat: "actiu"
 

@@ -9,6 +9,7 @@ image: "/images/tallers/fotografia-de-carrer.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["practica"]
+weight: 20
 nivell: "Intermedi"
 estat: "actiu"
 

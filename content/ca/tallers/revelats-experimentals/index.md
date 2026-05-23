@@ -9,6 +9,7 @@ image: "/images/tallers/revelats-experimentals.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["proces", "processos-alternatius"]
+weight: 60
 nivell: "Avançat"
 estat: "actiu"
 

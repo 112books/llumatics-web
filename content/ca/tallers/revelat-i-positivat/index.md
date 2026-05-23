@@ -9,6 +9,7 @@ image: "/images/tallers/revelat-i-positivat.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["proces"]
+weight: 20
 nivell: "Iniciació"
 estat: "actiu"
 

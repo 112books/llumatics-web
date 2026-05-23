@@ -13,6 +13,7 @@ images:
 tipus: "taller"
 canal: "llumatics"
 blocs: ["gran-format"]
+weight: 10
 nivell: "Intermedi"
 estat: "actiu"
 

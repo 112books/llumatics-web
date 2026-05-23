@@ -9,6 +9,7 @@ image: "/images/tallers/revelat-bn.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["proces"]
+weight: 10
 nivell: "Intermedi"
 estat: "actiu"
 

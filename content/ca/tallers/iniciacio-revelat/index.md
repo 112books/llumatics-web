@@ -15,6 +15,7 @@ images:
 tipus: "taller"
 canal: "externs"
 blocs: ["proces", "fonaments"]
+weight: 90
 nivell: "Iniciació"
 estat: "actiu"
 

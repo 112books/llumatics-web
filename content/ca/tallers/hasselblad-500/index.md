@@ -9,6 +9,7 @@ image: "/images/tallers/hasselblad-500.jpg"
 tipus: "taller"
 canal: "llumatics"
 blocs: ["mig-format", "practica"]
+weight: 10
 nivell: "Intermedi"
 estat: "actiu"
 

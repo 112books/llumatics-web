@@ -9,6 +9,7 @@ image: "/images/tallers/carrer-i-mirada.jpg"
 tipus: "curs"
 canal: "llumatics"
 blocs: ["practica"]
+weight: 40
 nivell: "Avançat"
 estat: "en-preparacio"
 

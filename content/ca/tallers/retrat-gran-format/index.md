@@ -13,6 +13,7 @@ images:
 tipus: "taller"
 canal: "externs"
 blocs: ["gran-format", "practica"]
+weight: 30
 nivell: "Intermedi"
 estat: "actiu"
 
