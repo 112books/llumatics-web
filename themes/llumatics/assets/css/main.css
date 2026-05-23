@@ -3207,47 +3207,75 @@ a.recorregut__tematic-link:hover {
 /* ── Val imprimible ─────────────────────────────────────────────────────── */
 .gift-voucher-print {
   margin: var(--space-8) 0 var(--space-6);
-  border: 2px solid var(--color-border);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  max-width: 560px;
+  max-width: 580px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 .gvp__header {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-4) var(--space-6);
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-7);
   background: var(--color-ink);
   color: var(--color-bg);
 }
-.gvp__logo { height: 32px; width: auto; filter: invert(1) brightness(2); }
-.gvp__name { display: block; font-weight: 700; font-size: var(--text-lg); }
-.gvp__school { display: block; font-size: var(--text-xs); opacity: 0.7; }
-.gvp__body { padding: var(--space-6); }
+.gvp__logo { height: 36px; width: auto; filter: brightness(0) invert(1); flex-shrink: 0; }
+.gvp__name { display: block; font-weight: 700; font-size: var(--text-xl); letter-spacing: 0.01em; }
+.gvp__school { display: block; font-size: var(--text-xs); opacity: 0.6; margin-top: 2px; }
+.gvp__body {
+  padding: var(--space-7) var(--space-7) var(--space-5);
+  background: var(--color-bg);
+}
 .gvp__title {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-family: var(--font-display);
-  margin-bottom: var(--space-4);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-2);
+  color: var(--color-ink);
+}
+.gvp__divider {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-6);
 }
 .gvp__codi {
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: 0.15em;
   color: var(--color-accent);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
+  font-variant-numeric: tabular-nums;
 }
 .gvp__table { border-collapse: collapse; width: 100%; margin-bottom: var(--space-4); }
-.gvp__table td { padding: var(--space-1) var(--space-2); font-size: var(--text-sm); }
-.gvp__table td:first-child { color: var(--color-text-muted); width: 6rem; }
+.gvp__table tr { border-bottom: 1px solid var(--color-border); }
+.gvp__table tr:last-child { border-bottom: none; }
+.gvp__table td { padding: var(--space-2) var(--space-1); font-size: var(--text-sm); }
+.gvp__table td:first-child {
+  color: var(--color-text-muted);
+  width: 5rem;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 .gvp__missatge {
   font-style: italic;
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   border-left: 3px solid var(--color-accent);
-  padding-left: var(--space-3);
-  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  margin-top: var(--space-5);
+  background: var(--color-surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .gvp__footer {
-  padding: var(--space-3) var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-7);
   background: var(--color-surface);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -3260,19 +3288,27 @@ a.recorregut__tematic-link:hover {
   .gift-hero, .gift-quiz-wrap, .gift-form-wrap, .gift-preview-section,
   .no-print { display: none !important; }
 
-  body { background: white; }
-  .page-with-bg, .gift-page { background: none !important; }
+  body { background: white; margin: 0; }
+  .page-with-bg, .gift-page, .container { background: none !important; padding: 0 !important; }
   .page-bg { display: none !important; }
 
-  #gift-success { box-shadow: none; border: none; padding: 0; }
+  #gift-success { padding: 2cm; }
   .gift-voucher-print {
-    border: 1.5pt solid #000;
+    border: 1pt solid #ccc;
     border-radius: 0;
     max-width: 100%;
+    box-shadow: none;
     page-break-inside: avoid;
   }
-  .gvp__header { background: #111 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .gvp__codi { color: #000 !important; }
+  .gvp__header {
+    background: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 16pt 24pt;
+  }
+  .gvp__body { padding: 24pt; }
+  .gvp__codi { color: #222 !important; }
+  .gvp__footer { padding: 8pt 24pt; }
 }
 
 /* ── Cerca ───────────────────────────────────────────────────────────────── */
