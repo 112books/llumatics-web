@@ -47,12 +47,11 @@ core:
     title: "Edició d'imatges fotoquímiques"
     title_es: "Edición de imágenes fotoquímicas"
     title_en: "Editing photochemical images"
-    slug: ""
+    slug: "edicio-imatges-fotoquimiques"
     bloc: "fonaments"
     desc: "Lightroom i eines d'edició pensades per a imatge analògica digitalitzada."
     desc_es: "Lightroom y herramientas de edición para imagen analógica digitalizada."
     desc_en: "Lightroom and editing tools designed for scanned analogue images."
-    aviat: true
 
   - step: 6
     title: "Forçats i control del negatiu"
