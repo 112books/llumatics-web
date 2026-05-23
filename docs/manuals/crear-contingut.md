@@ -62,9 +62,68 @@ prerequisits: "Cap"         # o descripció dels coneixements necessaris
 
 continua_aprenent: []       # slugs d'altres tallers relacionats
 
+blocs: ["proces"]           # vegeu secció "On apareix el taller"
+
 tags: []
 draft: true
 ---
+```
+
+---
+
+### Pas 3b — On apareix el taller a la pàgina de Tallers
+
+El camp `blocs` determina en quina secció apareix el taller a `/tallers/`. Ha de contenir un o més dels slugs següents:
+
+| Slug | Secció |
+|------|--------|
+| `fonaments` | Fonaments i procés digital |
+| `proces` | Procés analògic (revelat, positivat, laboratori) |
+| `practica` | Pràctica fotogràfica (carrer, retrat...) |
+| `mig-format` | Mig format |
+| `gran-format` | Gran format |
+| `processos-alternatius` | Processos alternatius (cianotipia, experimentals...) |
+
+Un taller pot estar a més d'una secció: `blocs: ["proces", "practica"]`
+
+**El camp `blocs` s'ha d'afegir als tres idiomes (CA, ES, EN) amb el mateix valor.**
+
+---
+
+### Pas 3c — On apareix al Camí Ideal i Especialitzacions
+
+El camí ideal i les especialitzacions es gestionen a `data/recorregut.yaml`. Afegir el taller aquí és **independent** del camp `blocs`.
+
+**Per afegir al Camí Ideal** (passos numerats del recorregut core):
+
+Obre `data/recorregut.yaml` i troba l'entrada corresponent a la secció `core:`. Si el pas ja existeix com a "Aviat", omple el `slug` i elimina `aviat: true`:
+
+```yaml
+- step: 5
+  title: "Nom del taller"
+  title_es: "Nombre del taller"
+  title_en: "Workshop name"
+  slug: "nom-del-taller"        # ← afegir el slug
+  bloc: "fonaments"
+  desc: "Descripció breu."
+  desc_es: "Descripción breve."
+  desc_en: "Short description."
+  # aviat: true                 # ← eliminar aquesta línia
+```
+
+Si és un pas completament nou, afegeix l'entrada sencera respectant l'ordre dels `step`.
+
+**Per afegir a Especialitzacions** (pills de temes a la part inferior del camí):
+
+Afegeix una entrada a la secció `tematic:` del mateix fitxer:
+
+```yaml
+tematic:
+  - title: "Nom del taller"
+    title_es: "Nombre del taller"
+    title_en: "Workshop name"
+    slug: "nom-del-taller"
+    bloc: "proces"              # slug del bloc al qual pertany
 ```
 
 ---
@@ -95,7 +154,7 @@ Format: jpg/webp · Mida: 1200×800px · Màx. 500KB
 
 Quan el taller estigui llest:
 
-1. Canvia al frontmatter: `draft: false` i `estat: "actiu"`
+1. Canvia al frontmatter: `draft: false` i `estat: "actiu"` — **als tres idiomes (CA, ES, EN)**
 2. Puja a staging per revisar:
    ```bash
    git add .
@@ -194,3 +253,4 @@ rsync -avz --delete --exclude 'admin/' public/ llumatics@vl28359.dinaserver.com:
 | `iniciacio-revelat` | Iniciació al revelat (C&F) |
 | `fotografia-de-carrer` | Fotografia de carrer |
 | `tutoria-fotografica` | Tutoria fotogràfica |
+| `edicio-imatges-fotoquimiques` | Edició d'imatges fotoquímiques |
