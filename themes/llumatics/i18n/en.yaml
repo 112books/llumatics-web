@@ -65,6 +65,7 @@ private_gate_label: "Student access"
 gift_title: "Gift an experience"
 gift_desc: "Give the best gift: learning to see through photography."
 gift_cta: "Request gift voucher"
+gift_info: "Once paid, you can print the voucher directly from your browser. We recommend printing it and putting it in an envelope — it makes a much better impression."
 
 cta_buy: "Book a place"
 agenda_course_info: "Related workshop"

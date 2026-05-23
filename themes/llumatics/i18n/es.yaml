@@ -65,6 +65,7 @@ private_gate_label: "Acceso alumnos"
 gift_title: "Regala experiencia"
 gift_desc: "Da el mejor regalo: aprender a ver a través de la fotografía."
 gift_cta: "Solicitar vale-regalo"
+gift_info: "Una vez pagado, podrás imprimir el vale directamente desde el navegador. Recomendamos imprimirlo y meterlo en un sobre — hace mucho más efecto."
 
 cta_buy: "Comprar plaza"
 agenda_course_info: "Taller relacionado"
