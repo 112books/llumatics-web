@@ -407,6 +407,16 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **`static/val-regal/marc-val-regal.png`**: fons del PDF val-regal (1491×1055px, ja al repo).
 - **Sandbox verificat**: flux complet formulari → PayPal → success screen funciona.
 
+### 2026-05-23
+**Sincronització multi-ordinador + val-regal backend parcial + nous continguts**
+
+- **Sincronització**: fusió de 11 commits de l'estudi (origin/main) a develop. Conflictes resolts: `main.js` (quiz + cerca), `contacte/single.html` (access_key duplicat), `agenda-item.html` (GetPage sense `/` inicial).
+- **Imatge hero portada**: canviada a `taller-revelat-CandF.jpeg` (CA/ES/EN). Efecte vignette invertit: màscara radial `transparent` al centre → `black` a les vores, `opacity: 0.35`.
+- **Make.com val-regal** (parcial): webhook URL `https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb` activa i configurada a `hugo.toml`. Data Store "Vals-regal" creat. 3 mòduls configurats (webhook + get record + add/replace record). Pendent: email SMTP Brevo (rebutjat OAuth de Gmail i Google Sheets per permisos excessius). Estratègia: SMTP directe via Brevo.
+- **Val-regal avís**: missatge "en preparació" + link a contacte al final del resultat del quiz (`main.js` + `.gift-wip-notice` CSS).
+- **Nou taller**: `edicio-imatges-fotoquimiques` — Lightroom/Photoshop + Affinity/GIMP per a negatius digitalitzats. 4h, intermedi, 220/125/94/79€. Publicat en CA/ES/EN. Bloc: `fonaments`. Recorregut: pas 5 actiu (eliminat `aviat: true`).
+- **Manual de continguts**: `docs/manuals/crear-contingut.md` creat. Inclou: crear taller pas a pas, càlcul de preus, assignació de bloc (`blocs:`), posicionament al Camí Ideal i Especialitzacions (`data/recorregut.yaml`), crear entrada d'agenda, taula de slugs actius.
+
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
 
@@ -485,15 +495,15 @@ Abans del primer ús real, cal crear el registre inicial manualment:
 
 - [x] Crear escenari Make.com i webhook URL
 - [x] Omplir `makecomGiftWebhook` a `hugo.toml` amb la URL del webhook
-- [x] Data Store comptador creat
-- [ ] Inicialitzar Data Store: afegir registre `counter: 0` manualment
-- [ ] Configurar mòdul Email SMTP (Brevo) per al comprador
-- [ ] Configurar mòdul Email SMTP (Brevo) per a notificació Llumàtics
-- [ ] Decidir: PDF adjunt (PDFMonkey) o email HTML elegant (més ràpid)
+- [x] Data Store comptador creat (Data Store "Vals-regal", structure "comptador-vals")
+- [x] Mòduls 1-3 configurats (webhook → get record → add/replace record)
+- [x] Avís "en preparació" al quiz + link a contacte
+- [ ] **PROPER PAS**: Inicialitzar Data Store manualment: Make.com → Data stores → Vals-regal → Add record → key: `counter`, counter: `0`
+- [ ] Configurar mòdul 4: Email SMTP Brevo al comprador. Credencials: app.brevo.com → SMTP & API → "Generate a new SMTP key"
+- [ ] Configurar mòdul 5: Email SMTP Brevo notificació a `hola@llumatics.com`
 - [ ] Activar l'escenari a Make.com
-- [ ] Activar compte PayPal Business + obtenir Client ID live
-- [ ] Substituir `paypalClientID` sandbox → live a `hugo.toml`
-- [ ] Deploy a producció i prova real de compra
+- [ ] Activar compte PayPal Business live (developer.paypal.com) + substituir `paypalClientID` sandbox → live a `hugo.toml`
+- [ ] Prova real de compra i deploy final
 
 ---
 
