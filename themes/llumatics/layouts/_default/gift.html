@@ -101,19 +101,51 @@
 
   {{/* ── Estat d'èxit post-pagament ──────────────────────────────────────── */}}
   <div id="gift-success" class="gift-success" hidden>
-    <div class="gift-success__icon">✓</div>
-    <h2 class="gift-success__title">Pagament completat!</h2>
-    <p class="gift-success__text">
-      Hem enviat la confirmació a <strong id="gift-success-email"></strong>.<br>
-      Comprova la carpeta de correu no desitjat si no el trobes en 15 minuts.
+    <div class="gift-success__icon no-print">✓</div>
+    <h2 class="gift-success__title no-print">Pagament completat!</h2>
+    <p class="gift-success__text no-print">
+      Guarda el codi — t'el tornarem a enviar si ens escrius a
+      <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
     </p>
-    <p class="gift-success__codi">
+    <p class="gift-success__codi no-print">
       Codi del val: <strong id="gift-success-codi"></strong>
     </p>
-    <p class="gift-success__sub">
+    <p class="gift-success__sub no-print">
       Per fer efectiu el val, contacta'ns a
       <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>
       indicant el codi. Vàlid 6 mesos.
+    </p>
+
+    {{/* ── Val imprimible ── */}}
+    <div id="gift-voucher-print" class="gift-voucher-print">
+      <div class="gvp__header">
+        <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}" alt="Llumàtics">
+        <div class="gvp__brand">
+          <span class="gvp__name">Llumàtics</span>
+          <span class="gvp__school">Escola de fotografia · Barcelona</span>
+        </div>
+      </div>
+      <div class="gvp__body">
+        <h2 class="gvp__title">Val Regal</h2>
+        <div class="gvp__codi" id="gvp-codi"></div>
+        <table class="gvp__table">
+          <tr><td>Per a</td><td><strong id="gvp-per-a"></strong></td></tr>
+          <tr><td>De</td><td><strong id="gvp-de"></strong></td></tr>
+          <tr><td>Taller</td><td><strong id="gvp-taller"></strong></td></tr>
+          <tr><td>Import</td><td><strong id="gvp-import"></strong></td></tr>
+        </table>
+        <p class="gvp__missatge" id="gvp-missatge" hidden></p>
+      </div>
+      <div class="gvp__footer">
+        <span>Vàlid 6 mesos · hola@llumatics.com · llumatics.com</span>
+      </div>
+    </div>
+
+    <button class="btn btn--primary gift-print-btn no-print" onclick="window.print()">
+      Imprimeix el val / Desa com a PDF →
+    </button>
+    <p class="gift-print-hint no-print">
+      Al diàleg d'impressió, selecciona "Desa com a PDF" per obtenir un fitxer.
     </p>
   </div>
 
@@ -289,7 +321,7 @@
               fetch('https://api.web3forms.com/submit', { method: 'POST', body: notif }),
               fetch('https://api.web3forms.com/submit', { method: 'POST', body: conf })
             ]).then(function () {
-              showSuccess(email, codi);
+              showSuccess(email, codi, perA, de, tallerNom, importV, missatge);
             });
           });
         },
@@ -306,12 +338,26 @@
     }
 
     /* ── Mostrar pantalla d'èxit ── */
-    function showSuccess(email, codi) {
+    function showSuccess(email, codi, perA, de, tallerNom, importV, missatge) {
       formWrap.setAttribute('hidden', '');
+      if (quizWrap) quizWrap.setAttribute('hidden', '');
       successDiv.removeAttribute('hidden');
-      document.getElementById('gift-success-email').textContent = email;
+
       var codiEl = document.getElementById('gift-success-codi');
       if (codiEl && codi) codiEl.textContent = codi;
+
+      /* Omplir voucher imprimible */
+      document.getElementById('gvp-codi').textContent    = codi || '';
+      document.getElementById('gvp-per-a').textContent   = perA || '';
+      document.getElementById('gvp-de').textContent      = de || '';
+      document.getElementById('gvp-taller').textContent  = tallerNom || '';
+      document.getElementById('gvp-import').textContent  = (importV || '') + '€';
+      var msgEl = document.getElementById('gvp-missatge');
+      if (msgEl && missatge) {
+        msgEl.textContent = '“' + missatge + '”';
+        msgEl.removeAttribute('hidden');
+      }
+
       successDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
