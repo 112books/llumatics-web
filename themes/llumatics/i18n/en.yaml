@@ -207,3 +207,31 @@ cta_regala: "Gift this workshop →"
 cta_newsletter_pre: "Or"
 cta_newsletter_link: "subscribe to the newsletter"
 cta_newsletter_post: "to be the first to know when it's scheduled."
+
+# Private page — identification form
+private_name_label: "Full name"
+private_name_placeholder: "Your full name"
+private_language_label: "Document language"
+private_newsletter_label: "I'd like to receive occasional updates about new workshops and activities from Llumàtics."
+private_submit_cta: "Request documentation"
+private_confirm_message: "Done! We've sent you a confirmation email. Check your inbox (and spam folder, just in case)."
+private_footer_nominal: "This documentation is personal and non-transferable. The document will include your name."
+
+# /confirmat/ relay page
+confirmat_title: "Email confirmed"
+confirmat_message: "Redirecting to your documentation..."
+
+# private-doc layout — document header
+doc_prepared_for: "Document prepared for"
+doc_no_access_title: "Restricted access"
+doc_no_access_message: "Please identify yourself first from the workshop page."
+doc_no_access_cta: "Back to the workshop"
+doc_print_cta: "Print / Save as PDF →"
+doc_footer_copyright: "Personal and non-transferable document · Distribution not permitted"
+
+# Formal certificate
+certificate_title: "Certificate of participation"
+certificate_certifies: "Certifies that"
+certificate_completed: "has completed the workshop"
+certificate_place: "Barcelona"
+certificate_issuer: "Llumàtics — School of photochemical photography"

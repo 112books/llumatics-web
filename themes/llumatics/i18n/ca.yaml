@@ -207,3 +207,31 @@ cta_regala: "Regala aquest taller →"
 cta_newsletter_pre: "O"
 cta_newsletter_link: "subscriu-te al butlletí"
 cta_newsletter_post: "per estar al cas de quan es programi."
+
+# Pàgina privada — formulari d'identificació
+private_name_label: "Nom complet"
+private_name_placeholder: "El teu nom i cognoms"
+private_language_label: "Idioma del document"
+private_newsletter_label: "Vull rebre informació puntual sobre nous tallers i activitats de Llumàtics."
+private_submit_cta: "Sol·licita la documentació"
+private_confirm_message: "Perfecte! T'hem enviat un email de confirmació. Revisa la safata d'entrada (i el correu brossa, per si de cas)."
+private_footer_nominal: "La documentació és personal i intransferible. El document portarà el teu nom."
+
+# Pàgina /confirmat/ — relay
+confirmat_title: "Email confirmat"
+confirmat_message: "Redirigint a la documentació..."
+
+# Layout private-doc — capçalera del document
+doc_prepared_for: "Document preparat per a"
+doc_no_access_title: "Accés restringit"
+doc_no_access_message: "Accedeix primer des de la pàgina del taller per identificar-te."
+doc_no_access_cta: "Tornar al taller"
+doc_print_cta: "Imprimeix / Desa com a PDF →"
+doc_footer_copyright: "Document personal i intransferible · No es permet la distribució"
+
+# Certificat formal
+certificate_title: "Certificat de participació"
+certificate_certifies: "Certifica que"
+certificate_completed: "ha completat el taller"
+certificate_place: "Barcelona"
+certificate_issuer: "Llumàtics — Escola de fotografia fotoquímica"
