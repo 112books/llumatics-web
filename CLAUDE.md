@@ -421,6 +421,26 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Ordre bloc Fonaments** per camp `weight`: 10-iniciació, 20-digitalitzacio-escaner, 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
 - **Camps obligatoris al frontmatter**: `extern: false` (per aparèixer a la llista), `weight` (ordre dins bloc).
 
+### 2026-05-24
+**Camp `weight` per a tots els tallers + sistema de documentació nominal per a alumnes (Fase 1)**
+
+- **Camp `weight` afegit** a 21 tallers que no el tenien (`content/ca/tallers/*/index.md`). Ordre pedagògic dins de cada bloc. Commit `7623ad7`.
+
+- **Sistema de documentació nominal — infraestructura completa implementada** (Tasks 2-8 del pla `docs/superpowers/plans/2026-05-24-documentacio-alumnes.md`):
+  - **`hugo.toml`**: nou param `brevoListFormAction = ""` (buit fins configurar Brevo)
+  - **`private.html`** (reescrit): formulari amb camps NOM, EMAIL, IDIOMA (select pre-seleccionat per idioma de la pàgina), TALLER (hidden, del `course_ref`), honeypot Brevo (`email_address_check`), checkbox newsletter no pre-marcat. JS guarda `localStorage` just abans del submit i amaga el formulari visualment.
+  - **`confirmat.html`** (NOU): pàgina relay post-confirmació Brevo. JS llegeix `llum_doc` de `localStorage`, l'esborra i redirigeix a `/tallers/{taller}/privat/doc/?nom=...&taller=...&lang=...`
+  - **`private-doc.html`** (NOU): layout documentació. Mostra contingut Markdown del taller + certificat formal. JS llegeix `nom` de la URL; si no n'hi ha, mostra "Accés restringit". Injecta nom a capçalera, certificat i peu PDF.
+  - **`content/ca/confirmat/_index.md`** (NOU): pàgina relay (noindex, draft: false)
+  - **`content/ca/tallers/revelat-bn/privat/doc/index.md`** (NOU): primera documentació de taller. Layout `private-doc`, imatge principal, contingut complet: introducció, història, procediment pas a pas (7 passos), consells, taula de resum, referències externes.
+  - **`static/images/docs/`**: directori creat per a imatges de documentació
+  - **i18n** (CA/ES/EN): 19 claus noves: `private_name_label`, `private_name_placeholder`, `private_language_label`, `private_newsletter_label`, `private_submit_cta`, `private_confirm_message`, `private_footer_nominal`, `confirmat_title`, `confirmat_message`, `doc_prepared_for`, `doc_no_access_title`, `doc_no_access_message`, `doc_no_access_cta`, `doc_print_cta`, `doc_footer_copyright`, `certificate_certifies`, `certificate_completed`, `certificate_place`, `certificate_issuer`
+  - **`main.css`**: afegit `.private-form`, `.private-gate__confirm`, `.private-gate__footer`, `.doc-header`, `.doc-hero-image`, `.doc-print-bar`, `.doc-print-btn`, `.doc-body`, `.doc-print-footer`, `.certificate` (i tots els elements `certificate__*`), estils impressió `@media print` (amaga site header/footer, mostra `.doc-header` i `.doc-print-footer`, `.certificate` amb `page-break-before:always`, `@page { size: A4; margin: 2cm }`)
+
+- **Fix staging (staticrypt)**: `deploy-staging.yml` — substituïda la lògica de globstar amb `npx staticrypt public --recursive`. El problema anterior era que `shopt -s globstar` no trobava fitxers en subdirectoris profunds i staticrypt descartava les pàgines no processades. Amb `--recursive` tot el directori `public/` s'encripta correctament. Commit `228647d9`.
+
+- **Spec i pla escrits**: `docs/superpowers/specs/2026-05-24-documentacio-alumnes-design.md` + `docs/superpowers/plans/2026-05-24-documentacio-alumnes.md`
+
 ### 2026-04-19
 **Redisseny home + pàgina tallers + línia del temps del recorregut**
 
@@ -511,7 +531,54 @@ El botó ja existeix i passa `?taller=slug` a la URL. Falta configurar:
 - [ ] Brevo: configurar llistes i integració Tally → Brevo
 
 #### PDF alumnes
-- [ ] Pipeline Make.com → Pandoc → email. Pàgines privades ja definides (`layout: private`).
+- [ ] Pipeline Make.com → Pandoc → email. **SUBSTITUÏT** per sistema de documentació al navegador (vegeu secció següent).
+
+---
+
+### Documentació nominal alumnes — EN CURS (Fase 1 infraestructura feta)
+
+**Estat:** infraestructura de codi completament implementada. Pendent: configurar Brevo + test end-to-end.
+
+**Pla complet:** `docs/superpowers/plans/2026-05-24-documentacio-alumnes.md`
+**Spec de disseny:** `docs/superpowers/specs/2026-05-24-documentacio-alumnes-design.md`
+
+**Arquitectura:** Formulari identificació → POST Brevo (doble opt-in) → `localStorage` relay → `/confirmat/` → `/privat/doc/?nom=...` → JS injecta nom → `window.print()` → PDF nominal amb certificat.
+
+**Task 1 — Configurar Brevo (MANUAL — tu has de fer-ho):**
+1. `app.brevo.com` → Contacts → Lists → "Alumnes Llumàtics" (apuntar l'ID)
+2. Contacts → Settings → Contact attributes: `NOM` (Text), `TALLER` (Text), `IDIOMA` (Text), `DATA_SOL·LICITUD` (Date), `NEWSLETTER` (Boolean)
+3. Contacts → Forms → Subscription form → camps: Email + NOM + TALLER (hidden) + IDIOMA (hidden) + NEWSLETTER (checkbox) → Double opt-in activat → Redirect URL: `https://llumatics.com/confirmat/`
+4. Al formulari → Share/Embed → HTML form → copiar el valor de `action` (format: `https://sibforms.com/serve/MUIFA...`)
+5. Enganxar l'URL a `hugo.toml`: `brevoListFormAction = "https://sibforms.com/serve/MUIFA..."`
+
+**Tasks 2-8 — Codi (LLESTS ✅):**
+- `hugo.toml`: param `brevoListFormAction` afegit (buit)
+- `layouts/_default/private.html`: formulari Brevo + localStorage
+- `layouts/_default/confirmat.html`: relay localStorage → /doc/
+- `layouts/_default/private-doc.html`: documentació + injecció nom + certificat
+- `content/ca/confirmat/_index.md`: pàgina relay
+- `content/ca/tallers/revelat-bn/privat/doc/index.md`: documentació completa revelat B/N
+- `main.css`: estils formulari, doc, certificat, @media print A4
+- i18n CA/ES/EN: 19 claus noves
+
+**Task 9 — Test staging (pendent):**
+Un cop el staging funcioni correctament (fix staticrypt acabat de pujar, commit `228647d9`):
+- `https://112books.github.io/llumatics-web/tallers/revelat-bn/privat/doc/?nom=Joan+Puig&taller=revelat-bn&lang=ca` → ha de mostrar la documentació completa
+
+**Task 9 — Test end-to-end (pendent, necessita Brevo configurat):**
+1. Obrir `/tallers/revelat-bn/privat/` → omplir formulari → verificar email doble opt-in Brevo
+2. Confirmar email → verificar redirecció a `/confirmat/` → redirecció automàtica a `/doc/?nom=...`
+3. Verificar document amb nom + botó impressió + certificat + PDF A4
+
+**Pendent addicional (documentació d'altres tallers):**
+- [ ] `content/ca/tallers/reveladors-artesanals/privat/doc/index.md` — documentació reveladors artesanals
+- [ ] `content/ca/tallers/copies-beers-developer/privat/doc/index.md` — documentació Beers Developer
+- [ ] Restants tallers actius (un per un, seguint el template de `revelat-bn/privat/doc/`)
+
+**Pendent addicional (logo C&F per tallers externs):**
+- [ ] Afegir suport `partner_logo` a `private-doc.html` (mostrar logo del soci si el frontmatter el té)
+- [ ] Copiar logo: `docs-cursos/Camera-and-films-inciacio-revelat/im/LOGO_C&F.png` → `static/images/logos/cameras-and-films.png`
+- [ ] Afegir `partner_logo: /images/logos/cameras-and-films.png` al frontmatter del doc de `iniciacio-revelat`
 
 ---
 
