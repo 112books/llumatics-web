@@ -137,6 +137,7 @@ Tots els tallers seguiran aquesta estructura Markdown:
 title: "Documentació — [Nom del taller]"
 layout: "private-doc"
 course_ref: "[slug]"
+image: "/images/docs/[slug].jpg"     ← imatge principal del document
 noindex: true
 sitemap:
   disable: true
@@ -153,6 +154,21 @@ draft: false
 ```
 
 El `layout: private-doc` afegeix automàticament la capçalera nominal i el certificat — el Markdown no cal que els inclogui.
+
+**Imatge principal (`image`):** apareix a la portada del document, sota la capçalera amb el nom de l'alumne. Format jpg/webp, 1200×800px. Ruta: `static/images/docs/[slug].jpg`.
+
+**Imatges secundàries:** inline dins el Markdown, sense estructura imposada. Cada taller decideix on les posa i quantes. S'insereixen amb Markdown estàndard:
+
+```markdown
+![Descripció de la imatge](/images/docs/revelat-bn-pas1.jpg)
+```
+
+Ruta: `static/images/docs/[slug]-[descripció].jpg`.
+
+**Consideracions per a impressió:**
+- Les imatges no usen `loading="lazy"` — el layout `private-doc` les carrega eager per evitar blancs al PDF
+- El CSS d'impressió limita l'amplada de les imatges al 100% de la columna
+- `page-break-inside: avoid` a les imatges per evitar talls a meitat d'una foto
 
 ### 5. Certificat formal
 
