@@ -46,7 +46,7 @@ jobs:
             --recursive \
             --password "${{ secrets.SITE_PASSWORD }}" \
             --config .staticrypt.json \
-            --directory public
+            --directory .
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 

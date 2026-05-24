@@ -1,11 +1,12 @@
 {
-  "remember_me": true,
-  "remember_me_days": 30,
-  "short": false,
-  "template_title": "Llumàtics",
-  "template_instructions": "Introdueix la contrasenya per accedir al lloc.",
-  "template_placeholder": "contrasenya",
-  "template_button": "Entrar",
-  "template_color_primary": "#C8A96E",
-  "template_color_secondary": "#1A1A18"
+    "remember_me": true,
+    "remember_me_days": 30,
+    "short": false,
+    "template_title": "Llumàtics",
+    "template_instructions": "Introdueix la contrasenya per accedir al lloc.",
+    "template_placeholder": "contrasenya",
+    "template_button": "Entrar",
+    "template_color_primary": "#C8A96E",
+    "template_color_secondary": "#1A1A18",
+    "salt": "afcfe811c8e633e37e53eb50e00bc242"
 }
