@@ -1,4 +1,4 @@
-name: Deploy → Staging
+name: Deploy → Staging (GitHub Pages)
 
 on:
   push:
@@ -6,10 +6,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "pages-staging"
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -36,9 +38,13 @@ jobs:
       - name: Install staticrypt
         run: npm install
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build Hugo (staging, amb drafts)
         run: |
-          hugo --minify --baseURL "https://112books.github.io/llumatics-web/" --buildDrafts
+          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/" --buildDrafts
 
       - name: Encrypt with staticrypt (staging)
         run: |
@@ -50,10 +56,18 @@ jobs:
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
-      - name: Deploy to GitHub Pages (branca gh-pages-staging)
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages-staging
-          destination_dir: .
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
