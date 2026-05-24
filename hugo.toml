@@ -68,7 +68,7 @@ defaultContentLanguageInSubdir = false
   paypalClientID   = "ARfv0r9YbKGedzDevSAAEc2oU0cXKqAH7kCLCELkNIK0kKautRaKl4ut6Yn77iL3fUInzHrM9dmB7ZWK"     # PayPal JS SDK client-id (LIVE)
   makecomGiftWebhook = "https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb"   # URL webhook Make.com escenari val-regal
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
-  brevoListFormAction = ""    # Form action URL de Brevo (subscripció alumnes) — omplir després de configurar Brevo
+  brevoListFormAction = "https://59a7cdb3.sibforms.com/serve/MUIFAM9EjcWKfMa7vhhpazyBO4hK31XzmLJ1e3ZwcoOVP8nNXKUglMgpICj8tgZmHPm6cM_NKMbohpZweZtNYySTxwhr6fA_L5b-aCAnrowF1ICI4G-HHZr3ebbDgoGcc-TGwZiEq5F1y0DLs3ggbMmuAKrwIdx6srZRC6hySv3I5ZImnchIXXdkMGiublLSmPj0mu8gXrPnbqRHeQ=="  # Form action URL Brevo — Alumnes Llumàtics
   goatcounterSite = "llumatics"  # llumatics.goatcounter.com
 
 [taxonomies]
