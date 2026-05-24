@@ -1,0 +1,108 @@
+{{/* Layout: private-doc.html — Documentació nominal del taller */}}
+{{ define "main" }}
+{{ $courseTitle := .Title }}
+{{ $courseImage := .Params.image }}
+
+{{/* Capçalera del document — visible al PDF via @media print, oculta al web */}}
+<div class="doc-header" id="js-doc-header">
+  <div class="doc-header__meta" id="js-doc-meta"></div>
+</div>
+
+{{/* Missatge d'accés restringit (sense nom a la URL) */}}
+<div id="js-doc-no-access" class="section container" style="min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center;" hidden>
+  <div style="max-width:420px;">
+    <div style="font-size:3rem; opacity:0.3; margin-bottom:1rem;">🔒</div>
+    <h1 style="font-family:var(--font-serif); font-size:var(--text-2xl); margin-bottom:0.75rem;">
+      {{ i18n "doc_no_access_title" }}
+    </h1>
+    <p style="color:var(--color-text-muted); margin-bottom:2rem;">{{ i18n "doc_no_access_message" }}</p>
+    <a href="../" class="btn btn--primary">{{ i18n "doc_no_access_cta" }}</a>
+  </div>
+</div>
+
+{{/* Contingut principal (ocult fins que JS validi el nom) */}}
+<div id="js-doc-content" hidden>
+
+  {{/* Botó d'impressió */}}
+  <div class="doc-print-bar no-print">
+    <div class="container container--narrow">
+      <button onclick="window.print()" class="btn btn--ghost doc-print-btn">
+        {{ i18n "doc_print_cta" }}
+      </button>
+    </div>
+  </div>
+
+  {{/* Imatge principal */}}
+  {{ if $courseImage }}
+  <div class="doc-hero-image">
+    <img src="{{ $courseImage }}" alt="{{ $courseTitle }}" loading="eager">
+  </div>
+  {{ end }}
+
+  {{/* Cos del document */}}
+  <div class="section container container--narrow">
+    <div class="prose doc-body">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{/* Certificat formal */}}
+  <div class="certificate">
+    <div class="certificate__inner">
+      {{ $logo := .Site.Params.logo }}
+      {{ if $logo }}
+      <img src="{{ $logo }}" alt="Llumàtics" class="certificate__logo">
+      {{ end }}
+      <p class="certificate__certifies">{{ i18n "certificate_certifies" }}</p>
+      <p class="certificate__name" id="js-cert-name"></p>
+      <p class="certificate__completed">{{ i18n "certificate_completed" }}</p>
+      <p class="certificate__course">{{ $courseTitle }}</p>
+      <p class="certificate__date" id="js-cert-date"></p>
+      <p class="certificate__place">{{ i18n "certificate_place" }}</p>
+      <div class="certificate__line"></div>
+      <p class="certificate__issuer">{{ i18n "certificate_issuer" }}</p>
+    </div>
+  </div>
+
+</div>
+
+{{/* Peu de pàgina per al PDF (ocult al web, visible amb @media print) */}}
+<div class="doc-print-footer print-only" id="js-doc-print-footer"></div>
+
+<script>
+(function() {
+  var params  = new URLSearchParams(window.location.search);
+  var nom     = params.get('nom');
+
+  var elContent  = document.getElementById('js-doc-content');
+  var elNoAccess = document.getElementById('js-doc-no-access');
+  var elMeta     = document.getElementById('js-doc-meta');
+  var elCertName = document.getElementById('js-cert-name');
+  var elCertDate = document.getElementById('js-cert-date');
+  var elFooter   = document.getElementById('js-doc-print-footer');
+
+  if (!nom) {
+    elNoAccess.removeAttribute('hidden');
+    return;
+  }
+
+  elContent.removeAttribute('hidden');
+
+  if (elMeta) {
+    elMeta.textContent = '{{ i18n "doc_prepared_for" }} ' + nom;
+  }
+
+  if (elCertName) elCertName.textContent = nom;
+
+  if (elCertDate) {
+    var d = new Date();
+    var months = ['gener','febrer','març','abril','maig','juny','juliol','agost','setembre','octubre','novembre','desembre'];
+    elCertDate.textContent = d.getDate() + ' de ' + months[d.getMonth()] + ' de ' + d.getFullYear();
+  }
+
+  if (elFooter) {
+    elFooter.textContent = '© Llumàtics · ' + nom + ' · {{ i18n "doc_footer_copyright" }}';
+  }
+})();
+</script>
+{{ end }}
