@@ -42,10 +42,14 @@ jobs:
 
       - name: Encrypt with staticrypt (staging)
         run: |
-          npx staticrypt public/**/*.html \
-            --password "${{ secrets.SITE_PASSWORD }}" \
-            --config .staticrypt.json \
-            --directory public
+          shopt -s globstar
+          html_files=(public/**/*.html)
+          if [ ${#html_files[@]} -gt 0 ]; then
+            npx staticrypt "${html_files[@]}" \
+              --password "${{ secrets.SITE_PASSWORD }}" \
+              --config .staticrypt.json \
+              --directory public
+          fi
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
