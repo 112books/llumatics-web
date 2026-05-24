@@ -1,0 +1,31 @@
+{{/* Layout: confirmat.html — Relay post-confirmació Brevo → /doc/ */}}
+{{ define "main" }}
+<div class="section container" style="min-height:60vh; display:flex; align-items:center; justify-content:center;">
+  <div style="text-align:center; max-width:480px;">
+    <div style="font-size:3rem; opacity:0.4; margin-bottom:1rem;">✓</div>
+    <h1 style="font-family:var(--font-serif); font-size:var(--text-2xl); margin-bottom:0.75rem;">
+      {{ i18n "confirmat_title" }}
+    </h1>
+    <p style="color:var(--color-text-muted);">{{ i18n "confirmat_message" }}</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  try {
+    var raw = localStorage.getItem('llum_doc');
+    if (!raw) return;
+    var data = JSON.parse(raw);
+    if (!data.nom || !data.taller) return;
+    localStorage.removeItem('llum_doc');
+
+    var url = '/tallers/' + data.taller + '/privat/doc/'
+      + '?nom=' + encodeURIComponent(data.nom)
+      + '&taller=' + encodeURIComponent(data.taller)
+      + '&lang=' + encodeURIComponent(data.lang || 'ca');
+
+    window.location.replace(url);
+  } catch(e) {}
+})();
+</script>
+{{ end }}
