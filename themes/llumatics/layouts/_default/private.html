@@ -1,60 +1,113 @@
-{{/* Layout: private.html
-     Pàgina privada per a alumnes.
-     Fase 1: URL oculta + formulari per descarregar PDF.
-     noindex: true garanteix que no s'indexi als cercadors.
-*/}}
+{{/* Layout: private.html — Formulari d'identificació alumnes → Brevo doble opt-in */}}
 {{ define "main" }}
+{{ $courseRef := .Params.course_ref | default (.File.Dir | path.Base) }}
+{{ $lang := .Language.Lang }}
 <div class="section container">
 
   <div class="private-gate">
     <div class="private-gate__box">
       <div class="private-gate__icon">🔒</div>
-      <h1 class="private-gate__title">{{ i18n "private_title" | default "Contingut per a alumnes" }}</h1>
-      <p class="private-gate__desc">{{ i18n "private_desc" | default "Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir i rebre el PDF personalitzat." }}</p>
+      <h1 class="private-gate__title">{{ i18n "private_title" }}</h1>
+      <p class="private-gate__desc">{{ i18n "private_desc" }}</p>
 
-      {{/* Si hi ha un form Tally configurat per a PDF */}}
-      {{ if .Site.Params.tallyFormContact }}
-        <div style="max-width:420px; margin:0 auto;">
-          <iframe
-            data-tally-src="https://tally.so/embed/{{ .Site.Params.tallyFormContact }}?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&curs={{ .File.Dir | path.Base }}"
-            loading="lazy"
-            width="100%"
-            height="200"
-            frameborder="0"
-            title="{{ i18n "private_gate_label" | default "Accés alumnes" }}"
-            style="border:none;">
-          </iframe>
-          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+      {{ if .Site.Params.brevoListFormAction }}
+        <div id="private-form-wrap">
+          <form
+            id="private-brevo-form"
+            action="{{ .Site.Params.brevoListFormAction }}"
+            method="POST"
+            class="private-form"
+          >
+            {{/* Camp nom */}}
+            <label class="private-form__label" for="pf-nom">{{ i18n "private_name_label" }}</label>
+            <input
+              id="pf-nom"
+              type="text"
+              name="NOM"
+              placeholder="{{ i18n "private_name_placeholder" }}"
+              required
+              autocomplete="name"
+              class="private-form__input"
+            >
+
+            {{/* Camp email */}}
+            <label class="private-form__label" for="pf-email">Email</label>
+            <input
+              id="pf-email"
+              type="email"
+              name="EMAIL"
+              placeholder="{{ i18n "private_placeholder" }}"
+              required
+              autocomplete="email"
+              class="private-form__input"
+            >
+
+            {{/* Camp idioma */}}
+            <label class="private-form__label" for="pf-lang">{{ i18n "private_language_label" }}</label>
+            <select id="pf-lang" name="IDIOMA" class="private-form__input">
+              <option value="ca"{{ if eq $lang "ca" }} selected{{ end }}>Català</option>
+              <option value="es"{{ if eq $lang "es" }} selected{{ end }}>Castellano</option>
+              <option value="en"{{ if eq $lang "en" }} selected{{ end }}>English</option>
+            </select>
+
+            {{/* Camps hidden */}}
+            <input type="hidden" name="TALLER" value="{{ $courseRef }}">
+            <input type="hidden" name="email_address_check" value="">
+            <input type="hidden" name="locale" value="{{ $lang }}">
+
+            {{/* Newsletter opt-in */}}
+            <label class="private-form__checkbox-label">
+              <input type="checkbox" name="NEWSLETTER" value="true" class="private-form__checkbox">
+              <span>{{ i18n "private_newsletter_label" }}</span>
+            </label>
+
+            <button type="submit" class="btn btn--primary private-form__submit">
+              {{ i18n "private_submit_cta" }}
+            </button>
+          </form>
+
+          <div id="private-confirm-msg" hidden class="private-gate__confirm">
+            {{ i18n "private_confirm_message" }}
+          </div>
         </div>
       {{ else }}
-        {{/* Formulari placeholder mentre no hi ha Tally */}}
-        <form class="private-form" style="display:flex; flex-direction:column; gap:0.75rem; max-width:360px; margin:0 auto;">
-          <input type="text" name="name" placeholder="El teu nom"
-            style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:2px; font-size:1rem; background:var(--color-surface);">
-          <input type="email" name="email" placeholder="{{ i18n "private_placeholder" | default "el teu correu" }}"
-            style="padding:0.75rem 1rem; border:1px solid var(--color-border); border-radius:2px; font-size:1rem; background:var(--color-surface);">
-          <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.875rem; color:var(--color-text-muted); text-align:left;">
-            <input type="checkbox" name="newsletter" style="margin-top:0.2rem; flex-shrink:0;">
-            {{ i18n "newsletter_opt_in" | default "Vull rebre informació sobre nous tallers i continguts de Llumàtics." }}
-          </label>
-          <button type="submit" class="btn btn--primary" style="width:100%;">
-            {{ i18n "private_cta" | default "Accedir al material" }}
-          </button>
-        </form>
+        <p style="color:var(--color-text-muted); font-size:0.875rem;">
+          (Formulari pendent de configuració)
+        </p>
       {{ end }}
 
-      <p style="margin-top:2rem; font-size:0.75rem; color:var(--color-text-muted);">
-        {{ i18n "private_footer" | default "Rebràs el PDF al teu correu. El document és personal i intransferible." }}
+      <p class="private-gate__footer">
+        {{ i18n "private_footer_nominal" }}
       </p>
-
     </div>
   </div>
 
-  {{/* Contingut visible (visible un cop s'ha fet el procés extern — ara sempre visible per testing) */}}
-  {{/* En producció, el PDF es genera i envia per email. El contingut web és el resum. */}}
-  <div class="prose container--narrow" style="margin-top:4rem; padding-top:3rem; border-top:1px solid var(--color-border);">
-    {{ .Content }}
-  </div>
-
 </div>
+
+<script>
+(function() {
+  var form = document.getElementById('private-brevo-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function() {
+    var nom    = document.getElementById('pf-nom').value.trim();
+    var lang   = document.getElementById('pf-lang').value;
+    var taller = form.querySelector('[name="TALLER"]').value;
+
+    if (!nom) return;
+
+    try {
+      localStorage.setItem('llum_doc', JSON.stringify({
+        nom: nom,
+        taller: taller,
+        lang: lang
+      }));
+    } catch(err) {}
+
+    form.style.display = 'none';
+    var msg = document.getElementById('private-confirm-msg');
+    if (msg) msg.removeAttribute('hidden');
+  });
+})();
+</script>
 {{ end }}
