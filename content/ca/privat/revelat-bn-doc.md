@@ -1,6 +1,7 @@
 ---
 title: "Revelat de pel·lícula B/N"
 layout: "private-doc"
+url: "/tallers/revelat-bn/privat/doc/"
 course_ref: "revelat-bn"
 image: "/images/tallers/revelat-bn.jpg"
 noindex: true
