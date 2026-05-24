@@ -30,7 +30,7 @@
               class="private-form__input"
             >
 
-            {{/* Camp email */}}
+            {{/* Camp email — "Email" és igual en CA/ES/EN, no es tradueix */}}
             <label class="private-form__label" for="pf-email">Email</label>
             <input
               id="pf-email"
@@ -90,11 +90,17 @@
   if (!form) return;
 
   form.addEventListener('submit', function() {
-    var nom    = document.getElementById('pf-nom').value.trim();
-    var lang   = document.getElementById('pf-lang').value;
-    var taller = form.querySelector('[name="TALLER"]').value;
+    var nomInput   = document.getElementById('pf-nom');
+    var langSelect = document.getElementById('pf-lang');
+    var nom        = nomInput.value.trim();
+    var lang       = langSelect.value;
+    var taller     = form.querySelector('[name="TALLER"]').value;
 
     if (!nom) return;
+
+    // Sincronitza locale hidden amb el select d'idioma (IDIOMA → Brevo attr, locale → idioma email opt-in)
+    var hiddenLocale = form.querySelector('[name="locale"]');
+    if (hiddenLocale) hiddenLocale.value = lang;
 
     try {
       localStorage.setItem('llum_doc', JSON.stringify({
