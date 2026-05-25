@@ -1,5 +1,5 @@
 ---
-title: "Caffenol: revela con café"
+title: "Caffenol: revelado fotográfico alternativo"
 layout: "private-doc"
 url: "/es/tallers/caffenol/privat/doc/"
 course_ref: "caffenol"
@@ -11,96 +11,125 @@ robots: "noindex, nofollow"
 draft: false
 ---
 
-## ¿Qué es el Caffenol?
-
-El Caffenol es un revelador fotográfico casero hecho con ingredientes cotidianos: café instantáneo, carbonato de sodio y vitamina C. Fue formulado por primera vez en 1995 en el Rochester Institute of Technology y desde entonces se ha convertido en la referencia de los reveladores experimentales y ecológicos.
-
-El agente revelador principal es el **ácido cafeico** y el **ácido clorogénico** presentes en el café, que ceden electrones a los iones de plata de la emulsión y los reducen a plata metálica. La vitamina C (ácido ascórbico) refuerza y estabiliza la acción del café, mientras que el carbonato de sodio (sosa) actúa de acelerador: aumenta el pH de la solución y activa la reacción.
-
-El resultado es un revelador que funciona de verdad, es respetuoso con el medio ambiente, se puede preparar en casa y tiene un coste muy bajo.
-
-## Ingredientes para 1 litro de Caffenol
+## Fórmula base (para 500 ml)
 
 | Ingrediente | Cantidad |
 |---|---|
-| Agua destilada o filtrada (Brita) | 1.000 ml |
-| Carbonato de sodio (Na₂CO₃) anhidro | 54 g |
-| Ácido ascórbico (vitamina C pura, en polvo) | 16 g |
-| Café soluble (100% café, sin descafeinar) | 40 g |
+| Café soluble (no descafeinado) | 14,5 g |
+| Carbonato sódico (Na₂CO₃ — washing soda) | 20 g |
+| Ácido ascórbico (vitamina C en polvo) | 1,8 g |
+| Agua destilada hasta completar | 500 ml |
 
-> **Importante**: el carbonato de sodio NO es sosa cáustica (hidróxido de sodio, NaOH). Son dos productos muy diferentes. El carbonato de sodio es seguro con precauciones básicas; la sosa cáustica es corrosiva y peligrosa. Asegúrate de leer bien la etiqueta.
+Esta mezcla ha demostrado ser efectiva para el revelado de película en blanco y negro estándar durante unos **15 minutos**, ofreciendo un buen equilibrio entre densidad, detalle y grano.
 
-## Preparación paso a paso
+## Un poco de historia
 
-### 1. Disuelve el carbonato de sodio
-Disuelve los 54 g de carbonato de sodio en 500 ml de agua. Es importante disolverlo completamente, sin grumos. Una batidora de mano (minipimer) va muy bien para garantizar una disolución homogénea.
+El Caffenol surge como un revelador alternativo casero, basado en productos cotidianos —especialmente café y vitamina C— combinados con carbonato sódico. Se popularizó a finales del siglo XX entre fotógrafos que buscaban métodos de revelado económicos y ecológicos capaces de reemplazar los químicos tradicionales.
 
-### 2. Prepara la solución de café
-Disuelve los 40 g de café instantáneo en los 500 ml de agua restantes. Incorpora los 16 g de ácido ascórbico y remueve hasta que esté disuelto. Deja reposar **5 minutos** — durante este tiempo el café y la vitamina C se integran y la mezcla cambia ligeramente de color.
+El café aporta los compuestos reductores necesarios para convertir la plata expuesta de la película en imagen visible, mientras que el ácido ascórbico potencia la reacción y el carbonato sódico regula la alcalinidad, controlando la actividad química.
 
-### 3. Mezcla y reposa
-Mezcla las dos soluciones y deja reposar la mezcla **10 minutos** más antes de usarla. El Caffenol debe estar a **20 °C** cuando lo utilices.
+Esta técnica conecta con la filosofía de experimentación y autoaprendizaje en fotografía, permitiendo explorar resultados distintos según la elección de ingredientes, tiempos y temperaturas.
 
-## Proceso de revelado
+## Ventajas del Caffenol
 
-### Pre-baño
-Llena el tanque de revelado con **agua del grifo** (sin calentar) e introduce el carrete. Deja actuar **1 minuto** para limpiar la emulsión y reblandecer la película. Vacía el agua.
+- **Económico**: los ingredientes son fáciles de conseguir y baratos.
+- **Ecológico**: contiene menos productos tóxicos que los reveladores comerciales.
+- **Versátil**: permite ajustar contraste, densidad y grano mediante pequeñas variaciones.
+- **Experimental**: ideal para aprender química fotográfica y controlar el proceso.
+- **Seguro**: al usar café y vitamina C, el riesgo químico es mucho menor que con reveladores convencionales.
+- **¡También puede usarse para revelar papel fotográfico!**
 
-### Revelado con Caffenol
+## Desventajas
 
-Vierte el Caffenol en el tanque y empieza a contar:
+- Sensible a la temperatura y a la calidad de los ingredientes, lo que puede generar variaciones.
+- Puede producir más grano que los reveladores comerciales, especialmente en ISO altos.
+- Menos estable: debe prepararse fresco y no se conserva mucho tiempo.
+- Tiempos de revelado más largos en comparación con químicos profesionales.
+- No es óptimo para todos los tipos de película; algunas requieren ajustes o pruebas previas.
 
-- **Primer minuto**: agita de forma continua
-- **Minutos restantes**: agita los **10 primeros segundos** de cada minuto, deja reposar el resto
+En nuestras pruebas hemos usado la popular **Fomapan** en sus versiones ISO 100 e ISO 400.
 
-**Tiempos de revelado orientativos:**
+## Revelado paso a paso
 
-| Sensibilidad | Tiempo |
-|---|---|
-| ISO 100 | 20 minutos |
-| ISO 400 | 25 minutos |
+### Preparar la zona y el material
 
-Estos tiempos son orientativos. Las variables (marca de café, concentración real del carbonato, temperatura exacta) pueden hacer variar el resultado. Experimenta y anota tus resultados.
+Trabaja en **completa oscuridad** para cargar el carrete y colocar la película en la espiral del tanque. Ten a mano: balanza de precisión, termómetro de laboratorio (que pueda medir 20 °C), cronómetro, pinzas para colgar el negativo, recipientes resistentes y agua destilada.
 
-### Baño de parada (lavado)
-En lugar de baño de parada químico, haz **4 cambios de agua a 20 °C** (aproximadamente 1 minuto en total). Los cambios de agua eliminan las manchas de café de la emulsión y permiten preservar el fijador para usos posteriores.
+### Solución A — Carbonato sódico
+
+Coloca los 20 g de Na₂CO₃ en un recipiente y añade 250 ml de agua destilada a temperatura ambiente. Remueve hasta que no queden grumos; puedes usar una batidora pequeña para asegurar la disolución completa.
+
+### Solución B — Café y ácido ascórbico
+
+En otro recipiente, disuelve los 14,5 g de café soluble en 250 ml de agua destilada. Añade 1,8 g de ácido ascórbico y deja reposar **3–5 minutos** hasta su disolución.
+
+### Solución A+B — Mezcla final
+
+Mezcla ambas soluciones y completa con agua destilada hasta 500 ml. Deja reposar **10 minutos** para estabilizar la mezcla antes de usarla.
+
+### Revelar
+
+1. Carga la película en el tanque en completa oscuridad.
+2. Llena el tanque con la mezcla de Caffenol.
+3. Agita **continuamente durante el primer minuto**, luego **10 segundos cada minuto** hasta el final.
+4. Tiempo estándar: **15 minutos** (ajustable según el ISO de la película).
+
+### Enjuagues rápidos
+
+Sin sacar la película, vacía el Caffenol y realiza **3–4 cambios de agua** a temperatura ambiente, **1 minuto** cada uno.
 
 ### Fijado
-Fija el negativo con fijador estándar para blanco y negro disuelto en **agua destilada**. Tiempo de fijado: **5 minutos** con agitación moderada.
 
-### Baño final
-Termina con un baño de **agua destilada** con **1 gota de humectante** por litro (Kodak Photo-Flo, Ilford Ilfotol o equivalente). El humectante evita las manchas de secado y favorece un secado uniforme.
+Sigue las instrucciones del fijador utilizado. Luego lava con agua corriente durante unos **5 minutos**.
 
-## Características del Caffenol
+### Limpieza final
 
-El Caffenol da unos resultados muy particulares, muy alejados de un revelador industrial:
+Realiza un último baño con **agua destilada** y **líquido humectante/antiestático** durante 1 minuto.
 
-- **Grano visible**: el Caffenol no es un revelador de grano fino. El grano es parte del carácter de las imágenes reveladas con café.
-- **Contraste medio**: funciona especialmente bien con películas de contraste moderado. Evita escenas de luz muy dura.
-- **Tonos cálidos**: el negativo puede mostrar un ligero tono marronáceo, especialmente si se excede el tiempo de revelado.
-- **Un solo uso**: el Caffenol se descarta después de cada revelado. No es un revelador de reutilización.
-- **Olor**: el proceso desprende un intenso olor a café. Por favor, ventila bien el espacio de trabajo.
+### Secado
 
-## Películas recomendadas
+Cuelga la película con pinzas protegidas con goma en un lugar limpio y libre de polvo. Una vez seca, se puede escanear o ampliar.
 
-| Película | ISO expuesto | Notas |
-|---|---|---|
-| Ilford HP5 Plus | 400 | El clásico para el Caffenol. Resultados muy consistentes. |
-| Kodak Tri-X 400 | 400 | Grano pronunciado y carácter. Buena combinación. |
-| Fomapan 400 | 400 | Económica, muy adecuada para experimentación. |
-| Ilford FP4 Plus | 100 | Grano fino, negativo muy limpio. Buena opción para 20 min. |
-| Kodak T-Max 100 | 100 | Grano muy fino; puede necesitar ajuste de tiempos. |
+## Ajuste de contraste y densidad
 
-Evita las películas cromogénicas en blanco y negro (Kodak BW400CN, Ilford XP2): están diseñadas para revelado en C-41 y no dan buenos resultados con Caffenol.
+**Para aumentar densidad y contraste:**
+- Aumentar el tiempo (15 → 18–20 min)
+- Subir ligeramente la temperatura (20 °C → 22–24 °C)
+- Incrementar ácido ascórbico (1,8 g → 2,2–2,5 g)
+- Añadir un poco más de café o carbonato (+10–15%)
+- Más agitación intensifica sombras y contraste
 
-## Seguridad y medio ambiente
+**Para reducir contraste o suavizar densidad:**
+- Disminuir tiempo (15 → 12 min)
+- Reducir ácido ascórbico (1,8 g → 1,4–1,6 g)
+- Trabajar a menor temperatura (20 °C → 18 °C)
+- Agitar menos y, si se desea, diluir ligeramente la mezcla
 
-- Usa **guantes de nitrilo** al manipular el carbonato de sodio y el ácido ascórbico en polvo.
-- Trabaja en un espacio **ventilado**: el olor del café es intenso y persistente.
-- El Caffenol es un revelador muy poco tóxico. Los volúmenes artesanales (1 L) se pueden verter por el fregadero con abundante agua, dado su bajo impacto ambiental.
-- Etiqueta las soluciones mientras las preparas (carbonato / café+vitamina C / Caffenol listo) para evitar confusiones.
+## Ficha de laboratorio — escala por volumen
 
-## Recursos
+| Volumen | Café soluble | Carbonato sódico | Ácido ascórbico | Agua destilada |
+|---|---|---|---|---|
+| 250 ml | 7,25 g | 10 g | 0,9 g | hasta 250 ml |
+| 500 ml | 14,5 g | 20 g | 1,8 g | hasta 500 ml |
+| 1 litro | 29 g | 40 g | 3,6 g | hasta 1 litro |
+| 2 litros | 58 g | 80 g | 7,6 g | hasta 2 litros |
 
-- Comunidad y tablas de tiempos: [Caffenol.org](http://www.caffenol.org)
-- Foro Flickr: grupo Caffenol (referencia clásica de la comunidad)
+## Resultado final y escaneado
+
+Una vez revelado el negativo con Caffenol, podemos hacer una copia en papel utilizando la ampliadora como lo haríamos con cualquier negativo blanco y negro.
+
+O, si queremos seguir experimentando, podemos jugar con el escáner y sus posibilidades.
+
+### Escaneado: blanco y negro vs. color
+
+Para seguir experimentando necesitaremos un **escáner con módulo para negativos**; un escáner plano convencional no sirve. Hay muchas opciones en el mercado y de muchas calidades.
+
+Todos permiten elegir el tipo de negativo: positivo (diapositiva) o negativo, y blanco y negro o color. Si queremos una imagen estándar en blanco y negro, seleccionaremos "Blanco y negro". Pero te sugerimos probar la opción "**Color**": los resultados son espectaculares.
+
+Usando la opción de color, y dependiendo del balance de blancos o del ajuste de exposición manual —según marca y modelo— podremos obtener increíbles tonos rojizos, anaranjados y marrones.
+
+### ¿Por qué aparecen estos tonos rojizos?
+
+Hay varias teorías, pero la más plausible es que el proceso con Caffenol deja diminutas trazas de materia orgánica (taninos del café y ácido ascórbico) en la emulsión de la película. Al escanear, estos compuestos absorben parte de la luz azul y verdosa del escáner y reflejan más la zona roja, generando ese tono cálido tan característico.
+
+Sea como sea, es un efecto difícil de controlar y depende mucho de los ajustes del escáner: puede ser sutil o absolutamente descarado. En cualquier caso, los resultados no dejan indiferente.
