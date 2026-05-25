@@ -8,72 +8,103 @@ noindex: true
 sitemap:
   disable: true
 robots: "noindex, nofollow"
-draft: true
+draft: false
 ---
 
-## El procés lent com a avantatge en retrat
+## Què és la fotografia en gran format
 
-Fotografiar retrat en gran format és, paradoxalment, un dels actes de retrat més íntims. La lentitud del procés —muntar la càmera, composar sota el velum negre, enfocar amb lupa, inserir la xapa— crea un ritual que involucra el subjecte d'una manera diferent a qualsevol altra càmera.
+La fotografia en gran format és la que es realitza amb càmeres específiques que produeixen un negatiu (o positiu) de dimensions molt superiors al format de 35mm o al mig format. Es considera gran format a partir de les plaques de 9×12 cm, passant pel clàssic 4×5 polzades (10×12,7 cm), 13×18 cm i 20×25 cm, fins a formats encara més grans, sovint amb càmeres fetes a mida.
 
-El subjecte no és "fotografiat en passant": és present, espera, participa. Aquesta espera genera un tipus de connexió i presència que rarament s'obté amb càmeres ràpides. La fotografia de gran format demana que el subjecte estigui realment allà.
+Un dels motius principals per usar gran format és la **qualitat d'imatge aclaparadora**: un negatiu de 4×5" té vint vegades més superfície d'emulsió que un negatiu de 35mm. Això es tradueix en un detall extraordinari, una escala de tons molt rica i la possibilitat de fer ampliacions enormes sense pèrdua visible de qualitat.
 
-**Richard Avedon**, **Irving Penn** i **August Sander** van fer alguns dels retrats més importants de la història amb càmeres de gran format. La qualitat de detall d'una xapa de 4×5 polzades escanejada és equivalent a 400+ megapíxels digitals.
+La segona característica diferencial és la **flexibilitat dels moviments de fol·le**: els estàndards anterior (on va l'objectiu) i posterior (on va la pel·lícula o el cristall esmerilat) es poden moure de forma independent en tots els eixos. Això permet controlar la perspectiva i el plànol de focus d'una manera impossible amb qualsevol altra càmera.
 
-## Flux de treball: retrat en 4×5
+## Formats habituals
 
-### Preparació de l'equip
-1. Munta la càmera al trípode (molt ferm: la càmera pesa 2-5 kg)
-2. Instal·la l'objectiu al panell frontal
-3. Connecta el cable de disparament a l'obturador de l'objectiu
-4. Obre el diafragma al màxim per veure i enfocar
-5. Col·loca el velum (dark cloth) llest per usar
+| Format | Mida aproximada | Ús típic |
+|--------|----------------|---------|
+| 9×12 cm | 9 × 12 cm | Retrat d'estudi, reportatge |
+| 4×5" | 10 × 12,7 cm | El format de gran format més estès avui |
+| 13×18 cm | 13 × 18 cm | Paisatge, arquitectura |
+| 8×10" (20×25 cm) | 20 × 25 cm | Estudi, còpies per contacte |
 
-### Composició i focus
-1. Obre el diafragma de l'objectiu al màxim
-2. Posa't sota el velum negre (capsa negra que tapa el ground glass del sol directe)
-3. Composa en el ground glass: la imatge és invertida i cap per avall. Porta una lupa (4-8×) per verificar el focus.
-4. Aplica moviments si cal (tilt frontal per maximitzar la zona de focus al pla del rostre)
-5. Tanca el diafragma al valor triat per a l'exposició
+## Els moviments de la càmera
 
-### Mesura i exposició
-6. Mesura la llum (fotòmetre incident, apuntant a la càmera des del rostre del subjecte)
-7. Calcula el temps d'exposició tenint en compte la fallada de reciprocitat si el temps és superior a 1 s
-8. Tapa l'objectiu
-9. Insereix el portafilms amb cura
-10. Extreu la dark slide lentament
-11. Anuncia al subjecte: "Ara disparo. Queda quiet."
-12. Dispara amb el cable
-13. Retorna la dark slide i gira-la (exposada)
+Els moviments de fol·le permeten modificar la relació entre el plànol de l'objectiu i el plànol de l'emulsió. Són la raó per la qual el gran format segueix sent irremplaçable en fotografia d'arquitectura, producte i estudi.
 
-## Moviments útils per a retrat
+| Moviment | Efecte |
+|---------|--------|
+| **Tilt** (bascular) | Inclina el plànol de l'objectiu o la pel·lícula; permet extendre o concentrar la profunditat de camp (Principi de Scheimpflug) |
+| **Swing** (girar) | Gira sobre l'eix vertical; corregeix perspectiva en horitzontal |
+| **Rise / Fall** (pujar/baixar) | Desplaça l'objectiu amunt o avall sense inclinar la càmera; elimina la convergència de línies verticals |
+| **Shift** (desplaçar lateral) | Mou lateralment l'objectiu; útil per a panoràmiques i correccions |
 
-**Tilt frontal (cap endavant)**: inclina l'estàndard frontal cap endavant. El pla de focus s'inclina, permetent que el pla del rostre del subjecte (que no és perpendicular a l'eix de la càmera en un angle de 3/4) quedi en focus sense tancar excessivament el diafragma.
+## Procediment per disparar en gran format
 
-**Rise (elevar objectiu)**: eleva l'objectiu sense inclinar la càmera. Permet centrar la composició verticalment sense inclinar la càmera (que causaria convergència de línies verticals).
+### 1. Muntar la càmera al trípode
+La càmera de gran format és pesada i sensible. Un trípode sòlid és imprescindible. Comprova que el cap és adequat per al pes.
 
-## Pel·lícules per a retrat en gran format
+### 2. Composar i enfocar al cristall esmerilat
+La imatge al cristall és **invertida i de cap per avall** — cal acostumar-s'hi. Utilitza la tela negra per tapar-te el cap i el cristall per veure la imatge sense llum ambiental. Un cop composada l'escena, enfoca amb la lupa fins que el punt d'interès principal estigui net.
 
-| Pel·lícula | ISO | Notes |
-|---|---|---|
-| Kodak Portra 160 | 160 | Excel·lent per a retrat en color; tons de pell magnífics, gra pràcticament invisible en 4×5 |
-| Kodak Portra 400 | 400 | Més versatile; per a condicions de llum menys controlades |
-| Ilford FP4 Plus | 125 | B/N clàssic, gra molt fi, contrast elegant per a estudi |
-| Ilford HP5 Plus | 400 | B/N versatile, molt latitud; per a llum natural o estudi |
-| Kodak T-Max 100 | 100 | Gra mig (T-grain), contrast molt controlable |
+### 3. Aplicar moviments (si cal)
+Corregeix perspectiva o amplia la profunditat de camp amb els moviments disponibles. Comprova que no hi hagi vinyetatge mirant les cantonades del cristall.
 
-## Llum per a retrat en gran format
+### 4. Mesurar la llum i calcular l'exposició
+Utilitza un fotòmetre d'incident (el més recomanat per a gran format). Ten en compte:
+- El **factor de fol·le**: quan l'objectiu s'estén molt per enfocar prop, el fol·le talla llum i cal corregir l'exposició.
+- La **reciprocitat**: per a exposicions llargues (>1s), el paper o la pel·lícula perd sensibilitat i cal incrementar el temps.
 
-En gran format, la llum de finestra és molt popular per la seva qualitat:
-- **Finestra nord** (llum freda i uniforme): ideal per a B/N i retrat de caràcter
-- **Finestra est/oest** (llum de dia directa): molt dramàtica, cal gestionar el contrast
-- **Flash de plafó amb softbox**: el control total, però perd la naturalitat de la llum ambient
+### 5. Tancar el diafragma i armar l'obturador
+L'objectiu de gran format té l'obturador integrat (Copal, Compur). Tanca el diafragma a l'obertura triada, arma l'obturador i connecta el disparador de cable.
 
-El temps d'exposició lent del procés (sovint 1/30 s o 1/15 s amb llum de finestra) demana que el subjecte estigui completament quiet. És útil tenir un punt de focus (un objecte, una marca al terra) on el subjecte fixi la mirada per evitar petits moviments.
+### 6. Carregar el xassís
+En foscor total o amb sac de revelat:
+- Comprova que el material fotosensible és al costat correcte (el costat de l'emulsió és mat; el de la base és brillant).
+- Introdueix el xassís a la ranura posterior de la càmera.
+- Tira la solapa del xassís per exposar el material.
 
-## Escanejat de xapes 4×5
+### 7. Disparar
+Sense vibrar la càmera, acciona el disparador de cable.
 
-Una xapa de 4×5 s'escaneja habitualment a 1.200-2.400 dpi per a ús normal (fins a 50×60 cm). Per a impressions molt grans o arxiu, 4.800 dpi. Un escàner de plana com l'Epson V600 o V850 és suficient per a 4×5 fins a unes impressions de qualitat de 40×50 cm. Per a impressions majors o arxiu professional, cal escàner de tambor o fotòmetre de densitat.
+### 8. Protegir el xassís
+Tanca la solapa immediatament. Gira el marcador a "exposat" per no tornar-lo a usar per error.
 
-## Còpia de contacte
+## Material necessari
 
-Un positiu de contacte d'un negatiu 4×5 és ja en sí una còpia de qualitat: 10×12 cm d'imatge imprimida a contacte, amb la nitidesa i el rang tonal del negatiu original. Per als platinotipos i processos alternatius, el negatiu de gran format és l'estàndard de referència.
+**Càmera i accessoris**
+- Càmera de gran format amb objectiu (Schneider, Rodenstock, Fujinon, Nikkor)
+- Xassissos de placa (mínim 2 per sessió)
+- Trípode robust
+- Disparador de cable
+- Tela negra de composició
+- Lupa per al cristall esmerilat
+
+**Material fotosensible**
+- Paper fotogràfic (RC o fibra), pel·lícula de placa o vidre sensibilitzat
+- El costat de l'emulsió és sempre el mat
+
+**Mesura de llum**
+- Fotòmetre d'incident (recomanat) o de reflexió
+- Focos i reflectors (optatius per a estudi)
+
+## Revelat del paper fotogràfic
+
+Si s'exposa paper fotogràfic (com fem al taller), el revelat es fa en llum de seguretat ambre o vermella:
+
+| Pas | Producte | Temps |
+|-----|---------|-------|
+| Revelat | Revelador de paper (1+9) | 2–3 min amb agitació |
+| Stop | Bany de paro | 30 s |
+| Fixat | Fixador ràpid | 2–3 min |
+| Rentat | Aigua corrent | 5–10 min |
+
+Un cop sec, el paper exposat i revelat es pot usar per fer una **còpia per contacte** a l'ampliadora: es posa en contacte directe amb un full de paper nou i s'exposa, obtenint un positiu de la mateixa mida que el negatiu.
+
+## Recursos externs
+
+- [La càmera de Gran Format](https://camaragranformato.blogspot.com) — blog de referència
+- [Tipus d'òptiques per a GF (B&H)](https://www.bhphotovideo.com/FrameWork/Product_Resources/SourceBookProPhoto/Section03aLgFormatField.pdf) — guia d'objectius de camp
+- [Sun Pictures: Henry Fox Talbot](https://vimeo.com/170223335) — context històric dels orígens de la fotografia
+- [Portrait of Nature — Plati/Pal·ladi](https://vimeo.com/91495217) — exemple de qualitat de les impressions en gran format
+- [Galeria de retrats amb Horseman 8×10"](https://blog.pocallum.cat/category/camara/horsman-8x10%e2%80%b3/) — exemples del professor amb una càmera 8×10"
