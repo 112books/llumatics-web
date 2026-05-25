@@ -421,6 +421,15 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Ordre bloc Fonaments** per camp `weight`: 10-iniciació, 20-digitalitzacio-escaner, 30-edicio-imatges, 40-estenopeica, 50-fotogrames. CA/ES/EN.
 - **Camps obligatoris al frontmatter**: `extern: false` (per aparèixer a la llista), `weight` (ordre dins bloc).
 
+### 2026-05-25
+**Documentació alumnes CA/ES/EN: fonaments, Caffenol, Wineol + taller Wineol + GDPR**
+
+- **`fonaments-iniciacio-puntual-doc`** CA/ES/EN: documentació completa del taller d'iniciació. Imatges pedagògiques (formats, càmera, exposició, focal, perspectiva, profunditat de camp), triangle d'exposició amb gràfic específic per idioma (`triangle-ca/es/en.png`). Typos CA corregits.
+- **`caffenol-doc`** CA/ES/EN: documentació definitiva del taller Caffenol. Fórmula Llumàtics per 500ml (14,5g cafè / 20g Na₂CO₃ / 1,8g vitamina C), taula d'escala per 4 volums, procés Solució A+B, ajust contrast/densitat, escaneig en color i tons vermellosos. Imatges caffenol-01 a 09.
+- **`wineol-doc`** CA/ES/EN + **taller `wineol`** CA/ES/EN + **pàgines privades gate** CA/ES/EN: revelador de vi negre (54g Na₂CO₃ / 16g vit.C / 10g sal per 500ml vi), 20min a 22°C, 4 cops per bombolles, rentat final 12min. Taller amb avís experimental molt destacat, anècdota personal d'inestabilitat. Imatges wineol01-05.
+- **GDPR**: checkbox obligatori afegit a `private.html` (`RGPD_CHECK` required + camp hidden `RGPD` → "true" via JS). Clau `private_gdpr_label` afegida a CA/ES/EN amb link a política de privacitat.
+- **Deploy**: tot mergetat a `main` i en producció via GitHub Actions.
+
 ### 2026-05-24
 **Camp `weight` per a tots els tallers + sistema de documentació nominal per a alumnes (Fase 1)**
 
@@ -571,9 +580,21 @@ Un cop el staging funcioni correctament (fix staticrypt acabat de pujar, commit 
 3. Verificar document amb nom + botó impressió + certificat + PDF A4
 
 **Pendent addicional (documentació d'altres tallers):**
-- [ ] `content/ca/tallers/reveladors-artesanals/privat/doc/index.md` — documentació reveladors artesanals
-- [ ] `content/ca/tallers/copies-beers-developer/privat/doc/index.md` — documentació Beers Developer
-- [ ] Restants tallers actius (un per un, seguint el template de `revelat-bn/privat/doc/`)
+
+Docs creats en format `content/[lang]/privat/[slug]-doc.md` (layout `private-doc`):
+- [x] `fonaments-iniciacio-puntual-doc` — CA/ES/EN ✅
+- [x] `caffenol-doc` — CA/ES/EN ✅
+- [x] `wineol-doc` — CA/ES/EN ✅
+- [x] `retrat-gran-format-doc` — CA/ES/EN ✅
+- [x] `iniciacio-revelat-doc` — CA/ES/EN ✅
+- [ ] `revelat-bn-doc` — CA ✅ (és a `content/ca/tallers/revelat-bn/privat/doc/index.md`, cal migrar a `/privat/` i crear ES/EN)
+- [ ] `reveladors-artesanals-doc` — CA parcial (draft:true), ES/EN pendents
+- [ ] `copies-beers-developer-doc` — pendent
+- [ ] `guinneol-doc` — CA ✅, ES/EN pendents
+- [ ] Resta de tallers actius
+
+**Nota:** els tallers de Caffenol i Wineol no tenen fitxa pública de taller creada encara:
+- [ ] `content/ca/tallers/caffenol/index.md` — pendent (wineol ja té el taller creat ✅)
 
 **Pendent addicional (logo C&F per tallers externs):**
 - [ ] Afegir suport `partner_logo` a `private-doc.html` (mostrar logo del soci si el frontmatter el té)
