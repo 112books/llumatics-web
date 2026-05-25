@@ -24,7 +24,10 @@
 <input type=hidden name=locale value=es>
 <label class=private-form__checkbox-label><input type=checkbox name=NEWSLETTER value=true class=private-form__checkbox>
 <span>Quiero recibir información puntual sobre nuevos talleres y actividades de Llumàtics.</span>
-</label><button type=submit class="btn btn--primary private-form__submit">
+</label><label class="private-form__checkbox-label private-form__checkbox-label--required"><input type=checkbox name=RGPD_CHECK value=true required class=private-form__checkbox>
+<span>He leído y acepto la <a href=/es/politica-privacitat/ target=_blank>política de privacidad</a>. Mis datos se usarán exclusivamente para enviarme la documentación del taller y, si he marcado la opción anterior, para recibir información de Llumàtics.</span>
+</label><input type=hidden name=RGPD id=pf-rgpd>
+<button type=submit class="btn btn--primary private-form__submit">
 Solicitar la documentación</button></form><div id=private-confirm-msg hidden class=private-gate__confirm>¡Perfecto! Te hemos enviado un email de confirmación. Revisa tu bandeja de entrada (y el correo no deseado, por si acaso).</div></div><p class=private-gate__footer>La documentación es personal e intransferible. El documento llevará tu nombre.</p></div></div></div><script>
 (function() {
   var form = document.getElementById('private-brevo-form');
@@ -42,6 +45,10 @@ Solicitar la documentación</button></form><div id=private-confirm-msg hidden cl
     
     var hiddenLocale = form.querySelector('[name="locale"]');
     if (hiddenLocale) hiddenLocale.value = lang;
+
+    
+    var rgpdHidden = document.getElementById('pf-rgpd');
+    if (rgpdHidden) rgpdHidden.value = 'true';
 
     try {
       localStorage.setItem('llum_doc', JSON.stringify({
