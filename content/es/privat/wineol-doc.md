@@ -11,11 +11,11 @@ robots: "noindex, nofollow"
 draft: false
 ---
 
-## Fórmula base (para 500 ml)
+## Wineol, fórmula base (para 500 ml)
 
 | Ingrediente | Cantidad |
 |---|---|
-| Vino tinto (barato, pero con taninos) | 500 ml |
+| Vino tinto (no hace falta que sea caro, pero con taninos. Evitad vinos de producción industrial con exceso de química) | 500 ml |
 | Carbonato sódico (Na₂CO₃ — washing soda) | 54 g |
 | Ácido ascórbico (vitamina C en polvo) | 16 g |
 | Sal común | 10 g |
@@ -26,7 +26,7 @@ El vino tinto sustituye completamente al agua: es a la vez el disolvente y el ag
 
 ## Un poco de historia
 
-El Wineol es la variación enológica del revelador artesanal. Donde el Caffenol usa café como fuente de compuestos reductores, el Wineol aprovecha los **taninos del vino tinto** —compuestos polifenólicos presentes en la piel de la uva y en la madera de las barricas— para reducir los haluros de plata de la emulsión a plata metálica.
+El Wineol es la variación enológica del revelador artesanal. Donde el Caffenol usa café —ácido cafeico— como fuente de compuestos reductores, el Wineol aprovecha los **taninos del vino tinto** —compuestos polifenólicos presentes en la piel de la uva y en la madera de las barricas— para reducir los haluros de plata de la emulsión a plata metálica.
 
 Como el Caffenol, surgió de la comunidad de fotógrafos experimentales que buscaban reveladores caseros, ecológicos y con resultados inesperados. El vino aporta una paleta tonal diferente y unos tonos cálidos muy marcados, especialmente en el escaneado en color.
 
@@ -97,6 +97,11 @@ Lava con **agua corriente durante 12 minutos**. Este lavado largo es importante 
 
 > A diferencia del Caffenol, el vino sustituye toda el agua: no se añade agua destilada adicional.
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/wineol/wineol02.jpg" alt="Wineol — proceso de revelado" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol03.jpg" alt="Wineol — resultado sobre negativo" style="width:50%; object-fit:cover">
+  </div>
+
 ## Notas sobre el vino
 
 No todo el vino funciona igual. Para obtener los mejores resultados:
@@ -121,3 +126,8 @@ Experimenta con el balance de blancos y la exposición del escáner para obtener
 - [Claves para el revelado químico (Xatakafoto)](https://www.xatakafoto.com/guias/claves-para-el-revelado-quimico-de-fotografias-i-la-habitacion-1)
 - [Filmentwicklung mit Rotwein — Niklas Rühl](http://www.niklas-ruehl.de/blog/filmEntwicklung-mit-rotwein) (en alemán)
 - [Cheetahtype Blog](http://cheetahtype.blog)
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/wineol/wineol04.jpg" alt="Wineol — resultado escaneado" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol05.jpg" alt="Wineol — resultado escaneado en color" style="width:50%; object-fit:cover">
+  </div>

@@ -44,7 +44,7 @@ date: 2026-05-25
 
 ## ⚠️ Important notice: this is a highly experimental workshop
 
-Wineol **is not a stable or predictable developer**. Unlike Caffenol — which gives consistent results with the same recipe — Wineol depends on many variables that are hard to control: the type of wine, its tannin content, sulphites, alcohol level, and even the batch and vintage. Two rolls developed with two "identical" wines can give radically different results.
+Wineol **is not a stable or predictable developer**. Unlike Caffenol — which gives consistent results with the same recipe — Wineol depends on many variables that are hard to control: the type of wine, its tannin content, sulphites, alcohol level, and even the batch and vintage. Two rolls developed with two "identical" wines can give radically different results. I have run experiments using exactly the same wine, temperature and chemical quantities, and the first time came out beautifully — the second time, a disaster.
 
 Come to the workshop ready to experiment and to accept that the outcome might be a magnificent negative or a barely-readable one. Both are equally valuable as learning experiences.
 
@@ -53,6 +53,11 @@ Come to the workshop ready to experiment and to accept that the outcome might be
 Wineol works on the same principle as Caffenol: the **tannins in red wine** act as reducing agents, converting the silver halides in the emulsion into visible metallic silver. Washing soda raises the pH and activates the reaction; vitamin C boosts it and reduces fog; salt acts as a mild stabiliser.
 
 The difference from Caffenol is that wine **completely replaces water** — it doesn't mix in, it takes over. This makes the concentration of tannins and alcohol highly variable, and the process less controllable but far more interesting.
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/tallers/wineol02.jpg" alt="Wineol — preparing the developer" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" alt="Wineol — result on negative" style="width:50%; object-fit:cover">
+  </div>
 
 ## The recipe
 

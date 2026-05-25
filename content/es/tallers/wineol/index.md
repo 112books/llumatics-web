@@ -44,7 +44,7 @@ date: 2026-05-25
 
 ## ⚠️ Aviso previo: este es un taller muy experimental
 
-El Wineol **no es un revelador estable ni predecible**. A diferencia del Caffenol —que con la misma receta da resultados consistentes— el Wineol depende de muchas variables difíciles de controlar: el tipo de vino, su contenido en taninos, los sulfitos, el grado alcohólico, incluso el lote y la añada. Dos carretes revelados con dos vinos "iguales" pueden dar resultados radicalmente diferentes.
+El Wineol **no es un revelador estable ni predecible**. A diferencia del Caffenol —que con la misma receta da resultados consistentes— el Wineol depende de muchas variables difíciles de controlar: el tipo de vino, su contenido en taninos, los sulfitos, el grado alcohólico, incluso el lote y la añada. Dos carretes revelados con dos vinos "iguales" pueden dar resultados radicalmente diferentes. He hecho experimentos usando exactamente el mismo vino, temperatura y cantidades de reactivos, y la primera vez salió muy bien y la segunda, fatal.
 
 Ven al taller dispuesto a experimentar y a aceptar que el resultado puede ser un negativo magnífico o un negativo apenas legible. Ambos casos son igualmente valiosos como aprendizaje.
 
@@ -53,6 +53,11 @@ Ven al taller dispuesto a experimentar y a aceptar que el resultado puede ser un
 El Wineol funciona por el mismo principio que el Caffenol: los **taninos del vino tinto** actúan como agentes reductores, convirtiendo los haluros de plata de la emulsión en plata metálica visible. El carbonato de sosa eleva el pH y activa la reacción; la vitamina C la potencia y reduce el velo; la sal actúa como estabilizador suave.
 
 La diferencia respecto al Caffenol es que el vino **sustituye completamente al agua** —no se mezcla, reemplaza. Esto hace que la concentración de taninos y de alcohol sea muy variable, y que el proceso sea menos controlable pero mucho más interesante.
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/tallers/wineol02.jpg" alt="Wineol — preparación del revelador" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" alt="Wineol — resultado sobre negativo" style="width:50%; object-fit:cover">
+  </div>
 
 ## La receta
 

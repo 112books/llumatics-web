@@ -11,11 +11,11 @@ robots: "noindex, nofollow"
 draft: false
 ---
 
-## Base formula (for 500 ml)
+## Wineol, base formula (for 500 ml)
 
 | Ingredient | Quantity |
 |---|---|
-| Red wine (cheap, but with tannins) | 500 ml |
+| Red wine (doesn't need to be expensive, but must have tannins. Avoid mass-produced wines with heavy chemical treatment) | 500 ml |
 | Sodium carbonate (Na₂CO₃ — washing soda) | 54 g |
 | Ascorbic acid (pure vitamin C powder) | 16 g |
 | Common salt | 10 g |
@@ -26,7 +26,7 @@ Red wine completely replaces water: it is both the solvent and the main developi
 
 ## A brief history
 
-Wineol is the oenological variation of the homemade developer. Where Caffenol uses coffee as a source of reducing compounds, Wineol draws on the **tannins in red wine** — polyphenolic compounds found in grape skins and oak barrels — to reduce the silver halides in the emulsion to metallic silver.
+Wineol is the oenological variation of the homemade developer. Where Caffenol uses coffee — caffeic acid — as a source of reducing compounds, Wineol draws on the **tannins in red wine** — polyphenolic compounds found in grape skins and oak barrels — to reduce the silver halides in the emulsion to metallic silver.
 
 Like Caffenol, it emerged from the community of experimental photographers seeking homemade, eco-friendly developers with unexpected results. Wine delivers a different tonal palette and very pronounced warm tones, especially when scanned in colour.
 
@@ -97,6 +97,11 @@ Wash with **running water for 12 minutes**. This longer wash is important to com
 
 > Unlike Caffenol, the wine replaces all the water: no additional distilled water is added.
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/wineol/wineol02.jpg" alt="Wineol — development process" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol03.jpg" alt="Wineol — result on negative" style="width:50%; object-fit:cover">
+  </div>
+
 ## Notes on the wine
 
 Not all wine works equally well. For best results:
@@ -121,3 +126,8 @@ Experiment with white balance and scanner exposure to obtain radically different
 - [Claves para el revelado químico (Xatakafoto)](https://www.xatakafoto.com/guias/claves-para-el-revelado-quimico-de-fotografias-i-la-habitacion-1) (in Spanish)
 - [Filmentwicklung mit Rotwein — Niklas Rühl](http://www.niklas-ruehl.de/blog/filmEntwicklung-mit-rotwein) (in German)
 - [Cheetahtype Blog](http://cheetahtype.blog)
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/wineol/wineol04.jpg" alt="Wineol — scanned result" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol05.jpg" alt="Wineol — scanned in colour" style="width:50%; object-fit:cover">
+  </div>
