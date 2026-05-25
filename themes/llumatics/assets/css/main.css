@@ -3552,6 +3552,7 @@ a.recorregut__tematic-link:hover {
   /* ── Documentació alumnes (private-doc) ── */
   .no-print, .doc-print-bar, #js-back-to-top { display: none !important; }
   .site-header, .site-footer { display: none !important; }
+  .page-main--offset { margin-left: 0 !important; }
 
   .doc-header {
     display: block !important;
@@ -3562,8 +3563,14 @@ a.recorregut__tematic-link:hover {
   }
 
   .doc-hero-image {
-    max-height: 280pt;
+    max-height: none !important;
+    overflow: visible !important;
     page-break-after: avoid;
+  }
+
+  .doc-hero-image img {
+    height: auto !important;
+    object-fit: unset !important;
   }
 
   .doc-body img {
