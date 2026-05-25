@@ -35,6 +35,8 @@ Si se utiliza en la cámara una película especialmente tratada para diapositiva
 
 ## Formatos
 
+  ![Formatos de película fotográfica](/images/docs/fonaments-iniciacio-puntual/01-film-formats.jpg)
+
 Existen o han existido muchos y diferentes formatos de película fotográfica. El formato más popular de película química es la **película de 35mm** (o 135), utilizada en la mayoría de cámaras réflex y compactas. Después vendría el **formato medio** (120/220), los diferentes tamaños de fotografía instantánea (Polaroid y Fuji) y los **grandes formatos** 4×5", 5×7" y 8×10" principalmente.
 
 ## Tipos de película
@@ -75,6 +77,8 @@ Uno de los elementos más importantes para realizar una fotografía es la cámar
 
 ## Funcionamiento de la cámara
 
+  ![Esquema de funcionamiento de la cámara fotográfica](/images/docs/fonaments-iniciacio-puntual/02-camera.jpg)
+
 Cuando apuntamos y hacemos un simple clic, en el interior de la cámara se desencadena un proceso que más tarde nos permitirá obtener la fotografía.
 
 Primero se abre el obturador permitiendo a la luz pasar condicionada por la apertura que controla el diafragma. La luz pasa solo una fracción de segundo a través del obturador antes de que este se cierre y, después de recorrer toda la cámara, se imprime sobre la película. Esta película es muy sensible a la luz y solo es necesaria una pequeña parte de la energía fotoeléctrica para lograr una fotografía.
@@ -82,6 +86,8 @@ Primero se abre el obturador permitiendo a la luz pasar condicionada por la aper
 Para obtener una fotografía equilibrada a nivel lumínico es necesario dejar pasar la cantidad justa de luz.
 
 ## La exposición
+
+  ![Los tres factores de la exposición](/images/docs/fonaments-iniciacio-puntual/03-exposicio.jpg)
 
 La exposición depende de dos factores: la **apertura de diafragma** y la cantidad de tiempo que dejamos pasar la luz, llamada **velocidad de obturación**.
 
@@ -107,6 +113,8 @@ La mayoría de cámaras incorporan un fotómetro interno. Si la cámara no dispo
 
 ## Distancia focal
 
+![Relación entre distancia focal y ángulo de visión](/images/docs/fonaments-iniciacio-puntual/04-distancia-focal.jpeg)
+
 La distancia focal es la distancia entre el centro óptico de la lente y el punto focal (foco), que es donde se concentran los rayos de luz.
 
 En un objetivo de distancia focal variable (zoom) conseguimos un mayor o menor acercamiento al motivo variando la distancia focal. Se considera que un objetivo de **50mm en paso universal** equivale aproximadamente a la distancia focal del ojo humano.
@@ -121,15 +129,29 @@ La distancia focal no afecta únicamente al acercamiento respecto al motivo: tam
 | 85–105 mm | Teleobjetivo corto | Retrato |
 | 135–300 mm | Teleobjetivo | Deporte, naturaleza, reportaje |
 
+## El triángulo de la exposición fotográfica
+
+![El triángulo de la exposición fotográfica](/images/docs/fonaments-iniciacio-puntual/triangle-es.png)
+
+No existe una fórmula mágica para obtener una exposición perfecta. Cuando utilizamos funciones automáticas, la cámara mide la luz que entra y se esfuerza por encontrar un equilibrio razonable en el que se pueda ver bien la imagen. Los modelos con electrónica también pueden tener programas o funciones en los que podemos establecer un diafragma o velocidad y la cámara calcula el factor contrario de forma automática, pero nunca será perfecto, ya que la perfección es muy subjetiva.
+
+Podéis jugar con herramientas como https://www.camerasim.com/original-camerasim para ver y entender el triángulo de exposición fotográfica. Dependiendo del tipo de fotografía, el carácter que se le quiera dar o el gusto del fotógrafo, priorizaremos una velocidad o una apertura concretas. Esa es la gracia: podemos querer una imagen movida que denote movimiento (usando velocidades muy lentas) o jugar con la profundidad de campo para poner el acento en un elemento concreto de la fotografía. La combinación de velocidad, apertura e ISO nos dará más o menos matices en la fotografía obtenida, evidentemente. Hay que jugar, experimentar, observar y, sobre todo, pasárselo bien.
+
 ## Perspectiva
+
+![Efecto de la distancia focal sobre la perspectiva](/images/docs/fonaments-iniciacio-puntual/05-perspectiva.jpg)
 
 La distancia focal modifica el campo de visión. Al aumentarla nos acercamos; al reducirla nos alejamos. Esto modifica la proporción que los objetos ocupan en la foto. Del mismo modo, al acercarnos con el zoom a un objeto también nos estamos acercando al fondo: **la perspectiva comprime o expande** la relación entre los planos de la imagen.
 
 ## Profundidad de campo
 
+![Efecto de la apertura sobre la profundidad de campo](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura.jpeg)
+
 La profundidad de campo es la distancia que hay por delante y por detrás del punto enfocado que aparece con nitidez en una foto.
 
 Tres elementos la hacen variar:
+
+![Factores que afectan la profundidad de campo](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura-02.jpeg)
 
 - **Apertura del diafragma** — a mayor apertura (f/ menor), menor profundidad de campo
 - **Distancia focal** — a mayor focal (zoom), menor profundidad de campo

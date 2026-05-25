@@ -35,6 +35,8 @@ If the camera is loaded with film specially designed for slides (reversal film),
 
 ## Formats
 
+  ![Photographic film formats](/images/docs/fonaments-iniciacio-puntual/01-film-formats.jpg)
+
 Many different film formats have existed over the years. The most popular chemical film format is **35mm film** (or 135), used in the vast majority of SLR and compact cameras. Next comes **medium format** (120/220), the various sizes of instant photography (Polaroid and Fuji), and **large format** — primarily 4×5", 5×7" and 8×10".
 
 ## Film types
@@ -75,6 +77,8 @@ The camera is one of the most important tools for making a photograph. There are
 
 ## How the camera works
 
+  ![How a camera works](/images/docs/fonaments-iniciacio-puntual/02-camera.jpg)
+
 When we aim and press the shutter, a process is triggered inside the camera that will eventually give us the photograph.
 
 First, the shutter opens, allowing light to pass through the aperture controlled by the diaphragm. The light passes through the shutter for just a fraction of a second, then travels the length of the camera and is recorded on the film. Film is highly sensitive to light — only a small amount of photonic energy is needed to make a photograph.
@@ -82,6 +86,8 @@ First, the shutter opens, allowing light to pass through the aperture controlled
 To obtain a properly exposed photograph, exactly the right amount of light must be allowed in.
 
 ## Exposure
+
+  ![The three factors of exposure](/images/docs/fonaments-iniciacio-puntual/03-exposicio.jpg)
 
 Exposure depends on two factors: the **aperture** and the amount of time we allow light through, called the **shutter speed**.
 
@@ -107,6 +113,8 @@ Most cameras have a built-in light meter. If the camera lacks one, we can use an
 
 ## Focal length
 
+![Focal length and angle of view](/images/docs/fonaments-iniciacio-puntual/04-distancia-focal.jpeg)
+
 Focal length is the distance between the optical centre of the lens and the focal point, which is where the light rays converge.
 
 With a zoom lens (variable focal length), changing the focal length brings the subject closer or pushes it further away. A **50mm lens** on a full-frame (standard) format is considered roughly equivalent to the focal length of the human eye.
@@ -121,15 +129,29 @@ Focal length does not only affect how close the subject appears — it also **ch
 | 85–105 mm | Short telephoto | Portrait |
 | 135–300 mm | Telephoto | Sport, wildlife, reportage |
 
+## The exposure triangle
+
+![The exposure triangle](/images/docs/fonaments-iniciacio-puntual/triangle-en.png)
+
+There is no magic formula for a perfect exposure. When we use automatic modes, the camera measures the incoming light and tries to find a reasonable balance where the image looks good. Electronic cameras can also offer programme modes or semi-automatic functions where we set either the aperture or the shutter speed and the camera calculates the other factor automatically — but it will never be perfect, since perfection is very subjective.
+
+You can experiment with tools like https://www.camerasim.com/original-camerasim to see and understand the exposure triangle in action. Depending on the type of photography, the mood you want to convey, or the photographer's taste, you will prioritise a specific shutter speed or aperture. That's the beauty of it: you might want a blurred image to suggest movement (using very slow shutter speeds), or you might play with depth of field to draw attention to one particular element in the photograph. The combination of shutter speed, aperture and ISO will give you more or fewer tonal nuances in the final image, of course. The key is to play, experiment, observe and, above all, enjoy the process.
+
 ## Perspective
+
+![The effect of focal length on perspective](/images/docs/fonaments-iniciacio-puntual/05-perspectiva.jpg)
 
 Focal length changes the field of view. Increasing it brings subjects closer; reducing it pushes them further away. This alters the proportions objects occupy in the frame. Similarly, zooming in on a subject also brings the background closer: **perspective compresses or expands** the spatial relationship between planes in the image.
 
 ## Depth of field
 
+![Aperture and depth of field](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura.jpeg)
+
 Depth of field is the distance in front of and behind the focused point that appears sharp in a photograph.
 
 Three factors affect it:
+
+![Factors affecting depth of field](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura-02.jpeg)
 
 - **Aperture** — a wider aperture (smaller f-number) gives shallower depth of field
 - **Focal length** — a longer focal length (more zoom) gives shallower depth of field

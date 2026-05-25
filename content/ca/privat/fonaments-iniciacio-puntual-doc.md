@@ -35,6 +35,8 @@ Si s'utilitza a la càmera una pel·lícula especialment tractada per a diaposit
 
 ## Formats
 
+  ![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/01-film-formats.jpg)
+
 Existeixen o han existit molts i diferents formats de pel·lícula fotogràfica. El format més popular de pel·lícula química és la **pel·lícula de 35mm** (o 135), utilitzada a la majoria de càmeres reflex i compactes. A continuació vindria el **format mig** (120/220), els diferents mides de fotografia instantània (Polaroid i Fuji) i els **grans formats** 4×5", 5×7" i 8×10" principalment.
 
 ## Tipus de pel·lícula
@@ -75,6 +77,8 @@ Un dels elements més importants per realitzar una fotografia és la càmera fot
 
 ## Funcionament de la càmera
 
+  ![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/02-camera.jpg)
+
 Quan apuntem i fem un simple clic, a l'interior de la càmera es desencadena un procés que més tard ens permetrà obtenir la fotografia.
 
 Primer s'obre l'obturador permetent a la llum passar condicionada per l'obertura que controla el diafragma. La llum passa només una fracció de segon a través de l'obturador abans que aquest es tanqui i, després de recórrer tota la càmera, s'imprimeix sobre la pel·lícula. Aquesta pel·lícula és molt sensible a la llum i només cal una petita part de l'energia fotoelèctrica per aconseguir una fotografia.
@@ -82,6 +86,8 @@ Primer s'obre l'obturador permetent a la llum passar condicionada per l'obertura
 Per obtenir una fotografia equilibrada a nivell lluminós cal deixar passar la quantitat justa de llum.
 
 ## L'exposició
+
+  ![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/03-exposicio.jpg)
 
 L'exposició depèn de dos factors: l'**obertura de diafragma** i la quantitat de temps que deixem passar la llum, anomenada **velocitat d'obturador**.
 
@@ -107,6 +113,8 @@ La majoria de càmeres incorporen un fotòmetre intern. Si la càmera no en disp
 
 ## Distància focal
 
+![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/04-distancia-focal.jpeg)
+
 La distància focal és la distància entre el centre òptic de la lent i el punt focal (focus), que és on es concentren els raigs de llum.
 
 En un objectiu de distància focal variable (zoom) aconseguim un major o menor acostament al motiu variant la distància focal. Es considera que un objectiu de **50mm en pas universal** equival aproximadament a la distància focal de l'ull humà.
@@ -121,15 +129,30 @@ La distància focal no afecta únicament l'acostament respecte al motiu: també 
 | 85–105 mm | Teleobjectiu curt | Retrat |
 | 135–300 mm | Teleobjectiu | Esport, natura, reportatge |
 
+## El triangle d'exposició fotogràfica
+
+![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/triangle-ca.png)
+
+No hi ha una fórmula màgica per obtenir una exposició perfecta. Quan utilitzem funcions automàtiques es mesura la llum que entra i la càmera (de rodet o digital) s'esforça per trobar un equilibri raonable on es pugui veure bé la imatge. Els models amb electrònica també poden tenir programes o funcions en els que podem establir un diafragma o velocitat i la càmera calcula el factor contrari de forma automàtica, però mai serà perfecte, ja que la perfecció és molt subjectiva.
+
+Podeu jugar amb eines com https://www.camerasim.com/original-camerasim per veure i entendre el triangle d'exposició fotogràfica. Depenent del tipus de fotografia, el caràcter que se li vol donar o el gust del fotògraf, prioritzarem una velocitat o una obertura concretes. Aquesta és la gràcia: podem voler una imatge moguda que denoti moviment (usant velocitats molt lentes) o jugar amb la profunditat de camp per posar l'accent en un element concret de la fotografia. La combinació de velocitat, obertura i ISO ens donarà més o menys matisos a la fotografia obtinguda, evidentment. Cal jugar, experimentar, observar i, sobretot, passar-ho bé.
+
+
 ## Perspectiva
+
+![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/05-perspectiva.jpg)
 
 La distància focal modifica el camp de visió. En augmentar-la, ens acostem; en reduir-la, ens allunyem. Això modifica la proporció que els objectes ocupen a la foto. De la mateixa manera, en acostar-nos amb el zoom a un objecte, també ens estem acostant al fons: **la perspectiva comprimeix o expandeix** la relació entre els plans de la imatge.
 
 ## Profunditat de camp
 
+![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura.jpeg)
+
 La profunditat de camp és la distància que hi ha per davant i per darrere del punt enfocat que apareix amb nitidesa en una foto.
 
 Tres elements la fan variar:
+
+![Descripció de la imatge](/images/docs/fonaments-iniciacio-puntual/06-profundidad-de-campo_apertura-02.jpeg)
 
 - **Obertura de diafragma** — a major obertura (f/ menor), menor profunditat de camp
 - **Distància focal** — a major focal (zoom), menor profunditat de camp

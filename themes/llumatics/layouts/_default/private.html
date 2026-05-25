@@ -61,6 +61,13 @@
               <span>{{ i18n "private_newsletter_label" }}</span>
             </label>
 
+            {{/* GDPR — acceptació obligatòria */}}
+            <label class="private-form__checkbox-label private-form__checkbox-label--required">
+              <input type="checkbox" name="RGPD_CHECK" value="true" required class="private-form__checkbox">
+              <span>{{ i18n "private_gdpr_label" | safeHTML }}</span>
+            </label>
+            <input type="hidden" name="RGPD" id="pf-rgpd" value="">
+
             <button type="submit" class="btn btn--primary private-form__submit">
               {{ i18n "private_submit_cta" }}
             </button>
@@ -101,6 +108,10 @@
     // Sincronitza locale hidden amb el select d'idioma (IDIOMA → Brevo attr, locale → idioma email opt-in)
     var hiddenLocale = form.querySelector('[name="locale"]');
     if (hiddenLocale) hiddenLocale.value = lang;
+
+    // Marca RGPD acceptat (el checkbox és required, si arriba aquí ja s'ha acceptat)
+    var rgpdHidden = document.getElementById('pf-rgpd');
+    if (rgpdHidden) rgpdHidden.value = 'true';
 
     try {
       localStorage.setItem('llum_doc', JSON.stringify({
