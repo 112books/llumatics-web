@@ -17,7 +17,7 @@ La fotografia en gran format és la que es realitza amb càmeres específiques q
 
 Un dels motius principals per usar gran format és la **qualitat d'imatge aclaparadora**: un negatiu de 4×5" té vint vegades més superfície d'emulsió que un negatiu de 35mm. Això es tradueix en un detall extraordinari, una escala de tons molt rica i la possibilitat de fer ampliacions enormes sense pèrdua visible de qualitat.
 
-La segona característica diferencial és la **flexibilitat dels moviments de fol·le**: els estàndards anterior (on va l'objectiu) i posterior (on va la pel·lícula o el cristall esmerilat) es poden moure de forma independent en tots els eixos. Això permet controlar la perspectiva i el plànol de focus d'una manera impossible amb qualsevol altra càmera.
+La segona característica diferencial és la **flexibilitat dels moviments de la manxa extensible** (fuelle en castellà): els estàndards anterior (on va l'objectiu) i posterior (on va la pel·lícula o el cristall esmerilat) es poden moure de forma independent en tots els eixos. Això permet controlar la perspectiva i el plànol de focus d'una manera impossible amb qualsevol altra càmera.
 
 ## Formats habituals
 
@@ -30,7 +30,7 @@ La segona característica diferencial és la **flexibilitat dels moviments de fo
 
 ## Els moviments de la càmera
 
-Els moviments de fol·le permeten modificar la relació entre el plànol de l'objectiu i el plànol de l'emulsió. Són la raó per la qual el gran format segueix sent irremplaçable en fotografia d'arquitectura, producte i estudi.
+Els moviments de la manxa extensible permeten modificar la relació entre el plànol de l'objectiu i el plànol de l'emulsió. Són la raó per la qual el gran format segueix sent irremplaçable en fotografia d'arquitectura, producte i estudi.
 
 | Moviment | Efecte |
 |---------|--------|
@@ -52,7 +52,7 @@ Corregeix perspectiva o amplia la profunditat de camp amb els moviments disponib
 
 ### 4. Mesurar la llum i calcular l'exposició
 Utilitza un fotòmetre d'incident (el més recomanat per a gran format). Ten en compte:
-- El **factor de fol·le**: quan l'objectiu s'estén molt per enfocar prop, el fol·le talla llum i cal corregir l'exposició.
+- El **factor de manxa**: quan l'objectiu s'estén molt per enfocar prop, la manxa extensible talla llum i cal corregir l'exposició.
 - La **reciprocitat**: per a exposicions llargues (>1s), el paper o la pel·lícula perd sensibilitat i cal incrementar el temps.
 
 ### 5. Tancar el diafragma i armar l'obturador
