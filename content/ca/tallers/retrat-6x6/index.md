@@ -3,7 +3,7 @@ title: "Retrat en mig format 6×6"
 subtitle: "Quan necessites molt més que el pas universal"
 lead: "Fotografiar persones en mig format és una decisió. El visor de cintura, el format quadrat i la limitació dels 12 fotogrames canvien la relació entre fotògraf i retratat. Aquí practiquem exactament això."
 description: "Taller de retrat analògic en mig format 6×6 a Barcelona. Càmera de cintura, composició quadrada, relació amb el model i revelat inclòs."
-image: "/images/tallers/retrat-6x6.jpg"
+image: "/images/tallers/retrat-analogic-6x6.jpg"
 
 # Classificació
 tipus: "taller"

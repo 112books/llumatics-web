@@ -3,7 +3,7 @@ title: "Fotografia de carrer"
 subtitle: "La mirada, el temps i la gent. Fotografiar allò que passa."
 lead: "Un taller per fotografiar al carrer amb consciència: com mirar, com apropar-se, com decidir quan prémer. Analògic, lent i honest."
 description: "Taller de fotografia de carrer analògica a Barcelona. Tècnica, mirada i ètica de la imatge documental. Grups de màxim 4 persones."
-image: "/images/tallers/fotografia-de-carrer.jpg"
+image: "/images/tallers/fotografia-carrer.jpg"
 
 # Classificació
 tipus: "taller"

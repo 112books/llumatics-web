@@ -3,7 +3,7 @@ title: "Revelado + positivado en un día"
 subtitle: "Del carrete al papel en una sola jornada"
 lead: "Un día entero en el laboratorio: por la mañana revelas tu propio carrete, por la tarde haces las copias en papel. Del negativo expuesto a la copia acabada, sin salir de Llumàtics."
 description: "Taller combinado de revelado de película y positivado en papel en un solo día. Mañana + tarde en el laboratorio. Barcelona."
-image: "/images/tallers/revelat-i-positivat.jpg"
+image: "/images/tallers/revelat-positiva-1dia.jpg"
 
 # Clasificación
 tipus: "taller"

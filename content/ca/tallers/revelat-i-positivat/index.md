@@ -3,7 +3,7 @@ title: "Revelat + positivat en un dia"
 subtitle: "Del carret al paper en una sola jornada"
 lead: "Un dia sencer al laboratori: al matí reveles el teu propi carret, a la tarda fas les còpies en paper. Del negatiu exposat a la còpia acabada, sense sortir de Llumàtics."
 description: "Taller combinat de revelat de pel·lícula i positivat en paper en un sol dia. Matí + tarda al laboratori. Barcelona."
-image: "/images/tallers/revelat-i-positivat.jpg"
+image: "/images/tallers/revelat-positiva-1dia.jpg"
 
 # Classificació
 tipus: "taller"
