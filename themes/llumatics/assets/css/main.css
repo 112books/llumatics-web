@@ -1341,8 +1341,7 @@ button, input, select, textarea {
 
 .doc-hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -3553,6 +3552,8 @@ a.recorregut__tematic-link:hover {
   .no-print, .doc-print-bar, #js-back-to-top { display: none !important; }
   .site-header, .site-footer { display: none !important; }
   .page-main--offset { margin-left: 0 !important; }
+  /* L'element "accés restringit" té display:flex inline que guanya sobre [hidden] */
+  #js-doc-no-access { display: none !important; }
 
   .doc-header {
     display: block !important;
@@ -3580,15 +3581,12 @@ a.recorregut__tematic-link:hover {
 
   .doc-print-footer {
     display: block !important;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     font-size: 8pt;
     color: #999;
     text-align: center;
     padding: 0.3cm 2cm;
     border-top: 0.5pt solid #eee;
+    margin-top: var(--space-8);
   }
 
   @page { size: A4 portrait; margin: 0; }
@@ -3602,9 +3600,10 @@ a.recorregut__tematic-link:hover {
     padding-right: 2cm !important;
   }
 
-  /* Certificat: A5 (148×210mm) centrat en A4 (210×297mm) */
+  /* Certificat: centrat en A4 */
   .certificate {
     page-break-before: always;
+    page-break-after: avoid;
     min-height: auto;
     padding: 0;
     margin: 0;
@@ -3615,8 +3614,8 @@ a.recorregut__tematic-link:hover {
 
   .certificate__inner {
     width: 148mm;
-    height: 210mm;
-    margin: 43mm auto;
+    min-height: 180mm;
+    margin: 30mm auto;
     padding: 14mm 13mm;
     background: #FDFBF7 !important;
     border: 0.75pt solid #C8A96E !important;
