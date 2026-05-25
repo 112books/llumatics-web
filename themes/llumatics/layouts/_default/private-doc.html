@@ -49,18 +49,23 @@
   {{/* Certificat formal */}}
   <div class="certificate">
     <div class="certificate__inner">
-      {{ $logo := .Site.Params.logo }}
-      {{ if $logo }}
-      <img src="{{ $logo }}" alt="Llumàtics" class="certificate__logo">
-      {{ end }}
+      <div class="certificate__brand">
+        {{ $logo := .Site.Params.logo }}
+        {{ if $logo }}<img src="{{ $logo }}" alt="" class="certificate__logo-img">{{ end }}
+        <span class="certificate__brand-name">Llumàtics</span>
+      </div>
+      <div class="certificate__rule"></div>
+      <p class="certificate__eyebrow">Certificat de participació</p>
       <p class="certificate__certifies">{{ i18n "certificate_certifies" }}</p>
       <p class="certificate__name" id="js-cert-name"></p>
       <p class="certificate__completed">{{ i18n "certificate_completed" }}</p>
       <p class="certificate__course">{{ $courseTitle }}</p>
       <p class="certificate__date" id="js-cert-date"></p>
       <p class="certificate__place">{{ i18n "certificate_place" }}</p>
-      <div class="certificate__line"></div>
-      <p class="certificate__issuer">{{ i18n "certificate_issuer" }}</p>
+      <div class="certificate__sig-area">
+        <div class="certificate__sig-line"></div>
+        <p class="certificate__issuer">{{ i18n "certificate_issuer" }}</p>
+      </div>
     </div>
   </div>
 
