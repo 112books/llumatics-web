@@ -3,7 +3,7 @@ title: "Wineol: revelat fotogràfic amb vi negre"
 layout: "private-doc"
 url: "/tallers/wineol/privat/doc/"
 course_ref: "wineol"
-image: "/images/tallers/wineol.jpg"
+image: "/images/docs/wineol/wineol01.jpg"
 noindex: true
 sitemap:
   disable: true
@@ -11,7 +11,7 @@ robots: "noindex, nofollow"
 draft: false
 ---
 
-## Fórmula base (per a 500 ml)
+## Wineol, fórmula base (per a 500 ml)
 
 | Ingredient | Quantitat |
 |---|---|
@@ -121,3 +121,9 @@ Experimenta amb el balanç de blancs i l'exposició de l'escàner per obtenir re
 - [Claves para el revelado químico (Xatakafoto)](https://www.xatakafoto.com/guias/claves-para-el-revelado-quimico-de-fotografias-i-la-habitacion-1)
 - [Filmentwicklung mit Rotwein — Niklas Rühl](http://www.niklas-ruehl.de/blog/filmEntwicklung-mit-rotwein) (en alemany)
 - [Cheetahtype Blog](http://cheetahtype.blog)
+
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-08.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-09.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+  </div>

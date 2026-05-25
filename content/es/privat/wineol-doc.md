@@ -3,7 +3,7 @@ title: "Wineol: revelado fotográfico con vino tinto"
 layout: "private-doc"
 url: "/es/tallers/wineol/privat/doc/"
 course_ref: "wineol"
-image: "/images/tallers/wineol.jpg"
+image: "/images/docs/wineol/wineol01.jpg"
 noindex: true
 sitemap:
   disable: true

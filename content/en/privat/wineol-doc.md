@@ -3,7 +3,7 @@ title: "Wineol: photographic development with red wine"
 layout: "private-doc"
 url: "/en/tallers/wineol/privat/doc/"
 course_ref: "wineol"
-image: "/images/tallers/wineol.jpg"
+image: "/images/docs/wineol/wineol01.jpg"
 noindex: true
 sitemap:
   disable: true
