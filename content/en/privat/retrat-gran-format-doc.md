@@ -101,6 +101,12 @@ If you are exposing photographic paper (as we do in this workshop), development 
 
 Once dry, the exposed and developed paper can be used to make a **contact print** in the enlarger: it is placed in direct contact with a fresh sheet of paper and exposed, producing a positive the same size as the negative.
 
+## Workshop results
+
+![Large-format portrait — result on photosensitive paper](/images/docs/retrat-gran-format/granformat01.jpg)
+
+![Large-format portrait — contact print](/images/docs/retrat-gran-format/granformat02.jpg)
+
 ## External resources
 
 - [La cámara de Gran Formato](https://camaragranformato.blogspot.com) — reference blog (Spanish)

@@ -3588,7 +3588,12 @@ a.recorregut__tematic-link:hover {
 
   /* El document (capçalera + cos) té marges explícits */
   .doc-header { padding: 0.6cm 2cm !important; }
-  .container, .container--narrow { padding-left: 2cm !important; padding-right: 2cm !important; }
+  .container, .container--narrow {
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 2cm !important;
+    padding-right: 2cm !important;
+  }
 
   /* Certificat: A5 (148×210mm) centrat en A4 (210×297mm) */
   .certificate {

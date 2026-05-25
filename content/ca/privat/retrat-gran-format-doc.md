@@ -101,6 +101,12 @@ Si s'exposa paper fotogràfic (com fem al taller), el revelat es fa en llum de s
 
 Un cop sec, el paper exposat i revelat es pot usar per fer una **còpia per contacte** a l'ampliadora: es posa en contacte directe amb un full de paper nou i s'exposa, obtenint un positiu de la mateixa mida que el negatiu.
 
+## Resultats del taller
+
+![Retrat en gran format — resultat sobre paper fotosensible](/images/docs/retrat-gran-format/granformat01.jpg)
+
+![Retrat en gran format — còpia per contacte](/images/docs/retrat-gran-format/granformat02.jpg)
+
 ## Recursos externs
 
 - [La càmera de Gran Format](https://camaragranformato.blogspot.com) — blog de referència

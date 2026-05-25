@@ -101,6 +101,12 @@ Si se expone papel fotográfico (como hacemos en el taller), el revelado se hace
 
 Una vez seco, el papel expuesto y revelado se puede usar para hacer una **copia por contacto** en la ampliadora: se pone en contacto directo con una hoja de papel nuevo y se expone, obteniendo un positivo del mismo tamaño que el negativo.
 
+## Resultados del taller
+
+![Retrato en gran formato — resultado sobre papel fotosensible](/images/docs/retrat-gran-format/granformat01.jpg)
+
+![Retrato en gran formato — copia por contacto](/images/docs/retrat-gran-format/granformat02.jpg)
+
 ## Recursos externos
 
 - [La cámara de Gran Formato](https://camaragranformato.blogspot.com) — blog de referencia
