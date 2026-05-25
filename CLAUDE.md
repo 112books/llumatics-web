@@ -593,8 +593,9 @@ Docs creats en format `content/[lang]/privat/[slug]-doc.md` (layout `private-doc
 - [ ] `guinneol-doc` — CA ✅, ES/EN pendents
 - [ ] Resta de tallers actius
 
-**Nota:** els tallers de Caffenol i Wineol no tenen fitxa pública de taller creada encara:
-- [ ] `content/ca/tallers/caffenol/index.md` — pendent (wineol ja té el taller creat ✅)
+**Nota:** tallers públics orgànics:
+- [x] `content/ca/tallers/wineol/index.md` — CA/ES/EN ✅
+- [x] `content/ca/tallers/caffenol/index.md` — CA/ES/EN ✅ (2026-05-25)
 
 **Pendent addicional (logo C&F per tallers externs):**
 - [ ] Afegir suport `partner_logo` a `private-doc.html` (mostrar logo del soci si el frontmatter el té)
