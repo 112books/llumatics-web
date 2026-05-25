@@ -17,7 +17,7 @@ La fotografía en gran formato es la que se realiza con cámaras específicas qu
 
 Uno de los principales motivos para usar gran formato es la **calidad de imagen aplastante**: un negativo de 4×5" tiene veinte veces más superficie de emulsión que un negativo de 35mm. Esto se traduce en un detalle extraordinario, una escala de tonos muy rica y la posibilidad de hacer ampliaciones enormes sin pérdida visible de calidad.
 
-La segunda característica diferencial es la **flexibilidad de los movimientos de fuelle**: los estándares anterior (donde va el objetivo) y posterior (donde va la película o el cristal esmerilado) se pueden mover de forma independiente en todos los ejes. Esto permite controlar la perspectiva y el plano de foco de una manera imposible con cualquier otra cámara.
+La segunda característica diferencial es la **flexibilidad de los movimientos del fuelle**: los estándares anterior (donde va el objetivo) y posterior (donde va la película o el cristal esmerilado) se pueden mover de forma independiente en todos los ejes. Esto permite controlar la perspectiva y el plano de foco de una manera imposible con cualquier otra cámara.
 
 ## Formatos habituales
 
@@ -30,7 +30,7 @@ La segunda característica diferencial es la **flexibilidad de los movimientos d
 
 ## Los movimientos de la cámara
 
-Los movimientos de fuelle permiten modificar la relación entre el plano del objetivo y el plano de la emulsión. Son la razón por la cual el gran formato sigue siendo irremplazable en fotografía de arquitectura, producto y estudio.
+Los movimientos del fuelle permiten modificar la relación entre el plano del objetivo y el plano de la emulsión. Son la razón por la cual el gran formato sigue siendo irremplazable en fotografía de arquitectura, producto y estudio. Permite modificar perspectivas y mucho más.
 
 | Movimiento | Efecto |
 |-----------|--------|
@@ -42,10 +42,10 @@ Los movimientos de fuelle permiten modificar la relación entre el plano del obj
 ## Procedimiento para disparar en gran formato
 
 ### 1. Montar la cámara en el trípode
-La cámara de gran formato es pesada y sensible. Un trípode sólido es imprescindible. Comprueba que la cabeza es adecuada para el peso.
+La cámara de gran formato es pesada y sensible. Un trípode sólido es imprescindible. Comprueba que la cabeza es adecuada para el peso; el fabricante debe indicarlo en el manual.
 
 ### 2. Componer y enfocar en el cristal esmerilado
-La imagen en el cristal es **invertida y boca abajo** — hay que acostumbrarse. Utiliza la tela negra para taparte la cabeza y el cristal para ver la imagen sin luz ambiental. Una vez compuesta la escena, enfoca con la lupa hasta que el punto de interés principal esté nítido.
+La imagen en el cristal se ve **invertida y boca abajo** — hay que acostumbrarse. Utiliza la tela negra para taparte la cabeza y el cristal para ver la imagen sin luz ambiental. Una vez compuesta la escena, enfoca con la lupa hasta que el punto de interés principal esté nítido. Al enfocar, recuerda abrir el diafragma al máximo para mayor precisión. Al disparar lo cerraremos según nos indique el fotómetro.
 
 ### 3. Aplicar movimientos (si es necesario)
 Corrige perspectiva o amplía la profundidad de campo con los movimientos disponibles. Comprueba que no haya viñeteado mirando las esquinas del cristal.
@@ -60,15 +60,15 @@ El objetivo de gran formato tiene el obturador integrado (Copal, Compur). Cierra
 
 ### 6. Cargar el chasis
 En oscuridad total o con bolsa de revelado:
-- Comprueba que el material fotosensible está en el lado correcto (el lado de la emulsión es mate; el de la base es brillante).
+- Comprueba que el material fotosensible está en el lado correcto (el lado de la emulsión es mate; el de la base es brillante). Si es papel, tendrás que guiarte por el tacto, pero si usamos película fotosensible suele tener alguna muesca o corte en el borde más estrecho. Si la colocamos de cara a nosotros con la muesca en la parte superior derecha, indica que la emulsión "nos mira" y podemos cargarla en el chasis sabiendo cuál es la cara sensible.
 - Introduce el chasis en la ranura posterior de la cámara.
-- Saca la lengüeta del chasis para exponer el material.
+- Retira con cuidado la lengüeta (tajadera) del chasis para exponer el material.
 
 ### 7. Disparar
-Sin vibrar la cámara, acciona el disparador de cable.
+Sin vibrar la cámara, acciona el disparador de cable. En el taller, nuestra vieja cámara no tiene obturador, así que de la forma más vintage, utilizamos el tapón del objetivo para permitir la entrada de luz y hacer la exposición. Trabajando con papel fotográfico la exposición es de 1 a 12 segundos, ¡y eso es lo que hace el taller más mágico!
 
 ### 8. Proteger el chasis
-Cierra la lengüeta inmediatamente. Gira el marcador a "expuesto" para no volver a usarlo por error.
+Vuelve a colocar la lengüeta del chasis inmediatamente. Ten en cuenta que normalmente la lengüeta tiene dos caras diferentes; una la podemos usar para indicar que el chasis está expuesto y así evitar (o provocar) dobles exposiciones.
 
 ## Material necesario
 
@@ -85,7 +85,7 @@ Cierra la lengüeta inmediatamente. Gira el marcador a "expuesto" para no volver
 - El lado de la emulsión es siempre el mate
 
 **Medida de luz**
-- Fotómetro de incidente (recomendado) o de reflexión
+- Fotómetro de incidente (recomendado) o de reflexión. Hoy en día también hay aplicaciones para teléfonos (Lightmeter, por ejemplo), pero si tenemos un fotómetro mejor que mejor. Estamos colaborando con LinuxBCN.com en una app para medir la luz, aunque aún hay que afinarla un poco: https://linuxbcn.com/ca/projectes/app-estenop/
 - Focos y reflectores (optativos para estudio)
 
 ## Revelado del papel fotográfico
@@ -94,10 +94,10 @@ Si se expone papel fotográfico (como hacemos en el taller), el revelado se hace
 
 | Paso | Producto | Tiempo |
 |------|---------|--------|
-| Revelado | Revelador de papel (1+9) | 2–3 min con agitación |
+| Revelado | Revelador de papel (1+9) | 1 min con agitación |
 | Stop | Baño de paro | 30 s |
-| Fijado | Fijador rápido | 2–3 min |
-| Lavado | Agua corriente | 5–10 min |
+| Fijado | Fijador rápido | 5 min |
+| Lavado | Agua corriente | 10 min |
 
 Una vez seco, el papel expuesto y revelado se puede usar para hacer una **copia por contacto** en la ampliadora: se pone en contacto directo con una hoja de papel nuevo y se expone, obteniendo un positivo del mismo tamaño que el negativo.
 
@@ -109,8 +109,8 @@ Una vez seco, el papel expuesto y revelado se puede usar para hacer una **copia 
 
 ## Recursos externos
 
-- [La cámara de Gran Formato](https://camaragranformato.blogspot.com) — blog de referencia
 - [Tipos de ópticas para GF (B&H)](https://www.bhphotovideo.com/FrameWork/Product_Resources/SourceBookProPhoto/Section03aLgFormatField.pdf) — guía de objetivos de campo
 - [Sun Pictures: Henry Fox Talbot](https://vimeo.com/170223335) — contexto histórico de los orígenes de la fotografía
 - [Portrait of Nature — Plati/Paladio](https://vimeo.com/91495217) — ejemplo de calidad de las impresiones en gran formato
 - [Galería de retratos con Horseman 8×10"](https://blog.pocallum.cat/category/camara/horsman-8x10%e2%80%b3/) — ejemplos del profesor con una cámara 8×10"
+- [La cámara de Gran Formato](https://camaragranformato.blogspot.com) — blog de referencia
