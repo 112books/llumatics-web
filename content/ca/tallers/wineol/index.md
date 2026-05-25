@@ -44,7 +44,7 @@ date: 2026-05-25
 
 ## ⚠️ Avís previ: aquest és un taller molt experimental
 
-El Wineol **no és un revelador estable ni previsible**. A diferència del Caffenol —que amb la mateixa recepta dona resultats consistents— el Wineol depèn de moltes variables difícils de controlar: el tipus de vi, el seu contingut en tanins, els sulfits, el grau alcohòlic, fins i tot el lot i l'anyada. Dos rodets revelats amb dos vins "iguals" poden donar resultats radicalment diferents.
+El Wineol **no és un revelador estable ni previsible**. A diferència del Caffenol —que amb la mateixa recepta dona resultats consistents— el Wineol depèn de moltes variables difícils de controlar: el tipus de vi, el seu contingut en tanins, els sulfits, el grau alcohòlic, fins i tot el lot i l'anyada. Dos rodets revelats amb dos vins "iguals" poden donar resultats radicalment diferents. Fins i tot he fet experiments usant exactment el mateix vi, temperatura, quantitts de reactius i una vegada molt be i la segona fatal.
 
 Ve al taller disposat a experimentar i a acceptar que el resultat pot ser un negatiu magnífic o un negatiu just-just-llegible. Ambdós casos son igualment valuosos com a aprenentatge.
 
@@ -53,6 +53,11 @@ Ve al taller disposat a experimentar i a acceptar que el resultat pot ser un neg
 El Wineol funciona pel mateix principi que el Caffenol: els **tanins del vi negre** actuen com a agents reductors, convertint els halurs de plata de l'emulsió en plata metàl·lica visible. El carbonat de sosa eleva el pH i activa la reacció; la vitamina C la potencia i redueix el vel; la sal actua com a estabilitzador suau.
 
 La diferència respecte al Caffenol és que el vi **substitueix completament l'aigua** —no es barreja, reemplaça. Això fa que la concentració de tanins i d'alcohol sigui molt variable, i que el procés sigui menys controlable però molt més interessant.
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/tallers/wineol02.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+  </div>
 
 ## La recepta
 

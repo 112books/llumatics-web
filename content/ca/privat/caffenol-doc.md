@@ -3,7 +3,7 @@ title: "Caffenol: revelat fotogràfic alternatiu"
 layout: "private-doc"
 url: "/tallers/caffenol/privat/doc/"
 course_ref: "caffenol"
-image: "/images/tallers/caffenol.jpg"
+image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 noindex: true
 sitemap:
   disable: true
@@ -20,7 +20,11 @@ draft: false
 | Àcid ascòrbic (vitamina C en pols) | 1,8 g |
 | Aigua destil·lada fins a completar | 500 ml |
 
+<br>
+
 Aquesta mescla ha demostrat ser efectiva per al revelat de pel·lícula en blanc i negre estàndard durant uns **15 minuts**, oferint un bon equilibri entre densitat, detall i gra.
+
+![Descripció de la imatge](/images/docs/caffenol/caffenol-01.jpeg)
 
 ## Un poc d'història
 
@@ -48,6 +52,8 @@ Aquesta tècnica connecta amb la filosofia d'experimentació i autoaprenentatge 
 - No és òptim per a tots els tipus de pel·lícula; algunes requereixen ajustos o proves prèvies.
 
 En les nostres proves hem fet servir la popular **Fomapan** en les versions ISO 100 i ISO 400.
+
+![Descripció de la imatge](/images/docs/caffenol/caffenol-02.jpeg)
 
 ## Revelat pas a pas
 
@@ -122,6 +128,11 @@ O, si volem continuar experimentant, podem jugar amb l'escàner i les seves poss
 
 ### Escaneig: blanc i negre vs. color
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-05a.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05b.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+  </div>
+
 Per continuar experimentant necessitarem un **escàner amb mòdul per a negatius**; un escàner pla convencional no serveix. Al mercat n'hi ha moltes opcions i de moltes qualitats.
 
 Tots permeten triar el tipus de negatiu: positiu (diapositiva) o negatiu, i blanc i negre o color. Si volem una imatge estàndard en blanc i negre, seleccionarem "Blanc i negre". Però et suggerim provar l'opció "**Color**": els resultats són espectaculars.
@@ -130,6 +141,15 @@ Usant l'opció de color, i depenent del balanç de blancs o de l'ajust d'exposic
 
 ### Per què apareixen aquests tons càlids?
 
+![Descripció de la imatge](/images/docs/caffenol/caffenol-06.jpg)
+
 Hi ha diverses teories, però la més plausible és que el procés amb Caffenol deixa diminutes traces de matèria orgànica (tanins del cafè i àcid ascòrbic) a l'emulsió de la pel·lícula. En escanejar, aquests compostos absorbeixen part de la llum blava i verdosa de l'escàner i reflecteixen més la zona vermella, generant aquest to càlid tan característic.
 
 Sigui com sigui, és un efecte difícil de controlar i depèn molt dels ajustos de l'escàner: pot ser subtil o absolutament descaradament intens. En qualsevol cas, els resultats no deixen indiferent.
+
+## Més resultats
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-08.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-09.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+  </div>

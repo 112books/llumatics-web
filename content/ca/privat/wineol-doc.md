@@ -15,7 +15,7 @@ draft: false
 
 | Ingredient | Quantitat |
 |---|---|
-| Vi negre (barat, però amb tanins) | 500 ml |
+| Vi negre (no cal que sigui car, però amb tanins. Eviteu vins fets amb química) | 500 ml |
 | Carbonat sòdic (Na₂CO₃ — washing soda) | 54 g |
 | Àcid ascòrbic (vitamina C en pols) | 16 g |
 | Sal comuna | 10 g |
@@ -26,7 +26,7 @@ El vi negre substitueix completament l'aigua: és alhora el solvent i l'agent re
 
 ## Un poc d'història
 
-El Wineol és la variació enològica del revelador artesanal. On el Caffenol fa servir cafè com a font de compostos reductors, el Wineol aprofita els **tanins del vi negre** —compostos polifenòlics presents a la pell del raïm i a la fusta de les bótes— per reduir els halurs de plata de l'emulsió a plata metàl·lica.
+El Wineol és la variació enològica del revelador artesanal. On el Caffenol fa servir cafè —àcid cafèlic— com a font de compostos reductors, el Wineol aprofita els **tanins del vi negre** —compostos polifenòlics presents a la pell del raïm i a la fusta de les bótes— per reduir els halurs de plata de l'emulsió a plata metàl·lica.
 
 Com el Caffenol, va sorgir de la comunitat de fotògrafs experimentals que buscaven reveladors casolans, ecològics i amb resultats inesperats. El vi aporta una paleta tonal diferent i uns tons càlids molt marcats, especialment en l'escaneig en color.
 
@@ -97,6 +97,11 @@ Renta amb **aigua corrent durant 12 minuts**. Aquest rentat llarg és important 
 
 > A diferència del Caffenol, el vi substitueix tota l'aigua: no s'afegeix aigua destil·lada addicional.
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/wineol/wineol02.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol03.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+  </div>
+
 ## Notes sobre el vi
 
 No tot el vi funciona igual. Per obtenir els millors resultats:
@@ -124,6 +129,6 @@ Experimenta amb el balanç de blancs i l'exposició de l'escàner per obtenir re
 
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/docs/caffenol/caffenol-08.jpg" alt="Descripció" style="width:50%; object-fit:cover">
-    <img src="/images/docs/caffenol/caffenol-09.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol04.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/docs/wineol/wineol05.jpg" alt="Descripció" style="width:50%; object-fit:cover">
   </div>
