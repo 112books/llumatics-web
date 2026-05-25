@@ -3,7 +3,7 @@ title: "Caffenol: alternative photographic development"
 layout: "private-doc"
 url: "/en/tallers/caffenol/privat/doc/"
 course_ref: "caffenol"
-image: "/images/tallers/caffenol.jpg"
+image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 noindex: true
 sitemap:
   disable: true
@@ -20,7 +20,11 @@ draft: false
 | Ascorbic acid (pure vitamin C powder) | 1.8 g |
 | Distilled water to make up | 500 ml |
 
+<br>
+
 This mixture has proven effective for developing standard black-and-white film in around **15 minutes**, offering a good balance of density, detail and grain.
+
+![Caffenol — ingredients](/images/docs/caffenol/caffenol-01.jpeg)
 
 ## A brief history
 
@@ -48,6 +52,8 @@ This technique connects with the philosophy of experimentation and self-learning
 - Not optimal for all film types; some require adjustments or test runs.
 
 In our tests we have used the popular **Fomapan** in its ISO 100 and ISO 400 versions.
+
+![Caffenol — development process](/images/docs/caffenol/caffenol-02.jpeg)
 
 ## Development step by step
 
@@ -122,6 +128,11 @@ Or, if we want to keep experimenting, we can explore the possibilities of scanni
 
 ### Scanning: black and white vs. colour
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-05a.jpg" alt="Scanned in black and white" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05b.jpg" alt="Scanned in colour" style="width:50%; object-fit:cover">
+  </div>
+
 To continue experimenting you will need a **scanner with a negative module**; a standard flatbed scanner will not work. There are many options on the market at a wide range of quality levels.
 
 All of them let you choose the negative type: positive (slide) or negative, and black-and-white or colour. For a standard black-and-white image, select "Black and white". But we suggest you try the "**Colour**" option: the results are spectacular.
@@ -130,6 +141,15 @@ Using the colour option, and depending on the white balance or manual exposure a
 
 ### Why do these warm tones appear?
 
+![Caffenol — warm tones when scanning in colour](/images/docs/caffenol/caffenol-06.jpg)
+
 There are several theories, but the most plausible is that the Caffenol process leaves tiny traces of organic matter (coffee tannins and ascorbic acid) in the film emulsion. When scanning, these compounds absorb some of the blue and green light from the scanner and reflect more of the red range, generating that characteristic warm tone.
 
 Whatever the cause, it is an effect that is hard to control and depends heavily on the scanner settings: it can be subtle or utterly brazen. Either way, the results never leave you indifferent.
+
+## More results
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-08.jpg" alt="Caffenol result" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-09.jpg" alt="Caffenol result" style="width:50%; object-fit:cover">
+  </div>

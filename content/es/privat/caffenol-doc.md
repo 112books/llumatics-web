@@ -3,7 +3,7 @@ title: "Caffenol: revelado fotográfico alternativo"
 layout: "private-doc"
 url: "/es/tallers/caffenol/privat/doc/"
 course_ref: "caffenol"
-image: "/images/tallers/caffenol.jpg"
+image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 noindex: true
 sitemap:
   disable: true
@@ -20,7 +20,11 @@ draft: false
 | Ácido ascórbico (vitamina C en polvo) | 1,8 g |
 | Agua destilada hasta completar | 500 ml |
 
+<br>
+
 Esta mezcla ha demostrado ser efectiva para el revelado de película en blanco y negro estándar durante unos **15 minutos**, ofreciendo un buen equilibrio entre densidad, detalle y grano.
+
+![Caffenol — ingredientes](/images/docs/caffenol/caffenol-01.jpeg)
 
 ## Un poco de historia
 
@@ -48,6 +52,8 @@ Esta técnica conecta con la filosofía de experimentación y autoaprendizaje en
 - No es óptimo para todos los tipos de película; algunas requieren ajustes o pruebas previas.
 
 En nuestras pruebas hemos usado la popular **Fomapan** en sus versiones ISO 100 e ISO 400.
+
+![Caffenol — proceso de revelado](/images/docs/caffenol/caffenol-02.jpeg)
 
 ## Revelado paso a paso
 
@@ -122,14 +128,28 @@ O, si queremos seguir experimentando, podemos jugar con el escáner y sus posibi
 
 ### Escaneado: blanco y negro vs. color
 
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-05a.jpg" alt="Escaneado en blanco y negro" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05b.jpg" alt="Escaneado en color" style="width:50%; object-fit:cover">
+  </div>
+
 Para seguir experimentando necesitaremos un **escáner con módulo para negativos**; un escáner plano convencional no sirve. Hay muchas opciones en el mercado y de muchas calidades.
 
 Todos permiten elegir el tipo de negativo: positivo (diapositiva) o negativo, y blanco y negro o color. Si queremos una imagen estándar en blanco y negro, seleccionaremos "Blanco y negro". Pero te sugerimos probar la opción "**Color**": los resultados son espectaculares.
 
 Usando la opción de color, y dependiendo del balance de blancos o del ajuste de exposición manual —según marca y modelo— podremos obtener increíbles tonos rojizos, anaranjados y marrones.
 
-### ¿Por qué aparecen estos tonos rojizos?
+### ¿Por qué aparecen estos tonos cálidos?
+
+![Caffenol — tonos cálidos al escanear en color](/images/docs/caffenol/caffenol-06.jpg)
 
 Hay varias teorías, pero la más plausible es que el proceso con Caffenol deja diminutas trazas de materia orgánica (taninos del café y ácido ascórbico) en la emulsión de la película. Al escanear, estos compuestos absorben parte de la luz azul y verdosa del escáner y reflejan más la zona roja, generando ese tono cálido tan característico.
 
 Sea como sea, es un efecto difícil de controlar y depende mucho de los ajustes del escáner: puede ser sutil o absolutamente descarado. En cualquier caso, los resultados no dejan indiferente.
+
+## Más resultados
+
+  <div style="display:flex; gap:1rem; margin-bottom:1rem">
+    <img src="/images/docs/caffenol/caffenol-08.jpg" alt="Resultado Caffenol" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-09.jpg" alt="Resultado Caffenol" style="width:50%; object-fit:cover">
+  </div>
