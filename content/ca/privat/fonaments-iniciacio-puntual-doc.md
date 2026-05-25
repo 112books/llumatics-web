@@ -8,82 +8,146 @@ noindex: true
 sitemap:
   disable: true
 robots: "noindex, nofollow"
-draft: true
+draft: false
 ---
 
 ## Què és la fotografia analògica
 
-La fotografia analògica registra la llum sobre una emulsió de halurs de plata (cristalls microscòpics de bromur o iodur de plata) suspesos en gelatina. Quan la llum impacta sobre l'emulsió, es forma una imatge latent invisible que el revelador transforma en imatge visible (plata metàl·lica negra).
+La fotografia analògica, de carret o de rodet, també coneguda com a fotografia tradicional, argentica o química, és el retrònim amb què es descriu el procés fotogràfic tradicional, en contraposició a la fotografia digital, d'implantació més recent. Es basa en un procés fisicoquímic que involucra l'ús de material fotosensible (aplicat sobre plaques de vidre, sobre una pel·lícula flexible o sobre material translúcid) i la seva estabilització (revelat), per a l'obtenció i el processament de les imatges.
 
-A diferència del sensor digital, que quantifica la llum en píxels, l'emulsió d'argent registra la llum de manera contínua, sense píxels. Aquesta és una de les raons per les quals la textura visual del film és diferent de la digital.
+## El procés
 
-## Tipus de càmeres
+Per obtenir imatges fotogràfiques s'empra un suport (pel·lícula, vidre, paper, etc.) on l'element sensible a la llum —el halur de plata— es disposa sobre una gelatina molt pura. La quantitat i la mida dels cristalls de halogenur de plata determinen la sensibilitat de la pel·lícula (o velocitat). La sensibilitat està normalitzada i s'expressa en una escala estandarditzada per la ISO.
 
-| Tipus | Característiques | Per a qui |
-|---|---|---|
-| SLR (reflex 35mm) | Visor TTL, objectius intercanviables, control manual total | Aprenentatge avançat |
-| Rangefinder | Compacta, silenciosa, mesura de distància per coincidència | Carrer i reportatge |
-| Compacta automàtica | Objectiu fix, automatismes, molt portable | Primer contacte |
-| TLR (reflex binocular) | Mig format, 6×6, visor a la cintura | Retrat, estudi |
-| Tècnica / visió | Gran format, moviments, màxima qualitat | Estudi, paisatge |
+Quan s'obre l'obturador per un breu instant, la llum que passa a través de l'objectiu incideix sobre la pel·lícula i hi deixa la impressió de la imatge, que en aquest punt s'anomena **imatge latent**; aquesta anirà descomponent-se a partir d'aquell moment fins a ser revelada.
 
-## El triangle d'exposició
+Així doncs, el procés s'inicia amb la llum, que desencadena una reacció fisicoquímica en el compost i produeix la imatge latent. Quan la pel·lícula se submergeix en el revelador, mitjançant un procés de reducció-oxidació, el halogenur de plata es transforma en plata metàl·lica negra, obtenint una imatge visible.
 
-Una exposició correcta equilibra tres variables:
+## El revelat
 
-**Diafragma (f-stop)**
-Controla l'obertura del pas de llum a través de l'objectiu. Valors típics: f/1.4, f/2, f/2.8, f/4, f/5.6, f/8, f/11, f/16. Cada pas dobla o redueix a la meitat la llum. Un diafragma obert (f/1.4) dona poca profunditat de camp; un diafragma tancat (f/16) dona molta profunditat de camp.
+El procés de revelat consta de dos passos bàsics: el **revelat** i el **fixat**, que al seu torn es divideixen en passos intermedis segons el tipus de pel·lícula a revelar.
 
-**Velocitat d'obturador**
-Controla el temps que el diafragma resta obert. Valors típics: 1/1000, 1/500, 1/250, 1/125, 1/60, 1/30, 1/15, 1/8, 1/4, 1/2, 1 s. Cada pas dobla o redueix a la meitat el temps de llum.
+La imatge obtinguda té els valors de llum invertits respecte a la captura original; per això la pel·lícula tractada es coneix com a **negatiu**.
 
-**ISO (sensibilitat de la pel·lícula)**
-Cada pel·lícula té un ISO fix (100, 200, 400, 800, 3200). Un ISO baix (100) necessita més llum però dona menys gra. Un ISO alt (3200) pot treballar amb poca llum però dona gra pronunciat.
+Un cop revelada i assecada la pel·lícula o negatiu, es poden fer còpies de la imatge sobre paper o sobre una altra pel·lícula, en el segon cas obtenint una diapositiva o positiu translúcid, que permet observar la fotografia per projecció o transparència. Les imatges obtingudes, en invertir novament els valors de llum per ampliació o contacte, donen com a resultat un **positiu**. A aquest procés s'anomena **positivat**.
 
-## Taula d'exposició: regla del dia assolellat (Sunny 16)
+Si s'utilitza a la càmera una pel·lícula especialment tractada per a diapositives, s'obtenen les imatges directament en positiu en revelar la pel·lícula.
 
-Amb llum solar directa i f/16, la velocitat equivalent és 1/ISO:
+## Formats
 
-| Condicions | Diafragma | Velocitat (ISO 400) |
-|---|---|---|
-| Sol intens, ombres dures | f/16 | 1/400 s (usar 1/500) |
-| Lleugerament ennuvolat | f/11 | 1/400 s |
-| Ennuvolat | f/8 | 1/400 s |
-| Molt ennuvolat | f/5.6 | 1/400 s |
-| Ombra / interior lluminós | f/4 | 1/400 s |
+Existeixen o han existit molts i diferents formats de pel·lícula fotogràfica. El format més popular de pel·lícula química és la **pel·lícula de 35mm** (o 135), utilitzada a la majoria de càmeres reflex i compactes. A continuació vindria el **format mig** (120/220), els diferents mides de fotografia instantània (Polaroid i Fuji) i els **grans formats** 4×5", 5×7" i 8×10" principalment.
+
+## Tipus de pel·lícula
+
+La pel·lícula fotogràfica és una superfície transparent, en la majoria dels casos flexible, composta inicialment de cel·luloide però avui dia d'acetat de cel·lulosa o altres plàstics com el polièster, recoberta d'una fina capa d'emulsió fotogràfica formada per gelatina en la qual s'introdueix una substància sensible a la llum, com el bromur de plata.
+
+Les capes fotosensibles modernes són de halurs de plata, amb una mida variable de partícula (granularitat) que afecta la sensibilitat de la pel·lícula i les característiques de la imatge final.
+
+La fotografia en blanc i negre utilitza una sola capa d'emulsió amb halurs de plata, mentre que les pel·lícules en color usen com a mínim tres capes fotosensibles.
+
+Una de les decisions més importants en fer una fotografia és l'elecció de la pel·lícula:
+
+- **Negatiu en blanc i negre (B/N)**
+  - Ortocromàtica — sensible a tot l'espectre excepte el vermell
+  - Pancromàtica — sensible a tots els colors de l'espectre visible
+- **Negatiu color** — s'obté una imatge amb els colors complementaris de l'original
+- **Negatiu infraroig en B/N** — registra longituds d'ona entre 700 i 1.200 nm amb un filtre IR
+- **Diapositiva en B/N** — blanc i negre directament en positiu
+- **Diapositiva en color**
+- **Diapositiva infraroja** — pel·lícula sensible al verd, al vermell i a l'infraroig
+- **Pel·lícula Lith o de línia** — pel·lícula negativa d'alt contrast
+
+## La càmera
+
+Un dels elements més importants per realitzar una fotografia és la càmera fotogràfica. Al mercat n'existeixen molts tipus; segons el seu funcionament, la seva finalitat i el format de pel·lícula que utilitzen, s'agrupen en famílies:
+
+- Càmeres compactes o de petit format
+- Càmeres amb telemètre (rangefinder)
+- Càmeres Reflex o SLR (Single Lens Reflex)
+- Càmeres Reflex binoculars o Twin Lens Reflex (TLR)
+- Càmeres miniatura
+- Càmeres SLR de mig format
+- Càmeres de visor directe
+- Càmeres tècniques portàtils o d'estudi
+- Càmeres instantànies
+- Càmeres submarines
+- Càmeres panoràmiques
+
+## Funcionament de la càmera
+
+Quan apuntem i fem un simple clic, a l'interior de la càmera es desencadena un procés que més tard ens permetrà obtenir la fotografia.
+
+Primer s'obre l'obturador permetent a la llum passar condicionada per l'obertura que controla el diafragma. La llum passa només una fracció de segon a través de l'obturador abans que aquest es tanqui i, després de recórrer tota la càmera, s'imprimeix sobre la pel·lícula. Aquesta pel·lícula és molt sensible a la llum i només cal una petita part de l'energia fotoelèctrica per aconseguir una fotografia.
+
+Per obtenir una fotografia equilibrada a nivell lluminós cal deixar passar la quantitat justa de llum.
+
+## L'exposició
+
+L'exposició depèn de dos factors: l'**obertura de diafragma** i la quantitat de temps que deixem passar la llum, anomenada **velocitat d'obturador**.
+
+- **Diafragma** — es mesura en passos (f-stops). Per exemple: f/8 i f/16. Un número f més gran significa una menor obertura i viceversa.
+- **Velocitat d'obturador** — es mesura en segons i fraccions de segon: 1/1000 s, 1/250 s, 1 s… Les velocitats més ràpides tenen el número més gran al denominador.
+- **ISO (sensibilitat)** — paràmetre del carret mesurat en ISO o ASA. Un ISO més alt permet fotografiar en condicions de poca llum però a costa de gra visible.
+
+## La correcta exposició
+
+Per saber la quantitat de llum d'una escena i la combinació de diafragma, velocitat i sensibilitat adequats cal utilitzar un **fotòmetre**.
+
+La majoria de càmeres incorporen un fotòmetre intern. Si la càmera no en disposa, podem usar-ne un d'extern o fins i tot una app del mòbil.
+
+**Formes de mesurar la llum:**
+
+- **Llum incident** — es mesura la llum que incideix sobre l'àrea d'interès. S'utilitza amb un fotòmetre extern. És el mètode més precís perquè mesura la llum real sobre el motiu.
+- **Llum reflectida** — es mesura la llum que reflecteix l'escena. És el mètode dels fotòmetres interns de les càmeres. Molt còmode perquè no cal abandonar la posició.
+
+**Velocitat vs. diafragma:**
+
+- A menor velocitat, més risc que les imatges surtin mogudes. Es considera que per sota de 1/50 s la imatge ja pot trepidatar (depenent del pols). Amb velocitats curtes podem usar un diafragma més tancat (f/ més alt) per a la mateixa escena.
+- A menor número f, més llum entra però menor profunditat de camp s'obté. A major número f, menys llum però major profunditat de camp.
+
+## Distància focal
+
+La distància focal és la distància entre el centre òptic de la lent i el punt focal (focus), que és on es concentren els raigs de llum.
+
+En un objectiu de distància focal variable (zoom) aconseguim un major o menor acostament al motiu variant la distància focal. Es considera que un objectiu de **50mm en pas universal** equival aproximadament a la distància focal de l'ull humà.
+
+La distància focal no afecta únicament l'acostament respecte al motiu: també **modifica la perspectiva** de la foto.
+
+| Focal | Angle | Ús típic |
+|-------|-------|---------|
+| 14–24 mm | Molt gran angular | Arquitectura, paisatge, interiors |
+| 28–35 mm | Gran angular | Carrer, reportatge, paisatge |
+| 50 mm | Normal | Ús general, retrat ambiental |
+| 85–105 mm | Teleobjectiu curt | Retrat |
+| 135–300 mm | Teleobjectiu | Esport, natura, reportatge |
+
+## Perspectiva
+
+La distància focal modifica el camp de visió. En augmentar-la, ens acostem; en reduir-la, ens allunyem. Això modifica la proporció que els objectes ocupen a la foto. De la mateixa manera, en acostar-nos amb el zoom a un objecte, també ens estem acostant al fons: **la perspectiva comprimeix o expandeix** la relació entre els plans de la imatge.
 
 ## Profunditat de camp
 
-La profunditat de camp és la zona de la imatge que apareix nítida. Depèn de:
-- **Diafragma**: més obert → menys profunditat (f/1.8 → fons difús)
-- **Distància de focus**: més a prop → menys profunditat
-- **Llargada focal**: objectiu llarg (85mm, 135mm) → menys profunditat
+La profunditat de camp és la distància que hi ha per davant i per darrere del punt enfocat que apareix amb nitidesa en una foto.
 
-## Formats de pel·lícula
+Tres elements la fan variar:
 
-**35mm (format petit)**
-El format més universal. Cartutxos de 24 o 36 fotogrames. Format del fotograma: 24×36mm. Fàcil de trobar i revelar.
+- **Obertura de diafragma** — a major obertura (f/ menor), menor profunditat de camp
+- **Distància focal** — a major focal (zoom), menor profunditat de camp
+- **Distància real càmera–motiu** — com menor és la distància al motiu enfocat, menor és la profunditat de camp
 
-**120 (mig format)**
-Pel·lícula en rotllo. Formats del fotograma: 6×4.5, 6×6, 6×7, 6×9 (depenent de la càmera). Qualitat superior gràcies a la major superfície d'emulsió.
+**Com aplicar-ho:**
 
-**4×5 polzades (gran format)**
-Xapes individuals de 10×12.5 cm. Qualitat màxima, procés lent i deliberat.
+- **Profunditat de camp reduïda** — ajuda a destacar un element sobre el fons i aïllar el motiu (retrat, macro)
+- **Profunditat de camp àmplia** — per tenir tota l'escena nítida sense obviar cap detall (paisatge, arquitectura)
 
-## Carregar la pel·lícula
+## Pràctica
 
-1. Obre la càmera en llum feble (no directa)
-2. Col·loca el cartutx i estira el principi de la pel·lícula fins al tobogan del carret
-3. Assegura't que les dents del carret enganxin els forats laterals de la pel·lícula
-4. Fes un parell d'avanços amb la càmera tancada per assegurar el transport
-5. Comprova el comptador de fotogrames
+Després de la part teòrica posarem en pràctica els conceptes amb la teva pròpia càmera:
 
-## Laboratori vs revelat casolà
-
-| Opció | Avantatges | Inconvenients |
-|---|---|---|
-| Laboratori professional | Sense equipament, còmode | Cost per rull, menys control |
-| Revelat casolà (B/N) | Control total, econòmic a llarg termini | Equipament inicial, aprenentatge |
-| Revelat casolà (color C-41) | Control màxim | Temperatura molt precisa (38 °C) |
-
-Per a qui comença, enviar al laboratori és una opció vàlida. El revelat casolà de B/N és el pas natural per aprofundir en el control del procés.
+- Explicació dels mecanismes de la teva càmera
+- Càrrega de la pel·lícula
+- Canvi d'ISO a la càmera
+- Canvi de velocitats i el mode Bulb (B)
+- Maneig i canvi de diafragma a l'objectiu; com activar el tancament de diafragma per veure la profunditat de camp
+- El visor i l'enquadrament de la fotografia
+- Embragatge, rebobinat i extracció de la pel·lícula
