@@ -14,11 +14,11 @@ nivell: "Beginner / Intermediate"
 estat: "actiu"
 
 # Fitxa tècnica
-preu_1: 120
-preu_2: 68
-preu_3: 51
-preu_4: 43
-durada_hores: 2
+preu_1: 170
+preu_2: 97
+preu_3: 73
+preu_4: 61
+durada_hores: 3
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
 sota_demanda: true
