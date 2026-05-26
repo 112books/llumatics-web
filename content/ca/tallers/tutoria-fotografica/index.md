@@ -23,6 +23,7 @@ lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 1
 sota_demanda: true
+sense_doc: true
 
 # Fitxa pedagògica
 objective: "Resoldre els dubtes o bloquejos concrets de cada alumne, sigui en tècnica, laboratori, mirada o projecte personal."
@@ -43,7 +44,7 @@ No tots els aprenentatges funcionen igual. Hi ha persones que aprenen millor en 
 
 Pot ser per resoldre un dubte que porta temps sense resposta. Per aprendre a revelar pel·lícula per primera vegada sense la pressió d'un grup. Per treballar un projecte fotogràfic personal amb un interlocutor que n'entén. Per revisar una sèrie i saber on millorar.
 
-Funciona amb una conversa prèvia —breu, per correu o telèfon— per entendre de quin punt es parteix i quin objectiu té la sessió. La durada mínima és de **2 hores**; es pot ampliar a 3 o 4 hores en funció de l'objectiu.
+Funciona amb una conversa prèvia —breu, per correu— per entendre de quin punt es parteix i quin objectiu té la sessió. La durada mínima és de **2 hores**; es pot ampliar a 3 o 4 hores en funció de l'objectiu.
 
 ## Exemples de continguts possibles
 
@@ -62,7 +63,7 @@ La sessió és sempre individual (1:1) i es factura per hores: **60€/hora, mí
 
 ## Inclòs en el preu
 
-- Sessió individual (1:1) amb Joan
+- Sessió individual (1:1) amb Joan Linux
 - Ús del laboratori i l'equipament de Llumàtics
 - Químics de revelat convencionals (si la sessió inclou revelat de pel·lícula)
 

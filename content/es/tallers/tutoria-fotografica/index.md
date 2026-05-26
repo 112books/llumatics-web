@@ -23,6 +23,7 @@ lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 1
 sota_demanda: true
+sense_doc: true
 
 # Ficha pedagógica
 objective: "Resolver las dudas o bloqueos concretos de cada alumno, ya sea en técnica, laboratorio, mirada o proyecto personal."

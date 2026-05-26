@@ -23,6 +23,7 @@ lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 1
 sota_demanda: true
+sense_doc: true
 
 # Workshop details
 objective: "Resolve each student's specific doubts or blocks — whether in technique, darkroom work, vision or a personal project."
