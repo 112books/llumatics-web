@@ -1957,6 +1957,167 @@ a.recorregut__tematic-link:hover {
   }
 }
 
+/* ── Recorregut: trunk + bifurcació ─────────────────────────────────────── */
+
+/* Trunk: 2 passos comuns en horitzontal */
+.recorregut__trunk {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  position: relative;
+  max-width: 380px;
+  margin-bottom: var(--space-6);
+}
+
+.recorregut__trunk::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: calc(100% / 4);
+  right: calc(100% / 4);
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+/* Pas de bifurcació: node ressaltat */
+.recorregut__step--fork .recorregut__node {
+  background: var(--color-surface);
+  border: 2px solid var(--bloc-color, var(--color-accent));
+}
+
+.recorregut__step--fork .recorregut__num {
+  color: var(--bloc-color, var(--color-accent));
+}
+
+.recorregut__fork-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  margin-top: var(--space-1);
+}
+
+/* Fork row: dos camins en paral·lel */
+.recorregut__fork-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+  max-width: 760px;
+}
+
+/* Path card */
+.recorregut__path {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  background: var(--color-surface);
+}
+
+.recorregut__path-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Passos dins el path: llista vertical amb línia connectora */
+.recorregut__path-steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.recorregut__path-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 13px;
+  width: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.recorregut__path-step {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.recorregut__path-node {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bloc-color, var(--color-border));
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.recorregut__path-step .recorregut__step-body {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Especialitzacions: grups de pills */
+.recorregut__especialitzacions {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .recorregut__trunk {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .recorregut__trunk::before {
+    top: 0;
+    bottom: 0;
+    left: 19px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .recorregut__trunk .recorregut__step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: var(--space-2) 0;
+    gap: var(--space-4);
+  }
+
+  .recorregut__trunk .recorregut__node {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .recorregut__trunk .recorregut__step-body {
+    align-items: flex-start;
+    padding-top: var(--space-2);
+  }
+
+  .recorregut__fork-row {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+}
+
 /* ── Blog preview (home) ─────────────────────────────────────────────────── */
 .blog-preview-grid {
   display: grid;

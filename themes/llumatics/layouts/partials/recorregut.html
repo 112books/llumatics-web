@@ -1,12 +1,15 @@
-{{/* Partial: recorregut.html — Línia del temps del recorregut formatiu
-     Ús: {{ partial "recorregut.html" . }}
+{{/* Partial: recorregut.html — Recorregut formatiu amb bifurcació
+     trunk → is_fork step → path_a / path_b → especialitzacions (grups)
 */}}
 {{ $rec := hugo.Data.recorregut }}
 {{ if not $rec }}{{ return }}{{ end }}
 
 {{ $lang := site.Language.Lang }}
+{{ $lp   := $.Site.LanguagePrefix }}
+{{ $base := strings.TrimSuffix "/" site.BaseURL }}
 
 <section class="recorregut" id="recorregut">
+
   <div class="recorregut__header">
     <p class="section__eyebrow">
       {{ if eq $lang "es" }}Itinerario{{ else if eq $lang "en" }}Learning path{{ else }}Recorregut{{ end }}
@@ -21,32 +24,29 @@
     </p>
   </div>
 
-  {{/* ── Camí principal ──────────────────────────────── */}}
-  <div class="recorregut__timeline" role="list">
-    {{ range $rec.core }}
-    {{ $title := .title }}
-    {{ if eq $lang "es" }}{{ $title = .title_es }}{{ end }}
-    {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
-    {{ $desc := .desc }}
-    {{ if eq $lang "es" }}{{ $desc = .desc_es }}{{ end }}
-    {{ if eq $lang "en" }}{{ $desc = .desc_en }}{{ end }}
-    {{ $aviat := .aviat | default false }}
+  {{/* ── Trunk: passos comuns ── */}}
+  <div class="recorregut__trunk" role="list">
+    {{ range $i, $s := $rec.trunk }}
+    {{ $title := $s.title }}
+    {{ if eq $lang "es" }}{{ $title = $s.title_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $title = $s.title_en }}{{ end }}
+    {{ $desc := $s.desc }}
+    {{ if eq $lang "es" }}{{ $desc = $s.desc_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $desc = $s.desc_en }}{{ end }}
 
-    <div class="recorregut__step{{ if $aviat }} recorregut__step--aviat{{ end }}" data-bloc="{{ .bloc }}" role="listitem">
-      <div class="recorregut__connector" aria-hidden="true"></div>
-      <div class="recorregut__node" aria-hidden="true">
-        <span class="recorregut__num">{{ .step }}</span>
-      </div>
+    <div class="recorregut__step{{ if $s.is_fork }} recorregut__step--fork{{ end }}"
+         data-bloc="{{ $s.bloc }}" role="listitem">
+      <div class="recorregut__node"><span class="recorregut__num">{{ add $i 1 }}</span></div>
       <div class="recorregut__step-body">
-        {{ if and .slug (not $aviat) }}
-          <a href="{{ printf "%s%s/tallers/%s/" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix .slug }}" class="recorregut__step-title">{{ $title }}</a>
+        {{ if $s.slug }}
+          <a href="{{ printf "%s%s/tallers/%s/" $base $lp $s.slug }}" class="recorregut__step-title">{{ $title }}</a>
         {{ else }}
           <span class="recorregut__step-title">{{ $title }}</span>
         {{ end }}
         {{ with $desc }}<p class="recorregut__step-desc">{{ . }}</p>{{ end }}
-        {{ if $aviat }}
-          <span class="recorregut__badge">
-            {{ if eq $lang "es" }}Próximamente{{ else if eq $lang "en" }}Coming soon{{ else }}Aviat{{ end }}
+        {{ if $s.is_fork }}
+          <span class="recorregut__fork-badge" aria-hidden="true">
+            {{ if eq $lang "es" }}↓ Elige tu camino{{ else if eq $lang "en" }}↓ Choose your path{{ else }}↓ Tria el teu camí{{ end }}
           </span>
         {{ end }}
       </div>
@@ -54,31 +54,72 @@
     {{ end }}
   </div>
 
-  {{/* ── Especialitzacions ───────────────────────────── */}}
-  {{ if $rec.tematic }}
-  <div class="recorregut__tematic">
-    <p class="recorregut__tematic-label" aria-hidden="true">
-      {{ if eq $lang "es" }}Especializaciones{{ else if eq $lang "en" }}Specialisations{{ else }}Especialitzacions{{ end }}
-    </p>
-    <div class="recorregut__tematic-grid" role="list">
-      {{ range $rec.tematic }}
-      {{ $title := .title }}
-      {{ if eq $lang "es" }}{{ $title = .title_es }}{{ end }}
-      {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
-      <div class="recorregut__tematic-item" data-bloc="{{ .bloc }}" role="listitem">
-        {{ if .slug }}
-          <a href="{{ printf "%s%s/tallers/%s/" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix .slug }}" class="recorregut__tematic-link">
-            {{ $title }}
-            {{ with .desc }}<span class="recorregut__tematic-sub">{{ . }}</span>{{ end }}
-          </a>
-        {{ else }}
-          <span class="recorregut__tematic-link recorregut__tematic-link--aviat">
-            {{ $title }}
-          </span>
+  {{/* ── Fork: dos camins en paral·lel ── */}}
+  <div class="recorregut__fork-row">
+    {{ range slice $rec.path_a $rec.path_b }}
+    {{ $label := .label }}
+    {{ if eq $lang "es" }}{{ $label = .label_es }}{{ end }}
+    {{ if eq $lang "en" }}{{ $label = .label_en }}{{ end }}
+
+    <div class="recorregut__path">
+      <p class="recorregut__path-label">{{ $label }}</p>
+      <div class="recorregut__path-steps" role="list">
+        {{ range .steps }}
+        {{ $t := .title }}
+        {{ if eq $lang "es" }}{{ if .title_es }}{{ $t = .title_es }}{{ end }}{{ end }}
+        {{ if eq $lang "en" }}{{ if .title_en }}{{ $t = .title_en }}{{ end }}{{ end }}
+        {{ $d := .desc }}
+        {{ if eq $lang "es" }}{{ if .desc_es }}{{ $d = .desc_es }}{{ end }}{{ end }}
+        {{ if eq $lang "en" }}{{ if .desc_en }}{{ $d = .desc_en }}{{ end }}{{ end }}
+
+        <div class="recorregut__path-step" data-bloc="{{ .bloc }}" role="listitem">
+          <div class="recorregut__path-node" aria-hidden="true"></div>
+          <div class="recorregut__step-body">
+            {{ if .slug }}
+              <a href="{{ printf "%s%s/tallers/%s/" $base $lp .slug }}" class="recorregut__step-title">{{ $t }}</a>
+            {{ else }}
+              <span class="recorregut__step-title">{{ $t }}</span>
+            {{ end }}
+            {{ with $d }}<p class="recorregut__step-desc">{{ . }}</p>{{ end }}
+          </div>
+        </div>
         {{ end }}
       </div>
-      {{ end }}
     </div>
+    {{ end }}
+  </div>
+
+  {{/* ── Especialitzacions: grups de pills ── */}}
+  {{ if $rec.especialitzacions }}
+  <div class="recorregut__especialitzacions">
+    {{ range $rec.especialitzacions }}
+    {{ $gt := .title }}
+    {{ if eq $lang "es" }}{{ if .title_es }}{{ $gt = .title_es }}{{ end }}{{ end }}
+    {{ if eq $lang "en" }}{{ if .title_en }}{{ $gt = .title_en }}{{ end }}{{ end }}
+
+    <div class="recorregut__espec-group">
+      <p class="recorregut__tematic-label">{{ $gt }}</p>
+      <div class="recorregut__tematic-grid" role="list">
+        {{ range .items }}
+        {{ $t := .title }}
+        {{ if eq $lang "es" }}{{ if .title_es }}{{ $t = .title_es }}{{ end }}{{ end }}
+        {{ if eq $lang "en" }}{{ if .title_en }}{{ $t = .title_en }}{{ end }}{{ end }}
+        {{ $avait := .avait | default false }}
+
+        <div class="recorregut__tematic-item" data-bloc="{{ .bloc }}" role="listitem">
+          {{ if and .slug (not $avait) }}
+            <a href="{{ printf "%s%s/tallers/%s/" $base $lp .slug }}" class="recorregut__tematic-link">
+              {{ $t }}
+              {{ with .desc }}<span class="recorregut__tematic-sub">{{ . }}</span>{{ end }}
+            </a>
+          {{ else }}
+            <span class="recorregut__tematic-link recorregut__tematic-link--aviat">{{ $t }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   </div>
   {{ end }}
 
