@@ -11,6 +11,7 @@ canal: "llumatics"
 blocs: ["practica"]
 nivell: "Tots els nivells"
 estat: "actiu"
+weight: 30
 
 # Ficha técnica
 preu_hora: 60
@@ -42,7 +43,7 @@ No todos los aprendizajes funcionan igual. Hay personas que aprenden mejor en gr
 
 Puede ser para resolver una duda que lleva tiempo sin respuesta. Para aprender a revelar película por primera vez sin la presión de un grupo. Para trabajar un proyecto fotográfico personal con alguien que lo entiende. Para revisar una serie y saber dónde mejorar.
 
-Funciona con una conversación previa —breve, por correo o teléfono— para entender de qué punto se parte y qué objetivo tiene la sesión. La duración mínima es de **2 horas**; se puede ampliar a 3 o 4 horas según el objetivo.
+Funciona con una conversación previa —breve, por correo— para entender de qué punto se parte y qué objetivo tiene la sesión. La duración mínima es de **2 horas**; se puede ampliar a 3 o 4 horas según el objetivo.
 
 ## Ejemplos de contenidos posibles
 
@@ -61,7 +62,7 @@ La sesión es siempre individual (1:1) y se factura por horas: **60€/hora, mí
 
 ## Incluido en el precio
 
-- Sesión individual (1:1) con Joan
+- Sesión individual (1:1) con Joan Linux
 - Uso del laboratorio y el equipamiento de Llumàtics
 - Químicos de revelado convencionales (si la sesión incluye revelado de película)
 

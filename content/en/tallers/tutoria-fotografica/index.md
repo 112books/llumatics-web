@@ -11,6 +11,7 @@ canal: "llumatics"
 blocs: ["practica"]
 nivell: "Tots els nivells"
 estat: "actiu"
+weight: 30
 
 # Technical details
 preu_hora: 60
@@ -42,7 +43,7 @@ Not everyone learns the same way. Some people learn better in a group; others ne
 
 It might be to resolve a doubt that's been sitting unanswered for a while. To learn to develop film for the first time without the pressure of a group. To work on a personal photographic project with someone who understands it. To review a series and find out where to improve.
 
-It starts with a brief conversation — by email or phone — to understand where you're coming from and what the session should achieve. The minimum session is **2 hours**; it can be extended to 3 or 4 hours depending on the goal.
+It starts with a brief conversation — by email — to understand where you're coming from and what the session should achieve. The minimum session is **2 hours**; it can be extended to 3 or 4 hours depending on the goal.
 
 ## Examples of possible content
 
@@ -61,7 +62,7 @@ Sessions are always individual (1:1) and priced by the hour: **€60/hour, minim
 
 ## What's included
 
-- Individual (1:1) session with Joan
+- Individual (1:1) session with Joan Linux
 - Use of Llumàtics darkroom and equipment
 - Standard darkroom chemicals (if the session includes film development)
 
