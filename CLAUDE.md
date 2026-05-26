@@ -579,36 +579,66 @@ Un cop el staging funcioni correctament (fix staticrypt acabat de pujar, commit 
 2. Confirmar email → verificar redirecció a `/confirmat/` → redirecció automàtica a `/doc/?nom=...`
 3. Verificar document amb nom + botó impressió + certificat + PDF A4
 
-**Pendent addicional (documentació d'altres tallers):**
+**Inventari complet de documentació per alumnes (2026-05-26):**
 
-Docs creats en format `content/[lang]/privat/[slug]-doc.md` (layout `private-doc`):
-- [x] `fonaments-iniciacio-puntual-doc` — CA/ES/EN ✅
-- [x] `caffenol-doc` — CA/ES/EN ✅
-- [x] `wineol-doc` — CA/ES/EN ✅
-- [x] `retrat-gran-format-doc` — CA/ES/EN ✅
-- [x] `iniciacio-revelat-doc` — CA/ES/EN ✅
-- [ ] `revelat-bn-doc` — CA ✅ (és a `content/ca/tallers/revelat-bn/privat/doc/index.md`, cal migrar a `/privat/` i crear ES/EN)
-- [ ] `reveladors-artesanals-doc` — CA parcial (draft:true), ES/EN pendents
-- [ ] `copies-beers-developer-doc` — pendent
-- [ ] `guinneol-doc` — CA ✅, ES/EN pendents
-- [ ] Resta de tallers actius
+Format: `slug | doc CA | doc ES/EN | hores taller`
 
-**Nota:** tallers públics orgànics:
-- [x] `content/ca/tallers/wineol/index.md` — CA/ES/EN ✅
-- [x] `content/ca/tallers/caffenol/index.md` — CA/ES/EN ✅ (2026-05-25)
+✅ = publicat (draft:false) | 🔶 = esborrany (draft:true, té contingut) | ❌ = no existeix
 
-**Pendent addicional (logo C&F per tallers externs):**
-- [ ] Afegir suport `partner_logo` a `private-doc.html` (mostrar logo del soci si el frontmatter el té)
+| Taller | Doc CA | Doc ES/EN | Hores |
+|--------|--------|-----------|-------|
+| fonaments-iniciacio-puntual | ✅ | ✅ | 4h |
+| revelat-bn | ✅ (path antic*) | ✅ | 4h |
+| caffenol | ✅ | ✅ | 3h |
+| wineol | ✅ | ✅ | 2h |
+| iniciacio-revelat | ✅ | ✅ | 3h |
+| retrat-gran-format | ✅ | ✅ | 3h |
+| guinneol | 🔶 | ❌ | 2h |
+| cianotipia | 🔶 | ❌ | 8h |
+| copies-beers-developer | 🔶 | ❌ | 4h |
+| copies-en-paper | 🔶 | ❌ | 4h |
+| digitalitzacio-escaner | 🔶 | ❌ | 4h |
+| edicio-imatges-fotoquimiques | 🔶 | ❌ | 4h |
+| fotografia-de-carrer | 🔶 | ❌ | 3.5h |
+| fotografia-estenopeica | 🔶 | ❌ | 4h |
+| fotogrames-cianotipia | 🔶 | ❌ | 2h |
+| gran-format-4x5 | 🔶 | ❌ | 8h |
+| hasselblad-500 | 🔶 | ❌ | 3.5h |
+| introduccio-al-positivat | 🔶 | ❌ | 3h |
+| introduccio-gran-format | 🔶 | ❌ | 4h |
+| retrat-6x6 | 🔶 | ❌ | 4h |
+| retrat-amb-holga | 🔶 | ❌ | 4h |
+| retrat-analogic | 🔶 | ❌ | 4h |
+| reveladors-artesanals | 🔶 | ❌ | 8h |
+| revelat-color-bn | 🔶 | ❌ | 3h |
+| revelat-i-positivat | 🔶 | ❌ | 8h |
+| revelats-experimentals | 🔶 | ❌ | 8h |
+| tutoria-fotografica | 🔶 | ❌ | ⚠️ buit! |
+
+`*` `revelat-bn-doc` és a `content/ca/tallers/revelat-bn/privat/doc/index.md` (path antic). Migrar a `content/[lang]/privat/revelat-bn-doc.md`.
+
+**Flux de revisió per a cada doc 🔶:**
+1. Revisar contingut CA: text, hores, preus, imatges
+2. Corregir `durada_hores` al frontmatter del taller si cal
+3. Canviar `draft: false` al doc CA
+4. Crear versions ES i EN (`content/es/privat/[slug]-doc.md`, `content/en/privat/[slug]-doc.md`)
+
+**Bug pendent:** `tutoria-fotografica` — `durada_hores` buit al frontmatter del taller.
+
+**Nota:** tallers públics orgànics llests:
+- [x] `wineol` — CA/ES/EN ✅
+- [x] `caffenol` — CA/ES/EN ✅
+
+**Pendent (logo C&F per tallers externs):**
+- [ ] Afegir suport `partner_logo` a `private-doc.html`
 - [ ] Copiar logo: `docs-cursos/Camera-and-films-inciacio-revelat/im/LOGO_C&F.png` → `static/images/logos/cameras-and-films.png`
-- [ ] Afegir `partner_logo: /images/logos/cameras-and-films.png` al frontmatter del doc de `iniciacio-revelat`
+- [ ] Afegir `partner_logo: /images/logos/cameras-and-films.png` al doc de `iniciacio-revelat`
 
 ---
 
 ### Contingut
 
-- [ ] Imatges tallers que falten: `revelat-color-bn`, `guinneol`, `copies-beers-developer`
-- [ ] Revisió de textos de tots els tallers (CA)
-- [ ] Caffenol i Wineol — tallers independents (com el Guinneol)
+- [ ] Imatges tallers que falten: `revelat-color-bn`, `guinneol`, `copies-beers-developer` (no estan a `static/images/tallers/`)
 - [ ] `continua_aprenent` de `revelats-experimentals` — afegir `guinneol`, `revelat-color-bn`
 - [ ] `archetypes/tallers.md` — actualitzar amb el frontmatter actual
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
