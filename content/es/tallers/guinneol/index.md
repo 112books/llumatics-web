@@ -7,10 +7,6 @@ image: "/images/tallers/guinneol.jpg"
 images:
   - "/images/tallers/guinneol-1.jpg"
   - "/images/tallers/guinneol-2.jpg"
-  - "/images/tallers/guinneol-3.jpg"
-  - "/images/tallers/guinneol-4.jpg"
-  - "/images/tallers/guinneol-5.jpg"
-  - "/images/tallers/guinneol-6.jpg"
 
 # Clasificación
 tipus: "taller"

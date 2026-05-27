@@ -7,6 +7,8 @@ image: "/images/tallers/revelat-color-bn.jpg"
 images:
   - "/images/tallers/revelat-color-bn-1.jpg"
   - "/images/tallers/revelat-color-bn-2.jpg"
+  - "/images/tallers/revelat-color-bn-3.jpg"
+  - "/images/tallers/revelat-color-bn-4.jpg"
 
 # Classification
 tipus: "taller"
