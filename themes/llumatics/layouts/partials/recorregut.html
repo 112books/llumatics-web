@@ -1,5 +1,5 @@
 {{/* Partial: recorregut.html — Recorregut formatiu amb bifurcació
-     trunk → is_fork step → path_a / path_b → especialitzacions (grups)
+     trunk → is_fork step → path_a / path_b → linies temàtiques → especial
 */}}
 {{ $rec := hugo.Data.recorregut }}
 {{ if not $rec }}{{ return }}{{ end }}
@@ -71,15 +71,18 @@
         {{ $d := .desc }}
         {{ if eq $lang "es" }}{{ if .desc_es }}{{ $d = .desc_es }}{{ end }}{{ end }}
         {{ if eq $lang "en" }}{{ if .desc_en }}{{ $d = .desc_en }}{{ end }}{{ end }}
+        {{ $enc := .en_construccio | default false }}
 
-        <div class="recorregut__path-step" data-bloc="{{ .bloc }}" role="listitem">
+        <div class="recorregut__path-step{{ if $enc }} recorregut__path-step--enc{{ end }}"
+             data-bloc="{{ .bloc }}" role="listitem">
           <div class="recorregut__path-node" aria-hidden="true"></div>
           <div class="recorregut__step-body">
-            {{ if .slug }}
+            {{ if and .slug (not $enc) }}
               <a href="{{ printf "%s%s/tallers/%s/" $base $lp .slug }}" class="recorregut__step-title">{{ $t }}</a>
             {{ else }}
               <span class="recorregut__step-title">{{ $t }}</span>
             {{ end }}
+            {{ if $enc }}<span class="recorregut__enc-badge">{{ if eq $lang "es" }}En construcción{{ else if eq $lang "en" }}Coming soon{{ else }}En construcció{{ end }}</span>{{ end }}
             {{ with $d }}<p class="recorregut__step-desc">{{ . }}</p>{{ end }}
           </div>
         </div>
@@ -89,29 +92,35 @@
     {{ end }}
   </div>
 
-  {{/* ── Especialitzacions: grups de pills ── */}}
-  {{ if $rec.especialitzacions }}
+  {{/* ── Línies temàtiques ── */}}
+  {{ if $rec.linies }}
   <div class="recorregut__especialitzacions">
-    {{ range $rec.especialitzacions }}
-    {{ $gt := .title }}
-    {{ if eq $lang "es" }}{{ if .title_es }}{{ $gt = .title_es }}{{ end }}{{ end }}
-    {{ if eq $lang "en" }}{{ if .title_en }}{{ $gt = .title_en }}{{ end }}{{ end }}
+    {{ range $rec.linies }}
+    {{ $gt := .label }}
+    {{ if eq $lang "es" }}{{ if .label_es }}{{ $gt = .label_es }}{{ end }}{{ end }}
+    {{ if eq $lang "en" }}{{ if .label_en }}{{ $gt = .label_en }}{{ end }}{{ end }}
 
     <div class="recorregut__espec-group">
-      <p class="recorregut__tematic-label">{{ $gt }}</p>
+      <p class="recorregut__tematic-label" data-bloc="{{ .bloc }}">{{ $gt }}</p>
       <div class="recorregut__tematic-grid" role="list">
-        {{ range .items }}
+        {{ range .steps }}
         {{ $t := .title }}
         {{ if eq $lang "es" }}{{ if .title_es }}{{ $t = .title_es }}{{ end }}{{ end }}
         {{ if eq $lang "en" }}{{ if .title_en }}{{ $t = .title_en }}{{ end }}{{ end }}
         {{ $avait := .avait | default false }}
+        {{ $enc   := .en_construccio | default false }}
 
         <div class="recorregut__tematic-item" data-bloc="{{ .bloc }}" role="listitem">
-          {{ if and .slug (not $avait) }}
+          {{ if and .slug (not $avait) (not $enc) }}
             <a href="{{ printf "%s%s/tallers/%s/" $base $lp .slug }}" class="recorregut__tematic-link">
               {{ $t }}
               {{ with .desc }}<span class="recorregut__tematic-sub">{{ . }}</span>{{ end }}
             </a>
+          {{ else if $enc }}
+            <span class="recorregut__tematic-link recorregut__tematic-link--enc" aria-label="{{ $t }} — {{ if eq $lang "es" }}en construcción{{ else if eq $lang "en" }}coming soon{{ else }}en construcció{{ end }}">
+              {{ $t }}
+              <span class="recorregut__enc-pill">{{ if eq $lang "es" }}en construcción{{ else if eq $lang "en" }}coming soon{{ else }}en construcció{{ end }}</span>
+            </span>
           {{ else }}
             <span class="recorregut__tematic-link recorregut__tematic-link--aviat">{{ $t }}</span>
           {{ end }}
@@ -119,6 +128,34 @@
         {{ end }}
       </div>
     </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* ── Especial: Tria el teu recorregut ── */}}
+  {{ with $rec.especial }}
+  {{ $title := .title }}
+  {{ if eq $lang "es" }}{{ $title = .title_es }}{{ end }}
+  {{ if eq $lang "en" }}{{ $title = .title_en }}{{ end }}
+  {{ $desc := .desc }}
+  {{ if eq $lang "es" }}{{ $desc = .desc_es }}{{ end }}
+  {{ if eq $lang "en" }}{{ $desc = .desc_en }}{{ end }}
+  {{ $cta := .cta }}
+  {{ if eq $lang "es" }}{{ $cta = .cta_es }}{{ end }}
+  {{ if eq $lang "en" }}{{ $cta = .cta_en }}{{ end }}
+
+  <div class="recorregut__especial">
+    <div class="recorregut__especial-icon" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+      </svg>
+    </div>
+    <div class="recorregut__especial-body">
+      <p class="recorregut__especial-title">{{ $title }}</p>
+      <p class="recorregut__especial-desc">{{ $desc }}</p>
+    </div>
+    {{ if .slug }}
+    <a href="{{ printf "%s%s/tallers/%s/" $base $lp .slug }}" class="btn btn--primary recorregut__especial-cta">{{ $cta }} →</a>
     {{ end }}
   </div>
   {{ end }}

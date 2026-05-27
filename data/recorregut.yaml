@@ -1,24 +1,24 @@
 # Recorregut formatiu Llumàtics
-# Arbre amb bifurcació al pas 2: camí laboratori vs. camí digital.
+# Estructura: tronc comú → bifurcació (lab / digital) → línies temàtiques → especial
 
 trunk:
-  - title: "Iniciació a la fotografia"
-    title_es: "Iniciación a la fotografía"
-    title_en: "Introduction to photography"
+  - title: "Iniciació analògica"
+    title_es: "Iniciación analógica"
+    title_en: "Analogue introduction"
     slug: "fonaments-iniciacio-puntual"
     bloc: "fonaments"
     desc: "Càmera, llum i exposició. La base de tot."
     desc_es: "Cámara, luz y exposición. La base de todo."
     desc_en: "Camera, light and exposure. The foundation of everything."
 
-  - title: "Afinar la mirada"
-    title_es: "Afinar la mirada"
-    title_en: "Developing your eye"
+  - title: "Primer revelat"
+    title_es: "Primer revelado"
+    title_en: "First develop"
     slug: "iniciacio-revelat"
     bloc: "proces"
-    desc: "Reveles el teu primer carret. Veus la imatge néixer per primera vegada."
-    desc_es: "Revelas tu primer carrete. Ves la imagen nacer por primera vez."
-    desc_en: "Develop your first roll. Watch your image emerge for the first time."
+    desc: "Reveles el teu primer carret. La imatge neix davant teu."
+    desc_es: "Revelas tu primer carrete. La imagen nace ante ti."
+    desc_en: "Develop your first roll. Watch your image emerge."
     is_fork: true
 
 path_a:
@@ -35,22 +35,37 @@ path_a:
       desc_es: "Primera copia en papel. El laboratorio oscuro te espera."
       desc_en: "Your first paper print. The darkroom awaits."
 
-    - title: "Còpies avançades"
-      title_es: "Copias avanzadas"
-      title_en: "Advanced printing"
+    - title: "Còpies en paper avançat"
+      title_es: "Copias en papel avanzado"
+      title_en: "Advanced paper printing"
       slug: "copies-en-paper"
       bloc: "proces"
       desc: "Tapat, revelit i filtratge de contrast."
       desc_es: "Tapado, revelado y filtrado de contraste."
       desc_en: "Dodging, burning and contrast filtration."
 
+    - title: "Revelat + positivat en un dia"
+      title_es: "Revelado + positivado en un día"
+      title_en: "Develop and print in one day"
+      slug: "revelat-i-positivat"
+      bloc: "proces"
+      desc: "Intensiu complet: del carret a la còpia."
+      desc_es: "Intensivo completo: del carrete a la copia."
+      desc_en: "Full intensive: from roll to print."
+
+    - title: "Viratge i efectes"
+      title_es: "Virado y efectos"
+      title_en: "Toning and effects"
+      en_construccio: true
+      bloc: "proces"
+
 path_b:
   label: "Camí digital"
   label_es: "Camino digital"
   label_en: "Digital path"
   steps:
-    - title: "Escaneig de negatius"
-      title_es: "Escaneado de negativos"
+    - title: "Digitalització i escaneig"
+      title_es: "Digitalización y escaneado"
       title_en: "Scanning negatives"
       slug: "digitalitzacio-escaner"
       bloc: "fonaments"
@@ -67,67 +82,135 @@ path_b:
       desc_es: "Lightroom para imagen analógica digitalizada."
       desc_en: "Lightroom for scanned analogue images."
 
-especialitzacions:
-  - group: "experimentals"
-    title: "Tècniques experimentals"
-    title_es: "Técnicas experimentales"
-    title_en: "Experimental techniques"
-    items:
-      - title: "Revelats experimentals"
-        title_es: "Revelados experimentales"
-        title_en: "Experimental developing"
-        slug: "revelats-experimentals"
-        bloc: "processos-alternatius"
+    - title: "Impressió fine art"
+      title_es: "Impresión fine art"
+      title_en: "Fine art printing"
+      en_construccio: true
+      bloc: "fonaments"
 
-      - title: "Cianotipia — fotogrames"
-        title_es: "Cianotipía — fotogramas"
-        title_en: "Cyanotype — photograms"
-        slug: "fotogrames-cianotipia"
-        bloc: "processos-alternatius"
-
-      - title: "Cianotipia gran format"
-        title_es: "Cianotipía gran formato"
-        title_en: "Large format cyanotype"
-        slug: "cianotipia"
-        bloc: "processos-alternatius"
-
-      - title: "Caffenol"
-        slug: "caffenol"
-        bloc: "processos-alternatius"
-
-      - title: "Wineol"
-        slug: "wineol"
-        bloc: "processos-alternatius"
-
-      - title: "Guinneol"
-        slug: "guinneol"
-        bloc: "processos-alternatius"
-
-      - title: "Beer's Developer"
-        slug: "copies-beers-developer"
-        bloc: "processos-alternatius"
-
-      - title: "Revelat color amb químics B/N"
-        title_es: "Revelado color con químicos B/N"
-        title_en: "Colour developing with B&W chemicals"
-        slug: "revelat-color-bn"
-        bloc: "processos-alternatius"
-
+linies:
+  - id: "quimica"
+    label: "Química experimental"
+    label_es: "Química experimental"
+    label_en: "Experimental chemistry"
+    bloc: "processos-alternatius"
+    steps:
       - title: "Forçats i control del negatiu"
         title_es: "Forzados y control del negativo"
         title_en: "Push/pull and negative control"
         slug: "revelat-bn"
         bloc: "proces"
 
-  - group: "tematic"
-    title: "Temàtics"
-    title_es: "Temáticos"
-    title_en: "Subject-based"
-    items:
+      - title: "Revelat color amb químics B/N"
+        title_es: "Revelado color con químicos B/N"
+        title_en: "C-41 with B&W chemicals"
+        slug: "revelat-color-bn"
+        bloc: "processos-alternatius"
+
+      - title: "Caffenol"
+        slug: "caffenol"
+        desc: "Revela amb cafè i vitamina C."
+        desc_es: "Revela con café y vitamina C."
+        desc_en: "Develop with coffee and vitamin C."
+        bloc: "processos-alternatius"
+
+      - title: "Wineol"
+        slug: "wineol"
+        desc: "Vi negre com a revelador. Experimental."
+        desc_es: "Vino tinto como revelador. Experimental."
+        desc_en: "Red wine as developer. Experimental."
+        bloc: "processos-alternatius"
+
+      - title: "Guinneol"
+        slug: "guinneol"
+        desc: "Cervesa Guinness. Inestable i fascinant."
+        desc_es: "Cerveza Guinness. Inestable y fascinante."
+        desc_en: "Guinness stout. Unstable and fascinating."
+        bloc: "processos-alternatius"
+
+      - title: "Crea el teu revelador"
+        title_es: "Crea tu revelador"
+        title_en: "Build your own developer"
+        slug: "copies-beers-developer"
+        desc: "La química des de zero."
+        desc_es: "La química desde cero."
+        desc_en: "Chemistry from scratch."
+        bloc: "processos-alternatius"
+
+      - title: "Reveladors artesanals"
+        title_es: "Reveladores artesanales"
+        title_en: "Artisanal developers"
+        slug: "reveladors-artesanals"
+        bloc: "processos-alternatius"
+
+      - title: "Revelats experimentals"
+        title_es: "Revelados experimentales"
+        title_en: "Experimental developing"
+        slug: "revelats-experimentals"
+        bloc: "processos-alternatius"
+
+  - id: "processos"
+    label: "Processos alternatius"
+    label_es: "Procesos alternativos"
+    label_en: "Alternative processes"
+    bloc: "processos-alternatius"
+    steps:
+      - title: "Fotogrames + cianotipia"
+        title_es: "Fotogramas + cianotipia"
+        title_en: "Photograms + cyanotype"
+        slug: "fotogrames-cianotipia"
+        bloc: "processos-alternatius"
+
+      - title: "Cianotipia amb negatius"
+        title_es: "Cianotipia con negativos"
+        title_en: "Cyanotype with negatives"
+        slug: "cianotipia"
+        bloc: "processos-alternatius"
+
+      - title: "Cianotipia sobre vidre"
+        title_es: "Cianotipia sobre vidrio"
+        title_en: "Cyanotype on glass"
+        en_construccio: true
+        bloc: "processos-alternatius"
+
+      - title: "Cianotipia sobre tela"
+        title_es: "Cianotipia sobre tela"
+        title_en: "Cyanotype on fabric"
+        en_construccio: true
+        bloc: "processos-alternatius"
+
+      - title: "Fotografia estenopeica"
+        title_es: "Fotografía estenopeica"
+        title_en: "Pinhole photography"
+        slug: "fotografia-estenopeica"
+        desc: "Crea la teva càmera des de zero."
+        desc_es: "Crea tu cámara desde cero."
+        desc_en: "Build your own camera from scratch."
+        bloc: "gran-format"
+
+      - title: "Antotipia i processos vegetals"
+        title_es: "Antotipia y procesos vegetales"
+        title_en: "Anthotype and plant processes"
+        avait: true
+        bloc: "processos-alternatius"
+
+  - id: "practica"
+    label: "Pràctica i mirada"
+    label_es: "Práctica y mirada"
+    label_en: "Practice and vision"
+    bloc: "practica"
+    steps:
       - title: "Fotografia de carrer"
         title_es: "Fotografía de calle"
         title_en: "Street photography"
         slug: "fotografia-de-carrer"
+        bloc: "practica"
+
+      - title: "Carrer i mirada"
+        title_es: "Calle y mirada"
+        title_en: "Street and vision"
+        slug: "carrer-i-mirada"
+        en_construccio: true
         bloc: "practica"
 
       - title: "Retrat analògic"
@@ -136,53 +219,92 @@ especialitzacions:
         slug: "retrat-analogic"
         bloc: "practica"
 
-      - title: "Retrat mig format"
-        title_es: "Retrato medio formato"
-        title_en: "Medium format portrait"
+      - title: "Retrat amb Holga"
+        title_es: "Retrato con Holga"
+        title_en: "Portrait with Holga"
+        slug: "retrat-amb-holga"
+        bloc: "practica"
+
+      - title: "Pintant amb la llum"
+        title_es: "Pintando con la luz"
+        title_en: "Painting with light"
+        en_construccio: true
+        bloc: "practica"
+
+      - title: "Redscale DIY"
+        en_construccio: true
+        bloc: "practica"
+
+      - title: "Il·luminació a l'estudi"
+        title_es: "Iluminación en el estudio"
+        title_en: "Studio lighting"
+        avait: true
+        bloc: "practica"
+
+      - title: "Composició i la mirada"
+        title_es: "Composición y la mirada"
+        title_en: "Composition and vision"
+        en_construccio: true
+        bloc: "practica"
+
+      - title: "Direcció de model"
+        title_es: "Dirección de modelo"
+        title_en: "Model direction"
+        en_construccio: true
+        bloc: "practica"
+
+      - title: "Fotografia documental"
+        title_es: "Fotografía documental"
+        title_en: "Documentary photography"
+        en_construccio: true
+        bloc: "practica"
+
+  - id: "gran-format"
+    label: "Gran format i mig format"
+    label_es: "Gran formato y medio formato"
+    label_en: "Large and medium format"
+    bloc: "gran-format"
+    steps:
+      - title: "Hasselblad 500"
+        slug: "hasselblad-500"
+        desc: "Mig format 6×6. Visió quadrada."
+        desc_es: "Medio formato 6×6. Visión cuadrada."
+        desc_en: "Medium format 6×6. Square vision."
+        bloc: "mig-format"
+
+      - title: "Retrat 6×6"
+        title_es: "Retrato 6×6"
+        title_en: "6×6 portrait"
         slug: "retrat-6x6"
         bloc: "mig-format"
+
+      - title: "Introducció gran format"
+        title_es: "Introducción gran formato"
+        title_en: "Large format intro"
+        slug: "introduccio-gran-format"
+        bloc: "gran-format"
+
+      - title: "Gran format 4×5"
+        title_es: "Gran formato 4×5"
+        title_en: "Large format 4×5"
+        slug: "gran-format-4x5"
+        bloc: "gran-format"
 
       - title: "Retrat gran format"
         title_es: "Retrato gran formato"
         title_en: "Large format portrait"
         slug: "retrat-gran-format"
         bloc: "gran-format"
+        extern: true
 
-      - title: "Il·luminació a l'estudi"
-        title_es: "Iluminación en el estudio"
-        title_en: "Studio lighting"
-        slug: ""
-        bloc: "practica"
-        avait: true
-
-  - group: "tecnic"
-    title: "Tècnics"
-    title_es: "Técnicos"
-    title_en: "Technical"
-    items:
-      - title: "Fotografia estenopeica"
-        title_es: "Fotografía estenopeica"
-        title_en: "Pinhole photography"
-        slug: "fotografia-estenopeica"
-        bloc: "gran-format"
-        desc: "Crea la teva càmera des de zero"
-        desc_es: "Crea tu cámara desde cero"
-        desc_en: "Build your own camera from scratch"
-
-      - title: "Gran format — Iniciació"
-        title_es: "Gran formato — Iniciación"
-        title_en: "Large format — Intro"
-        slug: "introduccio-gran-format"
-        bloc: "gran-format"
-
-      - title: "Gran format — Avançat"
-        title_es: "Gran formato — Avanzado"
-        title_en: "Large format — Advanced"
-        slug: "gran-format-4x5"
-        bloc: "gran-format"
-
-      - title: "Revelat + positivat en un dia"
-        title_es: "Revelado + positivado en un día"
-        title_en: "Develop and print in one day"
-        slug: "revelat-i-positivat"
-        bloc: "proces"
+especial:
+  title: "Tria el teu recorregut"
+  title_es: "Elige tu recorrido"
+  title_en: "Choose your path"
+  desc: "Cap taller s'ajusta exactament al que necessites? Dissenyem junts el teu recorregut a mida."
+  desc_es: "¿Ningún taller encaja exactamente con lo que necesitas? Diseñamos juntos tu recorrido a medida."
+  desc_en: "No workshop fits exactly what you need? Let's design your custom learning path together."
+  cta: "Parla amb nosaltres"
+  cta_es: "Habla con nosotros"
+  cta_en: "Let's talk"
+  slug: "tutoria-fotografica"
