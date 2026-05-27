@@ -511,33 +511,33 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 
 ### Formularis i integracions
 
-#### "Avisa'm" per taller — flux complet (PRIORITAT ALTA)
-El botó ja existeix als tallers i passa `?taller=slug` a la URL. Falta configurar els serveis:
-1. **Brevo:** crear llista "Avisos de tallers" + atribut de contacte `TALLER` (text)
-2. **Tally:** crear formulari "Avisa'm" amb camp email + camp ocult `taller` (captura `@taller` de la URL) + integració nativa → Brevo (mapeja `taller` → atribut `TALLER`)
-3. **Hugo:** omplir `tallyFormAvisa = "XXXX"` a `hugo.toml` amb l'ID del formulari Tally
-4. **Brevo automation:** disparador = contacte afegit a la llista → envia email de confirmació
-5. **Waitlist manual:** importar `waitlist.csv` a Brevo quan el formulari estigui actiu (la Nuria Graell Bullich ja hi és anotada per al taller `retrat-6x6`)
+#### "Avisa'm" per taller — PARCIALMENT LLEST (2026-05-27)
 
-- [ ] Formularis Tally restants: `tallyFormNewsletter`, `tallyFormSolicitud`, `tallyFormContact`
-- [ ] Brevo: configurar llistes i integració Tally → Brevo per a newsletter i waitlist
-- [ ] PDF alumnes: pipeline Make.com → Pandoc → email. Pàgines privades ja definides.
+**Estat actual:**
+- [x] Brevo: llista `#5 — Waitlist tallers` creada
+- [x] Brevo: atributs `TALLER`, `IDIOMA`, `NOM`, `DATA_SOL_LICITUD`, `NEWSLETTER` ja existien
+- [x] Tally: formulari creat — ID `LZ6r0O` — camps: email + hidden `taller` (`@taller`) → integració Brevo llista #5
+- [x] Hugo: `tallyFormAvisa = "LZ6r0O"` a `hugo.toml` — botó actiu a tots els tallers
+- [ ] **PENDENT: Brevo automation** — email de confirmació automàtic quan s'afegeix contacte a llista #5
 
-### Formularis — PRIORITAT ALTA
+**Com crear l'automation (pendent fer a l'estudi):**
+1. `app.brevo.com → Automations → New automation → Start from scratch`
+2. **Trigger:** "Contact is added to a list" → llista #5
+3. **Primer:** crear el template a `Email → Templates → Create a template`:
+   - Nom: `Avisa'm — confirmació`
+   - Assumpte: `T'avisarem quan obrim places — Llumàtics`
+   - Cos: "Hem apuntat el teu interès. Quan obrim places per al taller t'enviarem un avís. / Joan — Llumàtics"
+   - Guardar i activar el template
+4. **Action:** "Send an email" → seleccionar template `Avisa'm — confirmació`
+5. Activar l'automatització
 
-#### "Avisa'm" per taller
-El botó ja existeix i passa `?taller=slug` a la URL. Falta configurar:
-1. **Brevo:** crear llista "Avisos de tallers" + atribut `TALLER` (text)
-2. **Tally:** formulari amb camp email + camp ocult `taller` → integració Brevo
-3. **Hugo:** omplir `tallyFormAvisa = "XXXX"` a `hugo.toml`
-4. **Brevo automation:** contacte afegit → email de confirmació automàtic
-5. **Waitlist manual:** importar `waitlist.csv` (Nuria Graell Bullich → `retrat-6x6`)
+**Waitlist manual pendent:**
+- Importar `waitlist.csv` a Brevo llista #5 (Núria Graell Bullich → taller `retrat-6x6`)
 
 #### Altres formularis Tally pendents
 - [ ] `tallyFormNewsletter` — subscripció al butlletí
 - [ ] `tallyFormSolicitud` — sol·licitar data de taller
 - [ ] `tallyFormContact` — formulari de contacte general
-- [ ] Brevo: configurar llistes i integració Tally → Brevo
 
 #### PDF alumnes
 - [ ] Pipeline Make.com → Pandoc → email. **SUBSTITUÏT** per sistema de documentació al navegador (vegeu secció següent).
