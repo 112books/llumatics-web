@@ -395,6 +395,19 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-05-29
+**Tallers complets + metàfora metro + SEO/GEO + animació recorregut**
+
+- **Docs alumnes CA publicats** (`draft: false`): 20 docs passats a visible (cianotipia, copies-beers-developer, copies-en-paper, digitalitzacio-escaner, edicio-imatges-fotoquimiques, fotografia-de-carrer, fotografia-estenopeica, fotogrames-cianotipia, gran-format-4x5, guinneol, hasselblad-500, introduccio-al-positivat, introduccio-gran-format, retrat-6x6, retrat-amb-holga, retrat-analogic, reveladors-artesanals, revelat-color-bn, revelat-i-positivat, revelats-experimentals).
+- **Preus fixats**: `revelat-i-positivat` → 420€ (CA/ES/EN), `tutoria-fotografica` → `durada_hores: 2` (CA/ES/EN), `preu_3` arrodoniment a `introduccio-al-positivat` i `revelat-color-bn` (CA/ES/EN).
+- **Fix imatge**: `digitalitzacio-scanner.jpg` → `digitalitzacio-escaner.jpg` (ES/EN apuntaven a fitxer inexistent).
+- **Fix CSS**: `section__subtitle` usava `--color-error` (vermell) → ara `--color-text-muted`.
+- **Metàfora metro**: home secció "Sis línies de formació" + paràgraf explicatiu (CA/ES/EN). `_index.md` tallers (CA/ES/EN) reescrit: subtítol metro, cos curt, fix "cinc→sis àmbits".
+- **FAQPage schema** (`/contacte/`): 10 preguntes/respostes JSON-LD per AEO/featured snippets.
+- **llms.txt** actualitzat: +20 tallers, 6 línies metro, fets citable per IA, secció "Fets clau".
+- **Pàgina Sobre**: paràgraf de fets estructurats citable (70 paraules, autocontingut).
+- **Animació recorregut** (`/tallers/`): acordió smooth (`max-height` cubic-bezier), swatch creix 28→44px en obrir, stops entren amb `@keyframes stopIn` + stagger nth-child.
+
 ### 2026-05-22
 **Val-regal complet (front-end) + agenda externs + hover quiz**
 
