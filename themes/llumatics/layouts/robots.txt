@@ -2,5 +2,21 @@ User-agent: *
 Disallow: /tallers/*/privat/
 Disallow: /es/tallers/*/privat/
 Disallow: /en/tallers/*/privat/
+Disallow: /privat/
+Disallow: /es/privat/
+Disallow: /en/privat/
+Disallow: /confirmat/
+Disallow: /es/confirmat/
+Disallow: /en/confirmat/
+
+# Bloquejar rastreadors d'entrenament IA
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
