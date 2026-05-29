@@ -1826,6 +1826,12 @@ button, input, select, textarea {
   border-radius: 3px;
   background: var(--bloc-color, var(--color-border));
   flex-shrink: 0;
+  transition: width 0.28s ease;
+}
+
+.recorregut-aline.is-open .recorregut-aline__swatch,
+.recorregut-aline--open .recorregut-aline__swatch {
+  width: 44px;
 }
 
 .recorregut-aline__name {
@@ -1854,16 +1860,20 @@ button, input, select, textarea {
   transform: rotate(90deg);
 }
 
-/* Body */
+/* Body — animated open/close */
 .recorregut-aline__body {
-  display: none;
-  padding: var(--space-1) 0 var(--space-5) 0;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
   position: relative;
+  transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.22s ease;
 }
 
 .recorregut-aline--open .recorregut-aline__body,
 .recorregut-aline.is-open .recorregut-aline__body {
-  display: block;
+  max-height: 900px;
+  padding: var(--space-1) 0 var(--space-5) 0;
 }
 
 .recorregut-aline__body::before {
@@ -1881,6 +1891,11 @@ button, input, select, textarea {
   padding-left: var(--space-6);
 }
 
+@keyframes stopIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 .recorregut-stop {
   display: flex;
   align-items: flex-start;
@@ -1890,6 +1905,20 @@ button, input, select, textarea {
   max-width: 260px;
   min-width: 0;
 }
+
+.recorregut-aline.is-open .recorregut-stop {
+  animation: stopIn 0.28s ease both;
+}
+
+.recorregut-aline.is-open .recorregut-stop:nth-child(1)  { animation-delay: 0.08s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(2)  { animation-delay: 0.14s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(3)  { animation-delay: 0.19s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(4)  { animation-delay: 0.24s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(5)  { animation-delay: 0.28s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(6)  { animation-delay: 0.32s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(7)  { animation-delay: 0.35s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(8)  { animation-delay: 0.38s; }
+.recorregut-aline.is-open .recorregut-stop:nth-child(n+9) { animation-delay: 0.40s; }
 
 .recorregut-stop__dot {
   width: 13px; height: 13px;
