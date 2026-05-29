@@ -4,6 +4,8 @@ description: "Llumàtics és l'escola de fotografia de Joan Linux. Formació ana
 eyebrow: "Qui som"
 ---
 
+**Llumàtics** és una escola de fotografia analògica i química fundada per Joan Linux Martínez a Barcelona el 2017. Ofereix tallers de laboratori fotoquímic —revelat, cianotipia, gran format 4×5, mig format 6×6, fotogrames i reveladors artesanals com el Caffenol o el Wineol— en grups de màxim 4 alumnes. Opera a la Nau Bostik (La Sagrera, Barcelona) des de 2020. Les sessions es programen sota demanda.
+
 Llumàtics existeix per transmetre la passió per la fotografia de tota la vida a les persones que la senten de la mateixa manera. Portem molts anys fent i ensenyant fotografia analògica —molt abans que els hipsters la posessin de moda fa una dècada. No venim d'una tendència. Venim d'una necessitat.
 
 ## D'on venim
