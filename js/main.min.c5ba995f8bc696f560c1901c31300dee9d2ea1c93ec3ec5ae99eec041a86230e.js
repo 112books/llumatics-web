@@ -416,4 +416,16 @@ if (contactForm) {
     });
   }
 
+
+  // ─────────────────────────────────────────────────────────────
+  // RECORREGUT ACORDIÓ
+  // ─────────────────────────────────────────────────────────────
+  document.querySelectorAll('.recorregut-aline__header').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var line = this.closest('.recorregut-aline');
+      var isOpen = line.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
 })();
