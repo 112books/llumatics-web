@@ -3,7 +3,7 @@ title: "Digitalització i escàner"
 subtitle: "Els teus negatius mereixen més que una foto amb el mòbil"
 lead: "Tens negatius revelats i vols digitalitzar-los bé. No per compartir-los a Instagram, sinó per tenir arxius de qualitat que aguantin una impressió gran o una edició professional. Aprèn a extreure tot el que hi ha al negatiu."
 description: "Taller de digitalització de negatius analògics amb escàner. Configuració òptima, gestió del color i edició professional amb Photoshop i Lightroom. Barcelona."
-image: "/images/tallers/digitalitzacio-scanner.jpg"
+image: "/images/tallers/digitalitzacio-escaner.jpg"
 
 # Classificació
 tipus: "taller"
