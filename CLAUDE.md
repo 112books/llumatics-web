@@ -648,6 +648,26 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-05-29)
+**SEO tècnic + recorregut acordió responsive**
+
+- **SEO — 3 fixes crítics/alts:**
+  - `head.html`: meta `noindex` renderitzat des del frontmatter (`noindex: true` o `robots: "noindex, nofollow"`)
+  - `head.html`: `hreflang x-default` apuntant sempre a la versió CA
+  - `robots.txt`: afegits blocs per `/privat/`, `/confirmat/` (CA/ES/EN) i AI crawlers (GPTBot, Google-Extended, Bytespider)
+- **Recorregut formatiu — redisseny complet a acordió:**
+  - `data/recorregut.yaml`: `trunk` reestructurat com a objecte (era llista plana); afegit `bloc` a `path_a` i `path_b`
+  - `partials/recorregut.html`: reescrit complet — acordió data-driven, hub station, tronc comú obert per defecte, línies temàtiques, targeta especial, i18n CA/ES/EN, `en_construccio` + `avait`
+  - `main.css`: reemplaçats ~375 línies CSS de timeline/metro per ~160 línies d'acordió. Colors automàtics via `data-bloc` i variables CSS existents
+  - `main.js`: accordion toggle amb `aria-expanded`
+  - Manteniment: afegir nova línia = 1 entrada YAML a `linies[]`
+- Commit: `dda9d99d` — branca `develop` pujada a GitHub
+
+**SEO pendent (mig prioritat):**
+- [ ] og:image fallback
+- [ ] og:site_name + twitter:card
+- [ ] og:locale per ES/EN
+
 ### Fet aquesta sessió (2026-05-09)
 - [x] `fetch-analytics.php`: fix GoatCounter API v0 — endpoints i keys de resposta incorrectes
   - `/stats/refs` → `/stats/toprefs`
