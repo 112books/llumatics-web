@@ -2,26 +2,31 @@
 # Estructura: tronc comú → bifurcació (lab / digital) → línies temàtiques → especial
 
 trunk:
-  - title: "Iniciació analògica"
-    title_es: "Iniciación analógica"
-    title_en: "Analogue introduction"
-    slug: "fonaments-iniciacio-puntual"
-    bloc: "fonaments"
-    desc: "Càmera, llum i exposició. La base de tot."
-    desc_es: "Cámara, luz y exposición. La base de todo."
-    desc_en: "Camera, light and exposure. The foundation of everything."
+  bloc: "fonaments"
+  label: "Tronc comú"
+  label_es: "Tronco común"
+  label_en: "Common trunk"
+  steps:
+    - title: "Iniciació analògica"
+      title_es: "Iniciación analógica"
+      title_en: "Analogue introduction"
+      slug: "fonaments-iniciacio-puntual"
+      bloc: "fonaments"
+      desc: "Càmera, llum i exposició. La base de tot."
+      desc_es: "Cámara, luz y exposición. La base de todo."
+      desc_en: "Camera, light and exposure. The foundation of everything."
 
-  - title: "Primer revelat"
-    title_es: "Primer revelado"
-    title_en: "First develop"
-    slug: "iniciacio-revelat"
-    bloc: "proces"
-    desc: "Reveles el teu primer carret. La imatge neix davant teu."
-    desc_es: "Revelas tu primer carrete. La imagen nace ante ti."
-    desc_en: "Develop your first roll. Watch your image emerge."
-    is_fork: true
+    - title: "Primer revelat"
+      title_es: "Primer revelado"
+      title_en: "First develop"
+      slug: "iniciacio-revelat"
+      bloc: "proces"
+      desc: "Reveles el teu primer carret. La imatge neix davant teu."
+      desc_es: "Revelas tu primer carrete. La imagen nace ante ti."
+      desc_en: "Develop your first roll. Watch your image emerge."
 
 path_a:
+  bloc: "proces"
   label: "Camí del laboratori"
   label_es: "Camino del laboratorio"
   label_en: "Darkroom path"
@@ -60,6 +65,7 @@ path_a:
       bloc: "proces"
 
 path_b:
+  bloc: "mig-format"
   label: "Camí digital"
   label_es: "Camino digital"
   label_en: "Digital path"

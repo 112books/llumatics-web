@@ -1724,14 +1724,14 @@ button, input, select, textarea {
   transform: translateX(4px);
 }
 
-/* ── Recorregut formatiu (línia del temps) ───────────────────────────────── */
+/* ── Recorregut formatiu — acordió ──────────────────────────────────────── */
 .recorregut {
   margin-block: var(--space-12);
 }
 
 .recorregut__header {
   max-width: 620px;
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
 }
 
 .recorregut__title {
@@ -1748,381 +1748,193 @@ button, input, select, textarea {
   margin: 0;
 }
 
-/* Timeline — camí principal */
-.recorregut__timeline {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 0;
-  position: relative;
-  margin-bottom: var(--space-12);
-}
-
-/* Línia horitzontal de fons */
-.recorregut__timeline::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: calc(100% / 16);
-  right: calc(100% / 16);
-  height: 2px;
-  background: var(--color-border);
-  z-index: 0;
-}
-
-.recorregut__step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  padding: 0 var(--space-2);
-}
-
-.recorregut__connector {
-  display: none; /* used only in mobile vertical layout */
-}
-
-.recorregut__node {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bloc-color, var(--color-border));
+/* Hub */
+.recorregut__hub {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-bottom: var(--space-3);
-  transition: transform var(--transition), box-shadow var(--transition);
-  position: relative;
-  z-index: 1;
-}
-
-.recorregut__step--aviat .recorregut__node {
-  background: var(--color-bg-alt);
-  border: 2px dashed var(--color-border);
-}
-
-.recorregut__num {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-
-.recorregut__step--aviat .recorregut__num {
-  color: var(--color-text-muted);
-}
-
-.recorregut__step:not(.recorregut__step--aviat):hover .recorregut__node {
-  transform: scale(1.12);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
-.recorregut__step-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-1);
-}
-
-.recorregut__step-title {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-a.recorregut__step-title:hover {
-  color: var(--color-accent);
-}
-
-.recorregut__step--aviat .recorregut__step-title {
-  color: var(--color-text-muted);
-}
-
-.recorregut__step-desc {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.recorregut__badge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  background: var(--color-bg-alt);
-  padding: 2px 6px;
-  border-radius: var(--radius);
-  margin-top: var(--space-1);
-}
-
-/* Especialitzacions */
-.recorregut__tematic {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-6);
-}
-
-.recorregut__tematic-label {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-4);
-}
-
-.recorregut__tematic-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-}
-
-.recorregut__tematic-item {
-  /* inherits --bloc-color, --bloc-bg, --bloc-text via data-bloc */
-}
-
-.recorregut__tematic-link {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: var(--space-2) var(--space-4);
-  background: var(--bloc-bg, var(--color-bg-alt));
-  border: 1px solid transparent;
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--bloc-text, var(--color-text));
-  text-decoration: none;
-  transition: border-color var(--transition), transform var(--transition);
-}
-
-a.recorregut__tematic-link:hover {
-  border-color: var(--bloc-color, var(--color-border));
-  transform: translateY(-1px);
-}
-
-.recorregut__tematic-link--aviat {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.recorregut__tematic-sub {
-  font-size: var(--text-xs);
-  font-weight: 400;
-  color: var(--color-text-muted);
-}
-
-/* Responsive — timeline vertical en mòbil */
-@media (max-width: 900px) {
-  .recorregut__timeline {
-    grid-template-columns: 1fr;
-    gap: var(--space-1);
-  }
-
-  .recorregut__timeline::before {
-    top: 0;
-    bottom: 0;
-    left: 19px;
-    right: auto;
-    width: 2px;
-    height: auto;
-  }
-
-  .recorregut__step {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-    padding: var(--space-2) 0;
-    gap: var(--space-4);
-  }
-
-  .recorregut__node {
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-
-  .recorregut__step-body {
-    align-items: flex-start;
-    padding-top: var(--space-2);
-  }
-
-  .recorregut__step-title {
-    font-size: var(--text-sm);
-  }
-}
-
-/* ── Recorregut: trunk + bifurcació ─────────────────────────────────────── */
-
-/* Trunk: 2 passos comuns en horitzontal */
-.recorregut__trunk {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  position: relative;
-  max-width: 380px;
+  gap: var(--space-4);
   margin-bottom: var(--space-6);
 }
 
-.recorregut__trunk::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: calc(100% / 4);
-  right: calc(100% / 4);
-  height: 2px;
-  background: var(--color-border);
-  z-index: 0;
+.recorregut__hub-circle {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--color-text);
+  color: var(--color-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; text-align: center; line-height: 1.25;
+  flex-shrink: 0;
 }
 
-/* Pas de bifurcació: node ressaltat */
-.recorregut__step--fork .recorregut__node {
-  background: var(--color-surface);
-  border: 2px solid var(--bloc-color, var(--color-accent));
-}
-
-.recorregut__step--fork .recorregut__num {
-  color: var(--bloc-color, var(--color-accent));
-}
-
-.recorregut__fork-badge {
-  display: inline-block;
-  font-size: 0.65rem;
+.recorregut__hub-name {
+  font-size: var(--text-base);
   font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--color-accent);
-  margin-top: var(--space-1);
 }
 
-/* Fork row: dos camins en paral·lel */
-.recorregut__fork-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-5);
-  margin-bottom: var(--space-10);
-  max-width: 760px;
+.recorregut__hub-addr {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: 0.1rem;
 }
 
-/* Path card */
-.recorregut__path {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
-  background: var(--color-surface);
+/* ── Acordió ── */
+.recorregut-accord {
+  border-top: 1px solid var(--color-border);
 }
 
-.recorregut__path-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+.recorregut-group-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-accent);
-  margin: 0 0 var(--space-4);
-  padding-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  padding: var(--space-5) 0 var(--space-2);
+  opacity: 0.7;
+}
+
+/* Línia de l'acordió */
+.recorregut-aline {
   border-bottom: 1px solid var(--color-border);
 }
 
-/* Passos dins el path: llista vertical amb línia connectora */
-.recorregut__path-steps {
+.recorregut-aline__header {
   display: flex;
-  flex-direction: column;
-  position: relative;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-1);
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity var(--transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.recorregut__path-steps::before {
-  content: '';
-  position: absolute;
-  top: 28px;
-  bottom: 28px;
-  left: 13px;
-  width: 2px;
-  background: var(--color-border);
-  z-index: 0;
-}
+.recorregut-aline__header:hover { opacity: 0.7; }
 
-.recorregut__path-step {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-2) 0;
-  position: relative;
-  z-index: 1;
-}
-
-.recorregut__path-node {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.recorregut-aline__swatch {
+  width: 28px; height: 5px;
+  border-radius: 3px;
   background: var(--bloc-color, var(--color-border));
   flex-shrink: 0;
-  margin-top: 1px;
 }
 
-.recorregut__path-step .recorregut__step-body {
-  align-items: flex-start;
-  text-align: left;
+.recorregut-aline__name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  flex: 1;
+  line-height: 1.2;
+  color: var(--color-text);
 }
 
-/* Especialitzacions: grups de pills */
-.recorregut__especialitzacions {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-6);
+.recorregut-aline__count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.recorregut-aline__arrow {
+  font-size: 0.6rem;
+  color: var(--color-border);
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+}
+
+.recorregut-aline--open .recorregut-aline__arrow,
+.recorregut-aline.is-open .recorregut-aline__arrow {
+  transform: rotate(90deg);
+}
+
+/* Body */
+.recorregut-aline__body {
+  display: none;
+  padding: var(--space-1) 0 var(--space-5) 0;
+  position: relative;
+}
+
+.recorregut-aline--open .recorregut-aline__body,
+.recorregut-aline.is-open .recorregut-aline__body {
+  display: block;
+}
+
+.recorregut-aline__body::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px; border-radius: 2px;
+  background: var(--bloc-color, var(--color-border));
+}
+
+/* Graella de parades */
+.recorregut-stops {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-/* En construcció: pill dins la targeta */
-.recorregut__tematic-link--enc {
-  opacity: 0.55;
-  cursor: default;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
+  padding-left: var(--space-6);
 }
 
-.recorregut__enc-pill {
+.recorregut-stop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-6) var(--space-2) 0;
+  flex: 1 1 200px;
+  max-width: 260px;
+  min-width: 0;
+}
+
+.recorregut-stop__dot {
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  background: var(--bloc-color, var(--color-border));
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--bloc-color, var(--color-border));
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.recorregut-stop__name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+a.recorregut-stop__name:hover {
+  color: var(--color-accent);
+}
+
+.recorregut-stop__desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.35;
+  margin-top: var(--space-1);
+}
+
+.recorregut-enc-tag {
   display: inline-block;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
   background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 1px 5px;
-  white-space: nowrap;
-}
-
-/* En construcció dins path (bifurcació) */
-.recorregut__path-step--enc {
-  opacity: 0.55;
-}
-
-.recorregut__path-step--enc .recorregut__step-title {
   color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 1px 5px;
+  border-radius: var(--radius);
+  margin-left: var(--space-1);
+  vertical-align: middle;
 }
 
-.recorregut__enc-badge {
-  display: inline-block;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 1px 5px;
-  margin-top: 2px;
+.recorregut-stop--enc .recorregut-stop__dot  { opacity: 0.25; }
+.recorregut-stop--enc .recorregut-stop__name { color: var(--color-text-muted); font-weight: 400; font-style: italic; }
+.recorregut-stop--avait .recorregut-stop__dot  { opacity: 0.2; }
+.recorregut-stop--avait .recorregut-stop__name { color: var(--color-border); font-weight: 400; font-style: italic; }
+
+/* Mòbil: parades en columna */
+@media (max-width: 540px) {
+  .recorregut-stop { flex: 1 1 100%; max-width: 100%; padding-right: 0; }
+  .recorregut__hub-circle { width: 44px; height: 44px; }
 }
 
 /* Targeta especial: Tria el teu recorregut */
