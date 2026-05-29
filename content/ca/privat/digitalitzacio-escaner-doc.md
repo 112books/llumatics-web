@@ -8,7 +8,7 @@ noindex: true
 sitemap:
   disable: true
 robots: "noindex, nofollow"
-draft: true
+draft: false
 ---
 
 ## Tipus d'escàners per a pel·lícula

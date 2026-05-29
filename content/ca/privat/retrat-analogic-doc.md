@@ -8,7 +8,7 @@ noindex: true
 sitemap:
   disable: true
 robots: "noindex, nofollow"
-draft: true
+draft: false
 ---
 
 ## Qualitat de la llum: la variable fonamental

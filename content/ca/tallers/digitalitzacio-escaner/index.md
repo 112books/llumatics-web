@@ -71,7 +71,9 @@ En aquest taller treballem amb l'escàner del laboratori i el programari de gest
 ## Cal portar
 
 - Negatius a escanejar: 35mm o mig format revelats (propis o de mostra)
-- Portàtil amb Lightroom o Photoshop instal·lat (imprescindible per a la part d'edició)
+- Opcional: el teu ordinador portàtil amb Lightroom o Photoshop instal·lat (Sinó utilitzarem el de l'estudi)
+- Opcional: el teu ordinador propi escanner i t'ensenyem amb ell.
+
 
 ## No inclòs
 

@@ -8,7 +8,7 @@ noindex: true
 sitemap:
   disable: true
 robots: "noindex, nofollow"
-draft: true
+draft: false
 ---
 
 ## La Holga: imperfecció com a intenció
