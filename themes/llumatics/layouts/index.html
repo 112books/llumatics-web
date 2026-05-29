@@ -36,7 +36,10 @@
   <div class="section__header">
     <p class="section__eyebrow">{{ i18n "section_blocs_eyebrow" | default "Formació" }}</p>
     <h2 class="section__title">{{ i18n "section_blocs_title" | default "Àmbits" }}</h2>
-    <p class="section__subtitle">{{ i18n "section_blocs_subtitle" | default "Sis línies de treball. De la iniciació tècnica a l'experimentació." }}</p>
+    <p class="section__subtitle">{{ i18n "section_blocs_subtitle" | default "Sis línies, com al metro. Cadascuna amb el seu recorregut propi." }}</p>
+    {{ with i18n "section_blocs_intro" }}
+    <p class="section__intro">{{ . }} <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}">{{ i18n "section_blocs_cta" | default "Veure el recorregut" }} →</a></p>
+    {{ end }}
   </div>
   <div class="blocs-grid">
     {{ $lang := site.Language.Lang }}
