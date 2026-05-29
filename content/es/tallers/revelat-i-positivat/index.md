@@ -13,10 +13,10 @@ nivell: "Iniciació"
 estat: "actiu"
 
 # Ficha técnica
-preu_1: 375
-preu_2: 210
-preu_3: 160
-preu_4: 134
+preu_1: 420
+preu_2: 239
+preu_3: 179
+preu_4: 150
 durada_hores: 8
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false

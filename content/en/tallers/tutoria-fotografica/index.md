@@ -18,6 +18,7 @@ preu_hora: 60
 preu_1: 120
 preu_2: 170
 preu_3: 220
+durada_hores: 2
 duration: "2 to 4 hours (to be agreed)"
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false

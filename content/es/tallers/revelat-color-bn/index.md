@@ -20,7 +20,7 @@ estat: "actiu"
 # Ficha técnica
 preu_1: 170
 preu_2: 97
-preu_3: 72
+preu_3: 73
 preu_4: 61
 durada_hores: 3
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"

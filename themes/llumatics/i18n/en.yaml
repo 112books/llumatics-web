@@ -30,8 +30,10 @@ section_spaces_title: "Our spaces"
 section_spaces_subtitle: "Studio, darkroom and specialist library."
 
 section_blocs_eyebrow: "Training"
-section_blocs_title: "Areas"
-section_blocs_subtitle: "Six lines of work. From technical foundations to experimentation."
+section_blocs_title: "Six learning lines"
+section_blocs_subtitle: "Like a metro map: each line has its own route. Take single workshops or follow a full path."
+section_blocs_intro: "Jump on at any station — take one workshop with no prior knowledge needed — or travel a full line to build real mastery of a process. You decide how far you go."
+section_blocs_cta: "See all lines"
 
 section_blog_eyebrow: "Blog"
 section_blog_title: "From the lab"

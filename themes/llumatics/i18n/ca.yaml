@@ -30,8 +30,10 @@ section_spaces_title: "Els nostres espais"
 section_spaces_subtitle: "Plató, laboratori fosc i biblioteca especialitzada."
 
 section_blocs_eyebrow: "Formació"
-section_blocs_title: "Àmbits"
-section_blocs_subtitle: "Sis línies de treball. De la iniciació tècnica a l'experimentació."
+section_blocs_title: "Sis línies de formació"
+section_blocs_subtitle: "Com al metro: cada línia té el seu recorregut. Pots fer tallers solts o seguir un camí complet."
+section_blocs_intro: "Pots pujar a qualsevol estació —fer un taller concret sense saber res del que ve abans— o recórrer una línia sencera per construir un domini real del procés. Tu decideixes fins on arribes."
+section_blocs_cta: "Veure totes les línies"
 
 section_blog_eyebrow: "Blog"
 section_blog_title: "Del laboratori"
