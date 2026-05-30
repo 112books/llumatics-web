@@ -1,0 +1,130 @@
+name: Instagram — Nova agenda
+
+on:
+  workflow_run:
+    workflows: ["Deploy → Producció"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Instal·la pyyaml
+        run: pip install pyyaml --quiet
+
+      - name: Detecta i envia agenda nova
+        env:
+          MAKECOM_WEBHOOK: ${{ secrets.MAKECOM_INSTAGRAM_AGENDA_WEBHOOK }}
+        run: |
+          python3 << 'PYEOF'
+          import os, re, json, urllib.request, subprocess
+          import yaml
+
+          webhook_url = os.environ.get('MAKECOM_WEBHOOK', '')
+          if not webhook_url:
+              print("MAKECOM_INSTAGRAM_AGENDA_WEBHOOK no configurat. Saltant.")
+              exit(0)
+
+          result = subprocess.run(
+              ['git', 'diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD'],
+              capture_output=True, text=True
+          )
+
+          if result.returncode != 0:
+              print(f"Error executant git diff: {result.stderr}")
+              exit(1)
+
+          all_new = result.stdout.strip().split('\n') if result.stdout.strip() else []
+          agenda_files = [
+              f for f in all_new
+              if re.match(r'content/ca/agenda/[^/]+\.md$', f)
+              and not f.endswith('_index.md')
+          ]
+
+          if not agenda_files:
+              print("Cap entrada d'agenda nova detectada.")
+              exit(0)
+
+          def abs_url(path):
+              if not path:
+                  return ''
+              return f"https://llumatics.com/{path.lstrip('/')}"
+
+          for filepath in agenda_files:
+              if not os.path.exists(filepath):
+                  continue
+
+              with open(filepath, encoding='utf-8') as f:
+                  content = f.read()
+
+              match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+              if not match:
+                  print(f"No s'ha trobat frontmatter a {filepath}")
+                  continue
+
+              fm = yaml.safe_load(match.group(1))
+
+              if fm.get('draft', False):
+                  print(f"Saltat (draft): {filepath}")
+                  continue
+              if fm.get('status') not in ('active', 'soon'):
+                  print(f"Saltat (status={fm.get('status')}): {filepath}")
+                  continue
+
+              course_ref = fm.get('course_ref', '')
+              date_start = str(fm.get('date_start', ''))
+
+              if not course_ref or not date_start:
+                  print(f"Saltat (sense course_ref o date_start): {filepath}")
+                  continue
+
+              taller_title = course_ref
+              taller_image_1 = ''
+              taller_image_2 = ''
+              taller_url = f"https://llumatics.com/tallers/{course_ref}/"
+              taller_path = f"content/ca/tallers/{course_ref}/index.md"
+
+              if os.path.exists(taller_path):
+                  with open(taller_path, encoding='utf-8') as tf:
+                      tc = tf.read()
+                  tm = re.match(r'^---\n(.*?)\n---', tc, re.DOTALL)
+                  if tm:
+                      tfm = yaml.safe_load(tm.group(1))
+                      taller_title = tfm.get('title', course_ref)
+                      imgs = tfm.get('images', [])
+                      taller_image_1 = abs_url(imgs[0]) if imgs else abs_url(tfm.get('image', ''))
+                      taller_image_2 = abs_url(imgs[1]) if len(imgs) > 1 else taller_image_1
+
+              payload = {
+                  'course_ref': course_ref,
+                  'title': taller_title,
+                  'date_start': date_start,
+                  'time_start': fm.get('time_start', '10:00'),
+                  'lloc': fm.get('lloc', fm.get('location', 'Nau Bostik, La Sagrera, Barcelona')),
+                  'max_places': fm.get('max_places', 4),
+                  'image_1': taller_image_1,
+                  'image_2': taller_image_2,
+                  'url': taller_url,
+              }
+
+              data = json.dumps(payload).encode('utf-8')
+              req = urllib.request.Request(
+                  webhook_url, data=data,
+                  headers={'Content-Type': 'application/json'}
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      print(f"Webhook enviat per agenda: {course_ref} — {date_start} — HTTP {resp.status}")
+              except Exception as e:
+                  print(f"Error enviant webhook per {course_ref}: {e}")
+                  exit(1)
+          PYEOF
