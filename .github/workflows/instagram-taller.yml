@@ -38,7 +38,10 @@ jobs:
               ['git', 'diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD'],
               capture_output=True, text=True
           )
-          all_new = result.stdout.strip().split('\n')
+          if result.returncode != 0:
+              print(f"Error executant git diff: {result.stderr}")
+              exit(1)
+          all_new = result.stdout.strip().split('\n') if result.stdout.strip() else []
           taller_files = [
               f for f in all_new
               if re.match(r'content/ca/tallers/[^/]+/index\.md$', f)
@@ -47,6 +50,11 @@ jobs:
           if not taller_files:
               print("Cap taller nou detectat.")
               exit(0)
+
+          def abs_url(path):
+              if not path:
+                  return ''
+              return f"https://llumatics.com/{path.lstrip('/')}"
 
           for filepath in taller_files:
               if not os.path.exists(filepath):
@@ -76,9 +84,9 @@ jobs:
                   'slug': slug,
                   'title': fm.get('title', ''),
                   'lead': fm.get('lead', ''),
-                  'image': f"https://llumatics.com{fm.get('image', '')}",
-                  'image_1': f"https://llumatics.com{images[0]}" if images else f"https://llumatics.com{fm.get('image', '')}",
-                  'image_2': f"https://llumatics.com{images[1]}" if len(images) > 1 else f"https://llumatics.com{fm.get('image', '')}",
+                  'image': abs_url(fm.get('image', '')),
+                  'image_1': abs_url(images[0]) if images else abs_url(fm.get('image', '')),
+                  'image_2': abs_url(images[1]) if len(images) > 1 else abs_url(fm.get('image', '')),
                   'durada_hores': fm.get('durada_hores', ''),
                   'max_places': fm.get('max_places', 4),
                   'lloc': fm.get('lloc', 'Nau Bostik, La Sagrera, Barcelona'),
@@ -93,6 +101,10 @@ jobs:
                   webhook_url, data=data,
                   headers={'Content-Type': 'application/json'}
               )
-              urllib.request.urlopen(req)
-              print(f"Webhook enviat per: {slug}")
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      print(f"Webhook enviat per: {slug} — HTTP {resp.status}")
+              except Exception as e:
+                  print(f"Error enviant webhook per {slug}: {e}")
+                  exit(1)
           PYEOF
