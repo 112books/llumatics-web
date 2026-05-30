@@ -1,0 +1,98 @@
+name: Instagram — Nou taller
+
+on:
+  workflow_run:
+    workflows: ["Deploy → Producció"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Instal·la pyyaml
+        run: pip install pyyaml --quiet
+
+      - name: Detecta i envia tallers nous
+        env:
+          MAKECOM_WEBHOOK: ${{ secrets.MAKECOM_INSTAGRAM_TALLER_WEBHOOK }}
+        run: |
+          python3 << 'PYEOF'
+          import os, re, json, urllib.request, subprocess
+          import yaml
+
+          webhook_url = os.environ.get('MAKECOM_WEBHOOK', '')
+          if not webhook_url:
+              print("MAKECOM_INSTAGRAM_TALLER_WEBHOOK no configurat. Saltant.")
+              exit(0)
+
+          result = subprocess.run(
+              ['git', 'diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD'],
+              capture_output=True, text=True
+          )
+          all_new = result.stdout.strip().split('\n')
+          taller_files = [
+              f for f in all_new
+              if re.match(r'content/ca/tallers/[^/]+/index\.md$', f)
+          ]
+
+          if not taller_files:
+              print("Cap taller nou detectat.")
+              exit(0)
+
+          for filepath in taller_files:
+              if not os.path.exists(filepath):
+                  continue
+
+              with open(filepath, encoding='utf-8') as f:
+                  content = f.read()
+
+              match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+              if not match:
+                  print(f"No s'ha trobat frontmatter a {filepath}")
+                  continue
+
+              fm = yaml.safe_load(match.group(1))
+
+              if fm.get('draft', True):
+                  print(f"Saltat (draft): {filepath}")
+                  continue
+              if fm.get('estat') != 'actiu':
+                  print(f"Saltat (estat={fm.get('estat')}): {filepath}")
+                  continue
+
+              slug = filepath.split('/')[3]
+              images = fm.get('images', [])
+
+              payload = {
+                  'slug': slug,
+                  'title': fm.get('title', ''),
+                  'lead': fm.get('lead', ''),
+                  'image': f"https://llumatics.com{fm.get('image', '')}",
+                  'image_1': f"https://llumatics.com{images[0]}" if images else f"https://llumatics.com{fm.get('image', '')}",
+                  'image_2': f"https://llumatics.com{images[1]}" if len(images) > 1 else f"https://llumatics.com{fm.get('image', '')}",
+                  'durada_hores': fm.get('durada_hores', ''),
+                  'max_places': fm.get('max_places', 4),
+                  'lloc': fm.get('lloc', 'Nau Bostik, La Sagrera, Barcelona'),
+                  'blocs': fm.get('blocs', []),
+                  'sota_demanda': fm.get('sota_demanda', True),
+                  'canal': fm.get('canal', 'llumatics'),
+                  'url': f"https://llumatics.com/tallers/{slug}/",
+              }
+
+              data = json.dumps(payload).encode('utf-8')
+              req = urllib.request.Request(
+                  webhook_url, data=data,
+                  headers={'Content-Type': 'application/json'}
+              )
+              urllib.request.urlopen(req)
+              print(f"Webhook enviat per: {slug}")
+          PYEOF
