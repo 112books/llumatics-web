@@ -648,6 +648,38 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-05-31)
+**Instagram — Disseny i infraestructura de promoció automàtica de tallers**
+
+- **Spec dissenyada i aprovada:** `docs/superpowers/specs/2026-05-30-instagram-promocio-tallers-design.md`
+- **Pla d'implementació:** `docs/superpowers/plans/2026-05-31-instagram-promocio-tallers.md`
+- **`scripts/deploy.sh`** — substitueix el rsync manual. Fa: build Hugo + rsync VPS + detecció de tallers/agenda nous + webhook Make.com. Executable, sense dependència de GitHub Actions.
+- **`.env.example`** — plantilla per a les URLs dels webhooks de Make.com (el `.env` real va gitignored, l'usuari l'ha de crear)
+- **`.gitignore`** — afegit `.env`
+- **GitHub Actions descartats** — s'havien creat i revisat 3 workflows (deploy-production, instagram-taller, instagram-agenda) però eliminats per preferència de l'usuari: vol sistema independent i simple, sense dependències externes.
+- **Posts pilot (13 juny)** — 3 posts redactats per a "Iniciació al revelat" (Cameras & Films). L'usuari els publicarà manualment a Meta Business Suite.
+
+**Pendent per a la propera sessió — TASQUES MANUALS (requereixen l'usuari):**
+
+1. **Perfil Instagram** — bio, foto, highlights (15 min, des del mòbil)
+2. **Meta Developer App** — `developers.facebook.com` → crear app "Llumatics Instagram Publisher" → permisos `instagram_basic`, `instagram_content_publish`, `pages_read_engagement` → obtenir token llarga durada (~60 dies)
+3. **Instagram User ID** — via Graph API Explorer: `GET /{page-id}?fields=instagram_business_account`
+4. **Make.com — Escenari 1 "Nou taller"** — webhook → captions → Instagram Graph API (3 posts programats) → email preview a hola@llumatics.com
+5. **Make.com — Escenari 2 "Nova agenda"** — webhook → Posts 2 i 3 programats relatius a la data
+6. **Copiar URLs webhooks a `.env`** — `cp .env.example .env` i omplir `MAKECOM_INSTAGRAM_TALLER_WEBHOOK` i `MAKECOM_INSTAGRAM_AGENDA_WEBHOOK`
+7. **SSH key per al deploy** — `ssh-keygen -t ed25519 -C "llumatics-deploy"` + `ssh-copy-id` al VPS (per poder usar `scripts/deploy.sh` sense contrasenya)
+8. **Test end-to-end** — crear taller de prova, córrer `./scripts/deploy.sh`, verificar post a Meta Business Suite
+
+**Posts pilot 13 juny — PUBLICAR MANUALMENT (urgent, queden 13 dies):**
+
+| Post | Data | Imatge |
+|------|------|--------|
+| Anunci | Avui | `static/images/tallers/iniciacio-revelat.jpg` |
+| Procés | 6 de juny | `static/images/tallers/iniciacio-revelat-1.jpg` |
+| Recordatori | 11 de juny | `static/images/tallers/iniciacio-revelat-2.jpg` |
+
+Els 3 textos estan a la conversa del 2026-05-30/31. Publicar a Meta Business Suite: `business.facebook.com/content_management`.
+
 ### Fet aquesta sessió (2026-05-29)
 **SEO tècnic + recorregut acordió responsive**
 
