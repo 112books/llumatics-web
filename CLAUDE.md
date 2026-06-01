@@ -648,6 +648,27 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-06-01)
+**Instagram — Posts pilot publicats + perfil optimitzat + Meta Developer App iniciada**
+
+- **3 posts taller 13 juny** publicats/programats a Instagram via Meta Business Suite:
+  - Post 1 (Anunci): publicat avui
+  - Post 2 (Procés): programat per al 6 de juny
+  - Post 3 (Recordatori): programat per a l'11 de juny
+- **Perfil Instagram** optimitzat: bio, nom amb accent, lloc web `llumatics.com`
+- **Meta Developer App** iniciada a `developers.facebook.com` — nom: `Llumatics Publisher`, use case: "Manage messaging & content on Instagram". **Pendent:** connectar el business portfolio correcte (el que té el compte Instagram de Llumàtics) i completar la creació.
+
+**Pendent per a la propera sessió:**
+
+1. **Meta Developer App** — tornar a `developers.facebook.com`, trobar l'app guardada, connectar el business portfolio i completar la configuració
+2. **Token Instagram** — Graph API Explorer → permisos `instagram_basic` + `instagram_content_publish` + `pages_read_engagement` → intercanviar per token de llarga durada (~60 dies)
+3. **Instagram User ID** — `GET /{page-id}?fields=instagram_business_account` via Graph API Explorer
+4. **Make.com Escenari 1** — "Nou taller": webhook → captions → Instagram Graph API (3 posts) → email preview
+5. **Make.com Escenari 2** — "Nova agenda": webhook → Posts 2 i 3 programats
+6. **`.env` local** — `cp .env.example .env` + omplir els dos webhooks de Make.com
+7. **SSH key sense contrasenya** per al VPS (per a `./scripts/deploy.sh`)
+8. **Test end-to-end** — crear taller de prova, córrer `./scripts/deploy.sh`, verificar post a Meta Business Suite
+
 ### Fet aquesta sessió (2026-05-31)
 **Instagram — Disseny i infraestructura de promoció automàtica de tallers**
 
