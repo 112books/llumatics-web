@@ -1,5 +1,5 @@
 ---
 title: "Blog"
-description: "Reflexions sobre fotografia, tècnica, narrativa visual i ètica de la imatge."
+description: "Articles sobre fotografia analògica: revelat, química alternativa, processos i tècnica. Del laboratori de Llumàtics, Barcelona."
 eyebrow: "Reflexions"
 ---
