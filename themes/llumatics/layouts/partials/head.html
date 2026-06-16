@@ -42,24 +42,34 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ $ogImage | absURL }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:locale" content="{{ .Site.Params.locale | default "ca_ES" }}">
+{{- $localeMap := dict "ca" "ca_ES" "es" "es_ES" "en" "en_GB" -}}
+{{- $ogLocale := index $localeMap .Language.Lang | default "ca_ES" -}}
+<meta property="og:locale" content="{{ $ogLocale }}">
+{{- range .Translations }}
+{{- $altLocale := index $localeMap .Language.Lang }}
+{{- if $altLocale }}<meta property="og:locale:alternate" content="{{ $altLocale }}">{{ end }}
+{{- end }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImage | absURL }}">
 
-{{/* JSON-LD — EducationalOrganization (home) */}}
+{{/* JSON-LD — EducationalOrganization + LocalBusiness (home) */}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
+  "@type": ["EducationalOrganization", "LocalBusiness"],
   "name": "Llumàtics",
   "description": "Escola de fotografia analògica a Barcelona. Tallers de revelat, laboratori fosc i formació tècnica en petit grup.",
   "url": "https://llumatics.com",
   "logo": "https://llumatics.com/images/llumatics-logo.svg",
+  "image": "https://llumatics.com/images/tallers/revelat-bn.jpg",
   "email": "hola@llumatics.com",
   "foundingDate": "2017",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Transferència bancària, Bizum",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Carrer de Ferran Turné 1-11",
@@ -68,7 +78,16 @@
     "postalCode": "08031",
     "addressCountry": "ES"
   },
-  "areaServed": "Barcelona",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.4295,
+    "longitude": 2.1910
+  },
+  "hasMap": "https://maps.google.com/?q=Nau+Bostik,+Carrer+de+Ferran+Turné+1-11,+08031+Barcelona",
+  "areaServed": {
+    "@type": "City",
+    "name": "Barcelona"
+  },
   "sameAs": [
     "https://www.instagram.com/llumatics"
   ]

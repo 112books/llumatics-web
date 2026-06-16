@@ -68,4 +68,4 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 
 ## No inclòs
 
-- Revelat del carret exposat — disponible al [Taller de Revelat B/N](/tallers/revelat-pelicula-bn/) o com a tutoria.
+- Revelat del carret exposat — disponible al [Taller de Revelat B/N](/tallers/revelat-bn/) o com a tutoria.
