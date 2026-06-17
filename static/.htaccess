@@ -35,3 +35,126 @@ ErrorDocument 404 /404.html
 
 # Evitar llistat de directoris
 Options -Indexes
+
+# ============================================================
+# 301 Redirects — migració WordPress → Hugo
+# Cobreix les 433 URLs amb 404 detectades a Google Search Console
+# ============================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --- Prefix erroni /llumatics-web/en/ ---
+  RewriteRule ^llumatics-web/en/(.*)$ /en/$1 [R=301,L]
+
+  # ── CA: pàgines estàtiques canviades de nom ──────────────
+  RewriteRule ^sobre-nosaltres/?$ /sobre/ [R=301,L]
+  RewriteRule ^les-nostres-installacions/?$ /espais/ [R=301,L]
+  RewriteRule ^serveis/?$ /tallers/ [R=301,L]
+  RewriteRule ^tallers/revelat-pelicula-bn/?$ /tallers/revelat-bn/ [R=301,L]
+
+  # ── CA: posts i tallers antics ────────────────────────────
+  RewriteRule ^apren-a-utilitzar-la-teva-camera-de-rodet[^/]*/?$ /tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^dia-mundial-de-la-fotografia-estenopeica-2025(/feed)?/?$ /blog/dia-mundial-fotografia-estenopeica-2025/ [R=301,L]
+  RewriteRule ^immortalitzar-lanima-amb-la-fotografia-de-retrat/?$ /tallers/retrat-analogic/ [R=301,L]
+  RewriteRule ^inscripcio-oberta-per-sessions-individuals/?$ /blog/sessions-individuals-2020/ [R=301,L]
+  RewriteRule ^jornades-obertes-a-la-nau-bostik/?$ /blog/jornades-obertes-nau-bostik-2022/ [R=301,L]
+  RewriteRule ^llumatics-es-trasllada-a-la-nau-bostik/?$ /blog/trasllat-nau-bostik/ [R=301,L]
+  RewriteRule ^microsessio-fotografica-destudi-en-format-analogic(/feed)?/?$ /blog/sessio-maria-de-acha/ [R=301,L]
+  RewriteRule ^resultats-del-taller-de-gran-format/?$ /blog/resultats-taller-gran-format-2018/ [R=301,L]
+  RewriteRule ^resultats-del-taller-de-retrat-del-22-02-2019/?$ /blog/resultats-taller-retrat-2019-02/ [R=301,L]
+  RewriteRule ^retrats-amb-holga-120-cfn-a-lestudi/?$ /tallers/retrat-amb-holga/ [R=301,L]
+  RewriteRule ^streetphoto-fotografiant-la-ciutat(/feed)?/?$ /tallers/fotografia-de-carrer/ [R=301,L]
+  RewriteRule ^taller-de-fotografia-tinta-i-sang-2/?$ /blog/halloween-bodypaint-2020/ [R=301,L]
+  RewriteRule ^taller-diniciacio-a-la-fotografia-analogica-2/?$ /tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^taller-dintroduccio-al-positivat/?$ /tallers/introduccio-al-positivat/ [R=301,L]
+  RewriteRule ^taller-el-meravellos-mon-hasselblad/?$ /tallers/hasselblad-500/ [R=301,L]
+  RewriteRule ^taller-retrat-a-gran-format-a-lomography-embassy-barcelona/?$ /tallers/retrat-gran-format/ [R=301,L]
+  RewriteRule ^un-dia-de-revelat-analogic-pluja-cameres-zenit-i-molta-passio-per-la-fotografia/?$ /blog/revelat-analogic-zenit-2025/ [R=301,L]
+
+  # ── ES: pàgines estàtiques canviades de nom ──────────────
+  RewriteRule ^es/sobre-nosotros/?$ /es/sobre/ [R=301,L]
+  RewriteRule ^es/nuestras-instalaciones/?$ /es/espais/ [R=301,L]
+  RewriteRule ^es/servicios/?$ /es/tallers/ [R=301,L]
+  RewriteRule ^es/contacto/?$ /es/contacte/ [R=301,L]
+  RewriteRule ^es/politica-de-cookies/?$ /es/cookies/ [R=301,L]
+
+  # ── ES: sessions de taller (URLs amb data, WP antic) ─────
+  RewriteRule ^es/02-02-19-taller-de-revelado-en-blanco-y-negro/?$ /es/tallers/revelat-bn/ [R=301,L]
+  RewriteRule ^es/03-05-2025-taller-de-revelado-en-blanco-y-negro-en-cameras-films[^/]*/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/04-04-2020-taller-de-iniciacion-a-la-fotografia-analogica/?$ /es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^es/04-05-2019-taller-de-iniciacion-al-positivado/?$ /es/tallers/introduccio-al-positivat/ [R=301,L]
+  RewriteRule ^es/04-10-2025-taller-de-revelado-en-blanco-y-negro-en-cameras-films/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/05-07-2024-taller-de-forzados-en-el-festival-de-blues-de-barcelona/?$ /es/blog/taller-forcats-festival-blues-2024/ [R=301,L]
+  RewriteRule ^es/06-07-2019-taller-de-revelado-en-blanco-en-blanco-y-negro-positivado(/feed)?/?$ /es/tallers/revelat-bn/ [R=301,L]
+  RewriteRule ^es/07-03-2026-retrato-en-gran-formato-una-experiencia-analogica-para-todos/?$ /es/blog/retrat-gran-format-marc-2026/ [R=301,L]
+  RewriteRule ^es/08-14-18-taller-de-revelado-en-blanco-y-negro/?$ /es/tallers/revelat-bn/ [R=301,L]
+  RewriteRule ^es/10-08-2019-taller-de-cianotipia/?$ /es/tallers/cianotipia/ [R=301,L]
+  RewriteRule ^es/11-05-19-taller-de-revelado-en-blanco-y-negro-con-forzados/?$ /es/tallers/revelats-experimentals/ [R=301,L]
+  RewriteRule ^es/12-10-2019-taller-de-cianotipia(/feed)?/?$ /es/tallers/cianotipia/ [R=301,L]
+  RewriteRule ^es/14-09-19-taller-de-retrato/?$ /es/tallers/retrat-analogic/ [R=301,L]
+  RewriteRule ^es/15-11-2025-taller-de-fotogramas-con-cianotipia/?$ /es/blog/fotogrames-cianotipia-novembre-2025/ [R=301,L]
+  RewriteRule ^es/18-02-18-taller-de-revelado-en-blanco-y-negro-con-forzado/?$ /es/tallers/revelat-bn/ [R=301,L]
+  RewriteRule ^es/19-01-2019-taller-de-introduccion-al-positivado/?$ /es/tallers/introduccio-al-positivat/ [R=301,L]
+  RewriteRule ^es/19-05-19-taller-de-iniciacion-a-la-fotografia-analogica/?$ /es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^es/20-07-2024-taller-de-revelado-en-blanco-y-negro-2-2/?$ /es/blog/revelat-lomography-juliol-2024/ [R=301,L]
+  RewriteRule ^es/20-07-2024-taller-de-revelado-en-blanco-y-negro-2/?$ /es/blog/revelat-lomography-juliol-2024/ [R=301,L]
+  RewriteRule ^es/20-07-2024-taller-de-revelado-en-blanco-y-negro/?$ /es/blog/revelat-lomography-juliol-2024/ [R=301,L]
+  RewriteRule ^es/2024-08-24-taller-de-retrato-en-gran-formato-en-lomography-2/?$ /es/blog/retrat-gran-format-lomography-2024/ [R=301,L]
+  RewriteRule ^es/2024-08-24-taller-de-retrato-en-gran-formato-en-lomography/?$ /es/blog/retrat-gran-format-lomography-2024/ [R=301,L]
+  RewriteRule ^es/2025-02-01-taller-de-revelado-en-blanco-y-negro-a-lomography-embassy-barcelona/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/21-03-2026-taller-de-revelado-en-blanco-y-negro-en-cameras-films/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/21-09-19-taller-de-iniciacion-a-la-fotografia-analogica/?$ /es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^es/22-02-19-taller-de-retrato/?$ /es/blog/taller-retrat-febrer-2019/ [R=301,L]
+  RewriteRule ^es/22-03-2025-taller-de-revelado-en-blanco-y-negro-en-cameras-films[^/]*/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/23-11-19-taller-de-introduccion-al-gran-formato-revelado(/feed)?/?$ /es/tallers/gran-format-4x5/ [R=301,L]
+  RewriteRule ^es/26-01-19-taller-de-revelado-en-blanco-y-negro-con-forzados/?$ /es/tallers/revelats-experimentals/ [R=301,L]
+  RewriteRule ^es/28-29-03-2020-fotografias-de-tinta-y-sangre/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/29-03-2025-taller-de-retrato-en-gran-formato-en-cameras-films[^/]*/?$ /es/tallers/retrat-gran-format/ [R=301,L]
+  RewriteRule ^es/29-06-2019-taller-de-cianotipia/?$ /es/tallers/cianotipia/ [R=301,L]
+  RewriteRule ^es/29-09-18-taller-de-introduccion-al-gran-formato/?$ /es/tallers/gran-format-4x5/ [R=301,L]
+  RewriteRule ^es/31-08-2019-taller-de-revelado-en-blanco-y-negro-positivado/?$ /es/tallers/revelat-bn/ [R=301,L]
+
+  # ── ES: posts antics sense data ──────────────────────────
+  RewriteRule ^es/dia-mundial-de-la-fotografia-estenopeica(/feed)?/?$ /es/tallers/fotografia-estenopeica/ [R=301,L]
+  RewriteRule ^es/fiesta-pinholera-perversa-en-la-nau-bostik/?$ /es/blog/festa-pinholera-perversa-2019/ [R=301,L]
+  RewriteRule ^es/formulari-dinscripcio-al-taller-de-fotogrames-amb-cianotipia/?$ /es/tallers/fotogrames-cianotipia/ [R=301,L]
+  RewriteRule ^es/halloween/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/inscripcion-abierta-para-sesiones-individuales/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/llumatics-se-traslada-a-nau-bostik(/feed)?/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/microsesion-fotografica-de-estudio-en-formato-analogico/?$ /es/blog/sessio-maria-de-acha/ [R=301,L]
+  RewriteRule ^es/resultado-del-pasado-taller-de-retrato/?$ /es/blog/taller-retrat-febrer-2019/ [R=301,L]
+  RewriteRule ^es/resultados-del-taller-de-gran-formato/?$ /es/blog/resultats-taller-gran-format-2018/ [R=301,L]
+  RewriteRule ^es/taller-de-fotografia-tinta-i-sang/?$ /es/blog/ [R=301,L]
+  RewriteRule ^es/taller-de-iniciacion-a-la-fotografia/?$ /es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^es/taller-de-iniciacion-al-positivado-2/?$ /es/tallers/introduccio-al-positivat/ [R=301,L]
+  RewriteRule ^es/taller-de-revelado-con-caffenol/?$ /es/tallers/caffenol/ [R=301,L]
+  RewriteRule ^es/taller-el-maravilloso-mundo-hasselblad/?$ /es/tallers/hasselblad-500/ [R=301,L]
+  RewriteRule ^es/taller-retrato-en-gran-formato-en-lomography-embassy-barcelona/?$ /es/tallers/retrat-gran-format/ [R=301,L]
+  RewriteRule ^es/un-dia-de-revelado-analogico-lluvia-camaras-zenit-y-mucha-pasion-por-la-fotografia/?$ /es/blog/revelat-analogic-zenit-2025/ [R=301,L]
+
+  # ── Feeds genèrics (qualsevol que quedi) ─────────────────
+  RewriteRule ^feed/?$ / [R=301,L]
+  RewriteRule ^es/feed/?$ /es/ [R=301,L]
+  RewriteRule ^en/feed/?$ /en/ [R=301,L]
+  RewriteRule ^(.+)/feed/?$ /$1/ [R=301,L]
+
+  # ── EN: taxonomies i pàgines especials ───────────────────
+  RewriteRule ^en/tags/.*$ /en/blog/ [R=301,L]
+  RewriteRule ^en/tag/.*$ /en/blog/ [R=301,L]
+  RewriteRule ^en/levels/.*$ /en/tallers/ [R=301,L]
+  RewriteRule ^en/formats/.*$ /en/tallers/ [R=301,L]
+
+  # ── ES: taxonomies i paginació ───────────────────────────
+  RewriteRule ^es/tags/.*$ /es/blog/ [R=301,L]
+  RewriteRule ^es/tag/.*$ /es/blog/ [R=301,L]
+  RewriteRule ^es/category/.*$ /es/tallers/ [R=301,L]
+  RewriteRule ^es/levels/.*$ /es/tallers/ [R=301,L]
+  RewriteRule ^es/page/[0-9]+/?$ /es/blog/ [R=301,L]
+
+  # ── CA: taxonomies i paginació ───────────────────────────
+  RewriteRule ^tag/.*$ /blog/ [R=301,L]
+  RewriteRule ^category/.*$ /tallers/ [R=301,L]
+  RewriteRule ^page/[0-9]+/?$ /blog/ [R=301,L]
+
+</IfModule>
