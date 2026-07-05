@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Stats · Llumàtics</title>
-  <script src="/js/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
 
@@ -171,7 +171,7 @@
     /* ── KPIs ───────────────────────────────────────── */
     .kpis {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1rem;
       margin-bottom: 2rem;
       list-style: none;
@@ -391,7 +391,7 @@
     }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
-    @media (max-width: 1080px) {
+    @media (max-width: 1200px) {
       .kpis { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 860px) {
@@ -463,6 +463,10 @@
         <dt>mitjana/dia</dt>
         <dd><div class="kpi-value" id="kpi-pps">—</div><div class="kpi-sub">visites diàries (mitjana)</div></dd>
       </div>
+      <div class="kpi">
+        <dt>tendència</dt>
+        <dd><div class="kpi-value" id="kpi-trend">—</div><div class="kpi-sub" id="sub-trend">28d vs 28d anterior</div></dd>
+      </div>
     </dl>
 
     <!-- Tabs -->
@@ -488,6 +492,9 @@
         <canvas id="chart-canvas" aria-label="Gràfic de visites per dia"></canvas>
       </div>
       <div class="chart-summary" id="chart-summary"></div>
+
+      <h2 class="section-title">visites per dia de la setmana</h2>
+      <div id="weekday-wrap" class="bars"></div>
     </div>
 
     <!-- TAB: Pàgines -->
@@ -733,7 +740,9 @@ function renderAll(data) {
   setText('kpi-pps', daysWithData > 0 ? (total / daysWithData).toFixed(1) : '—');
 
   setTopbarGen(data.generated);
+  renderTrend(data);
   renderChart(data);
+  renderWeekday(data);
   renderLang(data);
   renderSections(data);
   renderTallers(data);
@@ -1055,6 +1064,49 @@ function renderBars(containerId, items, nameKey, withLinks = false) {
     row.appendChild(count);
     el.appendChild(row);
   });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TENDÈNCIA
+═══════════════════════════════════════════════════════════ */
+function renderTrend(data) {
+  const hbd = data.hits_by_day || [];
+  const el  = document.getElementById('kpi-trend');
+  const sub = document.getElementById('sub-trend');
+  if (!el) return;
+  for (const days of [28, 14, 7]) {
+    const curr = sumDays(hbd, daysAgo(days),     daysAgo(1));
+    const prev = sumDays(hbd, daysAgo(days * 2), daysAgo(days + 1));
+    if (prev > 0) {
+      const pct = Math.round((curr - prev) / prev * 100);
+      el.textContent = (pct >= 0 ? '+' : '') + pct + '%';
+      el.style.color = pct >= 0 ? 'var(--green)' : 'var(--warn)';
+      if (sub) sub.textContent = days + 'd vs ' + days + 'd anterior';
+      return;
+    }
+  }
+  el.textContent = '—';
+  if (sub) sub.textContent = 'sense prou dades';
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DIA DE LA SETMANA
+═══════════════════════════════════════════════════════════ */
+function renderWeekday(data) {
+  const hbd = data.hits_by_day || [];
+  const el  = document.getElementById('weekday-wrap');
+  if (!el || !hbd.length) return;
+  const DAYS   = ['Dg', 'Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds'];
+  const counts = [0, 0, 0, 0, 0, 0, 0];
+  const occur  = [0, 0, 0, 0, 0, 0, 0];
+  hbd.forEach(({ date, count }) => {
+    const d = new Date(date + 'T12:00:00').getDay();
+    counts[d] += count;
+    occur[d]++;
+  });
+  const avgs  = counts.map((c, i) => occur[i] ? Math.round(c / occur[i]) : 0);
+  const items = DAYS.map((name, i) => ({ name, count: avgs[i] }));
+  renderBars('weekday-wrap', items);
 }
 
 /* ═══════════════════════════════════════════════════════════

@@ -9,7 +9,7 @@ header('Cache-Control: no-store');
 set_time_limit(90);
 
 $token = trim($_GET['token'] ?? '');
-if ($token !== 'llumatics') {
+if ($token !== 'LinuxBCN2026') {
     http_response_code(403);
     echo json_encode(['error' => 'Accés denegat']);
     exit;
@@ -67,8 +67,10 @@ function extract_section(string $path): string {
 function norm_items(array $items, string $name_field): array {
     $out = [];
     foreach ($items as $item) {
-        // GoatCounter API v0 stats/{page} retorna {name, id, count} directament
-        $name  = $item['name'] ?? $item[$name_field] ?? $item['id'] ?? 'Desconegut';
+        // GoatCounter API v0: {name, id, count}. Per sizes, name pot ser buit, usar id.
+        $name = $item['name'] ?? '';
+        if ($name === '') $name = $item['id'] ?? $item[$name_field] ?? 'Desconegut';
+        if ($name === '') $name = 'Desconegut';
         $count = (int)($item['count'] ?? 0);
         if (!$count) {
             if (isset($item['stats']) && is_array($item['stats'])) {
