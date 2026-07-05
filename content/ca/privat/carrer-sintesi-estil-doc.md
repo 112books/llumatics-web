@@ -150,5 +150,10 @@ No hi ha una llista de referents específics per a la sessió 12. En lloc d'aix�
 - Aperture Foundation — articles i recursos oberts: [aperture.org](https://aperture.org)
 - British Journal of Photography — arxiu d'articles: [bjp-online.com](https://www.bjp-online.com)
 
+**Canals recomanats (YouTube, en castellà):**
+- [Oscar en Fotos](https://www.youtube.com/@oscarenfotos) — Fotografia de carrer, processos analògics, mirada fotogràfica
+- [Alejandro Malasombra](https://www.youtube.com/@alejandromalasombra) — Fotografia de carrer i reflexions sobre visió personal
+- [Vídeo introductori al curs](https://www.youtube.com/watch?v=4EnLj11eK_0) — Referència recomanada per Joan
+
 ---
 *Joan — Llumàtics, 2026*

@@ -107,3 +107,11 @@ El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa persona
 
 - Carretes (l'alumne porta el seu material; opcional +12€/sessió)
 - Producció del fotolibre (pressupost a mida via 112books)
+
+## Recursos per aprofundir
+
+Canals i referències recomanades per als alumnes del curs:
+
+- **[Oscar en Fotos](https://www.youtube.com/@oscarenfotos)** — Canal en castellà sobre fotografia de carrer, processos analògics i mirada fotogràfica.
+- **[Alejandro Malasombra](https://www.youtube.com/@alejandromalasombra)** — Fotografia de carrer i visió personal. Reflexions sobre tècnica i estètica.
+- **[Vídeo de referència: La mirada al carrer](https://www.youtube.com/watch?v=4EnLj11eK_0)** — Recurs introductori per als alumnes del curs.
