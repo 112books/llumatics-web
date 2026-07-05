@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Fitxa · Alex Webb + Martin Parr · Del Carrer al Llibre</title>
+<link rel="stylesheet" href="fitxa.css">
+<style>
+  /* Layout especial sessió doble */
+  .doble-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .doble-autor {
+    border: 1px solid var(--gris-ll);
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .doble-autor-inner {
+    display: grid;
+    grid-template-columns: 28mm 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .doble-autor .autor-foto {
+    width: 28mm;
+  }
+  .doble-autor .autor-foto-placeholder {
+    aspect-ratio: 3/4;
+    font-size: 6.5pt;
+  }
+  .doble-autor h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+  .doble-autor .autor-meta {
+    font-size: 7.5pt;
+    color: var(--gris);
+    margin-bottom: 6px;
+  }
+  .doble-autor p {
+    font-size: 7.5pt;
+    line-height: 1.45;
+    color: #333;
+  }
+  .doble-autor .segell {
+    font-size: 7.5pt;
+    padding: 5px 8px;
+    margin-top: 6px;
+  }
+  .tech-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 6px;
+  }
+  .tech-notes-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+  .obres-grid-doble {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 6px;
+  }
+  .obres-label {
+    font-size: 6.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+  .pc-note {
+    font-size: 6.5pt;
+    color: var(--gris);
+    text-align: center;
+    margin-top: 3px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPÇALERA -->
+<header class="fitxa-header">
+  <div class="logo">Llum<span>à</span>tics</div>
+  <div class="sessio-label">
+    <strong>SESSIÓ 11 · Del Carrer al Llibre</strong><br>
+    Material per a alumnes · Ús educatiu intern
+  </div>
+</header>
+
+<!-- SESSIÓ DOBLE: dos autors en paral·lel -->
+<div class="doble-grid">
+
+  <!-- ALEX WEBB -->
+  <div class="doble-autor">
+    <div class="doble-autor-inner">
+      <div class="autor-foto">
+        <div class="autor-foto-placeholder">
+          Inserir retrat<br>Alex Webb<br>
+          <span style="font-size:5.5pt;margin-top:3px">Font: magnumphotos.com/<br>photographer/alex-webb/</span>
+        </div>
+        <div class="foto-credit">Retrat · Magnum Photos</div>
+      </div>
+      <div>
+        <h2>Alex Webb</h2>
+        <div class="autor-meta">
+          <strong>1952</strong> · San Francisco, EUA<br>
+          Magnum Photos · Color líric
+        </div>
+        <div class="seccio-label">Resum biogràfic</div>
+        <p>Fotògraf americà membre de Magnum. Va estudiar a Harvard i a l'Apeiron Workshop. Des dels anys 70 documenta zones de conflicte i cultures del Carib, Mèxic, Àfrica i la Mediterrània. Membre de Magnum des de 1976. El seu color és complex, multicapa, sovint amb tres plans actius simultàniament: la llum dura tropical actua com a agent compositiu.</p>
+      </div>
+    </div>
+
+    <div class="segell">
+      <strong>El seu segell</strong>
+      La complexitat lírica. Imatges en les quals coexisteixen tres o quatre accions simultànies en plans superposats. El color com a arquitectura visual. La llum dura del sud com a material expressiu.
+    </div>
+
+    <div class="fitxa-tecnica-title" style="margin-top:8px">▪ Fitxa tècnica · Webb</div>
+    <div class="tech-grid-4">
+      <div class="tech-badge accent">
+        <span class="label">Càmera</span>
+        <span class="value small">Leica M6</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Focal</span>
+        <span class="value">28<span style="font-size:7pt">mm</span></span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Diafrg.</span>
+        <span class="value small">f/8<br>f/16</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Velocitat</span>
+        <span class="value small">1/125<br>1/500</span>
+      </div>
+    </div>
+    <div class="tech-notes-doble">
+      <div class="tech-note">
+        <span class="label">Film</span>
+        Kodachrome 64/200. Colors rics i contrastat. El suport defineix la paleta.
+      </div>
+      <div class="tech-note">
+        <span class="label">Composició</span>
+        Múltiples plans actius. Espera la confluència de figures, llum i color. Llum de migdia tropical, ombres tallants.
+      </div>
+    </div>
+
+    <div class="pc-bar-wrap">
+      <div class="pc-labels">
+        <span>🎣 PESCADOR</span>
+        <span>CAÇADOR 🏹</span>
+      </div>
+      <div class="pc-bar">
+        <div class="pc-marker" style="left: 20%"></div>
+      </div>
+      <div class="pc-note">Pescador amb paciència extrema</div>
+    </div>
+
+    <div class="obres-label">▪ Obra representativa</div>
+    <div class="obres-grid-doble">
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">Haiti, 1987</span>
+          <span>Magnum Photos</span>
+        </div>
+        <div class="obra-credit">© Alex Webb / Magnum</div>
+      </div>
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">Istanbul, 2001</span>
+          <span>The Suffering of Light · Aperture</span>
+        </div>
+        <div class="obra-credit">© Alex Webb / Aperture</div>
+      </div>
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">Crossings, Mexico, 1982</span>
+          <span>Magnum Photos</span>
+        </div>
+        <div class="obra-credit">© Alex Webb / Magnum</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARTIN PARR -->
+  <div class="doble-autor">
+    <div class="doble-autor-inner">
+      <div class="autor-foto">
+        <div class="autor-foto-placeholder">
+          Inserir retrat<br>Martin Parr<br>
+          <span style="font-size:5.5pt;margin-top:3px">Font: commons.wikimedia.org/<br>wiki/Category:Martin_Parr<br>(llicències CC disponibles)</span>
+        </div>
+        <div class="foto-credit">Retrat · Wikimedia Commons · CC</div>
+      </div>
+      <div>
+        <h2>Martin Parr</h2>
+        <div class="autor-meta">
+          <strong>1952</strong> · Epsom, Surrey, Regne Unit<br>
+          Magnum Photos · Sàtira social
+        </div>
+        <div class="seccio-label">Resum biogràfic</div>
+        <p>Fotògraf britànic membre de Magnum des de 1994. Conegut per la seva visió satírica de la classe mitjana britànica, el turisme de masses i la cultura del consum. <em>The Last Resort</em> (1986) — la classe obrera britànica a la platja de New Brighton — el va fer famós i polèmic. <em>"Sóc el fotògraf que la gent estima odiar."</em> Usa Fuji Velvia i flash directe que ho fa tot semblar kitsch.</p>
+      </div>
+    </div>
+
+    <div class="segell">
+      <strong>El seu segell</strong>
+      La sàtira social sense pietisme. El flash directe que treu qualsevol romanticisme. Els colors supersaturats que fan visible l'excés del consumisme. La proximitat incòmoda que no permet mirar cap a un altre costat.
+    </div>
+
+    <div class="fitxa-tecnica-title" style="margin-top:8px">▪ Fitxa tècnica · Parr</div>
+    <div class="tech-grid-4">
+      <div class="tech-badge accent">
+        <span class="label">Càmera</span>
+        <span class="value small">Plaubel<br>Makina 67</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Focal</span>
+        <span class="value small">43<span style="font-size:7pt">mm</span><br>Makina</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Diafrg.</span>
+        <span class="value small">f/8<br>f/16</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Velocitat</span>
+        <span class="value small">1/250<br>flash</span>
+      </div>
+    </div>
+    <div class="tech-notes-doble">
+      <div class="tech-note">
+        <span class="label">Film + Flash</span>
+        Fuji Velvia (colors saturats fins a l'obscenitat). Flash SEMPRE. Directe, de prop, ple. Cap ombra, cap romanticisme.
+      </div>
+      <div class="tech-note">
+        <span class="label">Composició</span>
+        Frontal, directa, sense distàncies. S'apropa fins a l'incomoditat. Sap exactament on va i quan hi anirà.
+      </div>
+    </div>
+
+    <div class="pc-bar-wrap">
+      <div class="pc-labels">
+        <span>🎣 PESCADOR</span>
+        <span>CAÇADOR 🏹</span>
+      </div>
+      <div class="pc-bar">
+        <div class="pc-marker" style="left: 30%"></div>
+      </div>
+      <div class="pc-note">Planificador — sap exactament on va i quan</div>
+    </div>
+
+    <div class="obres-label">▪ Obra representativa</div>
+    <div class="obres-grid-doble">
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">New Brighton, Merseyside, 1985</span>
+          <span>The Last Resort</span>
+        </div>
+        <div class="obra-credit">© Martin Parr / Magnum</div>
+      </div>
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">Benidorm, Spain, 1997</span>
+          <span>martinparr.com</span>
+        </div>
+        <div class="obra-credit">© Martin Parr / Magnum</div>
+      </div>
+      <div class="obra-item">
+        <div class="obra-placeholder" style="font-size:6pt">
+          <span class="obra-titol" style="font-size:6.5pt">Barbecue, Ascot Races, 1990</span>
+          <span>martinparr.com</span>
+        </div>
+        <div class="obra-credit">© Martin Parr / Magnum</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PEU -->
+<footer class="fitxa-footer">
+  <span>Llumàtics · Del Carrer al Llibre · Sessió 11</span>
+  <span>Material per a alumnes · Ús educatiu intern · No distribuir públicament</span>
+  <span>llumatics.com · 2026</span>
+</footer>
+
+</body>
+</html>

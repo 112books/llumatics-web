@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Fitxa · Síntesi: La teva veu · Del Carrer al Llibre</title>
+<link rel="stylesheet" href="fitxa.css">
+<style>
+  /* Estils específics sessió 12 */
+  .sintesi-hero {
+    text-align: center;
+    padding: 10px 0 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid var(--negre);
+  }
+  .sintesi-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 3px;
+  }
+  .sintesi-hero .sub {
+    font-size: 9pt;
+    color: var(--gris);
+    letter-spacing: 0.5px;
+  }
+
+  /* Preguntes de reflexió */
+  .preguntes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .pregunta-item {
+    background: var(--gris-ll);
+    border-radius: 4px;
+    padding: 7px 10px;
+    border-left: 3px solid var(--accent);
+  }
+  .pregunta-num {
+    font-size: 6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .pregunta-text {
+    font-size: 8pt;
+    line-height: 1.4;
+    color: var(--negre);
+  }
+  .pregunta-resposta {
+    margin-top: 5px;
+    border-bottom: 1px solid #ccc;
+    height: 18px;
+  }
+
+  /* Mapa d'influències */
+  .mapa-wrap {
+    border: 1px dashed #bbb;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    position: relative;
+  }
+  .mapa-label {
+    font-size: 6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .mapa-hint {
+    font-size: 7pt;
+    color: #bbb;
+    font-style: italic;
+  }
+  .mapa-linies {
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  .mapa-linia {
+    border-bottom: 1px solid #ddd;
+    height: 16px;
+  }
+
+  /* Graella 12 referents */
+  .referents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .referent-cel {
+    border: 1px solid var(--gris-ll);
+    border-radius: 3px;
+    padding: 5px 7px;
+  }
+  .referent-nom {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--negre);
+    display: block;
+    margin-bottom: 3px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  .referent-nota {
+    border-bottom: 1px solid #ddd;
+    height: 14px;
+    margin-bottom: 2px;
+  }
+
+  /* Selecció fotolibre */
+  .fotolibre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  .fotolibre-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .fotolibre-num {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 14px;
+    font-family: var(--mono);
+  }
+  .fotolibre-linia {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    height: 18px;
+  }
+
+  /* Slots buits obra personal */
+  .obra-placeholder.personal {
+    background: #f0ede8;
+    border: 1px dashed var(--accent);
+  }
+  .obra-placeholder.personal .obra-titol {
+    color: var(--gris);
+    font-style: normal;
+    font-size: 7pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPÇALERA -->
+<header class="fitxa-header">
+  <div class="logo">Llum<span>à</span>tics</div>
+  <div class="sessio-label">
+    <strong>SESSIÓ 12 · Del Carrer al Llibre</strong><br>
+    Material per a alumnes · Ús educatiu intern
+  </div>
+</header>
+
+<!-- BLOC HERO SESSIÓ 12 -->
+<div class="sintesi-hero">
+  <h1>La teva veu fotogràfica</h1>
+  <div class="sub">Sessió de tancament · Del Carrer al Llibre · Llumàtics</div>
+</div>
+
+<!-- PREGUNTES DE REFLEXIÓ -->
+<div class="fitxa-tecnica-title">▪ Reflexió personal</div>
+<div class="preguntes-grid">
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 1</span>
+    <div class="pregunta-text">Quin d'aquests 12 fotògrafs t'ha sorprès més? Per què?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 2</span>
+    <div class="pregunta-text">Quin rebutges? Per quina raó?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 3</span>
+    <div class="pregunta-text">On et situes en la barra pescador/caçador? Ha canviat des de la primera sessió?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 4</span>
+    <div class="pregunta-text">Quina sortida ha produït les millors imatges teves? Quin era l'autor d'aquell dia?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 5</span>
+    <div class="pregunta-text">Hi ha un tema o lloc de Barcelona que t'ha aparegut repetidament en el teu treball?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+  <div class="pregunta-item">
+    <span class="pregunta-num">Pregunta 6</span>
+    <div class="pregunta-text">Com definiràs la teva veu fotogràfica en tres paraules?</div>
+    <div class="pregunta-resposta"></div>
+    <div class="pregunta-resposta"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PESCADOR / CAÇADOR — barra buida -->
+<div class="fitxa-tecnica-title">▪ On ets tu?</div>
+<div class="pc-bar-wrap">
+  <div class="pc-labels">
+    <span>🎣 PESCADOR (espera, prepara)</span>
+    <span>(persegueix, dispara) CAÇADOR 🏹</span>
+  </div>
+  <div class="pc-bar">
+    <!-- Marcador buit: l'alumne marca la seva posició a mà -->
+  </div>
+  <div style="font-size:7pt;color:#bbb;margin-top:4px;text-align:center;font-style:italic">
+    Marca la teva posició amb un cercle
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MAPA D'INFLUÈNCIES -->
+<div class="fitxa-tecnica-title">▪ El meu mapa d'influències</div>
+<div class="mapa-wrap">
+  <span class="mapa-label">Omple a mà: quins fotògrafs t'han influït? Com es connecten amb la teva manera de veure?</span>
+  <div class="mapa-linies">
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+    <div class="mapa-linia"></div>
+  </div>
+  <div style="margin-top:8px;font-size:6.5pt;color:#bbb;font-style:italic">Espai lliure per a diagrama, fletxes, connexions...</div>
+</div>
+
+<hr class="divider">
+
+<!-- GRAELLA 12 REFERENTS -->
+<div class="fitxa-tecnica-title">▪ Els 12 referents: qui t'ha marcat?</div>
+<div class="referents-grid">
+  <div class="referent-cel">
+    <span class="referent-nom">Joan Colom</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Català-Roca</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">HCB</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Robert Frank</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Winogrand</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Arbus + Friedlander</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">París Humanista</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Saul Leiter</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Koudelka</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Moriyama</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Alex Webb</span>
+    <div class="referent-nota"></div>
+  </div>
+  <div class="referent-cel">
+    <span class="referent-nom">Martin Parr</span>
+    <div class="referent-nota"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SELECCIÓ FOTOLIBRE -->
+<div class="fitxa-tecnica-title">▪ La meva selecció per al fotolibre — Les 10 millors imatges</div>
+<div class="fotolibre-grid">
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">01</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">06</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">02</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">07</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">03</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">08</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">04</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">09</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">05</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+  <div class="fotolibre-item">
+    <span class="fotolibre-num">10</span>
+    <div class="fotolibre-linia"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OBRA PERSONAL -->
+<div class="fitxa-tecnica-title">▪ Les meves imatges del curs</div>
+<div class="obres-grid">
+  <div class="obra-item">
+    <div class="obra-placeholder personal">
+      <span class="obra-titol">La meva millor imatge del curs</span>
+      <span style="color:#bbb;font-size:6pt">Enganxa o anota aquí</span>
+    </div>
+    <div class="obra-credit" style="color:#bbb">Títol · Data · Sessió</div>
+  </div>
+  <div class="obra-item">
+    <div class="obra-placeholder personal">
+      <span class="obra-titol">La imatge que més m'ha sorprès</span>
+      <span style="color:#bbb;font-size:6pt">Enganxa o anota aquí</span>
+    </div>
+    <div class="obra-credit" style="color:#bbb">Títol · Data · Sessió</div>
+  </div>
+  <div class="obra-item">
+    <div class="obra-placeholder personal">
+      <span class="obra-titol">La imatge que vull al fotolibre</span>
+      <span style="color:#bbb;font-size:6pt">Enganxa o anota aquí</span>
+    </div>
+    <div class="obra-credit" style="color:#bbb">Títol · Data · Sessió</div>
+  </div>
+</div>
+
+<!-- PEU -->
+<footer class="fitxa-footer">
+  <span>Llumàtics · Del Carrer al Llibre · Sessió 12</span>
+  <span>Material per a alumnes · Ús educatiu intern · No distribuir públicament</span>
+  <span>llumatics.com · 2026</span>
+</footer>
+
+</body>
+</html>

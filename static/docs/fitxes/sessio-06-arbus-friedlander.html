@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Fitxa · Diane Arbus + Lee Friedlander · Del Carrer al Llibre</title>
+<link rel="stylesheet" href="fitxa.css">
+<style>
+  /* Adaptació sessió doble */
+  .autor-grid-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .autor-columna {
+    display: flex;
+    flex-direction: column;
+  }
+  .autor-columna .autor-foto {
+    width: 100%;
+  }
+  .autor-columna .autor-foto img,
+  .autor-columna .autor-foto .autor-foto-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+  .autor-columna h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2px;
+    margin-top: 6px;
+  }
+  .autor-columna .autor-meta {
+    font-size: 7.5pt;
+    color: var(--gris);
+    margin-bottom: 6px;
+  }
+  .autor-columna p {
+    font-size: 7.5pt;
+    line-height: 1.45;
+    color: #333;
+  }
+  .autor-columna .segell {
+    margin-top: 6px;
+    font-size: 7.5pt;
+  }
+  /* Fitxa tècnica doble: dues columnes */
+  .tech-grid-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .tech-grid-doble .tech-sub-title {
+    font-size: 6.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris);
+    margin-bottom: 5px;
+  }
+  .tech-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  .tech-grid-inner .tech-badge .value { font-size: 8pt; }
+  /* Barres P/C dobles */
+  .pc-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .pc-doble .pc-bar-wrap { margin-bottom: 0; }
+  .pc-doble .pc-sub-label {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--negre);
+    margin-bottom: 3px;
+  }
+  /* Obra representativa doble */
+  .obres-grid-doble {
+    margin-bottom: 8px;
+  }
+  .obres-grup-label {
+    font-size: 6.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--gris);
+    margin-bottom: 4px;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPÇALERA -->
+<header class="fitxa-header">
+  <div class="logo">Llum<span>à</span>tics</div>
+  <div class="sessio-label">
+    <strong>SESSIÓ 6 · Del Carrer al Llibre</strong><br>
+    Material per a alumnes · Ús educatiu intern
+  </div>
+</header>
+
+<!-- BLOC AUTOR DOBLE -->
+<div class="autor-grid-doble">
+
+  <!-- DIANE ARBUS -->
+  <div class="autor-columna">
+    <div class="autor-foto">
+      <div class="autor-foto-placeholder">
+        Inserir retrat<br>de Diane Arbus<br>
+        <span style="font-size:6pt;margin-top:4px">Font: moma.org/artists/146<br>Estate of Diane Arbus</span>
+      </div>
+      <div class="foto-credit">Retrat · Estate of Diane Arbus</div>
+    </div>
+    <h1>Diane Arbus</h1>
+    <div class="autor-meta">
+      <strong>Nova York, 1923–1971</strong><br>
+      Retrat documental · Format 6×6 · Flash directe
+    </div>
+    <div class="seccio-label">Resum biogràfic</div>
+    <p>Fotògrafa de Nova York. Va retratar els "freaks" — enans, gemels, travestits, nudistes — amb una frontalitat i dignitat pertorbadora. Va estudiar amb Lisette Model. Va canviar el format de la Leica 35mm a la Rolleiflex 6×6 i va incorporar el flash directe com a signatura estilística. Va morir el 1971. L'exposició pòstuma al MoMA (1972) la va convertir en icona.</p>
+    <div class="segell">
+      <strong>El seu segell</strong>
+      La mirada frontal com a pacte. El fotògraf i el fotografiat es miren directament. La càmera no s'amaga — és una relació, incòmoda però honesta.
+    </div>
+  </div>
+
+  <!-- LEE FRIEDLANDER -->
+  <div class="autor-columna">
+    <div class="autor-foto">
+      <div class="autor-foto-placeholder">
+        Inserir retrat<br>de Lee Friedlander<br>
+        <span style="font-size:6pt;margin-top:4px">Font: moma.org/artists/1968</span>
+      </div>
+      <div class="foto-credit">Retrat · MoMA Collection</div>
+    </div>
+    <h1>Lee Friedlander</h1>
+    <div class="autor-meta">
+      <strong>Aberdeen, Washington, 1934</strong><br>
+      Fotografia de carrer · Autofotografia urbana
+    </div>
+    <div class="seccio-label">Resum biogràfic</div>
+    <p>Fotògraf de carrer americà actiu des dels anys 60. Conegut per les seves autofotografies al carrer: la seva ombra, el seu reflex als aparadors, la seva figura parcial al marc. Transforma la ciutat americana en un espai fragmentat, ple de senyals, cartells, televisors i contradiccions visuals. Retrospectiva al MoMA el 2005.</p>
+    <div class="segell">
+      <strong>El seu segell</strong>
+      El fotògraf dins la imatge. La càmera no desapareix — el seu ús és visible. L'espai urbà com a collage visual de fragments incomplets.
+    </div>
+  </div>
+
+</div>
+
+<hr class="divider">
+
+<!-- FITXA TÈCNICA DOBLE -->
+<div class="fitxa-tecnica-title">▪ Fitxa tècnica · Com treballaven Arbus i Friedlander</div>
+
+<div class="tech-grid-doble">
+
+  <div>
+    <div class="tech-sub-title">Diane Arbus</div>
+    <div class="tech-grid-inner">
+      <div class="tech-badge accent">
+        <span class="label">Càmera</span>
+        <span class="value small">Rolleiflex<br>2.8F 6×6</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Focal</span>
+        <span class="value small">80mm<br><span style="font-size:6pt">(≈50 equiv.)</span></span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Diafragma</span>
+        <span class="value small">f/5.6<br>f/8</span>
+      </div>
+    </div>
+    <div class="tech-grid-inner">
+      <div class="tech-badge">
+        <span class="label">Velocitat</span>
+        <span class="value small">1/60<br>1/125</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Flash</span>
+        <span class="value small">Metz<br>directe</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Composició</span>
+        <span class="value small">centrada<br>frontal</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="tech-sub-title">Lee Friedlander</div>
+    <div class="tech-grid-inner">
+      <div class="tech-badge accent">
+        <span class="label">Càmera</span>
+        <span class="value small">Leica M<br>Nikon</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Focal</span>
+        <span class="value small">35mm</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Diafragma</span>
+        <span class="value small">f/8</span>
+      </div>
+    </div>
+    <div class="tech-grid-inner">
+      <div class="tech-badge">
+        <span class="label">Velocitat</span>
+        <span class="value small">1/125</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Flash</span>
+        <span class="value small">sense<br>flash</span>
+      </div>
+      <div class="tech-badge">
+        <span class="label">Composició</span>
+        <span class="value small">reflexos<br>ombres</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="tech-notes">
+  <div class="tech-note">
+    <span class="label">Arbus — aproximació</span>
+    Distància molt curta, cara a cara. No s'amaga. La seva presència és part del pacte visual. El flash dur elimina les ombres naturals i crea una frontalitat quasi clínica, sense escapatòria.
+  </div>
+  <div class="tech-note">
+    <span class="label">Friedlander — aproximació</span>
+    Autoconscient i reflexiu. Usa reflexos d'aparadors, la seva pròpia ombra i el marc per posar-se dins la imatge. La composició és fragmentada i deliberadament incompleta, com la vida urbana mateixa.
+  </div>
+</div>
+
+<!-- PESCADOR / CAÇADOR DOBLE -->
+<div class="pc-doble">
+  <div class="pc-bar-wrap">
+    <div class="pc-sub-label">Arbus — PESCADORA (20%)</div>
+    <div class="pc-labels">
+      <span>🎣 PESCADOR</span>
+      <span>CAÇADOR 🏹</span>
+    </div>
+    <div class="pc-bar">
+      <div class="pc-marker" style="left: 20%"></div>
+    </div>
+  </div>
+  <div class="pc-bar-wrap">
+    <div class="pc-sub-label">Friedlander — PESCADOR-HÍBRID (35%)</div>
+    <div class="pc-labels">
+      <span>🎣 PESCADOR</span>
+      <span>CAÇADOR 🏹</span>
+    </div>
+    <div class="pc-bar">
+      <div class="pc-marker" style="left: 35%"></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OBRA REPRESENTATIVA -->
+<div class="fitxa-tecnica-title">▪ Obra representativa</div>
+
+<div class="obres-grid-doble">
+  <div class="obres-grup-label">Diane Arbus</div>
+  <div class="obres-grid">
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">Identical Twins, Roselle, NJ, 1967</span>
+        <span>MoMA · moma.org</span>
+      </div>
+      <div class="obra-credit">© Estate of Diane Arbus / MoMA</div>
+    </div>
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">Child with Toy Hand Grenade, Central Park, 1962</span>
+        <span>MoMA · moma.org</span>
+      </div>
+      <div class="obra-credit">© Estate of Diane Arbus / MoMA</div>
+    </div>
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">A young man in curlers at home on West 20th Street, NYC, 1966</span>
+        <span>Estate of Diane Arbus</span>
+      </div>
+      <div class="obra-credit">© Estate of Diane Arbus</div>
+    </div>
+  </div>
+
+  <div class="obres-grup-label">Lee Friedlander</div>
+  <div class="obres-grid">
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">New Orleans, Louisiana, 1968</span>
+        <span>MoMA · moma.org</span>
+      </div>
+      <div class="obra-credit">© Lee Friedlander / MoMA</div>
+    </div>
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">New York City, 1966</span>
+        <span>MoMA · moma.org</span>
+      </div>
+      <div class="obra-credit">© Lee Friedlander / MoMA</div>
+    </div>
+    <div class="obra-item">
+      <div class="obra-placeholder">
+        <span class="obra-titol">Galax, Virginia, 1962</span>
+        <span>The Metropolitan Museum of Art · metmuseum.org</span>
+      </div>
+      <div class="obra-credit">© Lee Friedlander / The Met</div>
+    </div>
+  </div>
+</div>
+
+<!-- PEU -->
+<footer class="fitxa-footer">
+  <span>Llumàtics · Del Carrer al Llibre · Sessió 6</span>
+  <span>Material per a alumnes · Ús educatiu intern · No distribuir públicament</span>
+  <span>llumatics.com · 2026</span>
+</footer>
+
+</body>
+</html>
