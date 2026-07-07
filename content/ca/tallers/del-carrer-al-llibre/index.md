@@ -108,7 +108,7 @@ El curs és analògic. El 35mm obliga a pensar, limita les bales i fa visible el
 
 ## I al final, el llibre
 
-El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa personal d'influències, primera selecció per al fotolibre. Qui vulgui continuar pot accedir al **Fotollibre: del concepte a la materialització**, on el cos de treball del curs es converteix en un objecte editorial real: digital, imprès, o tots dos. És un taller independent que cal preparar a part.
+El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa personal d'influències, primera selecció per al fotolibre. Qui vulgui continuar pot accedir al **[Fotollibre: del concepte a la materialització](/tallers/fotollibre/)**, on el cos de treball del curs es converteix en un objecte editorial real: digital, imprès, o tots dos. És un taller independent que cal preparar a part.
 
 ## Cal portar
 
