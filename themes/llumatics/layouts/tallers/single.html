@@ -344,6 +344,40 @@
           {{ $status := .Params.estat | default (.Params.status | default "actiu") }}
           {{ if eq $status "full" }}
             <button class="btn btn--secondary" disabled>{{ i18n "status_full" }}</button>
+          {{ else if eq $status "proxim" }}
+            {{ with .Params.proper_inici }}
+            <div class="info-box__proxim-badge">
+              {{ i18n "proxim_edicio" | default "Pròxima edició" }} — {{ . }}
+            </div>
+            {{ end }}
+            <div class="avisa-wrap">
+              <button class="btn btn--primary js-avisa-toggle"
+                      data-target="avisa-form-{{ $courseSlug }}"
+                      style="width:100%;">
+                {{ i18n "cta_avisa_llista" | default "Apunta't a la llista d'espera" }}
+              </button>
+              <form id="avisa-form-{{ $courseSlug }}"
+                    class="avisa-inline-form"
+                    style="display:none; margin-top:var(--space-3);"
+                    data-avisa-form
+                    data-gracies="{{ "/gracies/?from=avisa" | relLangURL }}">
+                <input type="hidden" name="taller" value="{{ $courseSlug }}">
+                <input type="hidden" name="subject" value="{{ i18n "avisa_subject_prefix" | default "Avisa'm" }} — {{ .Title }}">
+                <input type="hidden" name="type" value="avisa">
+                <input type="email" name="email" required autocomplete="email"
+                       placeholder="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
+                       style="width:100%; padding:0.6rem 0.75rem; border:1px solid var(--color-border); border-radius:4px; font-size:var(--text-sm); margin-bottom:var(--space-2);">
+                <button type="submit" class="btn btn--primary btn--sm" style="width:100%;">
+                  {{ i18n "avisa_submit" | default "Apunta'm" }}
+                </button>
+                <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-2); line-height:1.5;">
+                  {{ i18n "avisa_privacy_note" | default "Només t'avisarem quan obrim places. Res d'spam." }}
+                </p>
+              </form>
+            </div>
+            <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-3); line-height:1.5;">
+              {{ i18n "proxim_text" | default "T'avisarem quan obrim inscripcions. Sense compromís." }}
+            </p>
           {{ else }}
             {{ if $.Site.Params.tallyFormSolicitud }}
               <a href="https://tally.so/r/{{ $.Site.Params.tallyFormSolicitud }}?taller={{ $courseSlug }}"
@@ -367,17 +401,31 @@
                 {{ i18n "cta_ask" }}
               </a>
             {{ end }}
-            {{ if $.Site.Params.tallyFormAvisa }}
-              <a href="https://tally.so/r/{{ $.Site.Params.tallyFormAvisa }}?taller={{ $courseSlug }}"
-                 class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:var(--space-2);">
+            <div class="avisa-wrap" style="margin-top:var(--space-2);">
+              <button class="btn btn--ghost js-avisa-toggle"
+                      data-target="avisa-form-{{ $courseSlug }}"
+                      style="width:100%;">
                 {{ i18n "cta_avisa" }}
-              </a>
-            {{ else }}
-              <a href="mailto:{{ $.Site.Params.contactEmail }}?subject=Avisa%27m%3A%20{{ .Title | urlize }}"
-                 class="btn btn--ghost" style="margin-top:var(--space-2);">
-                {{ i18n "cta_avisa" }}
-              </a>
-            {{ end }}
+              </button>
+              <form id="avisa-form-{{ $courseSlug }}"
+                    class="avisa-inline-form"
+                    style="display:none; margin-top:var(--space-3);"
+                    data-avisa-form
+                    data-gracies="{{ "/gracies/?from=avisa" | relLangURL }}">
+                <input type="hidden" name="taller" value="{{ $courseSlug }}">
+                <input type="hidden" name="subject" value="{{ i18n "avisa_subject_prefix" | default "Avisa'm" }} — {{ .Title }}">
+                <input type="hidden" name="type" value="avisa">
+                <input type="email" name="email" required autocomplete="email"
+                       placeholder="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
+                       style="width:100%; padding:0.6rem 0.75rem; border:1px solid var(--color-border); border-radius:4px; font-size:var(--text-sm); margin-bottom:var(--space-2);">
+                <button type="submit" class="btn btn--primary btn--sm" style="width:100%;">
+                  {{ i18n "avisa_submit" | default "Apunta'm" }}
+                </button>
+                <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:var(--space-2); line-height:1.5;">
+                  {{ i18n "avisa_privacy_note" | default "Només t'avisarem quan hi hagi places. Res d'spam." }}
+                </p>
+              </form>
+            </div>
           {{ end }}
           <a href="{{ "regala/" | relLangURL }}?taller={{ $courseSlug }}"
              class="btn btn--ghost" style="margin-top:var(--space-2);">

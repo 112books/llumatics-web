@@ -62,6 +62,7 @@ defaultContentLanguageInSubdir = false
   newsletterService = "brevo"
   formService = "tally"
   tallyFormNewsletter = ""
+  brevoNewsletterFormURL = "https://59a7cdb3.sibforms.com/serve/MUIFAPOUhPNZJkVu9wiP_v7DPOgDEawhja2LOrKVE4BztX7TAA0xxREsqQVtwf_UE2nIr7tJPLsSvphgdwlhKb3WoeK929R4ePsahIyw3mmdNW0lVCGfptqttsKpA2_-iI3tHddDtwQFvsUwGn501OcHHd_Uc5VSXNl9iO-cN_KnSgNEhI0Wn6xbnJelHVHpq2h2g11apjlskA32Sg=="
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
   tallyFormAvisa = "LZ6r0O" # Waitlist "Avisa'm quan hi hagi places"

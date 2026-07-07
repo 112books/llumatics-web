@@ -160,6 +160,7 @@ preu_4h: "4 horas"
 # Página gracias
 gracies_msg_contacte: "Hemos recibido tu mensaje. Te escribiremos en un máximo de 48 horas en días laborables."
 gracies_msg_newsletter: "Ya estás en la lista. Te escribiremos cuando haya novedades que valgan la pena."
+gracies_msg_avisa: "Te hemos apuntado. Te avisaremos cuando abramos plazas. Sin spam, prometido."
 gracies_msg_default: "Todo ha ido bien. Gracias por contactar con Llumàtics."
 
 # Ficha del taller (single.html)
@@ -205,7 +206,15 @@ ondemand_group_text: "Puedes hacerlo en grupo (máx. %d personas) o en <strong>c
 # Info-box — CTAs
 cta_solicita_data: "Solicita una fecha"
 cta_avisa: "Avísame cuando haya plazas →"
+cta_avisa_llista: "Apúntate a la lista de espera"
 cta_regala: "Regala este taller →"
+proxim_edicio: "Próxima edición"
+proxim_text: "Te avisaremos cuando abramos inscripciones. Sin compromiso."
+avisa_email_placeholder: "Tu correo"
+avisa_submit: "Apúntame"
+avisa_privacy_note: "Solo te avisaremos cuando haya plazas. Sin spam."
+avisa_subject_prefix: "Avísame"
+preu_per_sessio: "Precio por sesión · por persona"
 cta_newsletter_pre: "O"
 cta_newsletter_link: "suscríbete al boletín"
 cta_newsletter_post: "para estar al tanto de cuándo se programe."

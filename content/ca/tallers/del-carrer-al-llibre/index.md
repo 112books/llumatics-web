@@ -11,7 +11,8 @@ canal: "llumatics"
 blocs: ["practica"]
 weight: 25
 nivell: "Intermedi"
-estat: "en-preparacio"
+estat: "proxim"
+proper_inici: "Octubre 2026"
 
 # Fitxa tècnica (preus per sessió individual)
 preu_1: 250
@@ -38,7 +39,7 @@ continua_aprenent:
   - "tutoria-fotografica"
 
 tags: ["carrer", "curs anual", "analògica", "Barcelona", "fotolibre", "referents"]
-draft: true
+draft: false
 ---
 
 ## Un any al carrer

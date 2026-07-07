@@ -79,52 +79,34 @@
   }
 
   // ─────────────────────────────────────────────────────────────
-  // NEWSLETTER FORM
+  // AVISA'M — toggle + submit via PHP handler
   // ─────────────────────────────────────────────────────────────
-  const newsletterForm = document.querySelector('.newsletter-form--native');
+  document.querySelectorAll('.js-avisa-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const form = document.getElementById(btn.dataset.target);
+      if (!form) return;
+      const isHidden = form.style.display === 'none';
+      form.style.display = isHidden ? 'block' : 'none';
+      if (isHidden) form.querySelector('[type="email"]').focus();
+    });
+  });
 
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async e => {
+  document.querySelectorAll('[data-avisa-form]').forEach(form => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-
-      const email = newsletterForm.querySelector('[type="email"]').value;
-      const btn = newsletterForm.querySelector('[type="submit"]');
-      const msg = newsletterForm.querySelector('.newsletter-form__msg');
-
+      const btn = form.querySelector('[type="submit"]');
+      const gracies = form.dataset.gracies || '/gracies/?from=avisa';
       btn.disabled = true;
       btn.textContent = '...';
-
       try {
-        const body = new FormData();
-        body.append('access_key', newsletterForm.dataset.key);
-        body.append('email', email);
-        body.append('subject', 'Nova subscripció al butlletí — Llumàtics');
-        body.append('from_name', 'Web Llumàtics');
-
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-          const base = document.documentElement.lang === 'ca'
-            ? ''
-            : '/' + document.documentElement.lang;
-
-          window.location.href = base + '/gracies/?from=newsletter';
-        } else {
-          throw new Error('submit failed');
-        }
-
-      } catch (err) {
-        if (msg) msg.textContent = 'Alguna cosa ha fallat. Prova-ho de nou.';
-        btn.disabled = false;
-        btn.textContent = 'Subscriu-me';
-      }
+        const res = await fetch('/form-handler.php', { method: 'POST', body: new FormData(form) });
+        const json = await res.json();
+        if (json.ok) { window.location.href = gracies; return; }
+      } catch (_) {}
+      // fail open: redirigeix igualment (no volem bloquejar l'usuari)
+      window.location.href = gracies;
     });
-  }
+  });
 
   // ─────────────────────────────────────────────────────────────
 // CONTACT FORM (Web3Forms)

@@ -691,6 +691,32 @@ button, input, select, textarea {
   gap: var(--space-3);
 }
 
+.info-box__proxim-badge {
+  background: var(--color-accent);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.avisa-inline-form input[type="email"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--text-sm);
+  font-family: inherit;
+  transition: border-color 150ms;
+}
+.avisa-inline-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
 /* ── Agenda / Calendari ──────────────────────────────────────────────────── */
 .agenda-section {
   padding-block: var(--space-16);

@@ -160,6 +160,7 @@ preu_4h: "4 hours"
 # Thank you page
 gracies_msg_contacte: "We've received your message. We'll get back to you within 48 hours on business days."
 gracies_msg_newsletter: "You're on the list. We'll write when there's something worth sharing."
+gracies_msg_avisa: "You're on the list. We'll notify you when places open. No spam, promised."
 gracies_msg_default: "All good. Thanks for getting in touch with Llumàtics."
 
 # Workshop details (single.html)
@@ -205,7 +206,15 @@ ondemand_group_text: "You can do it in a group (max %d people) or as a <strong>p
 # Info-box — CTAs
 cta_solicita_data: "Request a date"
 cta_avisa: "Notify me when places open →"
+cta_avisa_llista: "Join the waitlist"
 cta_regala: "Gift this workshop →"
+proxim_edicio: "Next edition"
+proxim_text: "We'll notify you when registration opens. No commitment."
+avisa_email_placeholder: "Your email"
+avisa_submit: "Notify me"
+avisa_privacy_note: "We'll only notify you when places open. No spam."
+avisa_subject_prefix: "Notify me"
+preu_per_sessio: "Price per session · per person"
 cta_newsletter_pre: "Or"
 cta_newsletter_link: "subscribe to the newsletter"
 cta_newsletter_post: "to be the first to know when it's scheduled."
