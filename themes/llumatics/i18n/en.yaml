@@ -160,7 +160,7 @@ preu_4h: "4 hours"
 # Thank you page
 gracies_msg_contacte: "We've received your message. We'll get back to you within 48 hours on business days."
 gracies_msg_newsletter: "Almost there! One last step: open the confirmation email we just sent you and click the link. If you don't see it within 5 minutes, check your spam folder."
-gracies_msg_avisa: "You're on the list. We'll notify you when places open. No spam, promised."
+gracies_msg_avisa: "You're on the list. We've sent you a confirmation email — check your inbox (and your spam folder, just in case)."
 gracies_msg_default: "All good. Thanks for getting in touch with Llumàtics."
 
 # Workshop details (single.html)

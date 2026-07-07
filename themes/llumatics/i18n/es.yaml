@@ -160,7 +160,7 @@ preu_4h: "4 horas"
 # Página gracias
 gracies_msg_contacte: "Hemos recibido tu mensaje. Te escribiremos en un máximo de 48 horas en días laborables."
 gracies_msg_newsletter: "¡Casi! Te queda un paso: abre el correo de confirmación que acabamos de enviarte y haz clic en el enlace. Si no lo encuentras en 5 minutos, revisa la carpeta de spam."
-gracies_msg_avisa: "Te hemos apuntado. Te avisaremos cuando abramos plazas. Sin spam, prometido."
+gracies_msg_avisa: "Te hemos apuntado. Te hemos enviado una confirmación por correo: revisa tu bandeja (y la carpeta de spam, por si acaso)."
 gracies_msg_default: "Todo ha ido bien. Gracias por contactar con Llumàtics."
 
 # Ficha del taller (single.html)
