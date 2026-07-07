@@ -8,6 +8,9 @@ images:
   - "/images/tallers/fotollibre-1.jpg"
   - "/images/tallers/fotollibre-2.jpg"
   - "/images/tallers/fotollibre-3.jpg"
+  - "/images/tallers/fotollibre-4.jpg"
+  - "/images/tallers/fotollibre-5.jpg"
+  - "/images/tallers/fotollibre-6.jpg"
 
 # Clasificación
 tipus: "taller"
