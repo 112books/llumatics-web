@@ -1,7 +1,7 @@
 ---
 title: "Política de privacidad"
 description: "Política de privacidad de Llumàtics: cómo tratamos sus datos personales de acuerdo con el RGPD y la LOPDGDD."
-date: 2026-05-02
+date: 2026-07-07
 draft: false
 ---
 
@@ -31,7 +31,8 @@ Los datos que nos proporcionéis se utilizan exclusivamente para:
 
 1. **Atender vuestra consulta** o solicitud de taller
 2. **Gestionar la relación formativa**: confirmación de fechas, envío de documentación y material del curso
-3. **Comunicaciones relacionadas con los talleres** si habéis dado el consentimiento explícito
+3. **Gestionar la lista de espera de talleres**: cuando solicitáis ser avisados de la apertura de plazas ("Avísame"), conservamos vuestro correo hasta que el taller abra o se cancele. Base jurídica: consentimiento explícito.
+4. **Enviar el boletín de novedades** si os habéis suscrito voluntariamente con doble confirmación (double opt-in). Podéis daros de baja en cualquier momento haciendo clic en el enlace que figura en cada mensaje.
 
 No se realiza ningún tratamiento de datos con fines comerciales ni publicitarios sin consentimiento previo.
 
@@ -39,11 +40,12 @@ No se realiza ningún tratamiento de datos con fines comerciales ni publicitario
 
 ## Datos que tratamos
 
-A través del formulario de contacto recogemos:
-
-- Nombre y apellidos
-- Dirección de correo electrónico
-- Información que vosotros mismos incluís en el mensaje (taller de interés, fecha preferida, etc.)
+| Canal | Datos recogidos |
+|-------|----------------|
+| Formulario de contacto | Nombre, correo electrónico, contenido del mensaje |
+| Formulario "Avísame" (lista de espera) | Correo electrónico, taller de interés |
+| Suscripción al boletín | Correo electrónico |
+| Página privada de alumnos | Nombre, correo electrónico, curso |
 
 No recogemos datos especialmente protegidos (salud, ideología, origen racial, etc.).
 
@@ -54,7 +56,7 @@ No recogemos datos especialmente protegidos (salud, ideología, origen racial, e
 Vuestros datos **no se ceden a terceros**, excepto:
 
 - Cuando exista una obligación legal
-- Al proveedor del servicio de formularios (**web3forms.com**), que actúa como encargado del tratamiento y gestiona el envío de los mensajes. Podéis consultar su política de privacidad en [web3forms.com/privacy](https://web3forms.com/privacy).
+- A **Brevo SAS** (antiguo Sendinblue), empresa francesa sujeta al RGPD, que actúa como encargado del tratamiento en la gestión del boletín y las listas de espera. Brevo cuenta con certificación ISO 27001 y cláusulas contractuales estándar para transferencias internacionales. Podéis consultar su política de privacidad en [brevo.com/legal/privacypolicy](https://www.brevo.com/legal/privacypolicy/).
 
 ---
 

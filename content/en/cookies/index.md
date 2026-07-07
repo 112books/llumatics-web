@@ -1,7 +1,7 @@
 ---
 title: "Cookie policy"
 description: "Llumàtics cookie policy: which cookies are used and how to manage them."
-date: 2026-05-02
+date: 2026-07-07
 draft: false
 ---
 
@@ -19,9 +19,11 @@ This website is built with **Hugo** (static site generator). It does not use Wor
 
 We use **GoatCounter** to count visits anonymously. GoatCounter **sets no cookies** and collects no personal data. [goatcounter.com/help/privacy](https://www.goatcounter.com/help/privacy)
 
-### Contact form
+### Forms
 
-When you submit the contact form, the request is processed by **web3forms.com**. Web3forms receives your IP address and message content to send the email, but **sets no cookies in your browser**.
+Forms on this website (contact, "Notify me", private student pages) are submitted directly to our server via a self-hosted PHP script. **No cookies are set** when using them.
+
+The **newsletter** subscription form is hosted by **Brevo** (sibforms.com). When you click the subscribe button, you are taken to a Brevo-hosted page where Brevo's own cookie policy applies independently. See [brevo.com/legal/cookiespolicy](https://www.brevo.com/legal/cookiespolicy/).
 
 ### Interactive map
 
@@ -36,7 +38,8 @@ This website **generates no first-party cookies**.
 | Provider | Cookie | Consent required |
 |----------|--------|-----------------|
 | GoatCounter (analytics) | None | No |
-| web3forms (contact form) | None | No |
+| Self-hosted forms (PHP) | None | No |
+| Brevo (external newsletter) | Brevo's own, on their domain | Manual activation (button click) |
 | OpenStreetMap (map) | Session (if activated) | Manual activation |
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Política de cookies"
 description: "Política de cookies de Llumàtics: qué cookies se utilizan y cómo gestionarlas."
-date: 2026-05-02
+date: 2026-07-07
 draft: false
 ---
 
@@ -21,7 +21,9 @@ Utilizamos **GoatCounter** para contar visitas de forma anónima. GoatCounter **
 
 ### Formularios
 
-Cuando enviáis el formulario de contacto, la petición es procesada por **web3forms.com**. Web3forms recibe la dirección IP y el contenido del mensaje para enviar el correo, pero **no establece cookies en vuestro navegador**.
+Los formularios de este web (contacto, "Avísame", página privada de alumnos) se envían directamente a nuestro servidor a través de un script PHP propio. **No se establece ninguna cookie** al utilizarlos.
+
+El formulario de suscripción al **boletín** está alojado en **Brevo** (sibforms.com). Al hacer clic, se abre una página de Brevo donde su política de cookies se aplica de forma independiente. Podéis consultarla en [brevo.com/legal/cookiespolicy](https://www.brevo.com/legal/cookiespolicy/).
 
 ### Mapa interactivo
 
@@ -36,7 +38,8 @@ Este web **no genera ninguna cookie propia**.
 | Proveedor | Cookie | Consentimiento requerido |
 |-----------|--------|--------------------------|
 | GoatCounter (analítica) | Ninguna | No |
-| web3forms (formulario) | Ninguna | No |
+| Formularios propios (PHP) | Ninguna | No |
+| Brevo (boletín externo) | Las de Brevo, en su dominio | Activación manual (clic en el botón) |
 | OpenStreetMap (mapa) | Sesión (si lo activáis) | Activación manual |
 
 ---
