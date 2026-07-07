@@ -4,6 +4,17 @@ subtitle: "Un any, dotze fotògrafs, una veu pròpia."
 lead: "Un curs anual de fotografia de carrer analògica a Barcelona. Cada mes, un gran fotògraf com a guia. Al final, un fotolibre teu."
 description: "Curs anual de fotografia de carrer analògica a Barcelona. 12 sessions mensuals, cada una dedicada a un referent del gènere. Màxim 6 persones. Sortida opcional al fotolibre imprès."
 image: "/images/tallers/del-carrer-al-llibre.jpg"
+images:
+  - "/images/tallers/del-carrer-al-llibre-1.jpg"
+  - "/images/tallers/del-carrer-al-llibre-2.jpg"
+  - "/images/tallers/del-carrer-al-llibre-3.jpg"
+  - "/images/tallers/del-carrer-al-llibre-4.jpg"
+  - "/images/tallers/del-carrer-al-llibre-5.jpg"
+  - "/images/tallers/del-carrer-al-llibre-6.jpg"
+  - "/images/tallers/del-carrer-al-llibre-7.jpg"
+  - "/images/tallers/del-carrer-al-llibre-8.jpg"
+  - "/images/tallers/del-carrer-al-llibre-9.jpg"
+  - "/images/tallers/del-carrer-al-llibre-10.jpg"
 
 # Classificació
 tipus: "curs"
