@@ -11,7 +11,7 @@ draft: false
 
 Tenir imatges és el punt de partida. Convertir-les en un llibre és una decisió completament diferent. Un fotollibre t'obliga a triar — quines imatges entren, quines no, en quin ordre, amb quina veu — i cada decisió defineix de quina cosa parla el conjunt.
 
-El nou taller **Fotollibre: del concepte a la materialització** és per a qui vol fer aquest pas amb serietat. No és un curs de Photoshop ni un tutorial d'impressió: és un acompanyament complet des del concepte fins al fitxer llest per a l'impressor.
+El nou taller **[Fotollibre: del concepte a la materialització](/tallers/fotollibre/)** és per a qui vol fer aquest pas amb serietat. No és un curs de Photoshop ni un tutorial d'impressió: és un acompanyament complet des del concepte fins al fitxer llest per a l'impressor.
 
 Tres sessions de quatre hores, separades per tasques intermèdies:
 
@@ -26,4 +26,4 @@ El programari és **Affinity Publisher**, disponible de franc des de 2024. Cal i
 
 **L'únic requisit**: tenir un cos de treball fotogràfic propi — mínim 50-100 imatges d'un mateix projecte. No cal haver fet cap taller de Llumàtics prèviament.
 
-El taller és sota demanda, màxim quatre persones. La primera edició és per als alumnes del curs *Del Carrer al Llibre*, però qualsevol fotògraf amb un projecte entre mans pot apuntar-se a la llista d'espera.
+El taller és sota demanda, màxim quatre persones. La primera edició és per als alumnes del curs *[Del Carrer al Llibre](/tallers/del-carrer-al-llibre/)*, però qualsevol fotògraf amb un projecte entre mans pot apuntar-se a la llista d'espera.
