@@ -106,3 +106,4 @@ Fórmula estàndard (base 12h × 50€/h + 20€ = 620€):
 2. Mantenir `taller-fotolibre` com a `draft: true` (no eliminar per si hi ha links interns)
 3. Actualitzar `data/recorregut.yaml`: afegir `fotollibre` a la línia `practica` (després de `del-carrer-al-llibre`)
 4. Commit i push → producció
+aca

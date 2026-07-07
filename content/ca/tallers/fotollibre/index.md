@@ -4,6 +4,10 @@ subtitle: "Del cos de treball al llibre real."
 lead: "Tres sessions per convertir les teves fotos en un fotolibre: concepte, disseny digital i producció. Sortida a PDF, ePub o impressió via 112books."
 description: "Taller de creació de fotollibre a Barcelona. Conceptualització, narrativa visual, disseny amb Affinity Publisher i producció. Màxim 4 persones. Sota demanda."
 image: "/images/tallers/fotollibre.jpg"
+images:
+  - "/images/tallers/fotollibre-1.jpg"
+  - "/images/tallers/fotollibre-2.jpg"
+  - "/images/tallers/fotollibre-3.jpg"
 
 # Classificació
 tipus: "taller"
