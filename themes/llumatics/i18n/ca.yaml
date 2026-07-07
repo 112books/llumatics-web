@@ -159,7 +159,7 @@ preu_4h: "4 hores"
 
 # Pàgina gràcies
 gracies_msg_contacte: "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners."
-gracies_msg_newsletter: "Ja ets a la llista. T'escriurem quan hi hagi novetats que valguin la pena."
+gracies_msg_newsletter: "Gairebé! Et queda un pas: obre el correu de confirmació que t'acabem d'enviar i fes clic a l'enllaç. Si no el trobes en 5 minuts, mira la carpeta de correu no desitjat (spam)."
 gracies_msg_avisa: "T'hem apuntat. T'avisarem quan obrim places. Res d'spam, prometut."
 gracies_msg_default: "Tot ha anat bé. Gràcies per contactar amb Llumàtics."
 
