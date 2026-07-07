@@ -100,7 +100,7 @@ Els preus que apareixen a la fitxa tècnica són **per sessió**. El curs s'ofer
 | 3 | 1.134€ |
 | 4–6 | 950€ |
 
-El carret de cada sessió no està inclòs — l'alumne porta el seu material. Carret opcional per sessió: +12€.
+Cada sessió inclou un carret de 35mm. Si en vols fer servir més, els tens disponibles a +12€/unitat.
 
 ## Analògic per defecte
 
@@ -108,7 +108,7 @@ El curs és analògic. El 35mm obliga a pensar, limita les bales i fa visible el
 
 ## I al final, el llibre
 
-El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa personal d'influències, primera selecció per al fotolibre. Qui vulgui continuar pot accedir al **Taller Fotolibre**, on el cos de treball del curs es converteix en un objecte editorial real: digital, imprès, o tots dos.
+El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa personal d'influències, primera selecció per al fotolibre. Qui vulgui continuar pot accedir al **Fotollibre: del concepte a la materialització**, on el cos de treball del curs es converteix en un objecte editorial real: digital, imprès, o tots dos. És un taller independent que cal preparar a part.
 
 ## Cal portar
 
@@ -117,13 +117,9 @@ El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa persona
 
 ## No inclòs
 
-- Carretes (l'alumne porta el seu material; opcional +12€/sessió)
-- Producció del fotolibre (pressupost a mida via 112books)
+- Carretes addicionals (+12€/unitat, disponibles al taller)
+- Producció del fotolibre imprès (pressupost a mida via 112books)
 
-## Recursos per aprofundir
+## Documentació inclosa
 
-Canals i referències recomanades per als alumnes del curs:
-
-- **[Oscar en Fotos](https://www.youtube.com/@oscarenfotos)** — Canal en castellà sobre fotografia de carrer, processos analògics i mirada fotogràfica.
-- **[Alejandro Malasombra](https://www.youtube.com/@alejandromalasombra)** — Fotografia de carrer i visió personal. Reflexions sobre tècnica i estètica.
-- **[Vídeo de referència: La mirada al carrer](https://www.youtube.com/watch?v=4EnLj11eK_0)** — Recurs introductori per als alumnes del curs.
+Cada sessió inclou material de referència: fitxa tècnica de l'autor estudiat, selecció d'obres representatives i recursos per aprofundir. Tot queda als alumnes per conservar.
