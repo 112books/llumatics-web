@@ -328,7 +328,7 @@
             </div>
           {{ end }}
         </div>
-        {{ else }}
+        {{ else if ne (.Params.estat | default "") "proxim" }}
         <div class="info-box__scheduling info-box__scheduling--ondemand">
           <p class="info-box__scheduling-label">{{ i18n "ondemand_label" }}</p>
           <p class="info-box__scheduling-text">
