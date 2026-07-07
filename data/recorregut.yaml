@@ -218,6 +218,15 @@ linies:
         slug: "del-carrer-al-llibre"
         bloc: "practica"
 
+      - title: "Fotollibre"
+        title_es: "Fotolibro"
+        title_en: "Photobook"
+        slug: "fotollibre"
+        bloc: "practica"
+        desc: "Del cos de treball al llibre real."
+        desc_es: "Del cuerpo de trabajo al libro real."
+        desc_en: "From your body of work to a real book."
+
       - title: "Retrat analògic"
         title_es: "Retrato analógico"
         title_en: "Analogue portrait"
