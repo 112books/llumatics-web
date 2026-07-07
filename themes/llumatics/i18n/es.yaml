@@ -218,6 +218,7 @@ preu_per_sessio: "Precio por sesión · por persona"
 cta_newsletter_pre: "O"
 cta_newsletter_link: "suscríbete al boletín"
 cta_newsletter_post: "para estar al tanto de cuándo se programe."
+newsletter_label: "[Boletín] Luz en tu bandeja de entrada"
 
 # Página privada — formulario d'identificación
 private_name_label: "Nombre completo"

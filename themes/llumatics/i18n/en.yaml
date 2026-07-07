@@ -218,6 +218,7 @@ preu_per_sessio: "Price per session · per person"
 cta_newsletter_pre: "Or"
 cta_newsletter_link: "subscribe to the newsletter"
 cta_newsletter_post: "to be the first to know when it's scheduled."
+newsletter_label: "[Newsletter] Light in your inbox"
 
 # Private page — identification form
 private_name_label: "Full name"
