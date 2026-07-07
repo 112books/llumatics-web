@@ -8,3 +8,4 @@ package-lock.json
 MEMORY.md
 waitlist.csv
 .env
+static/form-handler.php
