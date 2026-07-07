@@ -11,8 +11,13 @@
       {{ i18n "newsletter_desc" | default "Nous tallers, reflexions sobre fotografia i notícies del laboratori. Sense soroll." }}
     </p>
 
-    {{ if .Site.Params.tallyFormNewsletter }}
-      {{/* Embed Tally */}}
+    {{ if .Site.Params.brevoNewsletterFormURL }}
+      <a href="{{ .Site.Params.brevoNewsletterFormURL }}"
+         class="btn btn--accent"
+         target="_blank" rel="noopener">
+        {{ i18n "newsletter_cta" | default "Subscriure'm" }}
+      </a>
+    {{ else if .Site.Params.tallyFormNewsletter }}
       <div style="max-width:480px; margin-inline:auto;">
         <iframe
           data-tally-src="https://tally.so/embed/{{ .Site.Params.tallyFormNewsletter }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
@@ -27,15 +32,6 @@
         </iframe>
         <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </div>
-    {{ else }}
-      {{/* Formulari natiu placeholder */}}
-      <form class="newsletter-form newsletter-form--native" novalidate>
-        <input type="email" name="email" placeholder="{{ i18n "newsletter_placeholder" | default "el teu correu" }}" required>
-        <button type="submit" class="btn btn--accent">
-          {{ i18n "newsletter_cta" | default "Subscriure'm" }}
-        </button>
-      </form>
-      <p class="newsletter-form__msg" style="font-size:0.875rem;margin-top:0.75rem;min-height:1.2em;"></p>
     {{ end }}
   </div>
 </section>
