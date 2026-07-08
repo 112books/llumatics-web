@@ -661,6 +661,18 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-07-08) — continuació
+**Avisa'm: sistema de confirmació complet**
+
+- **form-handler.php** (gitignored, desplegat via scp): flux definitiu:
+  1. SMTP (Brevo relay) → avís intern a `hola@llumatics.com` (taller + email + data)
+  2. API Brevo `/v3/smtp/email` → confirmació HTML al subscrit amb nom del taller
+  3. API Brevo `/v3/contacts` → contacte afegit a llista #5 (Waitlist tallers)
+- **Brevo Automation #2** — desactivada (enviava mail duplicat amb taller buit; l'API Brevo contactes no dispara automacions)
+- **Brevo IP autoritzada** — 82.98.166.123 (VPS Dinahosting) autoritzada per a API keys
+- **Filtre anti-spam Dinahosting** — whitelist `hola@llumatics.com` al panell de control i a Roundcube. Si segueix a spam, obrir ticket a Dinahosting.
+- **Pendent app gestió alumnes** — PHP+SQLite: waitlist per taller, comptador inscrits per taller, proposta de grup GDPR-compliant (veure memory)
+
 ### Fet aquesta sessió (2026-07-07 / 08)
 **Tallers nous + lightbox + email autenticació**
 
