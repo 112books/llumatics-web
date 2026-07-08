@@ -661,6 +661,26 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-07-07 / 08)
+**Tallers nous + lightbox + email autenticació**
+
+- **Taller Fotollibre: del concepte a la materialització** — fitxa pública CA/ES/EN publicada (`estat: actiu`, `sota_demanda: true`, `preu_1: 620`). Tres sessions de 4h amb 112books.eu com a acompanyament d'impressió. Affinity Publisher (gratuït des de 2024).
+- **Taller Del Carrer al Llibre** — fitxa publicada CA/ES/EN (`estat: proxim`, `proper_inici: Octubre 2026`). 12 sessions mensuals, màx. 6 persones. Preu semestral i anual amb escala 1-4+ alumnes.
+- **data/recorregut.yaml** — substituït `carrer-i-mirada` (en_construccio) per `del-carrer-al-llibre` (actiu) a la línia `practica`; afegit `fotollibre` a continuació.
+- **Blog** — 2 posts nous: `del-carrer-al-llibre-nou-curs.md` i `fotollibre-del-concepte-a-la-materialitzacio.md`, amb `course_ref` i links inline als tallers.
+- **Imatges fotollibre** — `fotollibre-4/5/6.tif` convertits a JPG (max 1200px, ~250-400KB). Frontmatter CA/ES/EN actualitzat.
+- **Lightbox galeria** — JS afegit a `main.js` (`.js-lightbox-trigger` + `data-gallery`). CSS i DOM ja existien. Navegació fletxes teclat, Escape per tancar.
+- **form-handler.php** (gitignored, desplegat via scp) — correcció de text: "avisada/avisada" → "avisat/avisada", accents ("Llumàtics", "perquè", "política", "No és brossa", "compromís").
+- **Email autenticació (SPF + DKIM + DMARC)** — mails de Brevo ja no van a spam:
+  - SPF: afegit `include:spf.brevo.com` al registre TXT de llumatics.com a Dinahosting
+  - DKIM: domini llumatics.com verificat a Brevo (Senders & IPs → Domains → Authenticated)
+  - DMARC: registre actualitzat amb `rua` de Brevo i tornant a `p=reject`:
+    `v=DMARC1; p=reject; rua=mailto:hola@llumatics.com,mailto:rua@dmarc.brevo.com; ruf=mailto:hola@llumatics.com; fo=1`
+
+**Pendent comunicació:**
+- [ ] Post per a 112books.eu anunciant la col·laboració al taller Fotollibre
+- [ ] Newsletter a Brevo quan hi hagi subscrits
+
 ### Fet aquesta sessió (2026-06-01)
 **Instagram — Posts pilot publicats + perfil optimitzat + Meta Developer App iniciada**
 
