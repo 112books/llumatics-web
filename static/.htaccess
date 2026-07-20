@@ -44,8 +44,10 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # --- Prefix erroni /llumatics-web/en/ ---
+  # --- Prefix erroni /llumatics-web/ (totes les variants) ---
   RewriteRule ^llumatics-web/en/(.*)$ /en/$1 [R=301,L]
+  RewriteRule ^llumatics-web/es/(.*)$ /es/$1 [R=301,L]
+  RewriteRule ^llumatics-web/(.*)$ /$1 [R=301,L]
 
   # ── CA: pàgines estàtiques canviades de nom ──────────────
   RewriteRule ^sobre-nosaltres/?$ /sobre/ [R=301,L]
