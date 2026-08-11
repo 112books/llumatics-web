@@ -661,6 +661,27 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-08-12)
+**Waitlist alumnes + recordatori vals + FAQ laboratori + mapa Leaflet transport públic**
+
+- **`static/admin/alumnes.php`** — panell PHP+SQLite de gestió de waitlist. Resum per taller amb alerta si ≥2 inscrits ("PROPOSA DATA"). Estats espera/contactat/confirmat/completat. Botó "Avisa" per enviar SMTP. Inserció manual. Auth: `llumatics`.
+- **`form-handler.php`** (VPS, gitignored) — `type=avisa`: insereix a taula `waitlist` (UNIQUE email+taller), compta inscrits per taller, envia avís intern `[ACCIÓ] PROPOSA DATA` si ≥2. Waitlist comparteix `www/admin/vals.db`.
+- **`static/admin/vals.php`** — botó "Recordatori" per enviar email en anglès al comprador d'un val actiu. Link "Alumnes" afegit a la topbar.
+- **`static/admin/config.php`** (gitignored) — credencials SMTP Brevo extretes de tots els PHP. Clau Brevo rotada (`...xCp4hnW4vtjbWByy`) per secret exposat en push.
+- **`static/admin/config.example.php`** — plantilla de config sense secrets (tracked).
+- **FAQ laboratori independent** — afegida entrada FAQ a `content/{ca,es,en}/contacte/index.md`: "El laboratori és un temple, accés exclusiu per a tallers."
+- **Mapa Leaflet** (`themes/llumatics/layouts/contacte/single.html`):
+  - Base: CartoDB Light (`light_all`)
+  - Marcador: logo SVG de Llumàtics (`static/images/llumatics-logo.svg`)
+  - Transport: Overpass API — metro (vermell), tren/Rodalies (taronja), bus (blau), Bicing (verd)
+  - Leaflet servit localment (`static/vendor/leaflet/`) per evitar bloqueig ad-blocker
+  - Lliçó: operador `!=` a Overpass falla silenciosament; classificar metro vs tren al JS
+
+**Incidència secrets:**
+- Clau SMTP Brevo apareixia hardcodejada a `vals.php` i `alumnes.php` → GitHub push protection ho va bloquejar
+- Solució: `git reset --soft` al commit net, extracció a `config.php` gitignored, rotació de clau a Brevo
+- Pattern definitiu: tots els PHP d'admin fan `require_once __DIR__ . '/config.php'`
+
 ### Fet aquesta sessió (2026-08-11)
 **Sistema de gestió de vals-regal + tracking de temps**
 
