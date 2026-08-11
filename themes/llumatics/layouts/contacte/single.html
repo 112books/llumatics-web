@@ -1,5 +1,6 @@
 {{ define "head-extra" }}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN2GqVo=" crossorigin=""></script>
 {{ end }}
 
 {{ define "main" }}
@@ -176,9 +177,8 @@
           <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
         </p>
       </section>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN2GqVo=" crossorigin=""></script>
       <script>
-      (function () {
+      document.addEventListener('DOMContentLoaded', function () {
         var lat = 41.424371, lng = 2.192952;
         var map = L.map('llum-map', { scrollWheelZoom: false, zoomControl: true });
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -195,7 +195,7 @@
           fillOpacity: 0.95
         }).addTo(map).bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
         map.setView([lat, lng], 16);
-      })();
+      });
       </script>
 
     </aside>
