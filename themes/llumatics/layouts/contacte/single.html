@@ -1,3 +1,7 @@
+{{ define "head-extra" }}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+{{ end }}
+
 {{ define "main" }}
 <div class="page-with-bg">
 <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/contacte-2025-03-07-LC-a+-Foma100@800-varies-0031.jpg" }}" alt="" aria-hidden="true">
@@ -172,7 +176,6 @@
           <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
         </p>
       </section>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN2GqVo=" crossorigin=""></script>
       <script>
       (function () {
