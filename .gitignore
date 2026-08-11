@@ -10,3 +10,4 @@ waitlist.csv
 .env
 static/form-handler.php
 form-handler.php
+static/admin/config.php

@@ -2,7 +2,8 @@
 session_start();
 
 define('ADMIN_PASSWORD', 'llumatics');
-define('DB_PATH', __DIR__ . '/vals.db');
+define('DB_PATH',        __DIR__ . '/vals.db');
+require_once __DIR__ . '/config.php';
 
 /* ── Auth ─────────────────────────────────────────────── */
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pwd'])) {
@@ -118,6 +119,59 @@ if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
         $db->prepare("UPDATE vals SET notes=? WHERE id=?")->execute([trim($_POST['notes']), $_POST['id']]);
         header('Location: vals.php'); exit;
     }
+
+    if ($action === 'recordatori') {
+        $v = db()->query("SELECT * FROM vals WHERE id=" . (int)$_POST['id'])->fetch(PDO::FETCH_ASSOC);
+        if ($v && $v['estat'] === 'actiu') {
+            $subject = "Reminder: your Llumàtics gift voucher";
+            $body    = "Hi,\n\n"
+                     . "We wanted to remind you that {$v['per_a']} has a gift voucher"
+                     . " for \"{$v['taller']}\" at Llumàtics, generously offered by {$v['de_part_de']}.\n\n"
+                     . "Voucher code: {$v['codi']}\n"
+                     . "Valid until: {$v['data_caducitat']}\n\n"
+                     . "Whenever you're ready to book a date, just reply to this email"
+                     . " or write us at hola@llumatics.com — we'll find something that works.\n\n"
+                     . "Joan — Llumàtics\nhttps://llumatics.com\n";
+            $sent = smtp_send($v['email_comprador'], MAIL_FROM, MAIL_FROM_NAME, $subject, $body);
+            if ($sent) {
+                db()->prepare("UPDATE vals SET notes=? WHERE id=?")
+                    ->execute(["Recordatori enviat " . date('Y-m-d'), $v['id']]);
+            }
+            header('Location: vals.php?msg=' . ($sent ? 'ok' : 'err')); exit;
+        }
+        header('Location: vals.php'); exit;
+    }
+}
+
+function smtp_send(string $to, string $from, string $fromName, string $subject, string $body): bool {
+    $ctx  = stream_context_create(['ssl' => ['verify_peer' => true, 'verify_peer_name' => true, 'allow_self_signed' => false]]);
+    $conn = @stream_socket_client(SMTP_HOST . ':' . SMTP_PORT, $errno, $errstr, 30, STREAM_CLIENT_CONNECT, $ctx);
+    if (!$conn) return false;
+    stream_set_timeout($conn, 30);
+    smtp_r($conn); // 220
+    smtp_c($conn, 'EHLO llumatics.com');
+    fputs($conn, "AUTH LOGIN\r\n"); smtp_r($conn);
+    fputs($conn, base64_encode(SMTP_USER) . "\r\n"); smtp_r($conn);
+    fputs($conn, base64_encode(SMTP_PASS) . "\r\n");
+    if (strpos(smtp_r($conn), '235') === false) { fclose($conn); return false; }
+    smtp_c($conn, "MAIL FROM:<$from>");
+    smtp_c($conn, "RCPT TO:<$to>");
+    fputs($conn, "DATA\r\n"); smtp_r($conn);
+    $enc_s = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+    $enc_n = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
+    $msg   = "From: $enc_n <$from>\r\nTo: $to\r\nSubject: $enc_s\r\nMIME-Version: 1.0\r\n"
+           . "Content-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n"
+           . $body . "\r\n.\r\n";
+    fputs($conn, $msg);
+    $ok = strpos(smtp_r($conn), '250') !== false;
+    fputs($conn, "QUIT\r\n"); fclose($conn);
+    return $ok;
+}
+function smtp_c($conn, string $cmd): string { fputs($conn, "$cmd\r\n"); return smtp_r($conn); }
+function smtp_r($conn): string {
+    $r = '';
+    while ($l = fgets($conn, 512)) { $r .= $l; if (isset($l[3]) && $l[3] === ' ') break; }
+    return $r;
 }
 
 /* ── Data ─────────────────────────────────────────────── */
@@ -295,6 +349,7 @@ function caducitat_class(string $data): string {
     <div class="topbar-title">Vals-regal</div>
     <div class="topbar-links">
       <a href="index.html">Stats</a>
+      <a href="alumnes.php">Alumnes</a>
     </div>
     <form method="post" style="margin:0">
       <input type="hidden" name="logout" value="1">
@@ -303,6 +358,12 @@ function caducitat_class(string $data): string {
   </div>
 
   <div class="main">
+    <?php if (isset($_GET['msg'])): ?>
+      <div style="padding:.6rem 1rem;margin-bottom:1rem;border:1px solid;<?= $_GET['msg']==='ok' ? 'border-color:#2d6a2d;color:#2d6a2d;background:#e8f5e8' : 'border-color:#8b2500;color:#8b2500;background:#fde8e8' ?>">
+        <?= $_GET['msg']==='ok' ? 'Recordatori enviat correctament.' : 'Error enviant el recordatori. Comprova la connexió SMTP.' ?>
+      </div>
+    <?php endif ?>
+
 
     <!-- KPIs -->
     <div class="kpis">
@@ -444,6 +505,11 @@ function caducitat_class(string $data): string {
                     <input type="hidden" name="action" value="bescanviat">
                     <input type="hidden" name="id" value="<?= $v['id'] ?>">
                     <button type="submit" class="btn-act primary">Bescanviat</button>
+                  </form>
+                  <form method="post" onsubmit="return confirm('Enviar recordatori a ' + <?= json_encode($v['email_comprador']) ?> + '?')">
+                    <input type="hidden" name="action" value="recordatori">
+                    <input type="hidden" name="id" value="<?= $v['id'] ?>">
+                    <button type="submit" class="btn-act">Recordatori</button>
                   </form>
                   <form method="post" onsubmit="return confirm('Cancel·lar aquest val?')">
                     <input type="hidden" name="action" value="cancel">
