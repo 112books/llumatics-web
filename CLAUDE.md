@@ -676,6 +676,8 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
   - Transport: Overpass API — metro (vermell), tren/Rodalies (taronja), bus (blau), Bicing (verd)
   - Leaflet servit localment (`static/vendor/leaflet/`) per evitar bloqueig ad-blocker
   - Lliçó: operador `!=` a Overpass falla silenciosament; classificar metro vs tren al JS
+  - Llegenda sota el mapa amb punt de color per a cada tipus de transport
+  - Zoom: scroll normal = pàgina, Ctrl+scroll = zoom al mapa (comportament estàndard web)
 
 **Incidència secrets:**
 - Clau SMTP Brevo apareixia hardcodejada a `vals.php` i `alumnes.php` → GitHub push protection ho va bloquejar
