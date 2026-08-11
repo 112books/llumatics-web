@@ -186,15 +186,16 @@
           subdomains: 'abcd',
           maxZoom: 19
         }).addTo(map);
-        L.circleMarker([lat, lng], {
-          radius: 10,
-          fillColor: '#8b2500',
-          color: '#fff',
-          weight: 2.5,
-          opacity: 1,
-          fillOpacity: 0.9
-        }).addTo(map).bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
+        var icon = L.icon({
+          iconUrl: '{{ "images/llumatics-logo.svg" | absURL }}',
+          iconSize: [44, 44],
+          iconAnchor: [22, 22],
+          popupAnchor: [0, -26]
+        });
+        L.marker([lat, lng], { icon: icon }).addTo(map)
+          .bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
         map.setView([lat, lng], 16);
+        map.getPane('tilePane').style.filter = 'sepia(0.35) hue-rotate(320deg) saturate(1.3) brightness(0.97)';
       });
       </script>
 
