@@ -197,25 +197,25 @@
         map.setView([lat, lng], 16);
 
         // Parades de transport públic i bicing des d'OpenStreetMap
-        var q = '[out:json];('
-          + 'node["railway"="station"]["station"="subway"](around:1000,' + lat + ',' + lng + ');'
+        var q = '[out:json][timeout:15];('
+          + 'node["railway"="station"](around:1100,' + lat + ',' + lng + ');'
           + 'node["railway"="subway_entrance"](around:1000,' + lat + ',' + lng + ');'
-          + 'node["railway"="station"]["station"!="subway"](around:1200,' + lat + ',' + lng + ');'
-          + 'node["highway"="bus_stop"](around:500,' + lat + ',' + lng + ');'
-          + 'node["amenity"="bicycle_rental"](around:700,' + lat + ',' + lng + ');'
+          + 'node["highway"="bus_stop"](around:450,' + lat + ',' + lng + ');'
+          + 'node["amenity"="bicycle_rental"](around:650,' + lat + ',' + lng + ');'
           + ');out;';
         fetch('https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(q))
           .then(function(r){ return r.json(); })
           .then(function(d){
+            if (!d || !d.elements) return;
             d.elements.forEach(function(el){
-              var t = el.tags;
+              var t = el.tags || {};
               var isBus    = t['highway'] === 'bus_stop';
               var isBicing = t['amenity'] === 'bicycle_rental';
+              var isSubway = t['railway'] === 'subway_entrance'
+                          || (t['railway'] === 'station' && t['station'] === 'subway');
               var isTrain  = t['railway'] === 'station' && t['station'] !== 'subway';
-              var isMetro  = t['railway'] === 'station' && t['station'] === 'subway'
-                          || t['railway'] === 'subway_entrance';
               var nom = t['name'] || (isBus ? 'Bus' : isBicing ? 'Bicing' : isTrain ? 'Tren' : 'Metro');
-              var color  = '#E3001C'; var radius = 8;  // metro: vermell
+              var color = '#E3001C'; var radius = 8;   // metro: vermell
               if (isTrain)  { color = '#FF6D00'; radius = 9; }  // tren: taronja
               if (isBus)    { color = '#0059A8'; radius = 5; }  // bus: blau
               if (isBicing) { color = '#00A651'; radius = 6; }  // bicing: verd
