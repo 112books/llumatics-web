@@ -173,6 +173,12 @@
         <div class="contact-map__embed">
           <div id="llum-map" style="height:260px;width:100%"></div>
         </div>
+        <ul class="map-legend">
+          <li><span class="map-legend__dot" style="background:#E3001C"></span> Metro</li>
+          <li><span class="map-legend__dot" style="background:#FF6D00"></span> {{ i18n "transport_commuter_rail" | default "Rodalies / FGC" }}</li>
+          <li><span class="map-legend__dot" style="background:#0059A8"></span> Bus</li>
+          <li><span class="map-legend__dot" style="background:#00A651"></span> Bicing</li>
+        </ul>
         <p class="contact-map__link">
           <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
         </p>
@@ -180,7 +186,12 @@
       <script>
       document.addEventListener('DOMContentLoaded', function () {
         var lat = 41.424371, lng = 2.192952;
-        var map = L.map('llum-map', { scrollWheelZoom: true, zoomControl: true });
+        var map = L.map('llum-map', { scrollWheelZoom: 'center', zoomControl: true });
+        map.scrollWheelZoom.disable();
+        map.getContainer().addEventListener('wheel', function(e) {
+          if (e.ctrlKey || e.metaKey) { map.scrollWheelZoom.enable(); }
+          else { map.scrollWheelZoom.disable(); }
+        });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
