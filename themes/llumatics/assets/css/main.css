@@ -2839,8 +2839,13 @@ a.recorregut-stop__name:hover {
 .contact-map__embed {
   border-radius: var(--radius-md);
   overflow: hidden;
+  border: 1px solid var(--color-border, #E0DED8);
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   margin-bottom: var(--space-3);
+}
+
+.page-contacte .page-bg {
+  opacity: 0.04;
 }
 
 .contact-map__embed iframe {

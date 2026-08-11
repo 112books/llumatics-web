@@ -4,7 +4,7 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="page-with-bg">
+<div class="page-with-bg page-contacte">
 <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/contacte-2025-03-07-LC-a+-Foma100@800-varies-0031.jpg" }}" alt="" aria-hidden="true">
 <div class="section container" style="position:relative; z-index:1;">
 
@@ -188,11 +188,11 @@
         }).addTo(map);
         L.circleMarker([lat, lng], {
           radius: 10,
-          fillColor: '#C8A96E',
+          fillColor: '#8b2500',
           color: '#fff',
           weight: 2.5,
           opacity: 1,
-          fillOpacity: 0.95
+          fillOpacity: 0.9
         }).addTo(map).bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
         map.setView([lat, lng], 16);
       });
