@@ -180,7 +180,7 @@
       <script>
       document.addEventListener('DOMContentLoaded', function () {
         var lat = 41.424371, lng = 2.192952;
-        var map = L.map('llum-map', { scrollWheelZoom: false, zoomControl: true });
+        var map = L.map('llum-map', { scrollWheelZoom: true, zoomControl: true });
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
           subdomains: 'abcd',
@@ -194,7 +194,7 @@
         });
         L.marker([lat, lng], { icon: icon }).addTo(map)
           .bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
-        map.setView([lat, lng], 16);
+        map.setView([lat, lng], 17);
         map.getPane('tilePane').style.filter = 'sepia(0.35) hue-rotate(320deg) saturate(1.3) brightness(0.97)';
       });
       </script>
