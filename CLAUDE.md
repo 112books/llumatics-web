@@ -661,6 +661,22 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-08-11)
+**Sistema de gestió de vals-regal + tracking de temps**
+
+- **`static/admin/vals.php`** — panell PHP+SQLite per gestionar vals-regal. Login per sessió (password: `llumatics`). KPIs (actius, bescanviats, total emesos, volum €). Filtres per estat. Taula amb codi, taller, import, destinatari, comprador, dates, notes. Accions: bescanviat / cancel·lar / reactivar / nota inline. Formulari d'inserció manual. Precarrega automàtica dels 2 vals pendents en el primer arrencada.
+- **`static/admin/index.html`** — afegit link "Vals-regal" a la topbar per navegar entre panells.
+- **`themes/llumatics/layouts/_default/gift.html`** — `onApprove` de PayPal ara fa un tercer POST a `/form-handler.php` (type=`val`) per registrar cada venda automàticament.
+- **`form-handler.php`** (VPS, gitignored) — nou handler `type=val`: valida codi, insereix a SQLite (`www/admin/vals.db`), calcula caducitat a +6 mesos.
+- **Deploy**: `vals.php` i `index.html` via `scp`; `form-handler.php` via `scp`; `gift.html` via commit+push a `main`.
+- **Tracking de temps** — skill `gestor-hores` activat. Directoris `.taques/llumatics/` i `.taques-central/` creats. ~1.8h registrades avui.
+
+**Vals registrats manualment (precarregats al DB):**
+| Codi | Taller | Import | Per a | Comprador | Compra | Caduca |
+|------|--------|--------|-------|-----------|--------|--------|
+| LLM-2026-0X2ZB | Aprende a controlar la luz | 220€ | Ale | elenavigoolivan@gmail.com | 2026-07-17 | 2027-01-17 |
+| LLM-2026-OPUH9 | Introduction to darkroom printing | 170€ | Nataliia Lisohurska | mdkisselgof@gmail.com | 2026-08-11 | 2027-02-11 |
+
 ### Fet aquesta sessió (2026-07-08) — continuació
 **Avisa'm: sistema de confirmació complet**
 

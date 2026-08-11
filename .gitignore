@@ -9,3 +9,4 @@ MEMORY.md
 waitlist.csv
 .env
 static/form-handler.php
+form-handler.php
