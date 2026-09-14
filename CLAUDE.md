@@ -661,6 +661,14 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-09-14)
+**Agenda taller extern + clau SSH deploy GitHub Actions + text Instagram**
+
+- **Agenda `iniciacio-revelat` 31 oct 2026** — creades entrades CA i ES (`content/ca/agenda/iniciacio-revelat-2026-10-31.md`, `content/es/agenda/`). 10h–13h, Cameras & Films, 55€, 10 places, `status: active`.
+- **Clau SSH GitHub Actions** — generada `~/.ssh/llumatics_deploy` (ed25519, sense contrasenya), copiada al VPS, verificada. Cal afegir el secret `SSH_DEPLOY_KEY` (i `VPS_HOST`, `VPS_USER`) a `github.com/112books/llumatics-web/settings/secrets/actions` perquè el workflow de deploy funcioni.
+- **Text Instagram** — redactat text d'anunci en CA per al taller Iniciació al revelat del 31 oct. Publicat manualment per l'usuari.
+- Deploy manual (`./scripts/deploy.sh`) operatiu: build Hugo 491 pàgines CA, rsync al VPS (exit 23 ignorat, normal).
+
 ### Fet aquesta sessió (2026-08-12)
 **Waitlist alumnes + recordatori vals + FAQ laboratori + mapa Leaflet transport públic**
 
