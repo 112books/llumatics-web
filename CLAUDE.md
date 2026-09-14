@@ -920,6 +920,13 @@ Mantén el context principal net i delega el treball pesat als sub-agents.
 
 ---
 
+# Sessió 2026-09-14 — Alerta de tràfic
+
+- Repositori `develop` sincronitzat amb `origin/develop` fins a `60cf1647`.
+- Revisada l'alerta de caiguda setmanal a `/tallers/`, `/inici/` i `/blog/`.
+- No es considera una incidència confirmada: les mostres són massa petites (22→15, 10→6 i 3→1 visites).
+- Abans d'actuar, cal comparar 4-8 setmanes, validar impressions/clics/CTR/posició a GSC i comprovar què representa `/inici/`; la portada actual és `/`.
+
 # Sessió 2026-04-22 — Resum de canvis
 
 ## Correccions
