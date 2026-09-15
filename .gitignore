@@ -9,3 +9,6 @@ MEMORY.md
 waitlist.csv
 .env
 .taques/
+static/form-handler.php
+form-handler.php
+static/admin/config.php

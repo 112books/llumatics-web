@@ -29,6 +29,7 @@
   var messages = {
     contacte:   {{ i18n "gracies_msg_contacte"   | default "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners." | jsonify }},
     newsletter: {{ i18n "gracies_msg_newsletter"  | default "Ja ets a la llista. T'escriurem quan hi hagi novetats que valguin la pena." | jsonify }},
+    avisa:      {{ i18n "gracies_msg_avisa"       | default "T'hem apuntat. T'avisarem quan obrim places. Res d'spam, prometut." | jsonify }},
   };
 
   msg.textContent = messages[from] || {{ i18n "gracies_msg_default" | default "Tot ha anat bé. Gràcies per contactar amb Llumàtics." | jsonify }};

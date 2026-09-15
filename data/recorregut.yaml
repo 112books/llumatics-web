@@ -212,12 +212,20 @@ linies:
         slug: "fotografia-de-carrer"
         bloc: "practica"
 
-      - title: "Carrer i mirada"
-        title_es: "Calle y mirada"
-        title_en: "Street and vision"
-        slug: "carrer-i-mirada"
-        en_construccio: true
+      - title: "Del Carrer al Llibre"
+        title_es: "De la calle al libro"
+        title_en: "From Street to Book"
+        slug: "del-carrer-al-llibre"
         bloc: "practica"
+
+      - title: "Fotollibre"
+        title_es: "Fotolibro"
+        title_en: "Photobook"
+        slug: "fotollibre"
+        bloc: "practica"
+        desc: "Del cos de treball al llibre real."
+        desc_es: "Del cuerpo de trabajo al libro real."
+        desc_en: "From your body of work to a real book."
 
       - title: "Retrat analògic"
         title_es: "Retrato analógico"

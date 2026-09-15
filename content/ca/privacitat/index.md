@@ -1,7 +1,7 @@
 ---
 title: "Política de privacitat"
 description: "Política de privacitat de Llumàtics: com tractem les vostres dades personals d'acord amb el RGPD i la LOPDGDD."
-date: 2026-04-21
+date: 2026-07-07
 draft: false
 ---
 
@@ -31,7 +31,8 @@ Les dades que ens proporcioneu s'utilitzen exclusivament per a:
 
 1. **Atendre la vostra consulta** o sol·licitud de taller
 2. **Gestionar la relació formativa**: confirmació de dates, enviament de documentació i material de curs
-3. **Comunicacions relacionades amb els tallers** si heu donat el consentiment explícit
+3. **Gestionar la llista d'espera de tallers**: quan sol·liciteu ser avisats de l'obertura de places ("Avisa'm"), conservem el vostre correu fins que el taller s'obri o es cancel·li. Base jurídica: consentiment explícit.
+4. **Enviar el butlletí de novetats** si us hi heu subscrit voluntàriament amb doble confirmació (double opt-in). Podeu donar-vos de baixa en qualsevol moment fent clic a l'enllaç que figura a cada missatge.
 
 No es realitza cap tractament de dades amb finalitats comercials ni publicitàries sense consentiment previ.
 
@@ -39,11 +40,12 @@ No es realitza cap tractament de dades amb finalitats comercials ni publicitàri
 
 ## Dades que tractem
 
-A través del formulari de contacte recollim:
-
-- Nom i cognoms
-- Adreça de correu electrònic
-- Informació que vosaltres mateixos incloeu al missatge (taller d'interès, data preferida, etc.)
+| Canal | Dades recollides |
+|-------|-----------------|
+| Formulari de contacte | Nom, correu electrònic, contingut del missatge |
+| Formulari "Avisa'm" (llista d'espera) | Correu electrònic, taller d'interès |
+| Subscripció al butlletí | Correu electrònic |
+| Pàgina privada d'alumnes | Nom, correu electrònic, curs |
 
 No recollim dades especialment protegides (salut, ideologia, origen racial, etc.).
 
@@ -54,7 +56,7 @@ No recollim dades especialment protegides (salut, ideologia, origen racial, etc.
 Les vostres dades **no es cedeixen a tercers**, excepte:
 
 - Quan existeixi una obligació legal
-- Al proveïdor del servei de formularis (**web3forms.com**), que actua com a encarregat del tractament i gestiona l'enviament dels missatges. Podeu consultar la seva política de privacitat a [web3forms.com/privacy](https://web3forms.com/privacy).
+- A **Brevo SAS** (antic Sendinblue), empresa francesa sotmesa al RGPD, que actua com a encarregat del tractament en la gestió del butlletí i les llistes d'espera. Brevo compta amb certificació ISO 27001 i clàusules contractuals estàndard per a transferències internacionals. Podeu consultar la seva política de privacitat a [brevo.com/legal/privacypolicy](https://www.brevo.com/legal/privacypolicy/).
 
 ---
 

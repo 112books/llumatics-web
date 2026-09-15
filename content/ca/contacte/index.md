@@ -53,6 +53,13 @@ subtitle: "Escriu-nos per reservar un taller, fer una consulta o proposar una co
 <p>Sí, amb cita prèvia. <strong>Llumàtics no és un espai d'accés lliure</strong>: obrim exclusivament per als tallers i per a visites concertades. Si vols conèixer el laboratori, el plató o la biblioteca abans d'inscriure't, escriu-nos i ho organitzem sense compromís.</p>
 </div>
 </details>
+
+<details class="faq-item">
+<summary class="faq-question">Es pot llogar o fer servir el laboratori de manera independent? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El laboratori de Llumàtics no és un espai de lloguer ni d'ús lliure. Per a nosaltres, el laboratori és gairebé un temple: cada cosa al seu lloc, cada procés controlat, cada sessió supervisada directament. L'ús és exclusiu del professorat i de l'alumnat durant els tallers. Si vols accedir-hi, la via és apuntar-te a un taller.</p>
+</div>
+</details>
 </div>
 
 <div class="faq-group">

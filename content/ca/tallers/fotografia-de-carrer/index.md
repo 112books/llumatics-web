@@ -33,6 +33,7 @@ target: "Fotògrafs que volen fer el pas del control tècnic a la mirada: aprend
 
 # Tallers relacionats
 continua_aprenent: 
+  - "del-carrer-al-llibre"
   - "carrer-i-mirada"
   - "tutoria-fotografica"
 tags: ["carrer", "documental", "mirada", "analògica", "Barcelona"]

@@ -317,9 +317,21 @@
               'Llumàtics — llumatics.com'
             );
 
+            var valReg = new FormData();
+            valReg.append('type',            'val');
+            valReg.append('codi',            codi);
+            valReg.append('taller',          tallerNom);
+            valReg.append('import',          importV + '€');
+            valReg.append('per_a',           perA);
+            valReg.append('de_part_de',      de);
+            valReg.append('email_comprador', email);
+            valReg.append('paypal_order',    details.id);
+            valReg.append('missatge',        missatge);
+
             Promise.allSettled([
               fetch('https://api.web3forms.com/submit', { method: 'POST', body: notif }),
-              fetch('https://api.web3forms.com/submit', { method: 'POST', body: conf })
+              fetch('https://api.web3forms.com/submit', { method: 'POST', body: conf }),
+              fetch('/form-handler.php',                { method: 'POST', body: valReg })
             ]).then(function () {
               showSuccess(email, codi, perA, de, tallerNom, importV, missatge);
             });

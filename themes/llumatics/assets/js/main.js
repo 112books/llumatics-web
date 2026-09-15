@@ -79,52 +79,34 @@
   }
 
   // ─────────────────────────────────────────────────────────────
-  // NEWSLETTER FORM
+  // AVISA'M — toggle + submit via PHP handler
   // ─────────────────────────────────────────────────────────────
-  const newsletterForm = document.querySelector('.newsletter-form--native');
+  document.querySelectorAll('.js-avisa-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const form = document.getElementById(btn.dataset.target);
+      if (!form) return;
+      const isHidden = form.style.display === 'none';
+      form.style.display = isHidden ? 'block' : 'none';
+      if (isHidden) form.querySelector('[type="email"]').focus();
+    });
+  });
 
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async e => {
+  document.querySelectorAll('[data-avisa-form]').forEach(form => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-
-      const email = newsletterForm.querySelector('[type="email"]').value;
-      const btn = newsletterForm.querySelector('[type="submit"]');
-      const msg = newsletterForm.querySelector('.newsletter-form__msg');
-
+      const btn = form.querySelector('[type="submit"]');
+      const gracies = form.dataset.gracies || '/gracies/?from=avisa';
       btn.disabled = true;
       btn.textContent = '...';
-
       try {
-        const body = new FormData();
-        body.append('access_key', newsletterForm.dataset.key);
-        body.append('email', email);
-        body.append('subject', 'Nova subscripció al butlletí — Llumàtics');
-        body.append('from_name', 'Web Llumàtics');
-
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-          const base = document.documentElement.lang === 'ca'
-            ? ''
-            : '/' + document.documentElement.lang;
-
-          window.location.href = base + '/gracies/?from=newsletter';
-        } else {
-          throw new Error('submit failed');
-        }
-
-      } catch (err) {
-        if (msg) msg.textContent = 'Alguna cosa ha fallat. Prova-ho de nou.';
-        btn.disabled = false;
-        btn.textContent = 'Subscriu-me';
-      }
+        const res = await fetch('/form-handler.php', { method: 'POST', body: new FormData(form) });
+        const json = await res.json();
+        if (json.ok) { window.location.href = gracies; return; }
+      } catch (_) {}
+      // fail open: redirigeix igualment (no volem bloquejar l'usuari)
+      window.location.href = gracies;
     });
-  }
+  });
 
   // ─────────────────────────────────────────────────────────────
 // CONTACT FORM (Web3Forms)
@@ -416,6 +398,77 @@ if (contactForm) {
     });
   }
 
+
+  // ─────────────────────────────────────────────────────────────
+  // LIGHTBOX DE GALERIA
+  // ─────────────────────────────────────────────────────────────
+  var lb        = document.getElementById('js-lightbox');
+  var lbImg     = document.getElementById('js-lb-img');
+  var lbPrev    = document.getElementById('js-lb-prev');
+  var lbNext    = document.getElementById('js-lb-next');
+  var lbClose   = document.getElementById('js-lb-close');
+  var lbCounter = document.getElementById('js-lb-counter');
+
+  if (lb && lbImg) {
+    var galleries = {};
+    var lbCurrent = { gallery: null, index: 0 };
+
+    document.querySelectorAll('.js-lightbox-trigger').forEach(function(btn) {
+      var gName = btn.dataset.gallery || 'default';
+      if (!galleries[gName]) galleries[gName] = [];
+      galleries[gName].push(btn);
+    });
+
+    function lbShow(galleryName, index) {
+      var items = galleries[galleryName];
+      if (!items || !items.length) return;
+      lbCurrent.gallery = galleryName;
+      lbCurrent.index   = index;
+      var src = items[index].dataset.src;
+      lbImg.src         = src;
+      lbImg.alt         = items[index].querySelector('img') ? items[index].querySelector('img').alt : '';
+      lbCounter.textContent = (index + 1) + ' / ' + items.length;
+      lbPrev.style.display  = items.length > 1 ? '' : 'none';
+      lbNext.style.display  = items.length > 1 ? '' : 'none';
+      lb.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    }
+
+    function lbHide() {
+      lb.style.display = 'none';
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    function lbNav(dir) {
+      var items = galleries[lbCurrent.gallery];
+      if (!items) return;
+      lbCurrent.index = (lbCurrent.index + dir + items.length) % items.length;
+      lbShow(lbCurrent.gallery, lbCurrent.index);
+    }
+
+    Object.keys(galleries).forEach(function(gName) {
+      galleries[gName].forEach(function(btn, idx) {
+        btn.addEventListener('click', function() { lbShow(gName, idx); });
+      });
+    });
+
+    lbClose.addEventListener('click', lbHide);
+    lbPrev.addEventListener('click', function() { lbNav(-1); });
+    lbNext.addEventListener('click', function() { lbNav(1); });
+
+    lb.addEventListener('click', function(e) {
+      if (e.target === lb) lbHide();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (lb.style.display === 'none') return;
+      if (e.key === 'Escape')    lbHide();
+      if (e.key === 'ArrowLeft') lbNav(-1);
+      if (e.key === 'ArrowRight') lbNav(1);
+    });
+  }
 
   // ─────────────────────────────────────────────────────────────
   // RECORREGUT ACORDIÓ

@@ -53,6 +53,13 @@ subtitle: "Write to us to book a workshop, ask a question or propose a collabora
 <p>Yes, by appointment. <strong>Llumàtics is not an open-access space</strong>: we open exclusively for workshops and pre-arranged visits. If you'd like to see the darkroom, studio or library before signing up, get in touch and we'll arrange a visit with no commitment.</p>
 </div>
 </details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I rent or use the darkroom independently? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Llumàtics' darkroom is not a rental space or open-access facility. For us, the darkroom is almost a temple: everything in its place, every process controlled, every session directly supervised. Access is exclusively for instructors and students during workshops. If you'd like to use it, the way in is to join a workshop.</p>
+</div>
+</details>
 </div>
 
 <div class="faq-group">

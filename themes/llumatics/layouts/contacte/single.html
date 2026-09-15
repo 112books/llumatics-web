@@ -1,5 +1,10 @@
+{{ define "head-extra" }}
+<link rel="stylesheet" href="{{ "vendor/leaflet/leaflet.css" | absURL }}">
+<script src="{{ "vendor/leaflet/leaflet.js" | absURL }}"></script>
+{{ end }}
+
 {{ define "main" }}
-<div class="page-with-bg">
+<div class="page-with-bg page-contacte">
 <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/contacte-2025-03-07-LC-a+-Foma100@800-varies-0031.jpg" }}" alt="" aria-hidden="true">
 <div class="section container" style="position:relative; z-index:1;">
 
@@ -166,32 +171,73 @@
           {{ end }}
         </div>
         <div class="contact-map__embed">
-          <div class="map-consent" id="map-consent">
-            <p class="map-consent__text">{{ i18n "map_consent_text" | default "El mapa és interactiu (OpenStreetMap). Fes clic per carregar-lo." }}</p>
-            <button class="map-consent__btn btn btn--secondary" onclick="loadMap()">{{ i18n "map_consent_btn" | default "Mostra el mapa" }}</button>
-          </div>
-          <iframe
-            id="osm-map"
-            data-src="https://www.openstreetmap.org/export/embed.html?bbox=2.1885%2C41.4215%2C2.1975%2C41.4275&amp;layer=mapnik&amp;marker=41.424371%2C2.192952"
-            width="100%"
-            height="280"
-            style="border:0;display:none"
-            title="Mapa Nau Bostik, Ferran Turné 1-11, Barcelona"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <div id="llum-map" style="height:260px;width:100%"></div>
         </div>
+        <ul class="map-legend">
+          <li><span class="map-legend__dot" style="background:#E3001C"></span> Metro</li>
+          <li><span class="map-legend__dot" style="background:#FF6D00"></span> {{ i18n "transport_commuter_rail" | default "Rodalies / FGC" }}</li>
+          <li><span class="map-legend__dot" style="background:#0059A8"></span> Bus</li>
+          <li><span class="map-legend__dot" style="background:#00A651"></span> Bicing</li>
+        </ul>
         <p class="contact-map__link">
           <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
         </p>
       </section>
       <script>
-      function loadMap() {
-        var iframe = document.getElementById('osm-map');
-        var consent = document.getElementById('map-consent');
-        iframe.src = iframe.dataset.src;
-        iframe.style.display = 'block';
-        consent.style.display = 'none';
-      }
+      document.addEventListener('DOMContentLoaded', function () {
+        var lat = 41.424371, lng = 2.192952;
+        var map = L.map('llum-map', { scrollWheelZoom: 'center', zoomControl: true });
+        map.scrollWheelZoom.disable();
+        map.getContainer().addEventListener('wheel', function(e) {
+          if (e.ctrlKey || e.metaKey) { map.scrollWheelZoom.enable(); }
+          else { map.scrollWheelZoom.disable(); }
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd', maxZoom: 19
+        }).addTo(map);
+
+        var icon = L.icon({
+          iconUrl: '{{ "images/llumatics-logo.svg" | absURL }}',
+          iconSize: [44, 44], iconAnchor: [22, 22], popupAnchor: [0, -26]
+        });
+        L.marker([lat, lng], { icon: icon }).addTo(map)
+          .bindPopup('<strong>Llumàtics</strong><br>Nau Bostik · Ferran Turné 1-11').openPopup();
+
+        map.setView([lat, lng], 16);
+
+        // Parades de transport públic i bicing des d'OpenStreetMap
+        var q = '[out:json][timeout:15];('
+          + 'node["railway"="station"](around:1100,' + lat + ',' + lng + ');'
+          + 'node["railway"="subway_entrance"](around:1000,' + lat + ',' + lng + ');'
+          + 'node["highway"="bus_stop"](around:450,' + lat + ',' + lng + ');'
+          + 'node["amenity"="bicycle_rental"](around:650,' + lat + ',' + lng + ');'
+          + ');out;';
+        fetch('https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(q))
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            if (!d || !d.elements) return;
+            d.elements.forEach(function(el){
+              var t = el.tags || {};
+              var isBus    = t['highway'] === 'bus_stop';
+              var isBicing = t['amenity'] === 'bicycle_rental';
+              var isSubway = t['railway'] === 'subway_entrance'
+                          || (t['railway'] === 'station' && t['station'] === 'subway');
+              var isTrain  = t['railway'] === 'station' && t['station'] !== 'subway';
+              var nom = t['name'] || (isBus ? 'Bus' : isBicing ? 'Bicing' : isTrain ? 'Tren' : 'Metro');
+              var color = '#E3001C'; var radius = 8;   // metro: vermell
+              if (isTrain)  { color = '#FF6D00'; radius = 9; }  // tren: taronja
+              if (isBus)    { color = '#0059A8'; radius = 5; }  // bus: blau
+              if (isBicing) { color = '#00A651'; radius = 6; }  // bicing: verd
+              L.circleMarker([el.lat, el.lon], {
+                radius: radius, fillColor: color,
+                color: '#fff', weight: 2, fillOpacity: 0.9
+              }).addTo(map).bindPopup(nom);
+            });
+          })
+          .catch(function(){});
+      });
       </script>
 
     </aside>

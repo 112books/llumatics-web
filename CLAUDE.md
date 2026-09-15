@@ -395,6 +395,19 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-05-29
+**Tallers complets + metàfora metro + SEO/GEO + animació recorregut**
+
+- **Docs alumnes CA publicats** (`draft: false`): 20 docs passats a visible (cianotipia, copies-beers-developer, copies-en-paper, digitalitzacio-escaner, edicio-imatges-fotoquimiques, fotografia-de-carrer, fotografia-estenopeica, fotogrames-cianotipia, gran-format-4x5, guinneol, hasselblad-500, introduccio-al-positivat, introduccio-gran-format, retrat-6x6, retrat-amb-holga, retrat-analogic, reveladors-artesanals, revelat-color-bn, revelat-i-positivat, revelats-experimentals).
+- **Preus fixats**: `revelat-i-positivat` → 420€ (CA/ES/EN), `tutoria-fotografica` → `durada_hores: 2` (CA/ES/EN), `preu_3` arrodoniment a `introduccio-al-positivat` i `revelat-color-bn` (CA/ES/EN).
+- **Fix imatge**: `digitalitzacio-scanner.jpg` → `digitalitzacio-escaner.jpg` (ES/EN apuntaven a fitxer inexistent).
+- **Fix CSS**: `section__subtitle` usava `--color-error` (vermell) → ara `--color-text-muted`.
+- **Metàfora metro**: home secció "Sis línies de formació" + paràgraf explicatiu (CA/ES/EN). `_index.md` tallers (CA/ES/EN) reescrit: subtítol metro, cos curt, fix "cinc→sis àmbits".
+- **FAQPage schema** (`/contacte/`): 10 preguntes/respostes JSON-LD per AEO/featured snippets.
+- **llms.txt** actualitzat: +20 tallers, 6 línies metro, fets citable per IA, secció "Fets clau".
+- **Pàgina Sobre**: paràgraf de fets estructurats citable (70 paraules, autocontingut).
+- **Animació recorregut** (`/tallers/`): acordió smooth (`max-height` cubic-bezier), swatch creix 28→44px en obrir, stops entren amb `@keyframes stopIn` + stagger nth-child.
+
 ### 2026-05-22
 **Val-regal complet (front-end) + agenda externs + hover quiz**
 
@@ -647,6 +660,85 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
+
+### Fet aquesta sessió (2026-09-14)
+**Agenda taller extern + clau SSH deploy GitHub Actions + text Instagram**
+
+- **Agenda `iniciacio-revelat` 31 oct 2026** — creades entrades CA i ES (`content/ca/agenda/iniciacio-revelat-2026-10-31.md`, `content/es/agenda/`). 10h–13h, Cameras & Films, 55€, 10 places, `status: active`.
+- **Clau SSH GitHub Actions** — generada `~/.ssh/llumatics_deploy` (ed25519, sense contrasenya), copiada al VPS, verificada. Cal afegir el secret `SSH_DEPLOY_KEY` (i `VPS_HOST`, `VPS_USER`) a `github.com/112books/llumatics-web/settings/secrets/actions` perquè el workflow de deploy funcioni.
+- **Text Instagram** — redactat text d'anunci en CA per al taller Iniciació al revelat del 31 oct. Publicat manualment per l'usuari.
+- Deploy manual (`./scripts/deploy.sh`) operatiu: build Hugo 491 pàgines CA, rsync al VPS (exit 23 ignorat, normal).
+
+### Fet aquesta sessió (2026-08-12)
+**Waitlist alumnes + recordatori vals + FAQ laboratori + mapa Leaflet transport públic**
+
+- **`static/admin/alumnes.php`** — panell PHP+SQLite de gestió de waitlist. Resum per taller amb alerta si ≥2 inscrits ("PROPOSA DATA"). Estats espera/contactat/confirmat/completat. Botó "Avisa" per enviar SMTP. Inserció manual. Auth: `llumatics`.
+- **`form-handler.php`** (VPS, gitignored) — `type=avisa`: insereix a taula `waitlist` (UNIQUE email+taller), compta inscrits per taller, envia avís intern `[ACCIÓ] PROPOSA DATA` si ≥2. Waitlist comparteix `www/admin/vals.db`.
+- **`static/admin/vals.php`** — botó "Recordatori" per enviar email en anglès al comprador d'un val actiu. Link "Alumnes" afegit a la topbar.
+- **`static/admin/config.php`** (gitignored) — credencials SMTP Brevo extretes de tots els PHP. Clau Brevo rotada (`...xCp4hnW4vtjbWByy`) per secret exposat en push.
+- **`static/admin/config.example.php`** — plantilla de config sense secrets (tracked).
+- **FAQ laboratori independent** — afegida entrada FAQ a `content/{ca,es,en}/contacte/index.md`: "El laboratori és un temple, accés exclusiu per a tallers."
+- **Mapa Leaflet** (`themes/llumatics/layouts/contacte/single.html`):
+  - Base: CartoDB Light (`light_all`)
+  - Marcador: logo SVG de Llumàtics (`static/images/llumatics-logo.svg`)
+  - Transport: Overpass API — metro (vermell), tren/Rodalies (taronja), bus (blau), Bicing (verd)
+  - Leaflet servit localment (`static/vendor/leaflet/`) per evitar bloqueig ad-blocker
+  - Lliçó: operador `!=` a Overpass falla silenciosament; classificar metro vs tren al JS
+  - Llegenda sota el mapa amb punt de color per a cada tipus de transport
+  - Zoom: scroll normal = pàgina, Ctrl+scroll = zoom al mapa (comportament estàndard web)
+
+**Incidència secrets:**
+- Clau SMTP Brevo apareixia hardcodejada a `vals.php` i `alumnes.php` → GitHub push protection ho va bloquejar
+- Solució: `git reset --soft` al commit net, extracció a `config.php` gitignored, rotació de clau a Brevo
+- Pattern definitiu: tots els PHP d'admin fan `require_once __DIR__ . '/config.php'`
+
+### Fet aquesta sessió (2026-08-11)
+**Sistema de gestió de vals-regal + tracking de temps**
+
+- **`static/admin/vals.php`** — panell PHP+SQLite per gestionar vals-regal. Login per sessió (password: `llumatics`). KPIs (actius, bescanviats, total emesos, volum €). Filtres per estat. Taula amb codi, taller, import, destinatari, comprador, dates, notes. Accions: bescanviat / cancel·lar / reactivar / nota inline. Formulari d'inserció manual. Precarrega automàtica dels 2 vals pendents en el primer arrencada.
+- **`static/admin/index.html`** — afegit link "Vals-regal" a la topbar per navegar entre panells.
+- **`themes/llumatics/layouts/_default/gift.html`** — `onApprove` de PayPal ara fa un tercer POST a `/form-handler.php` (type=`val`) per registrar cada venda automàticament.
+- **`form-handler.php`** (VPS, gitignored) — nou handler `type=val`: valida codi, insereix a SQLite (`www/admin/vals.db`), calcula caducitat a +6 mesos.
+- **Deploy**: `vals.php` i `index.html` via `scp`; `form-handler.php` via `scp`; `gift.html` via commit+push a `main`.
+- **Tracking de temps** — skill `gestor-hores` activat. Directoris `.taques/llumatics/` i `.taques-central/` creats. ~1.8h registrades avui.
+
+**Vals registrats manualment (precarregats al DB):**
+| Codi | Taller | Import | Per a | Comprador | Compra | Caduca |
+|------|--------|--------|-------|-----------|--------|--------|
+| LLM-2026-0X2ZB | Aprende a controlar la luz | 220€ | Ale | elenavigoolivan@gmail.com | 2026-07-17 | 2027-01-17 |
+| LLM-2026-OPUH9 | Introduction to darkroom printing | 170€ | Nataliia Lisohurska | mdkisselgof@gmail.com | 2026-08-11 | 2027-02-11 |
+
+### Fet aquesta sessió (2026-07-08) — continuació
+**Avisa'm: sistema de confirmació complet**
+
+- **form-handler.php** (gitignored, desplegat via scp): flux definitiu:
+  1. SMTP (Brevo relay) → avís intern a `hola@llumatics.com` (taller + email + data)
+  2. API Brevo `/v3/smtp/email` → confirmació HTML al subscrit amb nom del taller
+  3. API Brevo `/v3/contacts` → contacte afegit a llista #5 (Waitlist tallers)
+- **Brevo Automation #2** — desactivada (enviava mail duplicat amb taller buit; l'API Brevo contactes no dispara automacions)
+- **Brevo IP autoritzada** — 82.98.166.123 (VPS Dinahosting) autoritzada per a API keys
+- **Filtre anti-spam Dinahosting** — whitelist `hola@llumatics.com` al panell de control i a Roundcube. Si segueix a spam, obrir ticket a Dinahosting.
+- **Pendent app gestió alumnes** — PHP+SQLite: waitlist per taller, comptador inscrits per taller, proposta de grup GDPR-compliant (veure memory)
+
+### Fet aquesta sessió (2026-07-07 / 08)
+**Tallers nous + lightbox + email autenticació**
+
+- **Taller Fotollibre: del concepte a la materialització** — fitxa pública CA/ES/EN publicada (`estat: actiu`, `sota_demanda: true`, `preu_1: 620`). Tres sessions de 4h amb 112books.eu com a acompanyament d'impressió. Affinity Publisher (gratuït des de 2024).
+- **Taller Del Carrer al Llibre** — fitxa publicada CA/ES/EN (`estat: proxim`, `proper_inici: Octubre 2026`). 12 sessions mensuals, màx. 6 persones. Preu semestral i anual amb escala 1-4+ alumnes.
+- **data/recorregut.yaml** — substituït `carrer-i-mirada` (en_construccio) per `del-carrer-al-llibre` (actiu) a la línia `practica`; afegit `fotollibre` a continuació.
+- **Blog** — 2 posts nous: `del-carrer-al-llibre-nou-curs.md` i `fotollibre-del-concepte-a-la-materialitzacio.md`, amb `course_ref` i links inline als tallers.
+- **Imatges fotollibre** — `fotollibre-4/5/6.tif` convertits a JPG (max 1200px, ~250-400KB). Frontmatter CA/ES/EN actualitzat.
+- **Lightbox galeria** — JS afegit a `main.js` (`.js-lightbox-trigger` + `data-gallery`). CSS i DOM ja existien. Navegació fletxes teclat, Escape per tancar.
+- **form-handler.php** (gitignored, desplegat via scp) — correcció de text: "avisada/avisada" → "avisat/avisada", accents ("Llumàtics", "perquè", "política", "No és brossa", "compromís").
+- **Email autenticació (SPF + DKIM + DMARC)** — mails de Brevo ja no van a spam:
+  - SPF: afegit `include:spf.brevo.com` al registre TXT de llumatics.com a Dinahosting
+  - DKIM: domini llumatics.com verificat a Brevo (Senders & IPs → Domains → Authenticated)
+  - DMARC: registre actualitzat amb `rua` de Brevo i tornant a `p=reject`:
+    `v=DMARC1; p=reject; rua=mailto:hola@llumatics.com,mailto:rua@dmarc.brevo.com; ruf=mailto:hola@llumatics.com; fo=1`
+
+**Pendent comunicació:**
+- [ ] Post per a 112books.eu anunciant la col·laboració al taller Fotollibre
+- [ ] Newsletter a Brevo quan hi hagi subscrits
 
 ### Fet aquesta sessió (2026-06-01)
 **Instagram — Posts pilot publicats + perfil optimitzat + Meta Developer App iniciada**
