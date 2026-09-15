@@ -1023,7 +1023,7 @@ function renderBars(containerId, items, nameKey, withLinks = false) {
     el.innerHTML = '<span class="empty">sense dades per a aquest període</span>';
     return;
   }
-  const max   = items[0].count || 1;
+  const max   = Math.max(...items.map(i => i.count), 1);
   const total = items.reduce((s, i) => s + i.count, 0) || 1;
   el.className = 'bars';
   el.innerHTML = '';
@@ -1108,7 +1108,7 @@ function renderWeekday(data) {
   });
   const avgs  = counts.map((c, i) => occur[i] ? Math.round(c / occur[i]) : 0);
   const items = DAYS.map((name, i) => ({ name, count: avgs[i] }));
-  renderBars('weekday-wrap', items);
+  renderBars('weekday-wrap', items, 'name');
 }
 
 /* ═══════════════════════════════════════════════════════════
