@@ -1,0 +1,292 @@
+/* ============================================================
+   Llumàtics — Fitxa de fotògraf
+   Del Carrer al Llibre · Material per a alumnes · Ús intern
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --negre:   #1a1a1a;
+  --gris:    #555;
+  --gris-ll: #e8e4df;
+  --accent:  #b85c2a;
+  --blanc:   #faf9f7;
+  --mono:    'Courier New', monospace;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 1.2cm 1.4cm;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 9.5pt;
+  color: var(--negre);
+  background: var(--blanc);
+  width: 180mm;
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+/* ── CAPÇALERA ── */
+.fitxa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--negre);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 15pt;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--accent); }
+.sessio-label {
+  font-size: 8pt;
+  color: var(--gris);
+  text-align: right;
+  line-height: 1.3;
+}
+.sessio-label strong { color: var(--negre); font-size: 9pt; }
+
+/* ── BLOC AUTOR ── */
+.autor-grid {
+  display: grid;
+  grid-template-columns: 52mm 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.autor-foto {
+  width: 52mm;
+}
+.autor-foto img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 1px solid var(--gris-ll);
+  display: block;
+}
+.autor-foto-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--gris-ll);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7.5pt;
+  color: var(--gris);
+  text-align: center;
+  padding: 8px;
+  border: 1px dashed #bbb;
+}
+.foto-credit {
+  font-size: 6.5pt;
+  color: var(--gris);
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
+.autor-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.autor-meta {
+  font-size: 8.5pt;
+  color: var(--gris);
+  margin-bottom: 8px;
+}
+.autor-meta strong { color: var(--negre); }
+
+.seccio-label {
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 3px;
+  margin-top: 8px;
+}
+.autor-info p {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: #333;
+}
+
+.segell {
+  background: var(--negre);
+  color: var(--blanc);
+  padding: 6px 10px;
+  margin-top: 8px;
+  font-size: 8.5pt;
+  line-height: 1.5;
+  border-left: 4px solid var(--accent);
+}
+.segell strong {
+  display: block;
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+  margin-bottom: 2px;
+}
+
+/* ── SEPARADOR ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--gris-ll);
+  margin: 10px 0;
+}
+
+/* ── FITXA TÈCNICA ── */
+.fitxa-tecnica-title {
+  font-size: 7pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.tech-badge {
+  background: var(--gris-ll);
+  border-radius: 4px;
+  padding: 6px 4px;
+  text-align: center;
+}
+.tech-badge .label {
+  display: block;
+  font-size: 6pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gris);
+  margin-bottom: 3px;
+}
+.tech-badge .value {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--negre);
+  line-height: 1;
+}
+.tech-badge .value.small { font-size: 8pt; }
+.tech-badge.accent { background: var(--accent); }
+.tech-badge.accent .label,
+.tech-badge.accent .value { color: white; }
+
+.tech-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.tech-note {
+  background: var(--gris-ll);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 7.5pt;
+}
+.tech-note .label {
+  font-size: 6pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gris);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ── PESCADOR / CAÇADOR ── */
+.pc-bar-wrap {
+  margin-bottom: 10px;
+}
+.pc-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7pt;
+  color: var(--gris);
+  margin-bottom: 3px;
+}
+.pc-bar {
+  height: 8px;
+  background: linear-gradient(to right, #2e6da4, #c0392b);
+  border-radius: 4px;
+  position: relative;
+}
+.pc-marker {
+  position: absolute;
+  top: -3px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2.5px solid var(--negre);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* ── OBRA REPRESENTATIVA ── */
+.obres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.obra-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid var(--gris-ll);
+  display: block;
+}
+.obra-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--gris-ll);
+  border: 1px dashed #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 6.5pt;
+  color: var(--gris);
+  text-align: center;
+  padding: 6px;
+  gap: 3px;
+}
+.obra-placeholder .obra-titol {
+  font-style: italic;
+  color: var(--negre);
+  font-size: 7pt;
+}
+.obra-credit {
+  font-size: 6pt;
+  color: var(--gris);
+  margin-top: 3px;
+  text-align: center;
+}
+
+/* ── PEU ── */
+.fitxa-footer {
+  border-top: 1px solid var(--gris-ll);
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.5pt;
+  color: var(--gris);
+  margin-top: 6px;
+}
