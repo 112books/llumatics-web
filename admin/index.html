@@ -1098,11 +1098,12 @@ function renderWeekday(data) {
   const hbd = data.hits_by_day || [];
   const el  = document.getElementById('weekday-wrap');
   if (!el || !hbd.length) return;
-  const DAYS   = ['Dg', 'Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds'];
+  const DAYS   = ['Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds', 'Dg'];
   const counts = [0, 0, 0, 0, 0, 0, 0];
   const occur  = [0, 0, 0, 0, 0, 0, 0];
   hbd.forEach(({ date, count }) => {
-    const d = new Date(date + 'T12:00:00').getDay();
+    const jsDay = new Date(date + 'T12:00:00').getDay(); // 0=Dg..6=Ds
+    const d = (jsDay + 6) % 7; // 0=Dl..6=Dg
     counts[d] += count;
     occur[d]++;
   });
