@@ -1017,7 +1017,7 @@ function renderDispositiusInsight(data) {
 /* ═══════════════════════════════════════════════════════════
    UTILITAT: renderBars
 ═══════════════════════════════════════════════════════════ */
-function renderBars(containerId, items, nameKey, withLinks = false) {
+function renderBars(containerId, items, nameKey, withLinks = false, widthMode = 'max') {
   const el = document.getElementById(containerId);
   if (!items || !items.length) {
     el.innerHTML = '<span class="empty">sense dades per a aquest període</span>';
@@ -1028,8 +1028,8 @@ function renderBars(containerId, items, nameKey, withLinks = false) {
   el.className = 'bars';
   el.innerHTML = '';
   items.forEach(item => {
-    const pct  = Math.round(item.count / max * 100);
     const gpct = Math.round(item.count / total * 100);
+    const pct  = widthMode === 'total' ? gpct : Math.round(item.count / max * 100);
     const name = String(item[nameKey] || '?');
     const row  = document.createElement('div');
     row.className = 'bar-row';
@@ -1108,7 +1108,7 @@ function renderWeekday(data) {
   });
   const avgs  = counts.map((c, i) => occur[i] ? Math.round(c / occur[i]) : 0);
   const items = DAYS.map((name, i) => ({ name, count: avgs[i] }));
-  renderBars('weekday-wrap', items, 'name');
+  renderBars('weekday-wrap', items, 'name', false, 'total');
 }
 
 /* ═══════════════════════════════════════════════════════════
