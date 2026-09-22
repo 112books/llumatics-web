@@ -661,6 +661,12 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 
+### Fet aquesta sessió (2026-09-22)
+**Canvi de password panell admin**
+
+- **Password admin** canviat de `llumatics` a `LinuxBCN2026` als fitxers `static/admin/vals.php` i `static/admin/alumnes.php` (línia 4, `define('ADMIN_PASSWORD', ...)`).
+- Deploy via `scp` directe al VPS (els fitxers admin no van per rsync).
+
 ### Fet aquesta sessió (2026-09-14)
 **Agenda taller extern + clau SSH deploy GitHub Actions + text Instagram**
 

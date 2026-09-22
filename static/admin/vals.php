@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('ADMIN_PASSWORD', 'llumatics');
+define('ADMIN_PASSWORD', 'LinuxBCN2026');
 define('DB_PATH',        __DIR__ . '/vals.db');
 require_once __DIR__ . '/config.php';
 
