@@ -44,6 +44,9 @@
           {{ end }}
           <li><a href="{{ printf "%s%s/regala/" $siteRoot $lp }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
           <li><a href="{{ printf "%s%s/sobre/" $siteRoot $lp }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
+          {{ with .Site.Params.googleReviewURL }}
+            <li><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "google_review" | default "Deixa'ns una ressenya" }} ★</a></li>
+          {{ end }}
         </ul>
 
         <p class="site-footer__heading site-footer__heading--sub">{{ i18n "legal" | default "Legal" }}</p>
