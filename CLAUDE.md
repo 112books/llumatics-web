@@ -667,6 +667,20 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - **Password admin** canviat de `llumatics` a `LinuxBCN2026` als fitxers `static/admin/vals.php` i `static/admin/alumnes.php` (línia 4, `define('ADMIN_PASSWORD', ...)`).
 - Deploy via `scp` directe al VPS (els fitxers admin no van per rsync).
 
+### Fet aquesta sessió (2026-09-27)
+**Enllaç de ressenya Google al footer + missatge per demanar ressenyes**
+
+- **Param `googleReviewURL`** a `hugo.toml` = `https://g.page/r/CRWgnPBp1N1uEBM/review` (enllaç "Demana ressenyes" de Google Business Profile).
+- **Footer** (`partials/footer.html`): enllaç discret "Deixa'ns una ressenya ★" a la columna Contacte, sota "Sobre Llumàtics". Condicional: si el param és buit, no es mostra. Obre en pestanya nova.
+- **i18n** CA/ES/EN: clau `google_review` ("Deixa'ns una ressenya" / "Déjanos una reseña" / "Leave us a review").
+- **Deploy** via `./scripts/deploy.sh` (des de `develop`), verificat en directe a `/` i `/es/`. Commit `474aca3c`.
+- **Plantilla WhatsApp (ES)** per demanar ressenya sense pressió, després d'un taller:
+  > ¡Hola [Nombre]! 😊 Muchas gracias por venir al taller, fue un placer tenerte en el laboratorio. Somos una escuela pequeña y las reseñas en Google nos ayudan mucho a que nos encuentre más gente. Si algún día te apetece y tienes un minuto: 👉 https://g.page/r/CRWgnPBp1N1uEBM/review — Y si no, ¡ningún problema! Lo importante es que lo hayas disfrutado. Cualquier duda con tus fotos, aquí estoy 📷 — Joan, Llumàtics
+- Normes: enviar el mateix dia o l'endemà, un sol cop, **mai incentius** (prohibit per Google).
+- Sincronització: `origin/main` (commit `ac56972d`, canvi password admin) fusionat a `develop`; `develop` fusionat a `main`. Verificat que `deploy.sh` exclou `admin/` → password nou intacte al VPS.
+
+**Idea pendent:** afegir l'enllaç de ressenya a `/gracies/` i al peu de la documentació d'alumnes.
+
 ### Fet aquesta sessió (2026-09-14)
 **Agenda taller extern + clau SSH deploy GitHub Actions + text Instagram**
 
