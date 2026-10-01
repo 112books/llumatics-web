@@ -25,11 +25,25 @@ cd "$REPO_ROOT"
 hugo --minify --baseURL "https://llumatics.com/"
 
 # ── 2. Deploy via rsync ────────────────────────────────────────
+# Dinahosting no permet ajustar els temps de la carpeta destí, i rsync
+# retorna 23 (transferència parcial) tot i haver pujat els fitxers. És
+# el comportament conegut i no és un error; el workflow de GitHub ja
+# l'ignora. Sense això, el script s'aturava abans de la notificació.
 echo "→ Deploy al VPS..."
+set +e
 rsync -az --delete --stats \
     --exclude='admin/' \
     public/ \
     "$VPS_HOST:$VPS_DIR"
+rsync_code=$?
+set -e
+if [ "$rsync_code" -ne 0 ] && [ "$rsync_code" -ne 23 ]; then
+    echo "✗ rsync ha fallat (codi $rsync_code)."
+    exit "$rsync_code"
+fi
+if [ "$rsync_code" -eq 23 ]; then
+    echo "⚠ rsync exit 23 (parcial per permisos de times): s'ignora."
+fi
 
 # ── 3. Detecta tallers nous i envia webhook ────────────────────
 echo "→ Detectant contingut nou per a Instagram..."
