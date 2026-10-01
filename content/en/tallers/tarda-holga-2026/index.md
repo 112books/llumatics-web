@@ -4,6 +4,13 @@ subtitle: "A free meet-up to celebrate Holga Week"
 lead: "1–7 October is Holga Week. We celebrate it on the 8th with an afternoon of shooting, sharing tricks and looking at rolls, at Nau Bostik. Free."
 description: "Free Holga afternoon at Nau Bostik, Thursday 8 October 2026, 6–8 pm. A meet-up to celebrate Holga Week. Limited loan cameras available."
 image: "/images/tallers/retrat-amb-holga.jpg"
+images:
+  - "/images/tallers/tarda-holga-2026-1.jpg"
+  - "/images/tallers/tarda-holga-2026-2.jpg"
+  - "/images/tallers/tarda-holga-2026-3.jpg"
+  - "/images/tallers/tarda-holga-2026-4.jpg"
+  - "/images/tallers/tarda-holga-2026-5.jpg"
+  - "/images/tallers/tarda-holga-2026-6.jpg"
 
 # Classification
 tipus: "taller"
