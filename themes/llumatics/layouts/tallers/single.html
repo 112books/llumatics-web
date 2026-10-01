@@ -52,7 +52,7 @@
             {{ end }}
           {{ end }}
           {{ with .Params.nivell }}
-            <span class="tag tag--level-{{ . | urlize }}">{{ . }}</span>
+            <span class="tag tag--level-{{ . | urlize }}">{{ partial "nivell-label.html" . }}</span>
           {{ end }}
           {{ with .Params.tipus }}
             {{ if eq . "curs" }}<span class="tag tag--format">Recorregut</span>{{ end }}
@@ -282,7 +282,7 @@
       {{ with .Params.nivell }}
       <div class="info-box__row">
         <span class="info-box__label">{{ i18n "level" }}</span>
-        <span class="info-box__value">{{ . }}</span>
+        <span class="info-box__value">{{ partial "nivell-label.html" . }}</span>
       </div>
       {{ end }}
 

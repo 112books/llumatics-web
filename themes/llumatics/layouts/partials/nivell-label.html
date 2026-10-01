@@ -1,0 +1,19 @@
+{{/* nivell-label.html — etiqueta traduida del nivell d'un taller.
+
+   El camp `nivell` del front matter es manté en català a tots els idiomes
+   perquè és la dada mestra: en depèn la classe CSS .tag--level-* (els
+   colors de l'etiqueta) i la comparació amb altres tallers. El que es
+   tradueix és només el text que veu la persona.
+
+   Si el valor no és un dels cinc nivells coneguts, es mostra tal qual. */}}
+{{- $llista := dict
+  "Iniciació" "iniciacio"
+  "Intermedi" "intermedi"
+  "Avançat" "avancat"
+  "Iniciació / Intermedi" "iniciacio_intermedi"
+  "Tots els nivells" "tots_nivells"
+-}}
+{{- $suffix := index $llista . | default "" -}}
+{{- $label := "" -}}
+{{- with $suffix }}{{ $label = i18n (printf "nivell_%s" .) | default "" }}{{ end -}}
+{{- if $label }}{{ $label }}{{ else }}{{ . }}{{ end -}}

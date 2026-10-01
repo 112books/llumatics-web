@@ -6,7 +6,7 @@
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
-    <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}">Blog</a>
+    <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}">{{ i18n "nav_blog" }}</a>
     <span class="breadcrumb__sep">›</span>
     <span>{{ .Title }}</span>
   </nav>

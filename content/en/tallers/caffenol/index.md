@@ -10,7 +10,7 @@ tipus: "taller"
 canal: "llumatics"
 blocs: ["proces", "processos-alternatius"]
 weight: 65
-nivell: "Beginner / Intermediate"
+nivell: "Iniciació / Intermedi"
 estat: "actiu"
 
 # Fitxa tècnica

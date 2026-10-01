@@ -156,16 +156,16 @@
 
     <p class="e404__eyebrow">Error 404 · Vel·lada total</p>
 
-    <h1 class="e404__title">El negatiu no existeix.</h1>
+    <h1 class="e404__title">{{ i18n "err_404_title" }}</h1>
 
     <p class="e404__body">
-      Potser vas escriure malament la URL.<br>
-      Potser la vam moure nosaltres sense avisar.<br>
-      En qualsevol cas, la culpa és de la química.
+      {{ i18n "err_404_p1" }}<br>
+      {{ i18n "err_404_p2" }}<br>
+      {{ i18n "err_404_p3" }}
     </p>
 
     <div class="e404__actions">
-      <a href="{{ "/" | absURL }}" class="e404__btn e404__btn--primary">Tornar a l'inici</a>
+      <a href="{{ "/" | absURL }}" class="e404__btn e404__btn--primary">{{ i18n "err_404_cta" }}</a>
       <a href="#" class="e404__btn e404__btn--ghost" onclick="document.querySelector('.search-toggle')?.click(); return false;">Cercar</a>
     </div>
 

@@ -21,7 +21,7 @@
     <p class="section__eyebrow">{{ i18n "gift_title" | default "Vals-regal" }}</p>
     <h1 class="gift-hero__title">{{ .Title }}</h1>
     <div class="prose gift-hero__content">{{ .Content }}</div>
-    <p class="gift-hero__sub">No cal saber res de fotografia. En dues preguntes, t'ajudem a trobar el taller perfecte per regalar.</p>
+    <p class="gift-hero__sub">{{ i18n "gift_hero_sub" }}</p>
   </div>
 
   {{/* Questionaire */}}
@@ -38,8 +38,8 @@
        data-webhook="{{ $.Site.Params.makecomGiftWebhook | default "" }}"
        hidden>
     <div class="gift-form-header">
-      <button class="gift-form-back" id="gift-form-back">← Torna a les recomanacions</button>
-      <h2 class="gift-form-title">Personalitza el val-regal</h2>
+      <button class="gift-form-back" id="gift-form-back">{{ i18n "gift_form_back" }}</button>
+      <h2 class="gift-form-title">{{ i18n "gift_form_title" }}</h2>
       <p class="gift-form-subtitle" id="gift-form-subtitle"></p>
     </div>
 
@@ -47,52 +47,52 @@
       <input type="hidden" id="gift-taller" name="taller_nom">
 
       <div class="gift-form__row">
-        <label class="gift-form__label" for="gift-per-a">Per a (nom del destinatari) *</label>
+        <label class="gift-form__label" for="gift-per-a">{{ i18n "gift_form_label_to" }}</label>
         <input class="gift-form__input" type="text" id="gift-per-a" name="per_a" required
-               placeholder="Ex: Marta">
+               placeholder="{{ i18n "gift_form_ph_to" }}">
       </div>
 
       <div class="gift-form__row">
-        <label class="gift-form__label" for="gift-de">De (el teu nom) *</label>
+        <label class="gift-form__label" for="gift-de">{{ i18n "gift_form_label_from" }}</label>
         <input class="gift-form__input" type="text" id="gift-de" name="de" required
-               placeholder="Ex: Joan">
+               placeholder="{{ i18n "gift_form_ph_from" }}">
       </div>
 
       <div class="gift-form__row">
-        <label class="gift-form__label" for="gift-missatge">Missatge personal (opcional)</label>
+        <label class="gift-form__label" for="gift-missatge">{{ i18n "gift_form_label_msg" }}</label>
         <textarea class="gift-form__textarea" id="gift-missatge" name="missatge"
                   rows="3" maxlength="220"
-                  placeholder="Feliç aniversari! T'he regalat el taller que sempre havies volgut fer."></textarea>
-        <span class="gift-form__hint">Apareixerà imprès al val. Màx. 220 caràcters.</span>
+                  placeholder="{{ i18n "gift_form_ph_msg" }}"></textarea>
+        <span class="gift-form__hint">{{ i18n "gift_form_hint_msg" }}</span>
       </div>
 
       <div class="gift-form__row">
-        <label class="gift-form__label" for="gift-email">El teu correu electrònic *</label>
+        <label class="gift-form__label" for="gift-email">{{ i18n "gift_form_label_email" }}</label>
         <input class="gift-form__input" type="email" id="gift-email" name="email" required
                placeholder="tu@exemple.com">
-        <span class="gift-form__hint">Usarem aquest correu per enviar-te la confirmació de compra.</span>
+        <span class="gift-form__hint">{{ i18n "gift_form_hint_email" }}</span>
       </div>
 
       <div class="gift-form__row">
-        <label class="gift-form__label" for="gift-import">Import del val (€) *</label>
+        <label class="gift-form__label" for="gift-import">{{ i18n "gift_form_label_amount" }}</label>
         <div class="gift-form__amount-wrap">
           <span class="gift-form__currency">€</span>
           <input class="gift-form__input gift-form__amount" type="number" id="gift-import"
                  name="import" required min="20" step="1" placeholder="155">
         </div>
-        <span class="gift-form__hint">Mínim 20€. Pots modificar l'import suggerit.</span>
+        <span class="gift-form__hint">{{ i18n "gift_form_hint_amount" }}</span>
       </div>
 
       <p class="gift-form__error" id="gift-form-error" hidden></p>
 
       <button type="button" class="btn btn--primary" id="gift-form-submit"
-              style="width:100%; margin-bottom:var(--space-4);">Continuar al pagament →</button>
+              style="width:100%; margin-bottom:var(--space-4);">{{ i18n "gift_form_cta_payment" }}</button>
 
       <div class="gift-form__paypal-wrap" id="gift-paypal-wrap" hidden>
-        <p class="gift-form__paypal-label">Tria com vols pagar:</p>
+        <p class="gift-form__paypal-label">{{ i18n "gift_form_pay_label" }}</p>
         <div id="paypal-button-container"></div>
         <p class="gift-form__paypal-error" id="gift-paypal-error" hidden>
-          Hi ha hagut un error amb el pagament. Torna-ho a intentar o escriu-nos a
+          {{ i18n "gift_form_pay_error" }}
           <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
         </p>
       </div>
@@ -102,18 +102,18 @@
   {{/* ── Estat d'èxit post-pagament ──────────────────────────────────────── */}}
   <div id="gift-success" class="gift-success" hidden>
     <div class="gift-success__icon no-print">✓</div>
-    <h2 class="gift-success__title no-print">Pagament completat!</h2>
+    <h2 class="gift-success__title no-print">{{ i18n "gift_success_title" }}</h2>
     <p class="gift-success__text no-print">
-      Guarda el codi — t'el tornarem a enviar si ens escrius a
+      {{ i18n "gift_success_text" }}
       <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>.
     </p>
     <p class="gift-success__codi no-print">
-      Codi del val: <strong id="gift-success-codi"></strong>
+      {{ i18n "gift_success_code" }} <strong id="gift-success-codi"></strong>
     </p>
     <p class="gift-success__sub no-print">
-      Per fer efectiu el val, contacta'ns a
+      {{ i18n "gift_success_sub" }}
       <a href="mailto:hola@llumatics.com">hola@llumatics.com</a>
-      indicant el codi. Vàlid 6 mesos.
+      {{ i18n "gift_success_valid" }}
     </p>
 
     {{/* ── Val imprimible ── */}}
@@ -123,29 +123,29 @@
         <span class="gvp__name">Llumàtics</span>
       </div>
       <div class="gvp__body">
-        <h2 class="gvp__title">Val Regal</h2>
+        <h2 class="gvp__title">{{ i18n "gift_voucher_title" }}</h2>
         <div class="gvp__divider"></div>
         <div class="gvp__destinatari">
-          <p class="gvp__field"><span class="gvp__label">Per a</span><strong class="gvp__value" id="gvp-per-a"></strong></p>
-          <p class="gvp__field"><span class="gvp__label">De part de</span><strong class="gvp__value" id="gvp-de"></strong></p>
+          <p class="gvp__field"><span class="gvp__label">{{ i18n "gift_voucher_to" }}</span><strong class="gvp__value" id="gvp-per-a"></strong></p>
+          <p class="gvp__field"><span class="gvp__label">{{ i18n "gift_voucher_from" }}</span><strong class="gvp__value" id="gvp-de"></strong></p>
         </div>
         <div class="gvp__taller-wrap">
-          <span class="gvp__label">Taller</span>
+          <span class="gvp__label">{{ i18n "gift_voucher_workshop" }}</span>
           <div class="gvp__taller-nom" id="gvp-taller"></div>
         </div>
         <p class="gvp__codi" id="gvp-codi"></p>
         <p class="gvp__missatge" id="gvp-missatge" hidden></p>
       </div>
       <div class="gvp__footer">
-        <span>Vàlid 6 mesos · hola@llumatics.com · llumatics.com</span>
+        <span>{{ i18n "gift_voucher_validity" }}</span>
       </div>
     </div>
 
     <button class="btn btn--primary gift-print-btn no-print" onclick="window.print()">
-      Imprimeix el val / Desa com a PDF →
+      {{ i18n "gift_print_btn" }}
     </button>
     <p class="gift-print-hint no-print">
-      Al diàleg d'impressió, selecciona "Desa com a PDF" per obtenir un fitxer.
+      {{ i18n "gift_print_hint" }}
     </p>
   </div>
 
@@ -158,7 +158,7 @@
       <div class="gift-card-preview__content">
         <div class="gift-card-preview__header">
           <span class="gift-card-preview__brand">Llumàtics</span>
-          <span class="gift-card-preview__school">Escola de fotografia · Barcelona</span>
+          <span class="gift-card-preview__school">{{ i18n "gift_card_school" }}</span>
         </div>
         <div class="gift-card-preview__main">
           <div class="gift-card-preview__title">{{ i18n "gift_card_title" | default "Val Regal" }}</div>
@@ -202,7 +202,7 @@
       document.getElementById('gift-taller').value         = btn.dataset.title || '';
       document.getElementById('gift-import').value         = btn.dataset.preu  || '';
       document.getElementById('gift-form-subtitle').textContent =
-        btn.dataset.title ? 'Val per a: ' + btn.dataset.title : "Val d'import lliure";
+        btn.dataset.title ? T('gift_form_subtitle_for') + btn.dataset.title : T('gift_form_subtitle_free');
 
       document.getElementById('gift-form-error').setAttribute('hidden', '');
       document.getElementById('gift-paypal-wrap').setAttribute('hidden', '');
@@ -230,17 +230,17 @@
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!perA || !de || !email || !importV) {
-        errorEl.textContent = 'Omple tots els camps obligatoris.';
+        errorEl.textContent = T('gift_err_required');
         errorEl.removeAttribute('hidden');
         return;
       }
       if (!emailRe.test(email)) {
-        errorEl.textContent = "L'adreça de correu no és vàlida.";
+        errorEl.textContent = T('gift_err_email');
         errorEl.removeAttribute('hidden');
         return;
       }
       if (importV < 20) {
-        errorEl.textContent = "L'import mínim és 20€.";
+        errorEl.textContent = T('gift_err_min');
         errorEl.removeAttribute('hidden');
         return;
       }

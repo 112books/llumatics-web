@@ -6,7 +6,7 @@ time_start: "10:00"
 time_end: "13:00"
 location: "Cameras & Films, Barcelona"
 organizer: "Cameras & Films"
-duration: "3 hores"
+duration: "3 horas"
 price: 55
 max_places: 10
 status: "active"

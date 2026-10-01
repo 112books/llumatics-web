@@ -1,0 +1,39 @@
+{{/* js-i18n.html — traduccions per al JavaScript.
+
+   El JS (main.js i els blocs <script> inline) no pot cridar i18n directament.
+   Aquí emetem les claus que necessita com a JSON, i main.js les llegeix amb
+   window.T(). Sense aquest bloc, el text del quiz de regala i els errors del
+   formulari sortien en català a /es/ i /en/.
+
+   La llista de claus és explícita perquè no volem enviar els 288 textos del
+   site al navegador. */}}
+{{- $jsKeys := slice
+  "gift_quiz_q_recipient" "gift_quiz_a_never" "gift_quiz_a_never_h"
+  "gift_quiz_a_some" "gift_quiz_a_some_h" "gift_quiz_a_pro" "gift_quiz_a_pro_h"
+  "gift_quiz_q_camera" "gift_quiz_cam_yes" "gift_quiz_cam_yes_h"
+  "gift_quiz_cam_no" "gift_quiz_cam_no_h"
+  "gift_quiz_q_world" "gift_quiz_world_lab" "gift_quiz_world_lab_h"
+  "gift_quiz_world_alt" "gift_quiz_world_alt_h"
+  "gift_quiz_world_cam" "gift_quiz_world_cam_h"
+  "gift_quiz_q_challenge" "gift_quiz_ch_own" "gift_quiz_ch_own_h"
+  "gift_quiz_ch_sheet" "gift_quiz_ch_sheet_h"
+  "gift_quiz_ch_portrait" "gift_quiz_ch_portrait_h"
+  "gift_quiz_back" "gift_quiz_result_title" "gift_quiz_result_sub"
+  "gift_quiz_cta" "gift_quiz_badge" "gift_quiz_price_from" "gift_quiz_price_per"
+  "gift_quiz_see" "gift_quiz_restart" "gift_quiz_wip_title" "gift_quiz_wip_text"
+  "gift_quiz_wip_link"
+  "gift_form_subtitle_for" "gift_form_subtitle_free"
+  "gift_err_required" "gift_err_email" "gift_err_min"
+  "contact_sending" "contact_send" "contact_error"
+-}}
+{{- $dict := dict -}}
+{{- range $jsKeys -}}
+  {{- $k := . -}}
+  {{- with i18n $k }}{{ $dict = merge $dict (dict $k .) }}{{ end -}}
+{{- end -}}
+{{/* L'URL de contacte canvia segons l'idioma: no pot ser una clau de traducció. */}}
+{{- $dict = merge $dict (dict "gift_quiz_wip_link_url" (printf "%s%s/contacte/" (strings.TrimSuffix "/" site.BaseURL) .Site.LanguagePrefix)) -}}
+{{/* safeJS és obligatori: sense ell, html/template de Go tracta el contingut
+     de <script> com a JavaScript i re-codifica el JSON un altre cop, de manera
+     que JSON.parse al navegador retorna un string en lloc d'un objecte. */}}
+<script type="application/json" id="llum-i18n">{{ $dict | jsonify | safeJS }}</script>

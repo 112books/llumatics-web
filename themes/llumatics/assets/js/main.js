@@ -5,6 +5,21 @@
 (function () {
   'use strict';
 
+  /* ── Traduccions ──────────────────────────────────────────────────
+     Les claus venen del partial js-i18n.html, que les serialitza des
+     de l'i18n de Hugo segons l'idioma de la pàgina. El text català
+     queda com a valor per defecte: si el blob no hi és (o hi falta una
+     clau), la pàgina continua llegible en comptes de trencar-se. */
+  var I18N = {};
+  try {
+    var i18nEl = document.getElementById('llum-i18n');
+    if (i18nEl) I18N = JSON.parse(i18nEl.textContent) || {};
+  } catch (e) { /* sense traduccions: es queda el català */ }
+  window.LLUM_I18N = I18N;
+  window.T = function (key, fallback) {
+    return I18N[key] || fallback || key;
+  };
+
   // ─────────────────────────────────────────────────────────────
   // MENÚ MÒBIL
   // ─────────────────────────────────────────────────────────────
@@ -95,7 +110,11 @@
     form.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
-      const gracies = form.dataset.gracies || '/gracies/?from=avisa';
+      /* Les URL /gracies/ existeixen en els tres idiomes. Sense això,
+         un visitant d'/es/ o /en/ aterria a la pàgina en català. */
+      const lang = document.documentElement.lang;
+      const base = lang && lang !== 'ca' ? '/' + lang : '';
+      const gracies = form.dataset.gracies || base + '/gracies/?from=avisa';
       btn.disabled = true;
       btn.textContent = '...';
       try {
@@ -120,7 +139,7 @@ if (contactForm) {
     const btn = contactForm.querySelector('button[type="submit"]');
 
     btn.disabled = true;
-    btn.textContent = 'Enviant...';
+    btn.textContent = T('contact_sending', 'Enviant…');
 
     try {
       const body = new FormData(contactForm);
@@ -143,9 +162,9 @@ if (contactForm) {
       }
 
     } catch (err) {
-      alert('Error enviant el formulari');
+      alert(T('contact_error', 'Error enviant el formulari'));
       btn.disabled = false;
-      btn.textContent = 'Enviar';
+      btn.textContent = T('contact_send', 'Enviar');
     }
   });
 }
@@ -164,37 +183,37 @@ if (contactForm) {
     var STEPS = {
       start: {
         step: 1, total: 2,
-        q: 'La persona que rep el regal...',
+        q: T('gift_quiz_q_recipient', 'La persona que rep el regal…'),
         opts: [
-          { label: 'No ha tocat mai una càmera analògica',           hint: 'Partim de zero, perfecte',     next: 'q_camera' },
-          { label: 'Ja ha fet algun taller o revela de tant en tant', hint: 'Vol aprofundir',               next: 'q_world'  },
-          { label: 'És fotògraf analògic i busca un repte nou',       hint: 'Anem a fons',                  next: 'q_challenge' }
+          { label: T('gift_quiz_a_never'), hint: T('gift_quiz_a_never_h'),     next: 'q_camera' },
+          { label: T('gift_quiz_a_some'), hint: T('gift_quiz_a_some_h'),               next: 'q_world'  },
+          { label: T('gift_quiz_a_pro'), hint: T('gift_quiz_a_pro_h'),                  next: 'q_challenge' }
         ]
       },
       q_camera: {
         step: 2, total: 2,
-        q: 'Té càmera analògica?',
+        q: T('gift_quiz_q_camera', 'Té càmera analògica?'),
         opts: [
-          { label: 'Sí, ja en té una',  hint: 'Perfecte, ja pot disparar',    slugs: 'revelat-bn,revelat-i-positivat' },
-          { label: 'No, o no ho sé',    hint: 'No cal tenir-ne per aprendre', slugs: 'fonaments-iniciacio-puntual,fotogrames-cianotipia' }
+          { label: T('gift_quiz_cam_yes'), hint: T('gift_quiz_cam_yes_h'),    slugs: 'revelat-bn,revelat-i-positivat' },
+          { label: T('gift_quiz_cam_no'), hint: T('gift_quiz_cam_no_h'), slugs: 'fonaments-iniciacio-puntual,fotogrames-cianotipia' }
         ]
       },
       q_world: {
         step: 2, total: 2,
-        q: 'Quin món li crida més?',
+        q: T('gift_quiz_q_world', 'Quin món li crida més?'),
         opts: [
-          { label: 'Laboratori i química del revelat',        hint: 'Mans a la cubeta',              slugs: 'revelat-i-positivat,copies-en-paper,introduccio-al-positivat' },
-          { label: 'Processos creatius sense cambra fosca',   hint: 'Llum solar i paper fotogràfic', slugs: 'cianotipia,fotografia-estenopeica,fotogrames-cianotipia' },
-          { label: 'Càmeres especials i mig o gran format',  hint: 'La física de l\'objectiu',      slugs: 'hasselblad-500,introduccio-gran-format,retrat-6x6' }
+          { label: T('gift_quiz_world_lab'), hint: T('gift_quiz_world_lab_h'),              slugs: 'revelat-i-positivat,copies-en-paper,introduccio-al-positivat' },
+          { label: T('gift_quiz_world_alt'), hint: T('gift_quiz_world_alt_h'), slugs: 'cianotipia,fotografia-estenopeica,fotogrames-cianotipia' },
+          { label: T('gift_quiz_world_cam'), hint: T('gift_quiz_world_cam_h'),      slugs: 'hasselblad-500,introduccio-gran-format,retrat-6x6' }
         ]
       },
       q_challenge: {
         step: 2, total: 2,
-        q: 'Quin repte vol afrontar?',
+        q: T('gift_quiz_q_challenge', 'Quin repte vol afrontar?'),
         opts: [
-          { label: 'Fer el seu propi revelador des de zero',  hint: 'Química artesanal',           slugs: 'reveladors-artesanals,guinneol,copies-beers-developer' },
-          { label: 'La càmera de plànxes i el gran format',  hint: 'Una fotografia, una plànxa',  slugs: 'gran-format-4x5,introduccio-gran-format' },
-          { label: 'El retrat analògic amb profunditat',      hint: 'Llum, model i decisió',       slugs: 'retrat-analogic,retrat-6x6,hasselblad-500' }
+          { label: T('gift_quiz_ch_own'), hint: T('gift_quiz_ch_own_h'),           slugs: 'reveladors-artesanals,guinneol,copies-beers-developer' },
+          { label: T('gift_quiz_ch_sheet'), hint: T('gift_quiz_ch_sheet_h'),  slugs: 'gran-format-4x5,introduccio-gran-format' },
+          { label: T('gift_quiz_ch_portrait'), hint: T('gift_quiz_ch_portrait_h'),       slugs: 'retrat-analogic,retrat-6x6,hasselblad-500' }
         ]
       }
     };
@@ -219,7 +238,7 @@ if (contactForm) {
         html += '</button>';
       });
       html += '</div>';
-      if (qHistory.length > 0) html += '<button class="gift-back">← Torna enrere</button>';
+      if (qHistory.length > 0) html += '<button class="gift-back">' + T('gift_quiz_back', '← Torna enrere') + '</button>';
       html += '</div>';
       giftQuiz.innerHTML = html;
 
@@ -245,9 +264,8 @@ if (contactForm) {
       giftResult.removeAttribute('hidden');
 
       var html = '<div class="gift-result__header">'
-        + '<h2 class="gift-result__title">El taller ideal</h2>'
-        + '<p class="gift-result__sub">Aquí tens les nostres recomanacions. Pots regalar-ne qualsevol —'
-        + ' o deixar que la persona triï el dia que el vingui a fer.</p>'
+        + '<h2 class="gift-result__title">' + T('gift_quiz_result_title') + '</h2>'
+        + '<p class="gift-result__sub">' + T('gift_quiz_result_sub') + '</p>'
         + '</div>';
       html += '<div class="gift-result__courses">';
 
@@ -255,24 +273,25 @@ if (contactForm) {
         var cta = '<button class="btn btn--primary btn--sm gift-regala-btn"'
           + ' data-title="' + c.title.replace(/"/g, '&quot;') + '"'
           + ' data-preu="' + (c.preu_1 || '') + '"'
-          + '>Regala aquest taller</button>';
+          + '>' + T('gift_quiz_cta', 'Regala aquest taller') + '</button>';
 
         html += '<div class="gift-course-card' + (i === 0 ? ' gift-course-card--featured' : '') + '">';
-        if (i === 0) html += '<div class="gift-course-card__badge">Recomanació principal</div>';
+        if (i === 0) html += '<div class="gift-course-card__badge">' + T('gift_quiz_badge') + '</div>';
         html += '<h3 class="gift-course-card__title">' + c.title + '</h3>';
         if (c.lead) html += '<p class="gift-course-card__lead">' + c.lead + '</p>';
-        if (c.preu_1) html += '<p class="gift-course-card__price">Des de <strong>' + c.preu_1 + '€</strong> per persona</p>';
+        if (c.preu_1) html += '<p class="gift-course-card__price">' + T('gift_quiz_price_from') + ' <strong>' + c.preu_1 + '€</strong> ' + T('gift_quiz_price_per') + '</p>';
         html += '<div class="gift-course-card__actions">' + cta
-          + '<a href="' + c.url + '" class="btn btn--ghost btn--sm">Veure fitxa</a>'
+          + '<a href="' + c.url + '" class="btn btn--ghost btn--sm">' + T('gift_quiz_see', 'Veure fitxa') + '</a>'
           + '</div>';
         html += '</div>';
       });
 
       html += '</div>';
-      html += '<button class="gift-restart">Tornar a començar</button>';
+      html += '<button class="gift-restart">' + T('gift_quiz_restart') + '</button>';
       html += '<div class="gift-wip-notice">'
-        + '<p>⚠️ El sistema de pagament en línia està en preparació.</p>'
-        + '<p>Si vols regalar un curs ja ara, <a href="/contacte/">contacta\'ns directament</a> i ho gestionem a mà en menys de 24h.</p>'
+        + '<p>⚠️ ' + T('gift_quiz_wip_title') + '</p>'
+        + '<p>' + T('gift_quiz_wip_text').replace('{link}',
+             '<a href="' + T('gift_quiz_wip_link_url') + '">' + T('gift_quiz_wip_link') + '</a>') + '</p>'
         + '</div>';
       giftResult.innerHTML = html;
 

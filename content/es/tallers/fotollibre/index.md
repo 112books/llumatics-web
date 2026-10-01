@@ -17,7 +17,7 @@ tipus: "taller"
 canal: "llumatics"
 blocs: ["practica"]
 weight: 92
-nivell: "Todos los niveles"
+nivell: "Tots els nivells"
 estat: "actiu"
 
 # Ficha técnica

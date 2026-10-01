@@ -71,6 +71,8 @@ defaultContentLanguageInSubdir = false
   makecomGiftWebhook = "https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb"   # URL webhook Make.com escenari val-regal
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
   brevoListFormAction = "https://59a7cdb3.sibforms.com/serve/MUIFAM9EjcWKfMa7vhhpazyBO4hK31XzmLJ1e3ZwcoOVP8nNXKUglMgpICj8tgZmHPm6cM_NKMbohpZweZtNYySTxwhr6fA_L5b-aCAnrowF1ICI4G-HHZr3ebbDgoGcc-TGwZiEq5F1y0DLs3ggbMmuAKrwIdx6srZRC6hySv3I5ZImnchIXXdkMGiublLSmPj0mu8gXrPnbqRHeQ=="  # Form action URL Brevo — Alumnes Llumàtics
+  ogImageAlt = "Tallers de fotografia analògica i laboratori fosc a Barcelona"
+  defaultOgImage = "/images/tallers/revelat-bn.jpg"
   goatcounterSite = "llumatics"  # llumatics.goatcounter.com
 
 [taxonomies]

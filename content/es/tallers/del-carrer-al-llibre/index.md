@@ -31,6 +31,22 @@ preu_2: 140
 preu_3: 105
 preu_4: 88
 durada_hores: 4.5
+# preu_1..preu_4 són preus per sessió, no del curs. Aquestes són les
+# opcions que es venen realment, i les que ha de llegir el schema.
+preus_curs:
+  - format: "Curso anual"
+    durada: "12 sesiones"
+    preu_1: 2700
+    preu_2: 1512
+    preu_3: 1134
+    preu_4: 950
+  - format: "Curso semestral"
+    durada: "6 sesiones"
+    preu_1: 1500
+    preu_2: 840
+    preu_3: 630
+    preu_4: 528
+durada_total_hores: 54
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 extern: false
 max_places: 6

@@ -1,22 +1,58 @@
+{{/* ============================================================
+     head.html — metadades, SEO, hreflang i dades estructurades
+     Llumàtics
+
+     dues regles per evitar errors ja Comes en aquest fitxer:
+     1. El JSON-LD es construeix com a diccionari Go i s'imprimeix
+        amb jsonify | safeJS. Escriure'l a mà dins del <script> fa que
+        Go escapi les cadenes i apareguin cometes duplicades.
+     2. Les claus amb arroba (@type, @id...) s'escriuen amb
+        cometes invertides, perquè com a clau solta no sonen.
+     ============================================================ */}}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+{{- $desc := "" -}}
+{{- if .Description -}}
+  {{- $desc = .Description -}}
+{{- else if .IsHome -}}
+  {{- $desc = .Title -}}
+{{- else -}}
+  {{- $desc = .Summary -}}
+{{- end -}}
+{{- $desc = $desc | plainify | chomp | strings.TrimSpace | truncate 160 -}}
+<meta name="description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 {{ if or .Params.noindex (eq .Params.robots "noindex, nofollow") -}}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
+{{- with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-<link rel="canonical" href="{{ .Permalink }}">
+{{/* Title — la home fa servir el title del front matter, que és el que porta el terme
+     de cerca. Abans retornava .Site.Title i la home es quedava amb 9 caràcters. */}}
+{{- $title := .Title -}}
+{{- if not $title }}{{ $title = .Site.Title }}{{ end -}}
+<title>{{ if .IsHome }}{{ $title }}{{ else }}{{ $title }} — {{ .Site.Title }}{{ end }}</title>
+
+{{/* Canonical amb self-canonical correcte a la paginació
+     (abans /blog/page/2/ declarava el canonical de /blog/). */}}
+{{- $canonical := .Permalink }}
+{{- if .IsNode }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $canonical = .URL | absURL }}{{ end }}{{ end }}{{ end }}
+<link rel="canonical" href="{{ $canonical }}">
 
 {{/* CSS via Hugo Pipes */}}
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
-{{/* Favicon */}}
-<link rel="icon" type="image/png" href="{{ "images/logo.png" | absURL }}">
+{{/* Favicon — el logo real és SVG. Abans apuntava a /images/logo.png, que no existia:
+     404 a la capçalera de totes les pàgines. */}}
+<link rel="icon" type="image/svg+xml" href="{{ "images/llumatics-logo.svg" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "images/llumatics-logo.svg" | absURL }}">
 
 {{/* humans.txt */}}
 <link rel="author" href="{{ "humans.txt" | absURL }}">
+
+{{/* llms.txt — resum de marca per a motors de resposta */}}
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="Llumàtics per a sistemes d'IA">
 
 {{/* GoatCounter — sense cookies, GDPR-compliant */}}
 {{ with site.Params.goatcounterSite }}
@@ -34,204 +70,266 @@
 {{- end }}
 <link rel="alternate" hreflang="x-default" href="{{ $xDefault }}">
 
-{{/* Open Graph + Twitter Card */}}
-{{- $ogImage := .Params.image | default "/images/tallers/revelat-bn.jpg" -}}
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ $ogImage | absURL }}">
-<meta property="og:site_name" content="{{ .Site.Title }}">
-{{- $localeMap := dict "ca" "ca_ES" "es" "es_ES" "en" "en_GB" -}}
-{{- $ogLocale := index $localeMap .Language.Lang | default "ca_ES" -}}
-<meta property="og:locale" content="{{ $ogLocale }}">
-{{- range .Translations }}
-{{- $altLocale := index $localeMap .Language.Lang }}
-{{- if $altLocale }}<meta property="og:locale:alternate" content="{{ $altLocale }}">{{ end }}
+{{/* Feed RSS — el capdamunt no el descobria de cap manera */}}
+{{- range .AlternativeOutputFormats -}}
+{{- if eq .Name "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $title }}">{{ end }}
 {{- end }}
+
+{{/* ── Open Graph + Twitter Card ───────────────────────────────── */}}
+{{- $ogImage := .Params.image | default site.Params.defaultOgImage | default "/images/tallers/revelat-bn.jpg" -}}
+{{- $ogAlt := cond .IsHome (site.Params.ogImageAlt | default $title) $title -}}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:image" content="{{ $ogImage | absURL }}">
+<meta property="og:image:alt" content="{{ $ogAlt }}">
+<meta property="og:image:width" content="1322">
+<meta property="og:image:height" content="744">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{- with site.Params.locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
+{{- range .Translations }}{{ with .Site.Params.locale }}<meta property="og:locale:alternate" content="{{ . }}">{{ end }}{{ end }}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImage | absURL }}">
+<meta name="twitter:image:alt" content="{{ $ogAlt }}">
 
-{{/* JSON-LD — EducationalOrganization + LocalBusiness (home) */}}
+{{/* ── Dades estructurades ─────────────────────────────────────── */}}
+
+{{/* NAP com a font única. Verificat contra barcelona.cat i OpenStreetMap:
+     Nau Bostik, Carrer de Ferran Turné 1-11, 08027 Barcelona.
+     Abans el schema i el llms.txt portaven 08027 equivocat i un geo ~600 m
+     desplaçat, mentre el contingut visible i les pàgines legals deien 08027. */}}
+{{- $napAddress := dict
+      `@type` "PostalAddress"
+      "streetAddress" "Carrer de Ferran Turné 1-11"
+      "addressLocality" "Barcelona"
+      "addressRegion" "Catalunya"
+      "postalCode" "08027"
+      "addressCountry" "ES" -}}
+{{- $napPlace := dict `@type` "Place" "name" "Nau Bostik" "address" $napAddress -}}
+{{- $orgID := "https://llumatics.com/#organization" -}}
+{{- $personID := "https://llumatics.com/#person" -}}
+
+{{/* JSON-LD — EducationalOrganization + LocalBusiness + Person (home).
+     Connectats amb @id perquè els tallers, l'agenda i el blog puguin
+     referenciar el mateix node en lloc de repetir l'entitat. */}}
 {{ if .IsHome }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["EducationalOrganization", "LocalBusiness"],
-  "name": "Llumàtics",
-  "description": "Escola de fotografia analògica a Barcelona. Tallers de revelat, laboratori fosc i formació tècnica en petit grup.",
-  "url": "https://llumatics.com",
-  "logo": "https://llumatics.com/images/llumatics-logo.svg",
-  "image": "https://llumatics.com/images/tallers/revelat-bn.jpg",
-  "email": "hola@llumatics.com",
-  "foundingDate": "2017",
-  "priceRange": "€€",
-  "currenciesAccepted": "EUR",
-  "paymentAccepted": "Transferència bancària, Bizum",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carrer de Ferran Turné 1-11",
-    "addressLocality": "Barcelona",
-    "addressRegion": "Catalunya",
-    "postalCode": "08031",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.4295,
-    "longitude": 2.1910
-  },
-  "hasMap": "https://maps.google.com/?q=Nau+Bostik,+Carrer+de+Ferran+Turné+1-11,+08031+Barcelona",
-  "areaServed": {
-    "@type": "City",
-    "name": "Barcelona"
-  },
-  "sameAs": [
-    "https://www.instagram.com/llumatics"
-  ]
-}
-</script>
+{{- $sameAs := slice site.Params.instagram "https://about.pocallum.cat" -}}
+{{- with site.Params.googleReviewURL }}{{ $sameAs = $sameAs | append "https://g.page/r/CRWgnPBp1N1uEBM" }}{{ end -}}
+{{- $org := dict
+      `@type` (slice "EducationalOrganization" "LocalBusiness")
+      `@id` $orgID
+      "name" "Llumàtics"
+      "description" "Escola de fotografia analògica a Barcelona. Tallers de revelat, laboratori fosc i formació tècnica en petit grup."
+      "url" "https://llumatics.com"
+      "logo" "https://llumatics.com/images/llumatics-logo.svg"
+      "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
+      "email" site.Params.contactEmail
+      "foundingDate" "2017"
+      "priceRange" "€€"
+      "currenciesAccepted" "EUR"
+      "paymentAccepted" "Transferència bancària, Bizum"
+      "address" $napAddress
+      "geo" (dict `@type` "GeoCoordinates" "latitude" 41.4243 "longitude" 2.1929)
+      "hasMap" "https://www.openstreetmap.org/?mlat=41.4243&mlon=2.1929#map=18/41.4243/2.1929"
+      "areaServed" (dict `@type` "City" "name" "Barcelona")
+      "founder" (dict `@id` $personID)
+      "sameAs" $sameAs
+      -}}
+{{- $founder := dict
+      `@type` "Person"
+      `@id` $personID
+      "name" "Joan Linux Martínez"
+      "jobTitle" "Fotògraf i professor de fotografia analògica"
+      "worksFor" (dict `@id` $orgID)
+      "url" "https://llumatics.com/sobre/"
+      "sameAs" (slice "https://about.pocallum.cat" site.Params.instagram)
+      -}}
+{{- $graph := dict `@context` "https://schema.org" `@graph` (slice $org $founder) -}}
+<script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 
-{{/* JSON-LD — Person (pàgina Sobre) */}}
-{{ if eq .RelPermalink "/sobre/" }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Joan Linux Martínez",
-  "birthPlace": "Barcelona",
-  "jobTitle": "Fotògraf i professor de fotografia analògica",
-  "worksFor": {
-    "@type": "EducationalOrganization",
-    "name": "Llumàtics",
-    "url": "https://llumatics.com"
-  },
-  "knowsAbout": [
-    "fotografia analògica",
-    "revelat de pel·lícula en B/N",
-    "revelat C-41 en B/N",
-    "tècniques alternatives de fotografia",
-    "cianotipia",
-    "fotogrames",
-    "gran format 4x5",
-    "reveladors artesanals"
-  ],
-  "url": "https://about.pocallum.cat",
-  "sameAs": [
-    "https://about.pocallum.cat",
-    "https://www.instagram.com/llumatics"
-  ]
-}
-</script>
+{{/* JSON-LD — Person (pàgina Sobre). Abans només a /sobre/ en català; ara a les
+     tres versions i connectada a l'organització. */}}
+{{ if eq .Type "sobre" }}
+{{- $person := dict
+      `@context` "https://schema.org"
+      `@type` "Person"
+      `@id` $personID
+      "name" "Joan Linux Martínez"
+      "birthPlace" "Barcelona"
+      "jobTitle" "Fotògraf i professor de fotografia analògica"
+      "worksFor" (dict `@id` $orgID)
+      "knowsAbout" (slice
+        "fotografia analògica"
+        "revelat de pel·lícula en B/N"
+        "revelat C-41 en B/N"
+        "tècniques alternatives de fotografia"
+        "cianotipia"
+        "fotogrames"
+        "gran format 4x5"
+        "reveladors artesanals"
+      )
+      "url" .Permalink
+      "sameAs" (slice "https://about.pocallum.cat" site.Params.instagram)
+      -}}
+<script type="application/ld+json">{{ $person | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 
-{{/* JSON-LD — BlogPosting (posts de blog) */}}
+{{/* JSON-LD — BlogPosting */}}
 {{ if and (eq .Type "blog") .IsPage }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ .Title }}",
-  "description": "{{ .Description }}",
-  {{ with .Params.image }}"image": "{{ . | absURL }}",{{ end }}
-  "datePublished": "{{ .Date.Format "2006-01-02" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-  "author": {
-    "@type": "Person",
-    "name": "Joan Linux Martínez",
-    "url": "https://about.pocallum.cat"
-  },
-  "publisher": {
-    "@type": "EducationalOrganization",
-    "name": "Llumàtics",
-    "url": "https://llumatics.com"
-  },
-  "url": "{{ .Permalink }}"
-  {{ with .Params.tags }}, "keywords": {{ jsonify . }}{{ end }}
-}
-</script>
+{{- $posting := dict
+      `@context` "https://schema.org"
+      `@type` "BlogPosting"
+      `@id` (printf "%s#article" .Permalink)
+      "headline" .Title
+      "description" .Description
+      "datePublished" (.Date.Format "2006-01-02")
+      "dateModified" (.Lastmod.Format "2006-01-02")
+      "author" (dict `@id` $personID)
+      "publisher" (dict `@id` $orgID)
+      "inLanguage" .Language.Lang
+      "mainEntityOfPage" (dict `@type` "WebPage" `@id` .Permalink)
+      "url" .Permalink
+      -}}
+{{- with .Params.image }}{{ $posting = merge $posting (dict "image" (. | absURL)) }}{{ end }}
+{{- with .Params.tags }}{{ $posting = merge $posting (dict "keywords" .) }}{{ end }}
+<script type="application/ld+json">{{ $posting | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 
-{{/* JSON-LD — FAQPage (pàgina contacte) */}}
+{{/* JSON-LD — FAQPage (pàgina contacte)
+     Es genera llegint el FAQ real del fitxer de contingut de l'idioma de la pàgina,
+     de manera que el schema no es pot desincronitzar del text visible ni quedar
+     escrit en l'idioma equivocat. Abans eren 10 preguntes fixes en català que
+     s'emetien igual a /contacte/, /es/contacte/ i /en/contacte/, mentre el
+     contingut visible en té 12 per idioma. */}}
 {{ if strings.HasSuffix .RelPermalink "/contacte/" }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Quants alumnes hi ha per sessió?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tots els tallers de Llumàtics tenen un màxim de quatre alumnes per sessió. Aquest format reduït permet un acompanyament proper, adaptat al ritme i interessos de cada participant." }
-    },
-    {
-      "@type": "Question",
-      "name": "Cal tenir experiència prèvia en fotografia analògica?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Depèn del taller. Els tallers d'iniciació no requereixen experiència prèvia. Els intermedis i avançats demanen haver fet els de nivell anterior o tenir coneixements equivalents. Cada fitxa indica clarament els prerequisits." }
-    },
-    {
-      "@type": "Question",
-      "name": "Quin equipament he de portar?",
-      "acceptedAnswer": { "@type": "Answer", "text": "En general no cal portar res: Llumàtics disposa de tota la química, paper i material tècnic. Per als tallers de càmera cal portar la pròpia càmera analògica. La fitxa de cada taller especifica exactament el que cal portar." }
-    },
-    {
-      "@type": "Question",
-      "name": "Els tallers tenen dates fixes o es fan sota demanda?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Els tallers a Llumàtics (Nau Bostik) es fan sota demanda: no hi ha calendari fix. Quan escriviu, busquem conjuntament una data que s'adapti a la vostra disponibilitat." }
-    },
-    {
-      "@type": "Question",
-      "name": "On és Llumàtics exactament?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Llumàtics és a la Nau Bostik, Carrer Ferran Turné 1-11, al barri de La Sagrera de Barcelona (08031). És un espai industrial rehabilitat accessible en metro (L1 Fabra i Puig) i tren de rodalies (R1/R3/R4 Sant Andreu Comtal)." }
-    },
-    {
-      "@type": "Question",
-      "name": "Com es fa el pagament?",
-      "acceptedAnswer": { "@type": "Answer", "text": "El pagament es fa per transferència bancària o Bizum prèvia confirmació de la data. Els tallers de formació estan exempts d'IVA (art. 20.1.9 LIVA). Si necessiteu factura, indiqueu-ho en contactar." }
-    },
-    {
-      "@type": "Question",
-      "name": "Hi ha descomptes per grup?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Els preus incorporen un descompte progressiu per grup: com més alumnes veniu junts, menor és el cost per persona. Podeu consultar la taula de preus a cada fitxa de taller." }
-    },
-    {
-      "@type": "Question",
-      "name": "Quina és la política de cancel·lació?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Si cancel·leu amb més de 72 hores d'antelació, podeu canviar la data sense cap cost. Per sota de 72 hores, Llumàtics es reserva el dret de retenir el 50% de l'import." }
-    },
-    {
-      "@type": "Question",
-      "name": "Feu tallers fora de la Nau Bostik?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Llumàtics té una línia de tallers externs impartits en col·laboració amb altres espais. Actualment col·laborem amb Cameras & Films (antiga Lomography Embassy Barcelona)." }
-    },
-    {
-      "@type": "Question",
-      "name": "Organitzeu tallers per a escoles o centres culturals?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Llumàtics dissenya i imparteix tallers per a institucions: instituts, centres cívics, centres d'art i entitats culturals. El format s'adapta a les necessitats del centre." }
-    }
-  ]
-}
-</script>
+{{- $faqRe := `(?s)<summary class="faq-question">(.*?)\s*<span class="faq-icon".*?</summary>\s*<div class="faq-answer">(.*?)</div>` -}}
+{{- $faqEntities := slice -}}
+{{- range findRE $faqRe .Content -1 -}}
+  {{- $faqEntities = $faqEntities | append (dict
+        `@type` "Question"
+        "name" ((index . 0) | plainify | chomp | strings.TrimSpace)
+        "acceptedAnswer" (dict `@type` "Answer" "text" ((index . 1) | plainify | chomp | strings.TrimSpace))) -}}
+{{- end -}}
+{{- if $faqEntities -}}
+{{- $faqData := dict
+      `@context` "https://schema.org"
+      `@type` "FAQPage"
+      "inLanguage" .Language.Lang
+      "mainEntity" $faqEntities -}}
+<script type="application/ld+json">{{ $faqData | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}
 {{ end }}
 
-{{/* JSON-LD — Course (fitxa de taller) */}}
+{{/* JSON-LD — Course (fitxa de taller)
+     Abans només name/description/url/provider/offer amb preu_1: sense durada,
+     instructor, nivell ni preus per 2/3/4 alumnes. Un motor de resposta només
+     podia respondre "quant costa?" per al cas d'un sol alumne, quan la taula de
+     preus és precisament el que diferencia l'oferta. Totes les dades ja eren al
+     front matter de cada fitxa. */}}
 {{ if and (eq .Type "tallers") .IsPage }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "{{ .Title }}",
-  "description": "{{ .Description }}",
-  "url": "{{ .Permalink }}",
-  "provider": {
-    "@type": "EducationalOrganization",
-    "name": "Llumàtics",
-    "url": "{{ .Site.BaseURL }}"
-  }{{ with .Params.preu_1 }},
-  "offers": { "@type": "Offer", "price": "{{ . }}", "priceCurrency": "EUR" }{{ end }}
-}
-</script>
+{{- $offers := slice -}}
+{{- if .Params.preus_curs -}}
+  {{/* Aquesta fitxa ven preus per sessió, no pel curs sencer. Sense aquest
+       bloc, el schema publicaria 250 € com si fos el preu del curs, que en
+       realitat costa 2.700 € l'any. El nom de cada opció porta format i
+       durada perquè ningú pugui confondre'l amb un preu de sessió. */}}
+  {{- range $fmt := .Params.preus_curs -}}
+    {{- range $n := (seq 1 4) -}}
+      {{- with (index $fmt (printf "preu_%d" $n)) -}}
+        {{- $label := i18n (printf "preu_%d_alumne%s" $n (cond (eq $n 1) "" "s")) -}}
+        {{- if not $label }}{{ $label = cond (eq $n 1) "1 alumne" (printf "%d alumnes" $n) }}{{ end -}}
+        {{- $offers = $offers | append (dict
+              `@type` "Offer"
+              "name" (printf "%s · %s · %s" $fmt.format $fmt.durada $label)
+              "price" (string .)
+              "priceCurrency" "EUR"
+              "category" "Formació fotogràfica"
+              "url" $.Permalink
+              "availability" "https://schema.org/InStock"
+              "eligibleRegion" "ES") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range $n := (seq 1 4) -}}
+    {{- with (index $.Params (printf "preu_%d" $n)) -}}
+      {{- $label := i18n (printf "preu_%d_alumne%s" $n (cond (eq $n 1) "" "s")) -}}
+      {{- if not $label }}{{ $label = cond (eq $n 1) "1 alumne" (printf "%d alumnes" $n) }}{{ end -}}
+      {{- $offers = $offers | append (dict
+            `@type` "Offer"
+            "name" $label
+            "price" (string .)
+            "priceCurrency" "EUR"
+            "category" "Formació fotogràfica"
+            "url" $.Permalink
+            "availability" "https://schema.org/InStock"
+            "eligibleRegion" "ES") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $duradaTotal := .Params.durada_total_hores | default .Params.durada_hores -}}
+{{- $lloc := .Params.lloc | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
+{{- $coursePlace := merge $napPlace (dict "name" $lloc) -}}
+{{- $instance := dict
+      `@type` "CourseInstance"
+      "courseMode" "onsite"
+      "courseWorkload" (cond (gt (int ($duradaTotal | default 0)) 0) (printf "PT%vH" $duradaTotal) "PT1H")
+      "location" $coursePlace
+      "instructor" (dict `@id` $personID) -}}
+{{- $course := dict
+      `@context` "https://schema.org"
+      `@type` "Course"
+      `@id` (printf "%s#course" .Permalink)
+      "name" .Title
+      "description" .Description
+      "url" .Permalink
+      "inLanguage" .Language.Lang
+      "provider" (dict `@id` $orgID)
+      "location" $coursePlace
+      "hasCourseInstance" (slice $instance)
+      -}}
+{{- with .Params.nivell }}{{ $course = merge $course (dict "educationalLevel" (partial "nivell-label.html" .)) }}{{ end }}
+{{- with $duradaTotal }}{{ $course = merge $course (dict "timeRequired" (printf "PT%vH" .)) }}{{ end }}
+{{- with .Params.prerequisits }}{{ $course = merge $course (dict "coursePrerequisites" (. | plainify)) }}{{ end }}
+{{- with .Params.objective }}{{ $course = merge $course (dict "about" (dict `@type` "Thing" "name" (. | plainify))) }}{{ end }}
+{{- $audience := .Params.target | default (cond (isset .Params "nivell") (partial "nivell-label.html" .Params.nivell) "") }}{{- with $audience }}{{ $course = merge $course (dict "audience" (dict `@type` "EducationalAudience" "educationalRole" "student" "audienceType" (. | plainify))) }}{{ end }}
+{{- if $offers }}{{ $course = merge $course (dict "offers" $offers) }}{{ end }}
+<script type="application/ld+json">{{ $course | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{ end }}
+
+{{/* JSON-LD — Event (entrada d'agenda). L'agenda té dates, horaris i preus reals i
+     no tenia cap schema: una consulta del tipus "quan és el proper taller?" no
+     podia obtenir res estructurat. */}}
+{{ if and (eq .Type "agenda") .IsPage }}
+{{- $d := .Date -}}
+{{- if $d -}}
+{{- $isPast := lt ($d.Unix) (now.Unix) -}}
+{{- $locName := .Params.location | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
+{{- $loc := cond (in $locName (slice "Nau Bostik" "Llumàtics")) $napPlace (dict `@type` "Place" "name" $locName) -}}
+{{- $event := dict
+      `@context` "https://schema.org"
+      `@type` "Event"
+      `@id` (printf "%s#event" .Permalink)
+      "name" .Title
+      "startDate" (printf "%sT%s:00" ($d.Format "2006-01-02") (.Params.time_start | default "10:00"))
+      "eventStatus" (cond $isPast "https://schema.org/EventCompleted" "https://schema.org/EventScheduled")
+      "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+      "inLanguage" .Language.Lang
+      "url" .Permalink
+      "organizer" (dict `@id` $orgID)
+      "location" $loc
+      -}}
+{{- with .Params.time_end }}{{ $event = merge $event (dict "endTime" (printf "%s:00" .)) }}{{ end }}
+{{- $eventDesc := "" -}}
+{{- with .Params.organizer }}{{ $eventDesc = . }}{{ end }}
+{{- with .Description }}{{ $eventDesc = cond (ne $eventDesc "") (printf "%s. %s" $eventDesc .) . }}{{ end }}
+{{- with $eventDesc }}{{ $event = merge $event (dict "description" .) }}{{ end }}
+{{- with .Params.price }}{{ $event = merge $event (dict "offers" (dict `@type` "Offer" "price" (string .) "priceCurrency" "EUR" "availability" (cond $isPast "https://schema.org/SoldOut" "https://schema.org/InStock") "url" $.Permalink)) }}{{ end }}
+{{- with .Params.max_places }}{{ $event = merge $event (dict "maximumAttendeeCapacity" .) }}{{ end }}
+<script type="application/ld+json">{{ $event | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}
 {{ end }}

@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Iniciació al revelat"
+title: "Material para alumnos — Iniciación al revelado"
 layout: "private"
 url: "/es/tallers/iniciacio-revelat/privat/"
 course_ref: "iniciacio-revelat"

@@ -13,7 +13,7 @@
 
   {{ partial "footer.html" . }}
 
-  <button class="back-to-top" id="js-back-to-top" aria-label="Tornar al principi">
+  <button class="back-to-top" id="js-back-to-top" aria-label="{{ i18n "a11y_back_to_top" }}">
     <svg class="back-to-top__ring" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
       <circle class="back-to-top__track"    cx="24" cy="24" r="21"/>
       <circle class="back-to-top__progress" cx="24" cy="24" r="21" id="js-btt-progress"/>
@@ -35,16 +35,19 @@
       <ul id="search-results" class="search-results" role="listbox" aria-live="polite"></ul>
     </div>
   </div>
+  {{/* Traduccions per al JS: main.js les llegeix amb window.T() */}}
+  {{ partial "js-i18n.html" . }}
+
   <script>
     window.__searchURL = "{{ printf "%s%s/index.json" (strings.TrimSuffix "/" site.BaseURL) $.Site.LanguagePrefix }}";
   </script>
 
   {{/* Lightbox compartit */}}
-  <div id="js-lightbox" role="dialog" aria-modal="true" aria-label="Imatge ampliada" style="display:none;">
-    <button class="lb-btn lb-btn--prev" id="js-lb-prev" aria-label="Anterior">&#8249;</button>
+  <div id="js-lightbox" role="dialog" aria-modal="true" aria-label="{{ i18n "a11y_lightbox" }}" style="display:none;">
+    <button class="lb-btn lb-btn--prev" id="js-lb-prev" aria-label="{{ i18n "a11y_prev" }}">&#8249;</button>
     <img id="js-lb-img" src="" alt="">
-    <button class="lb-btn lb-btn--next" id="js-lb-next" aria-label="Següent">&#8250;</button>
-    <button class="lb-btn lb-btn--close" id="js-lb-close" aria-label="Tancar">&#215;</button>
+    <button class="lb-btn lb-btn--next" id="js-lb-next" aria-label="{{ i18n "a11y_next" }}">&#8250;</button>
+    <button class="lb-btn lb-btn--close" id="js-lb-close" aria-label="{{ i18n "a11y_close" }}">&#215;</button>
     <span class="lb-counter" id="js-lb-counter"></span>
   </div>
 

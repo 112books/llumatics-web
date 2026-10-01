@@ -19,7 +19,7 @@
     <div class="course-card__meta">
       {{/* Nivell — nou camp string, amb fallback a levels (array antic) */}}
       {{ if .Params.nivell }}
-        <span class="tag tag--level-{{ .Params.nivell | lower | urlize }}">{{ .Params.nivell }}</span>
+        <span class="tag tag--level-{{ .Params.nivell | lower | urlize }}">{{ partial "nivell-label.html" .Params.nivell }}</span>
       {{ else }}
         {{ range first 1 .Params.levels }}
           <span class="tag tag--level-{{ . | lower | urlize }}">{{ . | title }}</span>
@@ -78,7 +78,7 @@
       {{ $estat := .Params.estat | default (.Params.status | default "actiu") }}
       {{ if $isExtern }}
         <a href="{{ .RelPermalink }}" class="course-card__cta">
-          Veure dates <span aria-hidden="true">→</span>
+          {{ i18n "course_card_see_dates" }} <span aria-hidden="true">→</span>
         </a>
       {{ else if eq $estat "full" }}
         <span class="course-card__status course-card__status--full">
@@ -86,7 +86,7 @@
         </span>
       {{ else }}
         <a href="{{ .RelPermalink }}" class="course-card__cta">
-          El vull <span aria-hidden="true">→</span>
+          {{ i18n "course_card_want_it" }} <span aria-hidden="true">→</span>
         </a>
       {{ end }}
     </div>

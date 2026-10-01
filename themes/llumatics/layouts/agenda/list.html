@@ -13,10 +13,21 @@
       </div>
     </div>
 
-    {{/* Sempre usem els items CA com a font canònica de l'agenda */}}
+    {{/* L'agenda pren els esdeveniments del site CA com a font canònica,
+         però renderitza la traducció quan existeix. Sense això, /es/ i /en/
+         mostraven el títol català i duplicaven la sessió quan també existia
+         una fitxa traduïda. */}}
     {{ $caSite := site }}
     {{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end }}
-    {{ $allPages := where $caSite.RegularPages "Type" "agenda" }}
+    {{ $lang := site.Language.Lang }}
+    {{ $allPages := slice }}
+    {{ range where $caSite.RegularPages "Type" "agenda" }}
+      {{ $item := . }}
+      {{ range .Translations }}
+        {{ if eq .Language.Lang $lang }}{{ $item = . }}{{ end }}
+      {{ end }}
+      {{ $allPages = $allPages | append $item }}
+    {{ end }}
 
     {{/* Separació automàtica: past si date_start < avui o status=past explícit */}}
     {{ $today := now.Format "2006-01-02" }}

@@ -17,7 +17,7 @@ preu_4: 79
 durada_hores: 4
 lloc: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 max_places: 4
-nivell: "Intermediate"
+nivell: "Intermedi"
 sota_demanda: true
 
 prerequisits: "Having digitised images to work with. No prior experience with editing software required. Some knowledge of analogue photography and film developing is helpful."
