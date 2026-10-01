@@ -4,7 +4,7 @@ lead: "The rain showed up from the start. Light was scarce. The cameras were ind
 description: "Chronicle of the black-and-white developing workshop on 1 February 2025 at Cameras & Films. Zenit, Helios, Fomapan 100 and plenty of determination."
 image: "/images/blog/revelat-analogic-zenit-2025.jpg"
 date: 2025-02-07
-tags: ["development", "black-and-white", "Cameras & Films", "zenit", "helios", "fomapan", "chronicle"]
+tags: ["development", "black and white", "Cameras & Films", "zenit", "helios", "fomapan", "chronicle"]
 course_ref: "iniciacio-revelat"
 draft: false
 ---

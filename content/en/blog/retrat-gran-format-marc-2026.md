@@ -4,7 +4,7 @@ lead: "The Woody, direct photographic paper, developed live in the darkroom. 7 M
 description: "Chronicle of the large format portrait workshop on 7 March 2026 at Cameras & Films. Wooden camera, photographic paper and live development."
 image: "/images/blog/retrat-gran-format-marc-2026.jpg"
 date: 2026-03-07
-tags: ["large-format", "portrait", "Cameras & Films", "photographic-paper", "analogue", "chronicle"]
+tags: ["large format", "portrait", "Cameras & Films", "photographic paper", "analogue", "chronicle"]
 course_ref: "retrat-gran-format"
 draft: false
 ---

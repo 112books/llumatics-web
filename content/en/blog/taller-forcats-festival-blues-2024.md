@@ -4,7 +4,7 @@ lead: "Shooting a concert at ISO 3200 and developing at 20ºC with double the ti
 description: "Push/pull development workshop at the Barcelona Blues Festival 2024. Shoot at ISO 3200, push develop, and learn the hard way."
 image: "/images/blog/taller-forcats-festival-blues-2024.jpg"
 date: 2024-07-05
-tags: ["push-pull", "push-development", "concert", "festival", "development", "black-and-white", "35mm"]
+tags: ["push-pull", "push-development", "concert", "festival", "development", "black and white", "35mm"]
 course_ref: "revelat-bn"
 draft: false
 ---

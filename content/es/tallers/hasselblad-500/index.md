@@ -34,7 +34,7 @@ target: "Fotógrafos analógicos que quieren dar el paso al medio formato o que 
 continua_aprenent:
   - "retrat-6x6"
   - "gran-format-4x5"
-tags: ["hasselblad", "medio formato", "6x6", "120", "doble exposición"]
+tags: ["Hasselblad", "medio formato", "6x6", "120", "doble exposición"]
 draft: false
 ---
 

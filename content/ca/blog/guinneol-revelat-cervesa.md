@@ -7,7 +7,7 @@ images:
   - "/images/blog/guinneol-revelat-cervesa-1.jpg"
   - "/images/blog/guinneol-revelat-cervesa-2.jpg"
 date: 2017-10-30
-tags: ["revelat", "experimental", "guinneol", "cervesa", "processos alternatius", "caffenol", "laboratori"]
+tags: ["revelat", "experimental", "guinneol", "cervesa", "processos alternatius", "Caffenol", "laboratori"]
 course_ref: "revelats-experimentals"
 draft: false
 ---

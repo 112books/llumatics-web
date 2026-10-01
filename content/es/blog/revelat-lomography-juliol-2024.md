@@ -4,7 +4,7 @@ lead: "Si todavía no te has manchado las manos de productos químicos y quieres
 description: "Taller de revelado de película en blanco y negro en Cameras & Films (antigua Lomography Embassy Barcelona), julio de 2024."
 image: "/images/blog/revelat-lomography-juliol-2024.jpg"
 date: 2024-07-20
-tags: ["revelado", "blanco-y-negro", "Cameras & Films", "lomography", "35mm"]
+tags: ["revelado", "blanco y negro", "Cameras & Films", "lomography", "35mm"]
 course_ref: "iniciacio-revelat"
 draft: false
 ---

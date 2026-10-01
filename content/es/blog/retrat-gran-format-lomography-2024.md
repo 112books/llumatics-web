@@ -4,7 +4,7 @@ lead: "La Woody, la cámara de madera. Cargar, enfocar bajo el trapo, disparar. 
 description: "Taller de retrato en gran formato 4×5 en Cameras & Films (Lomography Embassy Barcelona), agosto de 2024."
 image: "/images/blog/retrat-gran-format-lomography-2024.jpg"
 date: 2024-08-24
-tags: ["gran-formato", "retrato", "4x5", "Cameras & Films", "analógica"]
+tags: ["gran formato", "retrato", "4x5", "Cameras & Films", "analógica"]
 course_ref: "retrat-gran-format"
 draft: false
 ---

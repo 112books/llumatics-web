@@ -4,7 +4,7 @@ lead: "Si encara no t'has mullat mai les mans de productes químics i vols parti
 description: "Taller de revelat de pel·lícula en blanc i negre a Cameras & Films (antiga Lomography Embassy Barcelona), juliol de 2024."
 image: "/images/blog/revelat-lomography-juliol-2024.jpg"
 date: 2024-07-20
-tags: ["revelat", "blanc-i-negre", "Cameras & Films", "lomography", "35mm"]
+tags: ["revelat", "blanc i negre", "Cameras & Films", "lomography", "35mm"]
 course_ref: "iniciacio-revelat"
 draft: false
 ---

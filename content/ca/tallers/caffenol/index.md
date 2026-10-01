@@ -37,7 +37,7 @@ continua_aprenent:
   - "guinneol"
   - "wineol"
 
-tags: ["revelat", "caffenol", "cafè", "processos alternatius", "orgànic"]
+tags: ["revelat", "Caffenol", "cafè", "processos alternatius", "orgànic"]
 draft: false
 date: 2026-05-25
 ---

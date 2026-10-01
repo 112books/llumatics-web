@@ -4,7 +4,7 @@ lead: "Disparar un concierto con ISO 3200 y revelar a 20ºC exigiendo el doble d
 description: "Taller de push/pull (forzados) en el Festival de Blues de Barcelona 2024. Disparar ISO 3200, revelar con forzado, y aprender por la vía rápida."
 image: "/images/blog/taller-forcats-festival-blues-2024.jpg"
 date: 2024-07-05
-tags: ["push-pull", "forzados", "concierto", "festival", "revelado", "blanco-y-negro", "35mm"]
+tags: ["push-pull", "forzados", "concierto", "festival", "revelado", "blanco y negro", "35mm"]
 course_ref: "revelat-bn"
 draft: false
 ---

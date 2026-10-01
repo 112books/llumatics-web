@@ -4,7 +4,7 @@ lead: "Dissabte 29 de setembre a Llumàtics. La càmera de fusta, les plaques, l
 description: "Making off del taller d'introducció al Gran Format del 29 de setembre de 2018 a Llumàtics, Barcelona."
 image: "/images/blog/taller-gran-format-setembre-2018.jpg"
 date: 2018-09-30
-tags: ["gran-format", "4x5", "taller", "making-off", "analògica"]
+tags: ["gran format", "4x5", "taller", "making-off", "analògica"]
 course_ref: "gran-format-4x5"
 draft: false
 ---

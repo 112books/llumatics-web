@@ -4,7 +4,7 @@ lead: "Una sessió de retrat al laboratori amb Hasselblad CM, Leica M4-2 i plaqu
 description: "Crònica d'una sessió de retrat a Llumàtics amb Hasselblad CM 100mm, Leica M4-2 32mm i plaques 8×10 pouces. Setembre 2018."
 image: "/images/blog/sessio-maria-de-acha.jpg"
 date: 2018-09-26
-tags: ["retrat", "hasselblad", "leica", "gran format", "sessió"]
+tags: ["retrat", "Hasselblad", "leica", "gran format", "sessió"]
 draft: false
 ---
 

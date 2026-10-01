@@ -4,7 +4,7 @@ lead: "La Woody, la càmera de fusta. Carregar, enfocar sota el drap, disparar. 
 description: "Taller de retrat en gran format 4×5 a Cameras & Films (Lomography Embassy Barcelona), agost de 2024."
 image: "/images/blog/retrat-gran-format-lomography-2024.jpg"
 date: 2024-08-24
-tags: ["gran-format", "retrat", "4x5", "Cameras & Films", "analògica"]
+tags: ["gran format", "retrat", "4x5", "Cameras & Films", "analògica"]
 course_ref: "retrat-gran-format"
 draft: false
 ---

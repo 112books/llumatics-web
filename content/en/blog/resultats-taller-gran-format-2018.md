@@ -4,7 +4,7 @@ lead: "Click the photo to see the rest. Results from the introductory Large Form
 description: "Photographs made by students at the Llumàtics introductory Large Format workshop. 4×5 black-and-white sheet film."
 image: "/images/blog/resultats-taller-gran-format-2018.jpg"
 date: 2018-10-01
-tags: ["large-format", "4x5", "results", "workshop", "students"]
+tags: ["large format", "4x5", "results", "workshop", "students"]
 course_ref: "gran-format-4x5"
 draft: false
 ---

@@ -4,7 +4,7 @@ lead: "Saturday 29 September at Llumàtics. The wooden camera, the sheet film, t
 description: "Behind the scenes of the introductory Large Format workshop on 29 September 2018 at Llumàtics, Barcelona."
 image: "/images/blog/taller-gran-format-setembre-2018.jpg"
 date: 2018-09-30
-tags: ["large-format", "4x5", "workshop", "behind-the-scenes", "analogue"]
+tags: ["large format", "4x5", "workshop", "behind-the-scenes", "analogue"]
 course_ref: "gran-format-4x5"
 draft: false
 ---

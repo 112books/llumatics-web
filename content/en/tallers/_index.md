@@ -1,7 +1,7 @@
 ---
-title: "Workshops"
+title: "Workshops, courses and training pathways"
 description: "Analogue photography, chemical process, large format and alternative processes workshops in Barcelona. Groups of maximum 4 people."
-eyebrow: "Training"
+eyebrow: "Analogue photography school"
 subtitle: "Six learning lines. Like a metro map: take one workshop or follow a full line from start to finish."
 ---
 

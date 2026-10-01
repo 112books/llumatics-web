@@ -34,7 +34,7 @@ target: "Fotògrafs analògics que volen anar més lluny del revelat estàndard 
 # Tallers relacionats
 continua_aprenent: 
   - "reveladors-artesanals"
-tags: ["revelat", "experimental", "caffenol", "beers", "artesanal"]
+tags: ["revelat", "experimental", "Caffenol", "Beers", "artesanal"]
 draft: false
 ---
 

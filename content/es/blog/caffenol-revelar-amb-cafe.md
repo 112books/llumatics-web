@@ -4,7 +4,7 @@ lead: "Café instantáneo, vitamina C y carbonato sódico. Tres cosas que tienes
 description: "Taller de revelado con Caffenol en Barcelona. Cómo funciona el revelado con café, los ingredientes, el proceso y los resultados. Llumàtics."
 image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 date: 2025-12-13
-tags: ["caffenol", "revelado", "experimental", "química", "DIY", "calle", "analógica"]
+tags: ["Caffenol", "revelado", "experimental", "química", "DIY", "calle", "analógica"]
 course_ref: "revelats-experimentals"
 draft: false
 ---

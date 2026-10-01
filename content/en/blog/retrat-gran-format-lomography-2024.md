@@ -4,7 +4,7 @@ lead: "The Woody, the wooden camera. Load it, focus under the dark cloth, shoot.
 description: "Large format 4×5 portrait workshop at Cameras & Films (Lomography Embassy Barcelona), August 2024."
 image: "/images/blog/retrat-gran-format-lomography-2024.jpg"
 date: 2024-08-24
-tags: ["large-format", "portrait", "4x5", "Cameras & Films", "analogue"]
+tags: ["large format", "portrait", "4x5", "Cameras & Films", "analogue"]
 course_ref: "retrat-gran-format"
 draft: false
 ---

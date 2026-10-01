@@ -4,7 +4,7 @@ lead: "La Woody, papel fotográfico directo, revelado en directo en el laborator
 description: "Crónica del taller de retrato en gran formato del 7 de marzo de 2026 en Cameras & Films. Cámara de madera, papel fotográfico y revelado en directo."
 image: "/images/blog/retrat-gran-format-marc-2026.jpg"
 date: 2026-03-07
-tags: ["gran-formato", "retrato", "Cameras & Films", "papel-fotográfico", "analógica", "crónica"]
+tags: ["gran formato", "retrato", "Cameras & Films", "papel fotográfico", "analógica", "crónica"]
 course_ref: "retrat-gran-format"
 draft: false
 ---

@@ -4,7 +4,7 @@ lead: "La lluvia hizo acto de presencia desde la mañana. La luz era escasa. Las
 description: "Crónica del taller de revelado en blanco y negro del 1 de febrero de 2025 en Cameras & Films. Zenit, Helios, Fomapan 100 y mucha determinación."
 image: "/images/blog/revelat-analogic-zenit-2025.jpg"
 date: 2025-02-07
-tags: ["revelado", "blanco-y-negro", "Cameras & Films", "zenit", "helios", "fomapan", "crónica"]
+tags: ["revelado", "blanco y negro", "Cameras & Films", "zenit", "helios", "fomapan", "crónica"]
 course_ref: "iniciacio-revelat"
 draft: false
 ---

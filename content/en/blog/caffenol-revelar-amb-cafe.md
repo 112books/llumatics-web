@@ -4,7 +4,7 @@ lead: "Instant coffee, vitamin C and washing soda. Three things you have at home
 description: "Caffenol developing workshop in Barcelona. How coffee development works, the ingredients, the process and the results. Llumàtics."
 image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 date: 2025-12-13
-tags: ["caffenol", "development", "experimental", "chemistry", "DIY", "street", "analogue"]
+tags: ["Caffenol", "development", "experimental", "chemistry", "DIY", "street", "analogue"]
 course_ref: "revelats-experimentals"
 draft: false
 ---

@@ -43,7 +43,7 @@ continua_aprenent:
   - "revelat-bn"
   - "copies-en-paper"
   - "introduccio-al-positivat"
-tags: ["revelat", "iniciació", "35mm", "Cameras and Films"]
+tags: ["revelat", "iniciació", "35mm", "Cameras & Films"]
 draft: false
 ---
 

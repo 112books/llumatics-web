@@ -41,7 +41,7 @@ target: "Anyone who wants to understand for the first time how analogue photogra
 continua_aprenent:
   - "revelat-bn"
   - "copies-en-paper"
-tags: ["development", "beginner", "35mm", "Cameras and Films"]
+tags: ["development", "beginner", "35mm", "Cameras & Films"]
 draft: false
 ---
 

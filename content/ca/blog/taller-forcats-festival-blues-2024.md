@@ -4,7 +4,7 @@ lead: "Disparar un concert amb ISO 3200 i revelar a 20ºC exigint el doble del t
 description: "Taller de push/pull (forçats) al Festival de Blues de Barcelona 2024. Disparar ISO 3200, revelar amb forçat, i aprendre per la via ràpida."
 image: "/images/blog/taller-forcats-festival-blues-2024.jpg"
 date: 2024-07-05
-tags: ["push-pull", "forçats", "concert", "festival", "revelat", "blanc-i-negre", "35mm"]
+tags: ["push-pull", "forçats", "concert", "festival", "revelat", "blanc i negre", "35mm"]
 course_ref: "revelat-bn"
 draft: false
 ---

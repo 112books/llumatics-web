@@ -4,7 +4,7 @@ lead: "Haz clic en la fotografía para ver el resto. Resultados del taller de in
 description: "Fotografías realizadas por los alumnos en el taller de introducción al Gran Formato de Llumàtics. Placas 4×5 en blanco y negro."
 image: "/images/blog/resultats-taller-gran-format-2018.jpg"
 date: 2018-10-01
-tags: ["gran-formato", "4x5", "resultados", "taller", "alumnos"]
+tags: ["gran formato", "4x5", "resultados", "taller", "alumnos"]
 course_ref: "gran-format-4x5"
 draft: false
 ---

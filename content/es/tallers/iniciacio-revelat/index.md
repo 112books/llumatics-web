@@ -41,7 +41,7 @@ target: "Todo el mundo que quiere entender por primera vez cómo funciona la fot
 continua_aprenent:
   - "revelat-bn"
   - "copies-en-paper"
-tags: ["revelado", "iniciación", "35mm", "Cameras and Films"]
+tags: ["revelado", "iniciación", "35mm", "Cameras & Films"]
 draft: false
 ---
 

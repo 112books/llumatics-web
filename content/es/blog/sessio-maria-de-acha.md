@@ -4,7 +4,7 @@ lead: "Hasselblad CM con 100mm, Leica M4-2 con 32mm y un par de placas 8×10. Un
 description: "Sesión fotográfica analógica en Llumàtics con la modelo Maria de Acha. Hasselblad, Leica y gran formato 8×10."
 image: "/images/blog/sessio-maria-de-acha.jpg"
 date: 2018-09-26
-tags: ["hasselblad", "leica", "gran-formato", "sesión", "analógica"]
+tags: ["Hasselblad", "leica", "gran formato", "sesión", "analógica"]
 draft: false
 ---
 

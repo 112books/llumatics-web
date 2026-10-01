@@ -4,7 +4,7 @@ lead: "Sense plans, sense normes i, sobretot, sense objectius. Una trobada infor
 description: "Llumàtics celebra el Dia Mundial de la Fotografia Estenopeica 2025 a la Sala Basiana de la Nau Bostik. Càmeres disponibles, revelat al laboratori i molta experimentació."
 image: "/images/blog/dia-mundial-fotografia-estenopeica-2025.jpg"
 date: 2025-04-27
-tags: ["estenopeica", "pinhole", "dia mundial", "nau bostik", "experimental"]
+tags: ["estenopeica", "pinhole", "dia mundial", "Nau Bostik", "experimental"]
 course_ref: "fotografia-estenopeica"
 draft: false
 ---

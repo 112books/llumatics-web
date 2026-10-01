@@ -4,7 +4,7 @@ lead: "Cafè instantani, vitamina C i carbonat sòdic. Tres coses que tens a cas
 description: "Taller de revelat amb Caffenol a Barcelona. Com funciona el revelat amb cafè, els ingredients, el procés i els resultats. Llumàtics."
 image: "/images/blog/caffenol-revelar-amb-cafe.jpg"
 date: 2025-12-13
-tags: ["caffenol", "revelat", "experimental", "química", "DIY", "carrer", "analògica"]
+tags: ["Caffenol", "revelat", "experimental", "química", "DIY", "carrer", "analògica"]
 course_ref: "revelats-experimentals"
 draft: false
 ---

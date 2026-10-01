@@ -4,7 +4,7 @@ lead: "If you've never got your hands wet with chemicals and you want to be part
 description: "Black-and-white film developing workshop at Cameras & Films (formerly Lomography Embassy Barcelona), July 2024."
 image: "/images/blog/revelat-lomography-juliol-2024.jpg"
 date: 2024-07-20
-tags: ["development", "black-and-white", "Cameras & Films", "lomography", "35mm"]
+tags: ["development", "black and white", "Cameras & Films", "lomography", "35mm"]
 course_ref: "iniciacio-revelat"
 draft: false
 ---

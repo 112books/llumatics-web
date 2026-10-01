@@ -35,7 +35,7 @@ target: "Fotògrafs analògics que volen fer el pas al mig format o que ja tenen
 continua_aprenent: 
   - "retrat-6x6"
   - "gran-format-4x5"
-tags: ["hasselblad", "mig format", "6x6", "120", "doble exposició"]
+tags: ["Hasselblad", "mig format", "6x6", "120", "doble exposició"]
 draft: false
 ---
 

@@ -33,7 +33,7 @@ target: "Analogue photographers who want to go beyond standard development and u
 # Related workshops
 continua_aprenent:
   - "reveladors-artesanals"
-tags: ["development", "experimental", "caffenol", "beers", "DIY"]
+tags: ["development", "experimental", "Caffenol", "Beers", "DIY"]
 draft: false
 ---
 
