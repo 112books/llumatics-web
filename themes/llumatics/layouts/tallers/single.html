@@ -326,11 +326,13 @@
         <div class="info-box__dates" style="margin-top:1.5rem; margin-bottom:1rem;">
           <p class="info-box__scheduling-label">{{ i18n "next_dates" }}</p>
           {{ range $upcomingDates | first 3 }}
+            {{ $datePage := . }}
+            {{ range .Translations }}{{ if eq .Language.Lang $lang }}{{ $datePage = . }}{{ end }}{{ end }}
             <div class="info-box__date-item">
               <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
               {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
-              {{ if .Params.purchase_url }}
-                <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">{{ .Params.cta_label | default "Comprar" }}</a>
+              {{ if $datePage.Params.purchase_url }}
+                <a href="{{ $datePage.Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">{{ $datePage.Params.cta_label | default "Comprar" }}</a>
               {{ else }}
                 <a href="{{ .RelPermalink }}" class="btn btn--outline btn--xs">Info</a>
               {{ end }}
