@@ -26,8 +26,11 @@
       Tots
     </a>
     {{ range $blocs }}
+    {{ $pillNom := .nom }}
+    {{ if eq $lang "es" }}{{ with .nom_es }}{{ $pillNom = . }}{{ end }}{{ end }}
+    {{ if eq $lang "en" }}{{ with .nom_en }}{{ $pillNom = . }}{{ end }}{{ end }}
     <a href="#{{ .slug }}" class="bloc-pill js-bloc-filter" data-bloc="{{ .slug }}">
-      <span aria-hidden="true">{{ .icon }}</span> {{ .nom }}
+      <span aria-hidden="true">{{ .icon }}</span> {{ $pillNom }}
     </a>
     {{ end }}
   </nav>
@@ -87,10 +90,10 @@
   {{ $externs := where .Pages ".Params.extern" true }}
   {{ if $externs }}
   <section style="margin-top:5rem; padding-top:3rem; border-top:1px solid var(--color-border);">
-    <p class="section__eyebrow">Col·laboracions</p>
+    <p class="section__eyebrow">{{ i18n "extern_workshops_eyebrow" | default "Col·laboracions" }}</p>
     <h2 class="section__title" style="font-size:1.875rem; margin-bottom:0.5rem;">{{ i18n "extern_workshops_title" }}</h2>
     <p class="section__subtitle" style="margin-bottom:2rem;">
-      Tallers impartits en col·laboració amb altres espais. Mateix enfocament, entorn diferent.
+      {{ i18n "extern_workshops_subtitle" | default "Tallers impartits en col·laboració amb altres espais. Mateix enfocament, entorn diferent." }}
     </p>
     <div class="courses-grid">
       {{ range $externs }}

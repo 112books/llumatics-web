@@ -34,7 +34,7 @@
           {{ with .Params.time_start }}<span>{{ . }}{{ with $.Params.time_end }}–{{ . }}{{ end }}</span>{{ end }}
           {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
           {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
-          {{ if .Params.price }}
+          {{ if isset .Params "price" }}
             {{ if eq (.Params.price | int) 0 }}
               <span class="agenda-item__price">{{ i18n "price_free" | default "Gratuït" }}</span>
             {{ else }}
@@ -65,11 +65,13 @@
       {{ if eq $status "active" }}
         {{ if $purchaseURL }}
           <a href="{{ $purchaseURL }}" class="btn btn--primary" target="_blank" rel="noopener">
-            {{ i18n "cta_buy" | default "Comprar plaça" }}
+            {{ .Params.cta_label | default (i18n "cta_buy" | default "Comprar plaça") }}
           </a>
+          {{ if not (hasPrefix $purchaseURL "mailto:") }}
           <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:0.75rem;">
             {{ i18n "agenda_buy_note" | default "La compra es fa a través de la plataforma de pagament segur. Rebràs confirmació per correu." }}
           </p>
+          {{ end }}
         {{ else }}
           <a href="{{ printf "%s%s/contacte/" $siteRoot $lp }}" class="btn btn--primary">
             {{ i18n "cta_register" | default "Inscripció" }}

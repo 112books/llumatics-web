@@ -21,8 +21,10 @@
       {{ if .Params.nivell }}
         <span class="tag tag--level-{{ .Params.nivell | lower | urlize }}">{{ partial "nivell-label.html" .Params.nivell }}</span>
       {{ else }}
-        {{ range first 1 .Params.levels }}
-          <span class="tag tag--level-{{ . | lower | urlize }}">{{ . | title }}</span>
+        {{ with .Params.levels }}
+          {{ range first 1 . }}
+            <span class="tag tag--level-{{ . | lower | urlize }}">{{ . | title }}</span>
+          {{ end }}
         {{ end }}
       {{ end }}
 
@@ -51,18 +53,18 @@
     <div class="course-card__footer">
       <span class="course-card__price">
         {{/* Preu — nou sistema preu_1/tipus, amb fallback a price/formats (antic) */}}
-        {{ if .Params.preu_1 }}
+        {{ if isset .Params "preu_1" }}
           {{ if eq (.Params.tipus | default "") "curs" }}
-            <span class="course-card__format-badge">Recorregut</span>
+            <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
           {{ end }}
           {{ if gt (.Params.preu_1 | int) 0 }}
             des de {{ .Params.preu_4 | default .Params.preu_1 }}€
           {{ else }}
             {{ i18n "price_free" | default "Gratuït" }}
           {{ end }}
-        {{ else if .Params.price }}
+        {{ else if isset .Params "price" }}
           {{ if in (.Params.formats | default slice) "curs" }}
-            <span class="course-card__format-badge">Recorregut</span>
+            <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
           {{ end }}
           {{ if gt (.Params.price | int) 0 }}
             {{ .Params.price }}€

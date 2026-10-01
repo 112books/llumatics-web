@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
 {{ $lp       := $.Site.LanguagePrefix }}
+{{ $lang     := site.Language.Lang }}
 {{ $isExtern := .Params.extern | default false }}
 {{ $courseSlug := .File.ContentBaseName }}
 {{/* Agenda: sempre usem CA com a font de veritat — les dates no són per idioma */}}
@@ -33,7 +34,10 @@
           {{ $slug := index . 0 }}
           {{ range hugo.Data.blocs }}
             {{ if eq .slug $slug }}
-              <a href="{{ printf "%s%s/tallers/#%s" $siteRoot $lp $slug }}">{{ .nom }}</a>
+              {{ $blocNom := .nom }}
+              {{ if eq $lang "es" }}{{ with .nom_es }}{{ $blocNom = . }}{{ end }}{{ end }}
+              {{ if eq $lang "en" }}{{ with .nom_en }}{{ $blocNom = . }}{{ end }}{{ end }}
+              <a href="{{ printf "%s%s/tallers/#%s" $siteRoot $lp $slug }}">{{ $blocNom }}</a>
             {{ end }}
           {{ end }}
         {{ end }}
@@ -47,7 +51,10 @@
             {{ $slug := . }}
             {{ range hugo.Data.blocs }}
               {{ if eq .slug $slug }}
-                <span class="tag tag--bloc">{{ .icon }} {{ .nom }}</span>
+                {{ $blocNom := .nom }}
+                {{ if eq $lang "es" }}{{ with .nom_es }}{{ $blocNom = . }}{{ end }}{{ end }}
+                {{ if eq $lang "en" }}{{ with .nom_en }}{{ $blocNom = . }}{{ end }}{{ end }}
+                <span class="tag tag--bloc">{{ .icon }} {{ $blocNom }}</span>
               {{ end }}
             {{ end }}
           {{ end }}
@@ -55,10 +62,10 @@
             <span class="tag tag--level-{{ . | urlize }}">{{ partial "nivell-label.html" . }}</span>
           {{ end }}
           {{ with .Params.tipus }}
-            {{ if eq . "curs" }}<span class="tag tag--format">Recorregut</span>{{ end }}
+            {{ if eq . "curs" }}<span class="tag tag--format">{{ i18n "format_recorregut" | default "Recorregut" }}</span>{{ end }}
           {{ end }}
           {{ if $isExtern }}
-            <span class="tag tag--extern">Col·laboració Cameras &amp; Films</span>
+            <span class="tag tag--extern">{{ i18n "extern_tag" | default "Col·laboració Cameras &amp; Films" }}</span>
           {{ end }}
         </div>
 
@@ -230,10 +237,12 @@
       {{ else if and .Params.price (gt (.Params.price | int) 0) }}
         <div class="info-box__price">
           {{ if in (.Params.formats | default slice) "curs" }}
-            <span class="course-card__format-badge">Recorregut</span>
+            <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
           {{ end }}
           {{ .Params.price }}€
         </div>
+      {{ else if and (isset .Params "preu_1") (eq ($preu1 | int) 0) }}
+        <div class="info-box__price">{{ i18n "price_free" | default "Gratuït" }}</div>
       {{ end }}
 
       {{/* Dades tècniques */}}
@@ -321,7 +330,7 @@
               <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
               {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
               {{ if .Params.purchase_url }}
-                <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Comprar</a>
+                <a href="{{ .Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">{{ .Params.cta_label | default "Comprar" }}</a>
               {{ else }}
                 <a href="{{ .RelPermalink }}" class="btn btn--outline btn--xs">Info</a>
               {{ end }}
@@ -340,6 +349,7 @@
         </div>
         {{ end }}
 
+        {{ if ne (.Params.format | default "") "flash" }}
         <div class="info-box__cta">
           {{ $status := .Params.estat | default (.Params.status | default "actiu") }}
           {{ if eq $status "full" }}
@@ -443,6 +453,7 @@
             {{ i18n "cta_newsletter_post" }}
           </p>
         </div>
+        {{ end }}
 
       {{ end }}
     </aside>{{/* fi info-box */}}

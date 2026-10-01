@@ -15,7 +15,7 @@
 
 {{/* Preu: primer del frontmatter, si no del taller */}}
 {{ $preuLabel := "" }}
-{{ if .Params.price }}
+{{ if isset .Params "price" }}
   {{ if eq (.Params.price | int) 0 }}
     {{ $preuLabel = i18n "price_free" | default "Gratuït" }}
   {{ else }}
@@ -67,7 +67,7 @@
     {{ if eq $status "active" }}
       {{ if $purchaseURL }}
         <a href="{{ $purchaseURL }}" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
-          {{ i18n "cta_buy" | default "Comprar plaça" }}
+          {{ .Params.cta_label | default (i18n "cta_buy" | default "Comprar plaça") }}
         </a>
       {{ else }}
         {{ with $taller }}

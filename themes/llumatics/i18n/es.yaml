@@ -370,3 +370,11 @@ nivell_intermedi: "Intermedio"
 nivell_avancat: "Avanzado"
 nivell_iniciacio_intermedi: "Iniciación / Intermedio"
 nivell_tots_nivells: "Todos los niveles"
+
+
+# ── Paginación, blocs y etiquetas (auditoría SEO 2026-10-02) ──────────
+pagination_page: "página"
+extern_workshops_eyebrow: "Colaboraciones"
+extern_workshops_subtitle: "Talleres impartidos en colaboración con otros espacios. Mismo enfoque, entorno diferente."
+extern_tag: "Colaboración Cameras & Films"
+format_recorregut: "Recorrido"

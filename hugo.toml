@@ -11,6 +11,8 @@ defaultContentLanguageInSubdir = false
 
 [pagination]
   pagerSize = 12
+  # No generar els àlies /page/1/ (462 URLs duplicades de la pàgina 1).
+  disableAliases = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
