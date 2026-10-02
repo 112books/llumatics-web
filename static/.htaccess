@@ -31,12 +31,27 @@ ErrorDocument 404 /404.html
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
 
   # HSTS — el navegador força HTTPS durant 1 any. Sense includeSubDomains
   # ni preload (decisió conservadora: no bloquegem cap subdomini futur).
   # Dinahosting ja serveix sempre per HTTPS; el navegador només aplica HSTS
   # si rep la capçalera per HTTPS, així que no pot crear cap bucle.
   Header always set Strict-Transport-Security "max-age=31536000"
+
+  # Aïllament entre orígens (baix risc).
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # Permissions-Policy: desactivem capacitats que el lloc no fa servir.
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+  # Content-Security-Policy.
+  # Nota: 'unsafe-inline' és necessari perquè el lloc té scripts i estils
+  # en línia generats per Hugo (no hi ha servidor per posar nonces).
+  # Tot i així, la CSP bloqueja orígens d'script desconeguts, object/embed,
+  # el segrest de <base>, i l'encaix del lloc en iframes de tercers.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.paypal.com https://*.paypalobjects.com https://gc.zgo.at https://tally.so https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://api.web3forms.com https://*.paypal.com https://gc.zgo.at https://*.goatcounter.com https://overpass-api.de; frame-src 'self' https://*.paypal.com https://tally.so; form-action 'self' https://*.sibforms.com https://sibforms.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'"
 </IfModule>
 
 # Evitar llistat de directoris
