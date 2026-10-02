@@ -4,5 +4,6 @@ description: "Recomanador de cursos de fotografia analògica de Llumàtics. Resp
 eyebrow: "Recomanador"
 subtitle: "Un minut, tres preguntes. Sense cookies ni seguiment."
 layout: "quiz"
+translationKey: "quin-curs-em-conve"
 draft: true
 ---
