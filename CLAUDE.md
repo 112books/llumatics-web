@@ -723,7 +723,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 > Docs complets: `docs/auditoria de SOnnet5.5/` (extrets de `files.zip`). Resum ordenat: `llumatics-ruta-d-aplicacio.md`. **No fer res marcat «decisió de Joan» o `CONFIRMAR` sense confirmar-ho.**
 
 - [ ] **Tarda Holga (8 oct)** — fitxa i agenda existeixen; confirmar unitats de càmeres i sistema d'inscripció.
-- [ ] **robots.txt IA** — decisió de Joan sobre entrenament; proposta: permetre cerca/citació i bloquejar entrenament (revisar l'actual).
+- [x] **robots.txt IA** — resolt (2026-10-03): oberts tots els rastrejadors (cerca, citació i entrenament); només les rutes privades queden disallowed.
 - [ ] **Sitemaps GSC/Bing** — alta, enviament i cobertura (vegeu `docs/manuals/indexacio-sitemaps-google-bing.md`).
 - [ ] **Dades estructurades** — revisar `CourseInstance` a tallers i afegir `EducationEvent` a les sessions d'agenda si falta.
 - [ ] **Accessibilitat** — afegir comprovació automàtica (axe o Pa11y) al desplegament.
