@@ -395,6 +395,14 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-03
+**Correu del val-regal multilingüe + enllaç de ressenya Google**
+
+- **Correu de confirmació del val-regal** — fora del català hardcodejat a `gift.html`; 10 claus noves a `i18n/{ca,es,en}.yaml` (`gift_email_*`) i objecte `GIFT_TXT` + helper `fill()`. Surt en l'idioma de la pàgina.
+- **Ressenya Google** — bloc a `/gracies/` (`.gracies-page__review` + `gracies_review_text`) i al peu dels docs d'alumnes (`.doc-review` web + línia al `doc-print-footer` del PDF amb `doc_review_short`).
+- **Fix** — `jsonify` sense `safeJS` a `gracies.html` i `private-doc.html` duplicava les cometes; corregit.
+- Build Hugo correcte (CA 498 / ES 403 / EN 409 pàgines).
+
 ### 2026-10-02
 **Recomanador, FAQ per curs, panell i auditoria SEO/a11y/traducció**
 
@@ -691,7 +699,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - Normes: enviar el mateix dia o l'endemà, un sol cop, **mai incentius** (prohibit per Google).
 - Sincronització: `origin/main` (commit `ac56972d`, canvi password admin) fusionat a `develop`; `develop` fusionat a `main`. Verificat que `deploy.sh` exclou `admin/` → password nou intacte al VPS.
 
-**Idea pendent:** afegir l'enllaç de ressenya a `/gracies/` i al peu de la documentació d'alumnes.
+**Idea (feta el 2026-10-03):** enllaç de ressenya afegit a `/gracies/` i al peu de la documentació d'alumnes (blocs `.gracies-page__review` i `.doc-review`, més la línia del `doc-print-footer` del PDF).
 
 ### Fet aquesta sessió (2026-09-14)
 **Agenda taller extern + clau SSH deploy GitHub Actions + text Instagram**

@@ -17,6 +17,13 @@
       <a href="{{ "/tallers/" | relLangURL }}" class="btn btn--outline">{{ i18n "nav_courses" }}</a>
     </div>
 
+    {{ with .Site.Params.googleReviewURL }}
+    <div class="gracies-page__review">
+      <p class="gracies-page__review-text">{{ i18n "gracies_review_text" }}</p>
+      <a class="btn btn--outline" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "google_review" }} ★</a>
+    </div>
+    {{ end }}
+
   </div>
 </div>
 
@@ -27,12 +34,12 @@
   var msg    = document.getElementById('gracies-msg');
 
   var messages = {
-    contacte:   {{ i18n "gracies_msg_contacte" | jsonify }},
-    newsletter: {{ i18n "gracies_msg_newsletter" | jsonify }},
-    avisa:      {{ i18n "gracies_msg_avisa" | jsonify }},
+    contacte:   {{ i18n "gracies_msg_contacte" | jsonify | safeJS }},
+    newsletter: {{ i18n "gracies_msg_newsletter" | jsonify | safeJS }},
+    avisa:      {{ i18n "gracies_msg_avisa" | jsonify | safeJS }},
   };
 
-  msg.textContent = messages[from] || {{ i18n "gracies_msg_default" | jsonify }};
+  msg.textContent = messages[from] || {{ i18n "gracies_msg_default" | jsonify | safeJS }};
 })();
 </script>
 {{ end }}

@@ -196,6 +196,25 @@
 
     var paypalRendered = false;
 
+    /* ── Textos del correu de confirmació (i18n de la pàgina actual) ── */
+    var GIFT_TXT = {
+      email_subject:         {{ i18n "gift_email_subject" | jsonify | safeJS }},
+      email_greeting:        {{ i18n "gift_email_greeting" | jsonify | safeJS }},
+      email_intro:           {{ i18n "gift_email_intro" | jsonify | safeJS }},
+      email_code_label:      {{ i18n "gift_email_code_label" | jsonify | safeJS }},
+      email_workshop_label:  {{ i18n "gift_email_workshop_label" | jsonify | safeJS }},
+      email_amount_label:    {{ i18n "gift_email_amount_label" | jsonify | safeJS }},
+      email_message_label:   {{ i18n "gift_email_message_label" | jsonify | safeJS }},
+      email_redeem:          {{ i18n "gift_email_redeem" | jsonify | safeJS }},
+      email_validity:        {{ i18n "gift_email_validity" | jsonify | safeJS }},
+      email_signoff:         {{ i18n "gift_email_signoff" | jsonify | safeJS }}
+    };
+    function fill(tpl, vars) {
+      return String(tpl || '').replace(/\{(\w+)\}/g, function (m, k) {
+        return vars[k] != null ? vars[k] : m;
+      });
+    }
+
     /* ── Mostrar formulari en clicar qualsevol .gift-regala-btn ── */
     document.addEventListener('click', function (e) {
       var btn = e.target.closest('.gift-regala-btn');
@@ -305,18 +324,18 @@
             var conf = new FormData();
             conf.append('access_key', w3key);
             conf.append('to', email);
-            conf.append('subject', 'El teu val-regal Llumàtics — ' + codi);
+            conf.append('subject', fill(GIFT_TXT.email_subject, { codi: codi }));
             conf.append('from_name', 'Llumàtics');
             conf.append('message',
-              'Hola ' + de + ',\n\n' +
-              'Gràcies per la teva compra! El teu val-regal per a ' + perA + ' ja és vàlid.\n\n' +
-              'Codi del val: ' + codi + '\n' +
-              'Taller: ' + tallerNom + '\n' +
-              'Import: ' + importV + '€\n' +
-              (missatge ? 'Missatge: ' + missatge + '\n\n' : '\n') +
-              'Per fer efectiu el val, contacta\'ns a hola@llumatics.com indicant el codi.\n' +
-              'El val és vàlid durant 6 mesos a partir d\'avui.\n\n' +
-              'Llumàtics — llumatics.com'
+              fill(GIFT_TXT.email_greeting, { de: de }) + '\n\n' +
+              fill(GIFT_TXT.email_intro, { perA: perA }) + '\n\n' +
+              GIFT_TXT.email_code_label + ' ' + codi + '\n' +
+              GIFT_TXT.email_workshop_label + ' ' + tallerNom + '\n' +
+              GIFT_TXT.email_amount_label + ' ' + importV + '€\n' +
+              (missatge ? GIFT_TXT.email_message_label + ' ' + missatge + '\n\n' : '\n') +
+              GIFT_TXT.email_redeem + '\n' +
+              GIFT_TXT.email_validity + '\n\n' +
+              GIFT_TXT.email_signoff
             );
 
             var valReg = new FormData();

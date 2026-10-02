@@ -69,6 +69,16 @@
     </div>
   </div>
 
+  {{/* Ressenya Google — només web, no s'imprimeix */}}
+  {{ with .Site.Params.googleReviewURL }}
+  <div class="doc-review no-print">
+    <div class="container container--narrow">
+      <p>{{ i18n "doc_review_text" }}</p>
+      <a class="btn btn--outline" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "google_review" }} ★</a>
+    </div>
+  </div>
+  {{ end }}
+
 </div>
 
 {{/* Peu de pàgina per al PDF (ocult al web, visible amb @media print) */}}
@@ -85,6 +95,7 @@
   var elCertName = document.getElementById('js-cert-name');
   var elCertDate = document.getElementById('js-cert-date');
   var elFooter   = document.getElementById('js-doc-print-footer');
+  var reviewURL  = {{ .Site.Params.googleReviewURL | default "" | jsonify | safeJS }};
 
   if (!nom) {
     elNoAccess.removeAttribute('hidden');
@@ -106,7 +117,9 @@
   }
 
   if (elFooter) {
-    elFooter.textContent = '© Llumàtics · ' + nom + ' · {{ i18n "doc_footer_copyright" }}';
+    var footerText = '© Llumàtics · ' + nom + ' · {{ i18n "doc_footer_copyright" }}';
+    if (reviewURL) footerText += ' · {{ i18n "doc_review_short" }} ' + reviewURL;
+    elFooter.textContent = footerText;
   }
 })();
 </script>
