@@ -60,6 +60,9 @@ Options -Indexes
   # Hugo genera un stub meta-refresh a /ca/ perquè defaultContentLanguageInSubdir
   # és false. Un 301 real és més net per a cercadors i usuaris.
   RewriteRule ^ca/?$ https://llumatics.com/ [R=301,L]
+  # Excepció: el sitemap de CA viu a /ca/sitemap.xml i el sitemap-index
+  # l'hi referencia. Sense aquesta condició, el redireccionàvem a si mateix.
+  RewriteCond %{REQUEST_URI} !^/ca/sitemap\.xml$
   RewriteRule ^ca/(.*)$ https://llumatics.com/$1 [R=301,L]
 
   # --- Paginació: els àlies /page/1/ són duplicats de la pàgina 1 ---------
