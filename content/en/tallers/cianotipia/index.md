@@ -85,7 +85,7 @@ In this workshop we prepare the solution, coat the paper, expose it with sunligh
 <details class="faq-item">
 <summary class="faq-question">Do I need a darkroom or a camera for cyanotype? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>No. Cyanotype is made with sunlight and sensitised paper: no darkroom and no camera needed. You can work with negatives printed on acetate or with photograms of objects.</p>
+<p>Having them is recommended, but not essential. Cyanotype is made with sunlight and sensitised paper, and in the course we teach you how to work without a camera or darkroom: with negatives printed on acetate or with photograms of objects.</p>
 </div>
 </details>
 

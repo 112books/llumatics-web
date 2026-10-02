@@ -85,7 +85,7 @@ En este taller preparamos la solución, emulsionamos el papel, exponemos con luz
 <details class="faq-item">
 <summary class="faq-question">¿Hace falta laboratorio o cámara para hacer cianotipia? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>No. La cianotipia se hace con el sol y papel sensibilizado: no hace falta cuarto oscuro ni cámara. Puedes trabajar con negativos impresos en acetato o con fotogramas de objetos.</p>
+<p>Es recomendable tenerlos, pero no son imprescindibles. La cianotipia se hace con el sol y papel sensibilizado, y en el curso te enseñamos a trabajar sin cámara ni cuarto oscuro: con negativos impresos en acetato o con fotogramas de objetos.</p>
 </div>
 </details>
 

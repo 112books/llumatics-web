@@ -86,7 +86,7 @@ En aquest taller preparem la solució, emulsionem el paper, exposem amb llum sol
 <details class="faq-item">
 <summary class="faq-question">Cal laboratori o càmera per fer cianotípia? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>No. La cianotípia es fa amb el sol i paper sensibilitzat: no cal cambra fosca ni càmera. Pots treballar amb negatius impresos en acetat o amb fotogrames d'objectes.</p>
+<p>És recomanable tenir-ne, però no és imprescindible. La cianotípia es fa amb el sol i paper sensibilitzat, i al curs t'ensenyem com treballar sense càmera ni cambra fosca: amb negatius impresos en acetat o amb fotogrames d'objectes.</p>
 </div>
 </details>
 
