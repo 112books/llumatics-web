@@ -1,0 +1,5 @@
+Contact: mailto:hola@llumatics.com
+Expires: 2027-12-31T00:00:00.000Z
+Preferred-Languages: ca, es, en
+Canonical: https://llumatics.com/.well-known/security.txt
+Policy: https://llumatics.com/privacitat/
