@@ -80,3 +80,26 @@ No prior experience needed. It's a great entry point for anyone who wants to und
 
 - Additional 35mm B&W rolls (+€12/roll)
 - Extra paper for additional prints (+€2/sheet RC, +€4/sheet fibre)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Can I develop and print in a single day? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. It is an 8-hour workshop: first you develop the roll and then you make paper prints at the enlarger. You leave with the negative and the prints.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience for Development + Printing? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. It is suitable for beginners. If you prefer to go step by step, you can take B&W Development first and then Introduction to darkroom printing.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What does the price include? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>It includes the rolls, the chemicals and the practice paper. Additional rolls (+€12/roll) and extra paper (+€2/sheet RC, +€4/sheet fibre) cost extra.</p>
+</div>
+</details>

@@ -81,3 +81,26 @@ This isn't an academic chemistry workshop. It's a very practical workshop where 
 ## Not included
 
 - Reagents for highly specific personalised formulas (enquire in advance)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Which developers are made in the workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>DIY formulas such as Caffenol, Wineol and Guinneol, and others based on kitchen products and basic chemistry. We work on the formula, the proportions and the result on the negative.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes, it is an advanced workshop: you need to have developed film before. If you never have, start with B&W film development.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is it dangerous to work with homemade chemicals? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We use low-hazard products (coffee, vitamin C, sodium carbonate) and the basic darkroom protections. It is one of the safest parts of the process.</p>
+</div>
+</details>

@@ -82,3 +82,26 @@ No és un taller de química acadèmica. És un taller molt pràctic on l'object
 ## No inclòs
 
 - Reactius per a fòrmules personalitzades molt específiques (consultar prèviament)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Quins reveladors es fan al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Fòrmules artesanals com el Caffenol, el Wineol o el Guinneol, i d'altres a base de productes de cuina i química bàsica. Treballem la fórmula, les proporcions i el resultat sobre el negatiu.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, és un taller avançat: cal haver revelat abans. Si no has revelat mai, comença pel Revelat de pel·lícula B/N.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">És perillós treballar amb químics casolans? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Es fan servir productes de baixa perillositat (cafè, vitamina C, carbonat de sodi) i les proteccions bàsiques del laboratori. És una de les parts més segures del procés.</p>
+</div>
+</details>

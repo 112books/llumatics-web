@@ -74,3 +74,26 @@ In this workshop we work on exactly that: the relationship between aperture, shu
 ## Not included
 
 - Development of the exposed roll — available in the [B&W Development workshop](/en/tallers/revelat-bn/) or as a one-to-one session.
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need an analogue camera for the workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>You don't need one, but bringing yours is recommended. If you don't have one, we can lend you one for the session. The exposed roll can be developed afterwards in the B&W Development workshop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What will I learn in the beginners' workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The fundamentals of photography: the camera, the exposure triangle (aperture, shutter speed and ISO), composition and ways of seeing. It is the starting point of the whole programme.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn analogue photography in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, 08027), in groups of up to 4 students. The workshop lasts 4 hours and starts at €220 for one student.</p>
+</div>
+</details>

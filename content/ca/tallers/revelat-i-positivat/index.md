@@ -81,3 +81,26 @@ No cal experiència prèvia. És un bon punt d'entrada per a qui vol entendre el
 
 - Carretes addicionals de 35mm B/N (+12€/unitat)
 - Paper extra per a còpies addicionals (+2€/full RC, +4€/full fibra)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Es pot revelar i positivar en un sol dia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. És un taller de 8 hores: primer es revela el rodet i després es fan còpies en paper a l'ampliadora. Surts amb el negatiu i les còpies.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia per fer Revelat + Positivado? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. És apte per a iniciació. Si prefereixes anar pas a pas, pots fer primer el Revelat B/N i després la Introducció al positivado.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què inclou el preu? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Inclou els carretes, els químics i el paper de pràctica. Els carretes addicionals (+12 €/carret) i el paper extra (+2 €/full RC, +4 €/full fibra) van a part.</p>
+</div>
+</details>

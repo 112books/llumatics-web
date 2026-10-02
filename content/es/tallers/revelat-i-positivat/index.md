@@ -80,3 +80,26 @@ No hace falta experiencia previa. Es un buen punto de entrada para quien quiere 
 
 - Carretes adicionales de 35mm B/N (+12€/unidad)
 - Papel extra para copias adicionales (+2€/hoja RC, +4€/hoja fibra)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Se puede revelar y positivado en un solo día? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Es un taller de 8 horas: primero se revela el carrete y después se hacen copias en papel en la ampliadora. Sales con el negativo y las copias.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa para Revelado + Positivado? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Es apto para iniciación. Si prefieres ir paso a paso, puedes hacer primero el Revelado B/N y después la Introducción al positivado.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué incluye el precio? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Incluye los carretes, los químicos y el papel de práctica. Los carretes adicionales (+12 €/carrete) y el papel extra (+2 €/hoja RC, +4 €/hoja fibra) van aparte.</p>
+</div>
+</details>

@@ -72,3 +72,26 @@ En aquest taller treballem exactament això: la relació entre el diafragma, la 
 ## No inclòs
 
 - Revelat del carret exposat — disponible al [Taller de Revelat B/N](/tallers/revelat-bn/) o com a tutoria.
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir càmera analògica per fer el taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No cal, però és recomanable portar la teva. Si no en tens, te'n podem deixar una per a la sessió. El revelat del carret exposat es pot fer després al Taller de Revelat B/N.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què aprendré al taller d'iniciació? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Els fonaments de la fotografia: la càmera, el triangle de l'exposició (diafragma, velocitat i ISO), la composició i la mirada. És el punt de partida de tota la formació.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre fotografia analògica a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, 08027), en grups de màxim 4 alumnes. El taller dura 4 hores i parteix de 220 € per a un alumne.</p>
+</div>
+</details>

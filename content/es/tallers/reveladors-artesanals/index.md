@@ -81,3 +81,26 @@ No es un taller de química académica. Es un taller muy práctico donde el obje
 ## No incluido
 
 - Reactivos para fórmulas personalizadas muy específicas (consultar previamente)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué reveladores se hacen en el taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Fórmulas artesanales como el Caffenol, el Wineol o el Guinneol, y otras a base de productos de cocina y química básica. Trabajamos la fórmula, las proporciones y el resultado sobre el negativo.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, es un taller avanzado: hace falta haber revelado antes. Si nunca has revelado, empieza por el Revelado de película B/N.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Es peligroso trabajar con químicos caseros? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Se usan productos de baja peligrosidad (café, vitamina C, carbonato de sodio) y las protecciones básicas del laboratorio. Es una de las partes más seguras del proceso.</p>
+</div>
+</details>
