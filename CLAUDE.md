@@ -404,7 +404,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **HSTS** — capçalera `Strict-Transport-Security: max-age=31536000` afegida a `static/.htaccess` (quick win del scan de seguretat; verificada en producció).
 - **Auditoria per categories (scan Vibe, tarda)** — imatges 113,9 MB → 36,6 MB; CSP + Permissions-Policy + COOP/CORP + X-Permitted; Google Fonts i Chart.js autoallotjats; `theme-color` i preload LCP; 9 meta descriptions escurçades. Detall a `MEMORY.md`.
 - **Ronda 2 (width/height + SEO)** — `data/image_dimensions.yaml` + width/height a totes les imatges (100% a pàgines públiques); sufix del títol només si ≤60 caràcters; 0 enllaços interns trencats (6 `/privat/` arreglats amb `sense_doc`).
-- **Ronda 3 (social/security/LCP)** — `og:image:width/height` reals, `/.well-known/security.txt` i `fetchpriority=high` a les imatges principals.
+- **Ronda 3 (social/security/LCP/favicon)** — `og:image:width/height` reals, `/.well-known/security.txt`, `fetchpriority=high` a les imatges principals i favicons reals (`favicon.ico` + PNG 16/32 + `apple-touch-icon` 180).
 - Build Hugo correcte (CA 498 / ES 403 / EN 409 pàgines).
 
 ### 2026-10-02
