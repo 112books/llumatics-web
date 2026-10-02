@@ -3887,6 +3887,7 @@ a.recorregut-stop__name:hover {
   outline: none;
 }
 .search-input::placeholder { color: var(--color-text-muted); }
+.search-input:focus-visible { outline: 2px solid var(--color-accent-dark); outline-offset: 2px; }
 
 .search-close {
   position: absolute;
@@ -3928,10 +3929,11 @@ a.recorregut-stop__name:hover {
   color: inherit;
   transition: background 0.1s;
 }
-.search-result a:hover,
-.search-result a:focus {
+.search-result a:hover { background: var(--color-border); }
+.search-result a:focus-visible {
   background: var(--color-border);
-  outline: none;
+  outline: 2px solid var(--color-accent-dark);
+  outline-offset: -2px;
 }
 
 .search-result__title {

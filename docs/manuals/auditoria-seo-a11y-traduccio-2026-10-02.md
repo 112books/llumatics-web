@@ -38,6 +38,18 @@ corregit i què queda pendent.
 - **Strings d'interfície hardcoded:** «des de», «Tots», «Filtrar per àmbit», «Màxim N persones»,
   «Inscripció →» i el text del 404 ara passen per i18n. Claus noves CA/ES/EN.
 
+### Segona tanda
+- **llms.txt:** un sol H1, resum citable, enllaços en format Markdown, i fets corregits
+  (tres idiomes i agenda amb dates).
+- **WebSite** JSON-LD global i **Product/AggregateOffer** a /regala/.
+- **Galeria i portada del blog:** convertides a button amb aria-label i data-gallery (teclat).
+- **Errors de formulari:** role=alert al val-regal i error inline (sense alert()) al contacte.
+- **Event.location:** ara inclou l'adreça postal (Nau Bostik, 08027).
+- **og:image:width/height** fixos: eliminats.
+- **Agenda:** els items passen de h3 a h2 (sense salt de jerarquia).
+- **Cerca:** tret el role=listbox incorrecte.
+- **Fitxa pedagògica:** dt/dd dins de dl; scope=col a la taula de preus.
+
 ### Eines noves al panell
 - /admin/subscriptors.php — comptador de subscriptors de Brevo (butlletí, waitlist, total).
 - /admin/impacte.php — impacte del cupó regal, del recomanador i dels cursos nous/flash.

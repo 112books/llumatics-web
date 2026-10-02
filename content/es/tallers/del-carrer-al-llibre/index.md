@@ -34,8 +34,8 @@ preu_2: 140
 preu_3: 105
 preu_4: 88
 durada_hores: 4.5
-# preu_1..preu_4 són preus per sessió, no del curs. Aquestes són les
-# opcions que es venen realment, i les que ha de llegir el schema.
+# preu_1..preu_4 son precios por sesión, no del curso. Estas son las
+# opciones que se venden realmente, y las que debe leer el schema.
 preus_curs:
   - format: "Curso anual"
     durada: "12 sesiones"

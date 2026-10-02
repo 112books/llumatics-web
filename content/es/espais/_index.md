@@ -1,5 +1,5 @@
 ---
-title: "Los espacios"
+title: "Nuestros espacios"
 subtitle: "Cuarto oscuro, plató y biblioteca. En la Nau Bostik, Barcelona."
 description: "Las instalaciones de Llumàtics en la Nau Bostik: cuarto oscuro con ampliadoras de gran formato, plató fotográfico y biblioteca especializada. Visitas con cita previa."
 eyebrow: "Instalaciones"

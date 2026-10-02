@@ -1,5 +1,5 @@
 ---
-title: "The spaces"
+title: "Our spaces"
 subtitle: "Darkroom, studio and library. At Nau Bostik, Barcelona."
 description: "Llumàtics facilities at Nau Bostik: darkroom with large-format enlargers, photography studio and specialist library. Visits by appointment only."
 eyebrow: "Facilities"

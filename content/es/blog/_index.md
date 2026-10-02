@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Blog de fotografía analógica"
 description: "Reflexiones sobre fotografía, técnica, narrativa visual y ética de la imagen."
 eyebrow: "Reflexiones"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Els espais"
+title: "Els nostres espais"
 subtitle: "Laboratori fosc, plató i biblioteca. A la Nau Bostik, Barcelona."
 description: "Les instal·lacions de Llumàtics a la Nau Bostik: laboratori fosc amb ampliadores de gran format, plató fotogràfic i biblioteca especialitzada. Visites amb cita prèvia."
 eyebrow: "Instal·lacions"

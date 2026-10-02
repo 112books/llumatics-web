@@ -94,7 +94,7 @@
 
 {{/* ── Open Graph + Twitter Card ───────────────────────────────── */}}
 {{- $ogImage := .Params.image | default site.Params.defaultOgImage | default "/images/tallers/revelat-bn.jpg" -}}
-{{- $ogAlt := cond .IsHome (site.Params.ogImageAlt | default $title) $title -}}
+{{- $ogAlt := $title -}}
 <meta property="og:title" content="{{ $metaTitle }}">
 <meta property="og:description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
