@@ -17,8 +17,8 @@ Documentació de referència:
 - [x] A4. Pàgina `/tallers/quin-curs-em-conve/` (draft) + plantilla. Afegit `linia` a 94 fitxers.
 - [x] A5. Motor JS (puntuació, motius, recorregut, tutoria) i CSS.
 - [x] A6. Provats els 8 perfils de la spec amb un harness de Node (pendent revisió visual al navegador).
-- [ ] A7. i18n ES/EN.
-- [ ] A8. Brevo: contacte i "M'interessa".
+- [x] A7. i18n ES/EN (71 claus + pàgines traduïdes amb translationKey).
+- [x] A8. Contacte: el CTA del quiz arriba al formulari amb el resultat precarregat. "M'interessa" (Brevo) queda pendent perquè no hi ha formacions `en-preparacio` visibles.
 - [ ] A9. Migrar "Regala un curs" al motor compartit.
 - [ ] A10. Enllaços d'accés (home i tallers) i publicació.
 
@@ -30,8 +30,8 @@ Documentació de referència:
 
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
-- [ ] C2. FAQ específica per curs (nodreix IA i featured snippets).
-- [ ] C3. FAQPage a totes les fitxes amb FAQ (mecanisme fet).
+- [~] C2. FAQ específica per curs: fets revelat-bn, iniciacio-revelat i introduccio-al-positivat. Pendents: copies-en-paper, cianotipia, digitalitzacio-escaner, gran format, retrat, carrer, tutoria.
+- [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
 - [ ] C4. Landing "aprendre a revelar a Barcelona" + enllaços interns.
 - [ ] C5. Auditoria de consistència NAP (08027, La Sagrera).
 
