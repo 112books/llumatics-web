@@ -36,9 +36,9 @@ Documentació de referència:
 - [x] C5. Auditoria NAP (`docs/recomanador/auditoria-nap.md`): intern consistent; pendent extern el Google Business Profile.
 
 ## Bloc D — Pendents generals
-- [ ] D1. Auditoria d'`alt`.
+- [x] D1. Auditoria d'`alt`: cap `img` sense atribut `alt`; els buits (decoratius) són intencionats.
 - [ ] D2. Títols curts (<25 caràcters).
-- [ ] D3. Accessibilitat de l'accent (#0096D2 vs #00719E).
+- [x] D3. Accessibilitat de l'accent: tot el text d'accent passa a `--color-accent-dark` (#00719E); el ceruli clar queda per a fons/botons/icones.
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
 
 ## Bloc E — Contingut i imatges
