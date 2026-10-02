@@ -6,6 +6,8 @@ description: "Taller de retrato analógico con cámara Holga 120 en Barcelona. T
 image: "/images/tallers/retrat-amb-holga.jpg"
 
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["practica", "mig-format"]
 nivell: "Iniciació"

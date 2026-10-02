@@ -7,6 +7,8 @@ image: "/images/tallers/revelat-bn.jpg"
 
 # Clasificación
 tipus: "taller"
+nivell_minim: 2
+format: "taller"
 canal: "llumatics"
 blocs: ["proces"]
 nivell: "Intermedi"

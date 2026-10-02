@@ -7,6 +7,8 @@ image: "/images/tallers/revelat-positiva-1dia.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["proces"]
 weight: 20

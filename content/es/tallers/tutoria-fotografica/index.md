@@ -7,6 +7,8 @@ image: "/images/tallers/tutoria-fotografica.jpg"
 
 # Clasificación
 tipus: "taller"
+nivell_minim: 0
+format: "tutoria"
 canal: "llumatics"
 blocs: ["practica"]
 nivell: "Tots els nivells"

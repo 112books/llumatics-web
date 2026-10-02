@@ -7,6 +7,8 @@ image: "/images/tallers/taller-fotolibre.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["practica"]
 weight: 90

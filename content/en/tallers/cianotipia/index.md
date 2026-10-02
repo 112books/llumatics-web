@@ -11,6 +11,8 @@ images:
 
 # Classification
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["processos-alternatius"]
 nivell: "Iniciació"

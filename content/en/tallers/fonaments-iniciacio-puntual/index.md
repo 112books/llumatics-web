@@ -7,6 +7,8 @@ image: "/images/tallers/fonaments-iniciacio-puntual.jpg"
 
 # Classification
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["fonaments"]
 weight: 10

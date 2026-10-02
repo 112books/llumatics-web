@@ -13,6 +13,8 @@ images:
 
 # Classification
 tipus: "taller"
+nivell_minim: 3
+format: "taller"
 canal: "llumatics"
 blocs: ["proces"]
 nivell: "Avançat"

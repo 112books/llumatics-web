@@ -14,6 +14,8 @@ images:
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "curs"
 canal: "llumatics"
 blocs: ["practica"]
 weight: 92

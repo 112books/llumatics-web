@@ -7,6 +7,8 @@ image: "/images/tallers/hasselblad-500.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 2
+format: "taller"
 canal: "llumatics"
 blocs: ["mig-format", "practica"]
 weight: 10

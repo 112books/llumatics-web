@@ -28,6 +28,7 @@ images:
 
 # Clasificación
 tipus: "taller"
+nivell_minim: 0
 format: "flash"
 canal: "llumatics"
 blocs: ["mig-format"]

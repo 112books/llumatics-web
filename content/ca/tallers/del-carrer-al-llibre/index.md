@@ -18,6 +18,8 @@ images:
 
 # Classificació
 tipus: "curs"
+nivell_minim: 2
+format: "curs"
 canal: "llumatics"
 blocs: ["practica"]
 weight: 25

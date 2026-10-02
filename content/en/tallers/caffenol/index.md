@@ -7,6 +7,8 @@ image: "/images/docs/caffenol/caffenol-01.jpeg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["proces", "processos-alternatius"]
 weight: 65

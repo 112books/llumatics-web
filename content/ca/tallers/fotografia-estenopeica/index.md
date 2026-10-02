@@ -18,6 +18,8 @@ images:
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["fonaments", "processos-alternatius"]
 weight: 40

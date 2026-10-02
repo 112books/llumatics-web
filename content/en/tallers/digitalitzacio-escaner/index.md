@@ -7,6 +7,8 @@ image: "/images/tallers/digitalitzacio-escaner.jpg"
 
 # Classification
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["fonaments", "proces"]
 weight: 20

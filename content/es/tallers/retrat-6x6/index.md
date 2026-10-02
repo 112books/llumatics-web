@@ -7,6 +7,8 @@ image: "/images/tallers/retrat-analogic-6x6.jpg"
 
 # Clasificación
 tipus: "taller"
+nivell_minim: 2
+format: "taller"
 canal: "llumatics"
 blocs: ["mig-format", "practica"]
 nivell: "Intermedi"

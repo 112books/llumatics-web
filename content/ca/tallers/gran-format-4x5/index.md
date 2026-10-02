@@ -7,6 +7,8 @@ image: "/images/tallers/gran-format-4x5.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 3
+format: "taller"
 canal: "llumatics"
 blocs: ["gran-format"]
 weight: 20

@@ -6,6 +6,8 @@ description: "Analogue portrait workshop with Holga 120 camera in Barcelona. Por
 image: "/images/tallers/retrat-amb-holga.jpg"
 
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["practica", "mig-format"]
 nivell: "Iniciació"

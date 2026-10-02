@@ -13,6 +13,8 @@ images:
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "externs"
 blocs: ["proces", "fonaments"]
 weight: 90

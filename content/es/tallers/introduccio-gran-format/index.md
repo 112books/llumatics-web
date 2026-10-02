@@ -11,6 +11,8 @@ images:
 
 # Clasificación
 tipus: "taller"
+nivell_minim: 2
+format: "taller"
 canal: "llumatics"
 blocs: ["gran-format"]
 nivell: "Intermedi"

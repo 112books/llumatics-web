@@ -7,6 +7,8 @@ image: "/images/tallers/retrat-analogic.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 2
+format: "taller"
 canal: "llumatics"
 blocs: ["practica"]
 weight: 10

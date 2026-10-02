@@ -13,6 +13,8 @@ images:
 
 # Classification
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "externs"
 blocs: ["proces", "fonaments"]
 nivell: "Iniciació"

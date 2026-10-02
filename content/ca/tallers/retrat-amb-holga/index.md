@@ -7,6 +7,8 @@ image: "/images/tallers/retrat-amb-holga.jpg"
 
 # Classificació
 tipus: "taller"
+nivell_minim: 0
+format: "taller"
 canal: "llumatics"
 blocs: ["practica", "mig-format"]
 weight: 30
