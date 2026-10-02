@@ -84,8 +84,8 @@
   --color-bg-alt:      #F2F0EC;
   --color-text:        #1A1A18;
   --color-text-muted:  #6B6B65;
-  --color-accent:      #C8A96E;   /* daurat càlid — la llum */
-  --color-accent-dark: #A8893E;
+  --color-accent:      #1B4F72;   /* blau de Prússia — la cianotipia */
+  --color-accent-dark: #123A54;
   --color-border:      #E0DED8;
   --color-surface:     #FFFFFF;
   --color-error:       #C0392B;
@@ -1419,7 +1419,7 @@ button, input, select, textarea {
   max-width: 440px;
   background: #FDFBF7;
   padding: var(--space-12) var(--space-10);
-  border: 1px solid #C8A96E;
+  border: 1px solid var(--color-accent);
   position: relative;
 }
 
@@ -1427,7 +1427,7 @@ button, input, select, textarea {
   content: '';
   position: absolute;
   inset: 5px;
-  border: 0.5px solid #D4B896;
+  border: 0.5px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
   pointer-events: none;
 }
 
@@ -1455,7 +1455,7 @@ button, input, select, textarea {
 .certificate__rule {
   width: 36px;
   height: 1px;
-  background: #C8A96E;
+  background: var(--color-accent);
   margin: 0 auto var(--space-6);
 }
 
@@ -1463,7 +1463,7 @@ button, input, select, textarea {
   font-size: var(--text-xs);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #C8A96E;
+  color: var(--color-accent);
   margin-bottom: var(--space-8);
 }
 
@@ -2798,7 +2798,7 @@ a.recorregut-stop__name:hover {
 
 .contact-anchor__link:hover {
   background: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-surface);
   border-color: var(--color-accent);
 }
 
