@@ -31,6 +31,12 @@ ErrorDocument 404 /404.html
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # HSTS — el navegador força HTTPS durant 1 any. Sense includeSubDomains
+  # ni preload (decisió conservadora: no bloquegem cap subdomini futur).
+  # Dinahosting ja serveix sempre per HTTPS; el navegador només aplica HSTS
+  # si rep la capçalera per HTTPS, així que no pot crear cap bucle.
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
 # Evitar llistat de directoris
