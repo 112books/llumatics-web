@@ -2,7 +2,7 @@
 title: "Còpies amb el teu propi revelador — Beers Developer"
 subtitle: "Prepara la fórmula, controla el contrast, fes la còpia."
 lead: "Preparem el revelador Beers des de zero, l'usem a l'ampliadora i comparem les còpies resultants a diferents graus de contrast. Del component químic a la còpia acabada, sense intermediaris."
-description: "Taller avançat d'ampliadora amb revelador artesanal Beers Developer. Preparació de la fórmula A/B, control de contrast per dilució i còpies en paper. Llumàtics, Barcelona."
+description: "Taller avançat d'ampliadora amb revelador artesanal Beers Developer: fórmula A/B, control de contrast per dilució i còpies en paper. Llumàtics, Barcelona."
 image: "/images/tallers/copies-beers-developer.jpg"
 images:
   - "/images/tallers/copies-beers-developer-1.jpg"

@@ -2,7 +2,7 @@
 title: "Introduction to film development"
 subtitle: "Load the roll, go out and shoot, develop it yourself."
 lead: "The complete photographic process in three hours: we load a roll, head out to the neighbourhood to shoot it, come back and develop it. No experience needed. At Cameras & Films."
-description: "Introduction to analogue film development at Cameras & Films, Barcelona. Load a roll, go out shooting and develop B&W film. 3 hours, no prior experience needed."
+description: "Introduction to analogue film development at Cameras & Films, Barcelona. Load a roll, shoot and develop B&W film. 3 hours, no experience needed."
 image: "/images/tallers/iniciacio-revelat.jpg"
 images:
   - "/images/tallers/iniciacio-revelat-1.jpg"

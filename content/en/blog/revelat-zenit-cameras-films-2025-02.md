@@ -1,7 +1,7 @@
 ---
 title: "A day of analogue development: rain, Zenit cameras and a real passion for photography"
 lead: "Rain in the Born, Zenits with Helios lenses, Fomapan 100 pushed to 800 and 90 minutes of development. A report from the introduction to development workshop at Cameras & Films."
-description: "Report from the introduction to B&W development workshop of 2 February 2025 at Cameras & Films (Barcelona). Zenit, Fomapan 100, the streets of the Born and the lab in a single day."
+description: "Report from the B&W development workshop of 2 February 2025 at Cameras & Films (Barcelona): Zenit, Fomapan 100, the Born and the lab in a day."
 date: 2025-02-07
 tags: ["development", "workshop", "Cameras & Films", "zenit", "fomapan", "born", "street"]
 course_ref: "iniciacio-revelat"

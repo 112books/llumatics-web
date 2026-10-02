@@ -2,7 +2,7 @@
 title: "Caffenol: develop with coffee"
 subtitle: "A developer made from instant coffee, washing soda and vitamin C."
 lead: "Three ingredients from the pharmacy and supermarket, dissolved in distilled water. The result is clean, consistent — and if you scan the negatives in colour, unexpected warm tones appear."
-description: "Alternative analogue development workshop with Caffenol. Llumàtics formula, full step-by-step process, colour scanning and characteristic warm tones. Llumàtics, Barcelona."
+description: "Alternative analogue development workshop with Caffenol: Llumàtics formula, step-by-step process, colour scanning and warm tones. Llumàtics, Barcelona."
 image: "/images/docs/caffenol/caffenol-01.jpeg"
 
 # Classificació
