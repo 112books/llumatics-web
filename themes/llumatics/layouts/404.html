@@ -154,7 +154,7 @@
 
     <div class="e404__code" aria-hidden="true">404</div>
 
-    <p class="e404__eyebrow">Error 404 · Vel·lada total</p>
+    <p class="e404__eyebrow">{{ i18n "err_404_eyebrow" | default "Error 404 · Vel·lada total" }}</p>
 
     <h1 class="e404__title">{{ i18n "err_404_title" }}</h1>
 
@@ -166,7 +166,7 @@
 
     <div class="e404__actions">
       <a href="{{ "/" | absURL }}" class="e404__btn e404__btn--primary">{{ i18n "err_404_cta" }}</a>
-      <a href="#" class="e404__btn e404__btn--ghost" onclick="document.querySelector('.search-toggle')?.click(); return false;">Cercar</a>
+      <a href="#" class="e404__btn e404__btn--ghost" onclick="document.querySelector('.search-toggle')?.click(); return false;">{{ i18n "search_label" | default "Cercar" }}</a>
     </div>
 
   </div>
@@ -176,9 +176,10 @@
 <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" hidden>
   <div class="search-box">
     <input id="search-input" class="search-input" type="search"
-           placeholder="Cerca tallers i entrades…"
+           aria-label="{{ i18n "search_label" | default "Cercar" }}"
+           placeholder="{{ i18n "search_placeholder" | default "Cerca tallers i entrades…" }}"
            autocomplete="off" spellcheck="false">
-    <button class="search-close" aria-label="Tancar cerca">&#215;</button>
+    <button class="search-close" aria-label="{{ i18n "search_close" | default "Tancar cerca" }}">&#215;</button>
     <ul id="search-results" class="search-results" role="listbox" aria-live="polite"></ul>
   </div>
 </div>

@@ -4,7 +4,7 @@
 <article class="section container">
 
   {{/* Breadcrumb */}}
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" | default "Breadcrumb" }}">
     <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
     {{ with .Parent }}

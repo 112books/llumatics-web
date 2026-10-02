@@ -16,7 +16,7 @@
   </header>
 
   {{/* ── Navegació d'ancores ─────────────────────────────────────────────── */}}
-  <nav class="contact-anchors" aria-label="Seccions de la pàgina">
+  <nav class="contact-anchors" aria-label="{{ i18n "contact_anchors_label" | default "Seccions de la pàgina" }}">
     <a class="contact-anchor__link" href="#dades">{{ i18n "contact_anchor_details" | default "Contacte" }}</a>
     <a class="contact-anchor__link" href="#formulari">{{ i18n "contact_anchor_form" | default "Escriu-nos" }}</a>
     <a class="contact-anchor__link" href="#com-arribar-hi">{{ i18n "contact_anchor_map" | default "Com arribar-hi" }}</a>
@@ -76,7 +76,7 @@
               {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
               {{ range sort $tallers ".Title" "asc" }}
                 {{ if not .Params.extern }}
-                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — des de {{ .Params.preu_1 }}€{{ end }}</option>
+                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — {{ i18n "price_from" | default "des de" }} {{ .Params.preu_1 }}€{{ end }}</option>
                 {{ end }}
               {{ end }}
             </select>

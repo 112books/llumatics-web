@@ -5,6 +5,7 @@
   {{ block "head-extra" . }}{{ end }}
 </head>
 <body>
+  <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" | default "Salta al contingut" }}</a>
   {{ partial "header.html" . }}
 
   <main id="main-content"{{ if and (ne .Kind "home") (ne .Type "tallers") }} class="page-main--offset"{{ end }}>
@@ -29,6 +30,7 @@
   <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="{{ i18n "search_label" | default "Cercar" }}" hidden>
     <div class="search-box">
       <input id="search-input" class="search-input" type="search"
+             aria-label="{{ i18n "search_label" | default "Cercar" }}"
              placeholder="{{ i18n "search_placeholder" | default "Cerca tallers i entrades…" }}"
              autocomplete="off" spellcheck="false">
       <button class="search-close" aria-label="{{ i18n "search_close" | default "Tancar cerca" }}">&#215;</button>

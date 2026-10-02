@@ -469,3 +469,16 @@ quiz_cta_text: "Answer three questions and we'll suggest the workshop or learnin
 footer_choose_heading: "Choose a course"
 footer_quiz_link: "Select a course"
 footer_path_link: "The ideal journey"
+
+# ── Correccions d'auditoria (2026-10-02) ───────────────────────────────
+price_from: "from"
+filter_all: "All"
+filter_by_area: "Filter by area"
+agenda_max_places: "Up to %s people"
+nav_main_label: "Main navigation"
+menu_open_label: "Open menu"
+lightbox_enlarge: "View larger image"
+contact_anchors_label: "Page sections"
+breadcrumb_label: "Breadcrumb"
+err_404_eyebrow: "Error 404 · Total blackout"
+skip_to_content: "Skip to content"

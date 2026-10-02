@@ -1,0 +1,20 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{ range .Data.Pages }}
+    {{- $skip := false -}}
+    {{- if .Sitemap.Disable }}{{ $skip = true }}{{ end -}}
+    {{- if .Params.noindex }}{{ $skip = true }}{{ end -}}
+    {{- if eq .Params.robots "noindex, nofollow" }}{{ $skip = true }}{{ end -}}
+    {{- if and (eq .Section "agenda") (eq .Params.status "past") }}{{ $skip = true }}{{ end -}}
+    {{- if and (eq .Kind "term") (lt (len .Pages) 2) }}{{ $skip = true }}{{ end -}}
+    {{- if not $skip }}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML (.Lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}{{ range .AllTranslations }}
+    <xhtml:link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />{{ end }}{{ end }}
+  </url>
+    {{- end }}
+  {{ end }}
+</urlset>

@@ -26,9 +26,9 @@
   {{/* Navegació per blocs — filtre visual */}}
   {{ $blocs := hugo.Data.blocs }}
   {{ if $blocs }}
-  <nav class="blocs-nav" aria-label="Filtrar per àmbit">
+  <nav class="blocs-nav" aria-label="{{ i18n "filter_by_area" | default "Filtrar per àmbit" }}">
     <a href="#tots" class="bloc-pill bloc-pill--active js-bloc-filter" data-bloc="tots">
-      Tots
+      {{ i18n "filter_all" | default "Tots" }}
     </a>
     {{ range $blocs }}
     {{ $pillNom := .nom }}

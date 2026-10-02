@@ -474,3 +474,16 @@ quiz_cta_text: "Respon tres preguntes i et proposem el taller o el recorregut qu
 footer_choose_heading: "Tria un curs"
 footer_quiz_link: "Selecciona un curs"
 footer_path_link: "El camí ideal"
+
+# ── Correccions d'auditoria (2026-10-02) ───────────────────────────────
+price_from: "des de"
+filter_all: "Tots"
+filter_by_area: "Filtrar per àmbit"
+agenda_max_places: "Màxim %s persones"
+nav_main_label: "Navegació principal"
+menu_open_label: "Obrir menú"
+lightbox_enlarge: "Veure imatge en gran"
+contact_anchors_label: "Seccions de la pàgina"
+breadcrumb_label: "Breadcrumb"
+err_404_eyebrow: "Error 404 · Vel·lada total"
+skip_to_content: "Salta al contingut"

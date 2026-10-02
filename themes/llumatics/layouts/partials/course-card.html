@@ -58,7 +58,7 @@
             <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
           {{ end }}
           {{ if gt (.Params.preu_1 | int) 0 }}
-            des de {{ .Params.preu_4 | default .Params.preu_1 }}€
+            {{ i18n "price_from" | default "des de" }} {{ .Params.preu_4 | default .Params.preu_1 }}€
           {{ else }}
             {{ i18n "price_free" | default "Gratuït" }}
           {{ end }}

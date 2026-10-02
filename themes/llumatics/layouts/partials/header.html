@@ -16,7 +16,7 @@
       </a>
 
       {{/* Nav principal */}}
-      <nav class="site-nav" id="site-nav" aria-label="Navegació principal">
+      <nav class="site-nav" id="site-nav" aria-label="{{ i18n "nav_main_label" | default "Navegació principal" }}">
         {{ range .Site.Menus.main }}
           {{ $isHighlight := .Params.highlight | default false }}
           {{ $cleanPath := strings.TrimPrefix $basePath .URL }}
@@ -61,7 +61,7 @@
         </div>
 
         {{/* Hamburguesa mòbil */}}
-        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Obrir menú">
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="{{ i18n "menu_open_label" | default "Obrir menú" }}">
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>

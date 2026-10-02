@@ -22,7 +22,7 @@ MAKECOM_AGENDA_WEBHOOK="${MAKECOM_INSTAGRAM_AGENDA_WEBHOOK:-}"
 # ── 1. Build Hugo ──────────────────────────────────────────────
 echo "→ Build Hugo (producció)..."
 cd "$REPO_ROOT"
-hugo --minify --baseURL "https://llumatics.com/"
+hugo --minify --cleanDestinationDir --baseURL "https://llumatics.com/"
 
 # ── 2. Deploy via rsync ────────────────────────────────────────
 # Dinahosting no permet ajustar els temps de la carpeta destí, i rsync

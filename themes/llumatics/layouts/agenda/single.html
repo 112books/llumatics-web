@@ -11,7 +11,7 @@
 
   {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
   {{ $lp       := $.Site.LanguagePrefix }}
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" | default "Breadcrumb" }}">
     <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
     <span class="breadcrumb__sep">›</span>
     <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}">{{ i18n "nav_agenda" | default "Agenda" }}</a>
@@ -41,7 +41,7 @@
               <span class="agenda-item__price"><strong>{{ .Params.price }}€</strong></span>
             {{ end }}
           {{ end }}
-          {{ with .Params.max_places }}<span>Màxim {{ . }} persones</span>{{ end }}
+          {{ with .Params.max_places }}<span>{{ printf (i18n "agenda_max_places" | default "Màxim %s persones") . }}</span>{{ end }}
         </div>
       </div>
     </div>

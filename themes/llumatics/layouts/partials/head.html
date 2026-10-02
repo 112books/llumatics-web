@@ -24,6 +24,8 @@
 <meta name="description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 {{ if or .Params.noindex (eq .Params.robots "noindex, nofollow") -}}
 <meta name="robots" content="noindex, nofollow">
+{{- else if and (eq .Section "agenda") (eq .Params.status "past") -}}
+<meta name="robots" content="noindex, follow">
 {{- end }}
 {{- with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
@@ -38,10 +40,15 @@
 {{- $metaTitle := $title -}}
 {{/* Títols de taller molt curts (<20 caràcters): hi afegim el subtítol per SEO. */}}
 {{- if and (eq .Type "tallers") (lt (len $title) 20) .Params.subtitle -}}
-  {{- $metaTitle = printf "%s — %s" $title .Params.subtitle -}}
+  {{- $candidate := printf "%s — %s" $title .Params.subtitle -}}
+  {{- if le (len $candidate) 48 }}{{ $metaTitle = $candidate }}{{ end -}}
+{{- end -}}
+{{/* Agenda: cada sessió comparteix el títol del curs; hi afegim la data per evitar duplicats. */}}
+{{- if and (eq .Section "agenda") .Params.date_start -}}
+  {{- $metaTitle = printf "%s — %s" $title (.Params.date_start | time.Format "02/01/2006") -}}
 {{- end -}}
 {{- if gt $pageNum 0 }}{{ $metaTitle = printf "%s (%s %d)" $title (i18n "pagination_page") $pageNum }}{{ end -}}
-<title>{{ if .IsHome }}{{ $title }}{{ else }}{{ $metaTitle }} — {{ .Site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ $metaTitle }}{{ else }}{{ $metaTitle }} — {{ .Site.Title }}{{ end }}</title>
 
 {{/* Canonical amb self-canonical correcte a la paginació
      (abans /blog/page/2/ declarava el canonical de /blog/). */}}
@@ -125,7 +132,6 @@
 {{/* JSON-LD — EducationalOrganization + LocalBusiness + Person (home).
      Connectats amb @id perquè els tallers, l'agenda i el blog puguin
      referenciar el mateix node en lloc de repetir l'entitat. */}}
-{{ if .IsHome }}
 {{- $sameAs := slice site.Params.instagram "https://about.pocallum.cat" -}}
 {{- with site.Params.googleReviewURL }}{{ $sameAs = $sameAs | append "https://g.page/r/CRWgnPBp1N1uEBM" }}{{ end -}}
 {{- $org := dict
@@ -154,24 +160,7 @@
       "name" "Joan Linux Martínez"
       "jobTitle" "Fotògraf i professor de fotografia analògica"
       "worksFor" (dict `@id` $orgID)
-      "url" "https://llumatics.com/sobre/"
-      "sameAs" (slice "https://about.pocallum.cat" site.Params.instagram)
-      -}}
-{{- $graph := dict `@context` "https://schema.org" `@graph` (slice $org $founder) -}}
-<script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
-{{ end }}
-
-{{/* JSON-LD — Person (pàgina Sobre). Abans només a /sobre/ en català; ara a les
-     tres versions i connectada a l'organització. */}}
-{{ if eq .Type "sobre" }}
-{{- $person := dict
-      `@context` "https://schema.org"
-      `@type` "Person"
-      `@id` $personID
-      "name" "Joan Linux Martínez"
       "birthPlace" "Barcelona"
-      "jobTitle" "Fotògraf i professor de fotografia analògica"
-      "worksFor" (dict `@id` $orgID)
       "knowsAbout" (slice
         "fotografia analògica"
         "revelat de pel·lícula en B/N"
@@ -182,11 +171,11 @@
         "gran format 4x5"
         "reveladors artesanals"
       )
-      "url" .Permalink
+      "url" "https://llumatics.com/sobre/"
       "sameAs" (slice "https://about.pocallum.cat" site.Params.instagram)
       -}}
-<script type="application/ld+json">{{ $person | jsonify (dict "indent" "  ") | safeJS }}</script>
-{{ end }}
+{{- $graph := dict `@context` "https://schema.org" `@graph` (slice $org $founder) -}}
+<script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
 
 {{/* JSON-LD — BlogPosting */}}
 {{ if and (eq .Type "blog") .IsPage }}
@@ -281,12 +270,19 @@
   {{- end -}}
 {{- end -}}
 {{- $duradaTotal := .Params.durada_total_hores | default .Params.durada_hores -}}
+{{- $isoDur := "PT1H" -}}
+{{- with $duradaTotal -}}
+  {{- $d := float . -}}
+  {{- $dh := int (math.Floor $d) -}}
+  {{- $dm := int (math.Round (mul (sub $d $dh) 60)) -}}
+  {{- $isoDur = cond (gt $dm 0) (printf "PT%dH%dM" $dh $dm) (printf "PT%dH" $dh) -}}
+{{- end -}}
 {{- $lloc := .Params.lloc | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
 {{- $coursePlace := merge $napPlace (dict "name" $lloc) -}}
 {{- $instance := dict
       `@type` "CourseInstance"
       "courseMode" "onsite"
-      "courseWorkload" (cond (gt (int ($duradaTotal | default 0)) 0) (printf "PT%vH" $duradaTotal) "PT1H")
+      "courseWorkload" $isoDur
       "location" $coursePlace
       "instructor" (dict `@id` $personID) -}}
 {{- $course := dict
@@ -302,7 +298,7 @@
       "hasCourseInstance" (slice $instance)
       -}}
 {{- with .Params.nivell }}{{ $course = merge $course (dict "educationalLevel" (partial "nivell-label.html" .)) }}{{ end }}
-{{- with $duradaTotal }}{{ $course = merge $course (dict "timeRequired" (printf "PT%vH" .)) }}{{ end }}
+{{- with $duradaTotal }}{{ $course = merge $course (dict "timeRequired" $isoDur) }}{{ end }}
 {{- with .Params.prerequisits }}{{ $course = merge $course (dict "coursePrerequisites" (. | plainify)) }}{{ end }}
 {{- with .Params.objective }}{{ $course = merge $course (dict "about" (dict `@type` "Thing" "name" (. | plainify))) }}{{ end }}
 {{- $audience := .Params.target -}}

@@ -8,7 +8,7 @@
   <button class="gallery__item js-lightbox-trigger"
           data-src="{{ $src }}"
           data-gallery="{{ $id }}"
-          aria-label="Veure imatge en gran">
+          aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
     <img src="{{ $src }}" alt="">
   </button>
   {{ end }}

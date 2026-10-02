@@ -102,6 +102,7 @@
       if (!form) return;
       const isHidden = form.style.display === 'none';
       form.style.display = isHidden ? 'block' : 'none';
+      btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
       if (isHidden) form.querySelector('[type="email"]').focus();
     });
   });

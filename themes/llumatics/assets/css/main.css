@@ -395,7 +395,7 @@ button, input, select, textarea {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-surface);
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   padding: 0.3em 0.9em;
   border-radius: 2px;
   margin-bottom: var(--space-5);
@@ -441,7 +441,7 @@ button, input, select, textarea {
 }
 
 .btn--primary:hover {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
 }
 
@@ -456,13 +456,13 @@ button, input, select, textarea {
 }
 
 .btn--accent {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: var(--color-surface);
   border-color: var(--color-accent-dark);
 }
 
 .btn--accent:hover {
-  background: var(--color-accent-dark);
+  background: color-mix(in srgb, var(--color-accent-dark) 85%, #000);
   border-color: var(--color-accent-dark);
 }
 
@@ -698,7 +698,7 @@ button, input, select, textarea {
 }
 
 .info-box__proxim-badge {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: white;
   font-size: var(--text-xs);
   font-weight: 700;
@@ -4149,7 +4149,7 @@ a.recorregut-stop__name:hover {
 .quiz__step-num { display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; border: 1px solid currentColor; font-size: var(--text-sm); font-weight: 700; }
 .quiz__step-label { font-size: var(--text-sm); }
 .quiz__step.is-current { color: var(--color-accent-dark); font-weight: 600; }
-.quiz__step.is-current .quiz__step-num { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.quiz__step.is-current .quiz__step-num { background: var(--color-accent-dark); border-color: var(--color-accent-dark); color: #fff; }
 .quiz__step.is-done { color: var(--color-accent-dark); }
 .quiz__step.is-done .quiz__step-num { background: color-mix(in srgb, var(--color-accent) 18%, var(--color-surface)); border-color: var(--color-accent); }
 .quiz__step-line { flex: 1 1 1rem; min-width: 1rem; height: 2px; background: var(--color-border); }
@@ -4185,3 +4185,17 @@ a.recorregut-stop__name:hover {
 .quiz__prep-title { font-weight: 600; }
 .quiz__prep-date { color: var(--color-text-muted); font-size: var(--text-sm); }
 .quiz__prep-cta { margin-left: auto; color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; }
+
+/* ── Skip link (accessibilitat) ───────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--space-3) var(--space-5);
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+.skip-link:focus { left: 0; }

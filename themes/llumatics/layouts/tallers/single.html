@@ -26,7 +26,7 @@
   <button class="course-single__cover course-single__cover--hero js-lightbox-trigger"
           data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
           data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="Veure imatge en gran">
+          aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
     <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
   </button>
   {{ end }}
@@ -35,7 +35,7 @@
   <div class="course-single__top">
     <div class="course-single__header-area">
 
-      <nav class="breadcrumb" aria-label="Breadcrumb">
+      <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" | default "Breadcrumb" }}">
         <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
         <span class="breadcrumb__sep">›</span>
         <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}">{{ i18n "nav_courses" | default "Tallers" }}</a>
@@ -98,7 +98,7 @@
     <button class="gallery__item js-lightbox-trigger"
             data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
             data-gallery="{{ $.File.ContentBaseName }}"
-            aria-label="Veure imatge en gran">
+            aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
       <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
     </button>
     {{ end }}
@@ -310,7 +310,7 @@
                 <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
                 {{ partial "agenda-calendar-links.html" . }}
                 {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
-                <a href="https://www.instagram.com/camerasandfilms.barcelona/" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Inscripció →</a>
+                <a href="https://www.instagram.com/camerasandfilms.barcelona/" class="btn btn--primary btn--xs" target="_blank" rel="noopener">{{ i18n "cta_register" | default "Inscripció" }} →</a>
               </div>
             {{ end }}
           </div>
@@ -367,6 +367,8 @@
             <div class="avisa-wrap">
               <button class="btn btn--primary js-avisa-toggle"
                       data-target="avisa-form-{{ $courseSlug }}"
+                      aria-controls="avisa-form-{{ $courseSlug }}"
+                      aria-expanded="false"
                       style="width:100%;">
                 {{ i18n "cta_avisa_llista" | default "Apunta't a la llista d'espera" }}
               </button>
@@ -380,6 +382,7 @@
                 <input type="hidden" name="type" value="avisa">
                 <input type="text" name="website" value="" tabindex="-1" autocomplete="off" style="display:none;" aria-hidden="true">
                 <input type="email" name="email" required autocomplete="email"
+                       aria-label="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
                        placeholder="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
                        style="width:100%; padding:0.6rem 0.75rem; border:1px solid var(--color-border); border-radius:4px; font-size:var(--text-sm); margin-bottom:var(--space-2);">
                 <button type="submit" class="btn btn--primary btn--sm" style="width:100%;">
@@ -419,6 +422,8 @@
             <div class="avisa-wrap" style="margin-top:var(--space-2);">
               <button class="btn btn--ghost js-avisa-toggle"
                       data-target="avisa-form-{{ $courseSlug }}"
+                      aria-controls="avisa-form-{{ $courseSlug }}"
+                      aria-expanded="false"
                       style="width:100%;">
                 {{ i18n "cta_avisa" }}
               </button>
@@ -432,6 +437,7 @@
                 <input type="hidden" name="type" value="avisa">
                 <input type="text" name="website" value="" tabindex="-1" autocomplete="off" style="display:none;" aria-hidden="true">
                 <input type="email" name="email" required autocomplete="email"
+                       aria-label="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
                        placeholder="{{ i18n "avisa_email_placeholder" | default "El teu correu" }}"
                        style="width:100%; padding:0.6rem 0.75rem; border:1px solid var(--color-border); border-radius:4px; font-size:var(--text-sm); margin-bottom:var(--space-2);">
                 <button type="submit" class="btn btn--primary btn--sm" style="width:100%;">
