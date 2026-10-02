@@ -2,7 +2,7 @@
 title: "Del negatiu a la imatge — edició digital per a fotografia analògica"
 lead: "Lightroom, Photoshop i alternatives sense subscripció per treure el màxim dels teus negatius digitalitzats: eliminar pols i ratllades, ajustar contrast i color, revelar el potencial de cada fotografia."
 description: "Taller pràctic d'edició digital per a fotografia analògica. Lightroom, Photoshop, Affinity Photo i GIMP aplicats a la correcció i edició de negatius digitalitzats. Barcelona."
-image: "/images/tallers/edicio-imatges-fotoquimiques.png"
+image: "/images/tallers/edicio-imatges-fotoquimiques.jpg"
 
 tipus: "taller"
 linia: "fonaments"

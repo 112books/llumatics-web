@@ -5,7 +5,7 @@ lead: "Una de les tècniques fotogràfiques més antigues i més accessibles: em
 description: "Taller de cianotípia a Barcelona. Procés alternatiu de impressió fotogràfica sense cambra fosca: emulsió, exposició solar i revelat amb aigua."
 image: "/images/tallers/cianotipia.jpg"
 images:
-  - "/images/tallers/cianotipia-1.png"
+  - "/images/tallers/cianotipia-1.jpg"
   - "/images/tallers/cianotipia-2.jpg"
   - "/images/tallers/cianotipia-3.jpg"
 

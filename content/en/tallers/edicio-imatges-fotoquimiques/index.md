@@ -2,7 +2,7 @@
 title: "From negative to image — digital editing for analogue photography"
 lead: "Lightroom, Photoshop and subscription-free alternatives to get the most from your scanned negatives: remove dust and scratches, adjust contrast and colour, and reveal the potential in every photograph."
 description: "Hands-on digital editing workshop for analogue photography. Lightroom, Photoshop, Affinity Photo and GIMP applied to the correction and editing of scanned negatives. Barcelona."
-image: "/images/tallers/edicio-imatges-fotoquimiques.png"
+image: "/images/tallers/edicio-imatges-fotoquimiques.jpg"
 
 tipus: "taller"
 linia: "fonaments"

@@ -4,10 +4,7 @@ subtitle: "Descubre la fotografía lenta antes de sumergirte de lleno"
 lead: "Un primer contacto con la cámara de placas: entender por qué existe, cómo funciona y cuál es la lógica de un sistema que obliga a fotografiar de una manera completamente diferente."
 description: "Taller introductorio al gran formato fotográfico. Primera sesión con cámara de placas, medida de la luz y exposición. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
-images:
-  - "/images/tallers/introduccio-gran-format-1.jpg"
-  - "/images/tallers/introduccio-gran-format-2.jpg"
-  - "/images/tallers/introduccio-gran-format-3.jpg"
+images: []
 
 # Clasificación
 tipus: "taller"

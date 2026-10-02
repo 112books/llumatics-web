@@ -4,10 +4,7 @@ subtitle: "Discover slow photography before diving in completely"
 lead: "A first encounter with the view camera: understanding why it exists, how it works and what makes a system that forces you to photograph in a completely different way."
 description: "Introductory large-format photography workshop. First session with a view camera, light metering and exposure. Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
-images:
-  - "/images/tallers/introduccio-gran-format-1.jpg"
-  - "/images/tallers/introduccio-gran-format-2.jpg"
-  - "/images/tallers/introduccio-gran-format-3.jpg"
+images: []
 
 # Classification
 tipus: "taller"

@@ -5,7 +5,7 @@ lead: "One of the oldest and most accessible photographic techniques: we coat th
 description: "Cyanotype workshop in Barcelona. Alternative photographic printing process without a darkroom: emulsion, solar exposure and water development."
 image: "/images/tallers/cianotipia.jpg"
 images:
-  - "/images/tallers/cianotipia-1.png"
+  - "/images/tallers/cianotipia-1.jpg"
   - "/images/tallers/cianotipia-2.jpg"
   - "/images/tallers/cianotipia-3.jpg"
 

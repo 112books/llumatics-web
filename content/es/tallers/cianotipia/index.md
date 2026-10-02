@@ -5,7 +5,7 @@ lead: "Una de las técnicas fotográficas más antiguas y más accesibles: emuls
 description: "Taller de cianotipia en Barcelona. Proceso alternativo de impresión fotográfica sin cuarto oscuro: emulsión, exposición solar y revelado con agua."
 image: "/images/tallers/cianotipia.jpg"
 images:
-  - "/images/tallers/cianotipia-1.png"
+  - "/images/tallers/cianotipia-1.jpg"
   - "/images/tallers/cianotipia-2.jpg"
   - "/images/tallers/cianotipia-3.jpg"
 
