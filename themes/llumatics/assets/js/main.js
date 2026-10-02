@@ -773,9 +773,14 @@ if (contactForm) {
 
     if (!tutFirst && tut) h += '<p class="quiz__tutoria-final">' + esc(t('quiz_result_tutoria_text')) + ' <a href="' + esc(tut.url) + '">' + esc(t('quiz_result_tutoria_title')) + '</a></p>';
 
+    var contactUrl = contact;
+    if (top.length) {
+      var rec = top.map(function (c) { return c.title; }).join(' · ');
+      contactUrl = contact + '?taller=' + encodeURIComponent(top[0].slug) + '&missatge=' + encodeURIComponent(t('quiz_result_contact_title') + ' ' + rec) + '#formulari';
+    }
     h += '<div class="quiz__contact"><h3>' + esc(t('quiz_result_contact_title')) + '</h3>'
       + '<p>' + esc(t('quiz_result_contact_text')) + '</p>'
-      + '<a class="btn btn--secondary" href="' + esc(contact) + '">' + esc(t('quiz_result_contact_cta')) + '</a></div>';
+      + '<a class="btn btn--secondary" href="' + esc(contactUrl) + '">' + esc(t('quiz_result_contact_cta')) + '</a></div>';
     h += '<div class="quiz__nav"><button type="button" class="btn btn--ghost" data-restart>' + esc(t('quiz_result_restart')) + '</button></div>';
 
     app.innerHTML = h;
