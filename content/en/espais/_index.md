@@ -78,7 +78,7 @@ A functional scanning space, built for precision work with negatives and positiv
 
 **Digital editing:**
 - Colour-calibrated workstation (sRGB/Adobe RGB)
-- Software: Lightroom Classic, Capture One, Photoshop
+- Software: Lightroom Classic, Photoshop and free alternatives (darktable, GIMP)
 - ICC profiles for major paper and film types
 
 The scanning station is used in **Scanning and digitalisation** workshops and **Photography tutorial** sessions.

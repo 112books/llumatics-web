@@ -78,7 +78,7 @@ El espacio de escaneado es funcional, no decorativo. Pensado para trabajar con n
 
 **Retoque digital:**
 - Estación de trabajo con pantalla calibrada (sRGB/Adobe RGB)
-- Software: Lightroom Classic, Capture One, Photoshop
+- Software: Lightroom Classic, Photoshop y alternativas libres (darktable, GIMP)
 - Perfiles ICC para los principales tipos de papel y película
 
 El espacio de escaneado se usa en los talleres de **Digitalización con escáner** y sesiones de **Tutoría fotográfica**.

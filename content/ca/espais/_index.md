@@ -97,7 +97,7 @@ L'espai d'escaneig és funcional, no decoratiu. Pensat per treballar amb negatiu
 
 **Retoc digital:**
 - Estació de treball amb pantalla calibrada (sRGB/Adobe RGB)
-- Software: Lightroom Classic, Capture One, Photoshop
+- Software: Lightroom Classic, Photoshop i alternatives lliures (darktable, GIMP)
 - Perfils ICC per als principals tipus de paper i pel·lícula
 
 L'espai d'escaneig s'usa als tallers de **Digitalització amb escànner** i sessions de **Tutoria fotogràfica**. Disponible durant els tallers per als alumnes inscrits.

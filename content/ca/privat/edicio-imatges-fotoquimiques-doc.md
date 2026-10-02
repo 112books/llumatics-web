@@ -18,7 +18,7 @@ Quan edites una fotografia analògica escanejada, el principi fonamental és no 
 **Eines recomanades:**
 - **Lightroom Classic** (Adobe): el més estès, bo per a catàleg i flux eficient.
 - **Darktable** (codi obert, gratuït): molt complet, corba d'aprenentatge més pronunciada.
-- **Capture One**: excel·lent gestió del color, popular en àmbits professionals.
+- **darktable**: gestió del color i revelat RAW, gratuïta i de codi obert.
 
 ## La corba tonal per a l'estètica analògica
 
