@@ -395,6 +395,16 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-03 (nit) — SEO competidors, landing i logo
+
+- **Anàlisi competidors** — La Perversa (mateix complex, ES-only, on-page feble) i Fotoespai (Sant Andreu, CA-only, sense hreflang ni Course/FAQPage). Informes via subagents.
+- **301** — slugs legacy en castellà a l'arrel i `/es/` que donaven 404 (`04-10-2025-taller-de-revelado…`, `taller-de-iniciacion-a-la-fotografia[-2]`).
+- **Nova landing** `/laboratori-fotografic-barcelona/` (CA, FAQPage) + enllaços interns des de `/espais/` i `/aprendre-a-revelar/` i a `llms.txt`.
+- **Títols** — portada i `/tallers/` amb «fotografia analògica a Barcelona»; `revelat-bn` amb `seo_title` (nou suport a `head.html`).
+- **Terminologia** — «fotografia química» → «fotografia analògica» (el terme més cercat).
+- **Logo** — tret «Fotoespai» de `llumatics-logo.svg` (queda només «Llumàtics»).
+- **Pendent** — verificar sitemaps a Google Search Console i Bing Webmaster Tools.
+
 ### 2026-10-03 (nit)
 **WebP de les imatges principals**
 
@@ -698,6 +708,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
+- [ ] **Indexació i sitemaps (Google/Bing)** — verificar que `sitemap.xml` estigui enviat i actualitzat a Google Search Console i Bing Webmaster Tools, i revisar errors de cobertura. El `robots.txt` ja hi apunta; falta confirmar l'alta i el reenviament als panells.
 
 ### Fet aquesta sessió (2026-09-22)
 **Canvi de password panell admin**

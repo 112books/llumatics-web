@@ -1,7 +1,7 @@
 ---
 title: "Llumàtics es trasllada a la Nau Bostik"
 lead: "Després de tres anys al Poble Sec, Llumàtics obre una nova etapa dins la Nau Bostik de La Sagrera."
-description: "Llumàtics Fotoespai anuncia el seu trasllat del Poble Sec a la Nau Bostik (Carrer Ferran Turné, 1-11), on continuarà l'activitat formativa de fotografia analògica. Setembre 2020."
+description: "Llumàtics anuncia el seu trasllat del Poble Sec a la Nau Bostik (Carrer Ferran Turné, 1-11), on continuarà l'activitat formativa de fotografia analògica. Setembre 2020."
 date: 2020-09-04
 tags: ["Nau Bostik", "trasllat", "poble sec", "la sagrera", "notícia"]
 image: "/images/blog/trasllat-nau-bostik.jpg"
