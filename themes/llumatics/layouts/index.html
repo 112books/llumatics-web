@@ -66,7 +66,9 @@
 {{ end }}
 
 {{/* ── Properes dates (Agenda) ─────────────────────────────────────────── */}}
-{{ $upcoming := where (where .Site.RegularPages "Type" "agenda") ".Params.date_start" "ge" now | first 4 }}
+{{ $today := now.Format "2006-01-02" }}
+{{ $agendaFuture := where (where .Site.RegularPages "Type" "agenda") ".Params.date_start" "ge" $today }}
+{{ $upcoming := first 4 (sort $agendaFuture ".Params.date_start" "asc") }}
 {{ if $upcoming }}
 <section class="section section--alt">
   <div class="container">
