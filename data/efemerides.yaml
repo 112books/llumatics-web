@@ -1,6 +1,6 @@
 # Calendari d'efemèrides i finestres d'activació del pop-up.
 # El pop-up només apareix si avui és dins [inici, fi] i actiu: true.
-# Ordre: si dues coincideixen, el JS/partial en mostra una (la primera).
+# Text: si falta l'idioma, cau al català.
 
 - id: "holga-week"
   actiu: true
@@ -29,3 +29,185 @@
     ca: "Holga · 8 oct"
     es: "Holga · 8 oct"
     en: "Holga · 8 Oct"
+
+- id: "castanyada"
+  actiu: false
+  inici: "2026-10-24"
+  fi: "2026-10-31"
+  data: "2026-10-31"
+  url: "/tallers/fotografia-desperits/"
+  imatge: ""
+  titol: { ca: "Fotografia d'esperits" }
+  subtitol: { ca: "31 d'octubre · La Nau Bostik" }
+  descripcio: { ca: "Exposicions llargues, dobles exposicions i llum de llanterna, per la Castanyada." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Esperits · 31 oct" }
+
+- id: "setmana-ciencia"
+  actiu: false
+  inici: "2026-11-07"
+  fi: "2026-11-15"
+  data: "2026-11-15"
+  url: "/tallers/caffenol-setmana-ciencia/"
+  imatge: ""
+  titol: { ca: "Caffenol" }
+  subtitol: { ca: "Setmana de la Ciència · La Nau Bostik" }
+  descripcio: { ca: "El cafè que et beus cada matí pot revelar un rodet. Química de cuina." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Caffenol · nov" }
+
+- id: "nadal"
+  actiu: false
+  inici: "2026-11-28"
+  fi: "2026-12-06"
+  data: "2026-12-05"
+  url: "/tallers/postals-cianotipia-nadal/"
+  imatge: ""
+  titol: { ca: "Postals en cianotípia" }
+  subtitol: { ca: "Principis de desembre · La Nau Bostik" }
+  descripcio: { ca: "Regala una imatge feta amb el sol: postals en cianotípia, fetes a mà." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Cianotípia · des" }
+
+- id: "solstici-hivern"
+  actiu: false
+  inici: "2026-12-14"
+  fi: "2026-12-21"
+  data: "2026-12-21"
+  url: "/tallers/solargrafia/"
+  imatge: ""
+  titol: { ca: "Solargrafia" }
+  subtitol: { ca: "Solstici d'hivern · La Nau Bostik" }
+  descripcio: { ca: "Una llauna, un forat i un full de paper: sis mesos fotografiant el sol." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Solargrafia · des" }
+
+- id: "film-swap"
+  actiu: false
+  inici: "2027-01-09"
+  fi: "2027-01-16"
+  data: "2027-01-16"
+  url: "/tallers/film-swap/"
+  imatge: ""
+  titol: { ca: "Film Swap Llumàtics" }
+  subtitol: { ca: "Gener · La Nau Bostik" }
+  descripcio: { ca: "Dobles exposicions a l'atzar entre dues persones." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Film Swap · gen" }
+
+- id: "anna-atkins"
+  actiu: false
+  inici: "2027-03-09"
+  fi: "2027-03-16"
+  data: "2027-03-16"
+  url: "/tallers/herbari-blau/"
+  imatge: ""
+  titol: { ca: "Herbari blau" }
+  subtitol: { ca: "16 de març · La Nau Bostik" }
+  descripcio: { ca: "Un herbari de cianotípia en homenatge a Anna Atkins." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Herbari · març" }
+
+- id: "polaroid-week"
+  actiu: false
+  inici: "2027-04-13"
+  fi: "2027-04-20"
+  data: "2027-04-20"
+  url: "/tallers/instantania-polaroid-week/"
+  imatge: ""
+  titol: { ca: "Instantània" }
+  subtitol: { ca: "Polaroid Week · La Nau Bostik" }
+  descripcio: { ca: "El laboratori més petit del món: el revelador va dins de cada còpia." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Instantània · abr" }
+
+- id: "dia-terra"
+  actiu: false
+  inici: "2027-04-15"
+  fi: "2027-04-22"
+  data: "2027-04-22"
+  url: "/tallers/antotipia/"
+  imatge: ""
+  titol: { ca: "Antotípia" }
+  subtitol: { ca: "Dia de la Terra · La Nau Bostik" }
+  descripcio: { ca: "Una fotografia feta amb espinacs, remolatxa o pètals de flor." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Antotípia · abr" }
+
+- id: "sant-jordi"
+  actiu: false
+  inici: "2027-04-16"
+  fi: "2027-04-23"
+  data: "2027-04-23"
+  url: "/tallers/llibret-sant-jordi/"
+  imatge: ""
+  titol: { ca: "Llibret fotogràfic" }
+  subtitol: { ca: "Sant Jordi · La Nau Bostik" }
+  descripcio: { ca: "Tria, ordena i enquaderna a mà un llibret amb les teves fotografies." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Llibret · abr" }
+
+- id: "pinhole-day"
+  actiu: false
+  inici: "2027-04-18"
+  fi: "2027-04-25"
+  data: "2027-04-25"
+  url: "/tallers/estenopeica-pinhole-day/"
+  imatge: ""
+  titol: { ca: "Estenopeica" }
+  subtitol: { ca: "Pinhole Day · La Nau Bostik" }
+  descripcio: { ca: "Fotos sense objectiu: només un forat." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Estenopeica · abr" }
+
+- id: "wet-plate-day"
+  actiu: false
+  inici: "2027-04-24"
+  fi: "2027-05-01"
+  data: "2027-05-01"
+  url: "/tallers/collodio-humit/"
+  imatge: ""
+  titol: { ca: "Col·lodió humit" }
+  subtitol: { ca: "World Wet Plate Day · La Nau Bostik" }
+  descripcio: { ca: "Una demostració de retrats en ferrotip." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Col·lodió · mai" }
+
+- id: "visa-pour-limage"
+  actiu: false
+  inici: "2027-09-04"
+  fi: "2027-09-11"
+  data: "2027-09-11"
+  url: "/tallers/visa-pour-limage/"
+  imatge: ""
+  titol: { ca: "Visa pour l'Image" }
+  subtitol: { ca: "Perpinyà · un dia" }
+  descripcio: { ca: "El festival de fotoperiodisme més important del món, amb les exposicions comentades." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Visa · set" }
+
+- id: "world-cyanotype-day"
+  actiu: false
+  inici: "2027-09-18"
+  fi: "2027-09-25"
+  data: "2027-09-25"
+  url: "/tallers/cianotipia-collectiva/"
+  imatge: ""
+  titol: { ca: "Cianotípia col·lectiva" }
+  subtitol: { ca: "World Cyanotype Day · La Nau Bostik" }
+  descripcio: { ca: "Un quadrat blau per a la peça col·lectiva. Gratuït i obert." }
+  boto: { ca: "Vull venir" }
+  pestanya: { ca: "Cianotípia · set" }
+
+- id: "holga-week-2027"
+  actiu: false
+  inici: "2027-09-25"
+  fi: "2027-10-02"
+  data: "2027-10-02"
+  url: "/tallers/holga-week-2027/"
+  imatge: ""
+  titol: { ca: "Sortida Holga" }
+  subtitol: { ca: "Holga Week 2027 · La Nau Bostik" }
+  descripcio: { ca: "Una sortida Holga dins de la setmana, per entrar al concurs." }
+  boto: { ca: "M'interessa" }
+  pestanya: { ca: "Holga · oct" }
