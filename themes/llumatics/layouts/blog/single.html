@@ -30,7 +30,7 @@
           data-src="{{ $imgSrc }}"
           data-gallery="{{ .File.ContentBaseName }}"
           aria-label="{{ i18n "lightbox_enlarge" }}">
-    <img src="{{ $imgSrc }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" loading="eager">
+    <img src="{{ $imgSrc }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" loading="eager" fetchpriority="high">
   </button>
   {{ end }}
 

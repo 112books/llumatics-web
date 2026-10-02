@@ -11,7 +11,7 @@
 {{/* ── Hero ───────────────────────────────────────────────────────────── */}}
 <section class="hero hero--with-image">
   {{ with .Params.heroImage }}
-    <img class="hero__bg" src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
+    <img class="hero__bg" src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true" fetchpriority="high">
   {{ end }}
   <div class="container hero__content">
     <div class="hero__inner">
