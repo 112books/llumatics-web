@@ -26,6 +26,8 @@ Els espais de Llumàtics no estan oberts al públic de manera permanent. Les vis
 
 El laboratori és l’eix central de Llumàtics. No és un espai d’iniciació, sinó un entorn de treball complet, pensat per acompanyar el procés fotogràfic des de la primera prova fins a la còpia final.
 
+Tens tota la informació i els tallers a la pàgina del [laboratori fotogràfic a Barcelona](/laboratori-fotografic-barcelona/).
+
 ### "Zona seca"
 
 **Ampliadores:** 

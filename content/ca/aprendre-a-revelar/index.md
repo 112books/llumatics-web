@@ -13,6 +13,7 @@ translationKey: "aprendre-a-revelar"
 - [Iniciació al revelat](/tallers/iniciacio-revelat/) — el procés complet en 3 hores, a Cameras & Films, sense experiència prèvia.
 - [Revelat de pel·lícula B/N](/tallers/revelat-bn/) — 4 hores i dos carretes inclosos, per controlar densitat, push i pull.
 - [Revelat + positivado en un dia](/tallers/revelat-i-positivat/) — 8 hores per fer tot el cicle.
+- [Laboratori fotogràfic a Barcelona](/laboratori-fotografic-barcelona/) — l'espai i l'equipament on es fan els tallers.
 
 ## I després
 

@@ -50,6 +50,7 @@
      de cerca. Abans retornava .Site.Title i la home es quedava amb 9 caràcters. */}}
 {{- $title := .Title -}}
 {{- if not $title }}{{ $title = .Site.Title }}{{ end -}}
+{{- with .Params.seo_title }}{{ $title = . }}{{ end -}}
 {{/* Paginació: la pàgina 2, 3… compartien <title> amb la 1. El sufix
      "(pàgina N)" els diferencia i evita títols duplicats a l'índex. */}}
 {{- $pageNum := 0 -}}

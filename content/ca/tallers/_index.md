@@ -1,5 +1,5 @@
 ---
-title: "Tallers, cursos i recorreguts formatius"
+title: "Tallers de fotografia analògica a Barcelona"
 description: "Tallers de fotografia analògica, procés químic, gran format i processos alternatius a Barcelona. Grups de màxim 4 persones."
 eyebrow: "Escola de fotografia analògica"
 subtitle: "Sis línies d'aprenentatge. Com al metro: pots fer un taller concret o seguir el recorregut sencer d'una línia."

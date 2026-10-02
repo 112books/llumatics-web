@@ -36,7 +36,7 @@ objective: "Dominar el procés complet de cianotípia: preparació de la fórmul
 methodology: "Jornada completa en dues parts amb pausa de migdia. Matí: fonaments i fotogrames. Tarda: impressió amb negatius en acetat i variacions tècniques."
 result: "6-10 peces en cianotípia: fotogrames, impressions de negatius, experimentació amb virats i suports alternatius."
 prerequisits: "Cap coneixement tècnic previ. Els participants han de portar fotografies convertides a negatiu en acetate (o les generem a la sessió)."
-target: "Qualsevol persona curiosa per la fotografia química sense càmera. Artistes, dissenyadors, fotògrafs i no fotògrafs."
+target: "Qualsevol persona curiosa per la fotografia analògica sense càmera. Artistes, dissenyadors, fotògrafs i no fotògrafs."
 
 # Tallers relacionats
 continua_aprenent: 
