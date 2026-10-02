@@ -367,3 +367,18 @@
       -}}
 <script type="application/ld+json">{{ $product | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
+
+{{/* JSON-LD — BreadcrumbList (AEO). Generat de la jerarquia de seccions. */}}
+{{- if not .IsHome -}}
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" (i18n "home" | default "Inici") "item" (absURL "/")) -}}
+{{- $pos := 2 -}}
+{{- range .Ancestors.Reverse -}}
+  {{- if not .IsHome -}}
+    {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+    {{- $pos = add $pos 1 -}}
+  {{- end -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+{{- $bc := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
+<script type="application/ld+json">{{ $bc | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end -}}
