@@ -19,7 +19,7 @@ Documentació de referència:
 - [x] A6. Provats els 8 perfils de la spec amb un harness de Node (pendent revisió visual al navegador).
 - [x] A7. i18n ES/EN (71 claus + pàgines traduïdes amb translationKey).
 - [x] A8. Contacte: el CTA del quiz arriba al formulari amb el resultat precarregat. "M'interessa" (Brevo) queda pendent perquè no hi ha formacions `en-preparacio` visibles.
-- [ ] A9. Migrar "Regala un curs" al motor compartit.
+- [x] A9. El qüestionari de regal llegeix el mapping de cursos de `data/quiz.yaml` (amb fallback) i la validació n'inclou els slugs.
 - [x] A10. Enllaços d'accés a la portada i a /tallers/ i publicació del qüestionari (CA/ES/EN).
 
 ## Bloc B — Formacions flash
