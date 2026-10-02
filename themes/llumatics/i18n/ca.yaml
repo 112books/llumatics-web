@@ -253,9 +253,9 @@ certificate_issuer: "Llumàtics — Escola de fotografia fotoquímica"
 
 # ── Textos que abans eren catalans hardcodejats als templates ──────────
 gift_quiz_q_recipient: "La persona que rep el regal…"
-gift_quiz_a_never: "No ha tocat mai una càmera analògica"
+gift_quiz_a_never: "No ha agafat mai una càmera analògica"
 gift_quiz_a_never_h: "Partim de zero, perfecte"
-gift_quiz_a_some: "Ja ha fet algun taller o revela de tant en tant"
+gift_quiz_a_some: "Ja ha fet algun taller o ha revelat de tant en tant"
 gift_quiz_a_some_h: "Vol aprofundir"
 gift_quiz_a_pro: "És fotògraf analògic i busca un repte nou"
 gift_quiz_a_pro_h: "Anem a fons"

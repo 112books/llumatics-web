@@ -253,9 +253,9 @@ certificate_issuer: "Llumàtics — School of photochemical photography"
 
 # ── Textos que abans eren catalans hardcodejats als templates ──────────
 gift_quiz_q_recipient: "The person receiving the gift…"
-gift_quiz_a_never: "Has never touched an analogue camera"
+gift_quiz_a_never: "Has never held an analogue camera"
 gift_quiz_a_never_h: "Starting from scratch, perfect"
-gift_quiz_a_some: "Has done a workshop or develops now and then"
+gift_quiz_a_some: "Has done a workshop or has developed now and then"
 gift_quiz_a_some_h: "Wants to go further"
 gift_quiz_a_pro: "Is an analogue photographer looking for a new challenge"
 gift_quiz_a_pro_h: "Going deep"
