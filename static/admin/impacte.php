@@ -26,7 +26,7 @@ function lang_of(string $p): string {
     return 'ca';
 }
 function slug_of(string $p): string {
-    if (preg_match('#/tallers/([^/]+)/#', $p, $m)) return $m[1];
+    if (preg_match('#/tallers/([^/]+)(/|$)#', $p, $m)) return $m[1];
     return '';
 }
 

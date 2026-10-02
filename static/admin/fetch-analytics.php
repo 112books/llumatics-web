@@ -161,7 +161,7 @@ foreach ($hits_list as $h) {
     if (str_contains($path, 'quin-curs-em-conve') || str_contains($path, 'que-curso-me-conviene') || str_contains($path, 'which-course-suits-me')) {
         $camp['quiz']['count'] += $c; $camp['quiz']['unique'] += $u; $camp['quiz']['by_lang'][$lg] += $c;
     }
-    if (preg_match('#/tallers/([^/]+)/#', $path, $m)) {
+    if (preg_match('#/tallers/([^/]+)(/|$)#', $path, $m)) {
         $s = $m[1];
         if (in_array($s, $nous_slugs, true)) {
             if (!isset($camp['nous'][$s])) $camp['nous'][$s] = ['count' => 0, 'unique' => 0];
