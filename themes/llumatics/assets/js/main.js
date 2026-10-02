@@ -649,8 +649,42 @@ if (contactForm) {
     scrollQuizTop();
   }
 
+  app.addEventListener('click', function (e) {
+    var el = e.target && e.target.closest ? e.target.closest('[data-goto]') : null;
+    if (!el || el.disabled) return;
+    var idx = parseInt(el.getAttribute('data-goto'), 10);
+    if (!canGoTo(idx)) return;
+    state.step = idx;
+    render();
+  });
+
+  function canGoTo(idx) {
+    if (idx === 0) return true;
+    if (idx === 1) return state.nivell !== null;
+    if (idx === 2) return state.nivell !== null && state.interessa.length > 0;
+    return false;
+  }
+
   function progress() {
-    return '<p class="quiz__progress">' + esc(fmtProgress(t('quiz_progress', 'Pas %d de %d'), state.step + 1, 3)) + '</p>';
+    var defs = [
+      t('quiz_step_short_nivell', 'Nivell'),
+      t('quiz_step_short_interessos', 'Interessos'),
+      t('quiz_step_short_format', 'Format')
+    ];
+    var h = '<div class="quiz__head">';
+    h += '<p class="quiz__progress">' + esc(fmtProgress(t('quiz_progress', 'Pas %d de %d'), state.step + 1, 3)) + '</p>';
+    h += '<nav class="quiz__steps" aria-label="' + esc(t('quiz_steps_nav', 'Passos')) + '">';
+    defs.forEach(function (label, i) {
+      var cls = 'quiz__step';
+      if (i === state.step) cls += ' is-current';
+      else if (i < state.step) cls += ' is-done';
+      var dis = !canGoTo(i) ? ' disabled' : '';
+      h += '<button type="button" class="' + cls + '" data-goto="' + i + '"' + dis + ' aria-current="' + (i === state.step ? 'step' : 'false') + '">';
+      h += '<span class="quiz__step-num">' + (i + 1) + '</span><span class="quiz__step-label">' + esc(label) + '</span></button>';
+      if (i < defs.length - 1) h += '<span class="quiz__step-line" aria-hidden="true"></span>';
+    });
+    h += '</nav></div>';
+    return h;
   }
 
   function renderNivell() {

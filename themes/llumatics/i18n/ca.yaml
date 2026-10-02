@@ -398,6 +398,10 @@ quiz_block_proces: "Revelat i laboratori"
 quiz_block_digital: "Digital"
 quiz_block_disciplines: "Disciplines i projectes"
 quiz_block_diferent: "Processos i càmeres diferents"
+quiz_step_short_nivell: "Nivell"
+quiz_step_short_interessos: "Interessos"
+quiz_step_short_format: "Format"
+quiz_steps_nav: "Passos"
 
 quiz_n0: "No sé fer fotos (crec), però en vull aprendre de zero."
 quiz_n1: "Faig fotos, però no m'agraden els resultats i no sé per què."
@@ -469,3 +473,4 @@ quiz_cta_text: "Respon tres preguntes i et proposem el taller o el recorregut qu
 
 footer_choose_heading: "Tria un curs"
 footer_quiz_link: "Selecciona un curs"
+footer_path_link: "El camí ideal"

@@ -22,6 +22,7 @@ Documentació de referència:
 - [x] A9. El qüestionari de regal llegeix el mapping de cursos de `data/quiz.yaml` (amb fallback) i la validació n'inclou els slugs.
 - [x] A10. Enllaços d'accés a la portada i a /tallers/ i publicació del qüestionari (CA/ES/EN).
 - [x] A11. UX del pas 2: opcions agrupades per temes (tècnica, laboratori, digital, disciplines, processos) amb títol de grup, graella a 2 columnes i desplaçament al capdamunt del qüestionari en canviar de pas (CA/ES/EN).
+- [x] A12. Capçalera del qüestionari: indicador visual "Pas X de 3" amb passos numerats clicables (estat actual/fet), per anar al pas anterior o següent (CA/ES/EN).
 
 ## Bloc B — Formacions flash
 - [x] B1. Drafts de les 14 propostes flash (CA).
@@ -46,6 +47,8 @@ Documentació de referència:
 - [x] G1. Footer: nova columna «Tria un curs» amb «Selecciona un curs» (recomanador) i «Regala un curs»; tret de sota Contacte. Graella del footer a 5 columnes.
 - [x] G2. Menú principal: estat actiu de la secció amb color d'accent (CA/ES/EN).
 - [x] G3. Contacte: pastilles d'ancoratge amb text blanc i fons d'accent.
+- [x] G4. Footer: treta la llista arbitrària de tallers (era els primers 5 sense criteri); nova ordre de columnes «Tria un curs» (amb «El camí ideal» → /tallers/#recorregut) | «Espais» | «Legal» | «Contacte».
+- [x] G5. Portada: CTA «Quin curs em convé?» afegit a l'hero, al costat de «Veure tallers» i «Properes dates» (CA/ES/EN).
 
 ## Bloc F — Traducció i llenguatge
 - [~] F1. Auditoria de traducció i llenguatge fotogràfic: `docs/manuals/auditoria-traduccio-llenguatge.md` (primera passada + correccions de «laboratorio oscuro» i «cámara oscura»). Pendent: decisió sobre «quarto fosc» i revisió completa.

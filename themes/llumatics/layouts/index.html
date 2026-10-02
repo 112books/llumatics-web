@@ -4,6 +4,9 @@
 {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
 {{ $lp       := $.Site.LanguagePrefix }}
 
+{{ $quizPage := "" }}
+{{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizPage = . }}{{ end }}{{ end }}
+
 {{/* ── Hero ───────────────────────────────────────────────────────────── */}}
 <section class="hero hero--with-image">
   {{ with .Params.heroImage }}
@@ -25,6 +28,11 @@
         <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}" class="btn btn--secondary btn--lg">
           {{ i18n "cta_schedule" | default "Properes dates" }}
         </a>
+        {{ with $quizPage }}
+        <a href="{{ .RelPermalink }}" class="btn btn--accent btn--lg">
+          {{ i18n "quiz_cta_button" | default "Quin curs em convé?" }} →
+        </a>
+        {{ end }}
       </div>
     </div>
   </div>
@@ -61,8 +69,6 @@
     <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}" class="btn btn--secondary">
       {{ i18n "see_all_courses" | default "Veure tots els tallers" }}
     </a>
-    {{ $quizPage := "" }}
-    {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizPage = . }}{{ end }}{{ end }}
     {{ with $quizPage }}
     <a href="{{ .RelPermalink }}" class="btn btn--primary" style="margin-left:0.5rem;">{{ i18n "quiz_cta_button" | default "Quin curs em convé?" }} →</a>
     {{ end }}

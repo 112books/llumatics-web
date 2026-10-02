@@ -17,20 +17,12 @@
       </div>
 
       <div>
-        <p class="site-footer__heading">{{ i18n "nav_courses" | default "Tallers" }}</p>
-        <ul class="site-footer__links">
-          {{ range (where .Site.RegularPages "Type" "tallers") | first 5 }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-
-      <div>
         <p class="site-footer__heading">{{ i18n "footer_choose_heading" | default "Tria un curs" }}</p>
         <ul class="site-footer__links">
           {{ $quizFooter := "" }}
           {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizFooter = . }}{{ end }}{{ end }}
           {{ with $quizFooter }}<li><a href="{{ .RelPermalink }}">{{ i18n "footer_quiz_link" | default "Selecciona un curs" }}</a></li>{{ end }}
+          <li><a href="{{ printf "%s%s/tallers/#recorregut" $siteRoot $lp }}">{{ i18n "footer_path_link" | default "El camí ideal" }}</a></li>
           <li><a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}">{{ i18n "see_all_courses" | default "Tots els tallers" }}</a></li>
           <li><a href="{{ printf "%s%s/regala/" $siteRoot $lp }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
         </ul>
@@ -47,6 +39,15 @@
       </div>
 
       <div>
+        <p class="site-footer__heading">{{ i18n "legal" | default "Legal" }}</p>
+        <ul class="site-footer__links">
+          <li><a href="{{ printf "%s%s/avis-legal/" $siteRoot $lp }}">{{ i18n "legal_notice" | default "Avís legal" }}</a></li>
+          <li><a href="{{ printf "%s%s/privacitat/" $siteRoot $lp }}">{{ i18n "privacy_policy" | default "Política de privacitat" }}</a></li>
+          <li><a href="{{ printf "%s%s/cookies/" $siteRoot $lp }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></li>
+        </ul>
+      </div>
+
+      <div>
         <p class="site-footer__heading">{{ i18n "contact" | default "Contacte" }}</p>
         <ul class="site-footer__links">
           <li><a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></li>
@@ -57,13 +58,6 @@
           {{ with .Site.Params.googleReviewURL }}
             <li><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "google_review" | default "Deixa'ns una ressenya" }} ★</a></li>
           {{ end }}
-        </ul>
-
-        <p class="site-footer__heading site-footer__heading--sub">{{ i18n "legal" | default "Legal" }}</p>
-        <ul class="site-footer__links">
-          <li><a href="{{ printf "%s%s/avis-legal/" $siteRoot $lp }}">{{ i18n "legal_notice" | default "Avís legal" }}</a></li>
-          <li><a href="{{ printf "%s%s/privacitat/" $siteRoot $lp }}">{{ i18n "privacy_policy" | default "Política de privacitat" }}</a></li>
-          <li><a href="{{ printf "%s%s/cookies/" $siteRoot $lp }}">{{ i18n "cookie_policy" | default "Política de cookies" }}</a></li>
         </ul>
       </div>
 
