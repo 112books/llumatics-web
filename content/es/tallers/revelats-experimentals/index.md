@@ -36,6 +36,8 @@ target: "Fotógrafos analógicos que quieren ir más allá del revelado estánda
 # Talleres relacionados
 continua_aprenent:
   - "reveladors-artesanals"
+  - "guinneol"
+  - "revelat-color-bn"
 tags: ["revelado", "experimental", "Caffenol", "Beers", "artesanal"]
 draft: false
 ---
