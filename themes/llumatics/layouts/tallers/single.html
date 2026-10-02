@@ -21,6 +21,16 @@
 
 <div class="course-single">
 
+  {{/* ── Imatge principal — hero full-ample, sobre del títol ─────────────── */}}
+  {{ if .Params.image }}
+  <button class="course-single__cover course-single__cover--hero js-lightbox-trigger"
+          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="Veure imatge en gran">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+  </button>
+  {{ end }}
+
   {{/* ── TOP: 1/3 blanc · breadcrumb + tags + títol/subtítol/lead ────────── */}}
   <div class="course-single__top">
     <div class="course-single__header-area">
@@ -80,16 +90,6 @@
 
     </div>{{/* fi header-area */}}
   </div>{{/* fi course-single__top */}}
-
-  {{/* ── Imatge principal — ample complet ───────────────────────────────── */}}
-  {{ if .Params.image }}
-  <button class="course-single__cover js-lightbox-trigger"
-          data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
-          data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="Veure imatge en gran">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
-  </button>
-  {{ end }}
 
   {{/* ── Galeria secundària — ample complet ─────────────────────────────── */}}
   {{ with .Params.images }}

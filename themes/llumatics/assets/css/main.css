@@ -4119,3 +4119,17 @@ a.recorregut-stop__name:hover {
   font-weight: 600;
 }
 .agenda-cal__link:hover { text-decoration: none; }
+
+/* Hero del taller: imatge principal a sobre del títol, full-ample */
+.course-single__cover--hero {
+  margin: calc(var(--space-16) * -1) 0 var(--space-10);
+  border-radius: 0;
+  max-height: 620px;
+}
+.course-single__cover--hero img {
+  max-height: 620px;
+}
+@media (max-width: 640px) {
+  .course-single__cover--hero { max-height: 380px; margin-bottom: var(--space-6); }
+  .course-single__cover--hero img { max-height: 380px; }
+}
