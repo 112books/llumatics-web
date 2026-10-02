@@ -21,6 +21,7 @@ Documentació de referència:
 - [x] A8. Contacte: el CTA del quiz arriba al formulari amb el resultat precarregat. "M'interessa" (Brevo) queda pendent perquè no hi ha formacions `en-preparacio` visibles.
 - [x] A9. El qüestionari de regal llegeix el mapping de cursos de `data/quiz.yaml` (amb fallback) i la validació n'inclou els slugs.
 - [x] A10. Enllaços d'accés a la portada i a /tallers/ i publicació del qüestionari (CA/ES/EN).
+- [x] A11. UX del pas 2: opcions agrupades per temes (tècnica, laboratori, digital, disciplines, processos) amb títol de grup, graella a 2 columnes i desplaçament al capdamunt del qüestionari en canviar de pas (CA/ES/EN).
 
 ## Bloc B — Formacions flash
 - [x] B1. Drafts de les 14 propostes flash (CA).
@@ -30,7 +31,7 @@ Documentació de referència:
 
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
-- [~] C2. FAQ específica per curs. FETS 16 (CA/ES/EN): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5, tutoria-fotografica, fonaments-iniciacio-puntual, revelat-i-positivat, reveladors-artesanals, caffenol, fotografia-de-carrer, retrat-analogic i edicio-imatges-fotoquimiques. Resten la resta de la família (wineol, guinneol, color, estenopeica, fotollibre…).
+- [~] C2. FAQ específica per curs. FETS 22 (CA/ES/EN): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5, tutoria-fotografica, fonaments-iniciacio-puntual, revelat-i-positivat, reveladors-artesanals, caffenol, fotografia-de-carrer, retrat-analogic, edicio-imatges-fotoquimiques, wineol, guinneol, revelat-color-bn, revelats-experimentals, copies-beers-developer i fotografia-estenopeica. Resten 7: fotollibre, fotogrames-cianotipia, retrat-6x6, hasselblad-500, del-carrer-al-llibre, retrat-gran-format i retrat-amb-holga.
 - [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
 - [x] C4. Landing `aprendre-a-revelar` (CA/ES/EN) + enllaç intern des de /tallers/.
 - [x] C5. Auditoria NAP (`docs/recomanador/auditoria-nap.md`): intern consistent; pendent extern el Google Business Profile.
