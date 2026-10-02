@@ -508,6 +508,8 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Pendent / Properes sessions
 
+> **Convenció (2026-10-02):** els pendents completats es marquen `[x]` i es conserven amb la data de resolució. **Mai s'esborren**: la llista és un registre acumulatiu de tot el que s'ha fet i del que queda.
+
 ### Infraestructura i deploy
 - [x] VPS: `/admin/` té `chmod 777` — PHP pot escriure `analytics-cache.json`
 - [x] Dashboard `/admin/` funciona — clicar "↻ actualitzar" per regenerar dades
@@ -599,7 +601,7 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 5. Enganxar l'URL a `hugo.toml`: `brevoListFormAction = "https://sibforms.com/serve/MUIFA..."`
 
 **Tasks 2-8 — Codi (LLESTS ✅):**
-- `hugo.toml`: param `brevoListFormAction` afegit (buit)
+- [x] `hugo.toml`: param `brevoListFormAction` configurat amb l'URL real del formulari Brevo «Alumnes Llumàtics» (resolt 2026-10-02)
 - `layouts/_default/private.html`: formulari Brevo + localStorage
 - `layouts/_default/confirmat.html`: relay localStorage → /doc/
 - `layouts/_default/private-doc.html`: documentació + injecció nom + certificat
@@ -661,7 +663,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 3. Canviar `draft: false` al doc CA
 4. Crear versions ES i EN (`content/es/privat/[slug]-doc.md`, `content/en/privat/[slug]-doc.md`)
 
-**Bug pendent:** `tutoria-fotografica` — `durada_hores` buit al frontmatter del taller.
+**Bug resolt (2026-10-02):** `tutoria-fotografica` — `durada_hores` ja és `2` al frontmatter del taller (abans era buit).
 
 **Nota:** tallers públics orgànics llests:
 - [x] `wineol` — CA/ES/EN ✅
@@ -676,7 +678,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 
 ### Contingut
 
-- [ ] Imatges tallers que falten: `revelat-color-bn`, `guinneol`, `copies-beers-developer` (no estan a `static/images/tallers/`)
+- [x] Imatges tallers que faltaven: `revelat-color-bn`, `guinneol`, `copies-beers-developer` (resolt 2026-10-02: ja existeixen a `static/images/tallers/`)
 - [ ] `continua_aprenent` de `revelats-experimentals` — afegir `guinneol`, `revelat-color-bn`
 - [ ] `archetypes/tallers.md` — actualitzar amb el frontmatter actual
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
