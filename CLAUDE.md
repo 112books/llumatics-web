@@ -402,6 +402,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Ressenya Google** — bloc a `/gracies/` (`.gracies-page__review` + `gracies_review_text`) i al peu dels docs d'alumnes (`.doc-review` web + línia al `doc-print-footer` del PDF amb `doc_review_short`).
 - **Fix** — `jsonify` sense `safeJS` a `gracies.html` i `private-doc.html` duplicava les cometes; corregit.
 - **HSTS** — capçalera `Strict-Transport-Security: max-age=31536000` afegida a `static/.htaccess` (quick win del scan de seguretat; verificada en producció).
+- **Auditoria per categories (scan Vibe, tarda)** — imatges 113,9 MB → 36,6 MB; CSP + Permissions-Policy + COOP/CORP + X-Permitted; Google Fonts i Chart.js autoallotjats; `theme-color` i preload LCP; 9 meta descriptions escurçades. Detall a `MEMORY.md`.
 - Build Hugo correcte (CA 498 / ES 403 / EN 409 pàgines).
 
 ### 2026-10-02
