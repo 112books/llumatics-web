@@ -79,3 +79,26 @@ In this workshop we prepare the solution, coat the paper, expose it with sunligh
 
 - Printing of additional acetate negatives (+materials, enquire)
 - Alternative supports such as fabric or wood (available as an extra option)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need a darkroom or a camera for cyanotype? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Cyanotype is made with sunlight and sensitised paper: no darkroom and no camera needed. You can work with negatives printed on acetate or with photograms of objects.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How long is the cyanotype workshop and how much does it cost? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The workshop lasts 8 hours, in groups of up to 4 people, and starts at €420 for one student. It includes the chemistry, the paper and the practice materials.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can children do cyanotype? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. It is one of the most suitable techniques to do with children: no dangerous chemicals are needed and the result appears immediately.</p>
+</div>
+</details>

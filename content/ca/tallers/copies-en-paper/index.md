@@ -76,3 +76,26 @@ Aquest taller és la continuació natural del revelat de pel·lícula. Portes el
 
 - Paper addicional (+2€/full RC, +4€/full fibra)
 - Paper de fibra de gran format (consultar)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal saber revelar per fer còpies en paper? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Cal haver revelat alguna vegada i tenir negatius (propis o de pràctica). Si no has revelat mai, comença per la Iniciació al revelat o pel Revelat B/N.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quantes còpies faré i quin paper inclou? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller inclou paper. El paper addicional i el de fibra van a part (+2 €/full RC, +4 €/full fibra). Cada participant treballa a l'ampliadora i s'emporta les seves còpies seques.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre a fer còpies en paper a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), en grups de màxim 4 alumnes. El taller dura 4 hores i parteix de 220 € per a un alumne.</p>
+</div>
+</details>

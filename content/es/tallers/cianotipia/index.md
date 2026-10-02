@@ -79,3 +79,26 @@ En este taller preparamos la solución, emulsionamos el papel, exponemos con luz
 
 - Impresión de negativos en acetato adicionales (+materiales, consultar)
 - Soportes alternativos como tela o madera (disponibles como opción extra)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta laboratorio o cámara para hacer cianotipia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. La cianotipia se hace con el sol y papel sensibilizado: no hace falta cámara oscura ni cámara. Puedes trabajar con negativos impresos en acetato o con fotogramas de objetos.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuánto dura y cuánto cuesta el taller de cianotipia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller dura 8 horas, en grupos de máximo 4 personas, y parte de 420 € para un alumno. Incluye la química, el papel y los materiales de práctica.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Se puede hacer cianotipia con niños? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Es una de las técnicas más adecuadas para hacer con niños: no hacen falta químicos peligrosos y el resultado se ve enseguida.</p>
+</div>
+</details>

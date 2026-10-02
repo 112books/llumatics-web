@@ -75,3 +75,26 @@ Este taller es la continuación natural del revelado de película. Traes tus neg
 
 - Papel adicional (+2€/hoja RC, +4€/hoja fibra)
 - Papel de fibra de gran formato (consultar)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta saber revelar para hacer copias en papel? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Hace falta haber revelado alguna vez y tener negativos (propios o de práctica). Si nunca has revelado, empieza por la Iniciación al revelado o por el Revelado B/N.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuántas copias haré y qué papel incluye? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller incluye papel. El papel adicional y el de fibra van aparte (+2 €/hoja RC, +4 €/hoja fibra). Cada participante trabaja en la ampliadora y se lleva sus copias secas.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde puedo aprender a hacer copias en papel en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), en grupos de máximo 4 alumnos. El taller dura 4 horas y parte de 220 € para un alumno.</p>
+</div>
+</details>

@@ -75,3 +75,26 @@ This workshop is the natural continuation of film development. You bring your ne
 
 - Additional paper (+€2/sheet RC, +€4/sheet fibre)
 - Large-format fibre paper (enquire)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to know how to develop film to make paper prints? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>You need to have developed film before and to have negatives (your own or practice ones). If you have never developed, start with the Introduction to film development or B&W Development workshop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How many prints will I make and what paper is included? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The workshop includes paper. Additional paper and fibre paper cost extra (+2 €/sheet RC, +4 €/sheet fibre). Each participant works at the enlarger and takes their dry prints home.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn darkroom printing in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), in groups of up to 4 students. The workshop lasts 4 hours and starts at €220 for one student.</p>
+</div>
+</details>

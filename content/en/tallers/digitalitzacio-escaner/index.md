@@ -80,3 +80,26 @@ In this workshop we work with the lab's flatbed scanner and its scanning softwar
 
 - Lightroom or Photoshop licence (you must already have one; it is not provided)
 - Your own scanner for practice at home
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a computer or scanner? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>You don't need to bring a scanner: we use Llumàtics'. To practise at home you'll need your own scanner and a Lightroom or Photoshop licence, which is not provided.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I digitise family memories? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. The workshop works both for negatives and slides and for digitising family archives on paper.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn to scan negatives in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (Ferran Turné 1-11, La Sagrera, 08027). The workshop lasts 4 hours, in groups of up to 4, and starts at €220 for one student.</p>
+</div>
+</details>

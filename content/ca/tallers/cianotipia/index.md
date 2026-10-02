@@ -80,3 +80,26 @@ En aquest taller preparem la solució, emulsionem el paper, exposem amb llum sol
 
 - Impressió de negatius en acetat addicionals (+materials, consultar)
 - Suports alternatius com teixit o fusta (disponibles com a opció extra)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal laboratori o càmera per fer cianotípia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. La cianotípia es fa amb el sol i paper sensibilitzat: no cal cambra fosca ni càmera. Pots treballar amb negatius impresos en acetat o amb fotogrames d'objectes.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quant dura i quant costa el taller de cianotípia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller dura 8 hores, en grups de màxim 4 persones, i parteix de 420 € per a un alumne. Inclou la química, el paper i els materials de pràctica.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Es pot fer cianotípia amb criatures? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. És una de les tècniques més adequades per fer amb infants: no calen químics perillosos i el resultat es veu de seguida.</p>
+</div>
+</details>

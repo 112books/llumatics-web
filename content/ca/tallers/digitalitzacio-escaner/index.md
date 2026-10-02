@@ -82,3 +82,26 @@ En aquest taller treballem amb l'escàner del laboratori i el programari de gest
 
 - Llicència de Lightroom o Photoshop (has de tenir-la prèviament; no es facilita)
 - Escàner propi per a pràctica a casa
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar ordinador o escàner al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No cal portar escàner: fem servir el de Llumàtics. Per practicar a casa necessitaràs un escàner propi i una llicència de Lightroom o Photoshop, que no es facilita.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Puc digitalitzar records de casa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller serveix tant per a negatius i diapositives com per digitalitzar arxius familiars en paper.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre a digitalitzar negatius a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (Ferran Turné 1-11, La Sagrera, 08027). El taller dura 4 hores, en grups de màxim 4, i parteix de 220 € per a un alumne.</p>
+</div>
+</details>

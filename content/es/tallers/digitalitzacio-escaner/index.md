@@ -80,3 +80,26 @@ En este taller trabajamos con el escáner de plano del laboratorio y el software
 
 - Licencia de Lightroom o Photoshop (debes tenerla previamente; no se facilita)
 - Escáner propio para práctica en casa
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta llevar ordenador o escáner al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No hace falta llevar escáner: usamos el de Llumàtics. Para practicar en casa necesitarás un escáner propio y una licencia de Lightroom o Photoshop, que no se facilita.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo digitalizar recuerdos de casa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller sirve tanto para negativos y diapositivas como para digitalizar archivos familiares en papel.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde puedo aprender a digitalizar negativos en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la Nau Bostik (Ferran Turné 1-11, La Sagrera, 08027). El taller dura 4 horas, en grupos de máximo 4, y parte de 220 € para un alumno.</p>
+</div>
+</details>
