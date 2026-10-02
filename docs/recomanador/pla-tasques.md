@@ -29,7 +29,7 @@ Documentació de referència:
 - [ ] B4. Fitxa completa de cada flash en activar-se (protocol D-30).
 
 ## Bloc C — GEO / FAQ per curs
-- [ ] C1. Recerca de com es busca cada curs i taller per idioma.
+- [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
 - [ ] C2. FAQ específica per curs (nodreix IA i featured snippets).
 - [ ] C3. FAQPage a totes les fitxes amb FAQ (mecanisme fet).
 - [ ] C4. Landing "aprendre a revelar a Barcelona" + enllaços interns.
