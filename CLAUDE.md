@@ -680,6 +680,8 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] `continua_aprenent` de `revelats-experimentals` — afegir `guinneol`, `revelat-color-bn`
 - [ ] `archetypes/tallers.md` — actualitzar amb el frontmatter actual
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
+- [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
+- [ ] **WebP de les imatges principals (tallers/blog)** — aturat a petició de l'usuari (2026-10-02). Script `scripts/generate-webp.py` a punt; falta implementar `<picture>` a `tallers/single.html`, `blog/single.html` i `_default/single.html`, i apuntar-hi el preload del `head.html`.
 
 ### Qualitat i acabats
 - [ ] Responsive: revisió pendent (mòbil)
