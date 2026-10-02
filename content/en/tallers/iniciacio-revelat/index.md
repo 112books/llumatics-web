@@ -47,6 +47,8 @@ tags: ["development", "beginner", "35mm", "Cameras & Films"]
 draft: false
 ---
 
+**Want to learn to develop from scratch?** This **Introduction to film development** workshop takes place at Cameras & Films (Barcelona) in collaboration with Llumàtics: we load a roll, go out shooting and develop it. 3 hours, no prior experience needed.
+
 ## Everything in three hours
 
 Analogue photography has three moments: loading the camera, photographing and developing. In this workshop we do all three, without interruption and without splitting them across different days or workshops.
@@ -92,3 +94,20 @@ This isn't a complete development course. It's the best way to understand, for t
 ---
 
 *Dates are scheduled and managed directly by **Cameras & Films**. Check their calendar or get in touch with them to find out when the next session is.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Can I learn to develop film with no previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. This Introduction to film development workshop is designed for people who have never developed film: you load a roll, shoot it and develop it in a single three-hour session.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where is the introduction to film development workshop in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Cameras &amp; Films, Carrer d'en Rosic 3, Barcelona, in collaboration with Llumàtics. Dates are scheduled by Cameras &amp; Films.</p>
+</div>
+</details>
+

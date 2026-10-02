@@ -41,6 +41,8 @@ tags: ["development", "black and white", "push", "pull", "darkroom"]
 draft: false
 ---
 
+**Where can I learn to develop film in Barcelona?** At Llumàtics, at Nau Bostik (La Sagrera). This **B&W film development** workshop lasts 4 hours, includes two 35 mm rolls and all chemicals, and runs in groups of up to 4 people. Price: €220 for 1 student, €125 per person for 2, €94 for 3 and €79 for 4.
+
 ## There's no single correct development
 
 Standard developer and manufacturer timings are a starting point, not a destination. An underexposed film needs push development to recover density. An overexposed one needs pull to avoid blown highlights. And a correctly exposed film can be developed in many different ways depending on the result you're after.

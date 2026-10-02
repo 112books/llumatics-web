@@ -47,6 +47,8 @@ tags: ["revelado", "iniciación", "35mm", "Cameras & Films"]
 draft: false
 ---
 
+**¿Quieres aprender a revelar desde cero?** Este taller de **Iniciación al revelado** se hace en Cameras & Films (Barcelona) en colaboración con Llumàtics: cargamos un carrete, salimos a disparar y lo revelamos. 3 horas, sin experiencia previa.
+
 ## Todo en tres horas
 
 La fotografía analógica tiene tres momentos: cargar la cámara, fotografiar y revelar. En este taller los hacemos todos, sin interrupciones y sin separarlos en días ni talleres distintos.
@@ -92,3 +94,20 @@ No es un curso completo de revelado. Es la mejor manera de entender por primera 
 ---
 
 *Las fechas las programa y gestiona directamente **Cameras & Films**. Consulta su agenda o escríbeles para saber cuándo es la próxima sesión.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Se puede aprender a revelar películas sin experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Este taller de Iniciación al revelado está pensado para quien nunca ha revelado: se carga un carrete, se dispara y se revela en una sola sesión de tres horas.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde se hace el taller de iniciación al revelado en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Cameras &amp; Films, en la Calle d'en Rosic 3 de Barcelona, en colaboración con Llumàtics. Las fechas las programa Cameras &amp; Films.</p>
+</div>
+</details>
+

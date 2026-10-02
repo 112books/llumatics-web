@@ -49,6 +49,8 @@ tags: ["revelat", "iniciació", "35mm", "Cameras & Films"]
 draft: false
 ---
 
+**Vols aprendre a revelar des de zero?** Aquest taller d'**Iniciació al revelat** es fa a Cameras & Films (Barcelona) en col·laboració amb Llumàtics: carreguem un rodet, sortim a disparar i el revelem. 3 hores, sense experiència prèvia.
+
 ## Tot en tres hores
 
 La fotografia analògica té tres moments: carregar la càmera, fotografiar i revelar. En aquest taller els fem tots tres, sense interrupcions i sense separar-los en dies ni tallers distints.
@@ -100,3 +102,20 @@ Comencem a Cameras & Films: expliquem com funciona un carret de 35mm i com es ca
 - [tel:+34935160545](tel:+34935160545)
 - [@camerasandfilms](https://www.instagram.com/camerasandfilms.barcelona/)
 - tienda@camerasandfilms.com
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Es pot aprendre a revelar pel·lícules sense experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Aquest taller d'Iniciació al revelat està pensat per a qui no ha revelat mai: es carrega un rodet, es dispara i es revela en una sola sessió de tres hores.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On es fa el taller d'iniciació al revelat a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Cameras &amp; Films, al Carrer d'en Rosic 3 de Barcelona, en col·laboració amb Llumàtics. Les dates les programa Cameras &amp; Films.</p>
+</div>
+</details>
+

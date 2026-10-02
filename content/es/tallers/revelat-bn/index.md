@@ -41,6 +41,8 @@ tags: ["revelado", "blanco y negro", "push", "pull", "laboratorio"]
 draft: false
 ---
 
+**¿Dónde aprender a revelar película en Barcelona?** En Llumàtics, en la Nau Bostik (La Sagrera). Este taller de **Revelado de película B/N** dura 4 horas, incluye dos carretes de 35 mm y todos los productos químicos, y se hace en grupos de máximo 4 personas. Precio: 220 € para 1 alumno, 125 € por persona si sois 2, 94 € si sois 3 y 79 € si sois 4.
+
 ## No hay un solo revelado correcto
 
 El revelador estándar y los tiempos del fabricante son un punto de partida, no un destino. Una película subexpuesta necesita un revelado forzado (push) para recuperar densidad. Una sobreexpuesta necesita un pull para no quemar las altas luces. Y una película expuesta correctamente puede revelarse de maneras muy diversas dependiendo del resultado que busques.
