@@ -5,7 +5,7 @@ description: "Results from the push processing workshop at the Barcelona Blues F
 date: 2019-07-18
 tags: ["development", "push processing", "festival", "blues", "street", "results"]
 course_ref: "revelat-bn"
-image: ""
+image: "/images/blog/resultats-taller-forcats-blues-2019.jpg"
 draft: false
 ---
 

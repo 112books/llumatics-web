@@ -5,7 +5,7 @@ description: "Results from Llumàtics' analogue portrait workshop of 22 February
 date: 2019-02-25
 tags: ["portrait", "results", "workshop", "analogue"]
 course_ref: "retrat-analogic"
-image: ""
+image: "/images/blog/resultats-taller-retrat-2019-02.jpg"
 draft: false
 ---
 

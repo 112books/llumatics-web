@@ -4,7 +4,7 @@ lead: "Would you like a 100% analogue one-to-one session? Now is the moment."
 description: "Llumàtics opens registration for personalised analogue photography one-to-one sessions, with paper prints to size. Autumn 2020."
 date: 2020-10-21
 tags: ["sessions", "one-to-one", "analogue", "large format", "portrait"]
-image: ""
+image: "/images/blog/sessions-individuals-2020.jpg"
 draft: false
 ---
 

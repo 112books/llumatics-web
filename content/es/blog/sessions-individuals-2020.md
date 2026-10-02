@@ -4,7 +4,7 @@ lead: "¿Te gustaría una sesión individual 100% analógica? Ahora es el moment
 description: "Llumàtics abre inscripciones para sesiones individuales de fotografía analógica personalizadas, con copias en papel a medida. Otoño 2020."
 date: 2020-10-21
 tags: ["sesiones", "individual", "analógica", "gran formato", "retrato"]
-image: ""
+image: "/images/blog/sessions-individuals-2020.jpg"
 draft: false
 ---
 

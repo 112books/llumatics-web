@@ -42,4 +42,4 @@ Documentació de referència:
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
 
 ## Bloc E — Contingut i imatges
-- [ ] E1. Imatge de portada per als posts de blog sense imatge. Fet (provisional) `revelat-zenit-cameras-films-2025-02`; pendents: `jornades-obertes-nau-bostik-2022`, `resultats-taller-forcats-blues-2019`, `resultats-taller-retrat-2019-02`, `sessions-individuals-2020`, `trasllat-nau-bostik`.
+- [x] E1. Imatge de portada per als 6 posts de blog sense imatge. Totes provisionals (del mateix tema/espai), pendents de substituir per fotos reals: `revelat-zenit-cameras-films-2025-02`, `jornades-obertes-nau-bostik-2022`, `resultats-taller-forcats-blues-2019`, `resultats-taller-retrat-2019-02`, `sessions-individuals-2020`, `trasllat-nau-bostik`.

@@ -5,7 +5,7 @@ description: "Llumàtics va participar a les jornades obertes de la Nau Bostik e
 date: 2022-11-26
 tags: ["Nau Bostik", "gran format", "retrat", "jornades obertes", "gratuït"]
 course_ref: "gran-format-4x5"
-image: ""
+image: "/images/blog/jornades-obertes-nau-bostik-2022.jpg"
 draft: false
 ---
 

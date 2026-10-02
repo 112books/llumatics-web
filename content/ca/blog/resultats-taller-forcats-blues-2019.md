@@ -5,7 +5,7 @@ description: "Resultats del taller de revelat forçat al Festival de Blues de Ba
 date: 2019-07-18
 tags: ["revelat", "forçat", "festival", "blues", "carrer", "resultats"]
 course_ref: "revelat-bn"
-image: ""
+image: "/images/blog/resultats-taller-forcats-blues-2019.jpg"
 draft: false
 ---
 

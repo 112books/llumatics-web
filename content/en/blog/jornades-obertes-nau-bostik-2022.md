@@ -5,7 +5,7 @@ description: "Llumàtics took part in the Nau Bostik open days on 26 November 20
 date: 2022-11-26
 tags: ["Nau Bostik", "large format", "portrait", "open days", "free"]
 course_ref: "gran-format-4x5"
-image: ""
+image: "/images/blog/jornades-obertes-nau-bostik-2022.jpg"
 draft: false
 ---
 
