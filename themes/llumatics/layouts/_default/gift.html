@@ -20,7 +20,7 @@
     <svg class="gift-hero__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
     </svg>
-    <p class="section__eyebrow">{{ i18n "gift_title" | default "Vals-regal" }}</p>
+    <p class="section__eyebrow">{{ i18n "gift_title" }}</p>
     <h1 class="gift-hero__title">{{ .Title }}</h1>
     <div class="prose gift-hero__content">{{ .Content }}</div>
     <p class="gift-hero__sub">{{ i18n "gift_hero_sub" }}</p>
@@ -163,17 +163,17 @@
           <span class="gift-card-preview__school">{{ i18n "gift_card_school" }}</span>
         </div>
         <div class="gift-card-preview__main">
-          <div class="gift-card-preview__title">{{ i18n "gift_card_title" | default "Val Regal" }}</div>
+          <div class="gift-card-preview__title">{{ i18n "gift_card_title" }}</div>
           <div class="gift-card-preview__divider"></div>
         </div>
         <div class="gift-card-preview__footer">
-          <span class="gift-card-preview__validity">{{ i18n "gift_card_validity" | default "Vàlid 6 mesos" }}</span>
-          <span class="gift-card-preview__tag">{{ i18n "gift_card_any_workshop" | default "Qualsevol taller" }}</span>
+          <span class="gift-card-preview__validity">{{ i18n "gift_card_validity" }}</span>
+          <span class="gift-card-preview__tag">{{ i18n "gift_card_any_workshop" }}</span>
         </div>
       </div>
     </div>
     <p class="gift-info">
-      {{ i18n "gift_info" | default "El val s'envia per correu electrònic en format PDF imprimible. Recomanem imprimir-lo i posar-lo en un sobre — fa molt més efecte." }}
+      {{ i18n "gift_info" }}
     </p>
   </div>
 

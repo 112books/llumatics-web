@@ -3,7 +3,7 @@ title: "Fotografia estenopèica"
 layout: "private-doc"
 url: "/tallers/fotografia-estenopeica/privat/doc/"
 course_ref: "fotografia-estenopeica"
-image: "/images/tallers/fotografia-estenopeica.jpg"
+image: "/images/tallers/fotografia-estenopèica.jpg"
 noindex: true
 sitemap:
   disable: true

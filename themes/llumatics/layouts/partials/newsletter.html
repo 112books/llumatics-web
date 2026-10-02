@@ -5,17 +5,17 @@
 <section class="newsletter-block">
   <div class="container">
     <h2 class="newsletter-block__title">
-      {{ i18n "newsletter_title" | default "Llum a la teva safata d'entrada" }}
+      {{ i18n "newsletter_title" }}
     </h2>
     <p class="newsletter-block__desc">
-      {{ i18n "newsletter_desc" | default "Nous tallers, reflexions sobre fotografia i notícies del laboratori. Sense soroll." }}
+      {{ i18n "newsletter_desc" }}
     </p>
 
     {{ if .Site.Params.brevoNewsletterFormURL }}
       <a href="{{ .Site.Params.brevoNewsletterFormURL }}"
          class="btn btn--accent"
          target="_blank" rel="noopener">
-        {{ i18n "newsletter_cta" | default "Subscriure'm" }}
+        {{ i18n "newsletter_cta" }}
       </a>
     {{ else if .Site.Params.tallyFormNewsletter }}
       <div style="max-width:480px; margin-inline:auto;">

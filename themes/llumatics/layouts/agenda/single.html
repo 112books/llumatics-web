@@ -11,10 +11,10 @@
 
   {{ $siteRoot := strings.TrimSuffix "/" site.BaseURL }}
   {{ $lp       := $.Site.LanguagePrefix }}
-  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" | default "Breadcrumb" }}">
-    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
+  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" }}">
+    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" }}</a>
     <span class="breadcrumb__sep">›</span>
-    <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}">{{ i18n "nav_agenda" | default "Agenda" }}</a>
+    <a href="{{ printf "%s%s/agenda/" $siteRoot $lp }}">{{ i18n "nav_agenda" }}</a>
     <span class="breadcrumb__sep">›</span>
     <span>{{ .Title }}</span>
   </nav>
@@ -36,12 +36,12 @@
           {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
           {{ if isset .Params "price" }}
             {{ if eq (.Params.price | int) 0 }}
-              <span class="agenda-item__price">{{ i18n "price_free" | default "Gratuït" }}</span>
+              <span class="agenda-item__price">{{ i18n "price_free" }}</span>
             {{ else }}
               <span class="agenda-item__price"><strong>{{ .Params.price }}€</strong></span>
             {{ end }}
           {{ end }}
-          {{ with .Params.max_places }}<span>{{ printf (i18n "agenda_max_places" | default "Màxim %s persones") . }}</span>{{ end }}
+          {{ with .Params.max_places }}<span>{{ printf (i18n "agenda_max_places") (string .) }}</span>{{ end }}
         </div>
       </div>
     </div>
@@ -53,10 +53,10 @@
     {{ if $taller }}
     <div class="agenda-single__taller-link">
       <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:0.5rem;">
-        {{ i18n "agenda_course_info" | default "Taller" }}
+        {{ i18n "agenda_course_info" }}
       </p>
       <a href="{{ $taller.RelPermalink }}" class="btn btn--outline btn--sm">
-        {{ i18n "agenda_see_course" | default "Veure la fitxa del taller" }} →
+        {{ i18n "agenda_see_course" }} →
       </a>
     </div>
     {{ end }}
@@ -65,25 +65,25 @@
       {{ if eq $status "active" }}
         {{ if $purchaseURL }}
           <a href="{{ $purchaseURL }}" class="btn btn--primary" target="_blank" rel="noopener">
-            {{ .Params.cta_label | default (i18n "cta_buy" | default "Comprar plaça") }}
+            {{ .Params.cta_label | default (i18n "cta_buy") }}
           </a>
           {{ if not (hasPrefix $purchaseURL "mailto:") }}
           <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:0.75rem;">
-            {{ i18n "agenda_buy_note" | default "La compra es fa a través de la plataforma de pagament segur. Rebràs confirmació per correu." }}
+            {{ i18n "agenda_buy_note" }}
           </p>
           {{ end }}
         {{ else }}
           <a href="{{ printf "%s%s/contacte/" $siteRoot $lp }}" class="btn btn--primary">
-            {{ i18n "cta_register" | default "Inscripció" }}
+            {{ i18n "cta_register" }}
           </a>
         {{ end }}
       {{ else if eq $status "full" }}
         <p class="course-card__status course-card__status--full" style="font-size:1rem; padding:0.75rem 1.5rem;">
-          {{ i18n "status_full" | default "Complet" }}
+          {{ i18n "status_full" }}
         </p>
       {{ else if eq $status "cancelled" }}
         <p style="color:var(--color-text-muted);">
-          {{ i18n "status_cancelled" | default "Aquesta sessió ha estat cancel·lada." }}
+          {{ i18n "status_cancelled" }}
         </p>
       {{ end }}
     </div>

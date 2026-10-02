@@ -3,8 +3,8 @@
 {{ $lp       := $.Site.LanguagePrefix }}
 <article class="section container">
 
-  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" | default "Breadcrumb" }}">
-    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" | default "Inici" }}</a>
+  <nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_label" }}">
+    <a href="{{ printf "%s%s/" $siteRoot $lp }}">{{ i18n "home" }}</a>
     <span class="breadcrumb__sep">›</span>
     <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}">{{ i18n "nav_blog" }}</a>
     <span class="breadcrumb__sep">›</span>
@@ -29,7 +29,7 @@
   <button type="button" class="blog-post__cover js-lightbox-trigger"
           data-src="{{ $imgSrc }}"
           data-gallery="{{ .File.ContentBaseName }}"
-          aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
+          aria-label="{{ i18n "lightbox_enlarge" }}">
     <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="eager">
   </button>
   {{ end }}
@@ -41,7 +41,7 @@
     <button type="button" class="gallery__item js-lightbox-trigger"
             data-src="{{ $gsrc }}"
             data-gallery="{{ $.File.ContentBaseName }}"
-            aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
+            aria-label="{{ i18n "lightbox_enlarge" }}">
       <img src="{{ $gsrc }}" alt="{{ $.Title }} ({{ add $i 1 }})" loading="lazy">
     </button>
     {{ end }}
@@ -56,7 +56,7 @@
   {{ $taller := site.GetPage (printf "/ca/tallers/%s" .) }}
   {{ if $taller }}
   <div class="blog-post__related-course">
-    <p class="blog-post__related-label">{{ i18n "blog_related_course" | default "Taller relacionat" }}</p>
+    <p class="blog-post__related-label">{{ i18n "blog_related_course" }}</p>
     <a href="{{ $taller.RelPermalink }}" class="btn btn--outline btn--sm">
       {{ $taller.Title }} →
     </a>
@@ -66,7 +66,7 @@
 
   <footer class="blog-post__footer">
     <a href="{{ printf "%s%s/blog/" $siteRoot $lp }}" class="blog-post__back">
-      ← {{ i18n "blog_back" | default "Tornar al blog" }}
+      ← {{ i18n "blog_back" }}
     </a>
   </footer>
 

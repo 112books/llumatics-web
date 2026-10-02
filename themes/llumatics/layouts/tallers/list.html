@@ -13,7 +13,7 @@
         {{ $quizPage := "" }}
         {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizPage = . }}{{ end }}{{ end }}
         {{ with $quizPage }}
-        <p style="margin-top:1.5rem;"><a href="{{ .RelPermalink }}" class="btn btn--primary">{{ i18n "quiz_cta_button" | default "Quin curs em convé?" }} →</a></p>
+        <p style="margin-top:1.5rem;"><a href="{{ .RelPermalink }}" class="btn btn--primary">{{ i18n "quiz_cta_button" }} →</a></p>
         {{ end }}
       </div>
     </div>
@@ -26,9 +26,9 @@
   {{/* Navegació per blocs — filtre visual */}}
   {{ $blocs := hugo.Data.blocs }}
   {{ if $blocs }}
-  <nav class="blocs-nav" aria-label="{{ i18n "filter_by_area" | default "Filtrar per àmbit" }}">
+  <nav class="blocs-nav" aria-label="{{ i18n "filter_by_area" }}">
     <a href="#tots" class="bloc-pill bloc-pill--active js-bloc-filter" data-bloc="tots">
-      {{ i18n "filter_all" | default "Tots" }}
+      {{ i18n "filter_all" }}
     </a>
     {{ range $blocs }}
     {{ $pillNom := .nom }}
@@ -96,10 +96,10 @@
   {{ $externs := where .Pages ".Params.extern" true }}
   {{ if $externs }}
   <section style="margin-top:5rem; padding-top:3rem; border-top:1px solid var(--color-border);">
-    <p class="section__eyebrow">{{ i18n "extern_workshops_eyebrow" | default "Col·laboracions" }}</p>
+    <p class="section__eyebrow">{{ i18n "extern_workshops_eyebrow" }}</p>
     <h2 class="section__title" style="font-size:1.875rem; margin-bottom:0.5rem;">{{ i18n "extern_workshops_title" }}</h2>
     <p class="section__subtitle" style="margin-bottom:2rem;">
-      {{ i18n "extern_workshops_subtitle" | default "Tallers impartits en col·laboració amb altres espais. Mateix enfocament, entorn diferent." }}
+      {{ i18n "extern_workshops_subtitle" }}
     </p>
     <div class="courses-grid">
       {{ range $externs }}

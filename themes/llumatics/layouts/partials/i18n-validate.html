@@ -1,0 +1,15 @@
+{{/* Valida que ca.yaml, es.yaml i en.yaml tinguin exactament les mateixes claus.
+     Si en falta o en sobra una, atura el build amb errorf. */}}
+{{- $ca := readFile "themes/llumatics/i18n/ca.yaml" | transform.Unmarshal -}}
+{{- $es := readFile "themes/llumatics/i18n/es.yaml" | transform.Unmarshal -}}
+{{- $en := readFile "themes/llumatics/i18n/en.yaml" | transform.Unmarshal -}}
+{{- range $k, $v := $ca -}}
+  {{- if not (isset $es $k) }}{{ errorf "i18n: falta la clau %q a es.yaml" $k }}{{ end -}}
+  {{- if not (isset $en $k) }}{{ errorf "i18n: falta la clau %q a en.yaml" $k }}{{ end -}}
+{{- end -}}
+{{- range $k, $v := $es -}}
+  {{- if not (isset $ca $k) }}{{ errorf "i18n: la clau %q de es.yaml no existeix a ca.yaml" $k }}{{ end -}}
+{{- end -}}
+{{- range $k, $v := $en -}}
+  {{- if not (isset $ca $k) }}{{ errorf "i18n: la clau %q de en.yaml no existeix a ca.yaml" $k }}{{ end -}}
+{{- end -}}

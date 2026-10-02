@@ -1,15 +1,16 @@
 {{ $id := .Get "id" | default "galeria" }}
 {{ $images := strings.Split .Inner "\n" }}
+{{ $galTitle := .Page.Title }}
 <div class="gallery-grid" data-gallery="{{ $id }}" data-inner-len="{{ len .Inner }}" data-count="{{ len $images }}">
-{{ range $images }}
-  {{ $img := . | strings.TrimSpace }}
+{{ range $i, $raw := $images }}
+  {{ $img := $raw | strings.TrimSpace }}
   {{ if $img }}
   {{ $src := $img | strings.TrimPrefix "/" | relURL }}
   <button class="gallery__item js-lightbox-trigger"
           data-src="{{ $src }}"
           data-gallery="{{ $id }}"
-          aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
-    <img src="{{ $src }}" alt="">
+          aria-label="{{ i18n "lightbox_enlarge" }}">
+    <img src="{{ $src }}" alt="{{ $galTitle }} ({{ add $i 1 }})">
   </button>
   {{ end }}
 {{ end }}

@@ -3,7 +3,7 @@ title: "Fotografia de carrer"
 layout: "private-doc"
 url: "/tallers/fotografia-de-carrer/privat/doc/"
 course_ref: "fotografia-de-carrer"
-image: "/images/tallers/fotografia-de-carrer.jpg"
+image: "/images/tallers/fotografia-carrer.jpg"
 noindex: true
 sitemap:
   disable: true

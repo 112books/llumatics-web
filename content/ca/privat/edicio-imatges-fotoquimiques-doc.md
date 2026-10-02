@@ -3,7 +3,7 @@ title: "Del negatiu a la imatge — edició digital per a fotografia analògica"
 layout: "private-doc"
 url: "/tallers/edicio-imatges-fotoquimiques/privat/doc/"
 course_ref: "edicio-imatges-fotoquimiques"
-image: "/images/tallers/edicio-imatges-fotoquimiques.jpg"
+image: "/images/tallers/edicio-imatges-fotoquimiques.png"
 noindex: true
 sitemap:
   disable: true

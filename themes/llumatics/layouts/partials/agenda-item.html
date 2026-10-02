@@ -17,7 +17,7 @@
 {{ $preuLabel := "" }}
 {{ if isset .Params "price" }}
   {{ if eq (.Params.price | int) 0 }}
-    {{ $preuLabel = i18n "price_free" | default "Gratuït" }}
+    {{ $preuLabel = i18n "price_free" }}
   {{ else }}
     {{ $preuLabel = printf "%v€" .Params.price }}
   {{ end }}
@@ -67,28 +67,28 @@
     {{ if eq $status "active" }}
       {{ if $purchaseURL }}
         <a href="{{ $purchaseURL }}" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
-          {{ .Params.cta_label | default (i18n "cta_buy" | default "Comprar plaça") }}
+          {{ .Params.cta_label | default (i18n "cta_buy") }}
         </a>
       {{ else }}
         {{ with $taller }}
           <a href="{{ .RelPermalink }}" class="btn btn--primary btn--sm">
-            {{ i18n "cta_register" | default "Inscripció" }}
+            {{ i18n "cta_register" }}
           </a>
         {{ end }}
       {{ end }}
     {{ else if eq $status "full" }}
       <span class="course-card__status course-card__status--full">
-        {{ i18n "status_full" | default "Complet" }}
+        {{ i18n "status_full" }}
       </span>
     {{ else if eq $status "soon" }}
       <span class="course-card__status course-card__status--soon">
-        {{ i18n "status_soon" | default "Properament" }}
+        {{ i18n "status_soon" }}
       </span>
     {{ else if eq $status "past" }}
-      <span class="agenda-item__past-badge">{{ i18n "status_past" | default "Realitzat" }}</span>
+      <span class="agenda-item__past-badge">{{ i18n "status_past" }}</span>
       {{ with $taller }}
         <a href="{{ .RelPermalink }}" class="btn btn--ghost btn--sm" style="margin-top:.5rem;">
-          {{ i18n "cta_more_info" | default "Veure taller" }}
+          {{ i18n "cta_more_info" }}
         </a>
       {{ end }}
     {{ end }}

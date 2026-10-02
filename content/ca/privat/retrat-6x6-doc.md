@@ -3,7 +3,7 @@ title: "Retrat en mig format 6×6"
 layout: "private-doc"
 url: "/tallers/retrat-6x6/privat/doc/"
 course_ref: "retrat-6x6"
-image: "/images/tallers/retrat-6x6.jpg"
+image: "/images/tallers/retrat-analogic-6x6.jpg"
 noindex: true
 sitemap:
   disable: true

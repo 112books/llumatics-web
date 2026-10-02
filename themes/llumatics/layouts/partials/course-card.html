@@ -55,21 +55,21 @@
         {{/* Preu — nou sistema preu_1/tipus, amb fallback a price/formats (antic) */}}
         {{ if isset .Params "preu_1" }}
           {{ if eq (.Params.tipus | default "") "curs" }}
-            <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
+            <span class="course-card__format-badge">{{ i18n "format_recorregut" }}</span>
           {{ end }}
           {{ if gt (.Params.preu_1 | int) 0 }}
-            {{ i18n "price_from" | default "des de" }} {{ .Params.preu_4 | default .Params.preu_1 }}€
+            {{ i18n "price_from" }} {{ .Params.preu_4 | default .Params.preu_1 }}€
           {{ else }}
-            {{ i18n "price_free" | default "Gratuït" }}
+            {{ i18n "price_free" }}
           {{ end }}
         {{ else if isset .Params "price" }}
           {{ if in (.Params.formats | default slice) "curs" }}
-            <span class="course-card__format-badge">{{ i18n "format_recorregut" | default "Recorregut" }}</span>
+            <span class="course-card__format-badge">{{ i18n "format_recorregut" }}</span>
           {{ end }}
           {{ if gt (.Params.price | int) 0 }}
             {{ .Params.price }}€
           {{ else }}
-            {{ i18n "price_free" | default "Gratuït" }}
+            {{ i18n "price_free" }}
           {{ end }}
         {{ else }}
           &mdash;
@@ -84,7 +84,7 @@
         </a>
       {{ else if eq $estat "full" }}
         <span class="course-card__status course-card__status--full">
-          {{ i18n "status_full" | default "Complet" }}
+          {{ i18n "status_full" }}
         </span>
       {{ else }}
         <a href="{{ .RelPermalink }}" class="course-card__cta">

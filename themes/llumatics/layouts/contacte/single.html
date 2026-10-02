@@ -16,11 +16,11 @@
   </header>
 
   {{/* ── Navegació d'ancores ─────────────────────────────────────────────── */}}
-  <nav class="contact-anchors" aria-label="{{ i18n "contact_anchors_label" | default "Seccions de la pàgina" }}">
-    <a class="contact-anchor__link" href="#dades">{{ i18n "contact_anchor_details" | default "Contacte" }}</a>
-    <a class="contact-anchor__link" href="#formulari">{{ i18n "contact_anchor_form" | default "Escriu-nos" }}</a>
-    <a class="contact-anchor__link" href="#com-arribar-hi">{{ i18n "contact_anchor_map" | default "Com arribar-hi" }}</a>
-    <a class="contact-anchor__link" href="#transport">{{ i18n "contact_anchor_transport" | default "Transport públic" }}</a>
+  <nav class="contact-anchors" aria-label="{{ i18n "contact_anchors_label" }}">
+    <a class="contact-anchor__link" href="#dades">{{ i18n "contact_anchor_details" }}</a>
+    <a class="contact-anchor__link" href="#formulari">{{ i18n "contact_anchor_form" }}</a>
+    <a class="contact-anchor__link" href="#com-arribar-hi">{{ i18n "contact_anchor_map" }}</a>
+    <a class="contact-anchor__link" href="#transport">{{ i18n "contact_anchor_transport" }}</a>
     <a class="contact-anchor__link" href="#faq">FAQ</a>
   </nav>
 
@@ -29,8 +29,8 @@
 
     {{/* ── Formulari de contacte ─────────────────────────────────────────── */}}
     <section class="contact-form-section" id="formulari">
-      <h2 class="contact-section__title">{{ i18n "contact_form_title" | default "Escriu-nos" }}</h2>
-      <p class="contact-form-section__lead">{{ i18n "contact_form_lead" | default "Intentem contestar en un màxim de 48 hores en dies feiners." }}</p>
+      <h2 class="contact-section__title">{{ i18n "contact_form_title" }}</h2>
+      <p class="contact-form-section__lead">{{ i18n "contact_form_lead" }}</p>
 
       {{ if site.Params.web3formsKey }}
       <form class="contact-form" id="contact-form" novalidate>
@@ -41,15 +41,15 @@
 
         {{/* Tipus de consulta */}}
         <fieldset class="contact-form__fieldset">
-          <legend class="contact-form__legend">{{ i18n "inquiry_type" | default "Tipus de consulta" }}</legend>
+          <legend class="contact-form__legend">{{ i18n "inquiry_type" }}</legend>
           <div class="contact-form__radios">
             <label class="contact-form__radio">
               <input type="radio" name="tipus" value="consulta-general" checked>
-              <span>{{ i18n "inquiry_general" | default "Consulta general" }}</span>
+              <span>{{ i18n "inquiry_general" }}</span>
             </label>
             <label class="contact-form__radio">
               <input type="radio" name="tipus" value="sol·licitar-taller" id="radio-taller">
-              <span>{{ i18n "inquiry_workshop" | default "Sol·licitar un taller" }}</span>
+              <span>{{ i18n "inquiry_workshop" }}</span>
             </label>
           </div>
         </fieldset>
@@ -57,11 +57,11 @@
         {{/* Dades personals */}}
         <div class="contact-form__row">
           <div class="contact-form__field">
-            <label class="contact-form__label" for="nom">{{ i18n "form_name" | default "Nom i cognoms" }} <span aria-hidden="true">*</span></label>
+            <label class="contact-form__label" for="nom">{{ i18n "form_name" }} <span aria-hidden="true">*</span></label>
             <input class="contact-form__input" type="text" id="nom" name="name" required autocomplete="name">
           </div>
           <div class="contact-form__field">
-            <label class="contact-form__label" for="email">{{ i18n "form_email" | default "Correu electrònic" }} <span aria-hidden="true">*</span></label>
+            <label class="contact-form__label" for="email">{{ i18n "form_email" }} <span aria-hidden="true">*</span></label>
             <input class="contact-form__input" type="email" id="email" name="email" required autocomplete="email">
           </div>
         </div>
@@ -70,13 +70,13 @@
         <div class="contact-form__taller-fields" id="taller-fields" hidden>
 
           <div class="contact-form__field">
-            <label class="contact-form__label" for="taller">{{ i18n "form_workshop_label" | default "Taller d'interès" }}</label>
+            <label class="contact-form__label" for="taller">{{ i18n "form_workshop_label" }}</label>
             <select class="contact-form__select" id="taller" name="taller">
-              <option value="">{{ i18n "form_workshop_placeholder" | default "— Escull un taller —" }}</option>
+              <option value="">{{ i18n "form_workshop_placeholder" }}</option>
               {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
               {{ range sort $tallers ".Title" "asc" }}
                 {{ if not .Params.extern }}
-                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — {{ i18n "price_from" | default "des de" }} {{ .Params.preu_1 }}€{{ end }}</option>
+                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — {{ i18n "price_from" }} {{ .Params.preu_1 }}€{{ end }}</option>
                 {{ end }}
               {{ end }}
             </select>
@@ -84,24 +84,24 @@
 
           <div class="contact-form__row">
             <div class="contact-form__field">
-              <label class="contact-form__label" for="data">{{ i18n "form_date" | default "Data ideal" }}</label>
+              <label class="contact-form__label" for="data">{{ i18n "form_date" }}</label>
               <input class="contact-form__input" type="date" id="data" name="data">
             </div>
             <div class="contact-form__field">
-              <label class="contact-form__label" for="horari">{{ i18n "form_schedule" | default "Horari preferit" }}</label>
+              <label class="contact-form__label" for="horari">{{ i18n "form_schedule" }}</label>
               <select class="contact-form__select" id="horari" name="horari">
-                <option value="mati">{{ i18n "schedule_morning" | default "Matí (10–14h)" }}</option>
-                <option value="tarda">{{ i18n "schedule_afternoon" | default "Tarda (16–18h)" }}</option>
-                <option value="indiferent" selected>{{ i18n "schedule_any" | default "Indiferent" }}</option>
+                <option value="mati">{{ i18n "schedule_morning" }}</option>
+                <option value="tarda">{{ i18n "schedule_afternoon" }}</option>
+                <option value="indiferent" selected>{{ i18n "schedule_any" }}</option>
               </select>
             </div>
             <div class="contact-form__field">
-              <label class="contact-form__label" for="alumnes">{{ i18n "form_students" | default "Nombre d'alumnes" }}</label>
+              <label class="contact-form__label" for="alumnes">{{ i18n "form_students" }}</label>
               <select class="contact-form__select" id="alumnes" name="alumnes">
-                <option value="1">1 {{ i18n "form_student_singular" | default "alumne" }}</option>
-                <option value="2">2 {{ i18n "form_student_plural" | default "alumnes" }}</option>
-                <option value="3">3 {{ i18n "form_student_plural" | default "alumnes" }}</option>
-                <option value="4">4 {{ i18n "form_student_plural" | default "alumnes" }}</option>
+                <option value="1">1 {{ i18n "form_student_singular" }}</option>
+                <option value="2">2 {{ i18n "form_student_plural" }}</option>
+                <option value="3">3 {{ i18n "form_student_plural" }}</option>
+                <option value="4">4 {{ i18n "form_student_plural" }}</option>
               </select>
             </div>
           </div>
@@ -110,13 +110,13 @@
 
         {{/* Missatge */}}
         <div class="contact-form__field">
-          <label class="contact-form__label" for="missatge">{{ i18n "form_message" | default "Missatge" }}</label>
+          <label class="contact-form__label" for="missatge">{{ i18n "form_message" }}</label>
           <textarea class="contact-form__textarea" id="missatge" name="message" rows="4"></textarea>
         </div>
 
         <input type="hidden" name="_language" value="{{ .Language.Lang }}">
 
-        <button type="submit" class="btn btn--primary">{{ i18n "form_send" | default "Enviar" }}</button>
+        <button type="submit" class="btn btn--primary">{{ i18n "form_send" }}</button>
         <p class="contact-form__error" id="contact-form-error" role="alert" hidden></p>
 
       </form>
@@ -162,7 +162,7 @@
 
       {{ else }}
       <div class="contact-form-placeholder">
-        <p>{{ i18n "contact_form_soon" | default "El formulari s'activarà aviat. Mentrestant, escriu-nos directament:" }}</p>
+        <p>{{ i18n "contact_form_soon" }}</p>
         <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn--primary btn--lg">{{ site.Params.contactEmail }}</a>
       </div>
       {{ end }}
@@ -173,7 +173,7 @@
     <aside class="contact-sidebar" id="dades">
 
       <section class="contact-map" id="com-arribar-hi">
-        <h2 class="contact-section__title">{{ i18n "how_to_get_here" | default "Com arribar-hi" }}</h2>
+        <h2 class="contact-section__title">{{ i18n "how_to_get_here" }}</h2>
 
         <div class="contact-details">
           <div class="contact-detail">
@@ -202,12 +202,12 @@
         </div>
         <ul class="map-legend">
           <li><span class="map-legend__dot" style="background:#E3001C"></span> Metro</li>
-          <li><span class="map-legend__dot" style="background:#FF6D00"></span> {{ i18n "transport_commuter_rail" | default "Rodalies / FGC" }}</li>
+          <li><span class="map-legend__dot" style="background:#FF6D00"></span> {{ i18n "transport_commuter_rail" }}</li>
           <li><span class="map-legend__dot" style="background:#0059A8"></span> Bus</li>
           <li><span class="map-legend__dot" style="background:#00A651"></span> Bicing</li>
         </ul>
         <p class="contact-map__link">
-          <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" | default "Obrir al mapa" }} →</a>
+          <a href="https://www.openstreetmap.org/?mlat=41.424371&mlon=2.192952#map=17/41.424371/2.192952" target="_blank" rel="noopener noreferrer">{{ i18n "open_in_osm" }} →</a>
         </p>
       </section>
       <script>
@@ -275,7 +275,7 @@
 
   {{/* ── Cards de transport ──────────────────────────────────────────────── */}}
   <section class="contact-transport" id="transport">
-    <h2 class="contact-section__title">{{ i18n "transport_motto" | default "Llumàtics aposta sempre per el transport públic" }}</h2>
+    <h2 class="contact-section__title">{{ i18n "transport_motto" }}</h2>
     <div class="transport-grid">
 
       <div class="transport-card">
@@ -285,7 +285,7 @@
         <div>
           <strong class="transport-card__name">Metro</strong>
           <span class="transport-card__lines">L1, L5, L9N, L10N — La Sagrera</span>
-          <span class="transport-card__detail">{{ i18n "transport_walk_8_10" | default "8–10 min caminant" }}</span>
+          <span class="transport-card__detail">{{ i18n "transport_walk_8_10" }}</span>
         </div>
       </div>
 
@@ -294,9 +294,9 @@
           <img src="{{ "images/transport/tren.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">{{ i18n "transport_commuter_rail" | default "Rodalies" }}</strong>
+          <strong class="transport-card__name">{{ i18n "transport_commuter_rail" }}</strong>
           <span class="transport-card__lines">R4 — La Sagrera</span>
-          <span class="transport-card__detail">{{ i18n "transport_walk_10" | default "10 min caminant" }}</span>
+          <span class="transport-card__detail">{{ i18n "transport_walk_10" }}</span>
         </div>
       </div>
 
@@ -317,8 +317,8 @@
         </span>
         <div>
           <strong class="transport-card__name">Bicing</strong>
-          <span class="transport-card__lines">{{ i18n "transport_bicing_station" | default "Estació a Av. Meridiana / Pont del Treball" }}</span>
-          <span class="transport-card__detail">{{ i18n "transport_bicing_detail" | default "~5 min caminant fins a la nau" }}</span>
+          <span class="transport-card__lines">{{ i18n "transport_bicing_station" }}</span>
+          <span class="transport-card__detail">{{ i18n "transport_bicing_detail" }}</span>
         </div>
       </div>
 
@@ -327,9 +327,9 @@
           <img src="{{ "images/transport/parquing-bici.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">{{ i18n "transport_bike_parking" | default "Pàrquing de bicicleta" }}</strong>
+          <strong class="transport-card__name">{{ i18n "transport_bike_parking" }}</strong>
           <span class="transport-card__lines"></span>
-          <span class="transport-card__detail">{{ i18n "transport_bike_parking_detail" | default "Aparcament a l'entrada de la Nau Bostik" }}</span>
+          <span class="transport-card__detail">{{ i18n "transport_bike_parking_detail" }}</span>
         </div>
       </div>
 
@@ -338,8 +338,8 @@
           <img src="{{ "images/transport/avio.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">{{ i18n "transport_airport" | default "Aeroport El Prat" }}</strong>
-          <span class="transport-card__lines">TMB + {{ i18n "transport_commuter_rail" | default "Rodalies" }}</span>
+          <strong class="transport-card__name">{{ i18n "transport_airport" }}</strong>
+          <span class="transport-card__lines">TMB + {{ i18n "transport_commuter_rail" }}</span>
           <span class="transport-card__detail">45–60 min</span>
         </div>
       </div>
@@ -349,8 +349,8 @@
           <img src="{{ "images/transport/port.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">{{ i18n "transport_port" | default "Port de Barcelona" }}</strong>
-          <span class="transport-card__lines">{{ i18n "transport_commuter_rail" | default "Rodalies" }} + Metro</span>
+          <strong class="transport-card__name">{{ i18n "transport_port" }}</strong>
+          <span class="transport-card__lines">{{ i18n "transport_commuter_rail" }} + Metro</span>
           <span class="transport-card__detail">30–45 min</span>
         </div>
       </div>
@@ -360,8 +360,8 @@
           <img src="{{ "images/transport/parquing.svg" | relURL }}" alt="" width="32" height="32">
         </span>
         <div>
-          <strong class="transport-card__name">{{ i18n "transport_parking" | default "Pàrquing" }}</strong>
-          <span class="transport-card__lines">{{ i18n "transport_parking_lines" | default "Zona blava propera" }}</span>
+          <strong class="transport-card__name">{{ i18n "transport_parking" }}</strong>
+          <span class="transport-card__lines">{{ i18n "transport_parking_lines" }}</span>
           <span class="transport-card__detail">~2,50 €/hora</span>
         </div>
       </div>
@@ -372,7 +372,7 @@
   {{/* ── FAQ ────────────────────────────────────────────────────────────── */}}
   {{ if .Content }}
   <section class="contact-faq" id="faq">
-    <h2 class="contact-section__title">{{ i18n "faq_title" | default "FAQ" }}</h2>
+    <h2 class="contact-section__title">{{ i18n "faq_title" }}</h2>
     {{ .Content }}
   </section>
   {{ end }}

@@ -353,8 +353,8 @@
 {{- $product := dict
       "@context" "https://schema.org"
       "@type" "Product"
-      "name" (i18n "gift_card_title" | default "Val regal")
-      "description" (i18n "gift_desc" | default "Val regal per a tallers de fotografia analògica")
+      "name" (i18n "gift_card_title")
+      "description" (i18n "gift_desc")
       "brand" (dict "@type" "Brand" "name" "Llumàtics")
       "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
       "url" .Permalink
@@ -370,7 +370,7 @@
 
 {{/* JSON-LD — BreadcrumbList (AEO). Generat de la jerarquia de seccions. */}}
 {{- if not .IsHome -}}
-{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" (i18n "home" | default "Inici") "item" (absURL "/")) -}}
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" (i18n "home") "item" (absURL "/")) -}}
 {{- $pos := 2 -}}
 {{- range .Ancestors.Reverse -}}
   {{- if not .IsHome -}}

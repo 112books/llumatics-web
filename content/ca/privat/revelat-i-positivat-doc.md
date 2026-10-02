@@ -3,7 +3,7 @@ title: "Revelat + positivat en un dia"
 layout: "private-doc"
 url: "/tallers/revelat-i-positivat/privat/doc/"
 course_ref: "revelat-i-positivat"
-image: "/images/tallers/revelat-i-positivat.jpg"
+image: "/images/tallers/revelat-positiva-1dia.jpg"
 noindex: true
 sitemap:
   disable: true

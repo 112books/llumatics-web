@@ -3,7 +3,7 @@ title: "Còpies en paper"
 layout: "private-doc"
 url: "/tallers/copies-en-paper/privat/doc/"
 course_ref: "copies-en-paper"
-image: "/images/tallers/copies-en-paper.jpg"
+image: "/images/tallers/introduccio-al-positivat-2.jpg"
 noindex: true
 sitemap:
   disable: true

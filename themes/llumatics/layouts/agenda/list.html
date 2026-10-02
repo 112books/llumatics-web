@@ -57,7 +57,7 @@
     </div>
     {{ else }}
     <div class="container">
-      <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" | default "Ara mateix no hi ha dates programades. Escriu-nos per acordar una sessió." }}</p>
+      <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" }}</p>
     </div>
     {{ end }}
 
@@ -66,7 +66,7 @@
     {{ $paginator := .Paginate $past }}
     <section class="agenda-historic" id="historic">
       <div class="container">
-        <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" | default "Tallers anteriors" }}</h2>
+        <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" }}</h2>
       </div>
       <div class="agenda-grid agenda-grid--wide agenda-grid--past">
         {{ range $paginator.Pages }}
