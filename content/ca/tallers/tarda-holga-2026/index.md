@@ -71,7 +71,7 @@ Nosaltres ho celebrem el dia 8, l'endemà, amb una tarda a la Nau Bostik. **És 
 
 La teva Holga, si en tens. Si no, porta qualsevol càmera de joguina o analògica. En tindrem unes quantes de préstec, però són poques: si en vols una, escriu-nos amb antelació.
 
-Pel·lícula: si no en portes, tindrem rodets de blanc i negre de 120 i de 35 mm a 10 € cadascun. Recomanem ISO 400.
+Pel·lícula: si no en portes, tindrem rodets de blanc i negre de 120 i de 35 mm a 12–16 € cadascun. Recomanem ISO 400.
 
 ## I després, el rodet
 
@@ -107,7 +107,7 @@ L'activitat és gratuïta, però les places per a les càmeres de préstec són 
 <details class="faq-item">
 <summary class="faq-question">He de portar pel·lícula? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>Si en tens, porta-la. Si no, tindrem rodets B/N de 120 i 35 mm a 10 € cadascun; recomanem ISO 400.</p>
+<p>Si en tens, porta-la. Si no, tindrem rodets B/N de 120 i 35 mm a 12–16 € cadascun; recomanem ISO 400.</p>
 </div>
 </details>
 

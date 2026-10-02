@@ -71,7 +71,7 @@ We celebrate it on the 8th with an afternoon at Nau Bostik. **It's free.** It is
 
 Your Holga, if you have one. If not, bring any toy or analogue camera. We'll have a few to lend, but only a few: if you'd like one, email us in advance.
 
-Film: if you don't bring any, we'll have 120 and 35 mm black-and-white rolls at 10 € each. ISO 400 recommended.
+Film: if you don't bring any, we'll have 120 and 35 mm black-and-white rolls at 12–16 € each. ISO 400 recommended.
 
 ## And then, the roll
 
@@ -107,7 +107,7 @@ The event is free, but places for loan cameras are limited. Fill in the **[conta
 <details class="faq-item">
 <summary class="faq-question">Do I need to bring film? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>If you have some, bring it. If not, we will have 120 and 35 mm B/W rolls at €10 each; ISO 400 recommended.</p>
+<p>If you have some, bring it. If not, we will have 120 and 35 mm B/W rolls at €12–16 each; ISO 400 recommended.</p>
 </div>
 </details>
 
