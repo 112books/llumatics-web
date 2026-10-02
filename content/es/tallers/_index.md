@@ -10,3 +10,5 @@ En Llumàtics organizamos la formación como un metro: seis líneas, cada una co
 Todos los talleres en Llumàtics son privados, con un **máximo de cuatro alumnos** por sesión.
 
 Colaboramos también con [Cameras & Films](https://www.camerasandfilms.com) (antigua Lomography Embassy Barcelona), donde impartimos talleres de retrato en gran formato, revelado en B/N y revelados experimentales.
+
+Si quieres empezar por el laboratorio, mira la guía [Aprende a revelar película en Barcelona](/es/aprender-a-revelar/).

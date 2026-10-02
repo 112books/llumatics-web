@@ -10,3 +10,5 @@ At Llumàtics we organise training like a metro: six lines, each with its own ro
 All workshops at Llumàtics are private, with a **maximum of four students** per session.
 
 We also collaborate with [Cameras & Films](https://www.camerasandfilms.com) (formerly the Lomography Embassy Barcelona), where we run large format portrait workshops, black and white darkroom courses and experimental developing workshops.
+
+If you want to start with the darkroom, see the guide [Learn to develop film in Barcelona](/en/learn-film-development/).
