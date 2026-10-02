@@ -4160,3 +4160,12 @@ a.recorregut-stop__name:hover {
 .quiz__tutoria h3 { margin-top: 0; }
 .quiz__tutoria-final { color: var(--color-text-muted); font-size: var(--text-sm); margin: var(--space-6) 0; }
 .quiz__contact { border-top: 1px solid var(--color-border); padding-top: var(--space-5); margin-top: var(--space-8); }
+
+/* Recomanador: bloc "També et pot interessar" (formacions flash en preparació) */
+.quiz__prep { border-top: 1px solid var(--color-border); padding-top: var(--space-5); margin-top: var(--space-8); }
+.quiz__prep h3 { margin-top: 0; }
+.quiz__prep ul { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+.quiz__prep li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-3); }
+.quiz__prep-title { font-weight: 600; }
+.quiz__prep-date { color: var(--color-text-muted); font-size: var(--text-sm); }
+.quiz__prep-cta { margin-left: auto; color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; }

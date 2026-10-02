@@ -800,6 +800,15 @@ if (contactForm) {
 
     if (!tutFirst && tut) h += '<p class="quiz__tutoria-final">' + esc(t('quiz_result_tutoria_text')) + ' <a href="' + esc(tut.url) + '">' + esc(t('quiz_result_tutoria_title')) + '</a></p>';
 
+    var prep = data.prep || [];
+    if (prep.length) {
+      h += '<div class="quiz__prep"><h3>' + esc(t('quiz_result_preparacio_title')) + '</h3><ul>';
+      prep.slice(0, 4).forEach(function (p) {
+        h += '<li><span class="quiz__prep-title">' + esc(p.title) + '</span><span class="quiz__prep-date">' + esc(p.date) + '</span><a class="quiz__prep-cta" href="' + esc(contact + '?taller=' + p.slug + '#formulari') + '">' + esc(t('quiz_interest_cta')) + '</a></li>';
+      });
+      h += '</ul></div>';
+    }
+
     var contactUrl = contact;
     if (top.length) {
       var rec = top.map(function (c) { return c.title; }).join(' · ');

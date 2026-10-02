@@ -44,11 +44,20 @@
 {{ $t := dict }}
 {{ range $tKeys }}{{ $t = merge $t (dict . (i18n .)) }}{{ end }}
 
+{{ $lang := site.Language.Lang }}
+{{ $today := now.Format "2006-01-02" }}
+{{ $prep := slice }}
+{{ range index hugo.Data "formacions-flash" }}
+  {{ if ge (.data | default "") $today }}
+    {{ $prep = $prep | append (dict "slug" .slug "title" (index .titol $lang | default (index .titol "ca")) "date" .data "linia" .linia) }}
+  {{ end }}
+{{ end }}
 {{ $qc := index hugo.Data.quiz "quin_curs" }}
 {{ $payload := dict
   "t" $t
   "quiz" $qc
   "courses" $courses
+  "prep" $prep
   "contact" (printf "%s%s/contacte/" (strings.TrimSuffix "/" site.BaseURL) site.LanguagePrefix)
   "tutoriaSlug" "tutoria-fotografica" }}
 

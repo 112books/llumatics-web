@@ -1,0 +1,58 @@
+# Formacions flash proposades (estat en-preparacio). Les fitxes completes es fan al D-30.
+# El recomanador les mostra al bloc "També et pot interessar".
+- slug: fotografia-desperits
+  data: "2026-10-31"
+  linia: practica
+  titol: { ca: "Fotografia d'esperits", es: "Fotografía de espíritus", en: "Spirit photography" }
+- slug: caffenol-setmana-ciencia
+  data: "2026-11-14"
+  linia: quimica
+  titol: { ca: "Caffenol: revela amb cafè", es: "Caffenol: revela con café", en: "Caffenol: develop with coffee" }
+- slug: postals-cianotipia-nadal
+  data: "2026-12-05"
+  linia: processos
+  titol: { ca: "Postals i regals en cianotípia", es: "Postales y regalos en cianotipia", en: "Cyanotype postcards and gifts" }
+- slug: solargrafia
+  data: "2026-12-21"
+  linia: processos
+  titol: { ca: "Solargrafia: sis mesos en una llauna", es: "Solargrafía: seis meses en una lata", en: "Solargraphy: six months in a can" }
+- slug: film-swap
+  data: "2027-01-16"
+  linia: practica
+  titol: { ca: "Film Swap Llumàtics", es: "Film Swap Llumàtics", en: "Film Swap Llumàtics" }
+- slug: herbari-blau
+  data: "2027-03-16"
+  linia: processos
+  titol: { ca: "Herbari blau", es: "Herbario azul", en: "Blue herbarium" }
+- slug: instantania-polaroid-week
+  data: "2027-04-20"
+  linia: processos
+  titol: { ca: "Instantània: el laboratori dins del paper", es: "Instantánea: el laboratorio dentro del papel", en: "Instant film: the lab inside the paper" }
+- slug: antotipia
+  data: "2027-04-22"
+  linia: processos
+  titol: { ca: "Antotípia: fotografiar amb plantes", es: "Antotipia: fotografiar con plantas", en: "Anthotype: photographing with plants" }
+- slug: llibret-sant-jordi
+  data: "2027-04-23"
+  linia: practica
+  titol: { ca: "Llibret fotogràfic artesà", es: "Librillo fotográfico artesano", en: "Handmade photobook" }
+- slug: estenopeica-pinhole-day
+  data: "2027-04-25"
+  linia: processos
+  titol: { ca: "Estenopeica a la Nau", es: "Esténopeica en la Nau", en: "Pinhole at Nau Bostik" }
+- slug: collodio-humit
+  data: "2027-05-01"
+  linia: gran-format
+  titol: { ca: "Col·lodió humit", es: "Colodión húmedo", en: "Wet plate collodion" }
+- slug: visa-pour-limage
+  data: "2027-09-11"
+  linia: practica
+  titol: { ca: "Escapada a Visa pour l'Image", es: "Escapada a Visa pour l'Image", en: "Trip to Visa pour l'Image" }
+- slug: cianotipia-collectiva
+  data: "2027-09-25"
+  linia: processos
+  titol: { ca: "Cianotípia col·lectiva", es: "Cianotipia colectiva", en: "Collective cyanotype" }
+- slug: holga-week-2027
+  data: "2027-10-02"
+  linia: practica
+  titol: { ca: "Sortida Holga", es: "Salida Holga", en: "Holga outing" }
