@@ -41,5 +41,8 @@ Documentació de referència:
 - [x] D3. Accessibilitat de l'accent: tot el text d'accent passa a `--color-accent-dark` (#00719E); el ceruli clar queda per a fons/botons/icones.
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
 
+## Bloc F — Traducció i llenguatge
+- [~] F1. Auditoria de traducció i llenguatge fotogràfic: `docs/manuals/auditoria-traduccio-llenguatge.md` (primera passada + correccions de «laboratorio oscuro» i «cámara oscura»). Pendent: decisió sobre «quarto fosc» i revisió completa.
+
 ## Bloc E — Contingut i imatges
 - [x] E1. Imatge de portada per als 6 posts de blog sense imatge. Totes provisionals (del mateix tema/espai), pendents de substituir per fotos reals: `revelat-zenit-cameras-films-2025-02`, `jornades-obertes-nau-bostik-2022`, `resultats-taller-forcats-blues-2019`, `resultats-taller-retrat-2019-02`, `sessions-individuals-2020`, `trasllat-nau-bostik`.

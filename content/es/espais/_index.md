@@ -1,7 +1,7 @@
 ---
 title: "Los espacios"
-subtitle: "Laboratorio oscuro, plató y biblioteca. En la Nau Bostik, Barcelona."
-description: "Las instalaciones de Llumàtics en la Nau Bostik: laboratorio oscuro con ampliadoras de gran formato, plató fotográfico y biblioteca especializada. Visitas con cita previa."
+subtitle: "Cuarto oscuro, plató y biblioteca. En la Nau Bostik, Barcelona."
+description: "Las instalaciones de Llumàtics en la Nau Bostik: cuarto oscuro con ampliadoras de gran formato, plató fotográfico y biblioteca especializada. Visitas con cita previa."
 eyebrow: "Instalaciones"
 ---
 
@@ -11,7 +11,7 @@ Los espacios de Llumàtics no están abiertos al público de manera permanente. 
 
 ---
 
-## El laboratorio oscuro {#laboratori}
+## El cuarto oscuro {#laboratori}
 
 {{< galeria id="laboratori" >}}
 /images/espais/laboratori-1.jpeg

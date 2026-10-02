@@ -49,7 +49,7 @@ draft: false
 
 ## La primera vez bajo la luz roja
 
-Entrar en un laboratorio oscuro, con la luz roja encendida, y ver cómo aparece una imagen en la cubeta de revelador es una experiencia que no se olvida. No hay ninguna aplicación que se le parezca.
+Entrar en un cuarto oscuro, con la luz roja encendida, y ver cómo aparece una imagen en la cubeta de revelador es una experiencia que no se olvida. No hay ninguna aplicación que se le parezca.
 
 Esta sesión es para quien nunca lo ha hecho. Trabajamos en la ampliadora: proyectamos el negativo sobre el papel, enfocamos, exponemos, revelamos y vemos el resultado. Sencillo, pero mucho más satisfactorio de lo que parece.
 
@@ -57,7 +57,7 @@ Si quieres ir más lejos —aprender controles locales, esquivar y quemar, traba
 
 ## Contenidos
 
-- Orientación en el laboratorio oscuro: materiales, seguridad y orden de trabajo
+- Orientación en el cuarto oscuro: materiales, seguridad y orden de trabajo
 - La ampliadora: tipos, partes, foco y medida de la luz
 - Tira de pruebas: cómo leerla y decidir la exposición
 - Revelado en cubeta: revelador, stop y fijador
