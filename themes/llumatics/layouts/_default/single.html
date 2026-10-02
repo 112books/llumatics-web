@@ -27,7 +27,7 @@
 
   {{ if .Params.image }}
   <div style="margin-bottom:3rem; border-radius:4px; overflow:hidden;">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" style="width:100%; max-height:480px; object-fit:cover;">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" style="width:100%; max-height:480px; object-fit:cover;">
   </div>
   {{ end }}
 

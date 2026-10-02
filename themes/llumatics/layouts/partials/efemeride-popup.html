@@ -31,7 +31,7 @@
           aria-label="{{ i18n "efemeride_close" }}">&#215;</button>
   <a class="efemeride-popup__card" href="{{ .url | relLangURL }}">
     <div class="efemeride-popup__image">
-      <img src="{{ .imatge | relURL }}" alt="" loading="lazy">
+      <img src="{{ .imatge | relURL }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .imatge) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" loading="lazy">
       <span class="efemeride-popup__flash" aria-hidden="true">Flash!</span>
     </div>
     <div class="efemeride-popup__body">

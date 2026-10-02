@@ -52,8 +52,8 @@ El Caffenol funciona gracias a la química del café: los **compuestos fenólico
 A diferencia de otros reveladores alternativos como el [Guinneol](/es/tallers/guinneol/) o el [Wineol](/es/tallers/wineol/), el Caffenol es sorprendentemente **estable y predecible**: con la misma receta y las mismas condiciones, da resultados consistentes cada vez.
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/docs/caffenol/caffenol-05a.jpg" alt="Caffenol — negativo escaneado en blanco y negro" style="width:50%; object-fit:cover">
-    <img src="/images/docs/caffenol/caffenol-05b.jpg" alt="Caffenol — negativo escaneado en color, tonos cálidos" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05a.jpg" width="1188" height="1200" alt="Caffenol — negativo escaneado en blanco y negro" style="width:50%; height:auto; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05b.jpg" width="1185" height="1200" alt="Caffenol — negativo escaneado en color, tonos cálidos" style="width:50%; height:auto; object-fit:cover">
   </div>
 
 ## La receta

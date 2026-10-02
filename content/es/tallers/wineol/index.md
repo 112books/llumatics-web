@@ -58,8 +58,8 @@ El Wineol funciona por el mismo principio que el Caffenol: los **taninos del vin
 La diferencia respecto al Caffenol es que el vino **sustituye completamente al agua** —no se mezcla, reemplaza. Esto hace que la concentración de taninos y de alcohol sea muy variable, y que el proceso sea menos controlable pero mucho más interesante.
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/tallers/wineol02.jpg" alt="Wineol — preparación del revelador" style="width:50%; object-fit:cover">
-    <img src="/images/tallers/wineol03.jpg" alt="Wineol — resultado sobre negativo" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol02.jpg" width="1200" height="1200" alt="Wineol — preparación del revelador" style="width:50%; height:auto; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" width="1200" height="1200" alt="Wineol — resultado sobre negativo" style="width:50%; height:auto; object-fit:cover">
   </div>
 
 ## La receta

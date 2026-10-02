@@ -22,6 +22,7 @@ linia: "practica"
 nivell_minim: 2
 format: "curs"
 canal: "llumatics"
+sense_doc: true
 blocs: ["practica"]
 weight: 25
 nivell: "Intermedi"

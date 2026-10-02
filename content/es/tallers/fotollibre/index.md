@@ -18,6 +18,7 @@ linia: "practica"
 nivell_minim: 0
 format: "curs"
 canal: "llumatics"
+sense_doc: true
 blocs: ["practica"]
 weight: 92
 nivell: "Tots els nivells"

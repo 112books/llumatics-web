@@ -52,8 +52,8 @@ Caffenol works thanks to the chemistry of coffee: the **phenolic compounds** in 
 Unlike other alternative developers such as [Guinneol](/en/tallers/guinneol/) or [Wineol](/en/tallers/wineol/), Caffenol is surprisingly **stable and predictable**: the same recipe and conditions give consistent results every time.
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/docs/caffenol/caffenol-05a.jpg" alt="Caffenol — negative scanned in black and white" style="width:50%; object-fit:cover">
-    <img src="/images/docs/caffenol/caffenol-05b.jpg" alt="Caffenol — negative scanned in colour, warm tones" style="width:50%; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05a.jpg" width="1188" height="1200" alt="Caffenol — negative scanned in black and white" style="width:50%; height:auto; object-fit:cover">
+    <img src="/images/docs/caffenol/caffenol-05b.jpg" width="1185" height="1200" alt="Caffenol — negative scanned in colour, warm tones" style="width:50%; height:auto; object-fit:cover">
   </div>
 
 ## The recipe

@@ -58,8 +58,8 @@ Wineol works on the same principle as Caffenol: the **tannins in red wine** act 
 The difference from Caffenol is that wine **completely replaces water** — it doesn't mix in, it takes over. This makes the concentration of tannins and alcohol highly variable, and the process less controllable but far more interesting.
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/tallers/wineol02.jpg" alt="Wineol — preparing the developer" style="width:50%; object-fit:cover">
-    <img src="/images/tallers/wineol03.jpg" alt="Wineol — result on negative" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol02.jpg" width="1200" height="1200" alt="Wineol — preparing the developer" style="width:50%; height:auto; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" width="1200" height="1200" alt="Wineol — result on negative" style="width:50%; height:auto; object-fit:cover">
   </div>
 
 ## The recipe

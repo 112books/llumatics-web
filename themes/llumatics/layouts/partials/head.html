@@ -57,7 +57,12 @@
   {{- $metaTitle = printf "%s — %s" $title (.Params.date_start | time.Format "02/01/2006") -}}
 {{- end -}}
 {{- if gt $pageNum 0 }}{{ $metaTitle = printf "%s (%s %d)" $title (i18n "pagination_page") $pageNum }}{{ end -}}
-<title>{{ if .IsHome }}{{ $metaTitle }}{{ else }}{{ $metaTitle }} — {{ .Site.Title }}{{ end }}</title>
+{{- $docTitle := $metaTitle -}}
+{{- if not .IsHome -}}
+  {{- $full := printf "%s — %s" $metaTitle .Site.Title -}}
+  {{- if le (len $full) 60 }}{{ $docTitle = $full }}{{ end -}}
+{{- end -}}
+<title>{{ $docTitle }}</title>
 
 {{/* Canonical amb self-canonical correcte a la paginació
      (abans /blog/page/2/ declarava el canonical de /blog/). */}}

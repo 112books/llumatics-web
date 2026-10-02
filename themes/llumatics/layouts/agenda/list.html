@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="page-with-bg">
-  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/agenda-2024-08-12-LM6-Minitar-Fomapan100@400-Bera-C-0013.jpg" }}" alt="" aria-hidden="true">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/agenda-2024-08-12-LM6-Minitar-Fomapan100@400-Bera-C-0013.jpg" }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" "images/agenda-2024-08-12-LM6-Minitar-Fomapan100@400-Bera-C-0013.jpg") }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
 
   <div style="position:relative; z-index:1; padding-block: var(--space-16);">
 

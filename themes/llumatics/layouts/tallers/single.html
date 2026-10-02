@@ -27,7 +27,7 @@
           data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
           data-gallery="{{ .File.ContentBaseName }}"
           aria-label="{{ i18n "lightbox_enlarge" }}">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="{{ .Title }}" loading="eager">
+    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" loading="eager">
   </button>
   {{ end }}
 
@@ -99,7 +99,7 @@
             data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
             data-gallery="{{ $.File.ContentBaseName }}"
             aria-label="{{ i18n "lightbox_enlarge" }}">
-      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
+      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" loading="lazy">
     </button>
     {{ end }}
   </div>

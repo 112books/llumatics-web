@@ -1,2 +1,2 @@
 {{- $src := .Destination | strings.TrimPrefix "/" | relURL -}}
-<img src="{{ $src }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+<img src="{{ $src }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Destination) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">

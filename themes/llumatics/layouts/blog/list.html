@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="page-with-bg">
-  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/tallers-bg.jpg" }}" alt="" aria-hidden="true">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/tallers-bg.jpg" }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" "images/tallers-bg.jpg") }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
 
   <div class="section container" style="position:relative; z-index:1;">
 
@@ -18,7 +18,7 @@
         <a href="{{ .RelPermalink }}" class="blog-card__image-link" tabindex="-1" aria-hidden="true">
           <div class="blog-card__image">
             {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
-            <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="lazy">
+            <img src="{{ $imgSrc }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" loading="lazy">
           </div>
         </a>
         {{ end }}

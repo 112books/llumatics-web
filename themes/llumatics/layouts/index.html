@@ -11,7 +11,7 @@
 {{/* ── Hero ───────────────────────────────────────────────────────────── */}}
 <section class="hero hero--with-image">
   {{ with .Params.heroImage }}
-    <img class="hero__bg" src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" aria-hidden="true">
+    <img class="hero__bg" src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
   {{ end }}
   <div class="container hero__content">
     <div class="hero__inner">
@@ -115,7 +115,7 @@
     <article class="blog-preview-card">
       {{ if .Params.image }}
       <a href="{{ .RelPermalink }}" class="blog-preview-card__image" tabindex="-1" aria-hidden="true">
-        <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" alt="" loading="lazy">
+        <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" loading="lazy">
       </a>
       {{ end }}
       <div class="blog-preview-card__body">

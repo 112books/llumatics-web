@@ -35,7 +35,7 @@
   {{/* Imatge principal */}}
   {{ if $courseImage }}
   <div class="doc-hero-image">
-    <img src="{{ $courseImage }}" alt="{{ $courseTitle }}" loading="eager">
+    <img src="{{ $courseImage }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" $courseImage) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ $courseTitle }}" loading="eager">
   </div>
   {{ end }}
 

@@ -58,8 +58,8 @@ El Wineol funciona pel mateix principi que el Caffenol: els **tanins del vi negr
 La diferència respecte al Caffenol és que el vi **substitueix completament l'aigua** —no es barreja, reemplaça. Això fa que la concentració de tanins i d'alcohol sigui molt variable, i que el procés sigui menys controlable però molt més interessant.
 
   <div style="display:flex; gap:1rem; margin-bottom:1rem">
-    <img src="/images/tallers/wineol02.jpg" alt="Descripció" style="width:50%; object-fit:cover">
-    <img src="/images/tallers/wineol03.jpg" alt="Descripció" style="width:50%; object-fit:cover">
+    <img src="/images/tallers/wineol02.jpg" width="1200" height="1200" alt="Descripció" style="width:50%; height:auto; object-fit:cover">
+    <img src="/images/tallers/wineol03.jpg" width="1200" height="1200" alt="Descripció" style="width:50%; height:auto; object-fit:cover">
   </div>
 
 ## La recepta

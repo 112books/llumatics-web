@@ -10,7 +10,7 @@
           data-src="{{ $src }}"
           data-gallery="{{ $id }}"
           aria-label="{{ i18n "lightbox_enlarge" }}">
-    <img src="{{ $src }}" alt="{{ $galTitle }} ({{ add $i 1 }})">
+    <img src="{{ $src }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" $img) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ $galTitle }} ({{ add $i 1 }})">
   </button>
   {{ end }}
 {{ end }}

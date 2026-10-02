@@ -12,7 +12,7 @@
 <script type="application/json" id="gift-config">{{ $giftCfg | jsonify | safeJS }}</script>
 
 <div class="page-with-bg">
-<img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/regala-un-curs-llumatics.jpg" }}" alt="" aria-hidden="true">
+<img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/regala-un-curs-llumatics.jpg" }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" "images/regala-un-curs-llumatics.jpg") }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
 <div class="gift-page container" style="position:relative; z-index:1;">
 
   {{/* Hero */}}
@@ -121,7 +121,7 @@
     {{/* ── Val imprimible ── */}}
     <div id="gift-voucher-print" class="gift-voucher-print">
       <div class="gvp__header">
-        <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}" alt="Llumàtics">
+        <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}" alt="Llumàtics" width="56" height="56">
         <span class="gvp__name">Llumàtics</span>
       </div>
       <div class="gvp__body">
@@ -155,7 +155,7 @@
   <div class="gift-preview-section">
     <div class="gift-card-preview">
       <div class="gift-card-preview__bg" aria-hidden="true">
-        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="">
+        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" width="56" height="56">
       </div>
       <div class="gift-card-preview__content">
         <div class="gift-card-preview__header">

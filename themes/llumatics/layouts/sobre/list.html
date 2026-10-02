@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="page-with-bg">
-  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/sobre-llumatics.jpg" }}" alt="" aria-hidden="true">
+  <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/sobre-llumatics.jpg" }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" "images/sobre-llumatics.jpg") }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="" aria-hidden="true">
 
   <div class="section container" style="position:relative; z-index:1;">
     <div class="section__header" style="max-width:720px;">
