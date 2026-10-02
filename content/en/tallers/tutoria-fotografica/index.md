@@ -3,7 +3,7 @@ title: "Photography tutorial"
 seo_title: "Photography tutorial · Film photography workshop · Llumàtics"
 subtitle: "Personalised support at your own pace and on your own terms"
 lead: "An individual session designed around you: bring your questions, your project or your difficulties, and we work on exactly what you need."
-description: "Individual analogue photography tutorial in Barcelona. Personalised darkroom, technique or project support. €60/hour, minimum 2 hours."
+description: "One-to-one film photography tutorial: darkroom, technique or project support at your own pace, from €60/hour. At Nau Bostik, Barcelona."
 image: "/images/tallers/tutoria-fotografica.jpg"
 
 # Classification

@@ -3,7 +3,7 @@ title: "Retrat en gran format"
 seo_title: "Retrat en gran format · Taller de fotografia analògica · Llumàtics"
 subtitle: "Una càmera del segle XIX, paper fotosensible i una persona al davant"
 lead: "Retratar una persona amb una càmera de finals del segle XIX, treballant directament sobre paper fotosensible. Una experiència única que explica d'on ve tot."
-description: "Taller de retrat en gran format amb càmera del s.XIX i paper fotosensible. Impartit a Cameras & Films, Barcelona."
+description: "Retratem amb una càmera del segle XIX sobre paper fotosensible i revelem cada còpia a mà. Fotografia analògica. A Cameras & Films, Barcelona."
 image: "/images/tallers/retrat-gran-format.jpg"
 images:
   - "/images/tallers/retrat-gran-format-1.jpg"

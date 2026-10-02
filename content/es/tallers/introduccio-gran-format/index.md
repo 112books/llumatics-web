@@ -3,7 +3,7 @@ title: "Introducción al gran formato"
 seo_title: "Introducción al gran formato · Taller de fotografía analógica · Llumàtics"
 subtitle: "Descubre la fotografía lenta antes de sumergirte de lleno"
 lead: "Un primer contacto con la cámara de placas: entender por qué existe, cómo funciona y cuál es la lógica de un sistema que obliga a fotografiar de una manera completamente diferente."
-description: "Taller introductorio al gran formato fotográfico. Primera sesión con cámara de placas, medida de la luz y exposición. Barcelona."
+description: "Primer contacto con la cámara de placas: móntala, mide la luz y expón tus hojas. Fotografía analógica de gran formato. En la Nau Bostik, Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
 images: []
 

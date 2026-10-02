@@ -3,7 +3,7 @@ title: "Scanning and digitisation"
 seo_title: "Scanning and digitisation · Film photography workshop · Llumàtics"
 subtitle: "Your negatives deserve better than a phone photo"
 lead: "You have developed negatives and want to scan them properly. Not to share on Instagram, but to have quality files that hold up for large prints or professional editing. Learn to extract everything that's in the negative."
-description: "Analogue negative digitisation workshop using a flatbed scanner. Optimal settings, colour management and professional editing in Photoshop and Lightroom. Barcelona."
+description: "Scan your film negatives properly: scanner settings, colour management and editing to get archive-quality files. At Nau Bostik, Barcelona."
 image: "/images/tallers/digitalitzacio-escaner.jpg"
 
 # Classification

@@ -3,7 +3,7 @@ title: "Fotolibro: del concepto a la materialización"
 seo_title: "Fotolibro: del concepto a la materialización · Taller de fotografía analógica · Llumàtics"
 subtitle: "Del cuerpo de trabajo al libro real."
 lead: "Tres sesiones para convertir tus fotos en un fotolibro: concepto, diseño digital y producción. Salida a PDF, ePub o impresión vía 112books."
-description: "Taller de creación de fotolibro en Barcelona. Conceptualización, narrativa visual, diseño con Affinity Publisher y producción. Máximo 4 personas. Bajo demanda."
+description: "Convierte tu cuerpo de trabajo en un fotolibro: concepto, narrativa y diseño. Taller de fotografía analógica. En la Nau Bostik, Barcelona."
 image: "/images/tallers/fotollibre.jpg"
 images:
   - "/images/tallers/fotollibre-1.jpg"

@@ -3,7 +3,7 @@ title: "Learn to control light"
 seo_title: "Learn to control light · Film photography workshop · Llumàtics"
 subtitle: "How to get started with film photography."
 lead: "The starting point for everyone. We understand how a camera works and why photos come out the way they do. We use analogue cameras because they force you to think, but what you learn here applies to any camera."
-description: "Introduction to analogue photography workshop in Barcelona. Learn the exposure triangle and shoot in manual mode. Max. 4 students, on demand."
+description: "Learn film photography from the start: the exposure triangle and manual shooting, with an analogue camera in your hands. At Nau Bostik, Barcelona."
 image: "/images/tallers/fonaments-iniciacio-puntual.jpg"
 
 # Classification

@@ -3,7 +3,7 @@ title: "Caffenol: revela con café"
 seo_title: "Caffenol: revela con café · Taller de fotografía analógica · Llumàtics"
 subtitle: "Un revelador hecho con café soluble, carbonato de sosa y vitamina C."
 lead: "Tres ingredientes de farmacia y supermercado, disueltos en agua destilada. El resultado es limpio, consistente —y si escaneas los negativos en color, aparecen unos tonos cálidos completamente inesperados."
-description: "Taller de revelado fotográfico alternativo con Caffenol. Fórmula Llumàtics, proceso completo paso a paso, escaneado en color y tonos cálidos característicos. Llumàtics, Barcelona."
+description: "Prepara el Caffenol con café, carbonato y vitamina C y revela con tus manos. Fotografía analógica de tonos cálidos. En la Nau Bostik, Barcelona."
 image: "/images/docs/caffenol/caffenol-01.jpeg"
 
 # Classificació

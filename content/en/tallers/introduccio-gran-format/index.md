@@ -3,7 +3,7 @@ title: "Introduction to large format"
 seo_title: "Introduction to large format · Film photography workshop · Llumàtics"
 subtitle: "Discover slow photography before diving in completely"
 lead: "A first encounter with the view camera: understanding why it exists, how it works and what makes a system that forces you to photograph in a completely different way."
-description: "Introductory large-format photography workshop. First session with a view camera, light metering and exposure. Barcelona."
+description: "First session with a large-format view camera: set it up, meter the light and expose your first sheets of film. At Nau Bostik, Barcelona."
 image: "/images/tallers/introduccio-gran-format.jpg"
 images: []
 

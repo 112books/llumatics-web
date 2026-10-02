@@ -3,7 +3,7 @@ title: "Holga Afternoon at Nau Bostik"
 seo_title: "Holga Afternoon at Nau Bostik · Film photography workshop · Llumàtics"
 subtitle: "A free meet-up to celebrate Holga Week"
 lead: "1–7 October is Holga Week. We celebrate it on the 8th with an afternoon of shooting, sharing tricks and looking at rolls, at Nau Bostik. Free."
-description: "Free Holga afternoon at Nau Bostik, Thursday 8 October 2026, 6–8 pm. A meet-up to celebrate Holga Week. Limited loan cameras available."
+description: "A free Holga afternoon: shoot film, share tricks and look at rolls together. Loan cameras available. At Nau Bostik, Barcelona."
 image: "/images/tallers/tarda-holga-2026.jpg"
 images:
   - "/images/holga/holga-01.jpg"

@@ -3,7 +3,7 @@ title: "Revelar color como si fuera blanco y negro"
 seo_title: "Revelar color como si fuera blanco y negro · Taller de fotografía analógica · Llumàtics"
 subtitle: "Película C-41 con proceso B/N. Experimental, impredecible y fascinante."
 lead: "Coges un carrete de color, lo revelas con Rodinal en stand development de 60 minutos y obtienes negativos con una pátina marrón, grano exagerado y resultados que no esperabas. No es el proceso correcto. Es el proceso interesante."
-description: "Taller experimental de revelado de película de color C-41 con revelador B/N (Rodinal, stand development). Resultados impredecibles, grano exagerado y mucho aprendizaje. Llumàtics, Barcelona."
+description: "Revela un carrete de color C-41 con proceso B/N y aprende a leer los negativos. Fotografía analógica experimental. En la Nau Bostik, Barcelona."
 image: "/images/tallers/revelat-color-bn.jpg"
 images:
   - "/images/tallers/revelat-color-bn-1.jpg"

@@ -3,7 +3,7 @@ title: "Fotogramas con cianotipia"
 seo_title: "Fotogramas con cianotipia · Taller de fotografía analógica · Llumàtics"
 subtitle: "Imágenes sin cámara. Entra en el mundo de la cianotipia."
 lead: "Una primera experiencia en cianotipia: colocamos objetos sobre papel sensibilizado, exponemos al sol y revelamos con agua. Sin cámara, sin cuarto oscuro, sin experiencia previa."
-description: "Taller introductorio de fotogramas con cianotipia en Barcelona. Sin cámara ni experiencia previa. Nau Bostik."
+description: "Coloca objetos sobre papel, expón al sol y revela con agua. Fotogramas en cianotipia y fotografía analógica sin cámara. En la Nau Bostik, Barcelona."
 image: "/images/tallers/fotogrames-cianotipia.jpg"
 images:
   - "/images/tallers/fotogrames-cianotipia-1.jpg"

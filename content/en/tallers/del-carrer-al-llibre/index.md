@@ -3,7 +3,7 @@ title: "From Street to Book"
 seo_title: "From Street to Book · Film photography workshop · Llumàtics"
 subtitle: "One year, twelve photographers, a voice of your own."
 lead: "A year-long analogue street photography course in Barcelona. Each month, a great photographer as guide. At the end, a photobook of your own."
-description: "Year-long analogue street photography course in Barcelona. 12 monthly sessions, each dedicated to a key reference in the genre. Maximum 6 people. Option to produce a printed photobook."
+description: "A year-long film photography course in Barcelona: 12 monthly sessions on street photography, ending in your own photobook. At Nau Bostik, Barcelona."
 image: "/images/tallers/del-carrer-al-llibre.jpg"
 images:
   - "/images/tallers/del-carrer-al-llibre-1.jpg"

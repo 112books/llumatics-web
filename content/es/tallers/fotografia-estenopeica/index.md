@@ -3,7 +3,7 @@ title: "Fotografía estenopeica"
 seo_title: "Fotografía estenopeica · Taller de fotografía analógica · Llumàtics"
 subtitle: "La cámara sin objetivo. El principio de todo."
 lead: "Construimos una cámara estenopeica, exponemos sobre papel fotográfico y revelamos en directo. El proceso fotográfico en su estado más puro."
-description: "Taller de fotografía estenopeica en Barcelona: construcción de la cámara, exposición y revelado. Del agujero de luz a la copia en papel."
+description: "Construye tu cámara estenopeica, expón sobre papel y revela en directo: fotografía analógica sin objetivo. En la Nau Bostik, Barcelona."
 image: "/images/tallers/fotografia-estenopèica.jpg"
 images:
   - "/images/tallers/fotografia-estenopèica-1.jpg"

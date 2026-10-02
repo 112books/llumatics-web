@@ -3,7 +3,7 @@ title: "Cianotípia"
 seo_title: "Cianotípia · Taller de fotografia analògica · Llumàtics"
 subtitle: "El blau de la llum. Impressió fotogràfica sense càmera ni ampliadora."
 lead: "Una de les tècniques fotogràfiques més antigues i més accessibles: emulsionem el paper, exposem amb llum solar i revelem amb aigua. Química simple, resultats que sorprenen."
-description: "Taller de cianotípia a Barcelona. Procés alternatiu de impressió fotogràfica sense cambra fosca: emulsió, exposició solar i revelat amb aigua."
+description: "Emulsionem paper amb les mans, exposem al sol i revelem amb aigua per fer cianotípia. Fotografia analògica sense càmera. A la Nau Bostik, Barcelona."
 image: "/images/tallers/cianotipia.jpg"
 images:
   - "/images/tallers/cianotipia-1.jpg"

@@ -3,7 +3,7 @@ title: "Digitalització i escàner"
 seo_title: "Digitalització i escàner · Taller de fotografia analògica · Llumàtics"
 subtitle: "Els teus negatius mereixen més que una foto amb el mòbil"
 lead: "Tens negatius revelats i vols digitalitzar-los bé. No per compartir-los a Instagram, sinó per tenir arxius de qualitat que aguantin una impressió gran o una edició professional. Aprèn a extreure tot el que hi ha al negatiu."
-description: "Taller de digitalització de negatius analògics amb escàner. Configuració òptima, gestió del color i edició professional amb Photoshop i Lightroom. Barcelona."
+description: "Digitalitza negatius analògics amb escàner: configuració, gestió del color i edició amb Photoshop i Lightroom. Barcelona."
 image: "/images/tallers/digitalitzacio-escaner.jpg"
 
 # Classificació

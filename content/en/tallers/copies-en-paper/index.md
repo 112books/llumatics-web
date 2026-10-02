@@ -3,7 +3,7 @@ title: "Darkroom printing"
 seo_title: "Darkroom printing · Film photography workshop · Llumàtics"
 subtitle: "From negative to print: working with the enlarger"
 lead: "Got developed negatives and want to make prints? This workshop is the natural second step of the analogue process: the enlarger, the paper and the tray."
-description: "Darkroom printing workshop. Enlarger, paper types, development and local controls. Analogue lab in Barcelona."
+description: "Darkroom printing: work the enlarger, the paper and the trays by hand to make prints from your film negatives. At Nau Bostik, Barcelona."
 image: "/images/tallers/introduccio-al-positivat-2.jpg"
 images:
   - "/images/tallers/introduccio-al-positivat-3.jpg"

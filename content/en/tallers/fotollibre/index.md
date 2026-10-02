@@ -3,7 +3,7 @@ title: "Photobook: from concept to object"
 seo_title: "Photobook: from concept to object · Film photography workshop · Llumàtics"
 subtitle: "From body of work to a real book."
 lead: "Three sessions to turn your photographs into a photobook: concept, digital design and production. Output as PDF, ePub or print via 112books."
-description: "Photobook creation workshop in Barcelona. Conceptualisation, visual narrative, design with Affinity Publisher and production. Maximum 4 people. On demand."
+description: "Turn your film photographs into a photobook: concept, narrative, layout and print-ready files. At Nau Bostik, Barcelona."
 image: "/images/tallers/fotollibre.jpg"
 images:
   - "/images/tallers/fotollibre-1.jpg"

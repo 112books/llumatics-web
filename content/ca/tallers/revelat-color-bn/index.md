@@ -3,7 +3,7 @@ title: "Revelar color com si fos blanc i negre"
 seo_title: "Revelar color com si fos blanc i negre · Taller de fotografia analògica · Llumàtics"
 subtitle: "Pel·lícula C-41 amb procés B/N. Experimental, impredictible i fascinant."
 lead: "Agafes un rodet de color, el reveles amb Rodinal en stand development de 60 minuts i obtens negatius amb una pàtina marró, gra exagerat i resultats que no esperaves. No és el procés correcte. És el procés interessant."
-description: "Taller experimental de revelat de pel·lícula de color C-41 amb revelador B/N (Rodinal, stand development). Resultats impredictibles, gra exagerat i molt d'aprenentatge. Llumàtics, Barcelona."
+description: "Revelem pel·lícula de color C-41 com si fos blanc i negre, amb Rodinal, i llegim el negatiu. Fotografia analògica experimental. A la Nau Bostik, Barcelona."
 image: "/images/tallers/revelat-color-bn.jpg"
 images:
   - "/images/tallers/revelat-color-bn-1.jpg"

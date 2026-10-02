@@ -3,7 +3,7 @@ title: "El meravellós món Hasselblad"
 seo_title: "El meravellós món Hasselblad · Taller de fotografia analògica · Llumàtics"
 subtitle: "Mig format 6×6 amb la sèrie 500. Secrets, trucs i molt de rodet."
 lead: "Una sessió dedicada en cos i ànima a les Hasselblad de la sèrie 500: funcionament, trucs, dobles exposicions, disparador remot, i un rodet de 120 que revelaràs el mateix dia."
-description: "Taller pràctic de la càmera Hasselblad sèrie 500. Mig format 6×6, rodet 120, tècniques avançades i revelat inclòs. Nau Bostik, Barcelona."
+description: "Fem servir la Hasselblad 500 en mig format 6×6: carreguem el rodet, disparem i revelem el mateix dia. Fotografia analògica. A la Nau Bostik, Barcelona."
 image: "/images/tallers/hasselblad-500.jpg"
 
 # Classificació

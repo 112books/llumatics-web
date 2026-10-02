@@ -3,7 +3,7 @@ title: "Revelados experimentales"
 seo_title: "Revelados experimentales · Taller de fotografía analógica · Llumàtics"
 subtitle: "Fórmulas artesanales, procesos forzados y reveladores caseros"
 lead: "Más allá del revelador estándar: push y pull, stand development, Caffenol, la fórmula Beers y otras maneras de alterar el resultado químico de la imagen."
-description: "Taller de revelados experimentales: push/pull, stand development, Caffenol, fórmula Beers y reveladores artesanales. Laboratorio fotográfico en Barcelona."
+description: "Experimenta con push, pull, stand development, Caffenol y Beers: altera la química y lee los resultados. Fotografía analógica. En la Nau Bostik, Barcelona."
 image: "/images/tallers/revelats-experimentals.jpg"
 
 # Clasificación

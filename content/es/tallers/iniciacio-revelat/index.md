@@ -3,7 +3,7 @@ title: "Iniciación al revelado"
 seo_title: "Iniciación al revelado · Taller de fotografía analógica · Llumàtics"
 subtitle: "Carga el carrete, sal a disparar y revélalo tú mismo."
 lead: "El proceso fotográfico completo en tres horas: cargamos un carrete, salimos al barrio a dispararlo, volvemos y lo revelamos. Sin experiencia previa. En Cameras & Films."
-description: "Taller de iniciación al revelado analógico en Cameras & Films, Barcelona. Cargar carrete, salida fotográfica y revelado B/N. 3 horas, sin experiencia previa."
+description: "Iniciación al revelado analógico en Cameras & Films, Barcelona: cargar carrete, salida fotográfica y revelado B/N. 3 h, sin experiencia."
 image: "/images/tallers/iniciacio-revelat.jpg"
 images:
   - "/images/tallers/iniciacio-revelat-1.jpg"

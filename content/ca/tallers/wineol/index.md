@@ -3,7 +3,7 @@ title: "Wineol: revela amb vi negre"
 seo_title: "Wineol: revela amb vi negre · Taller de fotografia analògica · Llumàtics"
 subtitle: "Un revelador fet amb vi negre, carbonat de sosa, vitamina C i sal."
 lead: "Agafes una ampolla de vi negre barat, hi afegeixes carbonat de sosa, vitamina C i sal, i ho fas servir per revelar un rodet. Funciona. Els resultats són imprevisibles. Però és exactament d'això que es tracta."
-description: "Taller experimental de revelat analògic amb vi negre (Wineol). Recepta completa, procés pas a pas i lectura dels negatius resultants. Molt experimental. Llumàtics, Barcelona."
+description: "Revelat experimental amb vi negre (Wineol): recepta, procés pas a pas i lectura dels negatius. Fotografia analògica. Barcelona."
 image: "/images/docs/wineol/wineol01.jpg"
 
 # Classificació

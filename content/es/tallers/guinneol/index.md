@@ -3,7 +3,7 @@ title: "Guinneol: revela con cerveza Guinness"
 seo_title: "Guinneol: revela con cerveza Guinness · Taller de fotografía analógica · Llumàtics"
 subtitle: "Un revelador hecho con una lata de Guinness, carbonato de sosa y vitamina C."
 lead: "Coges una lata de Guinness, le añades carbonato de sosa y vitamina C, y lo usas para revelar un carrete. Funciona. Los resultados no son perfectos. Pero son tuyos."
-description: "Taller experimental de revelado analógico con cerveza Guinness (Guinneol). Receta completa, proceso paso a paso y lectura de los negativos resultantes. Llumàtics, Barcelona."
+description: "Revelado experimental con cerveza Guinness (Guinneol): receta, proceso paso a paso y lectura de negativos. Fotografía analógica. Barcelona."
 image: "/images/tallers/guinneol.jpg"
 images:
   - "/images/tallers/guinneol-1.jpg"

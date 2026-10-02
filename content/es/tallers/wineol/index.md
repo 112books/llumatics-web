@@ -3,7 +3,7 @@ title: "Wineol: revela con vino tinto"
 seo_title: "Wineol: revela con vino tinto · Taller de fotografía analógica · Llumàtics"
 subtitle: "Un revelador hecho con vino tinto, carbonato de sosa, vitamina C y sal."
 lead: "Coges una botella de vino tinto barato, añades carbonato de sosa, vitamina C y sal, y lo usas para revelar un carrete. Funciona. Los resultados son imprevisibles. Pero de eso se trata exactamente."
-description: "Taller experimental de revelado analógico con vino tinto (Wineol). Receta completa, proceso paso a paso y lectura de los negativos resultantes. Muy experimental. Llumàtics, Barcelona."
+description: "Revelado experimental con vino tinto (Wineol): receta, proceso paso a paso y lectura de negativos. Fotografía analógica. Barcelona."
 image: "/images/docs/wineol/wineol01.jpg"
 
 # Classificació

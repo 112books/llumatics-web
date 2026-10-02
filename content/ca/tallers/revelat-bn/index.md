@@ -3,7 +3,7 @@ title: "Revelat de pel·lícula B/N"
 seo_title: "Revelat de pel·lícula B/N · Taller de fotografia analògica · Llumàtics"
 subtitle: "Push, pull i el control de la densitat"
 lead: "No hi ha un sol revelat correcte. Hi ha el que necessita cada foto. En aquest taller aprens a controlar la densitat del negatiu: revelat estàndard, forçat (push) i compensat (pull). Dos rodets, quatre hores."
-description: "Taller de revelat de pel·lícula B/N a Barcelona. Push i pull, temperatura i densitat, lectura del negatiu. 2 carretes inclosos. Nau Bostik."
+description: "Aprenem a revelar pel·lícula B/N amb les mans: densitat, push, pull i temperatura. Fotografia analògica. A la Nau Bostik, Barcelona."
 image: "/images/tallers/revelat-bn.jpg"
 
 # Classificació

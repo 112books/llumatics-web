@@ -3,7 +3,7 @@ title: "The wonderful world of Hasselblad"
 seo_title: "The wonderful world of Hasselblad · Film photography workshop · Llumàtics"
 subtitle: "Medium format 6×6 with the 500 series. Secrets, tips and plenty of film."
 lead: "A session devoted entirely to the Hasselblad 500 series: how it works, tips and tricks, double exposures, remote shutter, and a 120 roll you develop the same day."
-description: "Practical Hasselblad 500 series camera workshop. Medium format 6×6, 120 roll, advanced techniques and development included. Nau Bostik, Barcelona."
+description: "Film photography with the Hasselblad 500: medium format 6×6, double exposures and a 120 roll developed by hand. At Nau Bostik, Barcelona."
 image: "/images/tallers/hasselblad-500.jpg"
 
 # Classification
