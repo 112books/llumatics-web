@@ -1,0 +1,109 @@
+# Motor compartit de recomanació: "Quin curs em convé?" i (més endavant) "Regala un curs".
+# El text de les opcions i els motius viu a i18n/{ca,es,en}.yaml amb les mateixes claus.
+# Els valors dels mapes slugs/linies són els punts que suma cada resposta.
+quin_curs:
+  passos:
+    - id: nivell
+      tipus: unica
+      opcions: [n0, n1, n2, n3, n4]
+      nivells: { n0: 0, n1: 1, n2: 2, n3: 3, n4: 4 }
+
+    - id: interessos
+      tipus: multiple
+      maxim: 3
+      blocs:
+        - id: base
+          visible_nivells: [0, 1, 2]
+          opcions:
+            - id: a1
+              linies: { fonaments: 1 }
+            - id: a2
+              linies: { fonaments: 1 }
+            - id: a3
+              linies: { fonaments: 1 }
+              slugs: { revelat-bn: 3 }
+              transportable: true
+        - id: proces
+          opcions:
+            - id: b1
+              slugs: { iniciacio-revelat: 3, revelat-bn: 3 }
+            - id: b2
+              slugs: { revelat-bn: 3, reveladors-artesanals: 3 }
+            - id: b3
+              slugs: { reveladors-artesanals: 3, revelat-color-bn: 3, caffenol: 2, wineol: 2, guinneol: 2 }
+            - id: b4
+              slugs: { introduccio-al-positivat: 3, copies-en-paper: 3 }
+            - id: b5
+              slugs: { copies-beers-developer: 3 }
+              tutoria: true
+        - id: digital
+          opcions:
+            - id: c1
+              slugs: { digitalitzacio-escaner: 3, edicio-imatges-fotoquimiques: 3 }
+            - id: c2
+              slugs: { digitalitzacio-escaner: 3 }
+            - id: c3
+              slugs: { edicio-imatges-fotoquimiques: 3 }
+            - id: c4
+              slugs: { digitalitzacio-escaner: 3 }
+        - id: disciplines
+          visible_nivells: [2, 3, 4]
+          opcions:
+            - id: d1
+              slugs: { retrat-analogic: 3, retrat-6x6: 3 }
+              tutoria: true
+            - id: d2
+              tutoria: true
+              demanda: reportatge
+            - id: d3
+              tutoria: true
+              demanda: esdeveniments
+            - id: d4
+              slugs: { retrat-analogic: 3 }
+              tutoria: true
+            - id: d5
+              slugs: { fotografia-de-carrer: 3, del-carrer-al-llibre: 3 }
+              condicio_anual: true
+            - id: d6
+              slugs: { fotografia-de-carrer: 3 }
+              tutoria: true
+            - id: d7
+              tutoria: true
+              demanda: autoretrat
+            - id: d8
+              tutoria: true
+              demanda: llenguatge
+            - id: d9
+              slugs: { fotollibre: 3, del-carrer-al-llibre: 3 }
+        - id: diferent
+          opcions:
+            - id: e1
+              slugs: { fotografia-estenopeica: 3 }
+            - id: e2
+              slugs: { hasselblad-500: 3 }
+            - id: e3
+              slugs: { gran-format-4x5: 3, retrat-analogic: 3 }
+            - id: e4
+              slugs: { introduccio-gran-format: 3, gran-format-4x5: 3 }
+            - id: e5
+              slugs: { cianotipia: 3, fotogrames-cianotipia: 3 }
+              linies: { processos: 1 }
+            - id: e6
+              slugs: { retrat-amb-holga: 3 }
+
+    - id: format
+      tipus: unica
+      opcions:
+        - { id: f1, formats: [flash, taller] }
+        - { id: f2, formats: [taller, curs] }
+        - { id: f3, formats: [recorregut, curs] }
+        - { id: f4, formats: [tutoria] }
+
+  regles:
+    pes_slug: 3
+    pes_linia: 1
+    bonus_format: 2
+    bonus_efemeride: 2
+    llindar_minim: 4
+    max_resultats: 3
+    empat: nivell_mes_baix

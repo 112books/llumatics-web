@@ -1,0 +1,21 @@
+{{/* ============================================================
+     quiz-validate.html — validació de data/quiz.yaml
+     Falla el build si algun slug referenciat al qüestionari no existeix.
+     ============================================================ */}}
+{{- $opcions := slice -}}
+{{- range (index hugo.Data.quiz "quin_curs").passos -}}
+  {{- with .blocs -}}
+    {{- range . -}}
+      {{- range .opcions -}}{{- $opcions = $opcions | append . -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- range $opcions -}}
+  {{- with .slugs -}}
+    {{- range $slug, $_ := . -}}
+      {{- if not (site.GetPage (printf "tallers/%s" $slug)) -}}
+        {{- errorf "quiz.yaml: el slug '%s' no existeix a l'idioma %s" $slug site.Language.Lang -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
