@@ -264,10 +264,16 @@ button, input, select, textarea {
   white-space: nowrap;
 }
 
-.site-nav__link:hover,
-.site-nav__link.active {
+.site-nav__link:hover {
   color: var(--color-text);
   background-color: var(--color-bg-alt);
+}
+
+/* Secció actual del menú: accent */
+.site-nav__link.active {
+  color: var(--color-accent-dark);
+  background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  font-weight: 600;
 }
 
 .site-nav__link--highlight {
@@ -1167,7 +1173,7 @@ button, input, select, textarea {
 
 .site-footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: var(--space-8);
   margin-bottom: var(--space-8);
 }

@@ -461,3 +461,6 @@ quiz_result_badge: "Recomanació principal"
 
 quiz_cta_button: "Quin curs em convé?"
 quiz_cta_text: "Respon tres preguntes i et proposem el taller o el recorregut que et convé."
+
+footer_choose_heading: "Tria un curs"
+footer_quiz_link: "Selecciona un curs"

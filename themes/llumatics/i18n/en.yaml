@@ -456,3 +456,6 @@ quiz_no_dates: "No dates yet"
 
 quiz_cta_button: "Which course suits me?"
 quiz_cta_text: "Answer three questions and we'll suggest the workshop or learning path that suits you."
+
+footer_choose_heading: "Choose a course"
+footer_quiz_link: "Select a course"

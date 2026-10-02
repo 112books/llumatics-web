@@ -21,9 +21,11 @@
           {{ $isHighlight := .Params.highlight | default false }}
           {{ $cleanPath := strings.TrimPrefix $basePath .URL }}
           {{ $url := printf "%s%s/%s" $siteRoot $langPfx $cleanPath }}
+          {{ $matchPath := printf "%s%s" $langPfx .URL }}
+          {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (and (ne .URL "/") (hasPrefix $.RelPermalink $matchPath)) }}
           <a href="{{ $url }}"
-             class="site-nav__link{{ if $isHighlight }} site-nav__link--highlight{{ end }}"
-             {{ if hasPrefix $.RelPermalink .URL }}aria-current="page"{{ end }}>
+             class="site-nav__link{{ if $isHighlight }} site-nav__link--highlight{{ end }}{{ if $active }} active{{ end }}"
+             {{ if $active }}aria-current="page"{{ end }}>
             {{ .Name }}
           </a>
         {{ end }}

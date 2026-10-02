@@ -456,3 +456,6 @@ quiz_no_dates: "Todavía no tiene fechas"
 
 quiz_cta_button: "¿Qué curso me conviene?"
 quiz_cta_text: "Responde tres preguntas y te proponemos el taller o el recorrido que te conviene."
+
+footer_choose_heading: "Elige un curso"
+footer_quiz_link: "Selecciona un curso"

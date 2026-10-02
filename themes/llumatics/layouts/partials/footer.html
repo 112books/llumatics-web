@@ -26,6 +26,17 @@
       </div>
 
       <div>
+        <p class="site-footer__heading">{{ i18n "footer_choose_heading" | default "Tria un curs" }}</p>
+        <ul class="site-footer__links">
+          {{ $quizFooter := "" }}
+          {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizFooter = . }}{{ end }}{{ end }}
+          {{ with $quizFooter }}<li><a href="{{ .RelPermalink }}">{{ i18n "footer_quiz_link" | default "Selecciona un curs" }}</a></li>{{ end }}
+          <li><a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}">{{ i18n "see_all_courses" | default "Tots els tallers" }}</a></li>
+          <li><a href="{{ printf "%s%s/regala/" $siteRoot $lp }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
+        </ul>
+      </div>
+
+      <div>
         <p class="site-footer__heading">{{ i18n "nav_spaces" | default "Espais" }}</p>
         <ul class="site-footer__links">
           <li><a href="{{ printf "%s%s/espais/#laboratori" $siteRoot $lp }}">{{ i18n "space_lab" | default "El laboratori" }}</a></li>
@@ -42,7 +53,6 @@
           {{ with .Site.Params.instagram }}
             <li><a href="{{ . }}" target="_blank" rel="noopener">Instagram</a></li>
           {{ end }}
-          <li><a href="{{ printf "%s%s/regala/" $siteRoot $lp }}">{{ i18n "gift_course" | default "Regala un curs" }}</a></li>
           <li><a href="{{ printf "%s%s/sobre/" $siteRoot $lp }}">{{ i18n "nav_about" | default "Sobre Llumàtics" }}</a></li>
           {{ with .Site.Params.googleReviewURL }}
             <li><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "google_review" | default "Deixa'ns una ressenya" }} ★</a></li>

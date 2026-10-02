@@ -41,6 +41,10 @@ Documentació de referència:
 - [x] D3. Accessibilitat de l'accent: tot el text d'accent passa a `--color-accent-dark` (#00719E); el ceruli clar queda per a fons/botons/icones.
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
 
+## Bloc G — Navegació (peticions d'usuari)
+- [x] G1. Footer: nova columna «Tria un curs» amb «Selecciona un curs» (recomanador) i «Regala un curs»; tret de sota Contacte. Graella del footer a 5 columnes.
+- [x] G2. Menú principal: estat actiu de la secció amb color d'accent (CA/ES/EN).
+
 ## Bloc F — Traducció i llenguatge
 - [~] F1. Auditoria de traducció i llenguatge fotogràfic: `docs/manuals/auditoria-traduccio-llenguatge.md` (primera passada + correccions de «laboratorio oscuro» i «cámara oscura»). Pendent: decisió sobre «quarto fosc» i revisió completa.
 
