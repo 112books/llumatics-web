@@ -13,6 +13,7 @@ images:
 
 # Classificació
 tipus: "taller"
+linia: "quimica"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

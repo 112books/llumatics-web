@@ -14,6 +14,7 @@ images:
 
 # Classification
 tipus: "taller"
+linia: "practica"
 nivell_minim: 0
 format: "curs"
 canal: "llumatics"

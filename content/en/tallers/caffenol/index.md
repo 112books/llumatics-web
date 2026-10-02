@@ -7,6 +7,7 @@ image: "/images/docs/caffenol/caffenol-01.jpeg"
 
 # Classificació
 tipus: "taller"
+linia: "quimica"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

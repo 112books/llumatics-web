@@ -7,6 +7,7 @@ image: "/images/tallers/digitalitzacio-escaner.jpg"
 
 # Clasificación
 tipus: "taller"
+linia: "fonaments"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

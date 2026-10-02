@@ -7,6 +7,7 @@ image: "/images/tallers/carrer-i-mirada.jpg"
 
 # Classification
 tipus: "curs"
+linia: "practica"
 nivell_minim: 3
 format: "curs"
 canal: "llumatics"

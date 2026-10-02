@@ -18,6 +18,7 @@ images:
 
 # Classification
 tipus: "taller"
+linia: "fonaments"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

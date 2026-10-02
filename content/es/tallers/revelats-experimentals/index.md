@@ -7,6 +7,7 @@ image: "/images/tallers/revelats-experimentals.jpg"
 
 # Clasificación
 tipus: "taller"
+linia: "quimica"
 nivell_minim: 3
 format: "taller"
 canal: "llumatics"

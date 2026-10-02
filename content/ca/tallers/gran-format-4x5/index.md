@@ -7,6 +7,7 @@ image: "/images/tallers/gran-format-4x5.jpg"
 
 # Classificació
 tipus: "taller"
+linia: "gran-format"
 nivell_minim: 3
 format: "taller"
 canal: "llumatics"

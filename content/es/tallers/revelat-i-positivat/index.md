@@ -7,6 +7,7 @@ image: "/images/tallers/revelat-positiva-1dia.jpg"
 
 # Clasificación
 tipus: "taller"
+linia: "quimica"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

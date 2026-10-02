@@ -7,6 +7,7 @@ image: "/images/tallers/hasselblad-500.jpg"
 
 # Classification
 tipus: "taller"
+linia: "practica"
 nivell_minim: 2
 format: "taller"
 canal: "llumatics"

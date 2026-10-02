@@ -11,6 +11,7 @@ images:
 
 # Classification
 tipus: "taller"
+linia: "processos"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

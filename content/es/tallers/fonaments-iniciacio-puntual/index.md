@@ -7,6 +7,7 @@ image: "/images/tallers/fonaments-iniciacio-puntual.jpg"
 
 # Clasificación
 tipus: "taller"
+linia: "fonaments"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

@@ -7,6 +7,7 @@ image: "/images/docs/wineol/wineol01.jpg"
 
 # Classificació
 tipus: "taller"
+linia: "quimica"
 nivell_minim: 2
 format: "taller"
 canal: "llumatics"

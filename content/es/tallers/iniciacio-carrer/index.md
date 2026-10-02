@@ -7,6 +7,7 @@ image: "/images/tallers/iniciacio-carrer.jpg"
 
 # Clasificación
 tipus: "taller"
+linia: "practica"
 nivell_minim: 0
 format: "curs"
 canal: "llumatics"

@@ -557,3 +557,233 @@ if (contactForm) {
     if (e.key === 'Escape' && popup.classList.contains('is-open')) collapse();
   });
 })();
+
+// ═══════════════════════════════════════════════════════════════════════
+// RECOMANADOR "QUIN CURS EM CONVÉ?"
+// ═══════════════════════════════════════════════════════════════════════
+(function () {
+  'use strict';
+  var dataEl = document.getElementById('quiz-data');
+  var app = document.getElementById('quiz-app');
+  if (!dataEl || !app) return;
+
+  var data;
+  try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+
+  var T = data.t || {};
+  var quiz = data.quiz || {};
+  var courses = data.courses || [];
+  var contact = data.contact || '/contacte/';
+  var tutoriaSlug = data.tutoriaSlug || 'tutoria-fotografica';
+
+  function t(k, d) { var v = T[k]; return (v != null && v !== '') ? v : (d || k); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function fmtProgress(tpl, n, total) {
+    var i = 0;
+    return tpl.replace(/%d/g, function () { return i++ === 0 ? n : total; });
+  }
+
+  var passos = quiz.passos || [];
+  var nivells = (passos[0] && passos[0].nivells) || {};
+  var blocs = (passos[1] && passos[1].blocs) || [];
+  var formatOpts = (passos[2] && passos[2].opcions) || [];
+  var linies = quiz.linies || {};
+  var regles = quiz.regles || {};
+
+  var OPT = {};
+  blocs.forEach(function (b) { (b.opcions || []).forEach(function (o) { OPT[o.id] = o; }); });
+  formatOpts.forEach(function (o) { OPT[o.id] = o; });
+
+  var NIV = ['n0', 'n1', 'n2', 'n3', 'n4'];
+  var state = { step: 0, nivell: null, interessa: [], format: null };
+
+  function visibleBlocs() {
+    return blocs.filter(function (b) {
+      var vis = b.visible_nivells;
+      return !vis || state.nivell === null || vis.indexOf(state.nivell) >= 0;
+    });
+  }
+
+  function render() {
+    if (state.step === 0) return renderNivell();
+    if (state.step === 1) return renderInteressos();
+    if (state.step === 2) return renderFormat();
+    return renderResult();
+  }
+
+  function progress() {
+    return '<p class="quiz__progress">' + esc(fmtProgress(t('quiz_progress', 'Pas %d de %d'), state.step + 1, 3)) + '</p>';
+  }
+
+  function renderNivell() {
+    var h = progress() + '<h2 class="quiz__q">' + esc(t('quiz_step_nivell')) + '</h2>';
+    h += '<p class="quiz__hint">' + esc(t('quiz_single_hint')) + '</p><div class="quiz__options">';
+    NIV.forEach(function (id) {
+      h += '<button type="button" class="quiz__option" data-niv="' + id + '">' + esc(t('quiz_' + id)) + '</button>';
+    });
+    h += '</div>';
+    app.innerHTML = h;
+    app.querySelectorAll('[data-niv]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.nivell = nivells[this.getAttribute('data-niv')] || 0;
+        state.step = 1;
+        render();
+      });
+    });
+  }
+
+  function renderInteressos() {
+    var h = progress() + '<h2 class="quiz__q">' + esc(t('quiz_step_interessos')) + '</h2>';
+    h += '<p class="quiz__hint">' + esc(t('quiz_multiple_hint')) + '</p><div class="quiz__options quiz__options--multi">';
+    visibleBlocs().forEach(function (b) {
+      (b.opcions || []).forEach(function (o) {
+        var on = state.interessa.indexOf(o.id) >= 0;
+        h += '<button type="button" class="quiz__option' + (on ? ' is-on' : '') + '" data-int="' + o.id + '" aria-pressed="' + on + '">' + esc(t('quiz_' + o.id)) + '</button>';
+      });
+    });
+    h += '</div><div class="quiz__nav">';
+    h += '<button type="button" class="btn btn--ghost" data-back>' + esc(t('quiz_back')) + '</button>';
+    h += '<button type="button" class="btn btn--primary" data-next' + (state.interessa.length ? '' : ' disabled') + '>' + esc(t('quiz_next')) + '</button>';
+    h += '</div>';
+    app.innerHTML = h;
+    app.querySelectorAll('[data-int]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = this.getAttribute('data-int');
+        var i = state.interessa.indexOf(id);
+        if (i >= 0) { state.interessa.splice(i, 1); this.classList.remove('is-on'); this.setAttribute('aria-pressed', 'false'); }
+        else if (state.interessa.length < (passos[1].maxim || 3)) { state.interessa.push(id); this.classList.add('is-on'); this.setAttribute('aria-pressed', 'true'); }
+        var next = app.querySelector('[data-next]');
+        if (next) next.disabled = state.interessa.length === 0;
+      });
+    });
+    app.querySelector('[data-back]').addEventListener('click', function () { state.step = 0; render(); });
+    app.querySelector('[data-next]').addEventListener('click', function () { state.step = 2; render(); });
+  }
+
+  function renderFormat() {
+    var h = progress() + '<h2 class="quiz__q">' + esc(t('quiz_step_format')) + '</h2>';
+    h += '<p class="quiz__hint">' + esc(t('quiz_single_hint')) + '</p><div class="quiz__options">';
+    ['f1', 'f2', 'f3', 'f4'].forEach(function (id) {
+      h += '<button type="button" class="quiz__option" data-fmt="' + id + '">' + esc(t('quiz_' + id)) + '</button>';
+    });
+    h += '</div><div class="quiz__nav"><button type="button" class="btn btn--ghost" data-back>' + esc(t('quiz_back')) + '</button></div>';
+    app.innerHTML = h;
+    app.querySelectorAll('[data-fmt]').forEach(function (b) {
+      b.addEventListener('click', function () { state.format = this.getAttribute('data-fmt'); state.step = 3; render(); });
+    });
+    app.querySelector('[data-back]').addEventListener('click', function () { state.step = 1; render(); });
+  }
+
+  function compute() {
+    var scores = {}, contrib = {};
+    courses.forEach(function (c) { scores[c.slug] = 0; contrib[c.slug] = []; });
+    var lv = state.nivell == null ? 0 : state.nivell;
+
+    state.interessa.forEach(function (id) {
+      var o = OPT[id]; if (!o) return;
+      if (o.slugs) Object.keys(o.slugs).forEach(function (s) {
+        if (scores[s] != null) { scores[s] += o.slugs[s]; contrib[s].push(id); }
+      });
+      if (o.linies) Object.keys(o.linies).forEach(function (l) {
+        (linies[l] || []).forEach(function (s) {
+          if (scores[s] != null) { scores[s] += o.linies[l]; contrib[s].push(id); }
+        });
+      });
+    });
+
+    var f = OPT[state.format];
+    if (f && f.formats) courses.forEach(function (c) {
+      if (f.formats.indexOf(c.format) >= 0) { scores[c.slug] += (regles.bonus_format || 2); contrib[c.slug].push(state.format); }
+    });
+
+    courses.forEach(function (c) {
+      var nm = c.nivell_minim || 0;
+      if (nm > lv + 1) scores[c.slug] = scores[c.slug] / 2;
+      if (nm === 0 && lv === 4) scores[c.slug] -= 2;
+    });
+
+    var ranked = courses.filter(function (c) { return scores[c.slug] > 0; }).sort(function (a, b) {
+      if (scores[b.slug] !== scores[a.slug]) return scores[b.slug] - scores[a.slug];
+      return (a.nivell_minim || 0) - (b.nivell_minim || 0);
+    });
+    return { scores: scores, contrib: contrib, ranked: ranked };
+  }
+
+  function motiveFor(slug, contrib) {
+    var ids = contrib[slug] || [], frases = [], seen = {};
+    ids.forEach(function (id) {
+      if (id.charAt(0) === 'f' || seen[id]) return; seen[id] = 1;
+      frases.push(t('quiz_' + id).replace(/\.$/, ''));
+    });
+    if (!frases.length) return '';
+    var txt = frases.slice(0, 2).map(function (f) { return '«' + f + '»'; });
+    return t('quiz_motive_prefix') + ' ' + txt.join(' ' + t('quiz_motive_and') + ' ') + '.';
+  }
+
+  function renderResult() {
+    var r = compute();
+    var top = r.ranked.slice(0, regles.max_resultats || 3);
+    var tut = null;
+    courses.forEach(function (c) { if (c.slug === tutoriaSlug) tut = c; });
+
+    var h = '<h2 class="quiz__q quiz__q--result">' + esc(t('quiz_result_title')) + '</h2>';
+    var best = r.ranked.length ? r.scores[r.ranked[0].slug] : 0;
+    var tutFirst = state.format === 'f4' || !top.length || best < (regles.llindar_minim || 4);
+
+    function tutBlock(extra) {
+      if (!tut) return '';
+      return '<div class="quiz__tutoria' + (extra || '') + '"><h3>' + esc(t('quiz_result_tutoria_title')) + '</h3>'
+        + '<p>' + esc(t('quiz_result_tutoria_text')) + '</p>'
+        + '<a class="btn btn--primary btn--sm" href="' + esc(tut.url) + '">' + esc(t('quiz_result_see')) + '</a></div>';
+    }
+
+    if (tutFirst) h += tutBlock(' quiz__tutoria--first');
+
+    if (top.length) {
+      h += '<div class="quiz__cards">';
+      top.forEach(function (c, i) {
+        h += '<article class="quiz__card">';
+        if (i === 0) h += '<p class="quiz__card-badge">' + esc(t('quiz_result_badge')) + '</p>';
+        h += '<h3 class="quiz__card-title"><a href="' + esc(c.url) + '">' + esc(c.title) + '</a></h3>';
+        var mot = motiveFor(c.slug, r.contrib);
+        if (mot) h += '<p class="quiz__card-motive">' + esc(mot) + '</p>';
+        h += '<div class="quiz__card-foot">';
+        if (c.preu_1) h += '<span class="quiz__card-price">' + esc(t('quiz_result_price_from')) + ' ' + c.preu_1 + ' €</span>';
+        h += '<a class="btn btn--primary btn--sm" href="' + esc(c.url) + '">' + esc(t('quiz_result_see')) + '</a>';
+        h += '</div></article>';
+      });
+      h += '</div>';
+    }
+
+    if (top.length >= 2 && top[0].linia && top[0].linia === top[1].linia && (state.format === 'f2' || state.format === 'f3')) {
+      var slugs = linies[top[0].linia] || [];
+      if (slugs.length) {
+        h += '<div class="quiz__recorregut"><h3>' + esc(t('quiz_result_recorregut_title')) + '</h3><ol>';
+        slugs.forEach(function (s) {
+          var c = null; courses.forEach(function (x) { if (x.slug === s) c = x; });
+          if (c) h += '<li><a href="' + esc(c.url) + '">' + esc(c.title) + '</a></li>';
+        });
+        h += '</ol></div>';
+      }
+    }
+
+    if (!tutFirst && tut) h += '<p class="quiz__tutoria-final">' + esc(t('quiz_result_tutoria_text')) + ' <a href="' + esc(tut.url) + '">' + esc(t('quiz_result_tutoria_title')) + '</a></p>';
+
+    h += '<div class="quiz__contact"><h3>' + esc(t('quiz_result_contact_title')) + '</h3>'
+      + '<p>' + esc(t('quiz_result_contact_text')) + '</p>'
+      + '<a class="btn btn--secondary" href="' + esc(contact) + '">' + esc(t('quiz_result_contact_cta')) + '</a></div>';
+    h += '<div class="quiz__nav"><button type="button" class="btn btn--ghost" data-restart>' + esc(t('quiz_result_restart')) + '</button></div>';
+
+    app.innerHTML = h;
+    app.querySelector('[data-restart]').addEventListener('click', function () {
+      state = { step: 0, nivell: null, interessa: [], format: null };
+      render();
+    });
+  }
+
+  render();
+})();

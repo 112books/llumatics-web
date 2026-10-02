@@ -18,6 +18,7 @@ images:
 
 # Classification
 tipus: "curs"
+linia: "practica"
 nivell_minim: 2
 format: "curs"
 canal: "llumatics"

@@ -5,6 +5,7 @@ description: "Taller práctico de edición digital para fotografía analógica. 
 image: "/images/tallers/edicio-imatges-fotoquimiques.png"
 
 tipus: "taller"
+linia: "fonaments"
 nivell_minim: 2
 format: "taller"
 canal: "llumatics"

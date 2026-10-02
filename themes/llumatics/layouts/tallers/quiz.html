@@ -1,0 +1,67 @@
+{{ define "main" }}
+{{ partial "quiz-validate.html" . }}
+
+{{/* Cursos reservables o propers (excloent la pròpia pàgina) */}}
+{{ $courses := slice }}
+{{ range where site.RegularPages "Type" "tallers" }}
+  {{ if ne .Params.layout "quiz" }}
+    {{ $estat := .Params.estat | default "" }}
+    {{ if or (eq $estat "actiu") (eq $estat "proxim") }}
+      {{ $courses = $courses | append (dict
+        "slug"         .File.ContentBaseName
+        "title"        .Title
+        "url"          .RelPermalink
+        "format"       (.Params.format | default "taller")
+        "nivell_minim" (.Params.nivell_minim | default 0)
+        "preu_1"       (.Params.preu_1 | default 0)
+        "estat"        $estat
+        "linia"        (.Params.linia | default "")
+        "blocs"        (.Params.blocs | default slice)
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $tKeys := slice
+  "quiz_eyebrow" "quiz_title" "quiz_intro"
+  "quiz_progress" "quiz_next" "quiz_back" "quiz_single_hint" "quiz_multiple_hint"
+  "quiz_step_nivell" "quiz_step_interessos" "quiz_step_format"
+  "quiz_n0" "quiz_n1" "quiz_n2" "quiz_n3" "quiz_n4"
+  "quiz_a1" "quiz_a2" "quiz_a3"
+  "quiz_b1" "quiz_b2" "quiz_b3" "quiz_b4" "quiz_b5"
+  "quiz_c1" "quiz_c2" "quiz_c3" "quiz_c4"
+  "quiz_d1" "quiz_d2" "quiz_d3" "quiz_d4" "quiz_d5" "quiz_d6" "quiz_d7" "quiz_d8" "quiz_d9"
+  "quiz_e1" "quiz_e2" "quiz_e3" "quiz_e4" "quiz_e5" "quiz_e6"
+  "quiz_f1" "quiz_f2" "quiz_f3" "quiz_f4"
+  "quiz_result_title" "quiz_result_restart" "quiz_result_see"
+  "quiz_result_price_from" "quiz_result_badge"
+  "quiz_result_recorregut_title" "quiz_result_tutoria_title" "quiz_result_tutoria_text"
+  "quiz_result_preparacio_title" "quiz_result_contact_title" "quiz_result_contact_text"
+  "quiz_result_contact_cta" "quiz_result_contact_ok" "quiz_result_contact_consent"
+  "quiz_motive_prefix" "quiz_motive_and" "quiz_motive_digital" "quiz_motive_efemeride" "quiz_motive_format"
+  "quiz_tutoria_first" "quiz_interest_cta" "quiz_interest_ok" "quiz_soon" "quiz_no_dates"
+}}
+{{ $t := dict }}
+{{ range $tKeys }}{{ $t = merge $t (dict . (i18n .)) }}{{ end }}
+
+{{ $qc := index hugo.Data.quiz "quin_curs" }}
+{{ $payload := dict
+  "t" $t
+  "quiz" $qc
+  "courses" $courses
+  "contact" (printf "%s%s/contacte/" (strings.TrimSuffix "/" site.BaseURL) site.LanguagePrefix)
+  "tutoriaSlug" "tutoria-fotografica" }}
+
+<div class="page-with-bg">
+  <div class="section container" style="position:relative; z-index:1;">
+    <div class="section__header">
+      {{ with .Params.eyebrow }}<p class="section__eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="section__title">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+    </div>
+    <script type="application/json" id="quiz-data">{{ $payload | jsonify | safeJS }}</script>
+    <div id="quiz-app" class="quiz" aria-live="polite"></div>
+    <noscript><p>{{ i18n "quiz_intro" }}</p></noscript>
+  </div>
+</div>
+{{ end }}

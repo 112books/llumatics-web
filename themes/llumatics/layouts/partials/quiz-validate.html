@@ -19,3 +19,10 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- range $linia, $slugs := (index hugo.Data.quiz "quin_curs").linies -}}
+  {{- range $slugs -}}
+    {{- if not (site.GetPage (printf "tallers/%s" .)) -}}
+      {{- errorf "quiz.yaml (línia %s): el slug '%s' no existeix a l'idioma %s" $linia . site.Language.Lang -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

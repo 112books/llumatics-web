@@ -11,6 +11,7 @@ images:
 
 # Classificació
 tipus: "taller"
+linia: "gran-format"
 nivell_minim: 2
 format: "taller"
 canal: "externs"

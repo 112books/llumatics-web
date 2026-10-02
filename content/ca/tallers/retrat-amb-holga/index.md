@@ -7,6 +7,7 @@ image: "/images/tallers/retrat-amb-holga.jpg"
 
 # Classificació
 tipus: "taller"
+linia: "practica"
 nivell_minim: 0
 format: "taller"
 canal: "llumatics"

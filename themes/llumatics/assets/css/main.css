@@ -4123,3 +4123,34 @@ a.recorregut-stop__name:hover {
   .course-single__cover--hero { max-height: 380px; margin-bottom: var(--space-6); }
   .course-single__cover--hero img { max-height: 380px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RECOMANADOR "QUIN CURS EM CONVÉ?"
+   ═══════════════════════════════════════════════════════════════════════ */
+.quiz { max-width: 760px; margin: 0 auto var(--space-16); }
+.quiz__progress { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .12em; color: var(--color-text-muted); }
+.quiz__q { font-family: var(--font-serif); font-size: var(--text-2xl); margin: 0 0 var(--space-3); }
+.quiz__hint { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-5); }
+.quiz__options { display: grid; gap: var(--space-3); }
+.quiz__option {
+  text-align: left; padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border); border-radius: 6px;
+  background: var(--color-surface); color: var(--color-text);
+  font: inherit; cursor: pointer; transition: border-color .15s, background .15s, transform .15s;
+}
+.quiz__option:hover { border-color: var(--color-accent); transform: translateY(-1px); }
+.quiz__option.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface)); }
+.quiz__nav { display: flex; gap: var(--space-3); justify-content: space-between; margin-top: var(--space-6); }
+.quiz__cards { display: grid; gap: var(--space-4); margin: var(--space-6) 0; }
+.quiz__card { border: 1px solid var(--color-border); border-radius: 6px; padding: var(--space-5); background: var(--color-surface); }
+.quiz__card-badge { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--color-accent-dark); font-weight: 700; margin: 0 0 var(--space-2); }
+.quiz__card-title { font-family: var(--font-serif); font-size: var(--text-xl); margin: 0 0 var(--space-2); }
+.quiz__card-motive { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); line-height: 1.6; }
+.quiz__card-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+.quiz__card-price { font-weight: 700; }
+.quiz__recorregut { border: 1px solid var(--color-border); border-radius: 6px; padding: var(--space-5); margin: var(--space-6) 0; }
+.quiz__recorregut h3 { margin-top: 0; }
+.quiz__tutoria { border: 1px solid var(--color-accent); border-radius: 6px; padding: var(--space-5); margin: var(--space-6) 0; background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface)); }
+.quiz__tutoria h3 { margin-top: 0; }
+.quiz__tutoria-final { color: var(--color-text-muted); font-size: var(--text-sm); margin: var(--space-6) 0; }
+.quiz__contact { border-top: 1px solid var(--color-border); padding-top: var(--space-5); margin-top: var(--space-8); }

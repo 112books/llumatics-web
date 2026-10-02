@@ -99,6 +99,14 @@ quin_curs:
         - { id: f3, formats: [recorregut, curs] }
         - { id: f4, formats: [tutoria] }
 
+  # Membres de cada línia del metro (per sumar punts de línia i mostrar el recorregut)
+  linies:
+    fonaments: [fonaments-iniciacio-puntual, digitalitzacio-escaner, edicio-imatges-fotoquimiques, fotografia-estenopeica, fotogrames-cianotipia]
+    quimica: [iniciacio-revelat, revelat-bn, revelat-color-bn, caffenol, wineol, guinneol, copies-beers-developer, reveladors-artesanals, revelats-experimentals, copies-en-paper, introduccio-al-positivat, revelat-i-positivat]
+    processos: [fotogrames-cianotipia, cianotipia, fotografia-estenopeica]
+    practica: [fotografia-de-carrer, del-carrer-al-llibre, fotollibre, retrat-analogic, retrat-amb-holga, retrat-6x6, hasselblad-500]
+    gran-format: [hasselblad-500, retrat-6x6, introduccio-gran-format, gran-format-4x5, retrat-gran-format]
+
   regles:
     pes_slug: 3
     pes_linia: 1

@@ -13,10 +13,10 @@ Documentació de referència:
 ## Bloc A — Recomanador "Quin curs em convé?"
 - [x] A1. `format` i `nivell_minim` al frontmatter (99 fitxers).
 - [x] A2. `data/quiz.yaml` + validació de slugs al build.
-- [ ] A3. i18n CA: frases, avisos i motius del qüestionari.
-- [ ] A4. Pàgina `/tallers/quin-curs-em-conve/` (draft) + plantilla.
-- [ ] A5. Motor JS (puntuació, motius, recorregut, tutoria) i CSS.
-- [ ] A6. Provar els 8 perfils de la spec.
+- [x] A3. i18n CA: frases, avisos i motius del qüestionari (71 claus).
+- [x] A4. Pàgina `/tallers/quin-curs-em-conve/` (draft) + plantilla. Afegit `linia` a 94 fitxers.
+- [x] A5. Motor JS (puntuació, motius, recorregut, tutoria) i CSS.
+- [x] A6. Provats els 8 perfils de la spec amb un harness de Node (pendent revisió visual al navegador).
 - [ ] A7. i18n ES/EN.
 - [ ] A8. Brevo: contacte i "M'interessa".
 - [ ] A9. Migrar "Regala un curs" al motor compartit.
