@@ -115,7 +115,11 @@
 <meta property="og:url" content="{{ $canonical }}">
 <meta property="og:image" content="{{ $ogImage | absURL }}">
 <meta property="og:image:alt" content="{{ $ogAlt }}">
-{{/* og:image:width/height omesos: no eren correctes per a totes les imatges. */}}
+{{- $ogKey := strings.TrimPrefix "/" $ogImage -}}
+{{- with index site.Data.image_dimensions $ogKey }}
+<meta property="og:image:width" content="{{ .w }}">
+<meta property="og:image:height" content="{{ .h }}">
+{{- end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 {{- with site.Params.locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
 {{- range .Translations }}{{ with .Site.Params.locale }}<meta property="og:locale:alternate" content="{{ . }}">{{ end }}{{ end }}
