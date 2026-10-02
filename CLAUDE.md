@@ -395,6 +395,15 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-03 (nit) — Guia de veu i terminologia aplicada + descripcions
+
+- **Guia** — `docs/manuals/veu-terminologia-llumatics.md` (nova) + regla a *Normes per editar* (química al cos, analògica a `<title>`/`description`).
+- **Portada (CA/ES/EN)** — títol/descripció segons la guia; lema «La fotografia com a procés i manera de mirar» + línia «Escola de fotografia química a la Nau Bostik, Barcelona».
+- **`head.html`** — separador de títol `·` i `seo_title` literal (sense sufix automàtic).
+- **Fitxes** — `seo_title` «· Taller de fotografia analògica · Llumàtics» a 93 fitxes; **descripcions reescrites** (55 amb la paraula de cerca + 14 escurçades, totes ≤155) segons la guia.
+- **Blog** — article CA «Fotografia analògica o química? Per què a Llumàtics diem química».
+- **Verificat** — build net i desplegat (`cf675332`).
+
 ### 2026-10-03 (nit) — SEO competidors, landing i logo
 
 - **Anàlisi competidors** — La Perversa (mateix complex, ES-only, on-page feble) i Fotoespai (Sant Andreu, CA-only, sense hreflang ni Course/FAQPage). Informes via subagents.
