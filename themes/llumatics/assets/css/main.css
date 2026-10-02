@@ -4098,22 +4098,17 @@ a.recorregut-stop__name:hover {
   transform: rotate(-8deg);
 }
 
-/* Enllaços «Afegir al calendari» a la fitxa del taller */
-.agenda-cal {
-  display: flex;
-  flex-wrap: wrap;
+/* Icona «Afegir al calendari» (.ics) al costat de la data */
+.date-cal {
+  display: inline-flex;
   align-items: center;
-  gap: .35rem .6rem;
-  margin-top: .5rem;
-  font-size: .75rem;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--color-text-muted);
+  transition: color .15s ease, transform .15s ease;
 }
-.agenda-cal__label { color: var(--color-text-muted); }
-.agenda-cal__link {
-  color: var(--color-accent);
-  text-decoration: underline;
-  font-weight: 600;
-}
-.agenda-cal__link:hover { text-decoration: none; }
+.date-cal:hover { color: var(--color-accent-dark); transform: translateY(-1px); }
+.date-cal svg { display: block; }
 
 /* Hero del taller: imatge principal a sobre del títol, full-ample */
 .course-single__cover--hero {

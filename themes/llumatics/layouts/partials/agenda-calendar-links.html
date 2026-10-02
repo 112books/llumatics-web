@@ -1,7 +1,7 @@
 {{/* ============================================================
      agenda-calendar-links.html — context: pàgina d'agenda (RegularPage)
-     Genera enllaços per afegir l'esdeveniment a Google Calendar,
-     Outlook i un fitxer .ics (Apple Calendar i altres).
+     Genera un fitxer .ics (Apple Calendar, Google, Outlook…) i el
+     retorna com una icona de calendari per posar al costat de la data.
      ============================================================ */}}
 {{- $d := .Params.date_start -}}
 {{- if $d -}}
@@ -10,16 +10,12 @@
 {{- $yyyymmdd := replace $d "-" "" -}}
 {{- $dtStart := printf "%sT%s00" $yyyymmdd (replace $t1 ":" "") -}}
 {{- $dtEnd   := printf "%sT%s00" $yyyymmdd (replace $t2 ":" "") -}}
-{{- $dtStartOut := printf "%sT%s:00" $d $t1 -}}
-{{- $dtEndOut   := printf "%sT%s:00" $d $t2 -}}
 {{- $loc := .Params.location | default .Params.lloc | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
 {{- $title := .Title -}}
 {{- $desc := .Params.description | default .Params.organizer | default $title -}}
 {{- $titleEsc := replace (replace $title "," "\\,") ";" "\\;" -}}
 {{- $descEsc  := replace (replace $desc "," "\\,") ";" "\\;" -}}
 {{- $locEsc   := replace (replace $loc "," "\\,") ";" "\\;" -}}
-{{- $gcal := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&details=%s&location=%s" (urlquery $title) $dtStart $dtEnd (urlquery $desc) (urlquery $loc) -}}
-{{- $outlook := printf "https://outlook.live.com/calendar/0/deeplink/compose?path=%%2Fcalendar%%2Faction%%2Fcompose&rru=addevent&subject=%s&startdt=%s&enddt=%s&location=%s&body=%s" (urlquery $title) $dtStartOut $dtEndOut (urlquery $loc) (urlquery $desc) -}}
 {{- $uid := printf "%s-%s@llumatics.com" .File.ContentBaseName $yyyymmdd -}}
 {{- $icsLines := slice
   "BEGIN:VCALENDAR"
@@ -39,10 +35,16 @@
   "" -}}
 {{- $ics := delimit $icsLines "\r\n" -}}
 {{- $res := resources.FromString (printf "calendar/%s-%s.ics" .File.ContentBaseName .Language.Lang) $ics -}}
-<span class="agenda-cal">
-  <span class="agenda-cal__label">{{ i18n "add_to_calendar" | default "Afegir al calendari" }}:</span>
-  <a class="agenda-cal__link" href="{{ $gcal }}" target="_blank" rel="noopener">Google</a>
-  <a class="agenda-cal__link" href="{{ $outlook }}" target="_blank" rel="noopener">Outlook</a>
-  <a class="agenda-cal__link" href="{{ $res.RelPermalink }}" download>iCal</a>
-</span>
+<a class="date-cal" href="{{ $res.RelPermalink }}" download
+   title="{{ i18n "add_to_calendar" | default "Afegir al calendari" }} (.ics)"
+   aria-label="{{ i18n "add_to_calendar" | default "Afegir al calendari" }}">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+    <line x1="12" y1="14" x2="12" y2="20"></line>
+    <line x1="9" y1="17" x2="15" y2="17"></line>
+  </svg>
+</a>
 {{- end -}}

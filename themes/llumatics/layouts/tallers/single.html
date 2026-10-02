@@ -308,9 +308,9 @@
             {{ range $upcomingDates | first 3 }}
               <div class="info-box__date-item">
                 <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
+                {{ partial "agenda-calendar-links.html" . }}
                 {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
                 <a href="https://www.instagram.com/camerasandfilms.barcelona/" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Inscripció →</a>
-                {{ partial "agenda-calendar-links.html" . }}
               </div>
             {{ end }}
           </div>
@@ -331,13 +331,13 @@
             {{ range .Translations }}{{ if eq .Language.Lang $lang }}{{ $datePage = . }}{{ end }}{{ end }}
             <div class="info-box__date-item">
               <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
+              {{ partial "agenda-calendar-links.html" $datePage }}
               {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
               {{ if $datePage.Params.purchase_url }}
                 <a href="{{ $datePage.Params.purchase_url }}" class="btn btn--primary btn--xs" target="_blank" rel="noopener">{{ $datePage.Params.cta_label | default "Comprar" }}</a>
               {{ else }}
                 <a href="{{ .RelPermalink }}" class="btn btn--outline btn--xs">Info</a>
               {{ end }}
-              {{ partial "agenda-calendar-links.html" $datePage }}
             </div>
           {{ end }}
         </div>
