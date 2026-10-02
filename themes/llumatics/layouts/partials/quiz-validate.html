@@ -19,6 +19,16 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{/* Slugs del qüestionari de regal */}}
+{{- range (index hugo.Data.quiz "gift").passos -}}
+  {{- range .opcions -}}
+    {{- range .slugs -}}
+      {{- if not (site.GetPage (printf "tallers/%s" .)) -}}
+        {{- errorf "quiz.yaml (gift): el slug '%s' no existeix a l'idioma %s" . site.Language.Lang -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- range $linia, $slugs := (index hugo.Data.quiz "quin_curs").linies -}}
   {{- range $slugs -}}
     {{- if not (site.GetPage (printf "tallers/%s" .)) -}}

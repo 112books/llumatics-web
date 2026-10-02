@@ -115,3 +115,39 @@ quin_curs:
     llindar_minim: 4
     max_resultats: 3
     empat: nivell_mes_baix
+
+# Questionari de "Regala un curs" (comparteix el mateix fitxer de dades que el recomanador).
+# i18n = clau del text de l'opció; i18n_h = clau del text petit; slugs = cursos que recomana.
+gift:
+  passos:
+    - id: start
+      step: 1
+      total: 2
+      i18n_q: gift_quiz_q_recipient
+      opcions:
+        - { i18n: gift_quiz_a_never, i18n_h: gift_quiz_a_never_h, next: q_camera }
+        - { i18n: gift_quiz_a_some,  i18n_h: gift_quiz_a_some_h,  next: q_world }
+        - { i18n: gift_quiz_a_pro,   i18n_h: gift_quiz_a_pro_h,   next: q_challenge }
+    - id: q_camera
+      step: 2
+      total: 2
+      i18n_q: gift_quiz_q_camera
+      opcions:
+        - { i18n: gift_quiz_cam_yes, i18n_h: gift_quiz_cam_yes_h, slugs: [revelat-bn, revelat-i-positivat] }
+        - { i18n: gift_quiz_cam_no,  i18n_h: gift_quiz_cam_no_h,  slugs: [fonaments-iniciacio-puntual, fotogrames-cianotipia] }
+    - id: q_world
+      step: 2
+      total: 2
+      i18n_q: gift_quiz_q_world
+      opcions:
+        - { i18n: gift_quiz_world_lab, i18n_h: gift_quiz_world_lab_h, slugs: [revelat-i-positivat, copies-en-paper, introduccio-al-positivat] }
+        - { i18n: gift_quiz_world_alt, i18n_h: gift_quiz_world_alt_h, slugs: [cianotipia, fotografia-estenopeica, fotogrames-cianotipia] }
+        - { i18n: gift_quiz_world_cam, i18n_h: gift_quiz_world_cam_h, slugs: [hasselblad-500, introduccio-gran-format, retrat-6x6] }
+    - id: q_challenge
+      step: 2
+      total: 2
+      i18n_q: gift_quiz_q_challenge
+      opcions:
+        - { i18n: gift_quiz_ch_own,      i18n_h: gift_quiz_ch_own_h,      slugs: [reveladors-artesanals, guinneol, copies-beers-developer] }
+        - { i18n: gift_quiz_ch_sheet,    i18n_h: gift_quiz_ch_sheet_h,    slugs: [gran-format-4x5, introduccio-gran-format] }
+        - { i18n: gift_quiz_ch_portrait, i18n_h: gift_quiz_ch_portrait_h, slugs: [retrat-analogic, retrat-6x6, hasselblad-500] }

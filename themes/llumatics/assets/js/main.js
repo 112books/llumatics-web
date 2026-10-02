@@ -218,6 +218,33 @@ if (contactForm) {
       }
     };
 
+    /* A9: si hi ha la configuració a data/quiz.yaml (mateix fitxer que el recomanador),
+       l'usem; si no, es manté el mapping de dalt com a fallback. */
+    var giftConfigEl = document.getElementById('gift-config');
+    if (giftConfigEl) {
+      try {
+        var gc = JSON.parse(giftConfigEl.textContent);
+        if (gc && gc.passos && gc.passos.length) {
+          var fromCfg = {};
+          gc.passos.forEach(function(p) {
+            fromCfg[p.id] = {
+              step: p.step, total: p.total,
+              q: T(p.i18n_q),
+              opts: (p.opcions || []).map(function(o) {
+                return {
+                  label: T(o.i18n),
+                  hint: o.i18n_h ? T(o.i18n_h) : '',
+                  next: o.next || null,
+                  slugs: (o.slugs || []).join(',')
+                };
+              })
+            };
+          });
+          if (fromCfg.start) STEPS = fromCfg;
+        }
+      } catch (e) {}
+    }
+
     function getCourse(slug) {
       return giftCourses.find(function(c) { return c.slug === slug; });
     }

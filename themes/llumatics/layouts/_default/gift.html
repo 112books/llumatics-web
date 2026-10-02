@@ -8,6 +8,8 @@
   {{- $data = $data | append (dict "slug" $slug "title" .Title "lead" (.Params.lead | default "") "preu_1" (.Params.preu_1 | default 0) "url" .RelPermalink) -}}
 {{- end -}}
 <script type="text/plain" id="gift-data">{{ $data | jsonify }}</script>
+{{- $giftCfg := index hugo.Data.quiz "gift" }}
+<script type="application/json" id="gift-config">{{ $giftCfg | jsonify | safeJS }}</script>
 
 <div class="page-with-bg">
 <img class="page-bg" src="{{ printf "%s%s" site.BaseURL "images/regala-un-curs-llumatics.jpg" }}" alt="" aria-hidden="true">
