@@ -44,6 +44,7 @@ Documentació de referència:
 ## Bloc G — Navegació (peticions d'usuari)
 - [x] G1. Footer: nova columna «Tria un curs» amb «Selecciona un curs» (recomanador) i «Regala un curs»; tret de sota Contacte. Graella del footer a 5 columnes.
 - [x] G2. Menú principal: estat actiu de la secció amb color d'accent (CA/ES/EN).
+- [x] G3. Contacte: pastilles d'ancoratge amb text blanc i fons d'accent.
 
 ## Bloc F — Traducció i llenguatge
 - [~] F1. Auditoria de traducció i llenguatge fotogràfic: `docs/manuals/auditoria-traduccio-llenguatge.md` (primera passada + correccions de «laboratorio oscuro» i «cámara oscura»). Pendent: decisió sobre «quarto fosc» i revisió completa.
