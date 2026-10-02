@@ -119,6 +119,10 @@ Options -Indexes
   RewriteRule ^taller-el-meravellos-mon-hasselblad/?$ https://llumatics.com/tallers/hasselblad-500/ [R=301,L]
   RewriteRule ^taller-retrat-a-gran-format-a-lomography-embassy-barcelona/?$ https://llumatics.com/tallers/retrat-gran-format/ [R=301,L]
   RewriteRule ^un-dia-de-revelat-analogic-pluja-cameres-zenit-i-molta-passio-per-la-fotografia/?$ https://llumatics.com/blog/revelat-analogic-zenit-2025/ [R=301,L]
+  # Slugs legacy en castellà a l'arrel (sense prefix /es/) — migració WordPress
+  RewriteRule ^04-10-2025-taller-de-revelado-en-blanco-y-negro-en-cameras-films(/feed)?/?$ https://llumatics.com/tallers/revelat-bn/ [R=301,L]
+  RewriteRule ^taller-de-iniciacion-a-la-fotografia-2/?$ https://llumatics.com/tallers/fonaments-iniciacio-puntual/ [R=301,L]
+  RewriteRule ^taller-de-iniciacion-a-la-fotografia/?$ https://llumatics.com/tallers/fonaments-iniciacio-puntual/ [R=301,L]
 
   # ── ES: pàgines estàtiques canviades de nom ──────────────
   RewriteRule ^es/sobre-nosotros/?$ https://llumatics.com/es/sobre/ [R=301,L]
@@ -174,6 +178,7 @@ Options -Indexes
   RewriteRule ^es/resultado-del-pasado-taller-de-retrato/?$ https://llumatics.com/es/blog/taller-retrat-febrer-2019/ [R=301,L]
   RewriteRule ^es/resultados-del-taller-de-gran-formato/?$ https://llumatics.com/es/blog/resultats-taller-gran-format-2018/ [R=301,L]
   RewriteRule ^es/taller-de-fotografia-tinta-i-sang/?$ https://llumatics.com/es/blog/ [R=301,L]
+  RewriteRule ^es/taller-de-iniciacion-a-la-fotografia-2/?$ https://llumatics.com/es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
   RewriteRule ^es/taller-de-iniciacion-a-la-fotografia/?$ https://llumatics.com/es/tallers/fonaments-iniciacio-puntual/ [R=301,L]
   RewriteRule ^es/taller-de-iniciacion-al-positivado-2/?$ https://llumatics.com/es/tallers/introduccio-al-positivat/ [R=301,L]
   RewriteRule ^es/taller-de-revelado-con-caffenol/?$ https://llumatics.com/es/tallers/caffenol/ [R=301,L]
