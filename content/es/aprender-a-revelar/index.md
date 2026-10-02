@@ -22,7 +22,7 @@ translationKey: "aprendre-a-revelar"
 
 ## Cuánto cuesta
 
-Los precios parten de 170 € (positivado) y 220 € (revelado B/N) para un alumno, y bajan hasta 61–79 € por persona si sois cuatro. El material (carretes y químicos) está incluido y la formación está exenta de IVA.
+Los precios parten de 170 € (positivado) y 220 € (revelado B/N) para un alumno, y bajan hasta 61–79 € por persona si sois cuatro. El material (carretes y químicos) está incluido y los impuestos están incluidos.
 
 ## Preguntas frecuentes
 

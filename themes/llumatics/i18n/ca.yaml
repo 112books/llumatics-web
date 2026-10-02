@@ -183,7 +183,7 @@ preu_1_alumne: "1 alumne"
 preu_2_alumnes: "2 alumnes"
 preu_3_alumnes: "3 alumnes"
 preu_4_alumnes: "4 alumnes"
-preu_vat_note: "Formació exempta d'IVA. Si necessites factura, indica-ho en sol·licitar."
+preu_vat_note: "Impostos inclosos. Si necessites factura, indica-ho en sol·licitar."
 
 # Info-box — dades tècniques
 duration_hours: "hores"

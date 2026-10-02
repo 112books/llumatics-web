@@ -97,7 +97,7 @@ categoria: ""              # iniciacio | intermedi | avançat | tematic
 estat: "idea"              # actiu | en-preparacio | idea
 
 # Fitxa tècnica (requadre destacat)
-preu_1: 0                  # Preu per 1 alumne (€, sense IVA —formació exempta—)
+preu_1: 0                  # Preu per 1 alumne (€, impostos inclosos)
 preu_2: 0                  # Preu per persona si venen 2
 preu_3: 0                  # Preu per persona si venen 3
 preu_4: 0                  # Preu per persona si venen 4
@@ -139,7 +139,7 @@ Exemple per a un taller de 4 hores:
 
 > Alguns tallers (gran format, fotografia de carrer amb tutoria) tenen tarifa superior.
 > En aquests casos s'indica explícitament al frontmatter i al contingut.
-> Els preus no porten IVA indicat —l'activitat de formació n'està exempta (art. 20.1.9 LIVA).
+> Els preus inclouen els impostos. Si el client necessita factura, s'emet amb totes les dades fiscals.
 > Si el client necessita factura, s'indica a les FAQ generals del web.
 
 #### Canals
@@ -362,7 +362,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Noindex** obligatori a totes les pàgines privades d'alumnes.
 - **Títols de tallers:** atractius i suggerents, no tècnics ni descriptius secs.
 - **Tone of voice:** directe, sense floritures, expert però accessible. Res de corporatiu.
-- **Preus:** sense menció d'IVA. Remetre a FAQ per a facturació.
+- **Preus:** impostos inclosos. Si cal factura, s'emet amb totes les dades fiscals.
 - **⚠️ `.htaccess` — NO afegir redirect HTTPS.** Dinahosting fa SSL termination al proxy: Apache veu HTTP tot i que el client ve per HTTPS. Afegir `RewriteCond %{HTTPS} off` causa bucle infinit de redireccions i cau el site. Dinahosting ja força HTTPS a nivell de servidor.
 
 ---

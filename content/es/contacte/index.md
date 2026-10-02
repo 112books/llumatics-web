@@ -68,7 +68,7 @@ subtitle: "Escríbenos para reservar un taller, hacer una consulta o proponer un
 <details class="faq-item">
 <summary class="faq-question">¿Cómo se hace el pago? ¿Necesito factura? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>El pago se hace por <strong>transferencia bancaria</strong> o <strong>Bizum</strong> previa confirmación de la fecha. Los talleres de formación están <strong>exentos de IVA</strong> (art. 20.1.9 LIVA). Si necesitáis factura, indicadlo cuando contactéis y os la preparamos con todos los datos fiscales.</p>
+<p>El pago se hace por <strong>transferencia bancaria</strong> o <strong>Bizum</strong> previa confirmación de la fecha. Los talleres de formación tienen <strong>los impuestos incluidos</strong>. Si necesitáis factura, indicadlo cuando contactéis y os la preparamos con todos los datos fiscales.</p>
 </div>
 </details>
 

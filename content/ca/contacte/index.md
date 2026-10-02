@@ -68,7 +68,7 @@ subtitle: "Escriu-nos per reservar un taller, fer una consulta o proposar una co
 <details class="faq-item">
 <summary class="faq-question">Com es fa el pagament? Necessito factura? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>El pagament es fa per <strong>transferència bancària</strong> o <strong>Bizum</strong> prèvia confirmació de la data. Els tallers de formació estan <strong>exempts d'IVA</strong> (art. 20.1.9 LIVA). Si necessiteu factura, indiqueu-ho quan contacteu i us la preparem amb totes les dades fiscals.</p>
+<p>El pagament es fa per <strong>transferència bancària</strong> o <strong>Bizum</strong> prèvia confirmació de la data. Els tallers de formació tenen <strong>els impostos inclosos</strong>. Si necessiteu factura, indiqueu-ho quan contacteu i us la preparem amb totes les dades fiscals.</p>
 </div>
 </details>
 

@@ -68,7 +68,7 @@ subtitle: "Write to us to book a workshop, ask a question or propose a collabora
 <details class="faq-item">
 <summary class="faq-question">How does payment work? Can I get an invoice? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>Payment is by <strong>bank transfer</strong> or <strong>Bizum</strong> once a date is confirmed. Training workshops are <strong>VAT-exempt</strong> (art. 20.1.9 LIVA). If you need an invoice, let us know when you get in touch and we'll send one with full tax details.</p>
+<p>Payment is by <strong>bank transfer</strong> or <strong>Bizum</strong> once a date is confirmed. Training workshops have <strong>taxes included</strong>. If you need an invoice, let us know when you get in touch and we'll send one with full tax details.</p>
 </div>
 </details>
 

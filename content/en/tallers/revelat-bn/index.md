@@ -105,7 +105,7 @@ Each participant works with two rolls. The first is developed at standard — as
 <details class="faq-item">
 <summary class="faq-question">How much does a film development workshop cost in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>Llumàtics' B&amp;W film development workshop costs €220 for one student and drops to €79 per person for a group of four, with both rolls and all chemicals included. Training is VAT-exempt.</p>
+<p>Llumàtics' B&amp;W film development workshop costs €220 for one student and drops to €79 per person for a group of four, with both rolls and all chemicals included. Taxes included.</p>
 </div>
 </details>
 

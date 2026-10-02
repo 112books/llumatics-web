@@ -22,7 +22,7 @@ translationKey: "aprendre-a-revelar"
 
 ## How much it costs
 
-Prices start at €170 (printing) and €220 (B&W development) for one student, dropping to €61–79 per person for a group of four. Materials (rolls and chemicals) are included and training is VAT-exempt.
+Prices start at €170 (printing) and €220 (B&W development) for one student, dropping to €61–79 per person for a group of four. Materials (rolls and chemicals) are included and taxes are included.
 
 ## Frequently asked questions
 

@@ -105,7 +105,7 @@ Cada participante trabaja con dos carretes. El primero se revela en estándar �
 <details class="faq-item">
 <summary class="faq-question">¿Cuánto cuesta un taller de revelado de película en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>El taller de Revelado de película B/N de Llumàtics cuesta 220 € para un alumno y baja a 79 € por persona cuando sois cuatro, con los dos carretes y todos los químicos incluidos. La actividad de formación está exenta de IVA.</p>
+<p>El taller de Revelado de película B/N de Llumàtics cuesta 220 € para un alumno y baja a 79 € por persona cuando sois cuatro, con los dos carretes y todos los químicos incluidos. Impuestos incluidos.</p>
 </div>
 </details>
 

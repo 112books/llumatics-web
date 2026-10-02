@@ -106,7 +106,7 @@ Cada participant treballa amb dos carretes. El primer es revela en estàndard �
 <details class="faq-item">
 <summary class="faq-question">Quant costa un taller de revelat de pel·lícula a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
 <div class="faq-answer">
-<p>El taller de Revelat de pel·lícula B/N de Llumàtics costa 220 € per a un alumne i baixa a 79 € per persona quan sou quatre, amb els dos carretes i tots els químics inclosos. L'activitat de formació està exempta d'IVA.</p>
+<p>El taller de Revelat de pel·lícula B/N de Llumàtics costa 220 € per a un alumne i baixa a 79 € per persona quan sou quatre, amb els dos carretes i tots els químics inclosos. Impostos inclosos.</p>
 </div>
 </details>
 

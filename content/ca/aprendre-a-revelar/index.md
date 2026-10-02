@@ -22,7 +22,7 @@ translationKey: "aprendre-a-revelar"
 
 ## Quant costa
 
-Els preus parteixen de 170 € (positivado) i 220 € (revelat B/N) per a un alumne, i baixen fins a 61–79 € per persona si sou quatre. El material (carretes i químics) està inclòs i la formació està exempta d'IVA.
+Els preus parteixen de 170 € (positivado) i 220 € (revelat B/N) per a un alumne, i baixen fins a 61–79 € per persona si sou quatre. El material (carretes i químics) està inclòs i els impostos estan inclosos.
 
 ## Preguntes freqüents
 
