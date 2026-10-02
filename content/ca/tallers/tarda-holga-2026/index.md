@@ -3,7 +3,7 @@ title: "Tarda Holga a la Nau Bostik"
 subtitle: "Trobada gratuïta per celebrar la Holga Week"
 lead: "Del 1 al 7 d'octubre és la Holga Week. Nosaltres ho celebrem el dia 8 amb una tarda per disparar, compartir trucs i reveure rodets, a la Nau Bostik. Gratuïta."
 description: "Tarda Holga gratuïta a la Nau Bostik, dijous 8 d'octubre de 2026, 18–20 h. Trobada per celebrar la Holga Week. Càmeres de préstec limitades."
-image: "/images/tallers/retrat-amb-holga.jpg"
+image: "/images/tallers/tarda-holga-2026.jpg"
 images:
   - "/images/tallers/tarda-holga-2026-1.jpg"
   - "/images/tallers/tarda-holga-2026-2.jpg"
