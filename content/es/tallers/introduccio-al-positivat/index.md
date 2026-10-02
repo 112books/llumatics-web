@@ -78,3 +78,34 @@ Si quieres ir más lejos —aprender controles locales, esquivar y quemar, traba
 
 - Papel adicional (+2€/hoja RC, +4€/hoja fibra)
 - Revelado de película (si no tienes negativos, haz primero el taller de Revelado B/N)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta saber revelar para el taller de positivado? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No hace falta haber revelado nunca. El taller de Introducción al positivado empieza desde cero: aprendes a hacer copias en papel con ampliadora, del negativo a la copia seca. Si quieres entender antes el revelado, empieza por la Iniciación al revelado.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo llevar mis negativos para positivarlos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller incluye negativos de práctica, pero si llevas tus negativos revelados usamos los tuyos para hacer las copias, y sales con copias de tus fotos.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuántas copias haré en el taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El precio incluye 10 hojas de papel RC por participante. Cada hoja puede dar una copia grande o varias de contacto. El papel adicional tiene un coste aparte (+2 €/hoja RC, +4 €/hoja fibra).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde puedo aprender positivado en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), en grupos de máximo 4 alumnos. El taller dura 3 horas y parte de 170 € para un alumno.</p>
+</div>
+</details>
+

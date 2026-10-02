@@ -79,3 +79,34 @@ Si vols anar més lluny —aprendre controls locals, esquivar i cremar, treballa
 
 - Paper addicional (+2€/full RC, +4€/full fibra)
 - Revelat de pel·lícula (si no tens negatius, fes primer el taller de Revelat B/N)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal saber revelar per fer el taller de positivado? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No cal haver revelat mai. El taller d'Introducció al positivat comença des de zero: aprens a fer còpies en paper amb ampliadora, del negatiu a la còpia seca. Si vols entendre abans el revelat, comença per la Iniciació al revelat.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Puc portar els meus negatius per positivar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller inclou negatius de pràctica, però si portes els teus negatius revelats fem servir els teus per fer les còpies, i surts amb còpies de les teves fotos.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quantes còpies faré al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El preu inclou 10 fulls de paper RC per participant. Cada full pot donar una còpia gran o diverses de contacte. El paper addicional té un cost a part (+2 €/full RC, +4 €/full fibra).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre positivado a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), en grups de màxim 4 alumnes. El taller dura 3 hores i parteix de 170 € per a un alumne.</p>
+</div>
+</details>
+

@@ -78,3 +78,34 @@ If you want to go further — local controls, dodging and burning, fibre-base pa
 
 - Additional paper (+€2/sheet RC, +€4/sheet fibre)
 - Film development (if you don't have negatives, do the B&W Development workshop first)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to know how to develop film before printing? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>You don't need any prior experience. The Introduction to darkroom printing workshop starts from scratch: you learn to make paper prints with an enlarger, from the negative to the dry print. If you want to understand development first, start with the Introduction to film development workshop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I bring my own negatives to print? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. The workshop includes practice negatives, but if you bring your own developed negatives we use yours to make the prints, so you leave with prints of your own photos.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How many prints will I make? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The price includes 10 sheets of RC paper per participant. Each sheet can give one large print or several contact prints. Additional paper costs extra (+€2/sheet RC, +€4/sheet fibre).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn darkroom printing in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, Barcelona 08027), in groups of up to 4 students. The workshop lasts 3 hours and starts at €170 for one student.</p>
+</div>
+</details>
+
