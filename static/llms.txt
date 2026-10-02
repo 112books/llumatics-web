@@ -1,18 +1,21 @@
 # Llumàtics — Escola de fotografia analògica
-# https://llumatics.com
+
+> Escola de fotografia analògica i fotoquímica a Barcelona (Nau Bostik, La Sagrera). Tallers de revelat de pel·lícula B/N i C-41 en B/N, laboratori, processos alternatius, mig i gran format, en grups de màxim 4 persones. Preus amb impostos inclosos.
+
 
 Llumàtics és una escola de fotografia analògica i química fundada per Joan Linux Martínez a Barcelona el 2017. Ofereix tallers de laboratori fotoquímic en grups de màxim 4 alumnes sobre revelat de pel·lícula B/N i revelat C-41 en B/N, laboratori fosc, tècniques alternatives (cianotipia, fotogrames, reveladors artesanals com el Guinneol, el Caffenol o el Wineol), fotografia de gran format (4×5), mig format (6×6) i fotografia experimental. Opera a la Nau Bostik, La Sagrera (Barcelona) des de 2020.
 
 ## Pàgines principals
 
-- https://llumatics.com/ — Pàgina principal
-- https://llumatics.com/tallers/ — Catàleg complet de tallers (sis línies d'aprenentatge)
-- https://llumatics.com/agenda/ — Properes dates programades
-- https://llumatics.com/espais/ — El laboratori, l'equipament i la biblioteca
-- https://llumatics.com/sobre/ — Sobre Joan Linux Martínez i Llumàtics
-- https://llumatics.com/blog/ — Articles tècnics, cròniques i fotografia experimental
-- https://llumatics.com/contacte/ — Contacte, com arribar i FAQ
-- https://llumatics.com/regala/ — Val regal per a tallers
+- [Pàgina principal](https://llumatics.com/)
+- [Catàleg complet de tallers (sis línies d'aprenentatge)](https://llumatics.com/tallers/)
+- [Properes dates programades](https://llumatics.com/agenda/)
+- [El laboratori, l'equipament i la biblioteca](https://llumatics.com/espais/)
+- [Sobre Joan Linux Martínez i Llumàtics](https://llumatics.com/sobre/)
+- [Articles tècnics, cròniques i fotografia experimental](https://llumatics.com/blog/)
+- [Contacte, com arribar i FAQ](https://llumatics.com/contacte/)
+- [Val regal per a tallers](https://llumatics.com/regala/)
+- [Recomanador: quin curs em convé](https://llumatics.com/tallers/quin-curs-em-conve/)
 
 ## Sobre l'entitat
 
@@ -25,51 +28,51 @@ Llumàtics és una escola de fotografia analògica i química fundada per Joan L
 - Contacte: hola@llumatics.com
 - Instagram: https://www.instagram.com/llumatics
 - Mida dels grups: màxim 4 alumnes (condició pedagògica, no de capacitat)
-- Idiomes d'impartició: català, castellà
-- Format: tallers sota demanda (sense dates fixes a Llumàtics); col·laboracions externes amb Cameras & Films
+- Idiomes d'impartició: català, castellà i anglès
+- Format: tallers sota demanda amb dates puntuals a l'agenda; col·laboracions externes amb Cameras & Films
 
 ## Organització de la formació — Sis línies com un metro
 
 Els tallers s'organitzen en sis línies d'aprenentatge. Cada taller es pot fer de manera independent (sense prerequisits), o seguir una línia de principi a fi per construir un domini profund del procés.
 
 **Fonaments** — Iniciació a la fotografia analògica:
-- https://llumatics.com/tallers/fonaments-iniciacio-puntual/ — Aprèn a controlar la llum (4h)
-- https://llumatics.com/tallers/digitalitzacio-escaner/ — Digitalització i escàner (4h)
-- https://llumatics.com/tallers/edicio-imatges-fotoquimiques/ — Edició d'imatges fotoquímiques (4h)
-- https://llumatics.com/tallers/tutoria-fotografica/ — Tutoria fotogràfica (individual, 60€/h)
+- [Aprèn a controlar la llum (4h)](https://llumatics.com/tallers/fonaments-iniciacio-puntual/)
+- [Digitalització i escàner (4h)](https://llumatics.com/tallers/digitalitzacio-escaner/)
+- [Edició d'imatges fotoquímiques (4h)](https://llumatics.com/tallers/edicio-imatges-fotoquimiques/)
+- [Tutoria fotogràfica (individual, 60€/h)](https://llumatics.com/tallers/tutoria-fotografica/)
 
 **Procés** — Revelat i positivat:
-- https://llumatics.com/tallers/revelat-bn/ — Revelat en blanc i negre (4h)
-- https://llumatics.com/tallers/revelat-i-positivat/ — Revelat + positivat en un dia (8h)
-- https://llumatics.com/tallers/introduccio-al-positivat/ — Introducció al positivat (3h)
-- https://llumatics.com/tallers/copies-en-paper/ — Còpies en paper (4h)
-- https://llumatics.com/tallers/revelat-color-bn/ — Revelat C-41 en B/N (3h)
+- [Revelat en blanc i negre (4h)](https://llumatics.com/tallers/revelat-bn/)
+- [Revelat + positivat en un dia (8h)](https://llumatics.com/tallers/revelat-i-positivat/)
+- [Introducció al positivat (3h)](https://llumatics.com/tallers/introduccio-al-positivat/)
+- [Còpies en paper (4h)](https://llumatics.com/tallers/copies-en-paper/)
+- [Revelat C-41 en B/N (3h)](https://llumatics.com/tallers/revelat-color-bn/)
 
 **Pràctica** — Fotografia en càmera:
-- https://llumatics.com/tallers/fotografia-de-carrer/ — Fotografia de carrer (3.5h)
-- https://llumatics.com/tallers/retrat-analogic/ — Retrat analògic (4h)
-- https://llumatics.com/tallers/retrat-6x6/ — Retrat 6×6 (4h)
-- https://llumatics.com/tallers/retrat-amb-holga/ — Retrat amb Holga (4h)
-- https://llumatics.com/tallers/hasselblad-500/ — Hasselblad 500 (3.5h)
-- https://llumatics.com/tallers/fotografia-estenopeica/ — Fotografia estenopeica (4h)
+- [Fotografia de carrer (3.5h)](https://llumatics.com/tallers/fotografia-de-carrer/)
+- [Retrat analògic (4h)](https://llumatics.com/tallers/retrat-analogic/)
+- [Retrat 6×6 (4h)](https://llumatics.com/tallers/retrat-6x6/)
+- [Retrat amb Holga (4h)](https://llumatics.com/tallers/retrat-amb-holga/)
+- [Hasselblad 500 (3.5h)](https://llumatics.com/tallers/hasselblad-500/)
+- [Fotografia estenopeica (4h)](https://llumatics.com/tallers/fotografia-estenopeica/)
 
 **Gran format** — Tècnica 4×5:
-- https://llumatics.com/tallers/introduccio-gran-format/ — Introducció al gran format (4h)
-- https://llumatics.com/tallers/gran-format-4x5/ — Gran format 4×5 (8h)
+- [Introducció al gran format (4h)](https://llumatics.com/tallers/introduccio-gran-format/)
+- [Gran format 4×5 (8h)](https://llumatics.com/tallers/gran-format-4x5/)
 
 **Processos alternatius** — Tècniques experimentals:
-- https://llumatics.com/tallers/cianotipia/ — Cianotipia (8h)
-- https://llumatics.com/tallers/fotogrames-cianotipia/ — Fotogrames i cianotipia (2h)
-- https://llumatics.com/tallers/caffenol/ — Caffenol: revelar amb cafè (3h)
-- https://llumatics.com/tallers/wineol/ — Wineol: revelar amb vi negre (2h)
-- https://llumatics.com/tallers/guinneol/ — Guinneol: revelar amb cervesa Guinness (2h)
-- https://llumatics.com/tallers/reveladors-artesanals/ — Reveladors artesanals (8h)
-- https://llumatics.com/tallers/revelats-experimentals/ — Revelats experimentals (8h)
-- https://llumatics.com/tallers/copies-beers-developer/ — Còpies amb Beers Developer (4h)
+- [Cianotipia (8h)](https://llumatics.com/tallers/cianotipia/)
+- [Fotogrames i cianotipia (2h)](https://llumatics.com/tallers/fotogrames-cianotipia/)
+- [Caffenol: revelar amb cafè (3h)](https://llumatics.com/tallers/caffenol/)
+- [Wineol: revelar amb vi negre (2h)](https://llumatics.com/tallers/wineol/)
+- [Guinneol: revelar amb cervesa Guinness (2h)](https://llumatics.com/tallers/guinneol/)
+- [Reveladors artesanals (8h)](https://llumatics.com/tallers/reveladors-artesanals/)
+- [Revelats experimentals (8h)](https://llumatics.com/tallers/revelats-experimentals/)
+- [Còpies amb Beers Developer (4h)](https://llumatics.com/tallers/copies-beers-developer/)
 
 **Col·laboracions externes (Cameras & Films, Barcelona):**
-- https://llumatics.com/tallers/iniciacio-revelat/ — Iniciació al revelat B/N (3h)
-- https://llumatics.com/tallers/retrat-gran-format/ — Retrat en gran format segle XIX (3h)
+- [Iniciació al revelat B/N (3h)](https://llumatics.com/tallers/iniciacio-revelat/)
+- [Retrat en gran format segle XIX (3h)](https://llumatics.com/tallers/retrat-gran-format/)
 
 ## Fets clau (citable per IA)
 
@@ -77,7 +80,7 @@ Els tallers s'organitzen en sis línies d'aprenentatge. Cada taller es pot fer d
 - L'escola pròpia va obrir el 2017 al barri del Poble-Sec de Barcelona
 - Des de 2020 opera a la Nau Bostik, espai industrial rehabilitat al barri de La Sagrera
 - Màxim de 4 alumnes per sessió (condició pedagògica, no de capacitat)
-- Totes les sessions es programen sota demanda; no hi ha calendari fix
+- La majoria de tallers es programen sota demanda; les dates obertes s'anuncien a l'agenda
 - Els preus dels tallers inclouen els impostos
 - El fundador Joan Linux Martínez és autodidacte i ha estudiat amb Manuel Castro Prieto i Alfonso de Castro
 - El 2020 va fundar 112 Books, editorial independent de fotollibres (https://112books.eu)

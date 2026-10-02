@@ -48,13 +48,13 @@
   </div>
 
   <div class="agenda-item__info">
-    <h3 class="agenda-item__title">
+    <h2 class="agenda-item__title">
       {{ if $taller }}
         <a href="{{ $taller.RelPermalink }}">{{ .Title }}</a>
       {{ else }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
-    </h3>
+    </h2>
     <div class="agenda-item__meta">
       {{ with .Params.time_start }}<span>{{ . }}{{ with $.Params.time_end }}–{{ . }}{{ end }}</span>{{ end }}
       {{ with .Params.location }}<span>{{ . }}</span>{{ end }}

@@ -101,8 +101,7 @@
 <meta property="og:url" content="{{ $canonical }}">
 <meta property="og:image" content="{{ $ogImage | absURL }}">
 <meta property="og:image:alt" content="{{ $ogAlt }}">
-<meta property="og:image:width" content="1322">
-<meta property="og:image:height" content="744">
+{{/* og:image:width/height omesos: no eren correctes per a totes les imatges. */}}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 {{- with site.Params.locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
 {{- range .Translations }}{{ with .Site.Params.locale }}<meta property="og:locale:alternate" content="{{ . }}">{{ end }}{{ end }}
@@ -174,7 +173,15 @@
       "url" "https://llumatics.com/sobre/"
       "sameAs" (slice "https://about.pocallum.cat" site.Params.instagram)
       -}}
-{{- $graph := dict `@context` "https://schema.org" `@graph` (slice $org $founder) -}}
+{{- $website := dict
+      "@type" "WebSite"
+      "@id" "https://llumatics.com/#website"
+      "url" "https://llumatics.com"
+      "name" "Llumàtics"
+      "inLanguage" .Language.Lang
+      "publisher" (dict "@id" $orgID)
+      -}}
+{{- $graph := dict `@context` "https://schema.org" `@graph` (slice $org $founder $website) -}}
 <script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
 
 {{/* JSON-LD — BlogPosting */}}
@@ -316,7 +323,7 @@
 {{- if $d -}}
 {{- $isPast := lt ($d.Unix) (now.Unix) -}}
 {{- $locName := .Params.location | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
-{{- $loc := cond (in $locName (slice "Nau Bostik" "Llumàtics")) $napPlace (dict `@type` "Place" "name" $locName) -}}
+{{- $loc := cond (or (strings.Contains $locName "Nau Bostik") (strings.Contains $locName "Llumàtics")) $napPlace (dict `@type` "Place" "name" $locName) -}}
 {{- $event := dict
       `@context` "https://schema.org"
       `@type` "Event"
@@ -339,4 +346,24 @@
 {{- with .Params.max_places }}{{ $event = merge $event (dict "maximumAttendeeCapacity" .) }}{{ end }}
 <script type="application/ld+json">{{ $event | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end }}
+{{ end }}
+
+{{/* JSON-LD — Product (val regal). /regala/ no tenia cap schema. */}}
+{{ if eq .Type "regala" }}
+{{- $product := dict
+      "@context" "https://schema.org"
+      "@type" "Product"
+      "name" (i18n "gift_card_title" | default "Val regal")
+      "description" (i18n "gift_desc" | default "Val regal per a tallers de fotografia analògica")
+      "brand" (dict "@type" "Brand" "name" "Llumàtics")
+      "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
+      "url" .Permalink
+      "offers" (dict
+        "@type" "AggregateOffer"
+        "lowPrice" "20"
+        "priceCurrency" "EUR"
+        "availability" "https://schema.org/InStock"
+        "seller" (dict "@id" $orgID))
+      -}}
+<script type="application/ld+json">{{ $product | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}

@@ -117,6 +117,7 @@
         <input type="hidden" name="_language" value="{{ .Language.Lang }}">
 
         <button type="submit" class="btn btn--primary">{{ i18n "form_send" | default "Enviar" }}</button>
+        <p class="contact-form__error" id="contact-form-error" role="alert" hidden></p>
 
       </form>
 

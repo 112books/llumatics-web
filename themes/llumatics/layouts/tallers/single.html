@@ -117,6 +117,7 @@
       <div class="fitxa-pedagogica">
         <h2>{{ i18n "fitxa_taller" }}</h2>
 
+        <dl>
         {{ with .Params.objective }}
         <div class="fitxa-row">
           <dt>{{ i18n "fitxa_objectiu" }}</dt>
@@ -151,6 +152,7 @@
           <dd>{{ . }}</dd>
         </div>
         {{ end }}
+        </dl>
       </div>
       {{ end }}
 
@@ -200,8 +202,8 @@
           <table style="width:100%; border-collapse:collapse; font-size:var(--text-sm);">
             <thead>
               <tr style="border-bottom:1px solid var(--color-border);">
-                <th style="text-align:left; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "durada_col" | default "Durada" }}{{ else }}{{ i18n "preu_col_alumnes" }}{{ end }}</th>
-                <th style="text-align:right; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "preu_col" | default "Preu" }}{{ else }}{{ i18n "preu_col_per_persona" }}{{ end }}</th>
+                <th scope="col" style="text-align:left; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "durada_col" | default "Durada" }}{{ else }}{{ i18n "preu_col_alumnes" }}{{ end }}</th>
+                <th scope="col" style="text-align:right; padding:var(--space-2) 0; font-weight:600; color:var(--color-text-muted);">{{ if $isPerHora }}{{ i18n "preu_col" | default "Preu" }}{{ else }}{{ i18n "preu_col_per_persona" }}{{ end }}</th>
               </tr>
             </thead>
             <tbody>

@@ -163,7 +163,8 @@ if (contactForm) {
       }
 
     } catch (err) {
-      alert(T('contact_error', 'Error enviant el formulari'));
+      const errEl = document.getElementById('contact-form-error');
+      if (errEl) { errEl.textContent = T('contact_error', 'Error enviant el formulari'); errEl.removeAttribute('hidden'); }
       btn.disabled = false;
       btn.textContent = T('contact_send', 'Enviar');
     }

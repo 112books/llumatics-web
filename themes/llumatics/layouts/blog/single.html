@@ -26,17 +26,24 @@
 
   {{ if .Params.image }}
   {{ $imgSrc := cond (hasPrefix .Params.image "http") .Params.image (printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image)) }}
-  <div class="blog-post__cover js-lightbox-trigger" data-src="{{ $imgSrc }}" style="cursor:zoom-in;">
+  <button type="button" class="blog-post__cover js-lightbox-trigger"
+          data-src="{{ $imgSrc }}"
+          data-gallery="{{ .File.ContentBaseName }}"
+          aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
     <img src="{{ $imgSrc }}" alt="{{ .Title }}" loading="eager">
-  </div>
+  </button>
   {{ end }}
 
   {{ with .Params.images }}
   <div class="course-single__gallery gallery-collage" style="margin-bottom:2rem;">
-    {{ range . }}
-    <div class="gallery__item js-lightbox-trigger" data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" style="cursor:zoom-in;">
-      <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}" alt="" loading="lazy">
-    </div>
+    {{ range $i, $img := . }}
+    {{ $gsrc := printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $img) }}
+    <button type="button" class="gallery__item js-lightbox-trigger"
+            data-src="{{ $gsrc }}"
+            data-gallery="{{ $.File.ContentBaseName }}"
+            aria-label="{{ i18n "lightbox_enlarge" | default "Veure imatge en gran" }}">
+      <img src="{{ $gsrc }}" alt="{{ $.Title }} ({{ add $i 1 }})" loading="lazy">
+    </button>
     {{ end }}
   </div>
   {{ end }}
