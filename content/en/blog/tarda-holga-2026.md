@@ -4,17 +4,26 @@ lead: "1â€“7 October is Holga Week. We celebrate it on the 8th with a free after
 description: "Holga Afternoon 2026: a free meet-up to celebrate Holga Week at Nau Bostik on 8 October, with loan cameras and optional film development."
 image: "/images/blog/tarda-holga-2026.jpg"
 images:
-  - "/images/blog/tarda-holga-2026-01.jpg"
-  - "/images/blog/tarda-holga-2026-02.jpg"
-  - "/images/blog/tarda-holga-2026-03.jpg"
-  - "/images/blog/tarda-holga-2026-04.jpg"
-  - "/images/blog/tarda-holga-2026-05.jpg"
-  - "/images/blog/tarda-holga-2026-06.jpg"
-  - "/images/blog/tarda-holga-2026-07.jpg"
-  - "/images/blog/tarda-holga-2026-08.jpg"
-  - "/images/blog/tarda-holga-2026-09.jpg"
-  - "/images/blog/tarda-holga-2026-10.jpg"
-  - "/images/blog/tarda-holga-2026-11.jpg"
+  - "/images/holga/holga-01.jpg"
+  - "/images/holga/holga-02.jpg"
+  - "/images/holga/holga-03.jpg"
+  - "/images/holga/holga-04.jpg"
+  - "/images/holga/holga-05.jpg"
+  - "/images/holga/holga-06.jpg"
+  - "/images/holga/holga-07.jpg"
+  - "/images/holga/holga-08.jpg"
+  - "/images/holga/holga-09.jpg"
+  - "/images/holga/holga-10.jpg"
+  - "/images/holga/holga-11.jpg"
+  - "/images/holga/holga-12.jpg"
+  - "/images/holga/holga-13.jpg"
+  - "/images/holga/holga-14.jpg"
+  - "/images/holga/holga-15.jpg"
+  - "/images/holga/holga-16.jpg"
+  - "/images/holga/holga-17.jpg"
+  - "/images/holga/holga-18.jpg"
+  - "/images/holga/holga-19.jpg"
+  - "/images/holga/holga-20.jpg"
 date: 2026-10-02
 tags: ["holga", "holga week", "medium format", "meet-up", "analogue"]
 course_ref: "tarda-holga-2026"
@@ -37,7 +46,7 @@ If you don't bring film, we'll have 120 and 35 mm black-and-white rolls at 10 â‚
 
 ## Sign-up
 
-The event is **free**, but places for loan cameras are limited. Email us at **hola@llumatics.com** with your name and whether you need a camera, and we'll save you a spot. You'll find all the information on the [Holga Afternoon page](/en/tallers/tarda-holga-2026/).
+The event is **free**, but places for loan cameras are limited. Fill in the **[contact form](/en/contacte/?taller=tarda-holga-2026#formulari)** with your name and whether you need a camera, and we'll save you a spot. You'll find all the information on the [Holga Afternoon page](/en/tallers/tarda-holga-2026/).
 
 ## Gallery
 

@@ -5,12 +5,26 @@ lead: "Del 1 al 7 d'octubre és la Holga Week. Nosaltres ho celebrem el dia 8 am
 description: "Tarda Holga gratuïta a la Nau Bostik, dijous 8 d'octubre de 2026, 18–20 h. Trobada per celebrar la Holga Week. Càmeres de préstec limitades."
 image: "/images/tallers/tarda-holga-2026.jpg"
 images:
-  - "/images/tallers/tarda-holga-2026-1.jpg"
-  - "/images/tallers/tarda-holga-2026-2.jpg"
-  - "/images/tallers/tarda-holga-2026-3.jpg"
-  - "/images/tallers/tarda-holga-2026-4.jpg"
-  - "/images/tallers/tarda-holga-2026-5.jpg"
-  - "/images/tallers/tarda-holga-2026-6.jpg"
+  - "/images/holga/holga-01.jpg"
+  - "/images/holga/holga-02.jpg"
+  - "/images/holga/holga-03.jpg"
+  - "/images/holga/holga-04.jpg"
+  - "/images/holga/holga-05.jpg"
+  - "/images/holga/holga-06.jpg"
+  - "/images/holga/holga-07.jpg"
+  - "/images/holga/holga-08.jpg"
+  - "/images/holga/holga-09.jpg"
+  - "/images/holga/holga-10.jpg"
+  - "/images/holga/holga-11.jpg"
+  - "/images/holga/holga-12.jpg"
+  - "/images/holga/holga-13.jpg"
+  - "/images/holga/holga-14.jpg"
+  - "/images/holga/holga-15.jpg"
+  - "/images/holga/holga-16.jpg"
+  - "/images/holga/holga-17.jpg"
+  - "/images/holga/holga-18.jpg"
+  - "/images/holga/holga-19.jpg"
+  - "/images/holga/holga-20.jpg"
 
 # Classificació
 tipus: "taller"
@@ -70,4 +84,4 @@ Les fotos que fem el dia 8 ja no entren al concurs. Aquesta tarda es fa per la j
 
 ## Inscripcions
 
-L'activitat és gratuïta, però les places per a les càmeres de préstec són limitades. Escriu-nos a **[hola@llumatics.com](mailto:hola@llumatics.com?subject=Inscripci%C3%B3%20Tarda%20Holga%208%20d'octubre)** amb el teu nom i si necessites càmera, i et reservem lloc.
+L'activitat és gratuïta, però les places per a les càmeres de préstec són limitades. Omple el **[formulari de contacte](/contacte/?taller=tarda-holga-2026#formulari)** amb el teu nom i si necessites càmera, i et reservem lloc.

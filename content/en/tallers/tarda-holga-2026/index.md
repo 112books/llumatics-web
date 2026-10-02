@@ -5,12 +5,26 @@ lead: "1–7 October is Holga Week. We celebrate it on the 8th with an afternoon
 description: "Free Holga afternoon at Nau Bostik, Thursday 8 October 2026, 6–8 pm. A meet-up to celebrate Holga Week. Limited loan cameras available."
 image: "/images/tallers/tarda-holga-2026.jpg"
 images:
-  - "/images/tallers/tarda-holga-2026-1.jpg"
-  - "/images/tallers/tarda-holga-2026-2.jpg"
-  - "/images/tallers/tarda-holga-2026-3.jpg"
-  - "/images/tallers/tarda-holga-2026-4.jpg"
-  - "/images/tallers/tarda-holga-2026-5.jpg"
-  - "/images/tallers/tarda-holga-2026-6.jpg"
+  - "/images/holga/holga-01.jpg"
+  - "/images/holga/holga-02.jpg"
+  - "/images/holga/holga-03.jpg"
+  - "/images/holga/holga-04.jpg"
+  - "/images/holga/holga-05.jpg"
+  - "/images/holga/holga-06.jpg"
+  - "/images/holga/holga-07.jpg"
+  - "/images/holga/holga-08.jpg"
+  - "/images/holga/holga-09.jpg"
+  - "/images/holga/holga-10.jpg"
+  - "/images/holga/holga-11.jpg"
+  - "/images/holga/holga-12.jpg"
+  - "/images/holga/holga-13.jpg"
+  - "/images/holga/holga-14.jpg"
+  - "/images/holga/holga-15.jpg"
+  - "/images/holga/holga-16.jpg"
+  - "/images/holga/holga-17.jpg"
+  - "/images/holga/holga-18.jpg"
+  - "/images/holga/holga-19.jpg"
+  - "/images/holga/holga-20.jpg"
 
 # Classification
 tipus: "taller"
@@ -70,4 +84,4 @@ Photos we take on the 8th don't enter the competition. This afternoon is about t
 
 ## Sign-up
 
-The event is free, but places for loan cameras are limited. Email us at **[hola@llumatics.com](mailto:hola@llumatics.com?subject=Holga%20Afternoon%208%20October%20sign-up)** with your name and whether you need a camera, and we'll save you a spot.
+The event is free, but places for loan cameras are limited. Fill in the **[contact form](/en/contacte/?taller=tarda-holga-2026#formulari)** with your name and whether you need a camera, and we'll save you a spot.

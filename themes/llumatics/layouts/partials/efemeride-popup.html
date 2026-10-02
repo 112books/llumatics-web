@@ -32,6 +32,7 @@
   <a class="efemeride-popup__card" href="{{ .url | relLangURL }}">
     <div class="efemeride-popup__image">
       <img src="{{ .imatge | relURL }}" alt="" loading="lazy">
+      <span class="efemeride-popup__flash" aria-hidden="true">Flash!</span>
     </div>
     <div class="efemeride-popup__body">
       <p class="efemeride-popup__eyebrow">{{ i18n "efemeride_eyebrow" | default "Efemèride" }}</p>

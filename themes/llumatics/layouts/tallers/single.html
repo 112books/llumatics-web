@@ -93,7 +93,7 @@
 
   {{/* ── Galeria secundària — ample complet ─────────────────────────────── */}}
   {{ with .Params.images }}
-  <div class="course-single__gallery">
+  <div class="course-single__gallery gallery-collage">
     {{ range . }}
     <button class="gallery__item js-lightbox-trigger"
             data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .) }}"
@@ -310,6 +310,7 @@
                 <span>{{ .Params.date_start | time.Format "2 Jan 2006" }}</span>
                 {{ with .Params.time_start }}<span>· {{ . }}h</span>{{ end }}
                 <a href="https://www.instagram.com/camerasandfilms.barcelona/" class="btn btn--primary btn--xs" target="_blank" rel="noopener">Inscripció →</a>
+                {{ partial "agenda-calendar-links.html" . }}
               </div>
             {{ end }}
           </div>
@@ -336,6 +337,7 @@
               {{ else }}
                 <a href="{{ .RelPermalink }}" class="btn btn--outline btn--xs">Info</a>
               {{ end }}
+              {{ partial "agenda-calendar-links.html" $datePage }}
             </div>
           {{ end }}
         </div>

@@ -4,17 +4,26 @@ lead: "Del 1 al 7 d'octubre és la Holga Week. Ho celebrem el dia 8 amb una tard
 description: "Convocatòria de la Tarda Holga 2026: trobada gratuïta per celebrar la Holga Week a la Nau Bostik el 8 d'octubre, amb càmeres de préstec i revelat opcional."
 image: "/images/blog/tarda-holga-2026.jpg"
 images:
-  - "/images/blog/tarda-holga-2026-01.jpg"
-  - "/images/blog/tarda-holga-2026-02.jpg"
-  - "/images/blog/tarda-holga-2026-03.jpg"
-  - "/images/blog/tarda-holga-2026-04.jpg"
-  - "/images/blog/tarda-holga-2026-05.jpg"
-  - "/images/blog/tarda-holga-2026-06.jpg"
-  - "/images/blog/tarda-holga-2026-07.jpg"
-  - "/images/blog/tarda-holga-2026-08.jpg"
-  - "/images/blog/tarda-holga-2026-09.jpg"
-  - "/images/blog/tarda-holga-2026-10.jpg"
-  - "/images/blog/tarda-holga-2026-11.jpg"
+  - "/images/holga/holga-01.jpg"
+  - "/images/holga/holga-02.jpg"
+  - "/images/holga/holga-03.jpg"
+  - "/images/holga/holga-04.jpg"
+  - "/images/holga/holga-05.jpg"
+  - "/images/holga/holga-06.jpg"
+  - "/images/holga/holga-07.jpg"
+  - "/images/holga/holga-08.jpg"
+  - "/images/holga/holga-09.jpg"
+  - "/images/holga/holga-10.jpg"
+  - "/images/holga/holga-11.jpg"
+  - "/images/holga/holga-12.jpg"
+  - "/images/holga/holga-13.jpg"
+  - "/images/holga/holga-14.jpg"
+  - "/images/holga/holga-15.jpg"
+  - "/images/holga/holga-16.jpg"
+  - "/images/holga/holga-17.jpg"
+  - "/images/holga/holga-18.jpg"
+  - "/images/holga/holga-19.jpg"
+  - "/images/holga/holga-20.jpg"
 date: 2026-10-02
 tags: ["holga", "holga week", "mig format", "trobada", "analògica"]
 course_ref: "tarda-holga-2026"
@@ -37,7 +46,7 @@ Si no portes pel·lícula, tindrem rodets de blanc i negre de 120 i de 35 mm a 1
 
 ## Inscripcions
 
-L'activitat és **gratuïta**, però les places per a les càmeres de préstec són limitades. Escriu-nos a **hola@llumatics.com** amb el teu nom i si necessites càmera, i et reservem lloc. Trobareu tota la informació a la [fitxa de la Tarda Holga](/tallers/tarda-holga-2026/).
+L'activitat és **gratuïta**, però les places per a les càmeres de préstec són limitades. Omple el **[formulari de contacte](/contacte/?taller=tarda-holga-2026#formulari)** amb el teu nom i si necessites càmera, i et reservem lloc. Trobareu tota la informació a la [fitxa de la Tarda Holga](/tallers/tarda-holga-2026/).
 
 ## Galeria
 

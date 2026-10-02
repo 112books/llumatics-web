@@ -9,7 +9,7 @@ location: "Llumàtics — Nau Bostik, La Sagrera, Barcelona"
 duration: "2 hours"
 price: 0
 max_places: 15
-purchase_url: "mailto:hola@llumatics.com?subject=Holga%20Afternoon%208%20October%20sign-up"
+purchase_url: "https://llumatics.com/en/contacte/?taller=tarda-holga-2026#formulari"
 cta_label: "Sign me up"
 status: "active"
 draft: false

@@ -1,0 +1,48 @@
+{{/* ============================================================
+     agenda-calendar-links.html — context: pàgina d'agenda (RegularPage)
+     Genera enllaços per afegir l'esdeveniment a Google Calendar,
+     Outlook i un fitxer .ics (Apple Calendar i altres).
+     ============================================================ */}}
+{{- $d := .Params.date_start -}}
+{{- if $d -}}
+{{- $t1 := .Params.time_start | default "10:00" -}}
+{{- $t2 := .Params.time_end | default $t1 -}}
+{{- $yyyymmdd := replace $d "-" "" -}}
+{{- $dtStart := printf "%sT%s00" $yyyymmdd (replace $t1 ":" "") -}}
+{{- $dtEnd   := printf "%sT%s00" $yyyymmdd (replace $t2 ":" "") -}}
+{{- $dtStartOut := printf "%sT%s:00" $d $t1 -}}
+{{- $dtEndOut   := printf "%sT%s:00" $d $t2 -}}
+{{- $loc := .Params.location | default .Params.lloc | default "Llumàtics — Nau Bostik, La Sagrera, Barcelona" -}}
+{{- $title := .Title -}}
+{{- $desc := .Params.description | default .Params.organizer | default $title -}}
+{{- $titleEsc := replace (replace $title "," "\\,") ";" "\\;" -}}
+{{- $descEsc  := replace (replace $desc "," "\\,") ";" "\\;" -}}
+{{- $locEsc   := replace (replace $loc "," "\\,") ";" "\\;" -}}
+{{- $gcal := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&details=%s&location=%s" (urlquery $title) $dtStart $dtEnd (urlquery $desc) (urlquery $loc) -}}
+{{- $outlook := printf "https://outlook.live.com/calendar/0/deeplink/compose?path=%%2Fcalendar%%2Faction%%2Fcompose&rru=addevent&subject=%s&startdt=%s&enddt=%s&location=%s&body=%s" (urlquery $title) $dtStartOut $dtEndOut (urlquery $loc) (urlquery $desc) -}}
+{{- $uid := printf "%s-%s@llumatics.com" .File.ContentBaseName $yyyymmdd -}}
+{{- $icsLines := slice
+  "BEGIN:VCALENDAR"
+  "VERSION:2.0"
+  "PRODID:-//Llumatics//Agenda//CA"
+  "CALSCALE:GREGORIAN"
+  "BEGIN:VEVENT"
+  (printf "UID:%s" $uid)
+  (printf "DTSTAMP:%s" (now.Format "20060102T150405Z"))
+  (printf "DTSTART:%s" $dtStart)
+  (printf "DTEND:%s" $dtEnd)
+  (printf "SUMMARY:%s" $titleEsc)
+  (printf "LOCATION:%s" $locEsc)
+  (printf "DESCRIPTION:%s" $descEsc)
+  "END:VEVENT"
+  "END:VCALENDAR"
+  "" -}}
+{{- $ics := delimit $icsLines "\r\n" -}}
+{{- $res := resources.FromString (printf "calendar/%s-%s.ics" .File.ContentBaseName .Language.Lang) $ics -}}
+<span class="agenda-cal">
+  <span class="agenda-cal__label">{{ i18n "add_to_calendar" | default "Afegir al calendari" }}:</span>
+  <a class="agenda-cal__link" href="{{ $gcal }}" target="_blank" rel="noopener">Google</a>
+  <a class="agenda-cal__link" href="{{ $outlook }}" target="_blank" rel="noopener">Outlook</a>
+  <a class="agenda-cal__link" href="{{ $res.RelPermalink }}" download>iCal</a>
+</span>
+{{- end -}}

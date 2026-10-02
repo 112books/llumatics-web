@@ -76,7 +76,7 @@
               {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
               {{ range sort $tallers ".Title" "asc" }}
                 {{ if not .Params.extern }}
-                <option value="{{ .Title }}">{{ .Title }}{{ if .Params.preu_1 }} — des de {{ .Params.preu_1 }}€{{ end }}</option>
+                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — des de {{ .Params.preu_1 }}€{{ end }}</option>
                 {{ end }}
               {{ end }}
             </select>
@@ -120,16 +120,42 @@
 
       </form>
 
-      {{/* JS mínim per mostrar/amagar camps de taller */}}
+      {{/* JS: mostrar/amagar camps de taller + preomplert per URL (?taller=slug&missatge=...) */}}
       <script>
       (function(){
         var radios = document.querySelectorAll('input[name="tipus"]');
         var tallerFields = document.getElementById('taller-fields');
-        radios.forEach(function(r){
-          r.addEventListener('change', function(){
-            tallerFields.hidden = (this.value !== 'sol·licitar-taller');
-          });
-        });
+        var taller = document.getElementById('taller');
+        var missatge = document.getElementById('missatge');
+        var subject = document.querySelector('#contact-form input[name="subject"]');
+
+        function syncFields(){
+          var sel = document.querySelector('input[name="tipus"]:checked');
+          tallerFields.hidden = !(sel && sel.value === 'sol·licitar-taller');
+        }
+        radios.forEach(function(r){ r.addEventListener('change', syncFields); });
+
+        var params = new URLSearchParams(window.location.search);
+        var tipus = params.get('tipus');
+        var slug  = params.get('taller');
+        var msg   = params.get('missatge');
+        var subj  = params.get('subject');
+
+        if (tipus) {
+          var radio = document.querySelector('input[name="tipus"][value="' + tipus + '"]');
+          if (radio) radio.checked = true;
+        }
+        if (slug && taller) {
+          var opt = taller.querySelector('option[data-slug="' + slug + '"]');
+          if (opt) {
+            taller.value = opt.value;
+            var radioTaller = document.getElementById('radio-taller');
+            if (radioTaller) radioTaller.checked = true;
+          }
+        }
+        if (msg && missatge) missatge.value = msg;
+        if (subj && subject) subject.value = subj;
+        syncFields();
       })();
       </script>
 
