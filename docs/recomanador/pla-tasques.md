@@ -37,7 +37,7 @@ Documentació de referència:
 
 ## Bloc D — Pendents generals
 - [x] D1. Auditoria d'`alt`: cap `img` sense atribut `alt`; els buits (decoratius) són intencionats.
-- [ ] D2. Títols curts (<25 caràcters).
+- [x] D2. Títols curts: les fitxes de taller amb títol <20 caràcters ara afegeixen el subtítol al `<title>` (SEO).
 - [x] D3. Accessibilitat de l'accent: tot el text d'accent passa a `--color-accent-dark` (#00719E); el ceruli clar queda per a fons/botons/icones.
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
 

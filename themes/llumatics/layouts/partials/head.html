@@ -36,6 +36,10 @@
 {{- $pageNum := 0 -}}
 {{- if .IsNode }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $pageNum = .PageNumber }}{{ end }}{{ end }}{{ end -}}
 {{- $metaTitle := $title -}}
+{{/* Títols de taller molt curts (<20 caràcters): hi afegim el subtítol per SEO. */}}
+{{- if and (eq .Type "tallers") (lt (len $title) 20) .Params.subtitle -}}
+  {{- $metaTitle = printf "%s — %s" $title .Params.subtitle -}}
+{{- end -}}
 {{- if gt $pageNum 0 }}{{ $metaTitle = printf "%s (%s %d)" $title (i18n "pagination_page") $pageNum }}{{ end -}}
 <title>{{ if .IsHome }}{{ $title }}{{ else }}{{ $metaTitle }} — {{ .Site.Title }}{{ end }}</title>
 
