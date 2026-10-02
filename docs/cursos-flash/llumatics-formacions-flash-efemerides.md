@@ -141,7 +141,7 @@ Sense els 30 dies de marge, les flash d'octubre i novembre del 2026 no poden seg
 | Data | Efemèride | Proposta | Tipus | Prioritat |
 |---|---|---|---|---|
 | Dj 8 oct 2026 | Holga Week (1–7 oct) | Tarda Holga | Trobada | **Preparada** |
-| Ds 17 oct 2026 | World Toy Camera Day (3r dissabte d'octubre) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
+| Ds 17 oct 2026 | World Toy Camera Day (3r cap de setmana d'octubre — CONFIRMAR ds/dg) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
 | Ds 31 oct 2026 | Castanyada / Halloween | Fotografia d'esperits | Taller flash | Alta (o 2027) |
 | Mitjans nov 2026 | Setmana de la Ciència | Caffenol | Taller flash | Mitjana |
 | Principis des 2026 | Nadal | Postals i regals en cianotípia | Flash en dues sessions | Alta |
@@ -154,11 +154,12 @@ Sense els 30 dies de marge, les flash d'octubre i novembre del 2026 no poden seg
 | Dg 25 abr 2027 | Worldwide Pinhole Photography Day | Estenopeica a la Nau | Taller flash | Alta |
 | Ds 1 maig 2027 | World Wet Plate Day | Col·lodió humit | Demostració | Condicional |
 | Dl 21 jun 2027 | Solstici d'estiu | Solargrafia (recollida) | Flash en dues sessions | Alta |
+| Dj 5 ago 2027 | #DianaDay | Trobada Diana / clon | Trobada | Mitjana |
 | Dc 19 ago 2027 | Dia Mundial de la Fotografia | Només comunicació | — | Baixa |
 | Set 2027 | Visa pour l'Image | Escapada a Perpinyà | Sortida | Alta |
 | Ds 25 set 2027 | World Cyanotype Day | Cianotípia col·lectiva | Trobada + taller | Alta |
 | 1–7 oct 2027 | Holga Week | Sortida Holga | Trobada | Alta |
-| Ds 16 oct 2027 | World Toy Camera Day (3r dissabte d'octubre) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
+| Ds 16 oct 2027 | World Toy Camera Day (3r cap de setmana d'octubre — CONFIRMAR ds/dg) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
 
 **Moments forts de l'any:**
 - **La setmana gran (del 22 al 25 d'abril):** Dia de la Terra, Sant Jordi i Pinhole Day encadenats.
@@ -554,8 +555,10 @@ Els textos dels correus per contactar-los són a docs/cursos-flash/correus-colla
 - **Quimigrames:** pintar amb revelador i fixador sobre paper fotogràfic. Encaixa amb artistes d'altres disciplines.
 - **Nit dels Museus i Festa Major de la Sagrera:** portes obertes a la Nau amb demostracions de laboratori.
 - **Infraroig analògic:** una flash d'estiu, amb llum dura i vegetació.
-- **World Toy Camera Day (3r dissabte d'octubre):** trobada de càmeres de joguina, amb la Diana F+ i la Holga com a protagonistes. Es pot reaprofitar el material de la Tarda Holga (càmeres de préstec i rodets).
+- **#DianaDay (5 d'agost):** celebració no oficial de tot el que envolta la càmera Diana, fundada per Denise. Es tracta de disparar amb una Diana (o un clon) el 5 d'agost i publicar les fotos amb l'etiqueta #DianaDay. Sense guanyadors ni premis.
+- **World Toy Camera Day (3r cap de setmana d'octubre — CONFIRMAR dissabte o diumenge):** trobada de càmeres de joguina, amb la Diana F+ i la Holga com a protagonistes. Creada per la fotògrafa nord-americana Becky Ramotowski. Es pot reaprofitar el material de la Tarda Holga (càmeres de préstec i rodets).
 - **Pyrogaelic:** taller per fabricar el revelador propi (pirogalol) i revelar-hi un rodet. Pendent de validar amb la persona col·laboradora (Perih).
+- **Menorca analògica:** curs pendent de desenvolupar (projecte futur, no flash). Detall a docs/cursos-futurs/menorca-analogica.md.
 
 ---
 
@@ -583,4 +586,4 @@ Els textos dels correus per contactar-los són a docs/cursos-flash/correus-colla
 
 **Film Swap:**
 13. Versió local, de barri o internacional.
-14. Valorar una trobada pel World Toy Camera Day (tercer dissabte d'octubre; Diana F+ i Holga): 17 oct 2026 i 16 oct 2027.
+14. Valorar una trobada per #DianaDay (5 ago) i pel World Toy Camera Day (3r cap de setmana d'octubre; Diana F+ i Holga).
