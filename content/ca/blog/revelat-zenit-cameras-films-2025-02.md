@@ -5,7 +5,7 @@ description: "Crònica del taller d'iniciació al revelat B/N del 2 de febrer de
 date: 2025-02-07
 tags: ["revelat", "taller", "Cameras & Films", "zenit", "fomapan", "born", "carrer"]
 course_ref: "iniciacio-revelat"
-image: ""
+image: "/images/blog/revelat-zenit-cameras-films-2025-02.jpg"
 draft: false
 ---
 

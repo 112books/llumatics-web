@@ -32,11 +32,14 @@ Documentació de referència:
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
 - [~] C2. FAQ específica per curs. FETS els prioritaris (9): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5 i tutoria-fotografica (CA/ES/EN). Resten els secundaris (retrat, carrer, fotollibre, caffenol…).
 - [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
-- [ ] C4. Landing "aprendre a revelar a Barcelona" + enllaços interns.
-- [ ] C5. Auditoria de consistència NAP (08027, La Sagrera).
+- [x] C4. Landing `aprendre-a-revelar` (CA/ES/EN) + enllaç intern des de /tallers/.
+- [x] C5. Auditoria NAP (`docs/recomanador/auditoria-nap.md`): intern consistent; pendent extern el Google Business Profile.
 
 ## Bloc D — Pendents generals
 - [ ] D1. Auditoria d'`alt`.
 - [ ] D2. Títols curts (<25 caràcters).
 - [ ] D3. Accessibilitat de l'accent (#0096D2 vs #00719E).
 - [ ] D4. Google Business Profile: revisar adreça/barri (extern).
+
+## Bloc E — Contingut i imatges
+- [ ] E1. Imatge de portada per als posts de blog sense imatge. Fet (provisional) `revelat-zenit-cameras-films-2025-02`; pendents: `jornades-obertes-nau-bostik-2022`, `resultats-taller-forcats-blues-2019`, `resultats-taller-retrat-2019-02`, `sessions-individuals-2020`, `trasllat-nau-bostik`.

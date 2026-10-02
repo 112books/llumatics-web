@@ -5,7 +5,7 @@ description: "Report from the introduction to B&W development workshop of 2 Febr
 date: 2025-02-07
 tags: ["development", "workshop", "Cameras & Films", "zenit", "fomapan", "born", "street"]
 course_ref: "iniciacio-revelat"
-image: ""
+image: "/images/blog/revelat-zenit-cameras-films-2025-02.jpg"
 draft: false
 ---
 
