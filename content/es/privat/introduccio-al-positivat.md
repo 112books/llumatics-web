@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Introducció al positivat"
+title: "Material para alumnos — Introducción al positivado"
 layout: "private"
 url: "/es/tallers/introduccio-al-positivat/privat/"
 course_ref: "introduccio-al-positivat"

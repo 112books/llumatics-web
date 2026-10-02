@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Revelar color com si fos blanc i negre"
+title: "Material para alumnos — Revelar color como si fuera blanco y negro"
 layout: "private"
 url: "/es/tallers/revelat-color-bn/privat/"
 course_ref: "revelat-color-bn"

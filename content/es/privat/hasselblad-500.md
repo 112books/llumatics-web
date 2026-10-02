@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — El meravellós món Hasselblad"
+title: "Material para alumnos — El maravilloso mundo Hasselblad"
 layout: "private"
 url: "/es/tallers/hasselblad-500/privat/"
 course_ref: "hasselblad-500"

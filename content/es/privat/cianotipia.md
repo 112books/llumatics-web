@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Cianotípia"
+title: "Material para alumnos — Cianotipia"
 layout: "private"
 url: "/es/tallers/cianotipia/privat/"
 course_ref: "cianotipia"

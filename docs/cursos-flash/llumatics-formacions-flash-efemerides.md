@@ -141,6 +141,7 @@ Sense els 30 dies de marge, les flash d'octubre i novembre del 2026 no poden seg
 | Data | Efemèride | Proposta | Tipus | Prioritat |
 |---|---|---|---|---|
 | Dj 8 oct 2026 | Holga Week (1–7 oct) | Tarda Holga | Trobada | **Preparada** |
+| Ds 17 oct 2026 | World Toy Camera Day (3r dissabte d'octubre) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
 | Ds 31 oct 2026 | Castanyada / Halloween | Fotografia d'esperits | Taller flash | Alta (o 2027) |
 | Mitjans nov 2026 | Setmana de la Ciència | Caffenol | Taller flash | Mitjana |
 | Principis des 2026 | Nadal | Postals i regals en cianotípia | Flash en dues sessions | Alta |
@@ -157,6 +158,7 @@ Sense els 30 dies de marge, les flash d'octubre i novembre del 2026 no poden seg
 | Set 2027 | Visa pour l'Image | Escapada a Perpinyà | Sortida | Alta |
 | Ds 25 set 2027 | World Cyanotype Day | Cianotípia col·lectiva | Trobada + taller | Alta |
 | 1–7 oct 2027 | Holga Week | Sortida Holga | Trobada | Alta |
+| Ds 16 oct 2027 | World Toy Camera Day (3r dissabte d'octubre) | Trobada Diana F+ / càmera de joguina | Trobada | Mitjana |
 
 **Moments forts de l'any:**
 - **La setmana gran (del 22 al 25 d'abril):** Dia de la Terra, Sant Jordi i Pinhole Day encadenats.
@@ -534,11 +536,15 @@ Cada fitxa té la mateixa estructura:
 |---|---|---|
 | Jesús Joglar | Solargrafia (5.5) | Pendent de parlar-ho |
 | Jordi d'Osona | Escapada a Visa pour l'Image (5.13) | Pendent de parlar-ho |
+| Jordi | Col·lodió humit (5.12) | Pendent de parlar-ho |
+| Perih | Pyrogaelic / revelador propi | Pendent de parlar-ho |
 | Per definir (persona experta en instantània) | Polaroid Week (5.8) | Pendent de triar |
 | 112Books | Llibret de Sant Jordi (5.10) | Pròpia |
 | 9 Barris Imatge | Film Swap de barri (5.6) | Opcional |
 
 A les fitxes de col·laboració, la persona col·laboradora apareix amb el seu nom, una línia de presentació i, si ho vol, un enllaç al seu web.
+
+Els textos dels correus per contactar-los són a docs/cursos-flash/correus-collaboradors.md.
 
 ---
 
@@ -548,6 +554,8 @@ A les fitxes de col·laboració, la persona col·laboradora apareix amb el seu n
 - **Quimigrames:** pintar amb revelador i fixador sobre paper fotogràfic. Encaixa amb artistes d'altres disciplines.
 - **Nit dels Museus i Festa Major de la Sagrera:** portes obertes a la Nau amb demostracions de laboratori.
 - **Infraroig analògic:** una flash d'estiu, amb llum dura i vegetació.
+- **World Toy Camera Day (3r dissabte d'octubre):** trobada de càmeres de joguina, amb la Diana F+ i la Holga com a protagonistes. Es pot reaprofitar el material de la Tarda Holga (càmeres de préstec i rodets).
+- **Pyrogaelic:** taller per fabricar el revelador propi (pirogalol) i revelar-hi un rodet. Pendent de validar amb la persona col·laboradora (Perih).
 
 ---
 
@@ -575,3 +583,4 @@ A les fitxes de col·laboració, la persona col·laboradora apareix amb el seu n
 
 **Film Swap:**
 13. Versió local, de barri o internacional.
+14. Valorar una trobada pel World Toy Camera Day (tercer dissabte d'octubre; Diana F+ i Holga): 17 oct 2026 i 16 oct 2027.

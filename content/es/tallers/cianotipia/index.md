@@ -1,8 +1,8 @@
 ---
-title: "Cianotipía"
+title: "Cianotipia"
 subtitle: "El azul de la luz. Impresión fotográfica sin cámara ni ampliadora."
 lead: "Una de las técnicas fotográficas más antiguas y más accesibles: emulsionamos el papel, exponemos con luz solar y revelamos con agua. Química simple, resultados que sorprenden."
-description: "Taller de cianotipía en Barcelona. Proceso alternativo de impresión fotográfica sin cuarto oscuro: emulsión, exposición solar y revelado con agua."
+description: "Taller de cianotipia en Barcelona. Proceso alternativo de impresión fotográfica sin cuarto oscuro: emulsión, exposición solar y revelado con agua."
 image: "/images/tallers/cianotipia.jpg"
 images:
   - "/images/tallers/cianotipia-1.png"
@@ -31,30 +31,30 @@ max_places: 4
 sota_demanda: true
 
 # Ficha pedagógica
-objective: "Dominar el proceso completo de cianotipía: preparación de la fórmula, sensibilización, exposición y revelado, incluyendo técnicas de virado e impresión sobre negativos propios."
+objective: "Dominar el proceso completo de cianotipia: preparación de la fórmula, sensibilización, exposición y revelado, incluyendo técnicas de virado e impresión sobre negativos propios."
 methodology: "Jornada completa en dos partes con pausa de mediodía. Mañana: fundamentos y fotogramas. Tarde: impresión con negativos en acetato y variaciones técnicas."
-result: "6-10 piezas en cianotipía: fotogramas, impresiones de negativos, experimentación con virados y soportes alternativos."
+result: "6-10 piezas en cianotipia: fotogramas, impresiones de negativos, experimentación con virados y soportes alternativos."
 prerequisits: "Ningún conocimiento técnico previo. Los participantes deben traer fotografías convertidas a negativo en acetato (o las generamos en la sesión)."
 target: "Cualquier persona curiosa por la fotografía química sin cámara. Artistas, diseñadores, fotógrafos y no fotógrafos."
 
 # Talleres relacionados
 continua_aprenent:
   - "reveladors-artesanals"
-tags: ["cianotipía", "proceso alternativo", "impresión", "azul", "solar"]
+tags: ["cianotipia", "proceso alternativo", "impresión", "azul", "solar"]
 draft: false
 ---
 
 ## El azul de la luz
 
-La cianotipía es una de las técnicas fotográficas más antiguas: data de 1842. Dos sales de hierro, papel y luz solar. Nada más. El resultado es una impresión en un azul profundo —azul de Prusia— que no se desvanece, no amarillea con el tiempo y no necesita ni cuarto oscuro ni productos peligrosos.
+La cianotipia es una de las técnicas fotográficas más antiguas: data de 1842. Dos sales de hierro, papel y luz solar. Nada más. El resultado es una impresión en un azul profundo —azul de Prusia— que no se desvanece, no amarillea con el tiempo y no necesita ni cuarto oscuro ni productos peligrosos.
 
-Pero su simplicidad no le quita complejidad. La cianotipía responde de manera diferente a cada papel, a cada luz, a cada emulsión. Aprender a leerla es aprender a respetar la imprecisión como parte del proceso.
+Pero su simplicidad no le quita complejidad. La cianotipia responde de manera diferente a cada papel, a cada luz, a cada emulsión. Aprender a leerla es aprender a respetar la imprecisión como parte del proceso.
 
 En este taller preparamos la solución, emulsionamos el papel, exponemos con luz solar o ultravioleta y revelamos con agua fría. Trabajamos con negativos impresos en transparencia, pero también con fotogramas —objetos colocados directamente sobre el papel— para entender el proceso sin intermediarios.
 
 ## Contenidos clave
 
-- Orígenes y contexto de la cianotipía dentro de los procesos alternativos
+- Orígenes y contexto de la cianotipia dentro de los procesos alternativos
 - Preparación de la solución de ferricianuro amónico y ferricianuro de potasio
 - Emulsionado del papel: materiales, grosor y secado
 - Exposición: variables de luz, tiempo y distancia

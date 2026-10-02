@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Còpies en paper"
+title: "Student materials — Darkroom printing"
 layout: "private"
 url: "/en/tallers/copies-en-paper/privat/"
 course_ref: "copies-en-paper"

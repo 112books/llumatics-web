@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Retrat amb Holga"
+title: "Material para alumnos — Retrato con Holga"
 layout: "private"
 url: "/es/tallers/retrat-amb-holga/privat/"
 course_ref: "retrat-amb-holga"

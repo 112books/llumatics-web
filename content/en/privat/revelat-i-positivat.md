@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Revelat + positivat en un dia"
+title: "Student materials — Development + printing in one day"
 layout: "private"
 url: "/en/tallers/revelat-i-positivat/privat/"
 course_ref: "revelat-i-positivat"

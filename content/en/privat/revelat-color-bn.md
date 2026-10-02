@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Revelar color com si fos blanc i negre"
+title: "Student materials — Developing colour film as black and white"
 layout: "private"
 url: "/en/tallers/revelat-color-bn/privat/"
 course_ref: "revelat-color-bn"

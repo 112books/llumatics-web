@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Retrat en gran format"
+title: "Material para alumnos — Retrato en gran formato"
 layout: "private"
 url: "/es/tallers/retrat-gran-format/privat/"
 course_ref: "retrat-gran-format"

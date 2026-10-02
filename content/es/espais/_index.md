@@ -96,7 +96,7 @@ Una biblioteca pequeña pero cuidada. Nada de decoración: todos los libros se h
 
 *Fotografía documental y de calle:* Alex Coghe, Garry Winogrand, Josef Koudelka, Vivian Maier, Fan Ho, Doisneau, Cartier-Bresson, Castro Prieto, Rubén Morales.
 
-*Procesos alternativos:* literatura sobre cianotipía, calotipia, goma bicromatada y otros procesos del XIX.
+*Procesos alternativos:* literatura sobre cianotipia, calotipia, goma bicromatada y otros procesos del XIX.
 
 *Fotolibros:* colección de fotolibros editoriales, principalmente de 112books y otros editores independientes europeos.
 

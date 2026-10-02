@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Fotografia de carrer"
+title: "Material para alumnos — Fotografía de calle"
 layout: "private"
 url: "/es/tallers/fotografia-de-carrer/privat/"
 course_ref: "fotografia-de-carrer"

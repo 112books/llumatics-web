@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Introducció al gran format"
+title: "Student materials — Introduction to large format"
 layout: "private"
 url: "/en/tallers/introduccio-gran-format/privat/"
 course_ref: "introduccio-gran-format"

@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Fotografia estenopèica"
+title: "Student materials — Pinhole photography"
 layout: "private"
 url: "/en/tallers/fotografia-estenopeica/privat/"
 course_ref: "fotografia-estenopeica"

@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Guinneol: revela amb cervesa Guinness"
+title: "Material para alumnos — Guinneol: revela con cerveza Guinness"
 layout: "private"
 url: "/es/tallers/guinneol/privat/"
 course_ref: "guinneol"

@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Del negatiu a la imatge — edició digital per a fotografia analògica"
+title: "Material para alumnos — Del negativo a la imagen — edición digital para fotografía analógica"
 layout: "private"
 url: "/es/tallers/edicio-imatges-fotoquimiques/privat/"
 course_ref: "edicio-imatges-fotoquimiques"

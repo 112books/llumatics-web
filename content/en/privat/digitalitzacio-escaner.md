@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Digitalització i escàner"
+title: "Student materials — Scanning and digitisation"
 layout: "private"
 url: "/en/tallers/digitalitzacio-escaner/privat/"
 course_ref: "digitalitzacio-escaner"

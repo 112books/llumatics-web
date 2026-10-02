@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Retrat analògic"
+title: "Material para alumnos — Retrato analógico"
 layout: "private"
 url: "/es/tallers/retrat-analogic/privat/"
 course_ref: "retrat-analogic"

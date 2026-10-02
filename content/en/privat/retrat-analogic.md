@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Retrat analògic"
+title: "Student materials — Analogue portrait"
 layout: "private"
 url: "/en/tallers/retrat-analogic/privat/"
 course_ref: "retrat-analogic"

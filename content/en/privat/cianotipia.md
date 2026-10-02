@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Cianotípia"
+title: "Student materials — Cyanotype"
 layout: "private"
 url: "/en/tallers/cianotipia/privat/"
 course_ref: "cianotipia"

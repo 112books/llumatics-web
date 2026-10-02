@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Fotografia estenopèica"
+title: "Material para alumnos — Fotografía estenopeica"
 layout: "private"
 url: "/es/tallers/fotografia-estenopeica/privat/"
 course_ref: "fotografia-estenopeica"

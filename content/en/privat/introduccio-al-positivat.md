@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Introducció al positivat"
+title: "Student materials — Introduction to darkroom printing"
 layout: "private"
 url: "/en/tallers/introduccio-al-positivat/privat/"
 course_ref: "introduccio-al-positivat"

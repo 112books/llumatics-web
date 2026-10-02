@@ -1,5 +1,5 @@
 ---
-title: "Student materials — Retrat amb Holga"
+title: "Student materials — Portrait with Holga"
 layout: "private"
 url: "/en/tallers/retrat-amb-holga/privat/"
 course_ref: "retrat-amb-holga"

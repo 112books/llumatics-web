@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Revelats experimentals"
+title: "Material para alumnos — Revelados experimentales"
 layout: "private"
 url: "/es/tallers/revelats-experimentals/privat/"
 course_ref: "revelats-experimentals"

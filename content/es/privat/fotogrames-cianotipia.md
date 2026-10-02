@@ -1,5 +1,5 @@
 ---
-title: "Material para alumnos — Fotogrames amb cianotípia"
+title: "Material para alumnos — Fotogramas con cianotipia"
 layout: "private"
 url: "/es/tallers/fotogrames-cianotipia/privat/"
 course_ref: "fotogrames-cianotipia"
