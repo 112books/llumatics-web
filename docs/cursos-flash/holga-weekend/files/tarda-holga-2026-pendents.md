@@ -28,9 +28,15 @@ Anotat a la sessió del 2026-10-02, per fer la propera sessió (2026-10-03).
 - Fomapan 100 — ~10 rodets (ISO 100) — **12 €/rodet**
 - La fitxa pública passa a indicar **12–16 €** segons el tipus (abans deia 10 €).
 
+**Abast i criteris (2026-10-02)**
+- L'estoc és **només per al dia de la Tarda Holga** (8 d'octubre); no és estoc permanent.
+- Les xifres de càmeres i rodets són **per a ús intern**: a la fitxa pública no s'hi posen unitats.
+- Criteri: els assistents han de **venir amb la seva càmera**; les de préstec són un extra.
+- **Pel·lícula: no cal comprar-ne**; amb l'estoc actual (RPX 400, HP5 i Fomapan 100 de 120) n'hi ha prou.
+
 **Pendent de confirmar**
-- Propietat de cada càmera (Llumàtics vs. tercers).
-- Si cal comprar més pel·lícula.
+- Propietat de cada càmera (Llumàtics vs. tercers) — anotat per a ús intern.
+- [x] Si cal comprar més pel·lícula. (resolt 2026-10-02: no cal)
 - ~~Corregir la fitxa pública si cal: diu "120 i 35 mm" i "10 €".~~ Fet (2026-10-02): fitxa actualitzada a 12–16 € (CA/ES/EN).
 
 ## Context
