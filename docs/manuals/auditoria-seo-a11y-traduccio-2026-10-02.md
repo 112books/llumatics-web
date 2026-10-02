@@ -62,8 +62,8 @@ corregit i què queda pendent.
 
 ## Pendent (baixa prioritat)
 
-- og:image trencada a 6 fitxes /privat/doc/ (noindex): l'image del frontmatter apunta a un fitxer inexistent.
-- Correu de confirmació del val-regal i notificació interna escrits en català fix al JS.
-- alt buit a les imatges de la galeria del shortcode galeria.html (no tenen descripcio a l'origen).
-- Defaults amb fallback catala latents a ~40 plantilles (avui tapats per la paritat i18n).
+- [x] og:image trencada a 6 fitxes /privat/doc/ (noindex). **Resolt (2026-10-02):** verificat 38/38 imatges de docs privats existents; no en falta cap.
+- [x] Correu de confirmació del val-regal i notificació interna escrits en català fix al JS. **Resolt (2026-10-03):** claus `gift_email_*` CA/ES/EN + objecte `GIFT_TXT`.
+- [x] alt buit a les imatges de la galeria del shortcode galeria.html. **Millorat (2026-10-02):** `alt="{{ $galTitle }} (N)"`; residual: es podria descriure cada imatge individualment.
+- [ ] Defaults amb fallback català latents. **Recompte (2026-10-02):** ~12 casos a `layouts/` (lloc, estat, hora, tipus), no ~40; tapats per la paritat i18n.
 - Revisio visual manual amb navegador (contrast, focus, teclat) en dispositiu real.

@@ -858,9 +858,9 @@ Els 3 textos estan a la conversa del 2026-05-30/31. Publicar a Meta Business Sui
 - Commit: `dda9d99d` — branca `develop` pujada a GitHub
 
 **SEO pendent (mig prioritat):**
-- [ ] og:image fallback
-- [ ] og:site_name + twitter:card
-- [ ] og:locale per ES/EN
+- [x] og:image fallback (resolt 2026-10-02: `defaultOgImage` + fallback a `/images/tallers/revelat-bn.jpg` a `head.html`)
+- [x] og:site_name + twitter:card (resolt 2026-10-02, verificat a `head.html`)
+- [x] og:locale per ES/EN (resolt 2026-10-02, verificat a `head.html`)
 
 ### Fet aquesta sessió (2026-05-09)
 - [x] `fetch-analytics.php`: fix GoatCounter API v0 — endpoints i keys de resposta incorrectes
