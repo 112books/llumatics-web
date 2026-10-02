@@ -48,7 +48,7 @@ function group_sum(array $hits, callable $pred): array {
 // Cursos nous / flash destacats (es poden ampliar)
 $nous = ['tarda-holga-2026','fotollibre','del-carrer-al-llibre','wineol','caffenol','solargrafia','collodio-humit','fotogrames-cianotipia','retrat-amb-holga'];
 
-$regal = group_sum($hits, fn($p) => str_starts_with($p, '/regala/') || str_starts_with($p, '/es/regala/') || str_starts_with($p, '/en/regala/'));
+$regal = group_sum($hits, fn($p) => (bool)preg_match('#^/(es/|en/)?regala(/|$)#', $p));
 $quiz  = group_sum($hits, fn($p) => str_contains($p, 'quin-curs-em-conve') || str_contains($p, 'que-curso-me-conviene') || str_contains($p, 'which-course-suits-me'));
 
 // Cursos: agregats per slug
@@ -65,6 +65,14 @@ uasort($cursos, fn($a,$b) => $b['count'] - $a['count']);
 $nous_rows = [];
 foreach ($nous as $s) if (isset($cursos[$s])) $nous_rows[$s] = $cursos[$s];
 uasort($nous_rows, fn($a,$b) => $b['count'] - $a['count']);
+
+// Si la cache porta el bloc de campanyes calculat al servidor, mana.
+if (is_array($cache['campaigns'] ?? null)) {
+    $regal = $cache['campaigns']['regal'];
+    $quiz  = $cache['campaigns']['quiz'];
+    $nous_rows = $cache['campaigns']['nous'] ?? [];
+    uasort($nous_rows, fn($a, $b) => $b['count'] - $a['count']);
+}
 
 function pct(int $n, int $total): string { return $total > 0 ? round(100*$n/$total, 1) . '%' : '—'; }
 ?>

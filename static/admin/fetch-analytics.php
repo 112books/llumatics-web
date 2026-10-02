@@ -146,6 +146,30 @@ foreach (($refs_raw['stats'] ?? []) as $ref) {
     if ($count > 0) $refs_list[] = ['name' => $ref['name'] ?? $ref['id'] ?? '(directe)', 'count' => $count, 'id' => $ref['id'] ?? ''];
 }
 
+// ── Campanyes (cupó regal, recomanador i cursos nous) ─────────────────────────
+$camp = [
+    'regal' => ['count' => 0, 'unique' => 0, 'by_lang' => ['ca' => 0, 'es' => 0, 'en' => 0]],
+    'quiz'  => ['count' => 0, 'unique' => 0, 'by_lang' => ['ca' => 0, 'es' => 0, 'en' => 0]],
+    'nous'  => [],
+];
+$nous_slugs = ['tarda-holga-2026','fotollibre','del-carrer-al-llibre','wineol','caffenol','solargrafia','collodio-humit','fotogrames-cianotipia','retrat-amb-holga'];
+foreach ($hits_list as $h) {
+    $path = $h['path']; $c = (int)$h['count']; $u = (int)$h['count_unique']; $lg = extract_lang($path);
+    if (preg_match('#^/(es/|en/)?regala(/|$)#', $path)) {
+        $camp['regal']['count'] += $c; $camp['regal']['unique'] += $u; $camp['regal']['by_lang'][$lg] += $c;
+    }
+    if (str_contains($path, 'quin-curs-em-conve') || str_contains($path, 'que-curso-me-conviene') || str_contains($path, 'which-course-suits-me')) {
+        $camp['quiz']['count'] += $c; $camp['quiz']['unique'] += $u; $camp['quiz']['by_lang'][$lg] += $c;
+    }
+    if (preg_match('#/tallers/([^/]+)/#', $path, $m)) {
+        $s = $m[1];
+        if (in_array($s, $nous_slugs, true)) {
+            if (!isset($camp['nous'][$s])) $camp['nous'][$s] = ['count' => 0, 'unique' => 0];
+            $camp['nous'][$s]['count'] += $c; $camp['nous'][$s]['unique'] += $u;
+        }
+    }
+}
+
 // ── Sortida ───────────────────────────────────────────────────────────────────
 $output = [
     'generated'    => gmdate('Y-m-d\TH:i:s\Z'),
@@ -153,7 +177,8 @@ $output = [
     'total'        => $total,
     'total_unique' => $total_unique,
     'hits_by_day'  => $hbd_arr,
-    'hits'         => array_slice($hits_list, 0, 50),
+    'hits'         => array_slice($hits_list, 0, 300),
+    'campaigns'    => $camp,
     'by_lang'      => $by_lang,
     'by_section'   => $by_section,
     'refs'         => $refs_list,
