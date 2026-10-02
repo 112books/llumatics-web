@@ -395,6 +395,18 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-02
+**Recomanador, FAQ per curs, panell i auditoria SEO/a11y/traducció**
+
+- **Recomanador «Quin curs em convé?»** — pas 2 agrupat per temes, salt al capdamunt en canviar de pas, capçalera de passos clicable i CTA a l'hero de la portada.
+- **FAQ per curs** — 3 preguntes amb schema FAQPage a tots els cursos actius (CA/ES/EN) més l'efemèride Tarda Holga.
+- **Preus** — «Impostos inclosos» (fora l'exempció d'IVA).
+- **Footer** — sense la llista arbitrària de tallers; ordre Tria un curs | Espais | Legal | Contacte.
+- **Panell admin** — /admin/subscriptors.php (Brevo) i /admin/impacte.php (cupó regal, recomanador i cursos nous).
+- **Auditoria** — SEO/AEO/a11y/traducció amb 3 tandes: i18n ES/EN, contrast, skip link, galeria accessible, JSON-LD global (Organization/Person/WebSite/BreadcrumbList/Product), durada ISO, sitemap net i validació i18n al build. Doc a docs/manuals/auditoria-seo-a11y-traduccio-2026-10-02.md.
+- **Docs flash** — correus a col·laboradors, #DianaDay i World Toy Camera Day, Menorca analògica (futur).
+- Commits 15c787d1…ddb35fe2; main i develop sincronitzats.
+
 ### 2026-05-29
 **Tallers complets + metàfora metro + SEO/GEO + animació recorregut**
 
