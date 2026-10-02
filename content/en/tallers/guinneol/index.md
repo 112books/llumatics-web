@@ -90,3 +90,26 @@ For a standard 35mm developing tank:
 ---
 
 *Want to make all three organic developers in one session? Caffenol, Guinneol and Wineol can be combined into a 4-hour session. Write to us and we'll arrange it.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Does Guinness develop film? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes, with sodium carbonate and vitamin C. It is a DIY developer in the Caffenol family, with a particular tone and grain.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What should I bring? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>An exposed 35 mm B&W roll (ISO 400 recommended). We provide the beer and the reactants.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Not essential, but having developed before helps. It is an experimental workshop.</p>
+</div>
+</details>

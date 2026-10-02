@@ -110,3 +110,26 @@ El grano será exagerado. A veces mucho. Según el resultado que busques, puede 
 ---
 
 *Este proceso fue probado y documentado por Joan en su blog fotográfico [Pocallum](https://pocallum.cat/revelat-de-pellicula-de-color-amb-proces-de-blanc-i-negre/) en agosto de 2016. Las imágenes que acompañan este taller provienen de aquella sesión experimental.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo revelar película de color en blanco y negro? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller enseña a revelar C-41 como si fuera B/N, con revelador B/N. El negativo sale en blanco y negro.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué hay que llevar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un carrete de color C-41 expuesto (ISO 100–400 recomendado, cualquier marca).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Es el revelado color estándar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Es una vía creativa: no es un revelado C-41 con color, sino revelar la película de color como si fuera blanco y negro.</p>
+</div>
+</details>

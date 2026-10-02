@@ -83,3 +83,26 @@ La càmera estenopèica —o *pinhole*— no és un exercici nostàlgic. És la 
 ## No inclòs
 
 - Còpies addicionals en paper (paper extra disponible a Llumàtics)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal càmera per fer fotografia estenopeica? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El taller és autònom: construïm la càmera i tot el material el facilita Llumàtics.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què s'aprèn? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El principi de la cambra fosca, la construcció d'una càmera estenopeica, l'exposició i el revelat del paper.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Puc portar la meva llauna? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, opcionalment pots portar una llauna on càpiga el paper fotogràfic.</p>
+</div>
+</details>

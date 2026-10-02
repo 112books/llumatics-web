@@ -79,3 +79,26 @@ La cámara estenopeica —o *pinhole*— no es un ejercicio nostálgico. Es la d
 ## No incluido
 
 - Copias adicionales en papel (papel extra disponible en Llumàtics)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta cámara para la fotografía estenopeica? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El taller es autónomo: construimos la cámara y todo el material lo facilita Llumàtics.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué se aprende? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El principio de la cámara oscura, la construcción de una cámara estenopeica, la exposición y el revelado del papel.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo llevar mi lata? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, opcionalmente puedes llevar una lata donde quepa el papel fotográfico.</p>
+</div>
+</details>

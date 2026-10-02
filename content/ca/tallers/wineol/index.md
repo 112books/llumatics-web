@@ -102,3 +102,26 @@ Per a un tanc estàndard de 35mm (500 ml):
 ---
 
 *Vols fer els tres reveladors orgànics en una sola sessió? El Caffenol, el Guinneol i el Wineol es poden combinar en una sessió de 4 hores. Escriu-nos i ho organitzem.*
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">El Wineol revela de debò? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El vi negre, amb carbonat de sodi, vitamina C i sal, actua com a revelador. És una tècnica experimental i inestable: el resultat té menys contrast i més gra que un revelador comercial.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què cal portar al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un rodet de 35 mm B/N exposat (ISO 400 recomanat). El vi i els reactius els posem nosaltres.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">És perillós? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. És un procés lent i inestable, però segur. Val la pena prendre-se'l com una experiència, no com un mètode de producció.</p>
+</div>
+</details>

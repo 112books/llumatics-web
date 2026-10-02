@@ -75,3 +75,26 @@ No se trata de hacer rarezas por hacerlas. Se trata de entender la química para
 ## No incluido
 
 - Carretes adicionales para pruebas extra (12€/unidad)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué se hace en el taller de revelados experimentales? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Pruebas de revelado con procesos y reactivos no convencionales: forzados, cruzados, temperatura, diluciones extremas y reveladores caseros.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que llevar material? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Puedes llevar carretes propios expuestos si quieres trabajar con material personal (recomendado).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, es un taller avanzado: hace falta haber revelado antes.</p>
+</div>
+</details>

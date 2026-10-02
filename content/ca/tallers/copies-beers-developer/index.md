@@ -100,3 +100,26 @@ La comparació directa de les tres còpies sobre la taula de llum és la millor 
 ---
 
 *No has fet mai còpies a l'ampliadora? Comença pel taller de [Còpies en paper](/tallers/copies-en-paper/). No has revelat mai pel·lícula? El [Revelat B/N](/tallers/revelat-bn/) o els [Revelats experimentals](/tallers/revelats-experimentals/) són el punt de partida.*
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Què és el Beers Developer? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un revelador de paper fet a mà amb dues solucions (A i B) que, segons la proporció, dona set graus de contrast amb un sol producte.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què cal portar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Negatius de 35 mm o mig format revelats (imprescindible).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, és un taller avançat: cal saber positivar.</p>
+</div>
+</details>

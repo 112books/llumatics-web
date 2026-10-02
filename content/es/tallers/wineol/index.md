@@ -102,3 +102,26 @@ Para un tanque estándar de 35mm (500 ml):
 ---
 
 *¿Quieres hacer los tres reveladores orgánicos en una sola sesión? El Caffenol, el Guinneol y el Wineol se pueden combinar en una sesión de 4 horas. Escríbenos y lo organizamos.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿El Wineol revela de verdad? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El vino tinto, con carbonato de sodio, vitamina C y sal, actúa como revelador. Es una técnica experimental e inestable: el resultado tiene menos contraste y más grano que un revelador comercial.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué hay que llevar al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un carrete de 35 mm B/N expuesto (ISO 400 recomendado). El vino y los reactivos los ponemos nosotros.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Es peligroso? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Es un proceso lento e inestable, pero seguro. Merece la pena tomárselo como una experiencia, no como un método de producción.</p>
+</div>
+</details>

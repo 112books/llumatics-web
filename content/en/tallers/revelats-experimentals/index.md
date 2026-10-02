@@ -75,3 +75,26 @@ This isn't about making things weird for the sake of it. It's about understandin
 ## Not included
 
 - Additional rolls for extra tests (€12/roll)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">What do we do in the experimental development workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Development tests with unconventional processes and reactants: push, cross-processing, temperature, extreme dilutions and homemade developers.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Should I bring material? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>You can bring your own exposed rolls if you want to work with personal material (recommended).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes, it is an advanced workshop: you need to have developed film before.</p>
+</div>
+</details>

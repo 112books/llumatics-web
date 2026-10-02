@@ -99,3 +99,26 @@ Comparing the three prints side by side on the light box is the best way to unde
 ---
 
 *Never made darkroom prints before? Start with the [Darkroom Printing](/en/tallers/copies-en-paper/) workshop. Never developed film? [B&W Development](/en/tallers/revelat-bn/) or [Experimental Developers](/en/tallers/revelats-experimentals/) are your starting point.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">What is Beers Developer? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A handmade paper developer with two solutions (A and B) which, depending on the ratio, gives seven grades of contrast from a single product.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What should I bring? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Developed 35 mm or medium format negatives (essential).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes, it is an advanced workshop: you need to know how to print.</p>
+</div>
+</details>

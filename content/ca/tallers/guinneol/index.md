@@ -92,3 +92,26 @@ Per a un tanc estàndard de 35mm:
 ---
 
 *Vols fer els tres reveladors orgànics en una sola sessió? El Caffenol, el Guinneol i el Wineol es poden combinar en una sessió de 4 hores. Escriu-nos i ho organitzem.*
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">La cervesa Guinness revela pel·lícula? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, amb carbonat de sodi i vitamina C. És un revelador artesanal de la família del Caffenol, amb un to i un gra particulars.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què cal portar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un rodet de 35 mm B/N exposat (ISO 400 recomanat). La cervesa i els reactius els posem nosaltres.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No és imprescindible, però ajuda haver revelat abans. És un taller experimental.</p>
+</div>
+</details>

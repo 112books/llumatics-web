@@ -110,3 +110,26 @@ El gra serà exagerat. De vegades molt. Segons el resultat que busques, pot ser 
 ---
 
 *Aquest procés va ser provat i documentat per Joan al seu blog fotogràfic [Pocallum](https://pocallum.cat/revelat-de-pellicula-de-color-amb-proces-de-blanc-i-negre/) l'agost de 2016. Les imatges que acompanyen aquest taller provenen d'aquella sessió experimental.*
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Puc revelar pel·lícula de color en blanc i negre? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El taller ensenya a revelar C-41 com si fos B/N, amb revelador B/N. El negatiu surt en blanc i negre.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què cal portar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un rodet de color C-41 exposat (ISO 100–400 recomanat, qualsevol marca).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">És el revelat color estàndard? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. És una via creativa: no és un revelat C-41 amb color, sinó revelar la pel·lícula de color com si fos blanc i negre.</p>
+</div>
+</details>

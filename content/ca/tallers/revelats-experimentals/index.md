@@ -76,3 +76,26 @@ No es tracta de fer rareses per fer-les. Es tracta d'entendre la química per do
 ## No inclòs
 
 - Carretes addicionals per a proves extra (12€/unitat)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Què es fa al taller de revelats experimentals? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Proves de revelat amb processos i reactius no convencionals: forçats, creuats, temperatura, dilucions extremes i reveladors casolans.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar material? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Pots portar rodets propis exposats si vols treballar amb material personal (recomanat).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, és un taller avançat: cal haver revelat abans.</p>
+</div>
+</details>

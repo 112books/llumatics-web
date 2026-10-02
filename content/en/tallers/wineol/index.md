@@ -102,3 +102,26 @@ For a standard 35mm tank (500 ml):
 ---
 
 *Want to do all three organic developers in one session? Caffenol, Guinneol and Wineol can be combined into a 4-hour session. Write to us and we'll organise it.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Does Wineol really develop film? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. Red wine, with sodium carbonate, vitamin C and salt, acts as a developer. It is an experimental, unstable technique: the result has less contrast and more grain than a commercial developer.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What should I bring to the workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>An exposed 35 mm B&W roll (ISO 400 recommended). We provide the wine and the reactants.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is it dangerous? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. It is a slow, unstable process, but safe. It is worth taking as an experience, not as a production method.</p>
+</div>
+</details>

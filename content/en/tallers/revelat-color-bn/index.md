@@ -110,3 +110,26 @@ The grain will be heavy. Sometimes very heavy. Depending on the result you're af
 ---
 
 *This process was tested and documented by Joan on his photography blog [Pocallum](https://pocallum.cat/revelat-de-pellicula-de-color-amb-proces-de-blanc-i-negre/) in August 2016. The images in this workshop come from that experimental session.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Can I develop colour film as black and white? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. The workshop teaches how to develop C-41 as B&W, with B&W developer. The negative comes out in black and white.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What should I bring? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>An exposed C-41 colour roll (ISO 100–400 recommended, any brand).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is this standard colour development? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. It is a creative route: not colour C-41 development, but developing colour film as if it were black and white.</p>
+</div>
+</details>

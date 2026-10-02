@@ -79,3 +79,26 @@ The pinhole camera isn't a nostalgic exercise. It's a physical demonstration of 
 ## Not included
 
 - Additional paper prints (extra paper available at Llumàtics)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need a camera for pinhole photography? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. The workshop is self-contained: we build the camera and Llumàtics provides all the materials.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What do I learn? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The camera obscura principle, how to build a pinhole camera, exposure and developing the paper.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I bring my own can? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes, optionally you can bring a can big enough to hold the photographic paper.</p>
+</div>
+</details>

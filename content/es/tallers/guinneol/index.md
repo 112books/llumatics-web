@@ -90,3 +90,26 @@ Para un tanque estándar de 35mm:
 ---
 
 *¿Quieres hacer los tres reveladores orgánicos en una sola sesión? El Caffenol, el Guinneol y el Wineol se pueden combinar en una sesión de 4 horas. Escríbenos y lo organizamos.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿La cerveza Guinness revela película? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, con carbonato de sodio y vitamina C. Es un revelador artesanal de la familia del Caffenol, con un tono y un grano particulares.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué hay que llevar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un carrete de 35 mm B/N expuesto (ISO 400 recomendado). La cerveza y los reactivos los ponemos nosotros.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No es imprescindible, pero ayuda haber revelado antes. Es un taller experimental.</p>
+</div>
+</details>

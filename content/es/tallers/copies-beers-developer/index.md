@@ -99,3 +99,26 @@ La comparación directa de las tres copias sobre la mesa de luz es la mejor mane
 ---
 
 *¿Nunca has hecho copias en el ampliador? Empieza por el taller de [Copias en papel](/es/tallers/copies-en-paper/). ¿Nunca has revelado película? El [Revelado B/N](/es/tallers/revelat-bn/) o los [Revelados experimentales](/es/tallers/revelats-experimentals/) son el punto de partida.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué es el Beers Developer? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un revelador de papel hecho a mano con dos soluciones (A y B) que, según la proporción, da siete grados de contraste con un solo producto.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué hay que llevar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Negativos de 35 mm o medio formato revelados (imprescindible).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí, es un taller avanzado: hace falta saber positivado.</p>
+</div>
+</details>
