@@ -1,5 +1,5 @@
 ---
 title: "Llumàtics — Escola de fotografia"
 description: "Escola de fotografia a Barcelona. Tallers de revelat, laboratori analògic i formació tècnica."
-heroImage: "/images/taller-revelat-CandF.jpeg"
+heroImage: "/images/taller-revelat-CandF.webp"
 ---

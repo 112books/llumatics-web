@@ -1166,7 +1166,7 @@ button, input, select, textarea {
   position: relative;
   z-index: 1;
   background: #170c0c;
-  color: rgba(255,220,210,0.55);
+  color: rgba(255,220,210,0.62);
   padding-block: var(--space-12);
   font-size: var(--text-sm);
 }
@@ -1182,12 +1182,11 @@ button, input, select, textarea {
 
 .site-footer__tagline {
   font-size: var(--text-sm);
-  opacity: 0.5;
+  color: rgba(255,220,210,0.62);
   margin-top: var(--space-2);
 }
 .site-footer__address {
   font-size: var(--text-sm);
-  opacity: 0.55;
   margin-top: var(--space-3);
 }
 .site-footer__address a {
@@ -1237,7 +1236,7 @@ button, input, select, textarea {
 .site-footer__powered a:hover { color: #e8a090; }
 
 .site-footer__powered-services {
-  color: rgba(255,220,210,0.35);
+  color: rgba(255,220,210,0.55);
 }
 
 .site-footer__bottom {
@@ -1252,7 +1251,7 @@ button, input, select, textarea {
 
 .site-footer__privacy-note {
   font-size: var(--text-xs);
-  opacity: 0.7;
+  color: rgba(255,220,210,0.62);
 }
 
 .site-footer__privacy-note a {

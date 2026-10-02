@@ -89,6 +89,8 @@
 <link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="Llumàtics per a sistemes d'IA">
 
 {{/* GoatCounter — sense cookies, GDPR-compliant */}}
+<link rel="preconnect" href="https://gc.zgo.at" crossorigin>
+<link rel="preconnect" href="https://{{ site.Params.goatcounterSite }}.goatcounter.com" crossorigin>
 {{ with site.Params.goatcounterSite }}
 <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 {{ end }}
