@@ -73,3 +73,26 @@ En aquest taller sortim al carrer. Amb càmera analògica, carret carregat i la 
 ## No inclòs
 
 - Còpies en paper dels fotogrames (taller de Còpies en paper)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar càmera pròpia per al taller de carrer? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Per a aquest taller cal una càmera analògica de 35 mm pròpia; no deixem càmeres per a les sortides al carrer.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què es treballa al taller de fotografia de carrer? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>La mirada al carrer: composició, el moment, la relació amb les persones i l'ètica de fotografiar l'espai públic.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On es fa la sortida? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sortim pels voltants de la Nau Bostik (La Sagrera, Barcelona). El taller dura 3,5 hores i es fa en grups de màxim 4 persones.</p>
+</div>
+</details>

@@ -97,3 +97,26 @@ Es prepara en dues solucions separades —carbonat per una banda, cafè i vitami
 ---
 
 *Vols fer els tres reveladors orgànics en una sola sessió? El Caffenol, el Guinneol i el Wineol es poden combinar en una sessió de 4 hores. Escriu-nos i ho organitzem.*
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">El Caffenol revela de debò? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El cafè soluble, amb carbonat de sodi i vitamina C, revela el rodet. El resultat té més gra i un to més càlid que un revelador comercial: és una via creativa, no un substitut exacte.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què cal portar al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un rodet de 35 mm B/N exposat (ISO 100 o 400 recomanat, com Fomapan o HP5). El cafè, el carbonat de sodi, la vitamina C i tot el material els posem nosaltres.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">És perillós treballar amb aquests productes? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Són productes de cuina i es treballa amb les proteccions bàsiques del laboratori.</p>
+</div>
+</details>

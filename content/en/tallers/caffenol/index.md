@@ -97,3 +97,26 @@ Prepared in two separate solutions — carbonate on one side, coffee and vitamin
 ---
 
 *Want to do all three organic developers in one session? Caffenol, Guinneol and Wineol can be combined in a 4-hour session. Write to us and we'll organise it.*
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Does Caffenol really develop film? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. Instant coffee, with sodium carbonate and vitamin C, develops the roll. The result has more grain and a warmer tone than a commercial developer: it's a creative route, not an exact substitute.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What should I bring to the workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>An exposed 35 mm B&W roll (ISO 100 or 400 recommended, such as Fomapan or HP5). We provide the coffee, sodium carbonate, vitamin C and all the materials.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is it dangerous to work with these products? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. They are kitchen products and we work with the basic darkroom protections.</p>
+</div>
+</details>

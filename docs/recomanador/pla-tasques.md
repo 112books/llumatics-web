@@ -30,7 +30,7 @@ Documentació de referència:
 
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
-- [~] C2. FAQ específica per curs. FETS 12 (CA/ES/EN): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5, tutoria-fotografica, fonaments-iniciacio-puntual, revelat-i-positivat i reveladors-artesanals. Resten: retrat, carrer, fotollibre, caffenol, wineol, guinneol, color, estenopeica…
+- [~] C2. FAQ específica per curs. FETS 16 (CA/ES/EN): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5, tutoria-fotografica, fonaments-iniciacio-puntual, revelat-i-positivat, reveladors-artesanals, caffenol, fotografia-de-carrer, retrat-analogic i edicio-imatges-fotoquimiques. Resten la resta de la família (wineol, guinneol, color, estenopeica, fotollibre…).
 - [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
 - [x] C4. Landing `aprendre-a-revelar` (CA/ES/EN) + enllaç intern des de /tallers/.
 - [x] C5. Auditoria NAP (`docs/recomanador/auditoria-nap.md`): intern consistent; pendent extern el Google Business Profile.

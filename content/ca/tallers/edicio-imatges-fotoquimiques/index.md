@@ -78,3 +78,26 @@ El taller ensenya la lògica subjacent — que és la mateixa en tots els progra
 
 - Llicència de Lightroom, Photoshop ni Affinity Photo (es treballa amb les de l'estudi durant el taller; les alternatives gratuïtes les pots instal·lar al teu ordinador)
 - Revelat ni digitalització de carretes (si necessites digitalitzar, el taller [Digitalització amb escàner](/tallers/digitalitzacio-escaner/) és el pas previ)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar ordinador al taller d'edició? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Es treballa amb les estacions de treball de l'estudi, amb pantalla calibrada i accés a Lightroom i Photoshop durant el taller.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quin programari es fa servir? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Lightroom Classic i Photoshop, i alternatives lliures com Affinity Photo o GIMP. Si no tens llicència, pots instal·lar les gratuïtes al teu ordinador.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal saber editar imatges? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No cal experiència prèvia amb programari d'edició. Sí que convé portar imatges digitalitzades per treballar-hi.</p>
+</div>
+</details>

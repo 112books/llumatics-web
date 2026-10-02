@@ -71,3 +71,26 @@ En este taller trabajamos en el plató de Llumàtics: fondos de papel, flashes d
 - Modelo (disponible por +50€, o trae el tuyo / la tuya)
 - Revelado del carrete (disponible como añadido, +20€, o en el taller de Revelado B/N)
 - Copias en papel de los fotogramas (taller de Copias en papel)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta llevar modelo al taller de retrato? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. En el taller cada alumno hace de fotógrafo y de modelo por turnos. Si quieres una modelo profesional, hay un suplemento de 50 €.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué equipo se usa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El plató de Llumàtics: fondos de papel, flashes de calidad y cámara analógica. No hace falta llevar equipo propio.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué se aprende en el retrato analógico? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>La luz de flash, la relación y la dirección de la persona delante de la cámara, y las decisiones técnicas que hacen una buena foto de retrato.</p>
+</div>
+</details>

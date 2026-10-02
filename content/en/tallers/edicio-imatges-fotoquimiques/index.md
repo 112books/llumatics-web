@@ -78,3 +78,26 @@ The workshop teaches the underlying logic — which is the same across all progr
 
 - Lightroom, Photoshop or Affinity Photo licences (studio licences are used during the workshop; free alternatives can be installed on your own computer)
 - Film developing or scanning (if you need to digitise your negatives first, the [Scanning negatives](/en/tallers/digitalitzacio-escaner/) workshop is the logical first step)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a computer to the editing workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We work on the studio's workstations, with a calibrated screen and access to Lightroom and Photoshop during the workshop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Which software is used? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Lightroom Classic and Photoshop, and free alternatives such as Affinity Photo or GIMP. If you don't have a licence, you can install the free ones on your computer.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to know how to edit images? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No previous experience with editing software is needed. It does help to bring scanned images to work with.</p>
+</div>
+</details>

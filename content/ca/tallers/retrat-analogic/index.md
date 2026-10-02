@@ -72,3 +72,26 @@ En aquest taller treballem al plató de Llumàtics: fons de paper, flaixos de qu
 - Model (disponible per +50€, o porta el teu / la teva)
 - Revelat del carret (disponible com a afegit, +20€, o al taller de Revelat B/N)
 - Còpies en paper dels fotogrames (taller de Còpies en paper)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar model al taller de retrat? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Al taller cada alumne fa de fotògraf i de model per torns. Si vols una model professional, hi ha un suplement de 50 €.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quin equip es fa servir? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El plató de Llumàtics: fons de paper, flaixos de qualitat i càmera analògica. No cal portar equip propi.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què s'aprèn al retrat analògic? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>La llum de flaix, la relació i la direcció de la persona davant la càmera, i les decisions tècniques que fan una bona foto de retrat.</p>
+</div>
+</details>

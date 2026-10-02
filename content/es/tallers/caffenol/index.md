@@ -97,3 +97,26 @@ Se prepara en dos soluciones separadas —carbonato por un lado, café y vitamin
 ---
 
 *¿Quieres hacer los tres reveladores orgánicos en una sola sesión? El Caffenol, el Guinneol y el Wineol se pueden combinar en una sesión de 4 horas. Escríbenos y lo organizamos.*
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿El Caffenol revela de verdad? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. El café soluble, con carbonato de sodio y vitamina C, revela el carrete. El resultado tiene más grano y un tono más cálido que un revelador comercial: es una vía creativa, no un sustituto exacto.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué hay que llevar al taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un carrete de 35 mm B/N expuesto (ISO 100 o 400 recomendado, como Fomapan o HP5). El café, el carbonato de sodio, la vitamina C y todo el material los ponemos nosotros.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Es peligroso trabajar con estos productos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Son productos de cocina y se trabaja con las protecciones básicas del laboratorio.</p>
+</div>
+</details>

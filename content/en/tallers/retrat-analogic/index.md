@@ -71,3 +71,26 @@ In this workshop we work in the Llumàtics studio: paper backgrounds, quality fl
 - Model (available for +€50, or bring your own)
 - Roll development (available as an add-on, +€20, or at the Film Development workshop)
 - Paper prints of the frames (Darkroom Printing workshop)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a model to the portrait workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. In the workshop each student takes turns as photographer and model. If you want a professional model, there is a €50 supplement.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What equipment is used? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Llumàtics' studio: paper backdrops, quality flashes and an analogue camera. You don't need to bring your own equipment.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What do you learn in analogue portrait? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Flash lighting, the relationship with and direction of the person in front of the camera, and the technical decisions that make a good portrait.</p>
+</div>
+</details>

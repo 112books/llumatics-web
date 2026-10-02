@@ -78,3 +78,26 @@ El taller enseña la lógica subyacente — que es la misma en todos los program
 
 - Licencia de Lightroom, Photoshop ni Affinity Photo (se trabaja con las del estudio durante el taller; las alternativas gratuitas las puedes instalar en tu ordenador)
 - Revelado ni digitalización de carretes (si necesitas digitalizar, el taller [Digitalización con escáner](/es/tallers/digitalitzacio-escaner/) es el paso previo)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta llevar ordenador al taller de edición? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Se trabaja con las estaciones de trabajo del estudio, con pantalla calibrada y acceso a Lightroom y Photoshop durante el taller.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué software se usa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Lightroom Classic y Photoshop, y alternativas libres como Affinity Photo o GIMP. Si no tienes licencia, puedes instalar las gratuitas en tu ordenador.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta saber editar imágenes? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No hace falta experiencia previa con software de edición. Sí conviene llevar imágenes digitalizadas para trabajar.</p>
+</div>
+</details>

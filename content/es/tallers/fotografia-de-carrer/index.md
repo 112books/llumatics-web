@@ -71,3 +71,26 @@ En este taller salimos a la calle. Con cámara analógica, carrete cargado y la 
 ## No incluido
 
 - Copias en papel de los fotogramas (taller de Copias en papel)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta llevar cámara propia al taller de calle? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Para este taller hace falta una cámara analógica de 35 mm propia; no dejamos cámaras para las salidas a la calle.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué se trabaja en el taller de fotografía de calle? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>La mirada en la calle: composición, el momento, la relación con las personas y la ética de fotografiar el espacio público.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde se hace la salida? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Salimos por los alrededores de la Nau Bostik (La Sagrera, Barcelona). El taller dura 3,5 horas y se hace en grupos de máximo 4 personas.</p>
+</div>
+</details>

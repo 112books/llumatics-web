@@ -71,3 +71,26 @@ In this workshop we go out on the street. With an analogue camera, a loaded roll
 ## Not included
 
 - Paper prints of the frames (Darkroom Printing workshop)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring my own camera to the street workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. This workshop requires your own 35 mm analogue camera; we don't lend cameras for street outings.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What do we work on in the street photography workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Ways of seeing in the street: composition, timing, the relationship with people and the ethics of photographing public space.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where does the outing take place? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>We walk around Nau Bostik (La Sagrera, Barcelona). The workshop lasts 3.5 hours in groups of up to 4 people.</p>
+</div>
+</details>
