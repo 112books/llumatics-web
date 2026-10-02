@@ -81,7 +81,7 @@
 
         <h1 class="course-single__title">{{ .Title }}</h1>
         {{ with .Params.subtitle }}
-          <p style="font-size:1.25rem; font-weight:700; color:var(--color-accent); margin-bottom:0.5rem;">{{ . }}</p>
+          <p style="font-size:1.25rem; font-weight:700; color:var(--color-accent-dark); margin-bottom:0.5rem;">{{ . }}</p>
         {{ end }}
         {{ with .Params.lead }}
           <p class="course-single__lead">{{ . }}</p>
@@ -278,9 +278,9 @@
         <span class="info-box__label">{{ i18n "location" }}</span>
         <span class="info-box__value">
           {{ if $isExtern }}
-            <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener" style="color:var(--color-accent); text-decoration:underline;">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
+            <a href="https://maps.google.com/?q=Carrer+d%27en+Rosic+3,+Barcelona" target="_blank" rel="noopener" style="color:var(--color-accent-dark); text-decoration:underline;">Cameras &amp; Films — Carrer d'en Rosic 3, Barcelona</a>
           {{ else }}
-            <a href="{{ "/contacte/#com-arribar-hi" | relLangURL }}" style="color:var(--color-accent); text-decoration:underline;">Llumàtics</a>
+            <a href="{{ "/contacte/#com-arribar-hi" | relLangURL }}" style="color:var(--color-accent-dark); text-decoration:underline;">Llumàtics</a>
           {{ end }}
         </span>
       </div>

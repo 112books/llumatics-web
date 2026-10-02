@@ -2511,7 +2511,7 @@ a.recorregut-stop__name:hover {
   flex-shrink: 0;
   width: 72px;
   text-align: center;
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: #fff;
   border-radius: 4px;
   padding: var(--space-3) var(--space-2);
@@ -2799,18 +2799,18 @@ a.recorregut-stop__name:hover {
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--color-surface);
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   text-decoration: none;
   padding: var(--space-2) var(--space-4);
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-accent-dark);
   border-radius: 2px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .contact-anchor__link:hover {
-  background: var(--color-accent-dark);
+  background: color-mix(in srgb, var(--color-accent-dark) 85%, #000);
   color: var(--color-surface);
-  border-color: var(--color-accent-dark);
+  border-color: color-mix(in srgb, var(--color-accent-dark) 85%, #000);
 }
 
 .contact-details {
@@ -4061,7 +4061,7 @@ a.recorregut-stop__name:hover {
   position: fixed; top: 50%; right: 0; transform: translateY(-50%);
   z-index: 900; cursor: pointer; border: 0;
   writing-mode: vertical-rl;
-  background: var(--color-accent); color: #fff;
+  background: var(--color-accent-dark); color: #fff;
   padding: .85rem .45rem; border-radius: 6px 0 0 6px;
   font-size: .78rem; font-weight: 700; letter-spacing: .04em;
 }
