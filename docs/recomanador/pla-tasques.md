@@ -25,8 +25,8 @@ Documentació de referència:
 ## Bloc B — Formacions flash
 - [x] B1. Drafts de les 14 propostes flash (CA).
 - [x] B2. `data/efemerides.yaml` amb totes les finestres (15 entrades).
-- [ ] B3. Estat `en-preparacio` + bloc "També et pot interessar".
-- [ ] B4. Fitxa completa de cada flash en activar-se (protocol D-30).
+- [x] B3. Bloc "També et pot interessar" al recomanador amb les 14 formacions flash (`data/formacions-flash.yaml`), amb "M'interessa" al formulari.
+- [ ] B4. Fitxa completa de cada flash **en activar-se** (protocol D-30): per disseny, no es fa ara; els drafts ja tenen la fitxa bàsica i el text públic.
 
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
