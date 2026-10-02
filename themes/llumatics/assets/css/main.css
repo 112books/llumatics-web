@@ -1457,6 +1457,16 @@ button, input, select, textarea {
   color: var(--color-text);
 }
 
+.certificate__partner-x {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0.15rem;
+}
+
+.certificate__logo-img--partner {
+  height: 18px;
+}
+
 .certificate__rule {
   width: 36px;
   height: 1px;
@@ -3824,6 +3834,7 @@ a.recorregut-stop__name:hover {
 
   .certificate__brand { margin-bottom: 6mm; }
   .certificate__logo-img { height: 18pt; }
+  .certificate__logo-img--partner { height: 14pt; }
   .certificate__brand-name { font-size: 11pt; }
   .certificate__rule { margin-bottom: 5mm; }
   .certificate__eyebrow { color: #C8A96E !important; font-size: 7pt; margin-bottom: 6mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }

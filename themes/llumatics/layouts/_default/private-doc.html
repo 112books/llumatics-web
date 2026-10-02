@@ -53,6 +53,10 @@
         {{ $logo := .Site.Params.logo }}
         {{ if $logo }}<img src="{{ $logo }}" alt="" class="certificate__logo-img">{{ end }}
         <span class="certificate__brand-name">Llumàtics</span>
+        {{ with .Params.partner_logo }}
+        <span class="certificate__partner-x" aria-hidden="true">×</span>
+        <img src="{{ . }}" alt="{{ $.Params.partner_name | default "" }}" class="certificate__logo-img certificate__logo-img--partner">
+        {{ end }}
       </div>
       <div class="certificate__rule"></div>
       <p class="certificate__eyebrow">{{ i18n "certificate_title" }}</p>

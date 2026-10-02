@@ -670,9 +670,9 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] `caffenol` — CA/ES/EN ✅
 
 **Pendent (logo C&F per tallers externs):**
-- [ ] Afegir suport `partner_logo` a `private-doc.html`
-- [ ] Copiar logo: `docs-cursos/Camera-and-films-inciacio-revelat/im/LOGO_C&F.png` → `static/images/logos/cameras-and-films.png`
-- [ ] Afegir `partner_logo: /images/logos/cameras-and-films.png` al doc de `iniciacio-revelat`
+- [x] Afegir suport `partner_logo` a `private-doc.html` (resolt 2026-10-02)
+- [x] Copiar logo (resolt 2026-10-02): `docs-cursos/Camera-and-films-inciacio-revelat/im/LOGO_C&F.png` → `static/images/logos/cameras-and-films.png`
+- [x] Afegir `partner_logo: /images/logos/cameras-and-films.png` al doc de `iniciacio-revelat`
 
 ---
 

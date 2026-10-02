@@ -4,6 +4,8 @@ layout: "private-doc"
 url: "/tallers/iniciacio-revelat/privat/doc/"
 course_ref: "iniciacio-revelat"
 image: "/images/tallers/iniciacio-revelat.jpg"
+partner_logo: "/images/logos/cameras-and-films.png"
+partner_name: "Cameras & Films"
 noindex: true
 sitemap:
   disable: true
