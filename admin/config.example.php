@@ -8,3 +8,8 @@ define('SMTP_PASS',      'xsmtpsib-...');
 define('MAIL_FROM',      'hola@llumatics.com');
 define('MAIL_FROM_NAME', 'Llumàtics');
 define('MAIL_TO',        'hola@llumatics.com');
+
+// API de Brevo (llistes de contactes) — per al comptador de subscriptors
+define('BREVO_API_KEY',           'xkeysib-...');
+define('BREVO_NEWSLETTER_LIST_ID', 3);
+define('BREVO_WAITLIST_LIST_ID',   5);
