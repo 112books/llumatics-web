@@ -4133,7 +4133,10 @@ a.recorregut-stop__name:hover {
 /* ═══════════════════════════════════════════════════════════════════════
    RECOMANADOR "QUIN CURS EM CONVÉ?"
    ═══════════════════════════════════════════════════════════════════════ */
-.quiz { max-width: 760px; margin: 0 auto var(--space-16); }
+.quiz { max-width: 760px; margin: 0 auto var(--space-16); scroll-margin-top: 110px; }
+.quiz__group { margin-top: var(--space-6); }
+.quiz__group-title { font-family: var(--font-serif); font-size: var(--text-lg); margin: 0 0 var(--space-3); }
+.quiz__options--multi { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .quiz__progress { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .12em; color: var(--color-text-muted); }
 .quiz__q { font-family: var(--font-serif); font-size: var(--text-2xl); margin: 0 0 var(--space-3); }
 .quiz__hint { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-5); }

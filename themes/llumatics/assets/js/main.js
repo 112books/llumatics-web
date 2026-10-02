@@ -635,11 +635,18 @@ if (contactForm) {
     });
   }
 
+  var quizRenderedOnce = false;
+  function scrollQuizTop() {
+    if (!quizRenderedOnce) { quizRenderedOnce = true; return; }
+    if (app && app.scrollIntoView) app.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function render() {
-    if (state.step === 0) return renderNivell();
-    if (state.step === 1) return renderInteressos();
-    if (state.step === 2) return renderFormat();
-    return renderResult();
+    if (state.step === 0) renderNivell();
+    else if (state.step === 1) renderInteressos();
+    else if (state.step === 2) renderFormat();
+    else renderResult();
+    scrollQuizTop();
   }
 
   function progress() {
@@ -665,14 +672,19 @@ if (contactForm) {
 
   function renderInteressos() {
     var h = progress() + '<h2 class="quiz__q">' + esc(t('quiz_step_interessos')) + '</h2>';
-    h += '<p class="quiz__hint">' + esc(t('quiz_multiple_hint')) + '</p><div class="quiz__options quiz__options--multi">';
+    h += '<p class="quiz__hint">' + esc(t('quiz_multiple_hint')) + '</p>';
     visibleBlocs().forEach(function (b) {
+      if (!(b.opcions || []).length) return;
+      h += '<div class="quiz__group">';
+      h += '<h3 class="quiz__group-title">' + esc(t('quiz_block_' + b.id, b.id)) + '</h3>';
+      h += '<div class="quiz__options quiz__options--multi">';
       (b.opcions || []).forEach(function (o) {
         var on = state.interessa.indexOf(o.id) >= 0;
         h += '<button type="button" class="quiz__option' + (on ? ' is-on' : '') + '" data-int="' + o.id + '" aria-pressed="' + on + '">' + esc(t('quiz_' + o.id)) + '</button>';
       });
+      h += '</div></div>';
     });
-    h += '</div><div class="quiz__nav">';
+    h += '<div class="quiz__nav">';
     h += '<button type="button" class="btn btn--ghost" data-back>' + esc(t('quiz_back')) + '</button>';
     h += '<button type="button" class="btn btn--primary" data-next' + (state.interessa.length ? '' : ' disabled') + '>' + esc(t('quiz_next')) + '</button>';
     h += '</div>';
