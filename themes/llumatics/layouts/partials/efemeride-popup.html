@@ -1,0 +1,50 @@
+{{/* ============================================================
+     efemeride-popup.html — pop-up d'efemèride
+     Dades: data/efemerides.yaml
+     Només s'activa si avui és dins [inici, fi] i actiu: true.
+     El JS (main.js) el desplega al cap de 3 s i recorda el tancament
+     amb sessionStorage.
+     ============================================================ */}}
+{{- if not .Params.noindex -}}
+{{- $today := now -}}
+{{- $actives := slice -}}
+{{- range hugo.Data.efemerides -}}
+  {{- if .actiu -}}
+    {{- $inici := time.AsTime .inici -}}
+    {{- $fi := (time.AsTime .fi).AddDate 0 0 1 -}}
+    {{- if and (not ($today.Before $inici)) (not ($today.After $fi)) -}}
+      {{- $actives = $actives | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with index $actives 0 -}}
+{{- $lang := site.Language.Lang -}}
+{{- $titol := index .titol $lang | default (index .titol "ca") -}}
+{{- $subtitol := index .subtitol $lang | default (index .subtitol "ca") -}}
+{{- $descripcio := index .descripcio $lang | default (index .descripcio "ca") -}}
+{{- $boto := index .boto $lang | default (index .boto "ca") -}}
+{{- $pestanya := index .pestanya $lang | default (index .pestanya "ca") -}}
+<aside id="efemeride-popup" class="efemeride-popup" hidden
+       data-key="efemeride-{{ .id }}" data-ttl="8000"
+       aria-label="{{ $titol }}">
+  <button type="button" class="efemeride-popup__close" data-efemeride-close
+          aria-label="{{ i18n "efemeride_close" | default "Tancar" }}">&#215;</button>
+  <a class="efemeride-popup__card" href="{{ .url | relLangURL }}">
+    <div class="efemeride-popup__image">
+      <img src="{{ .imatge | relURL }}" alt="" loading="lazy">
+    </div>
+    <div class="efemeride-popup__body">
+      <p class="efemeride-popup__eyebrow">{{ i18n "efemeride_eyebrow" | default "Efemèride" }}</p>
+      <p class="efemeride-popup__title">{{ $titol }}</p>
+      <p class="efemeride-popup__subtitle">{{ $subtitol }}</p>
+      <p class="efemeride-popup__desc">{{ $descripcio }}</p>
+      <span class="efemeride-popup__cta">{{ $boto }} &rarr;</span>
+    </div>
+  </a>
+</aside>
+<button type="button" id="efemeride-tab" class="efemeride-tab" hidden
+        data-efemeride-tab aria-label="{{ $pestanya }}">
+  {{ $pestanya }}
+</button>
+{{- end -}}
+{{- end -}}

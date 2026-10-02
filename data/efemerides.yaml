@@ -1,0 +1,31 @@
+# Calendari d'efemèrides i finestres d'activació del pop-up.
+# El pop-up només apareix si avui és dins [inici, fi] i actiu: true.
+# Ordre: si dues coincideixen, el JS/partial en mostra una (la primera).
+
+- id: "holga-week"
+  actiu: true
+  inici: "2026-10-02"
+  fi: "2026-10-08"
+  data: "2026-10-08"
+  url: "/tallers/tarda-holga-2026/"
+  imatge: "/images/popup/tarda-holga-2026.jpg"
+  titol:
+    ca: "Tarda Holga"
+    es: "Tarde Holga"
+    en: "Holga Afternoon"
+  subtitol:
+    ca: "Dijous 8 d'octubre · 18–20 h · Nau Bostik"
+    es: "Jueves 8 de octubre · 18–20 h · Nau Bostik"
+    en: "Thursday 8 October · 6–8 pm · Nau Bostik"
+  descripcio:
+    ca: "Trobada gratuïta per celebrar la Holga Week. Porta la teva Holga o te'n deixem una."
+    es: "Encuentro gratuito para celebrar la Holga Week. Trae tu Holga o te dejamos una."
+    en: "Free meet-up to celebrate Holga Week. Bring your Holga or borrow one."
+  boto:
+    ca: "Vull venir"
+    es: "Quiero venir"
+    en: "I'm coming"
+  pestanya:
+    ca: "Holga · 8 oct"
+    es: "Holga · 8 oct"
+    en: "Holga · 8 Oct"

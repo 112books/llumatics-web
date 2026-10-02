@@ -501,3 +501,59 @@ if (contactForm) {
   });
 
 })();
+// ═══════════════════════════════════════════════════════════════════════
+// POP-UP D'EFEMÈRIDE
+// ═══════════════════════════════════════════════════════════════════════
+(function () {
+  'use strict';
+  var popup = document.getElementById('efemeride-popup');
+  var tab   = document.getElementById('efemeride-tab');
+  if (!popup) return;
+
+  var key = popup.dataset.key || 'efemeride';
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem(key) === '1'; } catch (e) {}
+  if (dismissed) return;
+
+  var collapseTimer = null, hideTimer = null;
+
+  function open() {
+    clearTimeout(hideTimer);
+    popup.hidden = false;
+    requestAnimationFrame(function () { popup.classList.add('is-open'); });
+    if (tab) tab.hidden = true;
+    clearTimeout(collapseTimer);
+    collapseTimer = setTimeout(collapse, parseInt(popup.dataset.ttl || '8000', 10));
+  }
+  function collapse() {
+    clearTimeout(collapseTimer);
+    popup.classList.remove('is-open');
+    hideTimer = setTimeout(function () {
+      if (!popup.classList.contains('is-open')) {
+        popup.hidden = true;
+        if (tab) tab.hidden = false;
+      }
+    }, 500);
+  }
+  function close() {
+    try { sessionStorage.setItem(key, '1'); } catch (e) {}
+    clearTimeout(collapseTimer);
+    popup.classList.remove('is-open');
+    hideTimer = setTimeout(function () { popup.hidden = true; }, 500);
+    if (tab) tab.hidden = true;
+  }
+
+  setTimeout(open, 3000);
+
+  var closeBtn = popup.querySelector('[data-efemeride-close]');
+  if (closeBtn) closeBtn.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation(); close();
+  });
+  if (tab) tab.addEventListener('click', open);
+  window.addEventListener('scroll', function () {
+    if (popup.classList.contains('is-open')) collapse();
+  }, { passive: true });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && popup.classList.contains('is-open')) collapse();
+  });
+})();
