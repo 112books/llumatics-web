@@ -78,3 +78,26 @@ The result, whether it works or not, teaches you infinitely more than a hundred 
 
 - Additional sheets (+€4/sheet)
 - Contact prints (paper + chemicals, enquire)
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience for Large Format 4×5? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. It is an advanced workshop: we recommend having done Introduction to large format or having equivalent knowledge of camera, exposure and darkroom.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What does the Large Format workshop price include? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The workshop materials. Additional sheets cost extra (+€4/sheet) and contact prints are quoted according to paper and chemicals.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where is the large format 4×5 workshop? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (La Sagrera, Barcelona 08027). It lasts 8 hours, with a maximum of 4 students, and starts at €420 for one student.</p>
+</div>
+</details>

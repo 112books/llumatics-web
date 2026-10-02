@@ -81,3 +81,26 @@ Sessions are always individual (1:1) and priced by the hour: **€60/hour, minim
 - Photographic paper — bring what you need; we can advise if necessary
 - Film / rolls — Fomapan 35mm and 120 format available at €12/roll
 - Photographic papers — pricing on request depending on type, size and finish
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">How much does the photography tutorial cost? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>€60 per hour, minimum 2 hours. It includes the darkroom chemicals; it does not include photographic paper or film (€12/unit).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How does one-to-one tuition work? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>It is one to one and adapts to the topic you want: development, printing, portrait, street or your own project. When you write to us, we agree on the syllabus and dates.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I take a tutorial to support a project? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. It is the ideal format to support a personal project or a reportage over time, with working and review sessions.</p>
+</div>
+</details>

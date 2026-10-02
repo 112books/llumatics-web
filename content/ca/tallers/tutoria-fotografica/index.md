@@ -81,3 +81,26 @@ La sessió és sempre individual (1:1) i es factura per hores: **60€/hora, mí
 - Paper fotogràfic — pots portar el que necessitis; et podem orientar si cal
 - Pel·lícula / rodets — Fomapan 35mm i 120 disponibles a 12€/unitat
 - Papers fotogràfics — preu a consultar segons tipus, mida i acabat
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Quant costa la tutoria fotogràfica? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>60 € per hora, amb un mínim de 2 hores. Inclou els químics del laboratori; no inclou paper fotogràfic ni pel·lícula (12 €/unitat).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Com funciona la tutoria individual? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>És individual i s'adapta al tema que vulguis: revelat, positivat, retrat, carrer o un projecte propi. Quan ens escriguis, acordem el temari i les dates.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Puc fer una tutoria per acompanyar un projecte? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. És el format ideal per acompanyar un projecte personal o un reportatge al llarg del temps, amb sessions de treball i revisió.</p>
+</div>
+</details>

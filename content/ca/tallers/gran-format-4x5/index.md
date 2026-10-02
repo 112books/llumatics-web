@@ -79,3 +79,26 @@ El resultat, tant si surt bé com si no, ensenya infinitament més que cent foto
 
 - Plànxes addicionals (+4€/plànxa)
 - Còpies en paper per contacte (paper + químics, consultar)
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia per fer Gran Format 4×5? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. És un taller avançat: es recomana haver fet Introducció al gran format o tenir nocions equivalents de càmera, exposició i laboratori.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què inclou el preu del taller de Gran Format? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El material del taller. Les plànxes addicionals van a part (+4 €/plànxa) i les còpies en paper per contacte es consulten segons el paper i els químics.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On es fa el taller de gran format 4×5? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (La Sagrera, Barcelona 08027). Dura 8 hores, amb un màxim de 4 alumnes, i parteix de 420 € per a un alumne.</p>
+</div>
+</details>

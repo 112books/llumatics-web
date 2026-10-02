@@ -78,3 +78,26 @@ El resultado, tanto si sale bien como si no, enseña infinitamente más que cien
 
 - Placas adicionales (+4€/placa)
 - Copias en papel por contacto (papel + químicos, consultar)
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa para Gran Formato 4×5? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Es un taller avanzado: se recomienda haber hecho Introducción al gran formato o tener nociones equivalentes de cámara, exposición y laboratorio.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué incluye el precio del taller de Gran Formato? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El material del taller. Las placas adicionales van aparte (+4 €/placa) y las copias en papel por contacto se consultan según el papel y los químicos.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde se hace el taller de gran formato 4×5? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la Nau Bostik (La Sagrera, Barcelona 08027). Dura 8 horas, con un máximo de 4 alumnos, y parte de 420 € para un alumno.</p>
+</div>
+</details>

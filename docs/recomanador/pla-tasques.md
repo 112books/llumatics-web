@@ -30,7 +30,7 @@ Documentació de referència:
 
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
-- [~] C2. FAQ específica per curs: fets revelat-bn, iniciacio-revelat i introduccio-al-positivat. Pendents: copies-en-paper, cianotipia, digitalitzacio-escaner, gran format, retrat, carrer, tutoria.
+- [~] C2. FAQ específica per curs. FETS els prioritaris (9): revelat-bn, iniciacio-revelat, introduccio-al-positivat, copies-en-paper, cianotipia, digitalitzacio-escaner, introduccio-gran-format, gran-format-4x5 i tutoria-fotografica (CA/ES/EN). Resten els secundaris (retrat, carrer, fotollibre, caffenol…).
 - [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
 - [ ] C4. Landing "aprendre a revelar a Barcelona" + enllaços interns.
 - [ ] C5. Auditoria de consistència NAP (08027, La Sagrera).

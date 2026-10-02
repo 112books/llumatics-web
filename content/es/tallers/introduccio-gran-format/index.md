@@ -79,3 +79,26 @@ Este taller es el primer paso. No el definitivo, pero sí el necesario para sabe
 
 - Placas adicionales (+4€/placa)
 - Si quieres continuar, el taller de Gran Formato 4×5" es el paso natural
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta tener cámara de gran formato o placas? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El material del taller está incluido y puedes venir sin equipo. Si después quieres continuar, el paso natural es el taller de Gran Formato 4×5.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué aprenderé en cuatro horas? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El funcionamiento de la cámara de gran formato, la preparación y carga de placas, el encuadre y la exposición básica, y cómo se revela la placa. Las placas adicionales van aparte (+4 €/placa).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde puedo aprender gran formato en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, 08027), en grupos de máximo 4 alumnos. El taller dura 4 horas y parte de 220 € para un alumno.</p>
+</div>
+</details>

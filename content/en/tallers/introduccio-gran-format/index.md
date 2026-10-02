@@ -79,3 +79,26 @@ This workshop is the first step. Not the final one, but the necessary one to fin
 
 - Additional sheets (+€4/sheet)
 - If you want to continue, the Large Format 4×5" workshop is the natural next step
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need a large format camera or film holders? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. The workshop materials are included and you can come without equipment. If you want to continue, the natural next step is the Large Format 4×5 workshop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What will I learn in four hours? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>How a large format camera works, how to prepare and load film holders, framing and basic exposure, and how the sheet is developed. Additional sheets cost extra (+€4/sheet).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn large format in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, 08027), in groups of up to 4 students. The workshop lasts 4 hours and starts at €220 for one student.</p>
+</div>
+</details>

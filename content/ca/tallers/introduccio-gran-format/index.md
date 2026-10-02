@@ -80,3 +80,26 @@ Aquest taller és el primer pas. No el definitiu, però sí el necessari per sab
 
 - Plànxes addicionals (+4€/plànxa)
 - Si vols continuar, el taller de Gran Format 4×5" és el pas natural
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir càmera de gran format o plànxes? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El material del taller està inclòs i pots venir sense equip. Si després vols continuar, el pas natural és el taller de Gran Format 4×5.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què aprendré en quatre hores? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El funcionament de la càmera de gran format, la preparació i càrrega de plànxes, l'enquadrament i l'exposició bàsica, i com es revela la plànxa. Les plànxes addicionals van a part (+4 €/plànxa).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre gran format a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la Nau Bostik (Carrer Ferran Turné 1-11, La Sagrera, 08027), en grups de màxim 4 alumnes. El taller dura 4 hores i parteix de 220 € per a un alumne.</p>
+</div>
+</details>

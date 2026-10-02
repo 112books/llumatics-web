@@ -81,3 +81,26 @@ La sesión es siempre individual (1:1) y se factura por horas: **60€/hora, mí
 - Papel fotográfico — puedes traer el que necesites; te podemos orientar si hace falta
 - Película / carretes — Fomapan 35mm y 120 disponibles a 12€/unidad
 - Papeles fotográficos — precio a consultar según tipo, tamaño y acabado
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuánto cuesta la tutoría fotográfica? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>60 € por hora, con un mínimo de 2 horas. Incluye los químicos del laboratorio; no incluye papel fotográfico ni película (12 €/unidad).</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cómo funciona la tutoría individual? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Es individual y se adapta al tema que quieras: revelado, positivado, retrato, calle o un proyecto propio. Cuando nos escribas, acordamos el temario y las fechas.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo hacer una tutoría para acompañar un proyecto? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Es el formato ideal para acompañar un proyecto personal o un reportaje a lo largo del tiempo, con sesiones de trabajo y revisión.</p>
+</div>
+</details>
