@@ -12,6 +12,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1A1A18">
 {{- $desc := "" -}}
 {{- if .Description -}}
   {{- $desc = .Description -}}
@@ -22,6 +23,14 @@
 {{- end -}}
 {{- $desc = $desc | plainify | chomp | strings.TrimSpace | truncate 160 -}}
 <meta name="description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{/* Preload de la imatge principal (LCP) per pàgina */}}
+{{- $preloadImg := "" -}}
+{{- if .IsHome -}}
+  {{- $preloadImg = .Params.heroImage -}}
+{{- else if or (eq .Type "tallers") (eq .Type "blog") -}}
+  {{- $preloadImg = .Params.image -}}
+{{- end -}}
+{{- with $preloadImg }}<link rel="preload" as="image" href="{{ . | absURL }}" fetchpriority="high">{{ end }}
 {{ if or .Params.noindex (eq .Params.robots "noindex, nofollow") -}}
 <meta name="robots" content="noindex, nofollow">
 {{- else if and (eq .Section "agenda") (eq .Params.status "past") -}}
