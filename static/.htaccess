@@ -220,7 +220,9 @@ Options -Indexes
   # a https, per la qual cosa no pot crear cap bucle.
   # !-f protegeix els fitxers reals sense barra (humans.txt, llms.txt,
   # form-handler.php): si no, passarien a 301 cap a /fitxer/.
-  RewriteCond %{REQUEST_FILENAME} !-f
+  # -d: només afegim la barra a directoris reals (les pàgines de Hugo ho són).
+  # Sense això, una URL inexistent rebia un 301 abans del 404.
+  RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^(.+[^/])$ https://llumatics.com/$1/ [R=301,L]
 
 </IfModule>
