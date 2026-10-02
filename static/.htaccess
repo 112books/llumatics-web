@@ -13,6 +13,9 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE image/svg+xml application/xml
 </IfModule>
 
+# Tipus MIME que Dinahosting no reconeix per defecte
+AddType image/webp .webp
+
 # Cache d'assets estàtics
 <IfModule mod_expires.c>
   ExpiresActive On
