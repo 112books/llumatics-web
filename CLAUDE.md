@@ -405,6 +405,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Auditoria per categories (scan Vibe, tarda)** — imatges 113,9 MB → 36,6 MB; CSP + Permissions-Policy + COOP/CORP + X-Permitted; Google Fonts i Chart.js autoallotjats; `theme-color` i preload LCP; 9 meta descriptions escurçades. Detall a `MEMORY.md`.
 - **Ronda 2 (width/height + SEO)** — `data/image_dimensions.yaml` + width/height a totes les imatges (100% a pàgines públiques); sufix del títol només si ≤60 caràcters; 0 enllaços interns trencats (6 `/privat/` arreglats amb `sense_doc`).
 - **Ronda 3 (social/security/LCP/favicon)** — `og:image:width/height` reals, `/.well-known/security.txt`, `fetchpriority=high` a les imatges principals i favicons reals (`favicon.ico` + PNG 16/32 + `apple-touch-icon` 180).
+- **Ronda 4 (Lighthouse)** — Performance 99, Accessibility 100, SEO 100, Best Practices 100; 404 directe, contrast footer, hero WebP, `AddType image/webp`, preconnect i cache 1 any.
 - Build Hugo correcte (CA 498 / ES 403 / EN 409 pàgines).
 
 ### 2026-10-02
