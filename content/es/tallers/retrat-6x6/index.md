@@ -75,3 +75,28 @@ En este taller trabajamos con modelo. Primera parte: repasamos la técnica y la 
 
 - Rollo adicional de 120 (+12€)
 - Copias en papel de los fotogramas (taller de Copias en papel)
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que tener una cámara de medio formato? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Podemos dejarte una Hasselblad 500. Si tienes una, tráela.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿El revelado está incluido? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un carrete de 120 B/N, el revelado el mismo día y la digitalización de los 12 fotogramas.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que traer modelo? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No es obligatorio. Si quieres trabajar con modelo profesional, podemos buscar uno por 50 €; o puedes traer a tu persona.</p>
+</div>
+</details>
+

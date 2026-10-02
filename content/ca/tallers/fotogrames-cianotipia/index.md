@@ -80,3 +80,28 @@ Aquest és el taller d'entrada. Si t'enganxa —i normalment enganxa—, el tall
 ## No inclòs
 
 - N/A — el taller és gratuït. Inscripció prèvia obligatòria (places limitades).
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar càmera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Fem fotogrames: col·loquem objectes sobre paper sensibilitzat, sense càmera ni cambra fosca.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Cap. És el taller d'entrada a la cianotípia; no cal cap coneixement de fotografia ni de química.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Em puc endur les peces a casa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Cada participant s'endú els seus fotogrames un cop rentats i assecats.</p>
+</div>
+</details>
+

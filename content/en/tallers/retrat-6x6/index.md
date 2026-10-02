@@ -75,3 +75,28 @@ In this workshop we work with a model. First part: we go over technique and the 
 
 - Additional 120 roll (+€12)
 - Paper prints of the frames (Darkroom Printing workshop)
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need a medium-format camera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We can lend you a Hasselblad 500. If you have one, bring it.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is developing included? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. One roll of 120 B/W, same-day developing and digitisation of the 12 frames.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a model? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>It is not compulsory. If you want to work with a professional model we can find one for €50, or you can bring someone.</p>
+</div>
+</details>
+

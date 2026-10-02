@@ -77,3 +77,28 @@ En aquest taller treballem amb model. Primera part: repassem la tècnica i la re
 - Model (disponible per +50€, o porta el teu / la teva)
 - Rodet addicional de 120 (+12€)
 - Còpies en paper dels fotogrames (taller de Còpies en paper)
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir una càmera de mig format? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Podem deixar-te una Hasselblad 500. Si en tens una, porta-la.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">El revelat està inclòs? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un rodet de 120 B/N, el revelat el mateix dia i la digitalització dels 12 fotogrames.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar model? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No és obligatori. Si vols treballar amb model professional, en podem buscar un per 50 €; o pots portar la teva persona.</p>
+</div>
+</details>
+

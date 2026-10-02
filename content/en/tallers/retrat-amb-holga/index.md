@@ -94,3 +94,28 @@ At the end, a verification scan of the frames to see the dry results.
 
 - Additional rolls (+€12/120 roll)
 - Full high-resolution scanning (available as a service at Llumàtics from €15)
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to own a Holga? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. If you do not have one, we will provide one. You can bring yours if you have one.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Are the roll and developing included? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. One roll of 120 B/W, use of the studio with lighting and backdrop, the developing chemicals and the scanner for the final check.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>None. This is a beginner's workshop: no photography or developing knowledge is needed.</p>
+</div>
+</details>
+

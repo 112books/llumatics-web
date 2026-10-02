@@ -76,3 +76,28 @@ En aquest taller hi ha temps per a tot: per entendre el sistema, per disparar am
 
 - Rodet addicional de 120 (+12€)
 - Còpies en paper dels fotogrames (taller de Còpies en paper)
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir una Hasselblad? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Disposem d'una Hasselblad 500C/M per al taller. Si en tens una, porta-la i treballaràs amb la teva.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què s'hi aprèn? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El sistema 500, el dorsal intercanviable, el visor de cintura, els objectius, les dobles exposicions, el disparador remot i els trucs que no surten als manuals.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">El rodet i el revelat estan inclosos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un rodet de 120 B/N, el revelat el mateix dia i la digitalització dels 12 fotogrames.</p>
+</div>
+</details>
+

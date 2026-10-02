@@ -86,3 +86,28 @@ Las fotos que hagamos el día 8 ya no entran en el concurso. Esta tarde se hace 
 ## Inscripciones
 
 La actividad es gratuita, pero las plazas para las cámaras de préstamo son limitadas. Rellena el **[formulario de contacto](/es/contacte/?taller=tarda-holga-2026#formulari)** con tu nombre y si necesitas cámara, y te reservamos sitio.
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que traer cámara? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No es imprescindible. Si no tienes, tendremos unas cuantas de préstamo, pero son pocas: escríbenos con antelación para reservar una.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta inscripción previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>La actividad es gratuita, pero las plazas (sobre todo de cámara de préstamo) son limitadas. Hay que rellenar el formulario de contacto para reservar plaza.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Tengo que traer película? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Si tienes, tráela. Si no, tendremos carretes B/N de 120 y 35 mm a 10 € cada uno; recomendamos ISO 400.</p>
+</div>
+</details>
+

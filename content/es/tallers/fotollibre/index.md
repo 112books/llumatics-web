@@ -121,3 +121,28 @@ Algunos fotolibros producidos vía 112books que muestran el abanico de posibilid
 
 - Impresión del fotolibro (presupuesto a medida vía 112books, calculado durante el taller)
 - Impresiones domésticas para la maqueta física (el alumno las trae hechas)
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que tener un proyecto empezado? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Hay que llegar con un cuerpo de trabajo de 50–100 imágenes de un mismo tema. El taller sirve para materializarlo, no para empezarlo.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿La impresión del libro está incluida? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El presupuesto de impresión se calcula durante el taller con 112books y se paga aparte. El precio del taller solo cubre las tres sesiones de trabajo.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que saber diseñar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Aprendemos Affinity Publisher desde cero. Solo hay que traer un portátil con el programa instalado para las sesiones 2 y 3.</p>
+</div>
+</details>
+

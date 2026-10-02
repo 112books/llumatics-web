@@ -121,3 +121,28 @@ Some photobooks produced via 112books that show the range of possibilities — f
 
 - Printing of the photobook (custom quote via 112books, calculated during the workshop)
 - Domestic printouts for the physical maquette (participants bring these ready-made)
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need a project already started? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. You need to arrive with a body of work of 50–100 images on one theme. The workshop is for turning it into a book, not for starting it.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Is printing the book included? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. The printing quote is worked out during the workshop with 112books and paid separately. The workshop price only covers the three working sessions.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to know design? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We learn Affinity Publisher from scratch. You only need to bring a laptop with the software installed for sessions 2 and 3.</p>
+</div>
+</details>
+

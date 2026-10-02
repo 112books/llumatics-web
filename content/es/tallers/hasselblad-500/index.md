@@ -75,3 +75,28 @@ En este taller hay tiempo para todo: para entender el sistema, para disparar con
 
 - Rollo adicional de 120 (+12€)
 - Copias en papel de los fotogramas (taller de Copias en papel)
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que tener una Hasselblad? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Disponemos de una Hasselblad 500C/M para el taller. Si tienes una, tráela y trabajarás con la tuya.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué se aprende? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El sistema 500, el respaldo intercambiable, el visor de cintura, los objetivos, las dobles exposiciones, el disparador remoto y los trucos que no salen en los manuales.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿El carrete y el revelado están incluidos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un carrete de 120 B/N, el revelado el mismo día y la digitalización de los 12 fotogramas.</p>
+</div>
+</details>
+

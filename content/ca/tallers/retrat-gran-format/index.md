@@ -88,3 +88,28 @@ No és un taller de nostalgia. És una manera de tocar els orígens del medi per
 - [tel:+34935160545](tel:+34935160545)
 - [@camerasandfilms](https://www.instagram.com/camerasandfilms.barcelona/)
 - tienda@camerasandfilms.com
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">On es fa el taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Cameras & Films (carrer d'en Rosic, 3, Barcelona). Les dates les programa i gestiona directament la botiga.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar alguna cosa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El taller inclou la càmera del segle XIX, el paper fotosensible, els químics i l'espai.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No, tot i que és recomanable tenir nocions bàsiques de fotografia analògica.</p>
+</div>
+</details>
+

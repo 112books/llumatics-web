@@ -78,3 +78,28 @@ This is the entry-level session. If it hooks you — and it usually does — the
 ## Not included
 
 - N/A — the workshop is free. Prior registration required (limited places).
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a camera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We make photograms: we place objects on sensitised paper, with no camera and no darkroom.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need any previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>None. This is the introductory cyanotype workshop; no photography or chemistry knowledge is needed.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Can I take the pieces home? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. Each participant takes their photograms home once they are washed and dried.</p>
+</div>
+</details>
+

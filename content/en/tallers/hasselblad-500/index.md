@@ -75,3 +75,28 @@ In this workshop there's time for everything: to understand the system, to shoot
 
 - Additional 120 roll (+€12)
 - Paper prints of the frames (Darkroom Printing workshop)
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to own a Hasselblad? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. We have a Hasselblad 500C/M available for the workshop. If you have one, bring it and you will work with yours.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What will I learn? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The 500 system, the interchangeable back, the waist-level finder, the lenses, double exposures, the remote release and the tricks that are not in the manuals.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Are the roll and developing included? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. One roll of 120 B/W, same-day developing and digitisation of the 12 frames.</p>
+</div>
+</details>
+

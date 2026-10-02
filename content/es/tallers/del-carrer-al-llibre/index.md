@@ -142,3 +142,28 @@ El curso acaba con una sesión de síntesis: revisión del recorrido, mapa perso
 ## Documentación incluida
 
 Cada sesión incluye material de referencia: ficha técnica del autor estudiado, selección de obras representativas y recursos para profundizar. Todo queda en manos de los alumnos para conservar.
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuánto dura el curso? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un año: 12 sesiones mensuales, con entrada en octubre y opción semestral de 6 sesiones a partir de abril.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuántas plazas hay? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Máximo 6 personas. Es un curso de grupo reducido para poder tutorizar cada proyecto.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta una cámara propia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Hace falta una cámara analógica de 35 mm propia y trabajar entre sesiones. Los carretes adicionales se pueden comprar en el taller (12 €).</p>
+</div>
+</details>
+

@@ -142,3 +142,28 @@ The course closes with a synthesis session: reviewing the journey, a personal ma
 ## Documentation included
 
 Each session includes reference material: a technical profile of the photographer studied, a selection of representative works and resources for further reading. All of it is yours to keep.
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">How long is the course? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A year: 12 monthly sessions, starting in October, with a six-session semester option from April.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How many places are there? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A maximum of 6 people. It is a small-group course so that every project can be tutored.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need my own camera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Yes. You need your own 35 mm analogue camera and to work between sessions. Extra films can be bought at the workshop (€12).</p>
+</div>
+</details>
+

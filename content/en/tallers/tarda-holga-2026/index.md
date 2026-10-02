@@ -86,3 +86,28 @@ Photos we take on the 8th don't enter the competition. This afternoon is about t
 ## Sign-up
 
 The event is free, but places for loan cameras are limited. Fill in the **[contact form](/en/contacte/?taller=tarda-holga-2026#formulari)** with your name and whether you need a camera, and we'll save you a spot.
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring a camera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>It is not essential. If you do not have one we will have a few loan cameras, but they are limited: write to us in advance to reserve one.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to sign up in advance? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>The event is free, but places (especially loan cameras) are limited. You need to fill in the contact form to reserve a place.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring film? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>If you have some, bring it. If not, we will have 120 and 35 mm B/W rolls at €10 each; ISO 400 recommended.</p>
+</div>
+</details>
+

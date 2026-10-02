@@ -78,3 +78,28 @@ Este es el taller de entrada. Si te engancha —y normalmente engancha—, el ta
 ## No incluido
 
 - N/A — el taller es gratuito. Inscripción previa obligatoria (plazas limitadas).
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que traer cámara? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Hacemos fotogramas: colocamos objetos sobre papel sensibilizado, sin cámara ni cuarto oscuro.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Ninguna. Es el taller de entrada a la cianotipia; no hacen falta conocimientos de fotografía ni de química.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Puedo llevarme las piezas a casa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Cada participante se lleva sus fotogramas una vez lavados y secados.</p>
+</div>
+</details>
+

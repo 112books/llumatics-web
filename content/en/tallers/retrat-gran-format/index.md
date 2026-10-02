@@ -77,3 +77,28 @@ This isn't a nostalgia workshop. It's a way of touching the origins of the mediu
 
 - Additional prints on photosensitive paper (materials extra, enquire)
 - Travel to Cameras & Films
+
+
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Where is the workshop held? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Cameras & Films (Carrer d'en Rosic, 3, Barcelona). The dates are programmed and managed directly by the shop.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need to bring anything? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. The workshop includes the 19th-century camera, the photosensitive paper, the chemicals and the space.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No, although basic notions of analogue photography are recommended.</p>
+</div>
+</details>
+

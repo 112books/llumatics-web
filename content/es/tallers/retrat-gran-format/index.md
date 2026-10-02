@@ -77,3 +77,28 @@ No es un taller de nostalgia. Es una manera de tocar los orígenes del medio par
 
 - Copias adicionales sobre papel fotosensible (materiales aparte, consultar)
 - Desplazamiento hasta Cameras & Films
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde se hace el taller? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Cameras & Films (calle d'en Rosic, 3, Barcelona). Las fechas las programa y gestiona directamente la tienda.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que traer algo? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El taller incluye la cámara del siglo XIX, el papel fotosensible, los químicos y el espacio.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No, aunque es recomendable tener nociones básicas de fotografía analógica.</p>
+</div>
+</details>
+

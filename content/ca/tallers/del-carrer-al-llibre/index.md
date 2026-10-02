@@ -142,3 +142,28 @@ El curs acaba amb una sessió de síntesi: revisió del recorregut, mapa persona
 ## Documentació inclosa
 
 Cada sessió inclou material de referència: fitxa tècnica de l'autor estudiat, selecció d'obres representatives i recursos per aprofundir. Tot queda als alumnes per conservar.
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Quant dura el curs? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Un any: 12 sessions mensuals, amb entrada a l'octubre i opció semestral de 6 sessions a partir de l'abril.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quantes places hi ha? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Màxim 6 persones. És un curs de grup reduït per poder tutoritzar cada projecte.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal una càmera pròpia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Cal una càmera analògica de 35 mm pròpia i treballar entre sessions. Els carrets addicionals es poden comprar al taller (12 €).</p>
+</div>
+</details>
+

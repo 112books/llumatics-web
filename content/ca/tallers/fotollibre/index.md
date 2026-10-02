@@ -121,3 +121,28 @@ Alguns fotollibre produïts via 112books que mostren el ventall de possibilitats
 
 - Impressió del fotolibre (pressupost a mida via 112books, calculat durant el taller)
 - Impressions domèstiques per a la maqueta física (l'alumne les porta fetes)
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir un projecte començat? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Cal arribar amb un cos de treball de 50–100 imatges d'un mateix tema. El taller serveix per materialitzar-lo, no per començar-lo.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">La impressió del llibre està inclosa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. El pressupost d'impressió es calcula durant el taller amb 112books i es paga a part. El preu del taller només cobreix les tres sessions de treball.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal saber dissenyar? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Aprenem Affinity Publisher des de zero. Només cal portar un portàtil amb el programa instal·lat per a les sessions 2 i 3.</p>
+</div>
+</details>
+

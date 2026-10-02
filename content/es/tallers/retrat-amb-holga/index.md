@@ -94,3 +94,28 @@ Al final, escaneo de comprobación de los fotogramas para ver los resultados en 
 
 - Carretes adicionales (+12€/carrete de 120)
 - Escaneo completo de alta resolución (disponible como servicio en Llumàtics desde 15€)
+
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hay que tener una Holga? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Si no tienes, ponemos una a tu disposición. Puedes traer la tuya si la tienes.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿El carrete y el revelado están incluidos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un carrete de 120 B/N, el uso del plató con luz y fondo, los químicos del revelado y el escáner para la comprobación final.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Ninguna. Es un taller de iniciación: no hacen falta conocimientos de fotografía ni de revelado.</p>
+</div>
+</details>
+

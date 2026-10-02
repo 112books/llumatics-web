@@ -104,3 +104,28 @@ Al final, escaneig de comprovació dels fotogrames per veure els resultats en se
 ---
 
 *La Holga funciona millor en condicions de llum alta o amb flash. Si vols treballar amb llum de plató controlada, el [Taller de Retrat Analògic](/tallers/retrat-analogic/) ofereix més control sobre la il·luminació.*
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal tenir una Holga? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No. Si no en tens, en posem una a disposició. Pots portar la teva si en tens.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">El rodet i el revelat estan inclosos? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Sí. Un rodet de 120 B/N, l'ús del plató amb llum i fons, els químics del revelat i l'escàner per a la comprovació final.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Cap. És un taller d'iniciació: no calen coneixements de fotografia ni de revelat.</p>
+</div>
+</details>
+

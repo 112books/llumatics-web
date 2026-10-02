@@ -86,3 +86,28 @@ Les fotos que fem el dia 8 ja no entren al concurs. Aquesta tarda es fa per la j
 ## Inscripcions
 
 L'activitat és gratuïta, però les places per a les càmeres de préstec són limitades. Omple el **[formulari de contacte](/contacte/?taller=tarda-holga-2026#formulari)** amb el teu nom i si necessites càmera, i et reservem lloc.
+
+
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Cal portar càmera? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No és imprescindible. Si no en tens, en tindrem unes quantes de préstec, però són poques: escriu-nos amb antelació per reservar-ne una.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal inscripció prèvia? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>L'activitat és gratuïta, però les places (sobretot de càmera de préstec) són limitades. Cal omplir el formulari de contacte per reservar lloc.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">He de portar pel·lícula? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Si en tens, porta-la. Si no, tindrem rodets B/N de 120 i 35 mm a 10 € cadascun; recomanem ISO 400.</p>
+</div>
+</details>
+
