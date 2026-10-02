@@ -54,7 +54,7 @@ draft: false
 date: 2026-10-08
 ---
 
-From 1 to 7 October, photographers all over the world take to the streets with the same plastic camera: the Holga. They do it for [Holga Week](https://holgaweek.com/), a celebration and a competition dedicated to the most imperfect and best-loved medium format camera.
+From 1 to 7 October, photographers all over the world take to the streets with the same plastic camera: the [Holga](https://en.wikipedia.org/wiki/Holga). They do it for [Holga Week](https://holgaweek.com/), a celebration and a competition dedicated to the most imperfect and best-loved medium format camera.
 
 We celebrate it on the 8th with an afternoon at Nau Bostik. **It's free.** It isn't a course: it's a meet-up to shoot, share tricks and have a good time with a camera that forgives nothing and gives everything.
 

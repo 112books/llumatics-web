@@ -54,7 +54,7 @@ draft: false
 date: 2026-10-08
 ---
 
-Del 1 al 7 d'octubre, fotògrafs de tot el món surten al carrer amb la mateixa càmera de plàstic: la Holga. Ho fan per la [Holga Week](https://holgaweek.com/), una celebració i un concurs dedicats a la càmera més imperfecta i estimada del mig format.
+Del 1 al 7 d'octubre, fotògrafs de tot el món surten al carrer amb la mateixa càmera de plàstic: la [Holga](https://ca.wikipedia.org/wiki/Holga). Ho fan per la [Holga Week](https://holgaweek.com/), una celebració i un concurs dedicats a la càmera més imperfecta i estimada del mig format.
 
 Nosaltres ho celebrem el dia 8, l'endemà, amb una tarda a la Nau Bostik. **És gratuïta.** No és un curs: és una trobada per disparar, compartir trucs i passar-ho bé amb una càmera que no perdona res i ho regala tot.
 

@@ -30,7 +30,7 @@ course_ref: "tarda-holga-2026"
 draft: false
 ---
 
-The **Holga** is a plastic medium format camera that doesn't focus, doesn't meter the light and forgives no mistake. And that is precisely why it is one of the best loved cameras in analogue photography.
+The **[Holga](https://en.wikipedia.org/wiki/Holga)** is a plastic medium format camera that doesn't focus, doesn't meter the light and forgives no mistake. And that is precisely why it is one of the best loved cameras in analogue photography.
 
 Every year, from **1 to 7 October**, photographers all over the world take to the streets with the same camera to celebrate **Holga Week**. We celebrate it the next day, on **Thursday 8 October**, with a free afternoon at Nau Bostik.
 

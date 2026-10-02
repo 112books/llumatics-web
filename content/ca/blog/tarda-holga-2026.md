@@ -30,7 +30,7 @@ course_ref: "tarda-holga-2026"
 draft: false
 ---
 
-La **Holga** és una càmera de plàstic de mig format que no enfoca, no mesura la llum i no perdona cap error. I és, precisament per això, una de les càmeres més estimades de la fotografia analògica.
+La **[Holga](https://ca.wikipedia.org/wiki/Holga)** és una càmera de plàstic de mig format que no enfoca, no mesura la llum i no perdona cap error. I és, precisament per això, una de les càmeres més estimades de la fotografia analògica.
 
 Cada any, del **1 al 7 d'octubre**, fotògrafs de tot el món surten al carrer amb la mateixa càmera per celebrar la **Holga Week**. Nosaltres ho celebrem l'endemà, el **dijous 8 d'octubre**, amb una tarda gratuïta a la Nau Bostik.
 

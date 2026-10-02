@@ -4057,15 +4057,17 @@ a.recorregut-stop__name:hover {
    ═══════════════════════════════════════════════════════════════ */
 .gallery-collage {
   display: block;
-  columns: 3;
-  column-gap: var(--space-3);
+  columns: 150px;
+  column-gap: 6px;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 .gallery-collage .gallery__item {
   width: 100%;
   aspect-ratio: auto;
   display: block;
   position: relative;
-  margin: 0 0 var(--space-3);
+  margin: 0 0 6px;
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -4077,14 +4079,7 @@ a.recorregut-stop__name:hover {
   height: auto;
   object-fit: initial;
   display: block;
-  border-radius: 3px;
-}
-@media (max-width: 900px) {
-  .gallery-collage { columns: 2; }
-}
-@media (max-width: 480px) {
-  .gallery-collage { column-gap: var(--space-2); }
-  .gallery-collage .gallery__item { margin-bottom: var(--space-2); }
+  border-radius: 2px;
 }
 
 /* Badge «Flash!» del pop-up d'efemèride */

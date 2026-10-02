@@ -54,7 +54,7 @@ draft: false
 date: 2026-10-08
 ---
 
-Del 1 al 7 de octubre, fotógrafos de todo el mundo salen a la calle con la misma cámara de plástico: la Holga. Lo hacen por la [Holga Week](https://holgaweek.com/), una celebración y un concurso dedicados a la cámara más imperfecta y querida del medio formato.
+Del 1 al 7 de octubre, fotógrafos de todo el mundo salen a la calle con la misma cámara de plástico: la [Holga](https://es.wikipedia.org/wiki/Holga). Lo hacen por la [Holga Week](https://holgaweek.com/), una celebración y un concurso dedicados a la cámara más imperfecta y querida del medio formato.
 
 Nosotros lo celebramos el día 8, al día siguiente, con una tarde en la Nau Bostik. **Es gratuita.** No es un curso: es un encuentro para disparar, compartir trucos y pasarlo bien con una cámara que no perdona nada y lo regala todo.
 
