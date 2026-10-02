@@ -33,7 +33,7 @@ Documentació de referència:
 ## Bloc C — GEO / FAQ per curs
 - [x] C1. Recerca de com es busca cada curs i taller per idioma (`docs/recomanador/recerca-cerca-cursos.md`).
 - [x] C2. FAQ específica per curs: tots els cursos actius/pròxims tenen 3 preguntes en CA/ES/EN i schema FAQPage; també l'efemèride «Tarda Holga». Resta només mantenir-les quan s'afegeixin cursos nous.
-- [~] C3. FAQPage: mecanisme global fet i verificat a les fitxes amb FAQ.
+- [x] C3. FAQPage: mecanisme global verificat; a totes les pàgines amb FAQ el JSON-LD es genera amb 3 Questions.
 - [x] C4. Landing `aprendre-a-revelar` (CA/ES/EN) + enllaç intern des de /tallers/.
 - [x] C5. Auditoria NAP (`docs/recomanador/auditoria-nap.md`): intern consistent; pendent extern el Google Business Profile.
 
