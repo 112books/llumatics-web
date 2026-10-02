@@ -719,6 +719,19 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] Connexió xarxes socials (Instagram embed o feed)
 - [ ] **Indexació i sitemaps (Google/Bing)** — verificar que `sitemap.xml` estigui enviat i actualitzat a Google Search Console i Bing Webmaster Tools, i revisar errors de cobertura. El `robots.txt` ja hi apunta; falta confirmar l'alta i el reenviament als panells.
 
+### Auditoria Sonnet (2026-10-02) — pendent de revisar
+> Docs complets: `docs/auditoria de SOnnet5.5/` (extrets de `files.zip`). Resum ordenat: `llumatics-ruta-d-aplicacio.md`. **No fer res marcat «decisió de Joan» o `CONFIRMAR` sense confirmar-ho.**
+
+- [ ] **Tarda Holga (8 oct)** — fitxa i agenda existeixen; confirmar unitats de càmeres i sistema d'inscripció.
+- [ ] **robots.txt IA** — decisió de Joan sobre entrenament; proposta: permetre cerca/citació i bloquejar entrenament (revisar l'actual).
+- [ ] **Sitemaps GSC/Bing** — alta, enviament i cobertura (vegeu `docs/manuals/indexacio-sitemaps-google-bing.md`).
+- [ ] **Dades estructurades** — revisar `CourseInstance` a tallers i afegir `EducationEvent` a les sessions d'agenda si falta.
+- [ ] **Accessibilitat** — afegir comprovació automàtica (axe o Pa11y) al desplegament.
+- [ ] **Recomanador** — revisar `format`/`nivell_minim`/`estat` al frontmatter i la validació al build.
+- [ ] **Formacions flash i efemèrides** — `data/efemerides.yaml`, pop-up accessible i llista Brevo (decisions de Joan).
+- [ ] **SEO continu** — una guia al mes al blog; prova mensual als assistents d'IA; revisió semestral de `robots.txt`.
+- [x] **Veu i terminologia** — aplicada (lema, títols/descripcions, química/analògica i article de blog).
+
 ### Fet aquesta sessió (2026-09-22)
 **Canvi de password panell admin**
 
