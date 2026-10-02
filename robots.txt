@@ -1,21 +1,9 @@
 # robots.txt — Llumàtics
 #
-# Política de motors d'IA. Cal distingir dues coses que sovint es confonen:
-#
-#   1. BOTS D'ENTRENAMENT — descarreguen el contingut per entrenar pesos.
-#      Bloquejar-los NO costa visibilitat. És una decisió editorial sobre drets.
-#
-#   2. BOTS DE RETRIEVAL/CERCA — llegeixen el lloc per citar-lo en una resposta
-#      (ChatGPT Search, Claude Search, Perplexity, AI Overviews).
-#      Bloquejar-los el fa LITERALMENT INVISIBLE a les respostes.
-#      OpenAI ho diu explícitament de OAI-SearchBot: "sites opted out ... will
-#      not be shown in ChatGPT search answers".
-#
-# La nostra política: sense entrenament, amb citació.
-#
-# Nota: bloquejar no és esborrar. El contingut ja rastrejat queda recollit, i
-# Perplexity avisa que malgrat el bloqueig pot indexar el domini, el titular i un
-# resum factual breu.
+# Política (2026-10-03): oberts a tots els rastrejadors, inclòs l'entrenament.
+# Decisió de Joan: els robots no fan mal; la visibilitat (cerca clàssica, cerca
+# amb IA, citació i entrenament) pesa més que el control sobre l'ús del text.
+# Única excepció: les rutes privades, que queden disallowed per a tothom.
 
 User-agent: *
 Disallow: /tallers/*/privat/
@@ -29,60 +17,9 @@ Disallow: /es/confirmat/
 Disallow: /en/confirmat/
 Disallow: /admin/
 
-# ── Entrenament: bloquejat ───────────────────────────────────────────────────
-
-# OpenAI — entrenament de models fundacionals
-User-agent: GPTBot
-Disallow: /
-
-# Anthropic — entrenament
-User-agent: ClaudeBot
-Disallow: /
-
-# anthropic-ai — identificador històric d'Anthropic
-User-agent: anthropic-ai
-Disallow: /
-
-# Common Crawl — alimenta Mistral, Llama i la resta de models de pesos oberts
-User-agent: CCBot
-Disallow: /
-
-# ByteDance
-User-agent: Bytespider
-Disallow: /
-
-# Amazon
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: Amazonbot-Retail
-Disallow: /
-
-User-agent: Amazonbot-Image
-Disallow: /
-
-# Meta
-User-agent: meta-externalagent
-Disallow: /
-
-User-agent: meta-externalFetcher
-Disallow: /
-
-# Apple — entrenament (Applebot-Extended)
-User-agent: Applebot-Extended
-Disallow: /
-
-# Google-Extended NO és un rastreador: és un token de política que no fa cap
-# petició i no apareix als logs. Bloquejar-lo no afecta Google Search ni
-# AI Overviews. Es manté el bloqueig com a senyal de política.
-User-agent: Google-Extended
-Disallow: /
-
-# ── Retrieval i cerca: OBERTS a propòsit ─────────────────────────────────────
-# Aquests tres decideixen si Llumàtics es cita. No blocquejar-los.
-# (Ja queden coberts per "User-agent: *", que no els exclou. Es deixen
-#  explícits perquè la decisió sigui visible i perquè ningú no la canvii
-#  per error en una revisió futura.)
+# ── Cerca i citació amb IA: obertes a propòsit ───────────────────────────────
+# Aquests decideixen si Llumàtics es cita dins les respostes. Ja queden coberts
+# per "User-agent: *", però es deixen explícits perquè la decisió sigui visible.
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -93,7 +30,6 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Fetch iniciat per usuari (alguien demana la URL al model): permès.
 User-agent: ChatGPT-User
 Allow: /
 
@@ -102,5 +38,9 @@ Allow: /
 
 User-agent: Perplexity-User
 Allow: /
+
+# ── Entrenament: permès ──────────────────────────────────────────────────────
+# Decisió de Joan (2026-10-03): no bloquem GPTBot, ClaudeBot, Google-Extended,
+# CCBot, Bytespider, Amazonbot, meta-externalagent ni Applebot-Extended.
 
 Sitemap: https://112books.github.io/llumatics-web/sitemap.xml
