@@ -2793,17 +2793,17 @@ a.recorregut-stop__name:hover {
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--color-accent-dark);
-  background: var(--color-text);
+  color: var(--color-surface);
+  background: var(--color-accent);
   text-decoration: none;
   padding: var(--space-2) var(--space-4);
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--color-accent);
   border-radius: 2px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .contact-anchor__link:hover {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: var(--color-surface);
   border-color: var(--color-accent-dark);
 }
