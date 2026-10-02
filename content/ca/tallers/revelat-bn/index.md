@@ -91,3 +91,33 @@ Cada participant treballa amb dos carretes. El primer es revela en estàndard �
 - Carretes addicionals (disponibles a Llumàtics, 12€/unitat)
 - Còpies en paper dels negatius (taller de Còpies en paper)
 - Digitalització (opcional, +15€)
+<h2>Preguntes freqüents</h2>
+
+<details class="faq-item">
+<summary class="faq-question">On puc aprendre a revelar pel·lícules a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>A Llumàtics, a la <strong>Nau Bostik</strong> (Carrer Ferran Turné 1-11, La Sagrera, Barcelona). Hi fem el taller de <strong>Revelat de pel·lícula B/N</strong>: quatre hores, dos carretes inclosos i grups de màxim quatre persones. També oferim iniciació al revelat en col·laboració amb Cameras &amp; Films.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Quant costa un taller de revelat de pel·lícula a Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller de Revelat de pel·lícula B/N de Llumàtics costa 220 € per a un alumne i baixa a 79 € per persona quan sou quatre, amb els dos carretes i tots els químics inclosos. L'activitat de formació està exempta d'IVA.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Cal experiència prèvia per aprendre a revelar pel·lícules? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No cal cap experiència prèvia per començar. El taller de Revelat B/N és accessible des de zero; si véns sense cap base, et recomanem començar per <a href="/tallers/fonaments-iniciacio-puntual/">Fonaments</a> o directament pel revelat, on aprens el procés complet.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Què inclou el taller de revelat de pel·lícula? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Inclou dos carretes de 35 mm en blanc i negre, tots els productes químics (revelador, stop i fixador), l'ús del laboratori i l'espiral i el tanc si no en tens. No inclou còpies en paper ni digitalització, que es poden fer en tallers posteriors.</p>
+</div>
+</details>
+

@@ -205,13 +205,12 @@
 <script type="application/ld+json">{{ $posting | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 
-{{/* JSON-LD — FAQPage (pàgina contacte)
-     Es genera llegint el FAQ real del fitxer de contingut de l'idioma de la pàgina,
-     de manera que el schema no es pot desincronitzar del text visible ni quedar
-     escrit en l'idioma equivocat. Abans eren 10 preguntes fixes en català que
-     s'emetien igual a /contacte/, /es/contacte/ i /en/contacte/, mentre el
-     contingut visible en té 12 per idioma. */}}
-{{ if strings.HasSuffix .RelPermalink "/contacte/" }}
+{{/* JSON-LD — FAQPage
+     S'emet a qualsevol pàgina que porti blocs de FAQ al contingut (contacte,
+     revelat de pel·lícula, etc.). Es llegeix el text real del fitxer de
+     contingut de l'idioma de la pàgina, així el schema no es pot
+     desincronitzar del text visible ni quedar en l'idioma equivocat. */}}
+{{ if findRE "faq-question" .Content 1 }}
 {{- $faqRe := `(?s)<summary class="faq-question">(.*?)\s*<span class="faq-icon".*?</summary>\s*<div class="faq-answer">(.*?)</div>` -}}
 {{- $faqEntities := slice -}}
 {{- range findRE $faqRe .Content -1 -}}

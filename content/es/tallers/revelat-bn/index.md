@@ -90,3 +90,33 @@ Cada participante trabaja con dos carretes. El primero se revela en estándar �
 - Carretes adicionales (disponibles en Llumàtics, 12€/unidad)
 - Copias en papel de los negativos (taller de Copias en papel)
 - Digitalización (opcional, +15€)
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq-item">
+<summary class="faq-question">¿Dónde puedo aprender a revelar películas en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>En Llumàtics, en la <strong>Nau Bostik</strong> (Carrer Ferran Turné 1-11, La Sagrera, Barcelona). Allí hacemos el taller de <strong>Revelado de película B/N</strong>: cuatro horas, dos carretes incluidos y grupos de máximo cuatro personas. También ofrecemos iniciación al revelado en colaboración con Cameras &amp; Films.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Cuánto cuesta un taller de revelado de película en Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>El taller de Revelado de película B/N de Llumàtics cuesta 220 € para un alumno y baja a 79 € por persona cuando sois cuatro, con los dos carretes y todos los químicos incluidos. La actividad de formación está exenta de IVA.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Hace falta experiencia previa para aprender a revelar películas? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No hace falta ninguna experiencia previa para empezar. El taller de Revelado B/N es accesible desde cero; si vienes sin ninguna base, te recomendamos empezar por <a href="/es/tallers/fonaments-iniciacio-puntual/">Fundamentos</a> o directamente por el revelado, donde aprendes el proceso completo.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">¿Qué incluye el taller de revelado de película? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Incluye dos carretes de 35 mm en blanco y negro, todos los productos químicos (revelador, stop y fijador), el uso del laboratorio y la espiral y el tanque si no tienes. No incluye copias en papel ni digitalización, que se pueden hacer en talleres posteriores.</p>
+</div>
+</details>
+

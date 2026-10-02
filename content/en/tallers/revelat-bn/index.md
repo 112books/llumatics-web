@@ -90,3 +90,33 @@ Each participant works with two rolls. The first is developed at standard — as
 - Additional rolls (available at Llumàtics, €12/roll)
 - Paper prints of the negatives (Darkroom Printing workshop)
 - Digitisation (optional, +€15)
+<h2>Frequently asked questions</h2>
+
+<details class="faq-item">
+<summary class="faq-question">Where can I learn to develop film in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>At Llumàtics, at <strong>Nau Bostik</strong> (Carrer Ferran Turné 1-11, La Sagrera, Barcelona). There we run the <strong>B&amp;W film development</strong> workshop: four hours, two rolls included and groups of up to four people. We also offer an introduction to film development in collaboration with Cameras &amp; Films.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">How much does a film development workshop cost in Barcelona? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>Llumàtics' B&amp;W film development workshop costs €220 for one student and drops to €79 per person for a group of four, with both rolls and all chemicals included. Training is VAT-exempt.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">Do I need previous experience to learn film development? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>No previous experience is needed to start. The B&amp;W development workshop is accessible from scratch; if you're starting with no background, we recommend beginning with <a href="/en/tallers/fonaments-iniciacio-puntual/">Foundations</a> or going straight into development, where you learn the whole process.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary class="faq-question">What does the film development workshop include? <span class="faq-icon" aria-hidden="true">+</span></summary>
+<div class="faq-answer">
+<p>It includes two 35 mm black-and-white rolls, all chemicals (developer, stop and fixer), use of the darkroom, and a reel and tank if you don't have one. It doesn't include paper prints or scanning, which can be done in follow-up workshops.</p>
+</div>
+</details>
+
