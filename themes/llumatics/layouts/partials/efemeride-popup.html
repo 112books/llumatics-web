@@ -30,7 +30,7 @@
   <button type="button" class="efemeride-popup__close" data-efemeride-close
           aria-label="{{ i18n "efemeride_close" }}">&#215;</button>
   <a class="efemeride-popup__card" href="{{ .url | relLangURL }}">
-    <div class="efemeride-popup__image" role="img" aria-label="{{ $titol }}" style="background-image:url('{{ .imatge | relURL }}');background-size:cover;background-position:center;background-repeat:no-repeat;">
+    <div class="efemeride-popup__image" style="background-image:url('{{ .imatge | relURL }}');background-size:cover;background-position:center;background-repeat:no-repeat;">
       <span class="efemeride-popup__flash" aria-hidden="true">Flash!</span>
     </div>
     <div class="efemeride-popup__body">
