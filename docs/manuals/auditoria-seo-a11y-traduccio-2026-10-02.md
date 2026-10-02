@@ -50,33 +50,20 @@ corregit i què queda pendent.
 - **Cerca:** tret el role=listbox incorrecte.
 - **Fitxa pedagògica:** dt/dd dins de dl; scope=col a la taula de preus.
 
+- **Focus visible:** .search-input i .search-result amb :focus-visible d'alt contrast.
+- **og:image:alt** per idioma (usa el títol de la pàgina; abans era català fix).
+- **Títols de secció** descriptius («Blog de fotografia analògica», «Agenda de tallers...»).
+- **Coherència ES:** «cuarto oscuro»; comentaris YAML de del-carrer-al-llibre traduïts.
+- **BreadcrumbList** JSON-LD a totes les pàgines (AEO).
+
 ### Eines noves al panell
 - /admin/subscriptors.php — comptador de subscriptors de Brevo (butlletí, waitlist, total).
 - /admin/impacte.php — impacte del cupó regal, del recomanador i dels cursos nous/flash.
 
-## Pendent
+## Pendent (baixa prioritat)
 
-### SEO
-- Event.location sense PostalAddress (la comparació in de Go template no encaixa).
-- og:image:width/height fixos (1322×744) per a totes les imatges.
-- llms.txt: dos H1, sense resum, URLs nuves; diu «sota demanda» i «català i castellà».
-- Falta WebSite global i Product/Offer a /regala/.
-- og:image trencada a 6 /privat/doc/ (noindex).
-- Sense BreadcrumbList.
-- Títols curts de secció («Blog», «Agenda», «Els espais»).
-
-### Accessibilitat
-- Galeria/portada del blog no operables amb teclat.
-- Errors de formulari sense role=alert ni associació (gift, contacte).
-- aria-label encara en català en alguns llocs (breadcrumb, filtres, contacte).
-- alt buit a imatges de contingut (galeries) i alt copiat al lightbox.
-- Indicador de focus eliminat (.search-input, .search-result a).
-- role=listbox als resultats de cerca sense role=option.
-- Salt h1 → h3 a l'agenda; taules sense scope; dt/dd fora de dl.
-
-### Traducció
-- og:image:alt català a les portades ES/EN.
-- Correu de confirmació del val-regal sempre en català.
-- Comentari YAML català a del-carrer-al-llibre (ES/EN).
-- ES inconsistent: «cuarto oscuro» vs «laboratorio oscuro».
-- Defaults amb fallback català latents a ~40 plantilles.
+- og:image trencada a 6 fitxes /privat/doc/ (noindex): l'image del frontmatter apunta a un fitxer inexistent.
+- Correu de confirmació del val-regal i notificació interna escrits en català fix al JS.
+- alt buit a les imatges de la galeria del shortcode galeria.html (no tenen descripcio a l'origen).
+- Defaults amb fallback catala latents a ~40 plantilles (avui tapats per la paritat i18n).
+- Revisio visual manual amb navegador (contrast, focus, teclat) en dispositiu real.
