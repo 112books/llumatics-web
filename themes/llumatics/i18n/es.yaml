@@ -453,3 +453,6 @@ quiz_interest_cta: "Me interesa"
 quiz_interest_ok: "¡Apuntado! Te avisaremos cuando abramos plazas."
 quiz_soon: "Próximamente"
 quiz_no_dates: "Todavía no tiene fechas"
+
+quiz_cta_button: "¿Qué curso me conviene?"
+quiz_cta_text: "Responde tres preguntas y te proponemos el taller o el recorrido que te conviene."

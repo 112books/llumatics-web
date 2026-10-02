@@ -61,6 +61,11 @@
     <a href="{{ printf "%s%s/tallers/" $siteRoot $lp }}" class="btn btn--secondary">
       {{ i18n "see_all_courses" | default "Veure tots els tallers" }}
     </a>
+    {{ $quizPage := "" }}
+    {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizPage = . }}{{ end }}{{ end }}
+    {{ with $quizPage }}
+    <a href="{{ .RelPermalink }}" class="btn btn--primary" style="margin-left:0.5rem;">{{ i18n "quiz_cta_button" | default "Quin curs em convé?" }} →</a>
+    {{ end }}
   </div>
 </section>
 {{ end }}

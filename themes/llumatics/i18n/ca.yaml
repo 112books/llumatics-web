@@ -458,3 +458,6 @@ quiz_no_dates: "Encara no té dates"
 
 quiz_result_price_from: "Des de"
 quiz_result_badge: "Recomanació principal"
+
+quiz_cta_button: "Quin curs em convé?"
+quiz_cta_text: "Respon tres preguntes i et proposem el taller o el recorregut que et convé."

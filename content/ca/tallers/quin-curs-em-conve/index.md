@@ -5,5 +5,5 @@ eyebrow: "Recomanador"
 subtitle: "Un minut, tres preguntes. Sense cookies ni seguiment."
 layout: "quiz"
 translationKey: "quin-curs-em-conve"
-draft: true
+draft: false
 ---

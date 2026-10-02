@@ -453,3 +453,6 @@ quiz_interest_cta: "I'm interested"
 quiz_interest_ok: "You're on the list! We'll let you know when places open."
 quiz_soon: "Coming soon"
 quiz_no_dates: "No dates yet"
+
+quiz_cta_button: "Which course suits me?"
+quiz_cta_text: "Answer three questions and we'll suggest the workshop or learning path that suits you."

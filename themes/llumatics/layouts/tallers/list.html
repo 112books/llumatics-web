@@ -10,6 +10,11 @@
         <h1 class="section__title">{{ .Title }}</h1>
         {{ with .Params.subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
         {{ with .Content }}<div class="prose" style="margin-top:1.5rem;">{{ . }}</div>{{ end }}
+        {{ $quizPage := "" }}
+        {{ range where site.RegularPages "Type" "tallers" }}{{ if eq .Params.layout "quiz" }}{{ $quizPage = . }}{{ end }}{{ end }}
+        {{ with $quizPage }}
+        <p style="margin-top:1.5rem;"><a href="{{ .RelPermalink }}" class="btn btn--primary">{{ i18n "quiz_cta_button" | default "Quin curs em convé?" }} →</a></p>
+        {{ end }}
       </div>
     </div>
     {{ partial "recorregut.html" . }}
@@ -39,6 +44,7 @@
   {{/* Tallers agrupats per bloc */}}
   {{ $tallersInterns := where .Pages ".Params.extern" false }}
   {{ $tallersInterns = where $tallersInterns ".Params.extern" "ne" true }}
+  {{ $tallersInterns = where $tallersInterns ".Params.layout" "ne" "quiz" }}
 
   {{ if $blocs }}
     {{ range $blocs }}
