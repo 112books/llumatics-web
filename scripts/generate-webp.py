@@ -5,8 +5,10 @@ Per a cada camp `image:` del frontmatter de content/{ca,es,en}/tallers i
 content/{ca,es,en}/blog, crea un fitxer .webp germà (mateix nom) dins static/.
 Després, les plantilles poden servir-lo amb <picture><source type="image/webp">.
 
-Pendent (2026-10-02): falta implementar el <picture> a tallers/single.html,
-blog/single.html i _default/single.html, i apuntar-hi el preload del head.
+Implementat (2026-10-03): el partial themes/llumatics/layouts/partials/picture.html
+serveix el WebP amb <source type="image/webp"> i fallback a l'original; s'usa a
+tallers/single.html, blog/single.html i _default/single.html. El preload de
+head.html apunta al .webp quan existeix.
 """
 import os, re, subprocess, sys
 

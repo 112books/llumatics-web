@@ -1,0 +1,28 @@
+{{- /* Renderitza un <picture> amb <source> WebP + fallback a l'original.
+       Params (dict):
+         image          (string, obligatori) ruta del frontmatter, ex. "/images/tallers/x.jpg"
+         alt            (string)
+         class          (string, opcional)
+         loading        (string, per defecte "lazy")
+         fetchpriority  (string, opcional: "high")
+         style          (string, opcional)
+       El <source> WebP només s'emet si el fitxer germà .webp existeix a static/.
+       Genera'ls amb: python3 scripts/generate-webp.py */ -}}
+{{- $image := .image -}}
+{{- $alt := .alt | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $isRemote := hasPrefix $image "http" -}}
+{{- $src := $image -}}
+{{- if not $isRemote -}}{{- $src = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $image) -}}{{- end -}}
+{{- $webpSrc := "" -}}
+{{- if not $isRemote -}}
+  {{- $webpPath := printf "%s.webp" (strings.TrimSuffix (path.Ext $image) $image) -}}
+  {{- if fileExists (printf "static/%s" (strings.TrimPrefix "/" $webpPath)) -}}
+    {{- $webpSrc = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $webpPath) -}}
+  {{- end -}}
+{{- end -}}
+{{- $dim := index site.Data.image_dimensions (strings.TrimPrefix "/" $image) -}}
+<picture>
+  {{- with $webpSrc }}<source srcset="{{ . }}" type="image/webp">{{ end }}
+  <img src="{{ $src }}"{{ with $dim }} width="{{ .w }}" height="{{ .h }}"{{ end }}{{ with .class }} class="{{ . }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }}{{ with .style }} style="{{ . }}"{{ end }}>
+</picture>

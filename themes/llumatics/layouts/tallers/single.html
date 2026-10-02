@@ -27,7 +27,7 @@
           data-src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}"
           data-gallery="{{ .File.ContentBaseName }}"
           aria-label="{{ i18n "lightbox_enlarge" }}">
-    <img src="{{ printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .Params.image) }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" .Params.image) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ .Title }}" loading="eager" fetchpriority="high">
+    {{ partial "picture.html" (dict "image" .Params.image "alt" .Title "loading" "eager" "fetchpriority" "high") }}
   </button>
   {{ end }}
 

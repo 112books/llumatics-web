@@ -395,6 +395,15 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-03 (nit)
+**WebP de les imatges principals**
+
+- **`picture.html`** (NOU) — partial que renderitza `<picture>` amb `<source type="image/webp">` + fallback a l'original. El `<source>` només s'emet si el `.webp` germà existeix a `static/` (`fileExists`), així que si falta una imatge el lloc degrada sol.
+- **Plantilles** — `tallers/single.html`, `blog/single.html` i `_default/single.html` fan servir el partial per a la imatge principal (es conserven `width`/`height`, `alt`, `loading`, `fetchpriority` i l'estil inline).
+- **Preload LCP** — `head.html` apunta al `.webp` (amb `type="image/webp"`) quan existeix; si no, manté l'original sense `type`.
+- **Assets** — `scripts/generate-webp.py` genera 58 `.webp` (q82) per a les imatges principals; ~6,1 MB afegits.
+- **Verificat** — build net; 168 pàgines amb `<picture>` i 202 amb `<source>`/preload WebP; CSS intacte (selectors descendents). Les 3 referències sense JPEG són contingut `draft: true`.
+
 ### 2026-10-03
 **Correu del val-regal multilingüe + enllaç de ressenya Google**
 
@@ -683,7 +692,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] `archetypes/tallers.md` — actualitzat amb el frontmatter actual (resolt 2026-10-02)
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
 - [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
-- [ ] **WebP de les imatges principals (tallers/blog)** — aturat a petició de l'usuari (2026-10-02). Script `scripts/generate-webp.py` a punt; falta implementar `<picture>` a `tallers/single.html`, `blog/single.html` i `_default/single.html`, i apuntar-hi el preload del `head.html`.
+- [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 
 ### Qualitat i acabats
 - [ ] Responsive: revisió pendent (mòbil)

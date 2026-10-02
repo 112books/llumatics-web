@@ -30,7 +30,15 @@
 {{- else if or (eq .Type "tallers") (eq .Type "blog") -}}
   {{- $preloadImg = .Params.image -}}
 {{- end -}}
-{{- with $preloadImg }}<link rel="preload" as="image" href="{{ . | absURL }}" fetchpriority="high">{{ end }}
+{{- with $preloadImg -}}
+  {{- $isWebp := strings.HasSuffix . ".webp" -}}
+  {{- $webp := printf "%s.webp" (strings.TrimSuffix (path.Ext .) .) -}}
+  {{- if and (not (hasPrefix . "http")) (fileExists (printf "static/%s" (strings.TrimPrefix "/" $webp))) -}}
+    {{- $preloadImg = $webp -}}
+    {{- $isWebp = true -}}
+  {{- end -}}
+  <link rel="preload" as="image" href="{{ $preloadImg | absURL }}"{{ if $isWebp }} type="image/webp"{{ end }} fetchpriority="high">
+{{- end }}
 {{ if or .Params.noindex (eq .Params.robots "noindex, nofollow") -}}
 <meta name="robots" content="noindex, nofollow">
 {{- else if and (eq .Section "agenda") (eq .Params.status "past") -}}
