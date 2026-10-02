@@ -1,5 +1,6 @@
 ---
 title: "Cianotipia"
+seo_title: "Cianotipia · Taller de fotografía analógica · Llumàtics"
 subtitle: "El azul de la luz. Impresión fotográfica sin cámara ni ampliadora."
 lead: "Una de las técnicas fotográficas más antiguas y más accesibles: emulsionamos el papel, exponemos con luz solar y revelamos con agua. Química simple, resultados que sorprenden."
 description: "Taller de cianotipia en Barcelona. Proceso alternativo de impresión fotográfica sin cuarto oscuro: emulsión, exposición solar y revelado con agua."

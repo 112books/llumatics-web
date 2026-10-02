@@ -1,5 +1,6 @@
 ---
 title: "Large-format portrait"
+seo_title: "Large-format portrait · Film photography workshop · Llumàtics"
 subtitle: "A 19th-century camera, photosensitive paper and a person in front"
 lead: "Photographing a person with a late-19th-century camera, working directly onto photosensitive paper. A unique experience that shows where it all comes from."
 description: "Large-format portrait workshop using a 19th-century camera and photosensitive paper. Held at Cameras & Films, Barcelona."

@@ -1,5 +1,6 @@
 ---
 title: "Fotogrames amb cianotípia"
+seo_title: "Fotogrames amb cianotípia · Taller de fotografia analògica · Llumàtics"
 subtitle: "Imatges sense càmera. Primer contacte amb la cianotípia."
 lead: "Una primera experiència en cianotípia: col·loquem objectes sobre paper sensibilitzat, exposem al sol i revelem amb aigua. Sense càmera, sense cambra fosca, sense experiència prèvia."
 description: "Taller introductori gratuït de fotogrames amb cianotípia a Barcelona. Sense càmera ni experiència prèvia. Nau Bostik."
@@ -40,7 +41,7 @@ objective: "Viure per primera vegada el procés d'una impressió fotogràfica qu
 methodology: "Totalment pràctic des del primer moment: cada participant prepara i exposa la seva pròpia peça."
 result: "1-2 fotogrames en cianotípia fets per l'alumne, amb la comprensió del procés bàsic."
 prerequisits: "Cap. Ni coneixements ni materials. Només curiositat i ganes de crear."
-target: "Tothom: fotògrafs, no fotògrafs, curiosos, artistes, persones que mai han fet res de fotografia analògica."
+target: "Tothom: fotògrafs, no fotògrafs, curiosos, artistes, persones que mai han fet res de fotografia química."
 
 # Tallers relacionats
 continua_aprenent: 

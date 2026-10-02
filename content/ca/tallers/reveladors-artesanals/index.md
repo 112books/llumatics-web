@@ -1,5 +1,6 @@
 ---
 title: "Reveladors artesanals"
+seo_title: "Reveladors artesanals · Taller de fotografia analògica · Llumàtics"
 subtitle: "Formular, barrejar i entendre el que revela les teves imatges"
 lead: "Un taller per a qui vol entendre la química del revelat fins al punt de poder preparar el seu propi revelador. La fòrmula Beers, el Caffenol i altres receptes artesanals."
 description: "Taller de reveladors fotogràfics artesanals: fòrmula Beers, Caffenol i receptes alternatives. Fotografia analògica avançada a Barcelona."

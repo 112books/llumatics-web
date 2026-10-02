@@ -1,5 +1,6 @@
 ---
 title: "Analogue portrait"
+seo_title: "Analogue portrait · Film photography workshop · Llumàtics"
 subtitle: "The person in front of the camera. Light, connection and technique."
 lead: "We work on studio portraiture with an analogue camera and studio flash: the light, the relationship with the subject and the technical decisions that make a portrait photograph."
 description: "Analogue portrait workshop in the Llumàtics studio. Studio flash, relationship with the subject and photographic technique. Barcelona."

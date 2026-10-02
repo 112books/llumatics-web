@@ -1,5 +1,6 @@
 ---
 title: "Tutoria fotogràfica"
+seo_title: "Tutoria fotogràfica · Taller de fotografia analògica · Llumàtics"
 subtitle: "Acompanyament personalitzat al teu ritme i interessos"
 lead: "Una sessió individual pensada per a tu: portes les teves preguntes, el teu projecte o les teves dificultats, i treballem exactament el que necessites."
 description: "Tutoria individual de fotografia analògica a Barcelona. Acompanyament personalitzat de laboratori, tècnica o projecte fotogràfic. 60€/hora, mínim 2 hores."

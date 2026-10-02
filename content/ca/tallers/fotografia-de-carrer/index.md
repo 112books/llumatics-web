@@ -1,5 +1,6 @@
 ---
 title: "Fotografia de carrer"
+seo_title: "Fotografia de carrer · Taller de fotografia analògica · Llumàtics"
 subtitle: "La mirada, el temps i la gent. Fotografiar allò que passa."
 lead: "Un taller per fotografiar al carrer amb consciència: com mirar, com apropar-se, com decidir quan prémer. Analògic, lent i honest."
 description: "Taller de fotografia de carrer analògica a Barcelona. Tècnica, mirada i ètica de la imatge documental. Grups de màxim 4 persones."

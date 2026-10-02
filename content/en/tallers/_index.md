@@ -1,5 +1,6 @@
 ---
 title: "Workshops, courses and training pathways"
+seo_title: "Workshops, courses and learning paths in film photography · Llumàtics"
 description: "Analogue photography, chemical process, large format and alternative processes workshops in Barcelona. Groups of maximum 4 people."
 eyebrow: "Analogue photography school"
 subtitle: "Six learning lines. Like a metro map: take one workshop or follow a full line from start to finish."

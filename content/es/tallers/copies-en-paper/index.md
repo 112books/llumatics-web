@@ -1,5 +1,6 @@
 ---
 title: "Copias en papel"
+seo_title: "Copias en papel · Taller de fotografía analógica · Llumàtics"
 subtitle: "De negativo a copia: trabajar con la ampliadora"
 lead: "¿Tienes negativos revelados y quieres hacer copias? Este taller es el segundo paso natural del proceso analógico: la ampliadora, el papel y la cubeta."
 description: "Taller de copias fotográficas en papel. Ampliadora, tipos de papel, revelado y controles locales. Laboratorio analógico en Barcelona."

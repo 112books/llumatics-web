@@ -1,5 +1,6 @@
 ---
 title: "De la Calle al Libro"
+seo_title: "De la Calle al Libro · Taller de fotografía analógica · Llumàtics"
 subtitle: "Un año, doce fotógrafos, una voz propia."
 lead: "Un curso anual de fotografía de calle analógica en Barcelona. Cada mes, un gran fotógrafo como guía. Al final, un fotolibro tuyo."
 description: "Curso anual de fotografía de calle analógica en Barcelona. 12 sesiones mensuales, cada una dedicada a un referente del género. Máximo 6 personas. Salida opcional al fotolibro impreso."

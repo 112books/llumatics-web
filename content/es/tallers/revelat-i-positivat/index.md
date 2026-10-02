@@ -1,5 +1,6 @@
 ---
 title: "Revelado + positivado en un día"
+seo_title: "Revelado + positivado en un día · Taller de fotografía analógica · Llumàtics"
 subtitle: "Del carrete al papel en una sola jornada"
 lead: "Un día entero en el laboratorio: por la mañana revelas tu propio carrete, por la tarde haces las copias en papel. Del negativo expuesto a la copia acabada, sin salir de Llumàtics."
 description: "Taller combinado de revelado de película y positivado en papel en un solo día. Mañana + tarde en el laboratorio. Barcelona."

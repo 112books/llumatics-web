@@ -1,5 +1,6 @@
 ---
 title: "Pinhole photography"
+seo_title: "Pinhole photography · Film photography workshop · Llumàtics"
 subtitle: "The camera without a lens. Where it all begins."
 lead: "We build a pinhole camera, expose onto photographic paper and develop on the spot. The photographic process in its purest form."
 description: "Pinhole photography workshop in Barcelona: camera building, exposure and development. From a hole of light to a paper print."

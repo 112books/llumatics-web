@@ -1,5 +1,6 @@
 ---
 title: "Development + printing in one day"
+seo_title: "Development + printing in one day · Film photography workshop · Llumàtics"
 subtitle: "From roll to paper print in a single day"
 lead: "A full day in the darkroom: in the morning you develop your own roll, in the afternoon you make paper prints. From exposed negative to finished print, all without leaving Llumàtics."
 description: "Combined film development and darkroom printing workshop in one day. Morning + afternoon in the lab. Barcelona."

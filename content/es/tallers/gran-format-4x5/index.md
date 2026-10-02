@@ -1,5 +1,6 @@
 ---
 title: "Gran formato 4×5\""
+seo_title: "Gran formato 4×5\" · Taller de fotografía analógica · Llumàtics"
 subtitle: "Fotografía lenta y consciente. Una exposición, una decisión."
 lead: "La cámara de placas obliga a hacer fotografía de otra manera: preparar, medir, decidir y disparar una sola vez. Un taller para entender por qué esto lo cambia todo."
 description: "Taller de iniciación al gran formato 4×5 pulgadas. Cámara de placas, film sheet, medida de la luz y revelado. Barcelona."

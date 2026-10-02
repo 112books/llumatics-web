@@ -1,5 +1,6 @@
 ---
 title: "Portrait with Holga"
+seo_title: "Portrait with Holga · Film photography workshop · Llumàtics"
 subtitle: "Medium format, plastic and heavy grain. Portraits without technical excuses."
 lead: "The Holga is not a precision camera. It's a camera that forces you to focus on what matters: the person in front of you. In this workshop we make medium format 120 portraits and develop the roll in the darkroom."
 description: "Analogue portrait workshop with Holga 120 camera in Barcelona. Portrait theory, studio practice and development included. Llumàtics, Nau Bostik."

@@ -1,5 +1,6 @@
 ---
 title: "B&W film development"
+seo_title: "B&W film development · Film photography workshop · Llumàtics"
 subtitle: "Push, pull and density control"
 lead: "There's no single correct development. There's the one each photograph needs. In this workshop you learn to control negative density: standard development, push and pull. Two rolls, four hours."
 description: "B&W film development workshop in Barcelona. Push and pull, temperature and density control, reading the negative. Includes 2 rolls. Llumàtics, Nau Bostik."

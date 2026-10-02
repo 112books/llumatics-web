@@ -1,5 +1,5 @@
 ---
-title: "Llumàtics — Escuela de fotografía"
-description: "Escuela de fotografía en Barcelona. Talleres de revelado, laboratorio analógico y formación técnica."
+title: "Llumàtics · Escuela de fotografía analógica en Barcelona"
+description: "Escuela de fotografía química en la Nau Bostik: talleres, cursos y recorridos de revelado, positivado, medio y gran formato y procesos alternativos."
 heroImage: "/images/taller-revelat-CandF.webp"
 ---

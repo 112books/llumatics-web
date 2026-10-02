@@ -1,5 +1,6 @@
 ---
 title: "Portrait in medium format 6×6"
+seo_title: "Portrait in medium format 6×6 · Film photography workshop · Llumàtics"
 subtitle: "When you need much more than the universal step"
 lead: "Photographing people in medium format is a decision. The waist-level finder, the square format and the limitation of 12 frames change the relationship between photographer and subject. This is where we practise exactly that."
 description: "Analogue portrait workshop in medium format 6×6 in Barcelona. Waist-level camera, square composition, connection with the subject and development included."

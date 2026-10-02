@@ -1,5 +1,6 @@
 ---
 title: "Photobook: from concept to object"
+seo_title: "Photobook: from concept to object · Film photography workshop · Llumàtics"
 subtitle: "From body of work to a real book."
 lead: "Three sessions to turn your photographs into a photobook: concept, digital design and production. Output as PDF, ePub or print via 112books."
 description: "Photobook creation workshop in Barcelona. Conceptualisation, visual narrative, design with Affinity Publisher and production. Maximum 4 people. On demand."

@@ -1,5 +1,6 @@
 ---
 title: "Darkroom prints with your own developer — Beers Developer"
+seo_title: "Darkroom prints with your own developer — Beers Developer · Film photography workshop · Llumàtics"
 subtitle: "Mix the formula, control the contrast, make the print."
 lead: "We mix Beers Developer from scratch, take it straight to the enlarger and compare prints at different contrast grades. From raw chemistry to finished print, with nothing in between."
 description: "Advanced darkroom printing workshop with the Beers Developer formula: mixing parts A and B, contrast control by dilution and silver gelatin prints. Llumàtics."

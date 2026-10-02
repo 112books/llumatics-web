@@ -1,5 +1,6 @@
 ---
 title: "Guinneol: develop with Guinness"
+seo_title: "Guinneol: develop with Guinness · Film photography workshop · Llumàtics"
 subtitle: "A developer made from a can of Guinness, washing soda and vitamin C."
 lead: "You grab a can of Guinness, add washing soda and vitamin C, and use it to develop a roll of film. It works. The results aren't perfect. But they're yours."
 description: "Experimental analogue development workshop using Guinness beer (Guinneol). Full recipe, step-by-step process and reading the resulting negatives. Llumàtics, Barcelona."

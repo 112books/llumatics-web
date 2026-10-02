@@ -1,5 +1,6 @@
 ---
 title: "Retrato en medio formato 6×6"
+seo_title: "Retrato en medio formato 6×6 · Taller de fotografía analógica · Llumàtics"
 subtitle: "Cuando necesitas mucho más que el paso universal"
 lead: "Fotografiar personas en medio formato es una decisión. El visor de cintura, el formato cuadrado y la limitación de los 12 fotogramas cambian la relación entre fotógrafo y retratado. Aquí practicamos exactamente eso."
 description: "Taller de retrato analógico en medio formato 6×6 en Barcelona. Cámara de cintura, composición cuadrada, relación con el modelo y revelado incluido."

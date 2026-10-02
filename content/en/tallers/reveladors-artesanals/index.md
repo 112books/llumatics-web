@@ -1,5 +1,6 @@
 ---
 title: "DIY developers"
+seo_title: "DIY developers · Film photography workshop · Llumàtics"
 subtitle: "Formulate, mix and understand what develops your images"
 lead: "A workshop for anyone who wants to understand the chemistry of development well enough to make their own developer from scratch. The Beers formula, Caffenol and other artisan recipes."
 description: "Handmade photographic developer workshop: Beers formula, Caffenol and alternative recipes. Advanced analogue photography in Barcelona."

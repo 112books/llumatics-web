@@ -1,5 +1,6 @@
 ---
 title: "Wineol: develop with red wine"
+seo_title: "Wineol: develop with red wine · Film photography workshop · Llumàtics"
 subtitle: "A developer made with red wine, washing soda, vitamin C and salt."
 lead: "Take a bottle of cheap red wine, add washing soda, vitamin C and salt, and use it to develop a roll of film. It works. The results are unpredictable. But that's exactly the point."
 description: "Experimental analogue film development workshop using red wine (Wineol). Complete recipe, step-by-step process and reading the resulting negatives. Highly experimental. Llumàtics, Barcelona."

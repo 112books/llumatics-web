@@ -1,5 +1,6 @@
 ---
 title: "Còpies en paper"
+seo_title: "Còpies en paper · Taller de fotografia analògica · Llumàtics"
 subtitle: "De negatiu a còpia: treballar amb l'ampliadora"
 lead: "Tens negatius revelats i vols fer-ne còpies? Aquest taller és el segon pas natural del procés analògic: l'ampliadora, el paper i la cubeta."
 description: "Taller de còpies fotogràfiques en paper. Ampliadora, tipus de paper, revelat i controls locals. Laboratori analògic a Barcelona."

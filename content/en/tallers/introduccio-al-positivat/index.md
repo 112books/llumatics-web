@@ -1,5 +1,6 @@
 ---
 title: "Introduction to darkroom printing"
+seo_title: "Introduction to darkroom printing · Film photography workshop · Llumàtics"
 subtitle: "Your first time at the enlarger"
 lead: "Got developed negatives and want to see how they become paper prints? This is the first session: a practical, hands-on introduction to the darkroom."
 description: "Basic introduction to darkroom printing. First session at the enlarger, paper development and reading the result. Barcelona."

@@ -1,5 +1,6 @@
 ---
 title: "Cyanotype"
+seo_title: "Cyanotype · Film photography workshop · Llumàtics"
 subtitle: "The blue of light. Photographic printing without camera or enlarger."
 lead: "One of the oldest and most accessible photographic techniques: we coat the paper, expose it to sunlight and develop with water. Simple chemistry, surprisingly beautiful results."
 description: "Cyanotype workshop in Barcelona. Alternative photographic printing process without a darkroom: emulsion, solar exposure and water development."

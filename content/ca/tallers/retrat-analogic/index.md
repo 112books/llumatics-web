@@ -1,5 +1,6 @@
 ---
 title: "Retrat analògic"
+seo_title: "Retrat analògic · Taller de fotografia analògica · Llumàtics"
 subtitle: "La persona davant la càmera. Llum, relació i tècnica."
 lead: "Treballem el retrat al plató amb càmera analògica i flaixos: la llum, la relació amb el model i les decisions tècniques que fan una foto de retrat."
 description: "Taller de retrat analògic al plató de Llumàtics. Llum de flaix, relació amb el model i tècnica fotogràfica. Barcelona."

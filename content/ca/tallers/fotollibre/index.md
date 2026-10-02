@@ -1,5 +1,6 @@
 ---
 title: "Fotollibre: del concepte a la materialització"
+seo_title: "Fotollibre: del concepte a la materialització · Taller de fotografia analògica · Llumàtics"
 subtitle: "Del cos de treball al llibre real."
 lead: "Tres sessions per convertir les teves fotos en un fotolibre: concepte, disseny digital i producció. Sortida a PDF, ePub o impressió via 112books."
 description: "Taller de creació de fotollibre a Barcelona. Conceptualització, narrativa visual, disseny amb Affinity Publisher i producció. Màxim 4 persones. Sota demanda."

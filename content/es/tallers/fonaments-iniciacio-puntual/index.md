@@ -1,5 +1,6 @@
 ---
 title: "Aprende a controlar la luz"
+seo_title: "Aprende a controlar la luz · Taller de fotografía analógica · Llumàtics"
 subtitle: "Cómo iniciarse en la fotografía tradicional, también llamada analógica."
 lead: "El punto de partida para todo el mundo. Entendemos cómo funciona una cámara y por qué las fotos salen como salen. Trabajamos con cámara analógica porque obliga a pensar, pero lo que se aprende aquí se aplica a cualquier tipo de cámara."
 description: "Taller de iniciación a la fotografía analógica en Barcelona. Aprende el triángulo de exposición y fotografía en modo manual. Máx. 4 alumnos, bajo demanda."

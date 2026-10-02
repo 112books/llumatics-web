@@ -1,5 +1,6 @@
 ---
 title: "Copias con tu propio revelador — Beers Developer"
+seo_title: "Copias con tu propio revelador — Beers Developer · Taller de fotografía analógica · Llumàtics"
 subtitle: "Prepara la fórmula, controla el contraste, haz la copia."
 lead: "Preparamos el revelador Beers desde cero, lo usamos en el ampliador y comparamos las copias resultantes a diferentes grados de contraste. Del componente químico a la copia acabada, sin intermediarios."
 description: "Taller avanzado de ampliador con revelador artesanal Beers Developer. Preparación de la fórmula A/B, control de contraste por dilución y copias en papel. Llumàtics, Barcelona."

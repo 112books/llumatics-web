@@ -1,5 +1,6 @@
 ---
 title: "Del negativo a la imagen — edición digital para fotografía analógica"
+seo_title: "Del negativo a la imagen — edición digital para fotografía analógica · Taller de fotografía analógica · Llumàtics"
 lead: "Lightroom, Photoshop y alternativas sin suscripción para sacar el máximo de tus negativos digitalizados: eliminar polvo y rayaduras, ajustar contraste y color, revelar el potencial de cada fotografía."
 description: "Taller práctico de edición digital para fotografía analógica. Lightroom, Photoshop, Affinity Photo y GIMP aplicados a la corrección y edición de negativos digitalizados. Barcelona."
 image: "/images/tallers/edicio-imatges-fotoquimiques.jpg"

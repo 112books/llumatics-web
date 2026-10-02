@@ -1,5 +1,6 @@
 ---
 title: "Large format 4×5\""
+seo_title: "Large format 4×5\" · Film photography workshop · Llumàtics"
 subtitle: "Slow, deliberate photography. One exposure, one decision."
 lead: "The large-format camera forces you to photograph differently: prepare, measure, decide and shoot just once. A workshop to understand why this changes everything."
 description: "Introduction to 4×5 inch large format photography. View camera, sheet film, light metering and development. Barcelona."

@@ -1,5 +1,6 @@
 ---
 title: "Developing colour film as black and white"
+seo_title: "Developing colour film as black and white · Film photography workshop · Llumàtics"
 subtitle: "C-41 colour film with a B&W process. Experimental, unpredictable and fascinating."
 lead: "You grab a colour roll, develop it with Rodinal in 60-minute stand development and get negatives with a brown cast, extreme grain and results you didn't expect. It's not the correct process. It's the interesting one."
 description: "Experimental workshop developing C-41 colour film with a B&W developer (Rodinal, stand development): unpredictable, grainy and a lot to learn. Llumàtics."

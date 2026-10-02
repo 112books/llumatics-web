@@ -1,5 +1,6 @@
 ---
 title: "El maravilloso mundo Hasselblad"
+seo_title: "El maravilloso mundo Hasselblad · Taller de fotografía analógica · Llumàtics"
 subtitle: "Medio formato 6×6 con la serie 500. Secretos, trucos y mucho carrete."
 lead: "Una sesión dedicada en cuerpo y alma a las Hasselblad de la serie 500: funcionamiento, trucos, dobles exposiciones, disparador remoto, y un rollo de 120 que revelarás el mismo día."
 description: "Taller práctico de la cámara Hasselblad serie 500. Medio formato 6×6, rollo 120, técnicas avanzadas y revelado incluido. Nau Bostik, Barcelona."

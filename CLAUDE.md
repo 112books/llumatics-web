@@ -361,7 +361,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Drafts:** `draft: true` mentre no estigui llest per publicar.
 - **Noindex** obligatori a totes les pàgines privades d'alumnes.
 - **Títols de tallers:** atractius i suggerents, no tècnics ni descriptius secs.
-- **Tone of voice:** directe, sense floritures, expert però accessible. Res de corporatiu.
+- **Tone of voice:** directe, sense floritures, expert però accessible. Res de corporatiu. Seguir sempre `docs/manuals/veu-terminologia-llumatics.md`: **química** al cos, **analògica** a `<title>`/`description`; lema «La fotografia com a procés i manera de mirar».
 - **Preus:** impostos inclosos. Si cal factura, s'emet amb totes les dades fiscals.
 - **⚠️ `.htaccess` — NO afegir redirect HTTPS.** Dinahosting fa SSL termination al proxy: Apache veu HTTP tot i que el client ve per HTTPS. Afegir `RewriteCond %{HTTPS} off` causa bucle infinit de redireccions i cau el site. Dinahosting ja força HTTPS a nivell de servidor.
 

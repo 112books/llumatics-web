@@ -1,5 +1,6 @@
 ---
 title: "Del Carrer al Llibre"
+seo_title: "Del Carrer al Llibre · Taller de fotografia analògica · Llumàtics"
 subtitle: "Un any, dotze fotògrafs, una veu pròpia."
 lead: "Un curs anual de fotografia de carrer analògica a Barcelona. Cada mes, un gran fotògraf com a guia. Al final, un fotolibre teu."
 description: "Curs anual de fotografia de carrer analògica a Barcelona. 12 sessions mensuals, cada una dedicada a un referent del gènere. Màxim 6 persones. Sortida opcional al fotolibre imprès."

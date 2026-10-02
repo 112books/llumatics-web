@@ -1,5 +1,6 @@
 ---
 title: "Retrato analógico"
+seo_title: "Retrato analógico · Taller de fotografía analógica · Llumàtics"
 subtitle: "La persona frente a la cámara. Luz, relación y técnica."
 lead: "Trabajamos el retrato en el plató con cámara analógica y flashes: la luz, la relación con el modelo y las decisiones técnicas que hacen una foto de retrato."
 description: "Taller de retrato analógico en el plató de Llumàtics. Luz de flash, relación con el modelo y técnica fotográfica. Barcelona."

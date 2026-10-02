@@ -1,5 +1,6 @@
 ---
 title: "Gran format 4×5 polzades"
+seo_title: "Gran format 4×5 polzades · Taller de fotografia analògica · Llumàtics"
 subtitle: "Fotografia lenta i conscient. Una exposició, una decisió."
 lead: "La càmera de plànxes obliga a fer fotografia d'una altra manera: preparar, mesurar, decidir i disparar una sola vegada. Un taller per entendre per què això canvia tot."
 description: "Taller d'iniciació al gran format 4×5 pulgades. Càmera de plànxes, film sheet, mesura de la llum i revelat. Barcelona."

@@ -1,5 +1,6 @@
 ---
 title: "Talleres, cursos y recorridos formativos"
+seo_title: "Talleres, cursos y recorridos de fotografía analógica · Llumàtics"
 description: "Talleres de fotografía analógica, proceso químico, gran formato y procesos alternativos en Barcelona. Grupos de máximo 4 personas."
 eyebrow: "Escuela de fotografía analógica"
 subtitle: "Seis líneas de aprendizaje. Como el metro: puedes hacer un taller concreto o seguir el recorrido entero de una línea."

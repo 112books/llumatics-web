@@ -1,5 +1,6 @@
 ---
 title: "Cyanotype photograms"
+seo_title: "Cyanotype photograms · Film photography workshop · Llumàtics"
 subtitle: "Images without a camera. Step into the world of cyanotype."
 lead: "A first experience with cyanotype: we place objects on sensitised paper, expose to sunlight and develop with water. No camera, no darkroom, no previous experience needed."
 description: "Introductory cyanotype photogram workshop in Barcelona. No camera or prior experience needed. Nau Bostik."

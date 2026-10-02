@@ -1,5 +1,6 @@
 ---
 title: "Experimental development"
+seo_title: "Experimental development · Film photography workshop · Llumàtics"
 subtitle: "Artisan formulas, push processing and home-made developers"
 lead: "Beyond the standard developer: push and pull, stand development, Caffenol, the Beers formula and other ways to alter the chemical outcome of your image."
 description: "Experimental film development workshop: push/pull, stand development, Caffenol, Beers formula and artisan developers. Photography lab in Barcelona."

@@ -1,5 +1,6 @@
 ---
 title: "Taller d'iniciació a la fotografia analògica"
+seo_title: "Taller d'iniciació a la fotografia analògica · Taller de fotografia analògica · Llumàtics"
 subtitle: "Aprèn a controlar la llum"
 lead: "El punt de partida per a tothom. Entenem com funciona una càmera i per què les fotos surten com surten. Treballem amb càmera analògica perquè obliga a pensar, però el que s'aprèn aquí s'aplica a qualsevol tipus de càmera."
 description: "Taller d'iniciació a la fotografia analògica a Barcelona. Aprèn el triangle d'exposició i fotografía en mode manual. Màx. 4 alumnes, sota demanda."

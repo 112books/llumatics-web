@@ -1,5 +1,6 @@
 ---
 title: "Introducció al positivat"
+seo_title: "Introducció al positivat · Taller de fotografia analògica · Llumàtics"
 subtitle: "La teva primera vegada a l'ampliadora"
 lead: "Portes negatius revelats i vols veure com es converteixen en còpies en paper? Aquesta és la primera sessió: una introducció pràctica i directa al laboratori de positivat."
 description: "Taller bàsic d'introducció al positivat fotogràfic. Primera sessió a l'ampliadora, revelat de paper i lectura del resultat. Barcelona."

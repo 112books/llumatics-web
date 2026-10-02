@@ -1,5 +1,6 @@
 ---
 title: "Revelado de película B/N"
+seo_title: "Revelado de película B/N · Taller de fotografía analógica · Llumàtics"
 subtitle: "Push, pull y el control de la densidad"
 lead: "No hay un solo revelado correcto. Hay el que necesita cada foto. En este taller aprendes a controlar la densidad del negativo: revelado estándar, forzado (push) y compensado (pull). Dos carretes, cuatro horas."
 description: "Taller de revelado de película B/N en Barcelona. Push y pull, control de temperatura y densidad, lectura del negativo. Incluye 2 carretes. Llumàtics, Nau Bostik."

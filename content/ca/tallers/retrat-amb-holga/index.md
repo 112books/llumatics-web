@@ -1,5 +1,6 @@
 ---
 title: "Retrat amb Holga"
+seo_title: "Retrat amb Holga · Taller de fotografia analògica · Llumàtics"
 subtitle: "Mig format, plàstic i molt de gra. El retrat sense excuses tècniques."
 lead: "La Holga no és una càmera de precisió. És una càmera que obliga a concentrar-se en l'essencial: la persona que tens davant. En aquest taller fem retrats en mig format 120 i revelem el rodet al laboratori."
 description: "Taller de retrat analògic amb càmera Holga 120 a Barcelona. Teoria de retrat, pràctica en plató i revelat inclòs. Llumàtics, Nau Bostik."

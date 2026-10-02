@@ -1,5 +1,6 @@
 ---
 title: "Iniciació al revelat"
+seo_title: "Iniciació al revelat · Taller de fotografia analògica · Llumàtics"
 subtitle: "Carrega el rodet, surt a disparar i revela-ho tu mateix"
 lead: "El procés fotogràfic complet en tres hores: carreguem un rodet, sortim al barri a disparar-lo, tornem i el revelem. Sense experiència prèvia. A Cameras & Films —antiga Lomography Embassy Barcelona—."
 description: "Taller d'iniciació al revelat analògic a Cameras & Films, Barcelona. Carregar rodet, sortida fotogràfica i revelat bàsic en B/N. 3 hores, sense experiència prèvia."

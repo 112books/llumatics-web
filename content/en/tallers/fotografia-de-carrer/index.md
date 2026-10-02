@@ -1,5 +1,6 @@
 ---
 title: "Street photography"
+seo_title: "Street photography · Film photography workshop · Llumàtics"
 subtitle: "Gaze, time and people. Photographing what happens."
 lead: "A workshop for photographing on the street with awareness: how to look, how to approach, how to decide when to shoot. Analogue, slow and honest."
 description: "Analogue street photography workshop in Barcelona. Technique, vision and ethics of documentary photography. Groups of maximum 4 people."

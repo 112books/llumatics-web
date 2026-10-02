@@ -1,5 +1,6 @@
 ---
 title: "Tarde Holga en la Nau Bostik"
+seo_title: "Tarde Holga en la Nau Bostik · Taller de fotografía analógica · Llumàtics"
 subtitle: "Encuentro gratuito para celebrar la Holga Week"
 lead: "Del 1 al 7 de octubre es la Holga Week. Nosotros la celebramos el día 8 con una tarde para disparar, compartir trucos y ver carretes, en la Nau Bostik. Gratuita."
 description: "Tarde Holga gratuita en la Nau Bostik, jueves 8 de octubre de 2026, 18–20 h. Encuentro para celebrar la Holga Week. Cámaras de préstamo limitadas."
