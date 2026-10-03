@@ -35,26 +35,26 @@ function llum_rows(array $rows): string {
     return $html . '</table>';
 }
 
-/** Text legal (RGPD/LOPDGDD) per al peu, segons l'idioma. */
+/** Text legal (RGPD/LOPDGDD + LSSI) per al peu, segons l'idioma. */
 function llum_legal_footer(string $lang = 'ca'): string {
     $from = LLUM_MAIL_FROM;
-    $priv = '<a href="' . LLUM_SITE_URL . '/privacitat/" style="color:#e0d8c8;text-decoration:underline;">';
+    $id   = 'Llumàtics · Joan Martínez Serres · NIF 38121766W · Nau Bostik, Ferran Turné 1-11 · 08027 Barcelona';
+    $mail = '<a href="mailto:' . $from . '" style="color:#b9b2a6;">' . $from . '</a>';
+    $purl = LLUM_SITE_URL . ($lang === 'es' ? '/es' : ($lang === 'en' ? '/en' : '')) . '/privacitat/';
+    $priv = '<a href="' . $purl . '" style="color:#b9b2a6;text-decoration:underline;">';
     if ($lang === 'es') {
-        return 'Este correo se ha enviado para gestionar tu solicitud, suscripción o compra.<br>'
-             . 'Responsable del tratamiento: Llumàtics · <a href="mailto:' . $from . '" style="color:#e0d8c8;">' . $from . '</a><br>'
-             . 'Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición, y consultar todos los detalles en la '
-             . $priv . 'política de privacidad</a>.';
+        return $id . ' · ' . $mail . '<br>'
+             . 'Responsable del tratamiento. Derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición en la '
+             . $priv . 'política de privacidad</a> · Baja: responde con «Baja».';
     }
     if ($lang === 'en') {
-        return 'This email was sent to manage your request, subscription or purchase.<br>'
-             . 'Data controller: Llumàtics · <a href="mailto:' . $from . '" style="color:#e0d8c8;">' . $from . '</a><br>'
-             . 'You can exercise your rights of access, rectification, erasure, restriction, portability and objection, and find full details in our '
-             . $priv . 'privacy policy</a>.';
+        return $id . ' · ' . $mail . '<br>'
+             . 'Data controller. Rights of access, rectification, erasure, restriction, portability and objection in our '
+             . $priv . 'privacy policy</a> · To unsubscribe, just reply to this email.';
     }
-    return 'Aquest correu s\'ha enviat per gestionar la teva sol·licitud, subscripció o compra.<br>'
-         . 'Responsable del tractament: Llumàtics · <a href="mailto:' . $from . '" style="color:#e0d8c8;">' . $from . '</a><br>'
-         . 'Pots exercir els teus drets d\'accés, rectificació, supressió, limitació, portabilitat i oposició, i consultar tots els detalls a la '
-         . $priv . 'política de privacitat</a>.';
+    return $id . ' · ' . $mail . '<br>'
+         . 'Responsable del tractament. Drets d\'accés, rectificació, supressió, limitació, portabilitat i oposició a la '
+         . $priv . 'política de privacitat</a> · Baixa: respon amb «Baixa».';
 }
 
 /** Plantilla HTML corporativa (logo + cos + CTA + peu). */
@@ -88,10 +88,8 @@ function llum_email_html(string $title, string $bodyHtml, string $ctaHtml = '', 
 {$bodyHtml}
 </td></tr>
 {$cta}
-<tr><td style="padding:22px 32px;background:#1a1a1a;color:#c9c1b4;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.7;">
-<strong style="color:#f5f1ea;">Llumàtics</strong> — Escola de fotografia química<br>
-{$legal}<br>
-<a href="{$site}" style="color:#c9c1b4;">llumatics.com</a>
+<tr><td style="padding:18px 32px;background:#1a1a1a;color:#8f887d;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.6;">
+{$legal}
 </td></tr>
 </table>
 </td></tr>
