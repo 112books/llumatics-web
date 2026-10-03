@@ -82,7 +82,7 @@ HTML;
  * Envia un correu multipart (text pla + HTML) pel MTA local.
  * Retorna true si el MTA l'ha acceptat.
  */
-function llum_send(string $to, string $subject, string $text, string $html): bool {
+function llum_send(string $to, string $subject, string $text, string $html, string $replyTo = ''): bool {
     $boundary    = '=_llum_' . bin2hex(random_bytes(12));
     $enc_subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
     $text = preg_replace("/\r\n|\r|\n/", "\r\n", $text);
@@ -99,7 +99,7 @@ function llum_send(string $to, string $subject, string $text, string $html): boo
     $body .= "--{$boundary}--\r\n";
 
     $headers  = 'From: ' . LLUM_MAIL_FROM_NAME . ' <' . LLUM_MAIL_FROM . ">\r\n";
-    $headers .= 'Reply-To: ' . LLUM_MAIL_FROM . "\r\n";
+    $headers .= 'Reply-To: ' . ($replyTo !== '' ? $replyTo : LLUM_MAIL_FROM) . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: multipart/alternative; boundary=\"{$boundary}\"\r\n";
 
@@ -108,6 +108,6 @@ function llum_send(string $to, string $subject, string $text, string $html): boo
 
 /** Drecera: embolcalla en la plantilla corporativa i envia. */
 function llum_send_html(string $to, string $subject, string $title, string $bodyHtml,
-                        string $text, string $ctaHtml = ''): bool {
-    return llum_send($to, $subject, $text, llum_email_html($title, $bodyHtml, $ctaHtml));
+                        string $text, string $ctaHtml = '', string $replyTo = ''): bool {
+    return llum_send($to, $subject, $text, llum_email_html($title, $bodyHtml, $ctaHtml), $replyTo);
 }

@@ -35,7 +35,7 @@ if ($type === 'val') {
     }
 }
 
-if (!in_array($type, ['avisa', 'newsletter', 'val'], true)) {
+if (!in_array($type, ['avisa', 'newsletter', 'val', 'contacte'], true)) {
     http_response_code(400);
     echo json_encode(['ok' => false, 'error' => 'Tipus desconegut']);
     exit;
@@ -170,11 +170,79 @@ if ($type === 'avisa') {
         $stmt->execute([$codi, $taller_nom, $import_val, $per_a, $de_part_de,
                         $email_comprador, $paypal_order, $missatge_val,
                         $data_compra, $data_caducitat]);
+
+        // Correus: avís intern + confirmació al comprador
+        $rows_reg = llum_rows([
+            'Codi'      => '<strong>' . llum_e($codi) . '</strong>',
+            'Per a'     => llum_e($per_a),
+            'De'        => llum_e($de_part_de),
+            'Taller'    => llum_e($taller_nom),
+            'Import'    => llum_e($import_val),
+            'Comprador' => $email !== '' ? '<a href="mailto:' . llum_e($email) . '">' . llum_e($email) . '</a>' : '',
+            'PayPal'    => llum_e($paypal_order),
+            'Missatge'  => llum_e($missatge_val),
+        ]);
+        $subj_reg = 'Nou val-regal — ' . $codi;
+        $body_reg = '<p style="' . $p . '">S\'ha emès un nou val-regal.</p>' . $rows_reg;
+        $text_reg = "Nou val-regal\n\nCodi: $codi\nPer a: $per_a\nDe: $de_part_de\n"
+                  . "Taller: $taller_nom\nImport: $import_val\nComprador: $email\nPayPal: $paypal_order\n";
+        llum_send_html(MAIL_TO, $subj_reg, $subj_reg, $body_reg, $text_reg,
+                       llum_button('https://llumatics.com/admin/vals.php', 'Veure els vals'),
+                       $email !== '' ? $email : '');
+
+        if ($email !== '') {
+            $body_conf = '<p style="' . $p . '">Hola' . ($de_part_de !== '' ? ' ' . llum_e($de_part_de) : '') . ',</p>'
+                       . '<p style="' . $p . '">Gràcies per regalar un val de Llumàtics a <strong>' . llum_e($per_a) . '</strong>.</p>'
+                       . llum_rows([
+                             'Codi'     => '<strong>' . llum_e($codi) . '</strong>',
+                             'Taller'   => llum_e($taller_nom),
+                             'Import'   => llum_e($import_val),
+                             'Validesa' => '6 mesos des de la compra',
+                         ])
+                       . ($missatge_val !== '' ? '<p style="' . $p . '"><em>«' . llum_e($missatge_val) . '»</em></p>' : '');
+            $text_conf = "Gràcies per regalar un val de Llumàtics a $per_a.\n\nCodi: $codi\n"
+                       . "Taller: $taller_nom\nImport: $import_val\nValidesa: 6 mesos\n";
+            llum_send_html($email, 'El teu val-regal Llumàtics — ' . $codi, 'Gràcies pel teu val-regal',
+                           $body_conf, $text_conf, llum_button('https://llumatics.com/regala/', 'Veure els vals'));
+        }
+
         echo json_encode(['ok' => true]);
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(['ok' => false, 'error' => 'DB error']);
     }
+
+} elseif ($type === 'contacte') {
+    $nom_c    = trim($_POST['name'] ?? '');
+    $missatge = trim($_POST['message'] ?? '');
+    $tipus    = trim($_POST['tipus'] ?? '');
+    $taller_c = trim($_POST['taller'] ?? '');
+    $data_c   = trim($_POST['data'] ?? '');
+    $horari   = trim($_POST['horari'] ?? '');
+    $alumnes  = trim($_POST['alumnes'] ?? '');
+    $idioma   = trim($_POST['_language'] ?? '');
+
+    $assumpte = 'Contacte web — ' . ($nom_c !== '' ? $nom_c : $email);
+    if ($taller_c !== '') { $assumpte .= ' · ' . $taller_c; }
+
+    $files = [
+        'Nom'   => llum_e($nom_c),
+        'Email' => '<a href="mailto:' . llum_e($email) . '">' . llum_e($email) . '</a>',
+    ];
+    if ($tipus !== '')    $files['Tipus']   = llum_e($tipus);
+    if ($taller_c !== '') $files['Taller']  = llum_e($taller_c);
+    if ($data_c !== '')   $files['Data']    = llum_e($data_c);
+    if ($horari !== '')   $files['Horari']  = llum_e($horari);
+    if ($alumnes !== '')  $files['Alumnes'] = llum_e($alumnes);
+    if ($idioma !== '')   $files['Idioma']  = llum_e($idioma);
+
+    $body_c = ($missatge !== '' ? '<p style="' . $p . '">' . nl2br(llum_e($missatge)) . '</p>' : '') . llum_rows($files);
+    $text_c = "Contacte web\n\n" . ($missatge !== '' ? "$missatge\n\n" : '')
+            . "Nom: $nom_c\nEmail: $email\n"
+            . ($taller_c !== '' ? "Taller: $taller_c\n" : '') . "Tipus: $tipus\n";
+    $ok = llum_send_html(MAIL_TO, $assumpte, $assumpte, $body_c, $text_c,
+                         llum_button('mailto:' . $email, 'Respondre'), $email);
+    echo json_encode(['ok' => $ok]);
 
 } else {
     // newsletter — avís intern (el formulari públic viu a subscribe.php)

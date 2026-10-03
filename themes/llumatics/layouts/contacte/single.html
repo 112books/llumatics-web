@@ -32,12 +32,10 @@
       <h2 class="contact-section__title">{{ i18n "contact_form_title" }}</h2>
       <p class="contact-form-section__lead">{{ i18n "contact_form_lead" }}</p>
 
-      {{ if site.Params.web3formsKey }}
       <form class="contact-form" id="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
         <input type="hidden" name="subject" value="Contacte Llumàtics">
         <input type="hidden" name="from_name" value="Web Llumàtics">
-        <input type="hidden" name="botcheck" value="">
+        <input type="hidden" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         {{/* Tipus de consulta */}}
         <fieldset class="contact-form__fieldset">
@@ -160,12 +158,6 @@
       })();
       </script>
 
-      {{ else }}
-      <div class="contact-form-placeholder">
-        <p>{{ i18n "contact_form_soon" }}</p>
-        <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn--primary btn--lg">{{ site.Params.contactEmail }}</a>
-      </div>
-      {{ end }}
 
     </section>
 

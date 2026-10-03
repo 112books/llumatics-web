@@ -54,7 +54,7 @@ We do not collect specially protected data (health, ideology, racial origin, etc
 Your data **is not shared with third parties**, except:
 
 - When required by law
-- With the form service provider (**web3forms.com**), which acts as data processor and manages the sending of messages. You can consult their privacy policy at [web3forms.com/privacy](https://web3forms.com/privacy).
+- Our forms are processed by our own server; we do not share the data with third-party form services.
 
 ---
 

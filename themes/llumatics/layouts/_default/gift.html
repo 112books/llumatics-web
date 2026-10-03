@@ -303,41 +303,6 @@
             var email     = document.getElementById('gift-email').value.trim();
             var importV   = parseFloat(document.getElementById('gift-import').value);
             var tallerNom = document.getElementById('gift-taller').value.trim() || 'Llumàtics';
-            var w3key     = '31b4da8e-2f87-4909-8019-67ed2df04295';
-
-            var notif = new FormData();
-            notif.append('access_key', w3key);
-            notif.append('subject', 'Nou val-regal — ' + codi);
-            notif.append('from_name', 'Web Llumàtics');
-            notif.append('message',
-              'Codi: ' + codi + '\n' +
-              'Per a: ' + perA + '\n' +
-              'De: ' + de + '\n' +
-              'Taller: ' + tallerNom + '\n' +
-              'Import: ' + importV + '€\n' +
-              'Email comprador: ' + email + '\n' +
-              (missatge ? 'Missatge: ' + missatge + '\n' : '') +
-              'PayPal order: ' + details.id + '\n' +
-              'Pagador PayPal: ' + details.payer.email_address
-            );
-
-            var conf = new FormData();
-            conf.append('access_key', w3key);
-            conf.append('to', email);
-            conf.append('subject', fill(GIFT_TXT.email_subject, { codi: codi }));
-            conf.append('from_name', 'Llumàtics');
-            conf.append('message',
-              fill(GIFT_TXT.email_greeting, { de: de }) + '\n\n' +
-              fill(GIFT_TXT.email_intro, { perA: perA }) + '\n\n' +
-              GIFT_TXT.email_code_label + ' ' + codi + '\n' +
-              GIFT_TXT.email_workshop_label + ' ' + tallerNom + '\n' +
-              GIFT_TXT.email_amount_label + ' ' + importV + '€\n' +
-              (missatge ? GIFT_TXT.email_message_label + ' ' + missatge + '\n\n' : '\n') +
-              GIFT_TXT.email_redeem + '\n' +
-              GIFT_TXT.email_validity + '\n\n' +
-              GIFT_TXT.email_signoff
-            );
-
             var valReg = new FormData();
             valReg.append('type',            'val');
             valReg.append('codi',            codi);
@@ -347,15 +312,14 @@
             valReg.append('de_part_de',      de);
             valReg.append('email_comprador', email);
             valReg.append('paypal_order',    details.id);
+            valReg.append('paypal_payer',    details.payer.email_address);
             valReg.append('missatge',        missatge);
 
-            Promise.allSettled([
-              fetch('https://api.web3forms.com/submit', { method: 'POST', body: notif }),
-              fetch('https://api.web3forms.com/submit', { method: 'POST', body: conf }),
-              fetch('/form-handler.php',                { method: 'POST', body: valReg })
-            ]).then(function () {
-              showSuccess(email, codi, perA, de, tallerNom, importV, missatge);
-            });
+            fetch('/form-handler.php', { method: 'POST', body: valReg })
+              .catch(function () {})
+              .then(function () {
+                showSuccess(email, codi, perA, de, tallerNom, importV, missatge);
+              });
           });
         },
 

@@ -168,17 +168,16 @@ if (contactForm) {
 
     try {
       const body = new FormData(contactForm);
-      body.append('subject', 'Contacte Llumàtics');
-      body.append('from_name', 'Web Llumàtics');
+      body.append('type', 'contacte');
 
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/form-handler.php', {
         method: 'POST',
         body
       });
 
       const data = await res.json();
 
-      if (data.success) {
+      if (data.ok) {
         const lang = document.documentElement.lang;
         const base = lang === 'ca' ? '' : '/' + lang;
         window.location.href = base + '/gracies/?from=contacte';
