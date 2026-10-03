@@ -146,5 +146,5 @@ if ($taller !== '') {
     $text = "Hola" . ($nom !== '' ? " $nom" : '') . ",\n\nConfirma la teva subscripció al butlletí:\n$conf\n";
 }
 
-llum_send_html($email, $subject, $title, $body, $text, llum_button($conf, $cta_label));
+llum_send_html($email, $subject, $title, $body, $text, llum_button($conf, $cta_label), '', $idioma);
 sub_json(['ok' => true]);

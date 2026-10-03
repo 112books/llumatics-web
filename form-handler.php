@@ -128,6 +128,9 @@ if ($type === 'avisa') {
 
 } elseif ($type === 'val') {
 
+    $lang_val = preg_replace('/[^a-z]/', '', strtolower(trim($_POST['lang'] ?? 'ca')));
+    if (!in_array($lang_val, ['ca', 'es', 'en'], true)) { $lang_val = 'ca'; }
+
     $codi           = trim($_POST['codi']            ?? '');
     $taller_nom     = trim($_POST['taller']          ?? '');
     $import_val     = trim($_POST['import']          ?? '');
@@ -203,7 +206,7 @@ if ($type === 'avisa') {
             $text_conf = "Gràcies per regalar un val de Llumàtics a $per_a.\n\nCodi: $codi\n"
                        . "Taller: $taller_nom\nImport: $import_val\nValidesa: 6 mesos\n";
             llum_send_html($email, 'El teu val-regal Llumàtics — ' . $codi, 'Gràcies pel teu val-regal',
-                           $body_conf, $text_conf, llum_button('https://llumatics.com/regala/', 'Veure els vals'));
+                           $body_conf, $text_conf, llum_button('https://llumatics.com/regala/', 'Veure els vals'), '', $lang_val);
         }
 
         echo json_encode(['ok' => true]);
