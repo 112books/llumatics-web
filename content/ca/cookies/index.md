@@ -23,7 +23,7 @@ Utilitzem **GoatCounter** per comptar visites de manera anònima. GoatCounter **
 
 Els formularis d'aquest web (contacte, "Avisa'm", pàgina privada d'alumnes) s'envien directament al nostre servidor a través d'un script PHP propi. **No s'estableix cap cookie** en fer-los servir.
 
-El formulari de subscripció al **butlletí** s'allotja a **Brevo** (sibforms.com). Quan hi feu clic, s'obre una pàgina de Brevo on la seva política de cookies s'aplica de manera independent. Podeu consultar-la a [brevo.com/legal/cookiespolicy](https://www.brevo.com/legal/cookiespolicy/).
+El formulari de subscripció al **butlletí** i al material d'alumnes també s'envia al nostre servidor (script PHP propi) i, com els altres, **no estableix cap cookie**.
 
 ### Mapa interactiu
 

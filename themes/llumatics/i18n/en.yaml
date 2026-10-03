@@ -58,6 +58,7 @@ newsletter_title: "Light in your inbox"
 newsletter_desc: "New workshops, photography reflections and darkroom news. No noise."
 newsletter_placeholder: "your email"
 newsletter_cta: "Subscribe"
+newsletter_ok: "Done! Check your email to confirm your subscription."
 
 private_title: "Student content"
 private_desc: "This material is exclusive to workshop students. Enter your email to access."

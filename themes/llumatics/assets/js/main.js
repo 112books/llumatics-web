@@ -129,6 +129,30 @@
   });
 
   // ─────────────────────────────────────────────────────────────
+  // NEWSLETTER — subscripció local (subscribe.php)
+  // ─────────────────────────────────────────────────────────────
+  document.querySelectorAll('[data-subscribe-form]').forEach(form => {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = form.querySelector('[type="submit"]');
+      const orig = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = '...'; }
+      try {
+        const res = await fetch('/subscribe.php', { method: 'POST', body: new FormData(form) });
+        const json = await res.json();
+        if (json.ok) {
+          const ok = document.createElement('p');
+          ok.className = 'newsletter-form__ok';
+          ok.textContent = form.dataset.ok || 'Fet! Revisa el correu per confirmar.';
+          form.replaceWith(ok);
+          return;
+        }
+      } catch (_) {}
+      if (btn) { btn.disabled = false; btn.textContent = orig; }
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────
 // CONTACT FORM (Web3Forms)
 // ─────────────────────────────────────────────────────────────
 const contactForm = document.querySelector('#contact-form');

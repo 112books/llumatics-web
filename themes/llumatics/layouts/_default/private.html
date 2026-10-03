@@ -10,11 +10,10 @@
       <h1 class="private-gate__title">{{ i18n "private_title" }}</h1>
       <p class="private-gate__desc">{{ i18n "private_desc" }}</p>
 
-      {{ if .Site.Params.brevoListFormAction }}
-        <div id="private-form-wrap">
+      <div id="private-form-wrap">
           <form
             id="private-brevo-form"
-            action="{{ .Site.Params.brevoListFormAction }}"
+            action="/subscribe.php"
             method="POST"
             class="private-form"
           >
@@ -77,11 +76,6 @@
             {{ i18n "private_confirm_message" }}
           </div>
         </div>
-      {{ else }}
-        <p style="color:var(--color-text-muted); font-size:0.875rem;">
-          {{ i18n "private_form_pending" }}
-        </p>
-      {{ end }}
 
       <p class="private-gate__footer">
         {{ i18n "private_footer_nominal" }}
@@ -96,7 +90,8 @@
   var form = document.getElementById('private-brevo-form');
   if (!form) return;
 
-  form.addEventListener('submit', function() {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
     var nomInput   = document.getElementById('pf-nom');
     var langSelect = document.getElementById('pf-lang');
     var nom        = nomInput.value.trim();
@@ -124,6 +119,7 @@
     form.style.display = 'none';
     var msg = document.getElementById('private-confirm-msg');
     if (msg) msg.removeAttribute('hidden');
+    fetch('/subscribe.php', { method: 'POST', body: new FormData(form) }).catch(function(){});
   });
 })();
 </script>

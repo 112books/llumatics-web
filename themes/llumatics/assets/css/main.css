@@ -870,6 +870,14 @@ button, input, select, textarea {
 .newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.4); }
 .newsletter-form input[type="email"]:focus { border-color: var(--color-accent-dark); }
 
+.newsletter-form__ok {
+  font-size: var(--text-sm);
+  color: var(--color-accent-dark);
+  margin: 0;
+}
+
+.newsletter-band__form { max-width: 380px; margin-inline: 0; }
+
 /* ── Vals-regal ──────────────────────────────────────────────────────────── */
 .gift-section {
   padding-block: var(--space-24);

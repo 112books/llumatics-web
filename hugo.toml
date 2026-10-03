@@ -62,17 +62,14 @@ defaultContentLanguageInSubdir = false
   contactEmail = "hola@llumatics.com"
   instagram = "https://www.instagram.com/llumatics"
   googleReviewURL = "https://g.page/r/CRWgnPBp1N1uEBM/review"  # Google Business → "Demana ressenyes" → enllaç g.page/r/.../review
-  newsletterService = "brevo"
   formService = "tally"
   tallyFormNewsletter = ""
-  brevoNewsletterFormURL = "https://59a7cdb3.sibforms.com/serve/MUIFAPOUhPNZJkVu9wiP_v7DPOgDEawhja2LOrKVE4BztX7TAA0xxREsqQVtwf_UE2nIr7tJPLsSvphgdwlhKb3WoeK929R4ePsahIyw3mmdNW0lVCGfptqttsKpA2_-iI3tHddDtwQFvsUwGn501OcHHd_Uc5VSXNl9iO-cN_KnSgNEhI0Wn6xbnJelHVHpq2h2g11apjlskA32Sg=="
   tallyFormContact = ""
   tallyFormGiftVoucher = ""
   tallyFormAvisa = "LZ6r0O" # Waitlist "Avisa'm quan hi hagi places"
   paypalClientID   = "ARfv0r9YbKGedzDevSAAEc2oU0cXKqAH7kCLCELkNIK0kKautRaKl4ut6Yn77iL3fUInzHrM9dmB7ZWK"     # PayPal JS SDK client-id (LIVE)
   makecomGiftWebhook = "https://hook.eu1.make.com/m5eetui6libisumihbykep1ils40wpyb"   # URL webhook Make.com escenari val-regal
   web3formsKey = "31b4da8e-2f87-4909-8019-67ed2df04295"
-  brevoListFormAction = "https://59a7cdb3.sibforms.com/serve/MUIFAM9EjcWKfMa7vhhpazyBO4hK31XzmLJ1e3ZwcoOVP8nNXKUglMgpICj8tgZmHPm6cM_NKMbohpZweZtNYySTxwhr6fA_L5b-aCAnrowF1ICI4G-HHZr3ebbDgoGcc-TGwZiEq5F1y0DLs3ggbMmuAKrwIdx6srZRC6hySv3I5ZImnchIXXdkMGiublLSmPj0mu8gXrPnbqRHeQ=="  # Form action URL Brevo — Alumnes Llumàtics
   ogImageAlt = "Tallers de fotografia analògica i laboratori fosc a Barcelona"
   defaultOgImage = "/images/tallers/revelat-bn.jpg"
   goatcounterSite = "llumatics"  # llumatics.goatcounter.com

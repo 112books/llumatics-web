@@ -2,7 +2,7 @@
 session_start();
 
 define('ADMIN_PASSWORD', 'LinuxBCN2026');
-require_once __DIR__ . '/config.php';
+define('DB_PATH', __DIR__ . '/vals.db');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pwd'])) {
     if ($_POST['pwd'] === ADMIN_PASSWORD) $_SESSION['subs_ok'] = true;
@@ -11,43 +11,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pwd'])) {
 if (isset($_POST['logout'])) { session_destroy(); header('Location: subscriptors.php'); exit; }
 $authed = !empty($_SESSION['subs_ok']);
 
-function brevo_get(string $path): ?array {
-    if (!defined('BREVO_API_KEY') || BREVO_API_KEY === '') return null;
-    $ctx = stream_context_create(['http' => [
-        'method'  => 'GET',
-        'header'  => "api-key: " . BREVO_API_KEY . "\r\naccept: application/json\r\n",
-        'timeout' => 20,
-    ]]);
-    $res = @file_get_contents('https://api.brevo.com/v3' . $path, false, $ctx);
-    if ($res === false) return null;
-    $j = json_decode($res, true);
-    return is_array($j) ? $j : null;
+function db(): PDO {
+    static $pdo;
+    if (!$pdo) {
+        $pdo = new PDO('sqlite:' . DB_PATH);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->exec("CREATE TABLE IF NOT EXISTS subscribers (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL, nom TEXT,
+            taller TEXT NOT NULL DEFAULT '', idioma TEXT,
+            newsletter INTEGER NOT NULL DEFAULT 0, estat TEXT NOT NULL DEFAULT 'pendent',
+            token TEXT UNIQUE, creat TEXT, confirmat TEXT, UNIQUE(email, taller))");
+        $pdo->exec("CREATE TABLE IF NOT EXISTS waitlist (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL, taller TEXT NOT NULL,
+            taller_nom TEXT NOT NULL, estat TEXT NOT NULL DEFAULT 'espera',
+            data_inscripcio TEXT NOT NULL, notes TEXT,
+            created_at TEXT DEFAULT (datetime('now')), UNIQUE(email, taller))");
+    }
+    return $pdo;
 }
 
-$newsId = defined('BREVO_NEWSLETTER_LIST_ID') ? BREVO_NEWSLETTER_LIST_ID : 3;
-$waitId = defined('BREVO_WAITLIST_LIST_ID')   ? BREVO_WAITLIST_LIST_ID   : 5;
-
-$lists = null; $total = null; $err = ''; $newsContacts = null; $waitContacts = null;
+$news = []; $docs = []; $wait = [];
+$nTotal = $nNews = $nPending = $nWait = 0;
 if ($authed) {
-    $lists = brevo_get('/contacts/lists?limit=50');
-    $c     = brevo_get('/contacts?limit=1');
-    if ($lists === null || $c === null) {
-        $err = "No s'ha pogut consultar l'API de Brevo. Revisa la clau i que la IP del servidor estigui autoritzada.";
-    } else {
-        $total        = $c['count'] ?? null;
-        $newsContacts = brevo_get('/contacts/lists/' . $newsId . '/contacts?limit=50');
-        $waitContacts = brevo_get('/contacts/lists/' . $waitId . '/contacts?limit=50');
-    }
-}
-
-$news = 0; $wait = 0; $rows = [];
-if ($lists) {
-    foreach (($lists['lists'] ?? []) as $l) {
-        $rows[] = $l;
-        $u = $l['uniqueSubscribers'] ?? 0;
-        if ((int)$l['id'] === (int)$newsId) $news = $u;
-        if ((int)$l['id'] === (int)$waitId) $wait = $u;
-    }
+    $d = db();
+    $nTotal   = (int)$d->query("SELECT COUNT(DISTINCT email) FROM subscribers")->fetchColumn();
+    $nNews    = (int)$d->query("SELECT COUNT(DISTINCT email) FROM subscribers WHERE newsletter=1 AND estat='confirmat'")->fetchColumn();
+    $nPending = (int)$d->query("SELECT COUNT(*) FROM subscribers WHERE estat='pendent'")->fetchColumn();
+    $nWait    = (int)$d->query("SELECT COUNT(*) FROM waitlist WHERE estat='espera'")->fetchColumn();
+    $news = $d->query("SELECT email, nom, idioma, estat, creat, confirmat FROM subscribers WHERE taller='' AND newsletter=1 ORDER BY id DESC LIMIT 300")->fetchAll(PDO::FETCH_ASSOC);
+    $docs = $d->query("SELECT email, nom, taller, idioma, estat, creat, confirmat FROM subscribers WHERE taller<>'' ORDER BY id DESC LIMIT 300")->fetchAll(PDO::FETCH_ASSOC);
+    $wait = $d->query("SELECT email, taller_nom, estat, data_inscripcio FROM waitlist ORDER BY id DESC LIMIT 300")->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -118,53 +111,49 @@ if ($lists) {
   <form method="post" style="margin:0"><input type="hidden" name="logout" value="1"><button type="submit" class="btn-logout">Sortir</button></form>
 </div>
 <div class="main">
-  <h1>Subscriptors de Brevo</h1>
+  <h1>Subscriptors (local)</h1>
 
-  <?php if ($err): ?>
-    <div class="flash-err"><?= htmlspecialchars($err) ?></div>
-  <?php else: ?>
-    <div class="kpis">
-      <div class="kpi"><div class="kpi-label">Total contactes</div><div class="kpi-value"><?= (int)$total ?></div><div class="kpi-sub">a tot Brevo</div></div>
-      <div class="kpi"><div class="kpi-label">Butlletí Llumàtics</div><div class="kpi-value accent"><?= (int)$news ?></div><div class="kpi-sub">subscrits únics (llista <?= (int)$newsId ?>)</div></div>
-      <div class="kpi"><div class="kpi-label">Waitlist tallers</div><div class="kpi-value"><?= (int)$wait ?></div><div class="kpi-sub">interessats (llista <?= (int)$waitId ?>)</div></div>
-    </div>
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-label">Correus únics</div><div class="kpi-value"><?= (int)$nTotal ?></div><div class="kpi-sub">a la base de dades</div></div>
+    <div class="kpi"><div class="kpi-label">Butlletí confirmats</div><div class="kpi-value accent"><?= (int)$nNews ?></div><div class="kpi-sub">subscrits actius</div></div>
+    <div class="kpi"><div class="kpi-label">Pendents confirmar</div><div class="kpi-value"><?= (int)$nPending ?></div><div class="kpi-sub">doble opt-in</div></div>
+    <div class="kpi"><div class="kpi-label">Llista d'espera</div><div class="kpi-value"><?= (int)$nWait ?></div><div class="kpi-sub">tallers (espera)</div></div>
+  </div>
 
-    <h2>Totes les llistes</h2>
-    <table>
-      <thead><tr><th>Llista</th><th class="num">Subscriptors</th><th class="num">Baixes</th></tr></thead>
-      <tbody>
-      <?php foreach ($rows as $l): ?>
-        <tr><td><?= htmlspecialchars($l['name'] ?? '') ?></td><td class="num"><?= (int)($l['uniqueSubscribers'] ?? 0) ?></td><td class="num"><?= (int)($l['totalBlacklisted'] ?? 0) ?></td></tr>
-      <?php endforeach ?>
-      </tbody>
-    </table>
+  <h2>Butlletí</h2>
+  <table>
+    <thead><tr><th>Correu</th><th>Nom</th><th>Idioma</th><th>Estat</th><th>Alta</th></tr></thead>
+    <tbody>
+    <?php foreach ($news as $c): ?>
+      <tr><td><?= htmlspecialchars((string)$c['email']) ?></td><td><?= htmlspecialchars((string)$c['nom']) ?></td><td><?= htmlspecialchars((string)$c['idioma']) ?></td><td><?= htmlspecialchars((string)$c['estat']) ?></td><td><?= htmlspecialchars(substr((string)($c['confirmat'] ?: $c['creat']), 0, 10)) ?></td></tr>
+    <?php endforeach ?>
+    <?php if (!$news): ?><tr><td colspan="5" style="color:var(--ink3)">Encara no hi ha subscrits.</td></tr><?php endif ?>
+    </tbody>
+  </table>
 
-    <?php if (!empty($newsContacts['contacts'])): ?>
-      <h2>Butlletí Llumàtics — contactes</h2>
-      <table>
-        <thead><tr><th>Correu</th><th>Alta</th></tr></thead>
-        <tbody>
-        <?php foreach ($newsContacts['contacts'] as $c): ?>
-          <tr><td><?= htmlspecialchars($c['email'] ?? '') ?></td><td><?= htmlspecialchars(substr((string)($c['createdAt'] ?? ''), 0, 10)) ?></td></tr>
-        <?php endforeach ?>
-        </tbody>
-      </table>
-    <?php endif ?>
+  <h2>Material d'alumnes</h2>
+  <table>
+    <thead><tr><th>Correu</th><th>Nom</th><th>Taller</th><th>Estat</th><th>Alta</th></tr></thead>
+    <tbody>
+    <?php foreach ($docs as $c): ?>
+      <tr><td><?= htmlspecialchars((string)$c['email']) ?></td><td><?= htmlspecialchars((string)$c['nom']) ?></td><td><?= htmlspecialchars((string)$c['taller']) ?></td><td><?= htmlspecialchars((string)$c['estat']) ?></td><td><?= htmlspecialchars(substr((string)($c['confirmat'] ?: $c['creat']), 0, 10)) ?></td></tr>
+    <?php endforeach ?>
+    <?php if (!$docs): ?><tr><td colspan="5" style="color:var(--ink3)">Encara no hi ha descàrregues.</td></tr><?php endif ?>
+    </tbody>
+  </table>
 
-    <?php if (!empty($waitContacts['contacts'])): ?>
-      <h2>Waitlist tallers — contactes</h2>
-      <table>
-        <thead><tr><th>Correu</th><th>Alta</th></tr></thead>
-        <tbody>
-        <?php foreach ($waitContacts['contacts'] as $c): ?>
-          <tr><td><?= htmlspecialchars($c['email'] ?? '') ?></td><td><?= htmlspecialchars(substr((string)($c['createdAt'] ?? ''), 0, 10)) ?></td></tr>
-        <?php endforeach ?>
-        </tbody>
-      </table>
-    <?php endif ?>
+  <h2>Llista d'espera</h2>
+  <table>
+    <thead><tr><th>Correu</th><th>Taller</th><th>Estat</th><th>Data</th></tr></thead>
+    <tbody>
+    <?php foreach ($wait as $c): ?>
+      <tr><td><?= htmlspecialchars((string)$c['email']) ?></td><td><?= htmlspecialchars((string)$c['taller_nom']) ?></td><td><?= htmlspecialchars((string)$c['estat']) ?></td><td><?= htmlspecialchars((string)$c['data_inscripcio']) ?></td></tr>
+    <?php endforeach ?>
+    <?php if (!$wait): ?><tr><td colspan="4" style="color:var(--ink3)">Encara no hi ha ningú.</td></tr><?php endif ?>
+    </tbody>
+  </table>
 
-    <p class="note">Dades en directe de l'API de Brevo. Recarrega la pàgina per actualitzar-les.</p>
-  <?php endif ?>
+  <p class="note">Dades locals de <code>admin/vals.db</code> (SQLite). Recarrega la pàgina per actualitzar-les.</p>
 </div>
 <?php endif ?>
 </body>

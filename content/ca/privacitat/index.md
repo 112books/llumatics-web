@@ -56,7 +56,7 @@ No recollim dades especialment protegides (salut, ideologia, origen racial, etc.
 Les vostres dades **no es cedeixen a tercers**, excepte:
 
 - Quan existeixi una obligació legal
-- A **Brevo SAS** (antic Sendinblue), empresa francesa sotmesa al RGPD, que actua com a encarregat del tractament en la gestió del butlletí i les llistes d'espera. Brevo compta amb certificació ISO 27001 i clàusules contractuals estàndard per a transferències internacionals. Podeu consultar la seva política de privacitat a [brevo.com/legal/privacypolicy](https://www.brevo.com/legal/privacypolicy/).
+- No cedim les dades a cap servei extern per al butlletí ni per a les llistes d'espera: les desa el nostre propi servidor (base de dades SQLite) i els correus surten pel servidor de correu del domini.
 
 ---
 

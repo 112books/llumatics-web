@@ -58,6 +58,7 @@ newsletter_title: "Llum a la teva safata d'entrada"
 newsletter_desc: "Nous tallers, reflexions sobre fotografia i notícies del laboratori. Sense soroll."
 newsletter_placeholder: "el teu correu"
 newsletter_cta: "Subscriure'm"
+newsletter_ok: "Fet! Revisa el correu per confirmar la subscripció."
 
 private_title: "Contingut per a alumnes"
 private_desc: "Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir."

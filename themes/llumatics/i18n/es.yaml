@@ -58,6 +58,7 @@ newsletter_title: "Luz en tu bandeja de entrada"
 newsletter_desc: "Nuevos talleres, reflexiones sobre fotografía y noticias del laboratorio. Sin ruido."
 newsletter_placeholder: "tu correo"
 newsletter_cta: "Suscribirme"
+newsletter_ok: "¡Hecho! Revisa tu correo para confirmar la suscripción."
 
 private_title: "Contenido para alumnos"
 private_desc: "Este material es exclusivo para los alumnos del taller. Introduce tu correo para acceder."

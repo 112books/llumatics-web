@@ -4,6 +4,7 @@ session_start();
 define('ADMIN_PASSWORD', 'LinuxBCN2026');
 define('DB_PATH',        __DIR__ . '/vals.db');
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/../mailer.php';
 
 /* ── Auth ─────────────────────────────────────────────── */
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pwd'])) {
@@ -34,37 +35,8 @@ function db(): PDO {
     return $pdo;
 }
 
-/* ── SMTP ─────────────────────────────────────────────── */
-function smtp_send(string $to, string $from, string $fromName, string $subject, string $body): bool {
-    $ctx  = stream_context_create(['ssl' => ['verify_peer' => true, 'verify_peer_name' => true, 'allow_self_signed' => false]]);
-    $conn = @stream_socket_client(SMTP_HOST . ':' . SMTP_PORT, $errno, $errstr, 30, STREAM_CLIENT_CONNECT, $ctx);
-    if (!$conn) return false;
-    stream_set_timeout($conn, 30);
-    smtp_r($conn);
-    smtp_c($conn, 'EHLO llumatics.com');
-    fputs($conn, "AUTH LOGIN\r\n"); smtp_r($conn);
-    fputs($conn, base64_encode(SMTP_USER) . "\r\n"); smtp_r($conn);
-    fputs($conn, base64_encode(SMTP_PASS) . "\r\n");
-    if (strpos(smtp_r($conn), '235') === false) { fclose($conn); return false; }
-    smtp_c($conn, "MAIL FROM:<$from>");
-    smtp_c($conn, "RCPT TO:<$to>");
-    fputs($conn, "DATA\r\n"); smtp_r($conn);
-    $enc_s = '=?UTF-8?B?' . base64_encode($subject) . '?=';
-    $enc_n = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
-    $msg   = "From: $enc_n <$from>\r\nTo: $to\r\nSubject: $enc_s\r\nMIME-Version: 1.0\r\n"
-           . "Content-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n"
-           . $body . "\r\n.\r\n";
-    fputs($conn, $msg);
-    $ok = strpos(smtp_r($conn), '250') !== false;
-    fputs($conn, "QUIT\r\n"); fclose($conn);
-    return $ok;
-}
-function smtp_c($conn, string $cmd): string { fputs($conn, "$cmd\r\n"); return smtp_r($conn); }
-function smtp_r($conn): string {
-    $r = '';
-    while ($l = fgets($conn, 512)) { $r .= $l; if (isset($l[3]) && $l[3] === ' ') break; }
-    return $r;
-}
+/* ── Correu ───────────────────────────────────────────── */
+// Els enviaments surten pel MTA local amb la plantilla corporativa (mailer.php).
 
 /* ── Actions ──────────────────────────────────────────── */
 if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -97,14 +69,17 @@ if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($action === 'avisa') {
         $v = $db->query("SELECT * FROM waitlist WHERE id=" . (int)$_POST['id'])->fetch(PDO::FETCH_ASSOC);
         if ($v) {
+            $p = 'margin:0 0 16px;font-size:16px;line-height:1.7;';
             $subject = "Places obertes — " . $v['taller_nom'] . " · Llumàtics";
-            $body    = "Hola,\n\n"
-                     . "T'escrivim perquè et vas apuntar a la llista d'espera del taller \"{$v['taller_nom']}\".\n\n"
+            $body    = '<p style="' . $p . '">Hola,</p>'
+                     . '<p style="' . $p . '">T\'escrivim perquè et vas apuntar a la llista d\'espera del taller «' . llum_e($v['taller_nom']) . '».</p>'
+                     . '<p style="' . $p . '">Tenim dates disponibles. Escriu-nos a <a href="mailto:hola@llumatics.com" style="color:#1a1a1a;">hola@llumatics.com</a> per confirmar.</p>';
+            $text    = "Hola,\n\nT'escrivim perquè et vas apuntar a la llista d'espera del taller «" . $v['taller_nom'] . "».\n\n"
                      . "Tenim dates disponibles. Escriu-nos a hola@llumatics.com per confirmar.\n\n"
-                     . "Joan — Llumàtics\nhttps://llumatics.com\n"
-                     . "\n--\nReps aquest missatge perquè vas sol·licitar informació sobre el taller \"{$v['taller_nom']}\".\n"
+                     . "Joan — Llumàtics\nhttps://llumatics.com\n\n"
                      . "Per donar-te de baixa, respon amb l'assumpte \"Baixa\".\n";
-            $sent = smtp_send($v['email'], MAIL_FROM, MAIL_FROM_NAME, $subject, $body);
+            $sent = llum_send_html($v['email'], $subject, $subject, $body, $text,
+                        llum_button('mailto:hola@llumatics.com', 'Escriu-nos'));
             if ($sent) {
                 $db->prepare("UPDATE waitlist SET estat='contactat', notes=? WHERE id=?")
                    ->execute(["Avis enviat " . date('Y-m-d'), $v['id']]);
