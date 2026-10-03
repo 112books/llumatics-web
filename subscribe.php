@@ -146,5 +146,6 @@ if ($taller !== '') {
     $text = "Hola" . ($nom !== '' ? " $nom" : '') . ",\n\nConfirma la teva subscripció al butlletí:\n$conf\n";
 }
 
-llum_send_html($email, $subject, $title, $body, $text, llum_button($conf, $cta_label), '', $idioma);
+// Butlletí = comunicació comercial (LSSI complet); material = transaccional.
+llum_send_html($email, $subject, $title, $body, $text, llum_button($conf, $cta_label), '', $idioma, ($taller === ''));
 sub_json(['ok' => true]);

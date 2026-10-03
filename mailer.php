@@ -35,30 +35,38 @@ function llum_rows(array $rows): string {
     return $html . '</table>';
 }
 
-/** Text legal (RGPD/LOPDGDD + LSSI) per al peu, segons l'idioma. */
-function llum_legal_footer(string $lang = 'ca'): string {
+/**
+ * Text legal del peu (RGPD/LOPDGDD).
+ * $commercial = false → mínim transaccional (responsable + drets + privacitat).
+ * $commercial = true  → afegeix la identificació LSSI (NIF i domicili) i la baixa.
+ */
+function llum_legal_footer(string $lang = 'ca', bool $commercial = false): string {
     $from = LLUM_MAIL_FROM;
-    $id   = 'Llumàtics · Joan Martínez Serres · NIF 38121766W · Nau Bostik, Ferran Turné 1-11 · 08027 Barcelona';
     $mail = '<a href="mailto:' . $from . '" style="color:#b9b2a6;">' . $from . '</a>';
     $purl = LLUM_SITE_URL . ($lang === 'es' ? '/es' : ($lang === 'en' ? '/en' : '')) . '/privacitat/';
     $priv = '<a href="' . $purl . '" style="color:#b9b2a6;text-decoration:underline;">';
+    $id   = 'Llumàtics · Joan Martínez Serres · NIF 38121766W · Nau Bostik, Ferran Turné 1-11 · 08027 Barcelona';
+
     if ($lang === 'es') {
-        return $id . ' · ' . $mail . '<br>'
-             . 'Responsable del tratamiento. Derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición en la '
-             . $priv . 'política de privacidad</a> · Baja: responde con «Baja».';
+        $base = 'Derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición en la '
+              . $priv . 'política de privacidad</a>.';
+        if (!$commercial) { return 'Llumàtics · ' . $mail . '<br>' . $base; }
+        return $id . ' · ' . $mail . '<br>Responsable del tratamiento. ' . $base . ' Baja: responde con «Baja».';
     }
     if ($lang === 'en') {
-        return $id . ' · ' . $mail . '<br>'
-             . 'Data controller. Rights of access, rectification, erasure, restriction, portability and objection in our '
-             . $priv . 'privacy policy</a> · To unsubscribe, just reply to this email.';
+        $base = 'Rights of access, rectification, erasure, restriction, portability and objection in our '
+              . $priv . 'privacy policy</a>.';
+        if (!$commercial) { return 'Llumàtics · ' . $mail . '<br>' . $base; }
+        return $id . ' · ' . $mail . '<br>Data controller. ' . $base . ' To unsubscribe, just reply to this email.';
     }
-    return $id . ' · ' . $mail . '<br>'
-         . 'Responsable del tractament. Drets d\'accés, rectificació, supressió, limitació, portabilitat i oposició a la '
-         . $priv . 'política de privacitat</a> · Baixa: respon amb «Baixa».';
+    $base = 'Drets d\'accés, rectificació, supressió, limitació, portabilitat i oposició a la '
+          . $priv . 'política de privacitat</a>.';
+    if (!$commercial) { return 'Llumàtics · ' . $mail . '<br>' . $base; }
+    return $id . ' · ' . $mail . '<br>Responsable del tractament. ' . $base . ' Baixa: respon amb «Baixa».';
 }
 
 /** Plantilla HTML corporativa (logo + cos + CTA + peu). */
-function llum_email_html(string $title, string $bodyHtml, string $ctaHtml = '', string $lang = 'ca'): string {
+function llum_email_html(string $title, string $bodyHtml, string $ctaHtml = '', string $lang = 'ca', bool $commercial = false): string {
     $logo = LLUM_SITE_URL . '/images/email/llumatics-logo.png';
     $site = LLUM_SITE_URL;
     $from = LLUM_MAIL_FROM;
@@ -67,7 +75,7 @@ function llum_email_html(string $title, string $bodyHtml, string $ctaHtml = '', 
           : '<tr><td style="height:24px;"></td></tr>';
     $t = llum_e($title);
     $htmlLang = in_array($lang, ['ca', 'es', 'en'], true) ? $lang : 'ca';
-    $legal    = llum_legal_footer($htmlLang);
+    $legal    = llum_legal_footer($htmlLang, $commercial);
     return <<<HTML
 <!DOCTYPE html>
 <html lang="{$htmlLang}">
@@ -129,6 +137,6 @@ function llum_send(string $to, string $subject, string $text, string $html, stri
 
 /** Drecera: embolcalla en la plantilla corporativa i envia. */
 function llum_send_html(string $to, string $subject, string $title, string $bodyHtml,
-                        string $text, string $ctaHtml = '', string $replyTo = '', string $lang = 'ca'): bool {
-    return llum_send($to, $subject, $text, llum_email_html($title, $bodyHtml, $ctaHtml, $lang), $replyTo);
+                        string $text, string $ctaHtml = '', string $replyTo = '', string $lang = 'ca', bool $commercial = false): bool {
+    return llum_send($to, $subject, $text, llum_email_html($title, $bodyHtml, $ctaHtml, $lang, $commercial), $replyTo);
 }

@@ -78,8 +78,9 @@ if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
                      . "Tenim dates disponibles. Escriu-nos a hola@llumatics.com per confirmar.\n\n"
                      . "Joan — Llumàtics\nhttps://llumatics.com\n\n"
                      . "Per donar-te de baixa, respon amb l'assumpte \"Baixa\".\n";
+            // Avís de places obertes = comunicació comercial (LSSI complet).
             $sent = llum_send_html($v['email'], $subject, $subject, $body, $text,
-                        llum_button('mailto:hola@llumatics.com', 'Escriu-nos'));
+                        llum_button('mailto:hola@llumatics.com', 'Escriu-nos'), '', 'ca', true);
             if ($sent) {
                 $db->prepare("UPDATE waitlist SET estat='contactat', notes=? WHERE id=?")
                    ->execute(["Avis enviat " . date('Y-m-d'), $v['id']]);
