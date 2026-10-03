@@ -395,6 +395,17 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 
 ## Registre de canvis
 
+### 2026-10-03 — Correu 100% local (MTA Dinahosting) + plantilla HTML, fora Brevo i web3forms
+
+- **`static/mailer.php`** (nou) — plantilla corporativa (logo + peu) i enviament multipart/alternative amb `mail()` pel MTA local.
+- **`static/form-handler.php`** — avís intern i confirmació d'«Avisa'm» pel MTA local; tipus nous `contacte` i correus del val-regal; anti-bot (origen + límit per IP) i sense duplicats. Ara versionat (sense credencials).
+- **`static/subscribe.php`** (nou) — subscripció local (butlletí + material d'alumnes) amb doble opt-in a SQLite (`admin/vals.db`), confirmació i baixa.
+- **Formularis** — `newsletter.html`, `footer.html`, `private.html` i `main.js` connectats a `subscribe.php`; `contacte/single.html` i `gift.html` a `form-handler.php`. Fora `web3forms`.
+- **Admin** — `alumnes.php`, `vals.php` i `subscriptors.php` sense Brevo; `config.php` només amb `MAIL_*`.
+- **Config/legal** — `hugo.toml`, `.htaccess`, `humans.txt` i privacitat/cookies (CA/ES/EN) sense Brevo ni web3forms.
+- **Assets** — `static/images/email/llumatics-logo.png` (+ `@2x`), generat de l'SVG.
+- **Verificat** — flux `Avisa'm`, subscripció (alta/confirmació/baixa), contacte i val-regal en directe; commits `91740112` i `5de6ca7c`.
+
 ### 2026-10-03 (nit) — Guia de veu i terminologia aplicada + descripcions
 
 - **Guia** — `docs/manuals/veu-terminologia-llumatics.md` (nova) + regla a *Normes per editar* (química al cos, analògica a `<title>`/`description`).
@@ -714,6 +725,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 
 ### Qualitat i acabats
+- [ ] **Logo dels correus** — el PNG ve de `llumatics-logo.svg`, que no porta «Fotoespai» i queda desequilibrat; redissenyar el logo i regenerar `static/images/email/llumatics-logo.png` (+ `@2x`).
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
