@@ -314,6 +314,7 @@
             valReg.append('paypal_order',    details.id);
             valReg.append('paypal_payer',    details.payer.email_address);
             valReg.append('missatge',        missatge);
+            valReg.append('lang',            document.documentElement.lang || 'ca');
 
             fetch('/form-handler.php', { method: 'POST', body: valReg })
               .catch(function () {})

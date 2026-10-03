@@ -12,6 +12,7 @@
     </p>
 
     <form class="newsletter-form" data-subscribe-form data-ok="{{ i18n "newsletter_ok" }}" style="max-width:480px; margin-inline:auto;">
+      <input type="hidden" name="idioma" value="{{ site.Language.Lang }}">
       <input type="text" name="website" value="" tabindex="-1" autocomplete="off" style="display:none;" aria-hidden="true">
       <input type="email" name="email" required autocomplete="email"
              placeholder="{{ i18n "newsletter_placeholder" }}"
