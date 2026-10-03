@@ -22,9 +22,9 @@ Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada e
 | CSS | Vanilla CSS amb custom properties (cap framework) |
 | JS | Vanilla JS mínim |
 | Idiomes | CA (per defecte), ES, EN |
-| Formularis | Tally.so (embed iframes) |
-| Newsletter | Brevo (API + formulari Tally) |
-| PDF alumnes | Make.com → Pandoc (pipeline extern) |
+| Formularis | PHP propi pel MTA local de Dinahosting (vegeu `docs/manuals/correu-local.md`) |
+| Newsletter | Local: SQLite + doble opt-in (`static/subscribe.php`) |
+| PDF alumnes | Generació al navegador (`window.print()`) |
 | DNS/Domini | Dinahosting |
 
 ---
@@ -170,16 +170,12 @@ draft: false
 ---
 ```
 
-#### Flux de generació de PDF personalitzat
-1. Alumne accedeix a `/tallers/[slug]/privat/`
-2. Omple formulari Tally (nom + email + opt-in newsletter)
-3. Tally fa webhook a Make.com
-4. Make.com:
-   - Agafa el fitxer `.md` del curs de l'API del repo (o un template)
-   - Injecta el nom de l'alumne al principi i al peu
-   - Executa Pandoc → genera PDF
-   - Envia PDF per email a l'alumne
-   - Afegeix contacte a Brevo (amb tag del curs)
+#### Flux del material d'alumnes (local)
+1. L'alumne accedeix a `/tallers/[slug]/privat/`
+2. Omple el formulari (nom + email + idioma + opt-in newsletter + RGPD)
+3. `POST /subscribe.php` → desa a la taula `subscribers` (SQLite) i envia el correu de confirmació pel MTA local
+4. Confirma des del correu → `GET /subscribe.php?confirm=TOKEN` → redirecció a `/tallers/[slug]/privat/doc/?nom=...`
+5. La documentació es mostra al navegador amb el nom injectat i s'imprimeix/desa com a PDF (`window.print()`)
 
 #### Peu del PDF (plantilla)
 ```
