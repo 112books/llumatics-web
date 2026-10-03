@@ -400,7 +400,7 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 - **Admin** — `alumnes.php`, `vals.php` i `subscriptors.php` sense Brevo; `config.php` només amb `MAIL_*`.
 - **Config/legal** — `hugo.toml`, `.htaccess`, `humans.txt` i privacitat/cookies (CA/ES/EN) sense Brevo ni web3forms.
 - **Assets** — `static/images/email/llumatics-logo.png` (+ `@2x`), generat de l'SVG.
-- **Peu legal RGPD/LSSI** — `llum_legal_footer()` (CA/ES/EN) en una sola línia discreta: identificació del titular (nom, **NIF** i domicili, LSSI), drets i enllaç a la privacitat de l'idioma, i baixa; l'idioma es propaga des de la subscripció, el val-regal i els formularis de butlletí.
+- **Peu legal en dos models** — `llum_legal_footer()` (CA/ES/EN): **transaccional** (responsable + drets + enllaç a la privacitat) i **comercial** (+ nom, **NIF** i domicili per LSSI + baixa). El comercial s'aplica al butlletí i als avisos de places; la resta, transaccional. L'idioma es propaga des de la subscripció, el val-regal i els formularis de butlletí.
 - **Verificat** — flux `Avisa'm`, subscripció (alta/confirmació/baixa), contacte i val-regal en directe; commits `91740112` i `5de6ca7c`.
 
 ### 2026-10-03 (nit) — Guia de veu i terminologia aplicada + descripcions

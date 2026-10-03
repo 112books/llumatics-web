@@ -21,11 +21,14 @@ pels filtres de correu externs (SpamCop/Bayes) que abans marcaven els avisos com
 
 ## `mailer.php`
 
-- `llum_email_html($title, $bodyHtml, $ctaHtml = '')` → plantilla completa (logo, peu amb adreça i contacte).
+- `llum_email_html($title, $bodyHtml, $ctaHtml = '', $lang = 'ca', $commercial = false)` → plantilla completa (logo + peu legal).
 - `llum_button($href, $label)` → botó corporatiu.
 - `llum_rows(array $k => $v)` → taula clau/valor (valors ja escapats amb `llum_e()`).
+- `llum_legal_footer($lang = 'ca', $commercial = false)` → text legal del peu:
+  - `$commercial = false` (transaccional): responsable + drets + enllaç a la privacitat.
+  - `$commercial = true` (comercial): afegeix **NIF i domicili** (LSSI) i la baixa.
 - `llum_send($to, $subject, $text, $html, $replyTo = '')` → multipart text+HTML pel MTA local.
-- `llum_send_html($to, $subject, $title, $bodyHtml, $text, $ctaHtml = '', $replyTo = '')` → drecera.
+- `llum_send_html($to, $subject, $title, $bodyHtml, $text, $ctaHtml = '', $replyTo = '', $lang = 'ca', $commercial = false)` → drecera.
 - `llum_e($s)` → `htmlspecialchars`.
 
 Constants: `LLUM_MAIL_FROM` = `hola@llumatics.com`, `LLUM_MAIL_FROM_NAME` = `Llumàtics`,
