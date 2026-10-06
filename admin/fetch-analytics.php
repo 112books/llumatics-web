@@ -94,6 +94,7 @@ $refs_raw = gc_fetch('/stats/toprefs',   array_merge($base_params, ['limit' => 2
 $brow_raw = gc_fetch('/stats/browsers',  array_merge($base_params, ['limit' => 10])); usleep(400000);
 $sys_raw  = gc_fetch('/stats/systems',   array_merge($base_params, ['limit' => 10])); usleep(400000);
 $size_raw = gc_fetch('/stats/sizes',     array_merge($base_params, ['limit' => 10])); usleep(400000);
+$camp_raw = gc_fetch('/stats/campaigns', $base_params); usleep(400000);
 $loc_raw  = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 20]));
 
 // ── Processa hits ─────────────────────────────────────────────────────────────
@@ -170,6 +171,16 @@ foreach ($hits_list as $h) {
     }
 }
 
+// ── Campanyes de GoatCounter (links amb ?campaign= o ?utm_campaign=) ──────────
+$gc_campaigns = [];
+foreach (($camp_raw['stats'] ?? []) as $c) {
+    $count = (int)($c['count'] ?? 0);
+    if ($count > 0) {
+        $gc_campaigns[] = ['name' => $c['name'] ?? $c['id'] ?? '(sense nom)', 'count' => $count];
+    }
+}
+usort($gc_campaigns, fn($a, $b) => $b['count'] - $a['count']);
+
 // ── Sortida ───────────────────────────────────────────────────────────────────
 $output = [
     'generated'    => gmdate('Y-m-d\TH:i:s\Z'),
@@ -179,6 +190,7 @@ $output = [
     'hits_by_day'  => $hbd_arr,
     'hits'         => array_slice($hits_list, 0, 300),
     'campaigns'    => $camp,
+    'gc_campaigns' => $gc_campaigns,
     'by_lang'      => $by_lang,
     'by_section'   => $by_section,
     'refs'         => $refs_list,
