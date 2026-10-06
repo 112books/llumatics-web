@@ -517,6 +517,13 @@
       <h2 class="section-title">pàgines més visitades</h2>
       <div id="pages-wrap" class="bars"></div>
 
+      <h2 class="section-title">campanyes</h2>
+      <div id="campaigns-wrap" class="bars"></div>
+      <div class="refs-info" id="campaigns-empty" style="display:none">
+        Les campanyes s'omplen quan un enllaç extern porta <code>?campaign=…</code>
+        (p. ex. els enllaços de Nau Bostik).
+      </div>
+
       <h2 class="section-title">d'on venen les visites</h2>
       <div id="refs-wrap"></div>
       <div class="refs-info" id="refs-empty" style="display:none">
@@ -752,6 +759,7 @@ function renderAll(data) {
   renderSections(data);
   renderTallers(data);
   renderPages(data);
+  renderCampaigns(data);
   renderRefs(data);
   renderLocations(data);
   renderDevices(data);
@@ -941,6 +949,15 @@ function renderPages(data) {
 
 function renderLocations(data) {
   renderBars('locations-wrap', (data.locations || []).slice(0, 15), 'name');
+}
+
+function renderCampaigns(data) {
+  const items = (data.gc_campaigns || []).map(c => ({ name: c.name, count: c.count }));
+  const el    = document.getElementById('campaigns-wrap');
+  const empty = document.getElementById('campaigns-empty');
+  if (!items.length) { el.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  renderBars('campaigns-wrap', items, 'name');
 }
 
 function renderRefs(data) {
