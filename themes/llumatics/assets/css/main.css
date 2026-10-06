@@ -2612,6 +2612,7 @@ a.recorregut-stop__name:hover {
   border-radius: 0;
 }
 .gallery__item:hover img { transform: scale(1.04); }
+.gallery__item picture { display: contents; }
 
 /* Galeria per a espais i altres pàgines de contingut */
 .gallery-grid {
