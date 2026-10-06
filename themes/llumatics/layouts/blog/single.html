@@ -37,12 +37,24 @@
   {{ with .Params.images }}
   <div class="course-single__gallery gallery-collage" style="margin-bottom:2rem;">
     {{ range $i, $img := . }}
-    {{ $gsrc := printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $img) }}
+    {{- $base := strings.TrimPrefix "/" $img -}}
+    {{- $thumb := printf "%s/thumbs/%s" (path.Dir $base) (path.Base $base) -}}
+    {{- $thumbNoExt := strings.TrimSuffix (path.Ext $thumb) $thumb -}}
+    {{- $hasThumb := fileExists (printf "static/%s" $thumb) -}}
+    {{- $hasThumbWebp := fileExists (printf "static/%s.webp" $thumbNoExt) -}}
+    {{ $gsrc := printf "%s%s" site.BaseURL $base }}
     <button type="button" class="gallery__item js-lightbox-trigger"
             data-src="{{ $gsrc }}"
             data-gallery="{{ $.File.ContentBaseName }}"
             aria-label="{{ i18n "lightbox_enlarge" }}">
-      <img src="{{ $gsrc }}" {{ with index site.Data.image_dimensions (strings.TrimPrefix "/" $img) }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ $.Title }} ({{ add $i 1 }})" loading="lazy">
+      {{- if $hasThumb }}
+      <picture>
+        {{- with $hasThumbWebp }}<source srcset="{{ printf "%s%s.webp" site.BaseURL $thumbNoExt }}" type="image/webp">{{ end }}
+        <img src="{{ printf "%s%s" site.BaseURL $thumb }}" {{ with index site.Data.image_dimensions $base }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ $.Title }} ({{ add $i 1 }})" loading="lazy" decoding="async">
+      </picture>
+      {{- else }}
+      <img src="{{ $gsrc }}" {{ with index site.Data.image_dimensions $base }}width="{{ .w }}" height="{{ .h }}"{{ end }} alt="{{ $.Title }} ({{ add $i 1 }})" loading="lazy" decoding="async">
+      {{- end }}
     </button>
     {{ end }}
   </div>
