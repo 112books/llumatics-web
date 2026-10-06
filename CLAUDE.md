@@ -336,6 +336,22 @@ images:
 
 El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gallery__item`). No cal afegir res.
 
+### Miniatures de galeria (rendiment)
+
+Les galeries (`images:` al frontmatter) es mostren en un collage d'uns 100px, així que **no** s'hi ha de servir la imatge gran. Les plantilles (`tallers/single.html` i `blog/single.html`) busquen una miniatura a `<dir>/thumbs/<nom>.jpg` (+ `.webp`): si existeix la serveixen amb `<picture>`; si no, cauen a l'original.
+
+Genera/actualitza totes les miniatures de cop (descobreix sol els blocs `images:` de tallers i blog, CA/ES/EN):
+
+```bash
+python3 scripts/generate-thumbs.py
+```
+
+- Mida: costat més llarg 360px · qualitat 80 · JPEG + WebP.
+- Sortida: `static/images/<dir>/thumbs/` (es versionen al repo).
+- El lightbox segueix carregant la imatge gran original (`data-src`).
+- També accepta directoris o fitxers concrets: `python3 scripts/generate-thumbs.py static/images/blog`.
+- **Conveni:** executar-lo sempre després d'afegir o canviar imatges d'una galeria.
+
 ---
 
 ## Vals-regal
@@ -390,6 +406,12 @@ El CSS de la galeria ja existeix a `main.css` (`.course-single__gallery`, `.gall
 ---
 
 ## Registre de canvis
+
+### 2026-10-06 — Miniatures de galeria (rendiment) + campanyes GoatCounter al panell
+
+- **Miniatures de galeria** — nou `scripts/generate-thumbs.py` (descobreix els blocs `images:` de tallers/blog CA/ES/EN sense arguments); 95 imatges miniaturitzades a `static/images/{tallers,blog,holga}/thumbs/` (JPEG+WebP 360px, q80). `tallers/single.html` i `blog/single.html` serveixen la miniatura amb `<picture>` i deixen la imatge gran al lightbox; CSS `.gallery__item picture { display: contents; }`. Galeries: 20,7 MB → 1,07 MB (WebP, ~19× menys).
+- **Panell admin** — `fetch-analytics.php` afegeix la clau `gc_campaigns` (GoatCounter) amb l'origen (`?ref=`/`?utm_source=`) per campanya; secció nova a `index.html` (pestanya Pàgines) i a `impacte.php`.
+- **Campanyes nau bostik** — verificat el tracking natiu de GoatCounter (`?campaign=` + `?ref=`) als enllaços de naubostik.com. Commits `e72488c1b`, `65dc2d9bb`, `3e68aab15`, `e1b97cfa3`.
 
 ### 2026-10-03 — Correu 100% local (MTA Dinahosting) + plantilla HTML, fora Brevo i web3forms
 
@@ -984,6 +1006,12 @@ hugo list all
 
 # Verificar el build sense errors
 hugo --templateMetricsHints
+
+# Generar miniatures de les galeries (JPEG + WebP 360px)
+python3 scripts/generate-thumbs.py
+
+# Generar WebP de les imatges principals (image: del frontmatter)
+python3 scripts/generate-webp.py
 ```
 
 ---

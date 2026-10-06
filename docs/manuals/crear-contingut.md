@@ -139,6 +139,14 @@ static/images/tallers/nom-del-taller.jpg
 
 Format: jpg/webp · Mida: 1200×800px · Màx. 500KB
 
+**Galeria (`images:` al frontmatter):** un cop afegides les imatges, genera'n les miniatures:
+
+```bash
+python3 scripts/generate-thumbs.py
+```
+
+Això crea `static/images/tallers/thumbs/<nom>.jpg` i `.webp` (costat més llarg 360px, q80). Les plantilles de taller i blog les serveixen automàticament al collage; la imatge gran original es manté per al lightbox. Cal versionar les miniatures al repo (`git add static/images/.../thumbs/`).
+
 ---
 
 ### Pas 6 — Crear les pàgines privades d'alumnes
