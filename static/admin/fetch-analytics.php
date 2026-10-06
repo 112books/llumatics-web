@@ -172,12 +172,24 @@ foreach ($hits_list as $h) {
 }
 
 // ── Campanyes de GoatCounter (links amb ?campaign= o ?utm_campaign=) ──────────
+// Per a cada campanya, enriquim amb l'origen (paràmetre ?ref= / ?utm_source=).
 $gc_campaigns = [];
+$gc_limit     = 15; // màxim de campanyes amb detall d'origen (evita massa crides)
+$gc_i         = 0;
 foreach (($camp_raw['stats'] ?? []) as $c) {
     $count = (int)($c['count'] ?? 0);
-    if ($count > 0) {
-        $gc_campaigns[] = ['name' => $c['name'] ?? $c['id'] ?? '(sense nom)', 'count' => $count];
+    if ($count <= 0) continue;
+    $entry = ['name' => $c['name'] ?? $c['id'] ?? '(sense nom)', 'count' => $count, 'refs' => []];
+    $id    = (string)($c['id'] ?? '');
+    if ($id !== '' && $gc_i < $gc_limit) {
+        $det = gc_fetch('/stats/campaigns/' . rawurlencode($id), $base_params); usleep(300000);
+        foreach (($det['stats'] ?? []) as $r) {
+            $rc = (int)($r['count'] ?? 0);
+            if ($rc > 0) $entry['refs'][] = ['name' => $r['name'] ?? $r['id'] ?? '(directe)', 'count' => $rc];
+        }
     }
+    $gc_campaigns[] = $entry;
+    $gc_i++;
 }
 usort($gc_campaigns, fn($a, $b) => $b['count'] - $a['count']);
 

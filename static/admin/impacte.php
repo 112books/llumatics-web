@@ -162,6 +162,27 @@ function pct(int $n, int $total): string { return $total > 0 ? round(100*$n/$tot
     <div class="card"><div class="card-label">Per idioma</div><div class="card-value" style="font-size:1.1rem">CA <?= (int)$quiz['by_lang']['ca'] ?> · ES <?= (int)$quiz['by_lang']['es'] ?> · EN <?= (int)$quiz['by_lang']['en'] ?></div></div>
   </div>
 
+  <h2>Campanyes d'origen (GoatCounter)</h2>
+  <table>
+    <thead><tr><th>Campanya</th><th>Origen</th><th class="num">Visites</th></tr></thead>
+    <tbody>
+    <?php $gc_camps = is_array($cache['gc_campaigns'] ?? null) ? $cache['gc_campaigns'] : []; ?>
+    <?php foreach ($gc_camps as $cp): ?>
+      <?php
+        $origen = '—';
+        if (!empty($cp['refs']) && is_array($cp['refs'])) {
+            $parts = [];
+            foreach ($cp['refs'] as $r) $parts[] = ($r['name'] ?? '?') . ' (' . (int)($r['count'] ?? 0) . ')';
+            $origen = implode(', ', $parts);
+        }
+      ?>
+      <tr><td><?= htmlspecialchars((string)($cp['name'] ?? '?')) ?></td><td><?= htmlspecialchars($origen) ?></td><td class="num"><?= (int)($cp['count'] ?? 0) ?></td></tr>
+    <?php endforeach ?>
+    <?php if (!$gc_camps): ?><tr><td colspan="3" class="muted">Cap campanya registrada encara. S'omplen amb enllaços que porten <code>?campaign=…</code>.</td></tr><?php endif ?>
+    </tbody>
+  </table>
+  <p class="note">Origen = paràmetre <code>?ref=</code> o <code>?utm_source=</code> de l'enllaç; la campanya, <code>?campaign=</code>.</p>
+
   <h2>Cursos nous / flash</h2>
   <table>
     <thead><tr><th>Curs</th><th class="num">Visites</th><th class="num">Úniques</th></tr></thead>

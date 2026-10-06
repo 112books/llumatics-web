@@ -952,7 +952,10 @@ function renderLocations(data) {
 }
 
 function renderCampaigns(data) {
-  const items = (data.gc_campaigns || []).map(c => ({ name: c.name, count: c.count }));
+  const items = (data.gc_campaigns || []).map(c => {
+    const refs = (c.refs || []).map(r => r.name).filter(Boolean);
+    return { name: refs.length ? c.name + ' · ' + refs.join(', ') : c.name, count: c.count };
+  });
   const el    = document.getElementById('campaigns-wrap');
   const empty = document.getElementById('campaigns-empty');
   if (!items.length) { el.innerHTML = ''; empty.style.display = 'block'; return; }
