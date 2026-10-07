@@ -10,7 +10,7 @@
       {{/* Logo */}}
       <a href="{{ printf "%s%s/" $siteRoot $langPfx }}" class="site-logo" aria-label="{{ .Site.Title }}">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
-          <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" aria-hidden="true" height="44" width="44">
+          <img src="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}" alt="" aria-hidden="true" height="44" width="44">
         {{ end }}
         <span class="site-logo__text">{{ .Site.Title }}</span>
       </a>

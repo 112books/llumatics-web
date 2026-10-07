@@ -147,7 +147,7 @@
 
     <a href="{{ "/" | absURL }}" class="e404__logo">
       {{ if fileExists "static/images/llumatics-logo.svg" }}
-        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" aria-hidden="true" width="56" height="56">
+        <img src="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}" alt="" aria-hidden="true" width="56" height="56">
       {{ end }}
       <span>{{ .Site.Title }}</span>
     </a>

@@ -86,11 +86,11 @@
 
 {{/* Favicon — el logo real és SVG. Abans apuntava a /images/logo.png, que no existia:
      404 a la capçalera de totes les pàgines. */}}
-<link rel="icon" type="image/svg+xml" href="{{ "images/llumatics-logo.svg" | absURL }}">
-<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}">
+<link rel="icon" type="image/svg+xml" href="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}">
+<link rel="icon" href="{{ "favicon.ico" | absURL }}?v={{ site.Params.logoVersion }}" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}?v={{ site.Params.logoVersion }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}?v={{ site.Params.logoVersion }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}?v={{ site.Params.logoVersion }}">
 
 {{/* humans.txt */}}
 <link rel="author" href="{{ "humans.txt" | absURL }}">
@@ -177,7 +177,7 @@
       "name" "Llumàtics"
       "description" "Escola de fotografia analògica a Barcelona. Tallers de revelat, laboratori fosc i formació tècnica en petit grup."
       "url" "https://llumatics.com"
-      "logo" "https://llumatics.com/images/llumatics-logo.svg"
+      "logo" (printf "https://llumatics.com/images/llumatics-logo.svg?v=%s" site.Params.logoVersion)
       "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
       "email" site.Params.contactEmail
       "foundingDate" "2017"

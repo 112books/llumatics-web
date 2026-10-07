@@ -7,7 +7,7 @@
 
       <div class="site-footer__brand">
         {{ if fileExists "static/images/llumatics-logo.svg" }}
-          <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="{{ .Site.Title }}" class="site-logo-img" width="56" height="56">
+          <img src="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}" alt="{{ .Site.Title }}" class="site-logo-img" width="56" height="56">
         {{ else }}
           <div style="font-family: var(--font-serif); font-size: 1.25rem; color: white; margin-bottom: 1rem;">{{ .Site.Title }}</div>
         {{ end }}

@@ -220,7 +220,7 @@
         }).addTo(map);
 
         var icon = L.icon({
-          iconUrl: '{{ "images/llumatics-logo.svg" | absURL }}',
+          iconUrl: '{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}',
           iconSize: [44, 44], iconAnchor: [22, 22], popupAnchor: [0, -26]
         });
         L.marker([lat, lng], { icon: icon }).addTo(map)

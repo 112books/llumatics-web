@@ -411,7 +411,8 @@ python3 scripts/generate-thumbs.py
 
 - **`static/images/llumatics-logo.svg`** — instal·lat el nou logotip rodó (`Logo-llumatics-rodo.svg`): disc de diafragma **gris clar `#E6E6E6`** amb la paraula «Llumàtics» a **`#474747` (72% de negre)**. Substitueix el logo anterior a header, footer, 404, password-gate, val-regal, mapa de contacte i JSON-LD. Fills en atribut (no dins de `style`), perquè ImageMagick els rasteritzi correctament.
 - **Assets derivats regenerats** des del nou SVG — correu `static/images/email/llumatics-logo.png` (240) + `@2x` (480), fons transparent; favicons `favicon.ico` (16/32/48), `favicon-16x16.png`, `favicon-32x32.png` i `apple-touch-icon.png` (180), fons blanc.
-- **Pendent** — push a `origin` (local `main` i `develop` ja apunten al mateix commit).
+- **Cache-busting** — param `logoVersion = "20261007"` a `hugo.toml` i query `?v={{ site.Params.logoVersion }}` a totes les referències (logo + favicons). Calia perquè el navegador tenia el SVG antic cachejat 1 any (`max-age=31536000` a `.htaccess`). En canvis futurs del logo, bumpjar `logoVersion`. Al JSON-LD el valor s'injecta amb `printf` (dins d'un `dict` la interpolació no s'avalua).
+- **Desplegat** — staging i producció (Actions `37682346941` i `37682687853`); verificat a `llumatics.com`.
 
 ### 2026-10-06 — Miniatures de galeria (rendiment) + campanyes GoatCounter al panell
 

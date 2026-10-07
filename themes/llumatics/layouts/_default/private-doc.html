@@ -51,7 +51,7 @@
     <div class="certificate__inner">
       <div class="certificate__brand">
         {{ $logo := .Site.Params.logo }}
-        {{ if $logo }}<img src="{{ $logo }}" alt="" class="certificate__logo-img">{{ end }}
+        {{ if $logo }}<img src="{{ $logo }}?v={{ site.Params.logoVersion }}" alt="" class="certificate__logo-img">{{ end }}
         <span class="certificate__brand-name">Llumàtics</span>
         {{ with .Params.partner_logo }}
         <span class="certificate__partner-x" aria-hidden="true">×</span>

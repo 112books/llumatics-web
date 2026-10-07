@@ -121,7 +121,7 @@
     {{/* ── Val imprimible ── */}}
     <div id="gift-voucher-print" class="gift-voucher-print">
       <div class="gvp__header">
-        <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}" alt="Llumàtics" width="56" height="56">
+        <img class="gvp__logo" src="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}" alt="Llumàtics" width="56" height="56">
         <span class="gvp__name">Llumàtics</span>
       </div>
       <div class="gvp__body">
@@ -155,7 +155,7 @@
   <div class="gift-preview-section">
     <div class="gift-card-preview">
       <div class="gift-card-preview__bg" aria-hidden="true">
-        <img src="{{ "images/llumatics-logo.svg" | absURL }}" alt="" width="56" height="56">
+        <img src="{{ "images/llumatics-logo.svg" | absURL }}?v={{ site.Params.logoVersion }}" alt="" width="56" height="56">
       </div>
       <div class="gift-card-preview__content">
         <div class="gift-card-preview__header">
