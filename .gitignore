@@ -12,3 +12,6 @@ waitlist.csv
 .taques-central/
 /form-handler.php
 static/admin/config.php
+
+# Orígens de disseny del logotip (Lora.zip és redundant amb Lora/)
+-Art/logo llumatics 2026/Lora.zip
