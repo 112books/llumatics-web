@@ -407,6 +407,12 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-10-07 — Nou logotip rodó (disc gris clar, text al 72% de negre) a tota la web
+
+- **`static/images/llumatics-logo.svg`** — instal·lat el nou logotip rodó (`Logo-llumatics-rodo.svg`): disc de diafragma **gris clar `#E6E6E6`** amb la paraula «Llumàtics» a **`#474747` (72% de negre)**. Substitueix el logo anterior a header, footer, 404, password-gate, val-regal, mapa de contacte i JSON-LD. Fills en atribut (no dins de `style`), perquè ImageMagick els rasteritzi correctament.
+- **Assets derivats regenerats** des del nou SVG — correu `static/images/email/llumatics-logo.png` (240) + `@2x` (480), fons transparent; favicons `favicon.ico` (16/32/48), `favicon-16x16.png`, `favicon-32x32.png` i `apple-touch-icon.png` (180), fons blanc.
+- **Pendent** — push a `origin` (local `main` i `develop` ja apunten al mateix commit).
+
 ### 2026-10-06 — Miniatures de galeria (rendiment) + campanyes GoatCounter al panell
 
 - **Miniatures de galeria** — nou `scripts/generate-thumbs.py` (descobreix els blocs `images:` de tallers/blog CA/ES/EN sense arguments); 95 imatges miniaturitzades a `static/images/{tallers,blog,holga}/thumbs/` (JPEG+WebP 360px, q80). `tallers/single.html` i `blog/single.html` serveixen la miniatura amb `<picture>` i deixen la imatge gran al lightbox; CSS `.gallery__item picture { display: contents; }`. Galeries: 20,7 MB → 1,07 MB (WebP, ~19× menys).
@@ -744,7 +750,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 
 ### Qualitat i acabats
-- [ ] **Logo dels correus** — el PNG ve de `llumatics-logo.svg`, que no porta «Fotoespai» i queda desequilibrat; redissenyar el logo i regenerar `static/images/email/llumatics-logo.png` (+ `@2x`).
+- [x] **Logo dels correus** — resolt (2026-10-07): nou logotip rodó al 72% de negre; regenerats `static/images/email/llumatics-logo.png` (240) + `@2x` (480) i tots els favicons des del nou SVG.
 - [ ] Responsive: revisió pendent (mòbil)
 - [ ] Traduccions ES i EN — pendent fins tenir CA ben polit
 - [ ] Connexió xarxes socials (Instagram embed o feed)
