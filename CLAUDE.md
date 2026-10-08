@@ -413,6 +413,12 @@ python3 scripts/generate-thumbs.py
 - **`static/images/blog/fotografia-analogica-o-quimica.jpg`** — optimitzada a partir de `quimica.jpg` (2500×1668, 2,5 MB) → **1200×800, 173 KB** (q82, stripped) + germà **`.webp`** (134 KB, cwebp q82).
 - **`data/image_dimensions.yaml`** — regenerat amb `scripts/update-image-dimensions.py` (525 imatges; +253 entrades de miniatures/WebP que faltaven).
 
+### 2026-10-08 (tarda) — Fix de les estadístiques del panell (`/admin/`)
+
+- **Símptoma** — el panell mostrava zero. Causa: un `fetch-analytics.php` que va fallar havia sobreescrit `analytics-cache.json` amb una caché buida (`total=0`); els logs del servidor ho confirmen (caché de només 1.006 B després d'un «↻ actualitzar»).
+- **`static/admin/fetch-analytics.php`** — `gc_fetch` amb **3 reintents** (backoff progressiu i espera de 3 s per a HTTP 429) i **guarda anti-zero**: si `hits` falla o el total surt 0 havent-hi caché prèvia >0, retorna 502 i **no sobreescriu** la caché.
+- **Desplegat** al VPS via `scp` (els fitxers `admin/` no van pel rsync de producció), amb backup `fetch-analytics.php.bak-20261008`.
+
 ### 2026-10-07 — Nou logotip rodó (disc gris clar, text al 72% de negre) a tota la web
 
 - **`static/images/llumatics-logo.svg`** — instal·lat el nou logotip rodó (`Logo-llumatics-rodo.svg`): disc de diafragma **gris clar `#E6E6E6`** amb la paraula «Llumàtics» a **`#474747` (72% de negre)**. Substitueix el logo anterior a header, footer, 404, password-gate, val-regal, mapa de contacte i JSON-LD. Fills en atribut (no dins de `style`), perquè ImageMagick els rasteritzi correctament.
