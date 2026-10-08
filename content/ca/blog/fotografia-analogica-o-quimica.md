@@ -2,6 +2,7 @@
 title: "Fotografia analògica o química? Per què a Llumàtics diem química"
 lead: "Els dos termes designen el mateix, però no fan la mateixa feina. Un serveix per buscar; l'altre per explicar què fem."
 description: "Per què a Llumàtics diem fotografia química i no analògica? La diferència entre els dos termes, explicada sense corregir ningú."
+image: "/images/blog/fotografia-analogica-o-quimica.jpg"
 seo_title: "Fotografia analògica o química? Per què diem química · Llumàtics"
 date: 2026-10-03
 tags: ["fotografia química", "fotografia analògica", "llenguatge", "laboratori"]
