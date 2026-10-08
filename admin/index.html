@@ -184,6 +184,16 @@
     .kpi-value { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--ink); line-height: 1; margin-bottom: .25rem; }
     .kpi-value.accent { color: var(--accent); }
     .kpi-sub { color: var(--ink3); font-size: 10px; letter-spacing: .04em; }
+    .kpi-note {
+      margin: -1rem 0 2rem;
+      padding: .7rem 1rem;
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      color: var(--ink2);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .kpi-note strong { color: var(--ink); }
 
     /* ── TABS ───────────────────────────────────────── */
     .tabs {
@@ -461,7 +471,7 @@
         <dd><div class="kpi-value" id="kpi-30d">—</div><div class="kpi-sub">últims 30 dies</div></dd>
       </div>
       <div class="kpi">
-        <dt>total any</dt>
+        <dt>total</dt>
         <dd><div class="kpi-value" id="kpi-total">—</div><div class="kpi-sub" id="sub-total"></div></dd>
       </div>
       <div class="kpi">
@@ -473,6 +483,8 @@
         <dd><div class="kpi-value" id="kpi-trend">—</div><div class="kpi-sub" id="sub-trend">28d vs 28d anterior</div></dd>
       </div>
     </dl>
+
+    <p class="kpi-note" id="stats-since" hidden></p>
 
     <!-- Tabs -->
     <div class="tabs" role="tablist" aria-label="Seccions">
@@ -746,7 +758,19 @@ function renderAll(data) {
   setText('kpi-7d',    fmt(set7));
   setText('kpi-30d',   fmt(mes30));
   setText('kpi-total', fmt(total));
-  setText('sub-total', p.start && p.end ? fmtPeriod(p.start, p.end) : '');
+
+  const first = hbd.find(d => d.count > 0) || hbd[0] || null;
+  setText('sub-total', first ? 'des de ' + fmtDateLong(first.date) : (p.start && p.end ? fmtPeriod(p.start, p.end) : ''));
+  const sinceEl = document.getElementById('stats-since');
+  if (sinceEl) {
+    if (first && first.date) {
+      sinceEl.hidden = false;
+      sinceEl.innerHTML = 'El seguiment d\'estadístiques (GoatCounter) va començar el <strong>' + fmtDateLong(first.date) +
+        '</strong>. Per això el total de «365 dies» encara no cobreix un any sencer i les xifres són més baixes del que semblaria.';
+    } else {
+      sinceEl.hidden = true;
+    }
+  }
 
   const daysWithData = hbd.filter(d => d.count > 0).length;
   setText('kpi-pps', daysWithData > 0 ? (total / daysWithData).toFixed(1) : '—');
@@ -1181,6 +1205,10 @@ function fmtDateShort(str) {
   if (!str) return '';
   const d = new Date(str + 'T12:00:00');
   return d.toLocaleDateString('ca-ES', { day: 'numeric', month: 'short' });
+}
+function fmtDateLong(str) {
+  if (!str) return '';
+  return new Date(str + 'T12:00:00').toLocaleDateString('ca-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 function fmtMonth(ym) {
   const [y, m] = ym.split('-');
