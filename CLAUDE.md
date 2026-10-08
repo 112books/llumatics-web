@@ -418,6 +418,7 @@ python3 scripts/generate-thumbs.py
 - **Símptoma** — el panell mostrava zero. Causa: un `fetch-analytics.php` que va fallar havia sobreescrit `analytics-cache.json` amb una caché buida (`total=0`); els logs del servidor ho confirmen (caché de només 1.006 B després d'un «↻ actualitzar»).
 - **`static/admin/fetch-analytics.php`** — `gc_fetch` amb **3 reintents** (backoff progressiu i espera de 3 s per a HTTP 429) i **guarda anti-zero**: si `hits` falla o el total surt 0 havent-hi caché prèvia >0, retorna 502 i **no sobreescriu** la caché.
 - **Desplegat** al VPS via `scp` (els fitxers `admin/` no van pel rsync de producció), amb backup `fetch-analytics.php.bak-20261008`.
+- **Nota d'inici de dades** — `static/admin/index.html`: el KPI «total» ara mostra «des de {data}» i una nota sota els KPIs informa que el seguiment de GoatCounter va començar el **2 de maig de 2026** (calculat dinàmicament de `hits_by_day`), perquè el total de «365 dies» no sembli anormalment baix.
 
 ### 2026-10-07 — Nou logotip rodó (disc gris clar, text al 72% de negre) a tota la web
 
