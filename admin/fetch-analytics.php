@@ -25,25 +25,33 @@ define('GC_TOKEN',  '1ocyv2uxc6caw1toqjtd0pqw231vj8tb843vpx611u5b0wkzm7dn');
 define('GC_BASE',   'https://llumatics.goatcounter.com/api/v0');
 define('CACHE_FILE', __DIR__ . '/analytics-cache.json');
 
-function gc_fetch(string $path, array $params = []): ?array {
+function gc_fetch(string $path, array $params = [], int $retries = 3): ?array {
     $url = GC_BASE . $path;
     if ($params) $url .= '?' . http_build_query($params);
-    $ch = curl_init($url);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 25,
-        CURLOPT_HTTPHEADER     => [
-            'Authorization: Bearer ' . GC_TOKEN,
-            'Accept: application/json',
-        ],
-    ]);
-    $body   = curl_exec($ch);
-    $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $err    = curl_error($ch);
-    curl_close($ch);
-    if ($body === false || $err || $status >= 400) return null;
-    $decoded = json_decode($body, true);
-    return is_array($decoded) ? $decoded : null;
+    for ($attempt = 1; $attempt <= $retries; $attempt++) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 25,
+            CURLOPT_HTTPHEADER     => [
+                'Authorization: Bearer ' . GC_TOKEN,
+                'Accept: application/json',
+            ],
+        ]);
+        $body   = curl_exec($ch);
+        $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $err    = curl_error($ch);
+        curl_close($ch);
+        if ($body !== false && !$err && $status < 400) {
+            $decoded = json_decode($body, true);
+            if (is_array($decoded)) return $decoded;
+        }
+        // 429 (rate limit) → espera més; altres errors → backoff progressiu.
+        if ($attempt < $retries) {
+            usleep($status === 429 ? 3000000 : 700000 * $attempt);
+        }
+    }
+    return null;
 }
 
 function extract_lang(string $path): string {
@@ -211,6 +219,22 @@ $output = [
     'systems'      => norm_items($sys_raw['stats']  ?? [], 'system'),
     'sizes'        => norm_items($size_raw['stats'] ?? [], 'size'),
 ];
+
+// ── Guarda anti-zero: si GoatCounter falla, NO sobreescriure una caché bona ───
+$prev_total = 0;
+if (is_file(CACHE_FILE)) {
+    $prev = json_decode((string)@file_get_contents(CACHE_FILE), true);
+    if (is_array($prev)) $prev_total = (int)($prev['total'] ?? 0);
+}
+if ($hits_raw === null || ($total === 0 && $prev_total > 0)) {
+    http_response_code(502);
+    echo json_encode([
+        'error'    => 'GoatCounter no ha retornat dades vàlides; es conserva la caché anterior.',
+        'total'    => $total,
+        'previous' => $prev_total,
+    ]);
+    exit;
+}
 
 $json = json_encode($output, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
