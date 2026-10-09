@@ -155,12 +155,16 @@ Exemple per a un taller de 4 hores:
 ---
 
 ### Material privat d'alumnes
-**Ruta:** `content/ca/tallers/[slug]/privat/index.md`
+
+Dos fitxers per taller, tots dos a `content/ca/privat/`:
+
+**Porta (formulari d'accés)** — `content/ca/privat/[slug].md`
 
 ```yaml
 ---
 title: "Material per a alumnes — [Nom del taller]"
 layout: "private"
+url: "/tallers/[slug]/privat/"
 course_ref: "[slug-del-taller]"
 noindex: true
 sitemap:
@@ -169,6 +173,25 @@ robots: "noindex, nofollow"
 draft: false
 ---
 ```
+
+**Documentació** — `content/ca/privat/[slug]-doc.md`
+
+```yaml
+---
+title: "[Nom del taller]"
+layout: "private-doc"
+url: "/tallers/[slug]/privat/doc/"
+course_ref: "[slug-del-taller]"
+image: "/images/tallers/[slug].jpg"
+noindex: true
+sitemap:
+  disable: true
+robots: "noindex, nofollow"
+draft: false
+---
+```
+
+> La fitxa del taller ha de portar `sense_doc: true` mentre la documentació sigui `draft: true`, perquè el botó de material no enllaci a un 404. En publicar-la, posar `sense_doc: false`.
 
 #### Flux del material d'alumnes (local)
 1. L'alumne accedeix a `/tallers/[slug]/privat/`
@@ -392,8 +415,8 @@ python3 scripts/generate-thumbs.py
 5. Afegir la imatge a `static/images/tallers/`
 6. Crear el material privat per alumnes:
    ```bash
-   # Crear manualment: content/ca/tallers/nom-taller/privat/index.md
-   # layout: "private", noindex: true
+   # Crear manualment a content/ca/privat/: [slug].md (porta) i [slug]-doc.md (documentació)
+   # layout: "private" / "private-doc", noindex: true, url: /tallers/[slug]/privat/...
    ```
 7. Crear entrada d'agenda si hi ha dates:
    ```bash
@@ -697,7 +720,7 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 - `layouts/_default/confirmat.html`: relay localStorage → /doc/
 - `layouts/_default/private-doc.html`: documentació + injecció nom + certificat
 - `content/ca/confirmat/_index.md`: pàgina relay
-- `content/ca/tallers/revelat-bn/privat/doc/index.md`: documentació completa revelat B/N
+- `content/ca/privat/revelat-bn-doc.md`: documentació completa revelat B/N
 - `main.css`: estils formulari, doc, certificat, @media print A4
 - i18n CA/ES/EN: 19 claus noves
 
@@ -746,7 +769,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 | revelats-experimentals | 🔶 | ❌ | 8h |
 | tutoria-fotografica | 🔶 | ❌ | ⚠️ buit! |
 
-`*` `revelat-bn-doc` és a `content/ca/tallers/revelat-bn/privat/doc/index.md` (path antic). Migrar a `content/[lang]/privat/revelat-bn-doc.md`.
+`*` El doc de `revelat-bn` ja és a la ruta nova: `content/ca/privat/revelat-bn-doc.md` (migrat).
 
 **Flux de revisió per a cada doc 🔶:**
 1. Revisar contingut CA: text, hores, preus, imatges
