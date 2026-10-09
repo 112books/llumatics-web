@@ -431,6 +431,14 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-10-09 (vespre) — Entrada de blog i agenda del taller de Castanyada, en producció
+
+- **`content/ca/blog/fotografia-desperits-castanyada.md`** (nou) — entrada CA de promoció de «Fotografia d'esperits»: títol *Fotografia d'esperits: com fer aparicions amb una càmera analògica*, `description` de 134 car., imatge principal `fotografia-desperits-1.jpg` + galeria amb les altres dues, `course_ref: fotografia-desperits` i secció **Referències** amb enllaços a *The Perfect Medium*, *The Apparitionists* i les Viquipèdies de *Spirit photography*, William H. Mumler i Mary Todd Lincoln.
+- **`content/{ca,es,en}/agenda/fotografia-desperits-2026-10-31.md`** (nous) — 31 d'octubre, 19–22 h, Nau Bostik, 8 places, 60 €, CTA al formulari de contacte. Apareix a **Properes dates** de la portada i a `/agenda/` en els tres idiomes. El recomanador ja la llistava via `data/formacions-flash.yaml`.
+- **Desplegament** — commits `5ab1bf3ed`, `69623b2b6` i `bf1cd1784` a `develop`; verificat a staging (Actions `37923014883`, `37923184062`, `37956846004`); `develop` → `main` (fast-forward) i producció (Action `37957093911`, rsync al VPS). Verificat en directe a `llumatics.com` (blog i agenda CA/ES/EN, 200 OK).
+- **Butlletí** — l'Action **Crea esborrany de butlletí** (`37957094024`) ha detectat l'entrada nova i ha creat un esborrany a Brevo (no s'envia sol).
+- **Pendent** — falta el **post d'Instagram** i el **post per a naubosti.com** del taller; la **documentació d'alumnes** continua en esborrany fins a revisió.
+
 ### 2026-10-09 — Visibilitat del proper flash «Fotografia d'esperits» + nota blog Holga Week
 
 - **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`): `seo_title`, subtitle amb data i horari, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. Preu **60 €** amb un rodet de blanc i negre per alumne.
@@ -798,6 +806,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
 - [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
 - [ ] **Post per a naubosti.com — taller flash «Fotografia d'esperits» (Castanyada)** — difusió de la col·laboració i del taller del 31 d'octubre a la Nau Bostik. Anotat 2026-10-09.
+- [ ] **Post d'Instagram — taller flash «Fotografia d'esperits» (Castanyada)** — anunci del taller del 31 d'octubre: carrusel amb fotos del taller i CTA a la fitxa i a l'entrada de blog. Anotat 2026-10-09.
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
 - [ ] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: què s'hi va fer, fotos de la jornada i continuació cap al revelat. Anotat 2026-10-09.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
