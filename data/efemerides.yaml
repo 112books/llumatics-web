@@ -36,7 +36,7 @@
   fi: "2026-10-31"
   data: "2026-10-31"
   url: "/tallers/fotografia-desperits/"
-  imatge: ""
+  imatge: "/images/tallers/fotografia-desperits.webp"
   titol: { ca: "Fotografia d'esperits" }
   subtitol: { ca: "31 d'octubre · 19–22 h · La Nau Bostik" }
   descripcio: { ca: "Exposicions llargues, dobles exposicions i llum de llanterna, per la Castanyada." }

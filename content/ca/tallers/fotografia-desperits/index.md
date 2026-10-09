@@ -4,6 +4,10 @@ seo_title: "Fotografia d'esperits · Taller de fotografia analògica · Llumàti
 subtitle: "Dissabte 31 d'octubre · 19–22 h · La Nau Bostik"
 lead: "Com fotografiaven els esperits els fotògrafs del segle XIX, i com pots fer-ho tu per la Castanyada."
 description: "Taller flash de fotografia d'esperits per la Castanyada: exposicions llargues, dobles exposicions i llum de llanterna a la Nau Bostik."
+image: "/images/tallers/fotografia-desperits.jpg"
+images:
+  - "/images/tallers/fotografia-desperits-1.jpg"
+  - "/images/tallers/fotografia-desperits-2.jpg"
 format: "flash"
 tipus_flash: "taller-flash"
 estat: "proxim"
@@ -44,6 +48,10 @@ Serà **dissabte 31 d'octubre, de 19 a 22 h**, a la Nau Bostik.
 ## Què inclou
 
 Un rodet de blanc i negre per alumne. Si tens una càmera amb temps B o exposició múltiple, porta-la; si no, te'n podem deixar una.
+
+## Què has de portar
+
+El **maquillatge i la caracterització** (maquillatge, vestuari i complements per fer la teva aparició) van a càrrec de cada alumne.
 
 ## A qui va dirigit
 

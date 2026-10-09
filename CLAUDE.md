@@ -416,7 +416,8 @@ python3 scripts/generate-thumbs.py
 - **`themes/llumatics/layouts/partials/efemeride-popup.html`** — si la pàgina enllaçada no té traducció a l'idioma actual, el pop-up cau a la versió CA (evita 404 a ES/EN). Verificat en els tres idiomes.
 - **Decisió** — data **dissabte 31 d'octubre de 2026** (el matí hi ha un altre taller; el flash es fa al vespre), horari **19–22 h** i preu fixat a **60 € amb 1 rodet de B/N per alumne**.
 - **Convenció de nom** — afegida a *Normes per editar*: sempre **«Nau Bostik»** (o «la Nau Bostik»), **mai «Nau» a seques**. Normalitzades les 12 ocurrències de contingut (CA/ES/EN) i els textos de transport dels `i18n`.
-- **Pendent** — imatge pròpia del pop-up i de la fitxa, i traduccions ES/EN.
+- **Imatge i galeria** — 3 fotografies de retrats de terror afegides a `static/images/tallers/` (`fotografia-desperits.jpg` + `-1`/`-2`, 1200 px, JPEG+WebP) amb miniatures; el pop-up fa servir `fotografia-desperits.webp`. Afegit a la fitxa que el **maquillatge i la caracterització van a càrrec de cada alumne**.
+- **Pendent** — traduccions ES/EN.
 
 ### 2026-10-08 — Imatge de capçalera de l'article «Fotografia analògica o química?»
 

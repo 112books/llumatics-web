@@ -293,6 +293,10 @@
 "images/tallers/fonaments-iniciacio-puntual.webp": { w: 1280, h: 848 }
 "images/tallers/fotografia-carrer.jpg": { w: 1200, h: 747 }
 "images/tallers/fotografia-carrer.webp": { w: 1200, h: 747 }
+"images/tallers/fotografia-desperits-1.jpg": { w: 843, h: 1200 }
+"images/tallers/fotografia-desperits-2.jpg": { w: 823, h: 1200 }
+"images/tallers/fotografia-desperits.jpg": { w: 1200, h: 950 }
+"images/tallers/fotografia-desperits.webp": { w: 1200, h: 950 }
 "images/tallers/fotografia-estenopèica-1.jpg": { w: 1509, h: 1322 }
 "images/tallers/fotografia-estenopèica-10.jpg": { w: 812, h: 1000 }
 "images/tallers/fotografia-estenopèica-2.jpg": { w: 1653, h: 1322 }
@@ -423,6 +427,10 @@
 "images/tallers/thumbs/del-carrer-al-llibre-8.webp": { w: 360, h: 225 }
 "images/tallers/thumbs/del-carrer-al-llibre-9.jpg": { w: 360, h: 225 }
 "images/tallers/thumbs/del-carrer-al-llibre-9.webp": { w: 360, h: 225 }
+"images/tallers/thumbs/fotografia-desperits-1.jpg": { w: 253, h: 360 }
+"images/tallers/thumbs/fotografia-desperits-1.webp": { w: 253, h: 360 }
+"images/tallers/thumbs/fotografia-desperits-2.jpg": { w: 247, h: 360 }
+"images/tallers/thumbs/fotografia-desperits-2.webp": { w: 247, h: 360 }
 "images/tallers/thumbs/fotografia-estenopèica-1.jpg": { w: 360, h: 315 }
 "images/tallers/thumbs/fotografia-estenopèica-1.webp": { w: 360, h: 315 }
 "images/tallers/thumbs/fotografia-estenopèica-10.jpg": { w: 292, h: 360 }
