@@ -36,7 +36,7 @@ Cada any, del **1 al 7 d'octubre**, fotògrafs de tot el món surten al carrer a
 
 ## Una trobada, no un curs
 
-No és una classe: és una **quedada informal** per disparar, compartir trucs i passar-ho bé. Comencem a les 18:00 amb una presentació ràpida de la càmera —com es carrega, per què se li posa cinta adhesiva, què vol dir allò de "sol" i "núvol"— i a les 18:20 sortim a disparar per la Nau i els voltants aprofitant l'última llum. Tanquem a les 19:30 posant en comú què hem fet i què esperem veure en revelar.
+No és una classe: és una **quedada informal** per disparar, compartir trucs i passar-ho bé. Comencem a les 18:00 amb una presentació ràpida de la càmera —com es carrega, per què se li posa cinta adhesiva, què vol dir allò de "sol" i "núvol"— i a les 18:20 sortim a disparar per la Nau Bostik i els voltants aprofitant l'última llum. Tanquem a les 19:30 posant en comú què hem fet i què esperem veure en revelar.
 
 Si tens una Holga, porta-la. Si no, porta qualsevol càmera de joguina o analògica; en tindrem unes quantes de préstec. I si has disparat durant la setmana, porta els rodets: les candidatures del concurs s'obren el mateix dia 8 i es tanquen el 8 de novembre.
 

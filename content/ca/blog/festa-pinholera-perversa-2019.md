@@ -1,6 +1,6 @@
 ---
 title: "La Festa Pinholera Perversa a la Nau Bostik"
-lead: "Un matí de fotografia estenopèica, laboratori obert, mercat i una càmera de Lenin fent fotos per la Nau. Era l'abril de 2019 i vam muntar un bon dia."
+lead: "Un matí de fotografia estenopèica, laboratori obert, mercat i una càmera de Lenin fent fotos per la Nau Bostik. Era l'abril de 2019 i vam muntar un bon dia."
 description: "Crònica de la Festa Pinholera Perversa a la Nau Bostik (abril 2019). Laboratori obert, taller amb Alfonso de Castro, photocall pinhole i mercat fotogràfic."
 image: "/images/blog/festa-pinholera-2019.jpg"
 date: 2019-04-02
@@ -20,7 +20,7 @@ Els **Tiempo Y Luz** amb les seves fotominuteres completaven el paisatge: fotos 
 
 Mercat Pervers, exposicions que s'inauguraven durant el matí, una càmera fosca habilitada per als visitants, i les urnes-pinhole per votar —perquè era un dia polític important i vam pensar que era millor fer-ho amb estil.
 
-I la Lenin. Una cap de Lenin de mida gran, amb una càmera pinhole integrada, deambulant per la Nau fent fotos. No és que necessités explicació, però tampoc en tenia.
+I la Lenin. Una cap de Lenin de mida gran, amb una càmera pinhole integrada, deambulant per la Nau Bostik fent fotos. No és que necessités explicació, però tampoc en tenia.
 
 Va ser un dia molt bo.
 

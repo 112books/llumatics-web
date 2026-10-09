@@ -33,15 +33,15 @@
 - id: "castanyada"
   actiu: true
   inici: "2026-10-09"
-  fi: "2026-11-01"
-  data: "2026-11-01"
+  fi: "2026-10-31"
+  data: "2026-10-31"
   url: "/tallers/fotografia-desperits/"
   imatge: ""
   titol: { ca: "Fotografia d'esperits" }
-  subtitol: { ca: "1 de novembre · La Nau Bostik" }
+  subtitol: { ca: "31 d'octubre · 19–22 h · La Nau Bostik" }
   descripcio: { ca: "Exposicions llargues, dobles exposicions i llum de llanterna, per la Castanyada." }
   boto: { ca: "M'interessa" }
-  pestanya: { ca: "Esperits · 1 nov" }
+  pestanya: { ca: "Esperits · 31 oct" }
 
 - id: "setmana-ciencia"
   actiu: false

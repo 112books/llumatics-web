@@ -1,5 +1,5 @@
 ---
-title: "Estenopeica a la Nau"
+title: "Estenopeica a la Nau Bostik"
 lead: "L'últim diumenge d'abril, fotògrafs de tot el món fan fotos sense objectiu: només un forat."
 description: "Taller flash d'estenopeica pel Worldwide Pinhole Photography Day: construeix la càmera i envia la foto a la galeria mundial."
 format: "flash"

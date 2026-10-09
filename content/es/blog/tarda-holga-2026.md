@@ -36,7 +36,7 @@ Cada año, del **1 al 7 de octubre**, fotógrafos de todo el mundo salen a la ca
 
 ## Un encuentro, no un curso
 
-No es una clase: es una **quedada informal** para disparar, compartir trucos y pasarlo bien. Empezamos a las 18:00 con una presentación rápida de la cámara —cómo se carga, por qué se le pone cinta adhesiva, qué significa eso de "sol" y "nube"— y a las 18:20 salimos a disparar por la Nau y sus alrededores aprovechando la última luz. Cerramos a las 19:30 poniendo en común qué hemos hecho y qué esperamos ver al revelar.
+No es una clase: es una **quedada informal** para disparar, compartir trucos y pasarlo bien. Empezamos a las 18:00 con una presentación rápida de la cámara —cómo se carga, por qué se le pone cinta adhesiva, qué significa eso de "sol" y "nube"— y a las 18:20 salimos a disparar por la Nau Bostik y sus alrededores aprovechando la última luz. Cerramos a las 19:30 poniendo en común qué hemos hecho y qué esperamos ver al revelar.
 
 Si tienes una Holga, tráela. Si no, trae cualquier cámara de juguete o analógica; tendremos unas cuantas de préstamo. Y si has disparado durante la semana, trae los carretes: las candidaturas del concurso se abren el mismo día 8 y se cierran el 8 de noviembre.
 

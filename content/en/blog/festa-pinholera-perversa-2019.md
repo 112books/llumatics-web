@@ -1,6 +1,6 @@
 ---
 title: "La Fiesta Pinholera Perversa at Nau Bostik"
-lead: "A morning of pinhole photography, open darkroom, market stalls and a Lenin camera wandering the Nau taking pictures. It was April 2019 and we had a brilliant day."
+lead: "A morning of pinhole photography, open darkroom, market stalls and a Lenin camera wandering around Nau Bostik taking pictures. It was April 2019 and we had a brilliant day."
 description: "Chronicle of La Fiesta Pinholera Perversa at Nau Bostik (April 2019). Open darkroom, workshop with Alfonso de Castro, pinhole photocall and photography market."
 image: "/images/blog/festa-pinholera-2019.jpg"
 date: 2019-04-02
@@ -20,7 +20,7 @@ I was running the photocall: pinhole portraits. Each portrait, unique. Each expo
 
 The Perverse Market, exhibitions opening throughout the morning, a camera obscura set up for visitors, and pinhole-camera ballot boxes for voting — because it was an important political day and we thought it was better to do it in style.
 
-And the Lenin. A large Lenin head with a pinhole camera built in, wandering around the Nau taking photos. It didn't really need explaining, and it didn't have an explanation anyway.
+And the Lenin. A large Lenin head with a pinhole camera built in, wandering around Nau Bostik taking photos. It didn't really need explaining, and it didn't have an explanation anyway.
 
 It was a very good day.
 

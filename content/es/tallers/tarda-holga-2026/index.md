@@ -64,7 +64,7 @@ Nosotros lo celebramos el día 8, al día siguiente, con una tarde en la Nau Bos
 
 **18:00 · Bienvenida y presentación de la cámara.** Cómo se carga, por qué se le pone cinta adhesiva, qué significa que solo tenga "sol" y "nube", y cómo hacer exposiciones múltiples a propósito.
 
-**18:20 · A disparar.** Por la Nau y sus alrededores, aprovechando la última luz del día. La Holga necesita mucha luz, así que empezamos pronto.
+**18:20 · A disparar.** Por la Nau Bostik y sus alrededores, aprovechando la última luz del día. La Holga necesita mucha luz, así que empezamos pronto.
 
 **19:30 · Puesta en común.** Qué hemos hecho, qué esperamos ver al revelar y cómo continuar. Mientras los carretes esperan el revelado, miramos las fotos de la jornada hechas con una Holga digital: horribles, divertidas e inmediatas.
 

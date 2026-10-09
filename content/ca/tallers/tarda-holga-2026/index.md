@@ -64,7 +64,7 @@ Nosaltres ho celebrem el dia 8, l'endemà, amb una tarda a la Nau Bostik. **És 
 
 **18:00 · Benvinguda i presentació de la càmera.** Com es carrega, per què se li posa cinta adhesiva, què vol dir que només tingui "sol" i "núvol", i com fer exposicions múltiples a propòsit.
 
-**18:20 · A disparar.** Per la Nau i pels voltants, aprofitant l'última llum del dia. La Holga necessita molta llum, així que comencem aviat.
+**18:20 · A disparar.** Per la Nau Bostik i pels voltants, aprofitant l'última llum del dia. La Holga necessita molta llum, així que comencem aviat.
 
 **19:30 · Posada en comú.** Què hem fet, què esperem veure en revelar-ho i com continuar. Mentre els rodets esperen el revelat, mirem les fotos de la jornada que haurem fet amb una Holga digital: horribles, divertides i immediates.
 

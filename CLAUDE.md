@@ -375,6 +375,7 @@ python3 scripts/generate-thumbs.py
 - **Títols de tallers:** atractius i suggerents, no tècnics ni descriptius secs.
 - **Tone of voice:** directe, sense floritures, expert però accessible. Res de corporatiu. Seguir sempre `docs/manuals/veu-terminologia-llumatics.md`: **química** al cos, **analògica** a `<title>`/`description`; lema «La fotografia com a procés i manera de mirar».
 - **Preus:** impostos inclosos. Si cal factura, s'emet amb totes les dades fiscals.
+- **Nom del lloc:** sempre **«Nau Bostik»** (o «la Nau Bostik»); **mai «Nau» a seques**. S'aplica a contingut, frontmatter (`lloc`), correus i metadades.
 - **⚠️ `.htaccess` — NO afegir redirect HTTPS.** Dinahosting fa SSL termination al proxy: Apache veu HTTP tot i que el client ve per HTTPS. Afegir `RewriteCond %{HTTPS} off` causa bucle infinit de redireccions i cau el site. Dinahosting ja força HTTPS a nivell de servidor.
 
 ---
@@ -409,11 +410,12 @@ python3 scripts/generate-thumbs.py
 
 ### 2026-10-09 — Visibilitat del proper flash «Fotografia d'esperits» + nota blog Holga Week
 
-- **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`): `seo_title`, subtitle amb la data, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. Preu **60 €** amb un rodet de blanc i negre per alumne.
-- **`data/efemerides.yaml`** — `castanyada` → `actiu: true`, `inici: 2026-10-09` (pop-up visible ja) i data/fi `2026-11-01`; `holga-week` → `actiu: false` (trobada del 8 oct). El pop-up apunta a `/tallers/fotografia-desperits/`.
-- **`data/formacions-flash.yaml`** — `fotografia-desperits` mogut a `2026-11-01`.
+- **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`): `seo_title`, subtitle amb data i horari, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. Preu **60 €** amb un rodet de blanc i negre per alumne.
+- **`data/efemerides.yaml`** — `castanyada` → `actiu: true`, `inici: 2026-10-09` (pop-up visible ja) i data/fi `2026-10-31`; `holga-week` → `actiu: false` (trobada del 8 oct). El pop-up apunta a `/tallers/fotografia-desperits/`.
+- **`data/formacions-flash.yaml`** — `fotografia-desperits` a `2026-10-31`.
 - **`themes/llumatics/layouts/partials/efemeride-popup.html`** — si la pàgina enllaçada no té traducció a l'idioma actual, el pop-up cau a la versió CA (evita 404 a ES/EN). Verificat en els tres idiomes.
-- **Decisió** — data moguda a **diumenge 1 de novembre** (dissabte 31 hi ha un altre taller) i preu fixat a **60 € amb 1 rodet de B/N per alumne**.
+- **Decisió** — data **dissabte 31 d'octubre de 2026** (el matí hi ha un altre taller; el flash es fa al vespre), horari **19–22 h** i preu fixat a **60 € amb 1 rodet de B/N per alumne**.
+- **Convenció de nom** — afegida a *Normes per editar*: sempre **«Nau Bostik»** (o «la Nau Bostik»), **mai «Nau» a seques**. Normalitzades les 12 ocurrències de contingut (CA/ES/EN) i els textos de transport dels `i18n`.
 - **Pendent** — imatge pròpia del pop-up i de la fitxa, i traduccions ES/EN.
 
 ### 2026-10-08 — Imatge de capçalera de l'article «Fotografia analògica o química?»
