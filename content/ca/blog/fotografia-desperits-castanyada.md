@@ -38,6 +38,6 @@ Per reservar el teu lloc, [escriu-nos](/contacte/?taller=fotografia-desperits#fo
 
 ## Referències
 
-- Clément Chéroux et al., [*The Perfect Medium: Photography and the Occult*](https://www.metmuseum.org/art/metpublications/The_Perfect_Medium_Photography_and_the_Occult) (Metropolitan Museum of Art, 2005).
+- Clément Chéroux et al., [*The Perfect Medium: Photography and the Occult*](https://openlibrary.org/works/OL18542504W) (Metropolitan Museum of Art, 2005).
 - Peter Manseau, [*The Apparitionists: A Tale of Phantoms, Fraud, Photography and the Man Who Captured Lincoln's Ghost*](https://profiles.si.edu/display/sro_166490) (Houghton Mifflin Harcourt, 2017).
 - [Spirit photography](https://en.wikipedia.org/wiki/Spirit_photography) i [William H. Mumler](https://en.wikipedia.org/wiki/William_H._Mumler), a la Viquipèdia anglesa.
