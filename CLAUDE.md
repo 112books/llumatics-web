@@ -409,10 +409,12 @@ python3 scripts/generate-thumbs.py
 
 ### 2026-10-09 — Visibilitat del proper flash «Fotografia d'esperits» + nota blog Holga Week
 
-- **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`, data 31 oct 2026): `seo_title`, subtitle amb la data, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. **Sense preu**: la fitxa de disseny el marca «CONFIRMAR» i el text remet a contacte per reservar lloc.
-- **`data/efemerides.yaml`** — `castanyada` → `actiu: true`, `inici: 2026-10-09` (pop-up visible ja); `holga-week` → `actiu: false` (trobada del 8 oct). El pop-up apunta a `/tallers/fotografia-desperits/`.
+- **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`): `seo_title`, subtitle amb la data, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. Preu **60 €** amb un rodet de blanc i negre per alumne.
+- **`data/efemerides.yaml`** — `castanyada` → `actiu: true`, `inici: 2026-10-09` (pop-up visible ja) i data/fi `2026-11-01`; `holga-week` → `actiu: false` (trobada del 8 oct). El pop-up apunta a `/tallers/fotografia-desperits/`.
+- **`data/formacions-flash.yaml`** — `fotografia-desperits` mogut a `2026-11-01`.
 - **`themes/llumatics/layouts/partials/efemeride-popup.html`** — si la pàgina enllaçada no té traducció a l'idioma actual, el pop-up cau a la versió CA (evita 404 a ES/EN). Verificat en els tres idiomes.
-- **Pendent** — imatge pròpia del pop-up i de la fitxa, traduccions ES/EN i preu definitiu.
+- **Decisió** — data moguda a **diumenge 1 de novembre** (dissabte 31 hi ha un altre taller) i preu fixat a **60 € amb 1 rodet de B/N per alumne**.
+- **Pendent** — imatge pròpia del pop-up i de la fitxa, i traduccions ES/EN.
 
 ### 2026-10-08 — Imatge de capçalera de l'article «Fotografia analògica o química?»
 
