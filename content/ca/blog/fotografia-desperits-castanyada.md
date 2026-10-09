@@ -18,7 +18,7 @@ El **dissabte 31 d'octubre**, per la Castanyada, hi dediquem un taller flash de 
 
 ## Un frau que va deixar una lliçó tècnica
 
-El fotògraf d'esperits més cèlebre va ser [William H. Mumler](https://en.wikipedia.org/wiki/William_H._Mumler), un joier de Boston que el 1861 va publicar el retrat del «fantasma» d'un cosí mort i va acabar fotografiant personatges com Mary Todd Lincoln. El 1869 el van jutjar per frau a Nova York: alguns dels esperits que havia retratat eren persones vives que van anar a declarar al judici. El van absoldre, però la tècnica va quedar a la vista.
+El fotògraf d'esperits més cèlebre va ser [William H. Mumler](https://en.wikipedia.org/wiki/William_H._Mumler), un joier de Boston que el 1861 va publicar el retrat del «fantasma» d'un cosí mort i va acabar fotografiant personatges com [Mary Todd Lincoln](https://en.wikipedia.org/wiki/Mary_Todd_Lincoln). El 1869 el van jutjar per frau a Nova York: alguns dels esperits que havia retratat eren persones vives que van anar a declarar al judici. El van absoldre, però la tècnica va quedar a la vista.
 
 Els seus mètodes són els nostres. Es feia una primera exposició del difunt amb un fons fosc, es tornava a tapar la placa i, al damunt, s'exposava el retrat del viu. O bé el «fantasma» es movia durant una exposició de diversos segons, de manera que la seva silueta quedava vaporosa mentre la resta de l'escena era nítida. Avui, amb una càmera amb temps B o exposició múltiple, tot això es pot fer sense cap trampa.
 
