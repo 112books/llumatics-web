@@ -418,6 +418,7 @@ python3 scripts/generate-thumbs.py
 - **Convenció de nom** — afegida a *Normes per editar*: sempre **«Nau Bostik»** (o «la Nau Bostik»), **mai «Nau» a seques**. Normalitzades les 12 ocurrències de contingut (CA/ES/EN) i els textos de transport dels `i18n`.
 - **Imatge i galeria** — 3 fotografies de retrats de terror afegides a `static/images/tallers/` (`fotografia-desperits.jpg` + `-1`/`-2`, 1200 px, JPEG+WebP) amb miniatures. Portada triada per Joan: **`fotografia-desperits-1.jpg`** (+ `.webp`); la resta, galeria; el pop-up fa servir `fotografia-desperits-1.webp`. Afegit a la fitxa que el **maquillatge i la caracterització van a càrrec de cada alumne**.
 - **Traduccions** — fitxes **ES/EN** creades (`content/{es,en}/tallers/fotografia-desperits/index.md`) i pop-up traduït (títol, subtítol, descripció, botó i pestanya).
+- **Documentació d'alumnes (esborrany, no publicada)** — `content/ca/privat/fotografia-desperits-doc.md` (layout `private-doc`, guia tècnica del taller) i la porta `content/ca/privat/fotografia-desperits.md`, tots dos `draft: true`. La fitxa manté `sense_doc: true` per no deixar cap enllaç trencat. Per publicar-los: `draft: false` als dos fitxers i `sense_doc: false` a la fitxa. **CA pendent de revisió a l'estudi.**
 
 ### 2026-10-08 — Imatge de capçalera de l'article «Fotografia analògica o química?»
 
