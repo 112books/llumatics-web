@@ -36,12 +36,12 @@
   fi: "2026-10-31"
   data: "2026-10-31"
   url: "/tallers/fotografia-desperits/"
-  imatge: "/images/tallers/fotografia-desperits.webp"
-  titol: { ca: "Fotografia d'esperits" }
-  subtitol: { ca: "31 d'octubre · 19–22 h · La Nau Bostik" }
-  descripcio: { ca: "Exposicions llargues, dobles exposicions i llum de llanterna, per la Castanyada." }
-  boto: { ca: "M'interessa" }
-  pestanya: { ca: "Esperits · 31 oct" }
+  imatge: "/images/tallers/fotografia-desperits-1.webp"
+  titol: { ca: "Fotografia d'esperits", es: "Fotografía de espíritus", en: "Spirit photography" }
+  subtitol: { ca: "31 d'octubre · 19–22 h · La Nau Bostik", es: "31 de octubre · 19–22 h · La Nau Bostik", en: "31 October · 7–10 pm · Nau Bostik" }
+  descripcio: { ca: "Exposicions llargues, dobles exposicions i llum de llanterna, per la Castanyada.", es: "Exposiciones largas, dobles exposiciones y luz de linterna, por la Castanyada.", en: "Long exposures, double exposures and torchlight, for Castanyada." }
+  boto: { ca: "M'interessa", es: "Me interesa", en: "I'm interested" }
+  pestanya: { ca: "Esperits · 31 oct", es: "Espíritus · 31 oct", en: "Spirits · 31 Oct" }
 
 - id: "setmana-ciencia"
   actiu: false

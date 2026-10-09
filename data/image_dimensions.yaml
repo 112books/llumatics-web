@@ -294,6 +294,7 @@
 "images/tallers/fotografia-carrer.jpg": { w: 1200, h: 747 }
 "images/tallers/fotografia-carrer.webp": { w: 1200, h: 747 }
 "images/tallers/fotografia-desperits-1.jpg": { w: 843, h: 1200 }
+"images/tallers/fotografia-desperits-1.webp": { w: 843, h: 1200 }
 "images/tallers/fotografia-desperits-2.jpg": { w: 823, h: 1200 }
 "images/tallers/fotografia-desperits.jpg": { w: 1200, h: 950 }
 "images/tallers/fotografia-desperits.webp": { w: 1200, h: 950 }
@@ -431,6 +432,8 @@
 "images/tallers/thumbs/fotografia-desperits-1.webp": { w: 253, h: 360 }
 "images/tallers/thumbs/fotografia-desperits-2.jpg": { w: 247, h: 360 }
 "images/tallers/thumbs/fotografia-desperits-2.webp": { w: 247, h: 360 }
+"images/tallers/thumbs/fotografia-desperits.jpg": { w: 360, h: 285 }
+"images/tallers/thumbs/fotografia-desperits.webp": { w: 360, h: 285 }
 "images/tallers/thumbs/fotografia-estenopèica-1.jpg": { w: 360, h: 315 }
 "images/tallers/thumbs/fotografia-estenopèica-1.webp": { w: 360, h: 315 }
 "images/tallers/thumbs/fotografia-estenopèica-10.jpg": { w: 292, h: 360 }
