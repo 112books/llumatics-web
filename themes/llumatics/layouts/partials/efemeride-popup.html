@@ -19,6 +19,13 @@
 {{- end -}}
 {{- with index $actives 0 -}}
 {{- $lang := site.Language.Lang -}}
+{{- $target := .url -}}
+{{- $popupURL := $target | relLangURL -}}
+{{- if not (site.GetPage $target) -}}
+  {{- $caSite := site -}}
+  {{- range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end -}}
+  {{- with $caSite.GetPage $target -}}{{- $popupURL = .RelPermalink -}}{{- end -}}
+{{- end -}}
 {{- $titol := index .titol $lang | default (index .titol "ca") -}}
 {{- $subtitol := index .subtitol $lang | default (index .subtitol "ca") -}}
 {{- $descripcio := index .descripcio $lang | default (index .descripcio "ca") -}}
@@ -29,7 +36,7 @@
        aria-label="{{ $titol }}">
   <button type="button" class="efemeride-popup__close" data-efemeride-close
           aria-label="{{ i18n "efemeride_close" }}">&#215;</button>
-  <a class="efemeride-popup__card" href="{{ .url | relLangURL }}">
+  <a class="efemeride-popup__card" href="{{ $popupURL }}">
     <div class="efemeride-popup__image" style="background-image:url('{{ .imatge | relURL }}');background-size:cover;background-position:center;background-repeat:no-repeat;">
       <span class="efemeride-popup__flash" aria-hidden="true">Flash!</span>
     </div>

@@ -407,6 +407,13 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-10-09 — Visibilitat del proper flash «Fotografia d'esperits» + nota blog Holga Week
+
+- **`content/ca/tallers/fotografia-desperits/index.md`** — fitxa publicada (de `draft: true` a pública, estat `proxim`, data 31 oct 2026): `seo_title`, subtitle amb la data, durada 3 h, 8 places, lloc, prerequisits i text públic basat en `docs/cursos-flash/llumatics-formacions-flash-efemerides.md`. **Sense preu**: la fitxa de disseny el marca «CONFIRMAR» i el text remet a contacte per reservar lloc.
+- **`data/efemerides.yaml`** — `castanyada` → `actiu: true`, `inici: 2026-10-09` (pop-up visible ja); `holga-week` → `actiu: false` (trobada del 8 oct). El pop-up apunta a `/tallers/fotografia-desperits/`.
+- **`themes/llumatics/layouts/partials/efemeride-popup.html`** — si la pàgina enllaçada no té traducció a l'idioma actual, el pop-up cau a la versió CA (evita 404 a ES/EN). Verificat en els tres idiomes.
+- **Pendent** — imatge pròpia del pop-up i de la fitxa, traduccions ES/EN i preu definitiu.
+
 ### 2026-10-08 — Imatge de capçalera de l'article «Fotografia analògica o química?»
 
 - **`content/ca/blog/fotografia-analogica-o-quimica.md`** — afegit el camp `image` (el post no en tenia i mostrava el placeholder).
@@ -761,6 +768,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] `archetypes/tallers.md` — actualitzat amb el frontmatter actual (resolt 2026-10-02)
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
 - [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
+- [ ] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: què s'hi va fer, fotos de la jornada i continuació cap al revelat. Anotat 2026-10-09.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 
 ### Qualitat i acabats

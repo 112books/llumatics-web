@@ -3,7 +3,7 @@
 # Text: si falta l'idioma, cau al català.
 
 - id: "holga-week"
-  actiu: true
+  actiu: false
   inici: "2026-10-02"
   fi: "2026-10-08"
   data: "2026-10-08"
@@ -31,8 +31,8 @@
     en: "Holga · 8 Oct"
 
 - id: "castanyada"
-  actiu: false
-  inici: "2026-10-24"
+  actiu: true
+  inici: "2026-10-09"
   fi: "2026-10-31"
   data: "2026-10-31"
   url: "/tallers/fotografia-desperits/"
