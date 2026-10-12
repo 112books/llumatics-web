@@ -808,7 +808,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **Post per a naubosti.com — taller flash «Fotografia d'esperits» (Castanyada)** — difusió de la col·laboració i del taller del 31 d'octubre a la Nau Bostik. Redactat 2026-10-12: post CA, títol SEO, meta description, frase clau i etiquetes Yoast.
 - [ ] **Post d'Instagram — taller flash «Fotografia d'esperits» (Castanyada)** — anunci del taller del 31 d'octubre: carrusel amb fotos del taller i CTA a la fitxa i a l'entrada de blog. Anotat 2026-10-09.
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
-- [ ] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: què s'hi va fer, fotos de la jornada i continuació cap al revelat. Anotat 2026-10-09.
+- [x] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: `content/ca/blog/tarda-holga-nau-bostik.md` (draft:true, pendent revisió i publicació). Creat 2026-10-12.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 
 ### Qualitat i acabats
