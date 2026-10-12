@@ -431,6 +431,15 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-10-12 — Blog Tarda Holga + traduccions + analítiques + contingut naubostik.com
+
+- **Post naubostik.com** — cos CA, títol SEO, meta description, frase clau i etiquetes Yoast per promocionar «Fotografia d'esperits» (31 oct).
+- **`content/ca/blog/tarda-holga-nau-bostik.md`** — crònica de la Tarda Holga (8 oct): imatge Asta i Selma processada de 2500px → 1200×1187px JPEG+WebP, post escurçat amb links a Holga Wiki, Nau Bostik i blog pocallum. Publicat.
+- **Traduccions ES/EN** — `tarda-holga-nau-bostik` i `fotografia-desperits-castanyada` creats i publicats en ES i EN.
+- **Analítiques** — `fotografia-desperits` afegit a `$nous_slugs` a `fetch-analytics.php`; desplegat via scp. La campanya `?campaign=desperits&ref=naubostik` ja es captura automàticament.
+- **Text Instagram** — text en català per al taller «Fotografia d'esperits», sense emoticones, per a un post d'una imatge.
+- **Norma nova** — mai inventar URLs: si no es coneix la URL real, deixar el text sense link.
+
 ### 2026-10-09 (vespre) — Entrada de blog i agenda del taller de Castanyada, en producció
 
 - **`content/ca/blog/fotografia-desperits-castanyada.md`** (nou) — entrada CA de promoció de «Fotografia d'esperits»: títol *Fotografia d'esperits: com fer aparicions amb una càmera analògica*, `description` de 134 car., imatge principal `fotografia-desperits-1.jpg` + galeria amb les altres dues, `course_ref: fotografia-desperits` i secció **Referències** amb enllaços a *The Perfect Medium*, *The Apparitionists* i les Viquipèdies de *Spirit photography*, William H. Mumler i Mary Todd Lincoln.
