@@ -805,7 +805,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] `archetypes/tallers.md` — actualitzat amb el frontmatter actual (resolt 2026-10-02)
 - [ ] **Il·luminació bàsica** — taller nou: flaixos, modificadors, relació llum/ombra per a retrat analògic
 - [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
-- [ ] **Post per a naubosti.com — taller flash «Fotografia d'esperits» (Castanyada)** — difusió de la col·laboració i del taller del 31 d'octubre a la Nau Bostik. Anotat 2026-10-09.
+- [x] **Post per a naubosti.com — taller flash «Fotografia d'esperits» (Castanyada)** — difusió de la col·laboració i del taller del 31 d'octubre a la Nau Bostik. Redactat 2026-10-12: post CA, títol SEO, meta description, frase clau i etiquetes Yoast.
 - [ ] **Post d'Instagram — taller flash «Fotografia d'esperits» (Castanyada)** — anunci del taller del 31 d'octubre: carrusel amb fotos del taller i CTA a la fitxa i a l'entrada de blog. Anotat 2026-10-09.
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
 - [ ] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: què s'hi va fer, fotos de la jornada i continuació cap al revelat. Anotat 2026-10-09.
