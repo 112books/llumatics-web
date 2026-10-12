@@ -161,7 +161,7 @@ $camp = [
     'quiz'  => ['count' => 0, 'unique' => 0, 'by_lang' => ['ca' => 0, 'es' => 0, 'en' => 0]],
     'nous'  => [],
 ];
-$nous_slugs = ['tarda-holga-2026','fotollibre','del-carrer-al-llibre','wineol','caffenol','solargrafia','collodio-humit','fotogrames-cianotipia','retrat-amb-holga'];
+$nous_slugs = ['tarda-holga-2026','fotollibre','del-carrer-al-llibre','wineol','caffenol','solargrafia','collodio-humit','fotogrames-cianotipia','retrat-amb-holga','fotografia-desperits'];
 foreach ($hits_list as $h) {
     $path = $h['path']; $c = (int)$h['count']; $u = (int)$h['count_unique']; $lg = extract_lang($path);
     if (preg_match('#^/(es/|en/)?regala(/|$)#', $path)) {
