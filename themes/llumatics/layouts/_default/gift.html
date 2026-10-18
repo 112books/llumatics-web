@@ -26,6 +26,9 @@
     <p class="gift-hero__sub">{{ i18n "gift_hero_sub" }}</p>
   </div>
 
+  {{/* Ressenyes reals (només si n'hi ha a data/ressenyes.yaml) */}}
+  {{ partial "ressenyes.html" . }}
+
   {{/* Questionaire */}}
   <div class="gift-quiz-wrap">
     <div id="gift-quiz" class="gift-quiz"

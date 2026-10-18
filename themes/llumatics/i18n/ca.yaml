@@ -503,3 +503,9 @@ gift_email_signoff: "Llumàtics — llumatics.com"
 gracies_review_text: "Si t'ha agradat el que fem, una ressenya a Google ens ajuda molt a arribar a més gent."
 doc_review_text: "T'ha estat útil? Una ressenya a Google ens ajuda a arribar a més gent."
 doc_review_short: "Ressenya'ns:"
+
+# ── Ressenyes reals del val-regal (data/ressenyes.yaml) ──
+ressenyes_title: "Què diuen els qui hi han passat"
+ressenyes_subtitle: "Ressenyes reals d'alumnes i clients de Llumàtics. No n'hem inventat cap."
+ressenyes_source: "Font"
+

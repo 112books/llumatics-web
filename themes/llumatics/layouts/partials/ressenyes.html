@@ -1,0 +1,33 @@
+{{/* Ressenyes reals (data/ressenyes.yaml).
+     Només es renderitza si hi ha entrades amb text; no s'inventa res.
+     La valoració mitjana que publica el JSON-LD de /regala/ surt exactament
+     d'aquestes mateixes dades, que són les que es veuen aquí. */}}
+{{- $items := hugo.Data.ressenyes -}}
+{{- if $items -}}
+<section class="ressenyes" aria-labelledby="ressenyes-title">
+  <div class="ressenyes__header">
+    <h2 class="ressenyes__title" id="ressenyes-title">{{ i18n "ressenyes_title" }}</h2>
+    <p class="ressenyes__sub">{{ i18n "ressenyes_subtitle" }}</p>
+  </div>
+  <ul class="ressenyes__list">
+    {{- range $items }}
+      {{- $item := . -}}
+      {{- with $item.text }}
+      {{- $r := int ($item.valoracio | default 5) -}}
+      <li class="ressenyes__item">
+        <p class="ressenyes__stars" aria-label="{{ $r }} / 5">{{ strings.Repeat $r "★" }}{{ strings.Repeat (sub 5 $r) "☆" }}</p>
+        <blockquote class="ressenyes__text">«{{ . }}»</blockquote>
+        <p class="ressenyes__meta">
+          <span class="ressenyes__author">{{ $item.nom | default "" }}</span>
+          {{- with $item.data }} · <time datetime="{{ . }}">{{ time.Format "2/1/2006" . }}</time>{{ end }}
+          {{- with $item.font }}
+            · {{ i18n "ressenyes_source" }}:
+            {{- if $item.url }} <a href="{{ $item.url }}" target="_blank" rel="noopener nofollow">{{ . }}</a>{{ else }} {{ . }}{{ end }}
+          {{- end }}
+        </p>
+      </li>
+      {{- end }}
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

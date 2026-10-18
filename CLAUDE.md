@@ -381,6 +381,7 @@ python3 scripts/generate-thumbs.py
 
 - Pàgina: `content/ca/regala/_index.md` (layout: gift)
 - Imports: els presets **no** surten de cap llista fixa. El quiz mostra «Des de X €» amb el `preu_1` de cada taller actiu i el botó «Regala aquest taller» preomple el formulari amb aquest valor; el mínim és 20 € (`min` del camp + text «Mínim 20 €»). `data/gift_amounts.yaml` és antic i **cap plantilla ni JS el llegeix** — si es volen imports predefinits, cal connectar-lo al quiz.
+- Ressenyes: `data/ressenyes.yaml` (nom, valoracions 1–5, text, data, font i URL). El bloc de `/regala/` (partial `ressenyes.html`) i el JSON-LD `aggregateRating`/`review` es calculen **només** d'aquest fitxer; si és buit no es mostra res ni s'emet cap valoració. **Mai inventar ressenyes.**
 - Flux actual: email a `info@llumatics.com`
 - Flux futur: generació automàtica de codis únics (quan hi hagi VPS)
 
@@ -435,7 +436,7 @@ python3 scripts/generate-thumbs.py
 
 - **`themes/llumatics/layouts/partials/head.html`** — el JSON-LD `Product` de `/regala/` (CA/ES/EN) tenia un `AggregateOffer` amb només `lowPrice` i Search Console el marcava amb «Falta el camp highPrice» i «Falta el camp offerCount (a offers)». Afegits **`highPrice`**, **`offerCount`**, `itemCondition` i `url` de l'oferta.
 - **Rang derivat de dades** — `lowPrice` = 20 € (el `min` del formulari i el text visible «Mínim 20 €»); `highPrice` = `preu_1` més alt dels tallers actius (620 €, el mateix preu que mostren les targetes «Des de X €» del quiz i que preomple el botó «Regala aquest taller»); `offerCount` = nombre de tallers actius amb preu (28). Si canvien els preus a les fitxes, el schema s'actualitza sol sense tocar la plantilla.
-- **`aggregateRating` i `review`** — no s'emeten. No hi ha ressenyes reals del val-regal visibles a la pàgina i inventar-les incompleix les guies de Google (les dades estructurades han de coincidir amb el que es veu). Queden com a suggeriments no greus fins que hi hagi un bloc de ressenyes reals.
+- **`aggregateRating` i `review`** — mai inventats. S'ha muntat la infraestructura de ressenyes reals: `data/ressenyes.yaml` + partial `ressenyes.html` (bloc visible a `/regala/` amb estrelles, text, autor, data i font) + càlcul de `aggregateRating`/`review` al JSON-LD a partir de les mateixes dades. Mentre el fitxer sigui buit no es renderitza el bloc ni s'emet cap valoració (verificat).
 - **Verificat** — `hugo --minify` net; JSON-LD vàlid a les 3 llengües; `Product` només apareix a `/regala/`, `/es/regala/` i `/en/regala/`.
 - **Desplegat** — `b086c4083` a `main` (Action `39114594571`, rsync al VPS) i a `develop` (Action `39114616372`, staging); verificat en directe a `llumatics.com/regala/`, `/es/regala/` i `/en/regala/` amb `lowPrice 20`, `highPrice 620` i `offerCount 28`. Pendent a Search Console: clicar **Valida la correcció** quan Google torni a rastrejar.
 - **`data/gift_amounts.yaml`** — cap plantilla ni JS no el llegia (els imports surten del `preu_1` de cada taller); documentat al fitxer i a la secció *Vals-regal* de `CLAUDE.md`.
@@ -844,7 +845,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **robots.txt IA** — resolt (2026-10-03): oberts tots els rastrejadors (cerca, citació i entrenament); només les rutes privades queden disallowed.
 - [ ] **Sitemaps GSC/Bing** — alta, enviament i cobertura (vegeu `docs/manuals/indexacio-sitemaps-google-bing.md`).
 - [ ] **Dades estructurades** — revisar `CourseInstance` a tallers i afegir `EducationEvent` a les sessions d'agenda si falta.
-- [ ] **Fragments de producte (`/regala/`)** — `aggregateRating`/`review` només quan hi hagi ressenyes reals visibles a la pàgina; Search Console els marca com a suggeriment no greu (2026-10-18).
+- [ ] **Fragments de producte (`/regala/`)** — la infraestructura de ressenyes reals ja existeix (`data/ressenyes.yaml`); falta **omplir-la** amb 2–3 ressenyes reals perquè el bloc i el `aggregateRating`/`review` s'emetin (2026-10-18).
 - [ ] **Accessibilitat** — afegir comprovació automàtica (axe o Pa11y) al desplegament.
 - [ ] **Recomanador** — revisar `format`/`nivell_minim`/`estat` al frontmatter i la validació al build.
 - [ ] **Formacions flash i efemèrides** — `data/efemerides.yaml`, pop-up accessible i llista Brevo (decisions de Joan).

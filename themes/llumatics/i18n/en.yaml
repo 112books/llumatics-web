@@ -498,3 +498,9 @@ gift_email_signoff: "Llumàtics — llumatics.com"
 gracies_review_text: "If you like what we do, a Google review helps us reach more people."
 doc_review_text: "Was this useful? A Google review helps us reach more people."
 doc_review_short: "Leave us a review:"
+
+# ── Real reviews for the gift voucher (data/ressenyes.yaml) ──
+ressenyes_title: "What people who have been here say"
+ressenyes_subtitle: "Real reviews from Llumàtics students and clients. None invented."
+ressenyes_source: "Source"
+

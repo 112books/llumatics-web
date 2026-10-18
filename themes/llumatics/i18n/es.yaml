@@ -498,3 +498,9 @@ gift_email_signoff: "Llumàtics — llumatics.com"
 gracies_review_text: "Si te ha gustado lo que hacemos, una reseña en Google nos ayuda mucho a llegar a más gente."
 doc_review_text: "¿Te ha sido útil? Una reseña en Google nos ayuda a llegar a más gente."
 doc_review_short: "Déjanos una reseña:"
+
+# ── Reseñas reales del vale regalo (data/ressenyes.yaml) ──
+ressenyes_title: "Qué dicen quienes ya han pasado"
+ressenyes_subtitle: "Reseñas reales de alumnos y clientes de Llumàtics. No hemos inventado ninguna."
+ressenyes_source: "Fuente"
+

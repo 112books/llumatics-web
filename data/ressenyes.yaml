@@ -1,0 +1,25 @@
+# ── Ressenyes REALS per al val-regal ──────────────────────────────────────
+# Regla: cap ressenya inventada. Cada entrada ha de ser verificable a la font
+# indicada i s'ha de veure publicada tal com és (text literal, nom públic).
+# El bloc de /regala/ i el JSON-LD (aggregateRating + review) es calculen
+# exactament a partir d'aquest fitxer: si la llista és buida no es mostra res
+# i no s'emet cap valoració.
+#
+# Camps:
+#   nom       — nom tal com apareix publicat (ex. "Marta P.")
+#   valoracio — enter de 1 a 5
+#   text      — text literal de la ressenya
+#   data      — data de publicació (YYYY-MM-DD)
+#   font      — on es va publicar (Google, Instagram, correu…)
+#   url       — enllaç a la ressenya (opcional però recomanat)
+#
+# Exemple (NO inventar, és només l'estructura):
+# - nom: "Nom real"
+#   valoracio: 5
+#   text: "Text literal de la ressenya."
+#   data: "2026-03-14"
+#   font: "Google"
+#   url: "https://maps.app.goo.gl/…"
+[]
+
+# Quan hi hagi ressenyes, esborra el [] de dalt i descomenta/omple les entrades.

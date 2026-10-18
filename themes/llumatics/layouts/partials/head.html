@@ -428,6 +428,39 @@
       "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
       "url" .Permalink
       "offers" $aggregate -}}
+{{/* Valoracions: NOMÉS ressenyes reals de data/ressenyes.yaml, les mateixes que
+     es veuen al bloc de /regala/ (partial ressenyes.html). Sense dades no
+     s'emet cap aggregateRating ni cap review: no s'inventa res. */}}
+{{- $reviews := slice -}}
+{{- $reviewCount := 0 -}}
+{{- $reviewSum := 0.0 -}}
+{{- range hugo.Data.ressenyes -}}
+  {{- $item := . -}}
+  {{- with $item.text -}}
+    {{- $rating := int ($item.valoracio | default 0) -}}
+    {{- if and (ge $rating 1) (le $rating 5) -}}
+      {{- $reviewCount = add $reviewCount 1 -}}
+      {{- $reviewSum = add $reviewSum (float $rating) -}}
+      {{- $review := dict
+            `@type` "Review"
+            "author" (dict `@type` "Person" "name" ($item.nom | default "Alumne"))
+            "reviewRating" (dict `@type` "Rating" "ratingValue" $rating "bestRating" 5 "worstRating" 1)
+            "reviewBody" . -}}
+      {{- with $item.data }}{{ $review = merge $review (dict "datePublished" .) }}{{ end -}}
+      {{- $reviews = $reviews | append $review -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt $reviewCount 0 -}}
+  {{- $product = merge $product (dict
+        "aggregateRating" (dict
+          `@type` "AggregateRating"
+          "ratingValue" (printf "%.1f" (div $reviewSum (float $reviewCount)))
+          "reviewCount" $reviewCount
+          "bestRating" 5
+          "worstRating" 1)
+        "review" $reviews) -}}
+{{- end -}}
 <script type="application/ld+json">{{ $product | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 
