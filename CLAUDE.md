@@ -380,7 +380,7 @@ python3 scripts/generate-thumbs.py
 ## Vals-regal
 
 - Pàgina: `content/ca/regala/_index.md` (layout: gift)
-- Imports configurats a: `data/gift_amounts.yaml`
+- Imports: els presets **no** surten de cap llista fixa. El quiz mostra «Des de X €» amb el `preu_1` de cada taller actiu i el botó «Regala aquest taller» preomple el formulari amb aquest valor; el mínim és 20 € (`min` del camp + text «Mínim 20 €»). `data/gift_amounts.yaml` és antic i **cap plantilla ni JS el llegeix** — si es volen imports predefinits, cal connectar-lo al quiz.
 - Flux actual: email a `info@llumatics.com`
 - Flux futur: generació automàtica de codis únics (quan hi hagi VPS)
 
@@ -430,6 +430,13 @@ python3 scripts/generate-thumbs.py
 ---
 
 ## Registre de canvis
+
+### 2026-10-18 — Search Console: «Fragments de producte» del val-regal
+
+- **`themes/llumatics/layouts/partials/head.html`** — el JSON-LD `Product` de `/regala/` (CA/ES/EN) tenia un `AggregateOffer` amb només `lowPrice` i Search Console el marcava amb «Falta el camp highPrice» i «Falta el camp offerCount (a offers)». Afegits **`highPrice`**, **`offerCount`**, `itemCondition` i `url` de l'oferta.
+- **Rang derivat de dades** — `lowPrice` = 20 € (el `min` del formulari i el text visible «Mínim 20 €»); `highPrice` = `preu_1` més alt dels tallers actius (620 €, el mateix preu que mostren les targetes «Des de X €» del quiz i que preomple el botó «Regala aquest taller»); `offerCount` = nombre de tallers actius amb preu (28). Si canvien els preus a les fitxes, el schema s'actualitza sol sense tocar la plantilla.
+- **`aggregateRating` i `review`** — no s'emeten. No hi ha ressenyes reals del val-regal visibles a la pàgina i inventar-les incompleix les guies de Google (les dades estructurades han de coincidir amb el que es veu). Queden com a suggeriments no greus fins que hi hagi un bloc de ressenyes reals.
+- **Verificat** — `hugo --minify` net; JSON-LD vàlid a les 3 llengües; `Product` només apareix a `/regala/`, `/es/regala/` i `/en/regala/`.
 
 ### 2026-10-12 — Blog Tarda Holga + traduccions + analítiques + fix dashboard campanyes
 
@@ -835,6 +842,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **robots.txt IA** — resolt (2026-10-03): oberts tots els rastrejadors (cerca, citació i entrenament); només les rutes privades queden disallowed.
 - [ ] **Sitemaps GSC/Bing** — alta, enviament i cobertura (vegeu `docs/manuals/indexacio-sitemaps-google-bing.md`).
 - [ ] **Dades estructurades** — revisar `CourseInstance` a tallers i afegir `EducationEvent` a les sessions d'agenda si falta.
+- [ ] **Fragments de producte (`/regala/`)** — `aggregateRating`/`review` només quan hi hagi ressenyes reals visibles a la pàgina; Search Console els marca com a suggeriment no greu (2026-10-18).
 - [ ] **Accessibilitat** — afegir comprovació automàtica (axe o Pa11y) al desplegament.
 - [ ] **Recomanador** — revisar `format`/`nivell_minim`/`estat` al frontmatter i la validació al build.
 - [ ] **Formacions flash i efemèrides** — `data/efemerides.yaml`, pop-up accessible i llista Brevo (decisions de Joan).

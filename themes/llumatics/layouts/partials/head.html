@@ -386,8 +386,39 @@
 {{- end }}
 {{ end }}
 
-{{/* JSON-LD — Product (val regal). /regala/ no tenia cap schema. */}}
+{{/* JSON-LD — Product (val regal). /regala/ no tenia cap schema.
+     Search Console (oct. 2026) marcava aquesta pàgina a «Fragments de producte»
+     amb l'AggregateOffer incomplet: només hi havia lowPrice. Sense highPrice ni
+     offerCount el rang de preus és ambigu (el val arriba a 200 € o a 2.000 €?).
+     El rang surt de les dades reals de la pàgina: el formulari admet des de 20 €
+     (text visible «Mínim 20 €») i les targetes del quiz mostren «Des de X €» amb
+     el preu_1 de cada taller actiu, que és el que preomple el botó «Regala aquest
+     taller». Si canvien els preus de les fitxes, el schema s'actualitza sol.
+     review/aggregateRating NO s'emeten: no hi ha ressenyes reals del val-regal
+     visibles a la pàgina i inventar-les incompleix les guies de Google. */}}
 {{ if eq .Type "regala" }}
+{{- $prices := slice -}}
+{{- range where (where site.RegularPages "Type" "tallers") "Params.estat" "actiu" -}}
+  {{- with .Params.preu_1 -}}
+    {{- if gt (float .) 0.0 }}{{ $prices = $prices | append (float .) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $lowPrice := 20.0 -}}
+{{- $highPrice := 20.0 -}}
+{{- if $prices -}}
+  {{- $sorted := sort $prices -}}
+  {{- $highPrice = index $sorted (sub (len $sorted) 1) -}}
+{{- end -}}
+{{- $aggregate := dict
+      `@type` "AggregateOffer"
+      "lowPrice" (printf "%g" $lowPrice)
+      "highPrice" (printf "%g" $highPrice)
+      "offerCount" (len $prices)
+      "priceCurrency" "EUR"
+      "availability" "https://schema.org/InStock"
+      "itemCondition" "https://schema.org/NewCondition"
+      "url" .Permalink
+      "seller" (dict `@id` $orgID) -}}
 {{- $product := dict
       "@context" "https://schema.org"
       "@type" "Product"
@@ -396,13 +427,7 @@
       "brand" (dict "@type" "Brand" "name" "Llumàtics")
       "image" "https://llumatics.com/images/tallers/revelat-bn.jpg"
       "url" .Permalink
-      "offers" (dict
-        "@type" "AggregateOffer"
-        "lowPrice" "20"
-        "priceCurrency" "EUR"
-        "availability" "https://schema.org/InStock"
-        "seller" (dict "@id" $orgID))
-      -}}
+      "offers" $aggregate -}}
 <script type="application/ld+json">{{ $product | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}
 

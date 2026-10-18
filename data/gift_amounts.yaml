@@ -1,3 +1,7 @@
+# NOTA (2026-10-18): cap plantilla ni JS no llegeix aquest fitxer.
+# Els imports del val-regal surten del `preu_1` de cada taller actiu
+# (el quiz mostra «Des de X €» i preomple el formulari). Es conserva com a
+# referència de imports rodons per si es volen oferir com a presets.
 - amount: 80
   description: "Taller d'iniciació"
 - amount: 120
