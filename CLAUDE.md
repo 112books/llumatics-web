@@ -437,6 +437,8 @@ python3 scripts/generate-thumbs.py
 - **Rang derivat de dades** — `lowPrice` = 20 € (el `min` del formulari i el text visible «Mínim 20 €»); `highPrice` = `preu_1` més alt dels tallers actius (620 €, el mateix preu que mostren les targetes «Des de X €» del quiz i que preomple el botó «Regala aquest taller»); `offerCount` = nombre de tallers actius amb preu (28). Si canvien els preus a les fitxes, el schema s'actualitza sol sense tocar la plantilla.
 - **`aggregateRating` i `review`** — no s'emeten. No hi ha ressenyes reals del val-regal visibles a la pàgina i inventar-les incompleix les guies de Google (les dades estructurades han de coincidir amb el que es veu). Queden com a suggeriments no greus fins que hi hagi un bloc de ressenyes reals.
 - **Verificat** — `hugo --minify` net; JSON-LD vàlid a les 3 llengües; `Product` només apareix a `/regala/`, `/es/regala/` i `/en/regala/`.
+- **Desplegat** — `b086c4083` a `main` (Action `39114594571`, rsync al VPS) i a `develop` (Action `39114616372`, staging); verificat en directe a `llumatics.com/regala/`, `/es/regala/` i `/en/regala/` amb `lowPrice 20`, `highPrice 620` i `offerCount 28`. Pendent a Search Console: clicar **Valida la correcció** quan Google torni a rastrejar.
+- **`data/gift_amounts.yaml`** — cap plantilla ni JS no el llegia (els imports surten del `preu_1` de cada taller); documentat al fitxer i a la secció *Vals-regal* de `CLAUDE.md`.
 
 ### 2026-10-12 — Blog Tarda Holga + traduccions + analítiques + fix dashboard campanyes
 
