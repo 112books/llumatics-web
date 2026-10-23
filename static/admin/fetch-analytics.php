@@ -107,6 +107,8 @@ $loc_raw  = gc_fetch('/stats/locations', array_merge($base_params, ['limit' => 2
 
 // ── Processa hits ─────────────────────────────────────────────────────────────
 $hits_by_day  = [];
+$pages_daily  = [];
+$sections_daily = [];
 $by_lang      = [];
 $by_section   = [];
 $hits_list    = [];
@@ -131,6 +133,8 @@ foreach (($hits_raw['hits'] ?? []) as $path_item) {
         $by_lang[$lang]       = ($by_lang[$lang] ?? 0) + $count;
         $by_section[$section] = ($by_section[$section] ?? 0) + $count;
         $hits_by_day[$date]   = ($hits_by_day[$date] ?? 0) + $count;
+        $pages_daily[$path][$date]       = ($pages_daily[$path][$date] ?? 0) + $count;
+        $sections_daily[$section][$date] = ($sections_daily[$section][$date] ?? 0) + $count;
     }
     $total_unique += $path_unique;
     if ($path_total > 0) {
@@ -213,6 +217,8 @@ $output = [
     'gc_campaigns' => $gc_campaigns,
     'by_lang'      => $by_lang,
     'by_section'   => $by_section,
+    'pages_daily'    => $pages_daily,
+    'sections_daily' => $sections_daily,
     'refs'         => $refs_list,
     'locations'    => norm_items($loc_raw['stats']  ?? [], 'location'),
     'browsers'     => norm_items($brow_raw['stats'] ?? [], 'browser'),
