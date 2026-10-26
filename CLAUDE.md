@@ -438,6 +438,7 @@ python3 scripts/generate-thumbs.py
 - **Explicació pública** — cos curt a la pàgina de l'entrada («Sessió ajornada» / «Sesión aplazada» / «Session rescheduled») que diu que s'ha mogut per la Castanyada i que l'hora i el lloc no canvien. Afegit un `description` propi (≤140 car.) perquè la meta no depengui del resum.
 - **Propagació automàtica** — la fitxa `/tallers/iniciacio-revelat/` mostra «7 de nov. 2026», la portada i `/agenda/` la llistem a *Properes dates* en les tres llengües i es regenera el calendari `calendar/iniciacio-revelat-2026-11-07-*.ics`.
 - **`static/.htaccess`** — 301 de `/agenda/iniciacio-revelat-2026-10-31/` (i variants `/es/`, `/en/`) a la data nova, perquè l'enllaç antic no doni 404.
+- **Difusió a Instagram** — el mateix dia es va publicar el re-anunci de la data nova amb una captura de la fitxa: **comentari al post antic** del 31 d'octubre (perquè qui el torni a veure trobi la data bona), **post nou** amb el peu llarg i **stories** amb la versió curta. Els textos queden a `docs/social/2026-10-26-instagram-revelat-7-novembre.md` (sense emoticones, primers 125 caràcters amb data + taller, i les dades del taller per reutilitzar-les).
 - **Sense tocar** — el taller flash de Castanyada («Fotografia d'esperits», 31 d'octubre, 19–22 h, Nau Bostik) i el pop-up d'efemèride es queden tal com eren.
 
 ### 2026-10-18 — Search Console: «Fragments de producte» del val-regal
@@ -835,6 +836,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] **Post per a naubosti.com** — article sobre la col·laboració / la Tarda Holga a la Nau Bostik (encarregat 2026-10-02).
 - [x] **Post per a naubosti.com — taller flash «Fotografia d'esperits» (Castanyada)** — difusió de la col·laboració i del taller del 31 d'octubre a la Nau Bostik. Redactat 2026-10-12: post CA, títol SEO, meta description, frase clau i etiquetes Yoast.
 - [ ] **Post d'Instagram — taller flash «Fotografia d'esperits» (Castanyada)** — anunci del taller del 31 d'octubre: carrusel amb fotos del taller i CTA a la fitxa i a l'entrada de blog. Anotat 2026-10-09.
+- [x] **Recordatori a Instagram de la nova data del «revelat» (7 nov)** — comentari al post que anunciava el 31 d'octubre, post nou amb captura i stories. Publicat 2026-10-26; textos a `docs/social/2026-10-26-instagram-revelat-7-novembre.md`.
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
 - [x] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: `content/ca/blog/tarda-holga-nau-bostik.md` (draft:true, pendent revisió i publicació). Creat 2026-10-12.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
