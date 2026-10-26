@@ -95,6 +95,13 @@ Options -Indexes
   # Google pogués tenir indexades.
   RewriteRule ^(.*)page/1/?$ https://llumatics.com/$1 [R=301,L]
 
+  # --- Agenda: «Iniciació al revelat» ajornat del 31 oct al 7 nov 2026 ----
+  # L'entrada va estar publicada amb la data antiga; s'hi redirigeix perquè
+  # qui tingui l'enllaç antic (o Google l'hagi indexat) no trobi un 404.
+  RewriteRule ^agenda/iniciacio-revelat-2026-10-31/?$ https://llumatics.com/agenda/iniciacio-revelat-2026-11-07/ [R=301,L]
+  RewriteRule ^es/agenda/iniciacio-revelat-2026-10-31/?$ https://llumatics.com/es/agenda/iniciacio-revelat-2026-11-07/ [R=301,L]
+  RewriteRule ^en/agenda/iniciacio-revelat-2026-10-31/?$ https://llumatics.com/en/agenda/iniciacio-revelat-2026-11-07/ [R=301,L]
+
   # ── CA: pàgines estàtiques canviades de nom ──────────────
   RewriteRule ^sobre-nosaltres/?$ https://llumatics.com/sobre/ [R=301,L]
   RewriteRule ^les-nostres-installacions/?$ https://llumatics.com/espais/ [R=301,L]
