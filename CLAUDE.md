@@ -672,6 +672,18 @@ python3 scripts/generate-thumbs.py
   ```
 - [x] Branca `develop` per a staging — ja configurada
 
+### CMS per publicar tallers — PENDENT D'ESTUDIAR
+
+- [ ] **Muntar un CMS per publicar i editar tallers sense tocar el Markdown a mà** — avui cada taller és un `content/{ca,es,en}/tallers/[slug]/index.md`, més imatges (portada + galeria amb WebP i miniatures), l'entrada d'agenda i, si escau, la documentació d'alumnes; es publica amb commit → GitHub Action → rsync. Cal **comparar opcions i decidir-ne una abans d'implementar res**. Anotat 2026-10-26.
+  - **Què ha de cobrir:** crear i editar la fitxa amb tot el frontmatter (preus 1/2/3/4, durada, places, nivell, bloc, `weight`, `estat`, `sota_demanda`, `continua_aprenent`), pujar imatges i generar-ne els derivats, traducció CA/ES/EN, entrada d'agenda (data, horari, preu, places, CTA) i **vista prèvia abans de publicar**.
+  - **Restriccions:** lloc estàtic (Hugo + tema custom); desplegament per GitHub Actions + rsync al VPS; al VPS Dinahosting només hi pot córrer PHP (on ja hi ha `/admin/` amb SQLite i s'hi puja per `scp`); repo `112books/llumatics-web`; tres idiomes; cal respectar les convencions de `CLAUDE.md` (fórmula de preus, «Nau Bostik», noindex a les pàgines privades, veu i terminologia).
+  - **Candidates a comparar:**
+    - **Git-based** (Decap/Netlify CMS, Pages CMS, Sveltia CMS, TinaCMS) — zero servidor i el contingut continua al repo; a canviar: autenticació (OAuth/GitHub App), poc control sobre imatges derivades i validació del frontmatter.
+    - **Panell PHP propi al VPS** — continuïtat amb `/admin/` i control total de les validacions; és la feina més gran i caldria exposar-hi el repo o un flux d'esborranys.
+    - **Editor d'escriptori amb plantilles** (tipus Obsidian) — cost zero i aprofita l'ecosistema actual, però no és multiusuari ni té vista prèvia del web.
+    - **Headless (Sanity, Contentful)** — descartable: cost, i el contingut deixaria de viure al repo (trencaria el desplegament actual).
+  - **Decisió pendent de Joan:** abast (només tallers o també blog i agenda), qui hi tindrà accés, i si ha de generar WebP/miniatures automàticament.
+
 ### Val-regal — LLEST EN PRODUCCIÓ ✅
 
 Flux complet funcionant a `llumatics.com/regala/` des de 2026-05-23.
