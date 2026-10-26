@@ -437,6 +437,7 @@ python3 scripts/generate-thumbs.py
 - **`content/{ca,es,en}/agenda/iniciacio-revelat-2026-11-07.md`** (renomenats des de `…-2026-10-31.md`) — la sessió amb Cameras & Films passa del **dissabte 31 d'octubre** al **dissabte 7 de novembre**, mateix horari (10–13 h), lloc (Cameras & Films) i preu (55 €, 10 places).
 - **Explicació pública** — cos curt a la pàgina de l'entrada («Sessió ajornada» / «Sesión aplazada» / «Session rescheduled») que diu que s'ha mogut per la Castanyada i que l'hora i el lloc no canvien. Afegit un `description` propi (≤140 car.) perquè la meta no depengui del resum.
 - **Propagació automàtica** — la fitxa `/tallers/iniciacio-revelat/` mostra «7 de nov. 2026», la portada i `/agenda/` la llistem a *Properes dates* en les tres llengües i es regenera el calendari `calendar/iniciacio-revelat-2026-11-07-*.ics`.
+- **`static/.htaccess`** — 301 de `/agenda/iniciacio-revelat-2026-10-31/` (i variants `/es/`, `/en/`) a la data nova, perquè l'enllaç antic no doni 404.
 - **Sense tocar** — el taller flash de Castanyada («Fotografia d'esperits», 31 d'octubre, 19–22 h, Nau Bostik) i el pop-up d'efemèride es queden tal com eren.
 
 ### 2026-10-18 — Search Console: «Fragments de producte» del val-regal
