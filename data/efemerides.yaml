@@ -30,8 +30,9 @@
     es: "Holga · 8 oct"
     en: "Holga · 8 Oct"
 
+# 2026-11-05: desactivat manualment, la Castanyada ja ha passat (finestra 9–31 oct).
 - id: "castanyada"
-  actiu: true
+  actiu: false
   inici: "2026-10-09"
   fi: "2026-10-31"
   data: "2026-10-31"
@@ -56,18 +57,19 @@
   boto: { ca: "M'interessa" }
   pestanya: { ca: "Caffenol · nov" }
 
+# Activat 2026-11-05 per provar el pop-up de Nadal (finestra 28 nov – 11 des).
 - id: "nadal"
-  actiu: false
+  actiu: true
   inici: "2026-11-28"
-  fi: "2026-12-06"
-  data: "2026-12-05"
+  fi: "2026-12-11"
+  data: "2026-12-11"
   url: "/tallers/postals-cianotipia-nadal/"
-  imatge: ""
-  titol: { ca: "Postals en cianotípia" }
-  subtitol: { ca: "Principis de desembre · La Nau Bostik" }
-  descripcio: { ca: "Regala una imatge feta amb el sol: postals en cianotípia, fetes a mà." }
-  boto: { ca: "M'interessa" }
-  pestanya: { ca: "Cianotípia · des" }
+  imatge: "/images/popup/cianotipia-nadal.webp"
+  titol: { ca: "Postals en cianotípia", es: "Postales en cianotipia", en: "Cyanotype postcards" }
+  subtitol: { ca: "11 de desembre · La Nau Bostik", es: "11 de diciembre · La Nau Bostik", en: "11 December · Nau Bostik" }
+  descripcio: { ca: "Regala una imatge feta amb el sol: postals en cianotípia, fetes a mà.", es: "Regala una imagen hecha con el sol: postales en cianotipia, hechas a mano.", en: "Give an image made with the sun: handmade cyanotype postcards." }
+  boto: { ca: "M'interessa", es: "Me interesa", en: "I'm interested" }
+  pestanya: { ca: "Cianotípia · des", es: "Cianotipia · dic", en: "Cyanotype · Dec" }
 
 - id: "solstici-hivern"
   actiu: false

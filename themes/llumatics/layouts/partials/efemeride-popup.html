@@ -2,6 +2,8 @@
      efemeride-popup.html — pop-up d'efemèride
      Dades: data/efemerides.yaml
      Només s'activa si avui és dins [inici, fi] i actiu: true.
+     Si la pàgina destí no existeix (per exemple perquè encara és un
+     esborrany), el pop-up no es mostra: mai no s'enllaça a un 404.
      El JS (main.js) el desplega al cap de 3 s i recorda el tancament
      amb sessionStorage.
      ============================================================ */}}
@@ -18,26 +20,26 @@
   {{- end -}}
 {{- end -}}
 {{- with index $actives 0 -}}
+{{- $e := . -}}
 {{- $lang := site.Language.Lang -}}
-{{- $target := .url -}}
-{{- $popupURL := $target | relLangURL -}}
-{{- if not (site.GetPage $target) -}}
-  {{- $caSite := site -}}
-  {{- range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end -}}
-  {{- with $caSite.GetPage $target -}}{{- $popupURL = .RelPermalink -}}{{- end -}}
-{{- end -}}
-{{- $titol := index .titol $lang | default (index .titol "ca") -}}
-{{- $subtitol := index .subtitol $lang | default (index .subtitol "ca") -}}
-{{- $descripcio := index .descripcio $lang | default (index .descripcio "ca") -}}
-{{- $boto := index .boto $lang | default (index .boto "ca") -}}
-{{- $pestanya := index .pestanya $lang | default (index .pestanya "ca") -}}
+{{- $caSite := site -}}
+{{- range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end -}}
+{{/* Pàgina destí: la de l'idioma actual o, si no en té, la catalana. */}}
+{{- $desti := site.GetPage $e.url -}}
+{{- if not $desti }}{{ $desti = $caSite.GetPage $e.url }}{{ end -}}
+{{- with $desti -}}
+{{- $titol := index $e.titol $lang | default (index $e.titol "ca") -}}
+{{- $subtitol := index $e.subtitol $lang | default (index $e.subtitol "ca") -}}
+{{- $descripcio := index $e.descripcio $lang | default (index $e.descripcio "ca") -}}
+{{- $boto := index $e.boto $lang | default (index $e.boto "ca") -}}
+{{- $pestanya := index $e.pestanya $lang | default (index $e.pestanya "ca") -}}
 <aside id="efemeride-popup" class="efemeride-popup" hidden
-       data-key="efemeride-{{ .id }}" data-ttl="8000"
+       data-key="efemeride-{{ $e.id }}" data-ttl="8000"
        aria-label="{{ $titol }}">
   <button type="button" class="efemeride-popup__close" data-efemeride-close
           aria-label="{{ i18n "efemeride_close" }}">&#215;</button>
-  <a class="efemeride-popup__card" href="{{ $popupURL }}">
-    <div class="efemeride-popup__image" style="background-image:url('{{ .imatge | relURL }}');background-size:cover;background-position:center;background-repeat:no-repeat;">
+  <a class="efemeride-popup__card" href="{{ .RelPermalink }}">
+    <div class="efemeride-popup__image" style="background-image:url('{{ $e.imatge | relURL }}');background-size:cover;background-position:center;background-repeat:no-repeat;">
       <span class="efemeride-popup__flash" aria-hidden="true">Flash!</span>
     </div>
     <div class="efemeride-popup__body">
@@ -53,5 +55,6 @@
         data-efemeride-tab aria-label="{{ $pestanya }}">
   {{ $pestanya }}
 </button>
+{{- end -}}
 {{- end -}}
 {{- end -}}
