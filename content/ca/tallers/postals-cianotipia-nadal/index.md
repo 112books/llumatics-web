@@ -1,7 +1,7 @@
 ---
 title: "Postals en cianotípia"
 seo_title: "Postals en cianotípia · Taller de fotografia analògica · Llumàtics"
-subtitle: "Divendres 11 de desembre · 10–13 h · La Nau Bostik"
+subtitle: "Divendres 11 de desembre · 18–21 h · La Nau Bostik"
 lead: "Una tarda per fer postals de Nadal amb el sol: paper, cianotípia i aigua, sense res més."
 description: "Taller flash de Nadal: fem postals en cianotípia, una a una, amb el sol. Divendres 11 de desembre a la Nau Bostik."
 image: "/images/tallers/postals-cianotipia-nadal.jpg"

@@ -67,7 +67,7 @@
   url: "/tallers/postals-cianotipia-nadal/"
   imatge: "/images/popup/cianotipia-nadal.webp"
   titol: { ca: "Postals en cianotípia", es: "Postales en cianotipia", en: "Cyanotype postcards" }
-  subtitol: { ca: "11 de desembre · 10–13 h · La Nau Bostik", es: "11 de diciembre · 10–13 h · La Nau Bostik", en: "11 December · 10 am–1 pm · Nau Bostik" }
+  subtitol: { ca: "11 de desembre · 18–21 h · La Nau Bostik", es: "11 de diciembre · 18–21 h · La Nau Bostik", en: "11 December · 6–9 pm · Nau Bostik" }
   descripcio: { ca: "Regala una imatge feta amb el sol: postals en cianotípia, fetes a mà.", es: "Regala una imagen hecha con el sol: postales en cianotipia, hechas a mano.", en: "Give an image made with the sun: handmade cyanotype postcards." }
   boto: { ca: "M'interessa", es: "Me interesa", en: "I'm interested" }
   pestanya: { ca: "Cianotípia · des", es: "Cianotipia · dic", en: "Cyanotype · Dec" }

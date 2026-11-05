@@ -1,7 +1,7 @@
 ---
 title: "Cyanotype postcards"
 seo_title: "Cyanotype postcards · Film photography workshop · Llumàtics"
-subtitle: "Friday 11 December · 10 am–1 pm · Nau Bostik"
+subtitle: "Friday 11 December · 6–9 pm · Nau Bostik"
 lead: "An afternoon making Christmas postcards with the sun: paper, cyanotype and water, nothing else."
 description: "Christmas flash workshop: we make cyanotype postcards, one by one, with the sun. Friday 11 December at the Nau Bostik."
 image: "/images/tallers/postals-cianotipia-nadal.jpg"
