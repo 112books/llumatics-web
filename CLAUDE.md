@@ -863,6 +863,9 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
 - [x] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: `content/ca/blog/tarda-holga-nau-bostik.md` (draft:true, pendent revisió i publicació). Creat 2026-10-12.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
+- [ ] **Difusió del flash «Postals en cianotípia» (11 des, 18–21 h)** — text per a Instagram (post + stories) i esborrany de butlletí a Brevo. El pop-up de la portada ja el promociona al web; falta la difusió exterior. Anotat 2026-11-05.
+- [ ] **Pop-up de Nadal: apagar-lo després de l'11 de desembre** — es tanca sol l'endemà del taller (`fi` + 1 dia), però cal deixar `actiu: false` a l'entrada `nadal` quan es prepari el següent pop-up, com es va fer amb la Castanyada. Anotat 2026-11-05.
+- [ ] **Imatges «guapes» de la cianotípia de Nadal** — Joan en farà de millors; substituir `static/images/tallers/postals-cianotipia-nadal.*` i `static/images/popup/cianotipia-nadal.*` (recordar el renombrament per la caché d'1 any si es manté la mateixa URL). Anotat 2026-11-05.
 
 ### Qualitat i acabats
 - [x] **Logo dels correus** — resolt (2026-10-07): nou logotip rodó al 72% de negre; regenerats `static/images/email/llumatics-logo.png` (240) + `@2x` (480) i tots els favicons des del nou SVG.
