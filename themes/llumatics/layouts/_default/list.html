@@ -16,9 +16,9 @@
     </div>
 
   {{ else if eq .Type "agenda" }}
-    {{/* Separa upcoming i past */}}
-    {{ $upcoming := where .Pages ".Params.status" "ne" "past" }}
-    {{ $past     := where .Pages ".Params.status" "eq" "past" }}
+    {{/* Només dates d'avui en endavant (les passades no es llisten) */}}
+    {{ $today := now.Format "2006-01-02" }}
+    {{ $upcoming := where (where .Pages ".Params.status" "ne" "past") ".Params.date_start" "ge" $today }}
 
     {{ if $upcoming }}
     <div class="agenda-grid">
@@ -28,22 +28,6 @@
     </div>
     {{ else }}
     <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" }}</p>
-    {{ end }}
-
-    {{ if $past }}
-    <section class="agenda-historic" id="historic">
-      <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" }}</h2>
-      {{ range $past.GroupByDate "2006" }}
-      <div class="agenda-historic__year">
-        <h3 class="agenda-historic__year-label">{{ .Key }}</h3>
-        <div class="agenda-grid agenda-grid--past">
-          {{ range .Pages.ByParam "date_start" | collections.Reverse }}
-            {{ partial "agenda-item.html" . }}
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
-    </section>
     {{ end }}
 
   {{ else }}

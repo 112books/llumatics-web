@@ -29,20 +29,18 @@
       {{ $allPages = $allPages | append $item }}
     {{ end }}
 
-    {{/* Separació automàtica: past si date_start < avui o status=past explícit */}}
+    {{/* Filtre automàtic: només es llisten les dates d'avui en endavant.
+         Es descarta qualsevol sessió amb date_start anterior a avui o amb
+         status: past, sense haver de tocar el frontmatter de cada entrada.
+         Les pàgines antigues continuen existint (URL i SEO), però no es
+         mostren a l'agenda. */}}
     {{ $today := now.Format "2006-01-02" }}
     {{ $upcoming := slice }}
-    {{ $past := slice }}
     {{ range $allPages }}
-      {{ $isPast := false }}
-      {{ if eq (.Params.status | default "active") "past" }}
-        {{ $isPast = true }}
-      {{ else if and .Params.date_start (lt .Params.date_start $today) }}
-        {{ $isPast = true }}
-      {{ end }}
-      {{ if $isPast }}
-        {{ $past = $past | append . }}
-      {{ else }}
+      {{ $isPast := or
+        (eq (.Params.status | default "active") "past")
+        (and .Params.date_start (lt .Params.date_start $today)) }}
+      {{ if not $isPast }}
         {{ $upcoming = $upcoming | append . }}
       {{ end }}
     {{ end }}
@@ -61,23 +59,6 @@
     </div>
     {{ end }}
 
-    {{/* Tallers anteriors — paginats */}}
-    {{ if $past }}
-    {{ $paginator := .Paginate $past }}
-    <section class="agenda-historic" id="historic">
-      <div class="container">
-        <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" }}</h2>
-      </div>
-      <div class="agenda-grid agenda-grid--wide agenda-grid--past">
-        {{ range $paginator.Pages }}
-          {{ partial "agenda-item.html" . }}
-        {{ end }}
-      </div>
-      <div class="container" style="margin-top:var(--space-8);">
-        {{ template "_internal/pagination.html" . }}
-      </div>
-    </section>
-    {{ end }}
 
   </div>
 </div>
