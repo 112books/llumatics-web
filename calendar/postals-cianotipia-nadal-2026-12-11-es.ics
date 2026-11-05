@@ -4,11 +4,11 @@ PRODID:-//Llumatics//Agenda//CA
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:postals-cianotipia-nadal-2026-12-11-20261211@llumatics.com
-DTSTAMP:20261105T162552Z
-DTSTART:20261211T100000
-DTEND:20261211T130000
+DTSTAMP:20261105T164315Z
+DTSTART:20261211T180000
+DTEND:20261211T210000
 SUMMARY:Postales en cianotipia
 LOCATION:Llumàtics — Nau Bostik\, La Sagrera\, Barcelona
-DESCRIPTION:Taller flash de Navidad: postales en cianotipia hechas con el sol. Viernes 11 de diciembre\, 10–13 h\, en la Nau Bostik.
+DESCRIPTION:Taller flash de Navidad: postales en cianotipia hechas con el sol. Viernes 11 de diciembre\, 18–21 h\, en la Nau Bostik.
 END:VEVENT
 END:VCALENDAR

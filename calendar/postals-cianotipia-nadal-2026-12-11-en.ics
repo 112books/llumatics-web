@@ -4,11 +4,11 @@ PRODID:-//Llumatics//Agenda//CA
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:postals-cianotipia-nadal-2026-12-11-20261211@llumatics.com
-DTSTAMP:20261105T162553Z
-DTSTART:20261211T100000
-DTEND:20261211T130000
+DTSTAMP:20261105T164316Z
+DTSTART:20261211T180000
+DTEND:20261211T210000
 SUMMARY:Cyanotype postcards
 LOCATION:Llumàtics — Nau Bostik\, La Sagrera\, Barcelona
-DESCRIPTION:Christmas flash workshop: cyanotype postcards made with the sun. Friday 11 December\, 10 am–1 pm\, at Nau Bostik.
+DESCRIPTION:Christmas flash workshop: cyanotype postcards made with the sun. Friday 11 December\, 6–9 pm\, at Nau Bostik.
 END:VEVENT
 END:VCALENDAR
