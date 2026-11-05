@@ -57,16 +57,17 @@
   boto: { ca: "M'interessa" }
   pestanya: { ca: "Caffenol · nov" }
 
-# Activat 2026-11-05 per provar el pop-up de Nadal (finestra 28 nov – 11 des).
+# Activat el 5 de novembre per començar la difusió del taller de postals
+# (finestra 5 nov – 11 des; es tanca sol l'endemà del taller).
 - id: "nadal"
   actiu: true
-  inici: "2026-11-28"
+  inici: "2026-11-05"
   fi: "2026-12-11"
   data: "2026-12-11"
   url: "/tallers/postals-cianotipia-nadal/"
   imatge: "/images/popup/cianotipia-nadal.webp"
   titol: { ca: "Postals en cianotípia", es: "Postales en cianotipia", en: "Cyanotype postcards" }
-  subtitol: { ca: "11 de desembre · La Nau Bostik", es: "11 de diciembre · La Nau Bostik", en: "11 December · Nau Bostik" }
+  subtitol: { ca: "11 de desembre · 10–13 h · La Nau Bostik", es: "11 de diciembre · 10–13 h · La Nau Bostik", en: "11 December · 10 am–1 pm · Nau Bostik" }
   descripcio: { ca: "Regala una imatge feta amb el sol: postals en cianotípia, fetes a mà.", es: "Regala una imagen hecha con el sol: postales en cianotipia, hechas a mano.", en: "Give an image made with the sun: handmade cyanotype postcards." }
   boto: { ca: "M'interessa", es: "Me interesa", en: "I'm interested" }
   pestanya: { ca: "Cianotípia · des", es: "Cianotipia · dic", en: "Cyanotype · Dec" }
