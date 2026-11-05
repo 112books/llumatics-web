@@ -9,6 +9,14 @@ images:
   - "/images/tallers/retrat-gran-format-1.jpg"
   - "/images/tallers/retrat-gran-format-2.jpg"
   - "/images/tallers/retrat-gran-format-3.jpg"
+  - "/images/tallers/retrat-gran-format-4.jpg"
+  - "/images/tallers/retrat-gran-format-5.jpg"
+  - "/images/tallers/retrat-gran-format-6.jpg"
+  - "/images/tallers/retrat-gran-format-7.jpg"
+  - "/images/tallers/retrat-gran-format-8.jpg"
+  - "/images/tallers/retrat-gran-format-9.jpg"
+  - "/images/tallers/retrat-gran-format-10.jpg"
+  - "/images/tallers/retrat-gran-format-11.jpg"
 
 # Clasificación
 tipus: "taller"
