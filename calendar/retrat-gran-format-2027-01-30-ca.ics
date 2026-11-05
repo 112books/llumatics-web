@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Llumatics//Agenda//CA
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:retrat-gran-format-2027-01-30-20270130@llumatics.com
+DTSTAMP:20261105T134642Z
+DTSTART:20270130T100000
+DTEND:20270130T130000
+SUMMARY:Retrat en gran format
+LOCATION:Cameras & Films\, Barcelona
+DESCRIPTION:Retrat en gran format a Cameras & Films (Barcelona): 3 hores\, dissabte 30 de gener de 2027\, 10–13 h. Càmera del segle XIX i paper fotosensible.
+END:VEVENT
+END:VCALENDAR
