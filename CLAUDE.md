@@ -432,6 +432,16 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-11-05 — Pop-ups, agenda sense dates passades i nova data de «Retrat en gran format»
+
+- **Pop-up de portada** — `castanyada` desactivat a `data/efemerides.yaml` (la finestra 9–31 oct ja havia passat). Activat el de **Nadal** (`nadal`, finestra **28 nov – 11 des**) amb la imatge `static/images/popup/cianotipia-nadal.webp` i textos en CA/ES/EN.
+- **Guarda anti-404 al pop-up** — `partials/efemeride-popup.html` ara resol la pàgina destí (idioma actual o, si no, CA) i **només renderitza el pop-up si aquella pàgina existeix**. Si la fitxa enllaçada encara és un esborrany no es mostra res, en lloc d'un enllaç trencat. Verificat amb el fitxer en `draft` (cap pop-up) i sense (pop-up als tres idiomes amb fallback a CA).
+- **`/agenda/` amaga les dates passades** — `layouts/agenda/list.html` i `layouts/_default/list.html` filtren automàticament per `date_start >= avui` i `status != past`; eliminada la secció «Tallers anteriors» (`agenda-historic`). Les pàgines antigues continuen publicades (URL i SEO), però ja no es llisten.
+- **«Retrat en gran format» — 30 de gener de 2027 a Cameras & Films** — noves entrades `content/{ca,es,en}/agenda/retrat-gran-format-2027-01-30.md` (10–13 h, 55 €, 10 places, inscripció per C&F). Es propaga a la fitxa (amb enllaç .ics), a la portada i a `/agenda/` en les tres llengües.
+- **Imatges noves del taller** — portada `retrat-gran-format.jpg` (1600×2000) + 11 imatges de galeria (`-1`…`-11`, 1000×1250) a partir de l'àlbum de Google Photos indicat per Joan; `.webp` de la portada, miniatures `thumbs/` (JPEG+WebP 360 px) i `data/image_dimensions.yaml` regenerat.
+- **Fitxa nova `postals-cianotipia-nadal`** — publicada (CA) amb el pop-up: una sola sessió **divendres 11 de desembre**, 3 h, **45 €** (preu pla, com el flash de la Castanyada a 60 €), 4 places a la Nau Bostik, material inclòs. `data/formacions-flash.yaml` actualitzat (11 des) i imatge `static/images/tallers/postals-cianotipia-nadal.*`. **Pendent:** hora del taller + entrada d'agenda, traduccions ES/EN i confirmar preu/durada.
+- **Verificat** — `hugo --minify` net (CA 528 / ES 420 / EN 426 pàgines); `/agenda/` només amb les 2 dates futures; `calendar/retrat-gran-format-2027-01-30-ca.ics` amb 10:00–13:00.
+
 ### 2026-10-26 — «Iniciació al revelat»: del 31 d'octubre al 7 de novembre
 
 - **`content/{ca,es,en}/agenda/iniciacio-revelat-2026-11-07.md`** (renomenats des de `…-2026-10-31.md`) — la sessió amb Cameras & Films passa del **dissabte 31 d'octubre** al **dissabte 7 de novembre**, mateix horari (10–13 h), lloc (Cameras & Films) i preu (55 €, 10 places).
