@@ -9,9 +9,9 @@
   linia: quimica
   titol: { ca: "Caffenol: revela amb cafè", es: "Caffenol: revela con café", en: "Caffenol: develop with coffee" }
 - slug: postals-cianotipia-nadal
-  data: "2026-12-05"
+  data: "2026-12-11"
   linia: processos
-  titol: { ca: "Postals i regals en cianotípia", es: "Postales y regalos en cianotipia", en: "Cyanotype postcards and gifts" }
+  titol: { ca: "Postals en cianotípia", es: "Postales en cianotipia", en: "Cyanotype postcards" }
 - slug: solargrafia
   data: "2026-12-21"
   linia: processos
