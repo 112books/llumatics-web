@@ -3,7 +3,7 @@ title: "Retrat en gran format"
 layout: "private-doc"
 url: "/tallers/retrat-gran-format/privat/doc/"
 course_ref: "retrat-gran-format"
-image: "/images/tallers/retrat-gran-format.jpg"
+image: "/images/tallers/retrat-gran-format-2027.jpg"
 noindex: true
 sitemap:
   disable: true
