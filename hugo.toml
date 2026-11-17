@@ -25,33 +25,33 @@ defaultContentLanguageInSubdir = false
 
   [languages.ca]
     contentDir = "content/ca"
-    languageName = "Català"
-    languageCode = "ca"
+    label = "Català"
+    locale = "ca"
     weight = 1
     title = "Llumàtics"
     [languages.ca.params]
       description = "Escola de fotografia. Tallers, laboratori i formació."
-      locale = "ca_ES"
+      ogLocale = "ca_ES"
 
   [languages.es]
     contentDir = "content/es"
-    languageName = "Castellano"
-    languageCode = "es"
+    label = "Castellano"
+    locale = "es"
     weight = 2
     title = "Llumàtics"
     [languages.es.params]
       description = "Escuela de fotografía. Talleres, laboratorio y formación."
-      locale = "es_ES"
+      ogLocale = "es_ES"
 
   [languages.en]
     contentDir = "content/en"
-    languageName = "English"
-    languageCode = "en"
+    label = "English"
+    locale = "en"
     weight = 3
     title = "Llumàtics"
     [languages.en.params]
       description = "Photography school. Workshops, darkroom and training."
-      locale = "en_US"
+      ogLocale = "en_US"
 
 # ── Paràmetres globals ────────────────────────────────────────────────────────
 

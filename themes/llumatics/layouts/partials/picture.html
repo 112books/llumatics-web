@@ -21,7 +21,7 @@
     {{- $webpSrc = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" $webpPath) -}}
   {{- end -}}
 {{- end -}}
-{{- $dim := index site.Data.image_dimensions (strings.TrimPrefix "/" $image) -}}
+{{- $dim := index hugo.Data.image_dimensions (strings.TrimPrefix "/" $image) -}}
 <picture>
   {{- with $webpSrc }}<source srcset="{{ . }}" type="image/webp">{{ end }}
   <img src="{{ $src }}"{{ with $dim }} width="{{ .w }}" height="{{ .h }}"{{ end }}{{ with .class }} class="{{ . }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }}{{ with .style }} style="{{ . }}"{{ end }}>

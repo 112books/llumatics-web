@@ -55,7 +55,7 @@
 {{/* Paginació: la pàgina 2, 3… compartien <title> amb la 1. El sufix
      "(pàgina N)" els diferencia i evita títols duplicats a l'índex. */}}
 {{- $pageNum := 0 -}}
-{{- if .IsNode }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $pageNum = .PageNumber }}{{ end }}{{ end }}{{ end -}}
+{{- if .IsBranch }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $pageNum = .PageNumber }}{{ end }}{{ end }}{{ end -}}
 {{- $metaTitle := $title -}}
 {{/* Títols de taller molt curts (<20 caràcters): hi afegim el subtítol per SEO. */}}
 {{- if and (eq .Type "tallers") (lt (len $title) 20) .Params.subtitle -}}
@@ -77,7 +77,7 @@
 {{/* Canonical amb self-canonical correcte a la paginació
      (abans /blog/page/2/ declarava el canonical de /blog/). */}}
 {{- $canonical := .Permalink }}
-{{- if .IsNode }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $canonical = .URL | absURL }}{{ end }}{{ end }}{{ end }}
+{{- if .IsBranch }}{{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $canonical = .URL | absURL }}{{ end }}{{ end }}{{ end }}
 <link rel="canonical" href="{{ $canonical }}">
 
 {{/* CSS via Hugo Pipes */}}
@@ -132,7 +132,7 @@
 <meta property="og:image:alt" content="{{ $ogAlt }}">
 <meta property="og:image:type" content="{{ if strings.HasSuffix $ogImage ".png" }}image/png{{ else }}image/jpeg{{ end }}">
 {{- $ogKey := strings.TrimPrefix "/" $ogImage -}}
-{{- with index site.Data.image_dimensions $ogKey }}
+{{- with index hugo.Data.image_dimensions $ogKey }}
 <meta property="og:image:width" content="{{ .w }}">
 <meta property="og:image:height" content="{{ .h }}">
 {{- end }}
@@ -141,8 +141,8 @@
 <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 {{- end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
-{{- with site.Params.locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
-{{- range .Translations }}{{ with .Site.Params.locale }}<meta property="og:locale:alternate" content="{{ . }}">{{ end }}{{ end }}
+{{- with site.Params.ogLocale }}<meta property="og:locale" content="{{ . }}">{{ end }}
+{{- range .Translations }}{{ with .Site.Params.ogLocale }}<meta property="og:locale:alternate" content="{{ . }}">{{ end }}{{ end }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $metaTitle }}">
 <meta name="twitter:description" content="{{ with $desc }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">

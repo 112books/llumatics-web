@@ -44,8 +44,8 @@
 
         {{/* Language switcher — sempre visible */}}
         <div class="lang-switcher">
-          {{ range site.Languages }}
-            {{ $lang := .Lang }}
+          {{ range hugo.Sites }}
+            {{ $lang := .Language.Lang }}
             {{ if eq $lang $.Language.Lang }}
               <span class="lang-switcher__current" aria-current="true">{{ $lang | upper }}</span>
             {{ else }}
