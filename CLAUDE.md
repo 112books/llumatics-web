@@ -442,6 +442,15 @@ python3 scripts/generate-thumbs.py
 - **i18n** — `agenda_past_intro` i `agenda_past_summary` a CA/ES/EN; CSS nou per al bloc plegat (`.agenda-historic__summary`, `__intro`).
 - **Verificat** — `hugo --minify` net (CA 529 / ES 424 / EN 430). Amb `--clock`: l'11 des a les 23:30 la sessió encara és a «Properes dates»; el 12 des a les 00:01 ja és a l'historial. CA/ES/EN amb textos propis i HTML sense desbalancejos.
 
+### 2026-11-17 (tarda) — Subscriptors: el formulari desava newsletter=0
+
+- **Bug** — els formularis de butlletí (partial `newsletter.html` i el peu) enviaven només `email`, `idioma` i el honeypot, sense el camp `newsletter`. `subscribe.php` el llegeix amb `!empty($_POST['newsletter'])`, així que **tothom que es donava d'alta al butlletí quedava desat amb `newsletter = 0`** i no es podia distingir dels alumnes que demanaven material. Afegit `<input type="hidden" name="newsletter" value="1">` als dos formularis.
+- **Conseqüència pràctica** — la llista de butlletí viu a SQLite (`www/admin/vals.db` al VPS), no a Brevo, des del 2026-10-03. Per comptar-la: files amb `taller = ''` i `estat = 'confirmat'` (el flag no és fiable per a les altes anteriors a aquesta data).
+- **Consulta ràpida (només lectura)** — `ssh llumatics@llumatics.com "sqlite3 -readonly www/admin/vals.db 'SELECT estat, COUNT(*) FROM subscribers GROUP BY estat;'"`
+- **A 2026-11-17 hi ha 1 subscriptor confirmat** (alta del 18 d'octubre). El butlletí de difusió de les postals (`docs/social/2026-11-17-butlleti-postals-cianotipia.md`) no té sentit com a campanya: es resol amb un correu personal, i la difusió real és Instagram + el pop-up de portada.
+- **Pendent de decidir** — l'Action `newsletter-draft.yml` encara crea esborranys a **Brevo** (`BREVO_LIST_ID`), que ja no és la llista real: o es migra l'audiència a Brevo, o s'atura l'Action i el butlletí surt pel MTA local.
+
+
 ### 2026-11-05 — Pop-ups, agenda sense dates passades i nova data de «Retrat en gran format»
 
 - **Pop-up de portada** — `castanyada` desactivat a `data/efemerides.yaml` (la finestra 9–31 oct ja havia passat). Activat el de **Nadal** (`nadal`, finestra **5 nov – 11 des**: es va obrir el mateix dia per començar la difusió i es tanca sol l'endemà del taller) amb la imatge `static/images/popup/cianotipia-nadal.webp` i textos en CA/ES/EN.
