@@ -32,7 +32,6 @@ Los datos que nos proporcionéis se utilizan exclusivamente para:
 1. **Atender vuestra consulta** o solicitud de taller
 2. **Gestionar la relación formativa**: confirmación de fechas, envío de documentación y material del curso
 3. **Gestionar la lista de espera de talleres**: cuando solicitáis ser avisados de la apertura de plazas ("Avísame"), conservamos vuestro correo hasta que el taller abra o se cancele. Base jurídica: consentimiento explícito.
-4. **Enviar el boletín de novedades** si os habéis suscrito voluntariamente con doble confirmación (double opt-in). Podéis daros de baja en cualquier momento haciendo clic en el enlace que figura en cada mensaje.
 
 No se realiza ningún tratamiento de datos con fines comerciales ni publicitarios sin consentimiento previo.
 
@@ -44,7 +43,6 @@ No se realiza ningún tratamiento de datos con fines comerciales ni publicitario
 |-------|----------------|
 | Formulario de contacto | Nombre, correo electrónico, contenido del mensaje |
 | Formulario "Avísame" (lista de espera) | Correo electrónico, taller de interés |
-| Suscripción al boletín | Correo electrónico |
 | Página privada de alumnos | Nombre, correo electrónico, curso |
 
 No recogemos datos especialmente protegidos (salud, ideología, origen racial, etc.).
@@ -56,7 +54,7 @@ No recogemos datos especialmente protegidos (salud, ideología, origen racial, e
 Vuestros datos **no se ceden a terceros**, excepto:
 
 - Cuando exista una obligación legal
-- No cedemos los datos a ningún servicio externo para el boletín ni para las listas de espera: los guarda nuestro propio servidor (base de datos SQLite) y los correos salen por el servidor de correo del dominio.
+- No cedemos los datos a ningún servicio externo, ni para las listas de espera ni para el material de alumnos: los guarda nuestro propio servidor (base de datos SQLite) y los correos salen por el servidor de correo del dominio.
 
 ---
 

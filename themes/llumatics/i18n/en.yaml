@@ -54,12 +54,6 @@ max_places: "Max places"
 level: "Level"
 next_dates: "Upcoming dates"
 
-newsletter_title: "Light in your inbox"
-newsletter_desc: "New workshops, photography reflections and darkroom news. No noise."
-newsletter_placeholder: "your email"
-newsletter_cta: "Subscribe"
-newsletter_ok: "Done! Check your email to confirm your subscription."
-
 private_title: "Student content"
 private_desc: "This material is exclusive to workshop students. Enter your email to access."
 private_cta: "Access material"
@@ -163,7 +157,6 @@ preu_4h: "4 hours"
 
 # Thank you page
 gracies_msg_contacte: "We've received your message. We'll get back to you within 48 hours on business days."
-gracies_msg_newsletter: "Almost there! One last step: open the confirmation email we just sent you and click the link. If you don't see it within 5 minutes, check your spam folder."
 gracies_msg_avisa: "You're on the list. We've sent you a confirmation email — check your inbox (and your spam folder, just in case)."
 gracies_msg_default: "All good. Thanks for getting in touch with Llumàtics."
 
@@ -219,10 +212,6 @@ avisa_submit: "Notify me"
 avisa_privacy_note: "We'll only notify you when places open. No spam."
 avisa_subject_prefix: "Notify me"
 preu_per_sessio: "Price per session · per person"
-cta_newsletter_pre: "Or"
-cta_newsletter_link: "subscribe to the newsletter"
-cta_newsletter_post: "to be the first to know when it's scheduled."
-newsletter_label: "[Newsletter] Light in your inbox"
 
 # Private page — identification form
 private_name_label: "Full name"
@@ -252,7 +241,6 @@ certificate_certifies: "Certifies that"
 certificate_completed: "has completed the workshop"
 certificate_place: "Barcelona"
 certificate_issuer: "Llumàtics — School of photochemical photography"
-
 
 # ── Textos que abans eren catalans hardcodejats als templates ──────────
 gift_quiz_q_recipient: "The person receiving the gift…"
@@ -339,7 +327,6 @@ private_form_pending: "(Form pending configuration)"
 password_gate_label: "Restricted access. Enter the password."
 contact_inside_nau: "at Nau Bostik"
 
-
 # ── aria-labels que eren catalans hardcodejats ────────────────────────
 a11y_back_to_top: "Back to top"
 a11y_lightbox: "Enlarged image"
@@ -347,7 +334,6 @@ a11y_prev: "Previous"
 a11y_next: "Next"
 a11y_close: "Close"
 gift_quiz_wip_link: "contact us directly"
-
 
 # ── Claus que els templates tenien amb | default en català ────────
 gift_card_title: "Gift Voucher"
@@ -366,14 +352,12 @@ contact_sending: "Sending…"
 contact_send: "Send"
 contact_error: "Error sending the form"
 
-
 # ── Etiquetes de nivell (el color el porta la classe CSS, no el text) ──
 nivell_iniciacio: "Beginner"
 nivell_intermedi: "Intermediate"
 nivell_avancat: "Advanced"
 nivell_iniciacio_intermedi: "Beginner / Intermediate"
 nivell_tots_nivells: "All levels"
-
 
 # ── Pagination, blocks and labels (SEO audit 2026-10-02) ──────────────
 pagination_page: "page"

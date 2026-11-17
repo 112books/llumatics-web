@@ -32,7 +32,6 @@ Les dades que ens proporcioneu s'utilitzen exclusivament per a:
 1. **Atendre la vostra consulta** o sol·licitud de taller
 2. **Gestionar la relació formativa**: confirmació de dates, enviament de documentació i material de curs
 3. **Gestionar la llista d'espera de tallers**: quan sol·liciteu ser avisats de l'obertura de places ("Avisa'm"), conservem el vostre correu fins que el taller s'obri o es cancel·li. Base jurídica: consentiment explícit.
-4. **Enviar el butlletí de novetats** si us hi heu subscrit voluntàriament amb doble confirmació (double opt-in). Podeu donar-vos de baixa en qualsevol moment fent clic a l'enllaç que figura a cada missatge.
 
 No es realitza cap tractament de dades amb finalitats comercials ni publicitàries sense consentiment previ.
 
@@ -44,7 +43,6 @@ No es realitza cap tractament de dades amb finalitats comercials ni publicitàri
 |-------|-----------------|
 | Formulari de contacte | Nom, correu electrònic, contingut del missatge |
 | Formulari "Avisa'm" (llista d'espera) | Correu electrònic, taller d'interès |
-| Subscripció al butlletí | Correu electrònic |
 | Pàgina privada d'alumnes | Nom, correu electrònic, curs |
 
 No recollim dades especialment protegides (salut, ideologia, origen racial, etc.).
@@ -56,7 +54,7 @@ No recollim dades especialment protegides (salut, ideologia, origen racial, etc.
 Les vostres dades **no es cedeixen a tercers**, excepte:
 
 - Quan existeixi una obligació legal
-- No cedim les dades a cap servei extern per al butlletí ni per a les llistes d'espera: les desa el nostre propi servidor (base de dades SQLite) i els correus surten pel servidor de correu del domini.
+- No cedim les dades a cap servei extern, ni per a les llistes d'espera ni per al material d'alumnes: les desa el nostre propi servidor (base de dades SQLite) i els correus surten pel servidor de correu del domini.
 
 ---
 

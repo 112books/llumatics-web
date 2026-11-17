@@ -23,7 +23,7 @@ We use **GoatCounter** to count visits anonymously. GoatCounter **sets no cookie
 
 Forms on this website (contact, "Notify me", private student pages) are submitted directly to our server via a self-hosted PHP script. **No cookies are set** when using them.
 
-The **newsletter** and student material subscription forms are also submitted to our own server (self-hosted PHP script) and, like the others, **set no cookies**.
+The student material form is also submitted to our own server (self-hosted PHP script) and, like the others, **set no cookies**.
 
 ### Interactive map
 

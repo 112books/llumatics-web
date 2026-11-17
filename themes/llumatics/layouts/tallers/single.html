@@ -467,15 +467,6 @@
              class="btn btn--ghost" style="margin-top:var(--space-2);">
             {{ i18n "cta_regala" }}
           </a>
-          <p class="info-box__newsletter-note">
-            {{ i18n "cta_newsletter_pre" }}
-            {{ if site.Params.tallyFormNewsletter }}
-              <a href="https://tally.so/r/{{ site.Params.tallyFormNewsletter }}" target="_blank" rel="noopener">{{ i18n "cta_newsletter_link" }}</a>
-            {{ else }}
-              <a href="{{ "contacte/" | relLangURL }}#formulari">{{ i18n "cta_newsletter_link" }}</a>
-            {{ end }}
-            {{ i18n "cta_newsletter_post" }}
-          </p>
         </div>
         {{ end }}
 

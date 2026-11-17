@@ -23,7 +23,7 @@ Utilizamos **GoatCounter** para contar visitas de forma anónima. GoatCounter **
 
 Los formularios de este web (contacto, "Avísame", página privada de alumnos) se envían directamente a nuestro servidor a través de un script PHP propio. **No se establece ninguna cookie** al utilizarlos.
 
-El formulario de suscripción al **boletín** y al material de alumnos también se envía a nuestro servidor (script PHP propio) y, como los demás, **no establece ninguna cookie**.
+El formulario del material de alumnos también se envía a nuestro servidor (script PHP propio) y, como los demás, **no establece ninguna cookie**.
 
 ### Mapa interactivo
 

@@ -54,12 +54,6 @@ max_places: "Places màximes"
 level: "Nivell"
 next_dates: "Properes dates"
 
-newsletter_title: "Llum a la teva safata d'entrada"
-newsletter_desc: "Nous tallers, reflexions sobre fotografia i notícies del laboratori. Sense soroll."
-newsletter_placeholder: "el teu correu"
-newsletter_cta: "Subscriure'm"
-newsletter_ok: "Fet! Revisa el correu per confirmar la subscripció."
-
 private_title: "Contingut per a alumnes"
 private_desc: "Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir."
 private_cta: "Accedir al material"
@@ -163,7 +157,6 @@ preu_4h: "4 hores"
 
 # Pàgina gràcies
 gracies_msg_contacte: "Hem rebut el teu missatge. T'escriurem en un màxim de 48 hores en dies feiners."
-gracies_msg_newsletter: "Gairebé! Et queda un pas: obre el correu de confirmació que t'acabem d'enviar i fes clic a l'enllaç. Si no el trobes en 5 minuts, mira la carpeta de correu no desitjat (spam)."
 gracies_msg_avisa: "T'hem apuntat. T'hem enviat una confirmació per correu: revisa la teva safata (i la carpeta de brossa, per si de cas)."
 gracies_msg_default: "Tot ha anat bé. Gràcies per contactar amb Llumàtics."
 
@@ -219,10 +212,6 @@ avisa_submit: "Apunta'm"
 avisa_privacy_note: "Només t'avisarem quan obrim places. Res d'spam."
 avisa_subject_prefix: "Avisa'm"
 preu_per_sessio: "Preu per sessió · per persona"
-cta_newsletter_pre: "O"
-cta_newsletter_link: "subscriu-te al butlletí"
-cta_newsletter_post: "per estar al cas de quan es programi."
-newsletter_label: "[Butlletí] Llum a la teva safata d'entrada"
 
 # Pàgina privada — formulari d'identificació
 private_name_label: "Nom complet"
@@ -252,7 +241,6 @@ certificate_certifies: "Certifica que"
 certificate_completed: "ha completat el taller"
 certificate_place: "Barcelona"
 certificate_issuer: "Llumàtics — Escola de fotografia fotoquímica"
-
 
 # ── Textos que abans eren catalans hardcodejats als templates ──────────
 gift_quiz_q_recipient: "La persona que rep el regal…"
@@ -339,7 +327,6 @@ private_form_pending: "(Formulari pendent de configuració)"
 password_gate_label: "Accés restringit. Introdueix la contrasenya."
 contact_inside_nau: "dins la Nau Bostik"
 
-
 # ── aria-labels que eren catalans hardcodejats ────────────────────────
 a11y_back_to_top: "Tornar al principi"
 a11y_lightbox: "Imatge ampliada"
@@ -347,7 +334,6 @@ a11y_prev: "Anterior"
 a11y_next: "Següent"
 a11y_close: "Tancar"
 gift_quiz_wip_link: "contacta'ns directament"
-
 
 # ── Claus que els templates tenien amb | default en català ────────
 gift_card_title: "Val Regal"
@@ -366,14 +352,12 @@ contact_sending: "Enviant…"
 contact_send: "Enviar"
 contact_error: "Error enviant el formulari"
 
-
 # ── Etiquetes de nivell (el color el porta la classe CSS, no el text) ──
 nivell_iniciacio: "Iniciació"
 nivell_intermedi: "Intermedi"
 nivell_avancat: "Avançat"
 nivell_iniciacio_intermedi: "Iniciació / Intermedi"
 nivell_tots_nivells: "Tots els nivells"
-
 
 # ── Paginació, blocs i etiquetes (auditoria SEO 2026-10-02) ───────────
 pagination_page: "pàgina"

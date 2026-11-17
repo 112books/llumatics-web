@@ -23,7 +23,7 @@ Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada e
 | JS | Vanilla JS mínim |
 | Idiomes | CA (per defecte), ES, EN |
 | Formularis | PHP propi pel MTA local de Dinahosting (vegeu `docs/manuals/correu-local.md`) |
-| Newsletter | Local: SQLite + doble opt-in (`static/subscribe.php`) |
+| Newsletter | Retirat del web (2026-11-17); el correu propi queda per a «Avisa'm», contacte i material d'alumnes |
 | PDF alumnes | Generació al navegador (`window.print()`) |
 | DNS/Domini | Dinahosting |
 
@@ -316,7 +316,6 @@ Ordre dels blocs al template `layouts/tallers/single.html`:
 [params]
   contactEmail = "info@llumatics.com"
   instagram = "https://www.instagram.com/llumatics"
-  tallyFormNewsletter = ""    # ID del formulari Tally per newsletter
   tallyFormContact = ""       # ID del formulari Tally per inscripcions/PDF
   tallyFormGiftVoucher = ""   # ID del formulari Tally per vals-regal
   tallyFormSolicitud = ""     # ID del formulari Tally per sol·licitar data de taller
@@ -434,9 +433,9 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
-> **Nota (2026-11-17).** El proveïdor extern de butlletins ha quedat **fora del projecte**: no hi ha
-> cap servei de tercers, cap clau ni cap Action que en depengui. Les mencions que trobareu en
-> entrades anteriors d'aquest registre són **històriques** i es conserven com a traça del que es va fer.
+> **Nota (2026-11-17).** El **butlletí s'ha retirat del web** i el proveïdor extern associat també:
+> no hi ha cap servei de tercers, cap clau, cap Action ni cap formulari de subscripció. Les mencions
+> que trobareu en entrades anteriors d'aquest registre són **històriques** i es conserven com a traça.
 
 ### 2026-11-17 (vespre) — Entrada de blog de les postals i fora el servei extern de butlletí
 
@@ -445,7 +444,7 @@ python3 scripts/generate-thumbs.py
 - **Legal** — treta la fila del proveïdor de la taula de cookies a CA/ES/EN (`content/{ca,es,en}/cookies/index.md`). La política ja descrivia correctament que el web no genera cookies pròpies.
 - **Codi** — `private.html`: el formulari passa a `private-doc-form` (abans `private-brevo-form`) i els comentaris deixen de parlar del servei; `confirmat.html`, `subscribe.php`, `mailer.php` i `form-handler.php` amb comentaris netejats; `README.md` amb la fila de newsletter correcta.
 - **Docs** — `docs/manuals/crear-contingut.md` i `docs/manuals/correu-local.md` descriuen el flux local (subscribe.php + SQLite + MTA); el text del butlletí de les postals queda marcat **en pausa** a `docs/social/2026-11-17-butlleti-postals-cianotipia.md`.
-- **Decisió pendent de Joan** — si el butlletí se suspèn del tot, treure els formularis de subscripció (`partials/newsletter.html` i el del peu) i la pàgina d'alta; si es manté, la llista viu a `admin/vals.db` i l'enviament és manual pel MTA local.
+- **Butlletí retirat del web** — fora la banda del peu, el partial `newsletter.html`, la nota sota els botons dels tallers, el handler JS de `[data-subscribe-form]`, les 10 claus i18n (`newsletter_*`, `cta_newsletter_*`, `gracies_msg_newsletter`) i tot el CSS associat; `tallyFormNewsletter` i `tallyFormAvisa` fora de `hugo.toml`. Legal: tret el punt del butlletí de la privacitat i la fila de dades, i les mencions a cookies (CA/ES/EN). **«Avisa'm» no es toca**: va pel formulari local → `form-handler.php` → SQLite + MTA, sense cap servei extern.
 
 ### 2026-11-17 — L'agenda amaga les dates l'endemà i recupera l'historial
 
@@ -759,31 +758,22 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 
 ### Formularis i integracions
 
-#### "Avisa'm" per taller — PARCIALMENT LLEST (2026-05-27)
+#### "Avisa'm" per taller — FUNCIONA (local)
 
-**Estat actual:**
-- [x] Brevo: llista `#5 — Waitlist tallers` creada
-- [x] Brevo: atributs `TALLER`, `IDIOMA`, `NOM`, `DATA_SOL_LICITUD`, `NEWSLETTER` ja existien
-- [x] Tally: formulari creat — ID `LZ6r0O` — camps: email + hidden `taller` (`@taller`) → integració Brevo llista #5
-- [x] Hugo: `tallyFormAvisa = "LZ6r0O"` a `hugo.toml` — botó actiu a tots els tallers
-- [ ] **PENDENT: revisar el destí de les altes d'«Avisa'm»** — el formulari Tally (`LZ6r0O`) tenia la integració cap a la llista del servei extern, que ja no existeix: ara mateix les altes no arriben enlloc. Cal decidir si el botó passa al formulari local (`form-handler.php`, tipus `avisam`) o si es retira.
+```
+Botó "Avisa'm" (tallers/single.html, .js-avisa-toggle)
+  → formulari inline [data-avisa-form] (email + TALLER ocult + honeypot `website`)
+  → POST /form-handler.php (type=avisa)
+  → SQLite: taula `waitlist` (email+taller únics: no duplica)
+  → correu intern a hola@llumatics.com (+ avís «[ACCIÓ]» quan ja hi ha 2 persones)
+  → correu de confirmació a l'usuari → /gracies/?from=avisa
+```
 
-**Com crear l'automation (obsolet: era al servei extern, retirat el 2026-11-17):**
-1. `app.brevo.com → Automations → New automation → Start from scratch`
-2. **Trigger:** "Contact is added to a list" → llista #5
-3. **Primer:** crear el template a `Email → Templates → Create a template`:
-   - Nom: `Avisa'm — confirmació`
-   - Assumpte: `T'avisarem quan obrim places — Llumàtics`
-   - Cos: "Hem apuntat el teu interès. Quan obrim places per al taller t'enviarem un avís. / Joan — Llumàtics"
-   - Guardar i activar el template
-4. **Action:** "Send an email" → seleccionar template `Avisa'm — confirmació`
-5. Activar l'automatització
-
-**Waitlist manual pendent:**
-- Importar `waitlist.csv` a Brevo llista #5 (Núria Graell Bullich → taller `retrat-6x6`)
+- **Tot local**: MTA de Dinahosting i `admin/vals.db`. No depèn de cap servei extern ni del butlletí.
+- Els paràmetres de Tally (`tallyFormSolicitud`, `tallyFormContact`, `tallyFormGiftVoucher`) són per als altres botons; el d'avisos ja no en necessita cap.
+- **No tocar** sense necessitat: el flux està verificat en producció.
 
 #### Altres formularis Tally pendents
-- [ ] `tallyFormNewsletter` — subscripció al butlletí
 - [ ] `tallyFormSolicitud` — sol·licitar data de taller
 - [ ] `tallyFormContact` — formulari de contacte general
 
@@ -794,23 +784,17 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 
 ### Documentació nominal alumnes — EN CURS (Fase 1 infraestructura feta)
 
-**Estat:** infraestructura de codi completament implementada. Pendent: configurar Brevo + test end-to-end.
+**Estat:** funciona en local (subscribe.php + SQLite + MTA). El doble opt-in i la baixa són propis del web.
 
 **Pla complet:** `docs/superpowers/plans/2026-05-24-documentacio-alumnes.md`
 **Spec de disseny:** `docs/superpowers/specs/2026-05-24-documentacio-alumnes-design.md`
 
-**Arquitectura:** Formulari identificació → POST Brevo (doble opt-in) → `localStorage` relay → `/confirmat/` → `/privat/doc/?nom=...` → JS injecta nom → `window.print()` → PDF nominal amb certificat.
+**Arquitectura:** Formulari identificació → POST `/subscribe.php` (doble opt-in local) → correu de confirmació pel MTA → `subscribe.php?confirm=TOKEN` → `/confirmat/` → `/privat/doc/?nom=...` → JS injecta nom → `window.print()` → PDF nominal amb certificat.
 
-**Task 1 — Configurar Brevo (MANUAL — tu has de fer-ho):**
-1. `app.brevo.com` → Contacts → Lists → "Alumnes Llumàtics" (apuntar l'ID)
-2. Contacts → Settings → Contact attributes: `NOM` (Text), `TALLER` (Text), `IDIOMA` (Text), `DATA_SOL·LICITUD` (Date), `NEWSLETTER` (Boolean)
-3. Contacts → Forms → Subscription form → camps: Email + NOM + TALLER (hidden) + IDIOMA (hidden) + NEWSLETTER (checkbox) → Double opt-in activat → Redirect URL: `https://llumatics.com/confirmat/`
-4. Al formulari → Share/Embed → HTML form → copiar el valor de `action` (format: `https://sibforms.com/serve/MUIFA...`)
-5. Enganxar l'URL a `hugo.toml`: `brevoListFormAction = "https://sibforms.com/serve/MUIFA..."`
+> **No cal configurar cap servei extern:** el formulari d'alumnes envia a `subscribe.php` i tot queda al servidor (SQLite + MTA).
 
 **Tasks 2-8 — Codi (LLESTS ✅):**
-- [x] `hugo.toml`: param `brevoListFormAction` configurat amb l'URL real del formulari Brevo «Alumnes Llumàtics» (resolt 2026-10-02)
-- `layouts/_default/private.html`: formulari Brevo + localStorage
+- `layouts/_default/private.html`: formulari + localStorage
 - `layouts/_default/confirmat.html`: relay localStorage → /doc/
 - `layouts/_default/private-doc.html`: documentació + injecció nom + certificat
 - `content/ca/confirmat/_index.md`: pàgina relay
@@ -822,8 +806,8 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 Un cop el staging funcioni correctament (fix staticrypt acabat de pujar, commit `228647d9`):
 - `https://112books.github.io/llumatics-web/tallers/revelat-bn/privat/doc/?nom=Joan+Puig&taller=revelat-bn&lang=ca` → ha de mostrar la documentació completa
 
-**Task 9 — Test end-to-end (pendent, necessita Brevo configurat):**
-1. Obrir `/tallers/revelat-bn/privat/` → omplir formulari → verificar email doble opt-in Brevo
+**Task 9 — Test end-to-end (local, pendent de fer):**
+1. Obrir `/tallers/revelat-bn/privat/` → omplir formulari → verificar el correu de confirmació del MTA
 2. Confirmar email → verificar redirecció a `/confirmat/` → redirecció automàtica a `/doc/?nom=...`
 3. Verificar document amb nom + botó impressió + certificat + PDF A4
 
@@ -1019,7 +1003,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 
 **Pendent comunicació:**
 - [ ] Post per a 112books.eu anunciant la col·laboració al taller Fotollibre
-- [ ] Newsletter a Brevo quan hi hagi subscrits
+- [x] Newsletter — retirat del web el 2026-11-17 (sense subscripció ni enviament periòdic)
 
 ### Fet aquesta sessió (2026-06-01)
 **Instagram — Posts pilot publicats + perfil optimitzat + Meta Developer App iniciada**

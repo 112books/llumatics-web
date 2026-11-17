@@ -873,56 +873,6 @@ button, input, select, textarea {
   letter-spacing: 0.05em;
 }
 
-/* ── Formulari newsletter ────────────────────────────────────────────────── */
-.newsletter-block {
-  background: var(--color-text);
-  color: var(--color-bg);
-  padding: var(--space-16);
-  text-align: center;
-}
-
-.newsletter-block__title {
-  font-family: var(--font-serif);
-  font-size: var(--text-3xl);
-  margin-bottom: var(--space-3);
-}
-
-.newsletter-block__desc {
-  color: rgba(255,255,255,0.6);
-  max-width: 480px;
-  margin-inline: auto;
-  margin-bottom: var(--space-8);
-}
-
-.newsletter-form {
-  display: flex;
-  gap: var(--space-3);
-  max-width: 480px;
-  margin-inline: auto;
-}
-
-.newsletter-form input[type="email"] {
-  flex: 1;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.08);
-  color: var(--color-bg);
-  outline: none;
-  transition: border-color var(--transition);
-}
-
-.newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.4); }
-.newsletter-form input[type="email"]:focus { border-color: var(--color-accent-dark); }
-
-.newsletter-form__ok {
-  font-size: var(--text-sm);
-  color: var(--color-accent-dark);
-  margin: 0;
-}
-
-.newsletter-band__form { max-width: 380px; margin-inline: 0; }
-
 /* ── Vals-regal ──────────────────────────────────────────────────────────── */
 .gift-section {
   padding-block: var(--space-24);
@@ -2386,7 +2336,6 @@ a.recorregut-stop__name:hover {
   .site-logo__text { display: none; }
   .course-single__top { margin-left: 0 !important; }
 
-  .newsletter-form { flex-direction: column; }
   .site-footer__grid { grid-template-columns: 1fr; }
   .agenda-item { grid-template-columns: 60px 1fr; }
   .agenda-item:last-child > *:last-child { grid-column: 2; }
@@ -3251,78 +3200,6 @@ a.recorregut-stop__name:hover {
 }
 .collapsible__panel.is-open {
   display: block;
-}
-
-/* ── Newsletter band (footer) ────────────────────────────────────────────── */
-.newsletter-band {
-  display: flex;
-  align-items: center;
-  gap: var(--space-8);
-  border-top: 1px solid rgba(200,100,80,0.2);
-  border-bottom: 1px solid rgba(200,100,80,0.2);
-  padding-block: var(--space-8);
-  margin-bottom: var(--space-8);
-}
-.newsletter-band__intro { flex: 1; min-width: 0; }
-.newsletter-band__label {
-  font-size: var(--text-base);
-  font-weight: 600;
-  color: var(--color-bg);
-  margin-bottom: var(--space-1);
-}
-.newsletter-band__desc {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.5);
-}
-.newsletter-band__form  { flex: 1; min-width: 0; }
-.newsletter-band__tally { white-space: nowrap; }
-.newsletter-band__fields {
-  display: flex;
-  gap: var(--space-2);
-}
-.newsletter-band__input {
-  flex: 1;
-  min-width: 0;
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.08);
-  color: var(--color-bg);
-  font-size: var(--text-sm);
-  outline: none;
-  transition: border-color var(--transition);
-}
-.newsletter-band__input::placeholder { color: rgba(255,255,255,0.35); }
-.newsletter-band__input:focus        { border-color: var(--color-accent-dark); }
-.newsletter-band__submit             { white-space: nowrap; }
-.newsletter-form__msg {
-  font-size: var(--text-sm);
-  margin-top: var(--space-2);
-  min-height: 1.2em;
-}
-@media (max-width: 768px) {
-  .newsletter-band {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-4);
-  }
-  .newsletter-band__form,
-  .newsletter-band__tally { width: 100%; }
-}
-
-/* ── Nota newsletter sota botons taller ──────────────────────────────────── */
-.info-box__newsletter-note {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  margin-top: var(--space-4);
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--color-border);
-  line-height: 1.5;
-}
-.info-box__newsletter-note a {
-  color: var(--color-accent-dark);
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 /* ── Botó ghost (Avisa'm) ────────────────────────────────────────────────── */
