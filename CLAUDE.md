@@ -17,7 +17,7 @@ Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada e
 
 | Capa | Tecnologia |
 |------|-----------|
-| SSG | Hugo v0.159+ extended |
+| SSG | Hugo v0.168+ extended (local i CI han d'anar a la mateixa versió) |
 | Tema | Custom (`themes/llumatics/`) |
 | CSS | Vanilla CSS amb custom properties (cap framework) |
 | JS | Vanilla JS mínim |
@@ -30,6 +30,8 @@ Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada e
 ---
 
 ## Entorns
+
+> **Versió de Hugo:** la local i la del CI (`deploy-production.yml`, `deploy-staging.yml`, ara a `hugo-version: '0.168.0'`) han d'anar sempre a la mateixa. Si puja la local, puja també els dos workflows: si no, una plantilla nova pot funcionar en local i petar només al desplegament. Va passar el 2026-11-17 amb `.IsBranch`, que no existeix a 0.159.
 
 ### Local
 ```bash
