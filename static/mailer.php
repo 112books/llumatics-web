@@ -1,6 +1,6 @@
 <?php
 // mailer.php — Correu transaccional de Llumàtics amb plantilla corporativa.
-// S'envia pel MTA local de Dinahosting (mail()) — sense Brevo.
+// S'envia pel MTA local de Dinahosting amb mail().
 // Ús: require_once __DIR__ . '/mailer.php'; llum_send_html(...);
 
 if (!defined('LLUM_MAIL_FROM')) {

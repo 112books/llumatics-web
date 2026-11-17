@@ -39,7 +39,6 @@ Aquest web **no genera cap cookie pròpia**.
 |-----------|--------|----------------------|
 | GoatCounter (analítica) | Cap | No |
 | Formularis propis (PHP) | Cap | No |
-| Brevo (newsletter extern) | Les de Brevo, al seu domini | Activació manual (clic al botó) |
 | OpenStreetMap (mapa) | Sessió (si l'activeu) | Activació manual |
 
 ---

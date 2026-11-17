@@ -1,6 +1,6 @@
 # Correu de Llumàtics — 100% local (Dinahosting)
 
-> Documentació del sistema de correu propi. Substitueix Brevo i web3forms.
+> Documentació del sistema de correu propi del web.
 
 ## Resum
 

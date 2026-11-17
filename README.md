@@ -18,7 +18,7 @@ Web de **Llumàtics**, escola de fotografia a Barcelona especialitzada en fotogr
 | JS | Vanilla JS mínim |
 | Idiomes | CA (per defecte), ES, EN |
 | Formularis | Tally.so |
-| Newsletter | web3forms → Brevo (en configuració) |
+| Newsletter | Formulari propi + SQLite (doble opt-in, MTA local) |
 | PDF alumnes | Make.com → Pandoc (pipeline extern, pendent) |
 | Hosting | GitHub Pages |
 

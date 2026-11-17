@@ -1,4 +1,4 @@
-{{/* Layout: private.html — Formulari d'identificació alumnes → Brevo doble opt-in */}}
+{{/* Layout: private.html — Formulari d'identificació alumnes → subscribe.php (doble opt-in local) */}}
 {{ define "main" }}
 {{ $courseRef := .Params.course_ref | default (.File.Dir | path.Base) }}
 {{ $lang := .Language.Lang }}
@@ -12,7 +12,7 @@
 
       <div id="private-form-wrap">
           <form
-            id="private-brevo-form"
+            id="private-doc-form"
             action="/subscribe.php"
             method="POST"
             class="private-form"
@@ -87,7 +87,7 @@
 
 <script>
 (function() {
-  var form = document.getElementById('private-brevo-form');
+  var form = document.getElementById('private-doc-form');
   if (!form) return;
 
   form.addEventListener('submit', function(e) {
@@ -100,7 +100,7 @@
 
     if (!nom) return;
 
-    // Sincronitza locale hidden amb el select d'idioma (IDIOMA → Brevo attr, locale → idioma email opt-in)
+    // Sincronitza locale hidden amb el select d'idioma (IDIOMA → idioma del correu opt-in)
     var hiddenLocale = form.querySelector('[name="locale"]');
     if (hiddenLocale) hiddenLocale.value = lang;
 

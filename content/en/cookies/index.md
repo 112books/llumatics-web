@@ -39,7 +39,6 @@ This website **generates no first-party cookies**.
 |----------|--------|-----------------|
 | GoatCounter (analytics) | None | No |
 | Self-hosted forms (PHP) | None | No |
-| Brevo (external newsletter) | Brevo's own, on their domain | Manual activation (button click) |
 | OpenStreetMap (map) | Session (if activated) | Manual activation |
 
 ---

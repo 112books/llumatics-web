@@ -434,6 +434,19 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+> **Nota (2026-11-17).** El proveïdor extern de butlletins ha quedat **fora del projecte**: no hi ha
+> cap servei de tercers, cap clau ni cap Action que en depengui. Les mencions que trobareu en
+> entrades anteriors d'aquest registre són **històriques** i es conserven com a traça del que es va fer.
+
+### 2026-11-17 (vespre) — Entrada de blog de les postals i fora el servei extern de butlletí
+
+- **Entrada de blog publicada** — `content/ca/blog/postals-cianotipia-nadal.md` (CA, a producció): història de la tècnica —Herschel el 1842 i Anna Atkins amb *Photographs of British Algae*, enllaçat a l'exemplar digitalitzat del Metropolitan— i el desenvolupament del taller en sis passos (fórmula, sensibilització de les cartolines, composicions, insolació amb UV o sol, revelat en aigua) fins a «en pots fer tantes com vulguis a casa». Títol final: **«Nou taller per fer Postals (nadalenques o no) en cianotípia.»** Commits `a108ad51d` i `3a8157441`.
+- **Fora el servei extern de butlletí** — esborrats `.github/workflows/newsletter-draft.yml` i `.github/scripts/newsletter_draft.py`: creaven un esborrany a cada push amb `BREVO_API_KEY`/`BREVO_LIST_ID` i fallaven sempre. `hugo.toml` ja no tenia cap param associat i no queda cap clau al repo.
+- **Legal** — treta la fila del proveïdor de la taula de cookies a CA/ES/EN (`content/{ca,es,en}/cookies/index.md`). La política ja descrivia correctament que el web no genera cookies pròpies.
+- **Codi** — `private.html`: el formulari passa a `private-doc-form` (abans `private-brevo-form`) i els comentaris deixen de parlar del servei; `confirmat.html`, `subscribe.php`, `mailer.php` i `form-handler.php` amb comentaris netejats; `README.md` amb la fila de newsletter correcta.
+- **Docs** — `docs/manuals/crear-contingut.md` i `docs/manuals/correu-local.md` descriuen el flux local (subscribe.php + SQLite + MTA); el text del butlletí de les postals queda marcat **en pausa** a `docs/social/2026-11-17-butlleti-postals-cianotipia.md`.
+- **Decisió pendent de Joan** — si el butlletí se suspèn del tot, treure els formularis de subscripció (`partials/newsletter.html` i el del peu) i la pàgina d'alta; si es manté, la llista viu a `admin/vals.db` i l'enviament és manual pel MTA local.
+
 ### 2026-11-17 — L'agenda amaga les dates l'endemà i recupera l'historial
 
 - **Regla temporal** — una sessió deixa de llistar-se **l'endemà** d'haver-se fet, no el mateix dia. Amb el filtre anterior (`date_start >= avui`) la sessió de l'11 de desembre desapareixia l'11 al matí; ara tot l'11 es veu i el 12 a les 00:01 ja no. Si l'entrada té `date_end`, mana la data de fi (sessions de més d'un dia).
@@ -447,10 +460,10 @@ python3 scripts/generate-thumbs.py
 ### 2026-11-17 (tarda) — Subscriptors: el formulari desava newsletter=0
 
 - **Bug** — els formularis de butlletí (partial `newsletter.html` i el peu) enviaven només `email`, `idioma` i el honeypot, sense el camp `newsletter`. `subscribe.php` el llegeix amb `!empty($_POST['newsletter'])`, així que **tothom que es donava d'alta al butlletí quedava desat amb `newsletter = 0`** i no es podia distingir dels alumnes que demanaven material. Afegit `<input type="hidden" name="newsletter" value="1">` als dos formularis.
-- **Conseqüència pràctica** — la llista de butlletí viu a SQLite (`www/admin/vals.db` al VPS), no a Brevo, des del 2026-10-03. Per comptar-la: files amb `taller = ''` i `estat = 'confirmat'` (el flag no és fiable per a les altes anteriors a aquesta data).
+- **Conseqüència pràctica** — la llista de butlletí viu a SQLite (`www/admin/vals.db` al VPS), no a cap servei extern, des del 2026-10-03. Per comptar-la: files amb `taller = ''` i `estat = 'confirmat'` (el flag no és fiable per a les altes anteriors a aquesta data).
 - **Consulta ràpida (només lectura)** — `ssh llumatics@llumatics.com "sqlite3 -readonly www/admin/vals.db 'SELECT estat, COUNT(*) FROM subscribers GROUP BY estat;'"`
 - **A 2026-11-17 hi ha 1 subscriptor confirmat** (alta del 18 d'octubre). El butlletí de difusió de les postals (`docs/social/2026-11-17-butlleti-postals-cianotipia.md`) no té sentit com a campanya: es resol amb un correu personal, i la difusió real és Instagram + el pop-up de portada.
-- **Pendent de decidir** — l'Action `newsletter-draft.yml` encara crea esborranys a **Brevo** (`BREVO_LIST_ID`), que ja no és la llista real: o es migra l'audiència a Brevo, o s'atura l'Action i el butlletí surt pel MTA local.
+- **Resolt al vespre** — l'Action `newsletter-draft.yml` i el seu script s'han **retirat del repo**: no queda cap servei extern de butlletí. El que queda per decidir és si el butlletí es manté o se suspèn (vegeu l'entrada de sota).
 
 
 ### 2026-11-05 — Pop-ups, agenda sense dates passades i nova data de «Retrat en gran format»
@@ -753,9 +766,9 @@ El camp `to` no funciona — tots els emails arriben a `linuxbcn@gmail.com` (com
 - [x] Brevo: atributs `TALLER`, `IDIOMA`, `NOM`, `DATA_SOL_LICITUD`, `NEWSLETTER` ja existien
 - [x] Tally: formulari creat — ID `LZ6r0O` — camps: email + hidden `taller` (`@taller`) → integració Brevo llista #5
 - [x] Hugo: `tallyFormAvisa = "LZ6r0O"` a `hugo.toml` — botó actiu a tots els tallers
-- [ ] **PENDENT: Brevo automation** — email de confirmació automàtic quan s'afegeix contacte a llista #5
+- [ ] **PENDENT: revisar el destí de les altes d'«Avisa'm»** — el formulari Tally (`LZ6r0O`) tenia la integració cap a la llista del servei extern, que ja no existeix: ara mateix les altes no arriben enlloc. Cal decidir si el botó passa al formulari local (`form-handler.php`, tipus `avisam`) o si es retira.
 
-**Com crear l'automation (pendent fer a l'estudi):**
+**Com crear l'automation (obsolet: era al servei extern, retirat el 2026-11-17):**
 1. `app.brevo.com → Automations → New automation → Start from scratch`
 2. **Trigger:** "Contact is added to a list" → llista #5
 3. **Primer:** crear el template a `Email → Templates → Create a template`:
@@ -884,7 +897,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] **Revisar i, si cal, publicar la documentació d'alumnes de «Fotografia d'esperits»** — esborrany CA a `content/ca/privat/fotografia-desperits-doc.md` i porta `content/ca/privat/fotografia-desperits.md`. Quan estigui aprovada: `draft: false` als dos i `sense_doc: false` a la fitxa. Anotat 2026-10-09.
 - [x] **Article de blog — jornada Holga Week (Tarda Holga, 8 oct 2026)** — crònica de la trobada a la Nau Bostik: `content/ca/blog/tarda-holga-nau-bostik.md` (draft:true, pendent revisió i publicació). Creat 2026-10-12.
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
-- [ ] **Difusió del flash «Postals en cianotípia» (11 des, 18–21 h)** — text per a Instagram (post + stories) i esborrany de butlletí a Brevo. El pop-up de la portada ja el promociona al web; falta la difusió exterior. Anotat 2026-11-05.
+- [ ] **Difusió del flash «Postals en cianotípia» (11 des, 18–21 h)** — text per a Instagram (post + stories) i butlletí (en pausa: 1 subscriptor confirmat). El pop-up de la portada ja el promociona al web; falta la difusió exterior. Anotat 2026-11-05.
 - [ ] **Pop-up de Nadal: apagar-lo després de l'11 de desembre** — es tanca sol l'endemà del taller (`fi` + 1 dia), però cal deixar `actiu: false` a l'entrada `nadal` quan es prepari el següent pop-up, com es va fer amb la Castanyada. Anotat 2026-11-05.
 - [ ] **Imatges «guapes» de la cianotípia de Nadal** — Joan en farà de millors; substituir `static/images/tallers/postals-cianotipia-nadal.*` i `static/images/popup/cianotipia-nadal.*` (recordar el renombrament per la caché d'1 any si es manté la mateixa URL). Anotat 2026-11-05. **2026-11-17: encara no s'han fet — falta material de cianotípia; no bloquegen res, la fitxa i el pop-up ja tenen imatge.**
 
@@ -905,7 +918,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [ ] **Fragments de producte (`/regala/`)** — la infraestructura de ressenyes reals ja existeix (`data/ressenyes.yaml`); falta **omplir-la** amb 2–3 ressenyes reals perquè el bloc i el `aggregateRating`/`review` s'emetin (2026-10-18).
 - [ ] **Accessibilitat** — afegir comprovació automàtica (axe o Pa11y) al desplegament.
 - [ ] **Recomanador** — revisar `format`/`nivell_minim`/`estat` al frontmatter i la validació al build.
-- [ ] **Formacions flash i efemèrides** — `data/efemerides.yaml`, pop-up accessible i llista Brevo (decisions de Joan).
+- [ ] **Formacions flash i efemèrides** — `data/efemerides.yaml`, pop-up accessible i llista de subscriptors (decisions de Joan).
 - [ ] **SEO continu** — una guia al mes al blog; prova mensual als assistents d'IA; revisió semestral de `robots.txt`.
 - [x] **Veu i terminologia** — aplicada (lema, títols/descripcions, química/analògica i article de blog).
 

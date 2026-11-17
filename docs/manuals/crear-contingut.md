@@ -246,8 +246,8 @@ Cada taller té dos fitxers privats (a `content/[lang]/privat/`):
 
 **Flux complet de l'alumne:**
 1. Accedeix a `/tallers/[slug]/privat/` → veu el formulari (nom, email, idioma)
-2. Envia el formulari → Brevo envia un email de doble opt-in
-3. L'alumne confirma l'email → Brevo redirigeix a `/confirmat/`
+2. Envia el formulari → `subscribe.php` desa la petició a SQLite i envia el correu de confirmació pel MTA local
+3. L'alumne confirma el correu → `subscribe.php?confirm=TOKEN` el redirigeix a `/confirmat/`
 4. `/confirmat/` llegeix `localStorage` i redirigeix automàticament a `/tallers/[slug]/privat/doc/?nom=Joan+Puig&taller=[slug]&lang=ca`
 5. El document es mostra personalitzat amb el nom. El botó "Imprimeix" genera el PDF amb el certificat.
 
@@ -302,7 +302,7 @@ draft: false
 ---
 ```
 
-> **Nota:** Brevo (el formulari) és únic per a tots els tallers. El camp `course_ref` s'envia com a camp ocult `TALLER` a Brevo i s'usa per etiquetar el contacte.
+> **Nota:** el formulari és únic per a tots els tallers (el pinta el layout `private`). El camp `course_ref` s'envia com a camp ocult `TALLER` i s'usa per saber de quin taller ve cada sol·licitud.
 
 ---
 
@@ -389,7 +389,7 @@ Quan el contingut estigui revisat i correcte:
 
 ### 3.4 Verificar que tot funciona
 
-Un cop desplegat, pots provar-ho directament sense passar pel formulari Brevo:
+Un cop desplegat, pots provar-ho directament sense passar pel formulari:
 
 ```
 https://llumatics.com/tallers/[slug]/privat/doc/?nom=Joan+Puig&taller=[slug]&lang=ca

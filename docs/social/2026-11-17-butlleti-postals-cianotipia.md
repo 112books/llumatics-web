@@ -1,8 +1,11 @@
 # Butlletí — «Postals en cianotípia» (11 de desembre de 2026)
 
-Correu per a la llista **Butlletí Llumàtics** (Brevo), remitent `hola@llumatics.com`.
+Correu per a la llista del butlletí (SQLite, `admin/vals.db` al VPS), remitent `hola@llumatics.com`.
 
-> L'Action `newsletter-draft.yml` crea un esborrany automàtic quan apareix una fitxa nova, però el seu text és genèric («Sota demanda · Sol·licita una data»). Per a un flash amb data fixa no serveix: aquest és el text que cal enganxar a Brevo.
+> **Estat: en pausa (2026-11-17).** El proveïdor extern de butlletins ha quedat fora del projecte
+> i l'Action que creava esborranys s'ha retirat (`newsletter-draft.yml`). La llista només té **1 subscriptor confirmat**,
+> així que la difusió real és Instagram, el pop-up de portada i el correu personal. Aquest text
+> queda com a material per si el butlletí es reactiva.
 
 ## Assumpte (triar-ne un)
 
@@ -32,7 +35,7 @@ Reserva el teu lloc a https://llumatics.com/tallers/postals-cianotipia-nadal/ o 
 Joan — Llumàtics
 ```
 
-## HTML per enganxar a Brevo
+## HTML del correu
 
 ```html
 <div style="font-family: Georgia, 'Times New Roman', serif; max-width: 580px; margin: 0 auto; padding: 40px 24px; color: #1a1a1a; line-height: 1.6;">
@@ -70,7 +73,7 @@ Joan — Llumàtics
   <p style="font-size: 12px; color: #999; margin: 0;">
     Llumàtics · Escola de fotografia analògica · Nau Bostik, Barcelona<br>
     <a href="https://llumatics.com" style="color: #999;">llumatics.com</a> ·
-    <a href="{{ unsubscribe }}" style="color: #999;">donar-se de baixa</a>
+    <a href="https://llumatics.com/subscribe.php?baixa=TOKEN" style="color: #999;">donar-se de baixa</a>
   </p>
 
 </div>
@@ -78,10 +81,10 @@ Joan — Llumàtics
 
 ## Com enviar-lo
 
-1. Brevo → **Campanyes** → nova campanya d'email, remitent `hola@llumatics.com`.
-2. Llista destinatària: **Butlletí Llumàtics**.
+1. Enviament pel **MTA local** (vegeu `docs/manuals/correu-local.md`), remitent `hola@llumatics.com`.
+2. Destinataris: els confirmats de `subscribers` amb `taller = ''` i `estat = 'confirmat'`.
 3. Enganxar l'HTML del bloc de dalt i posar assumpte + preheader.
-4. Comprovar que `{{ unsubscribe }}` el substitueix Brevo (en la prova pot no fer-ho).
+4. Cada destinatari necessita el seu enllaç de baixa (`subscribe.php?baixa=TOKEN`): amb BCC no es pot personalitzar, així que cal enviar-los un a un o habilitar la resposta «baixa».
 5. Enviar quan hi hagi imatges millors de la cianotípia, si el Joan ja les té; si no, amb la imatge actual n'hi ha prou.
 
 ## Criteris
