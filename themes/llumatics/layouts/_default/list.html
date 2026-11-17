@@ -16,19 +16,8 @@
     </div>
 
   {{ else if eq .Type "agenda" }}
-    {{/* Només dates d'avui en endavant (les passades no es llisten) */}}
-    {{ $today := now.Format "2006-01-02" }}
-    {{ $upcoming := where (where .Pages ".Params.status" "ne" "past") ".Params.date_start" "ge" $today }}
-
-    {{ if $upcoming }}
-    <div class="agenda-grid">
-      {{ range $upcoming }}
-        {{ partial "agenda-item.html" . }}
-      {{ end }}
-    </div>
-    {{ else }}
-    <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" }}</p>
-    {{ end }}
+    {{/* Mateixa lògica que /agenda/: properes + historial (partial compartit) */}}
+    {{ partial "agenda-list.html" . }}
 
   {{ else }}
     <div style="display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top:2rem;">

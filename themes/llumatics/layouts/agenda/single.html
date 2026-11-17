@@ -1,10 +1,22 @@
 {{ define "main" }}
 {{ $status := .Params.status | default "active" }}
+{{/* Mateixa regla que a la llista: una sessió és passada l'endemà
+     d'haver-se fet (o de date_end, si en té). Així la pàgina d'una data
+     passada no ofereix inscripció. */}}
+{{ $endDate := "" }}
+{{ with (.Params.date_end | default .Params.date_start) }}
+  {{ $endDate = . | time.Format "2006-01-02" }}
+{{ end }}
+{{ if and $endDate (lt $endDate (now.Format "2006-01-02")) }}
+  {{ $status = "past" }}
+{{ end }}
 {{ $purchaseURL := .Params.purchase_url }}
 {{ $courseRef := .Params.course_ref }}
 {{ $taller := "" }}
 {{ if $courseRef }}
-  {{ $taller = site.GetPage (printf "/ca/tallers/%s" $courseRef) }}
+  {{/* Ruta relativa a l'idioma actual: amb el prefix /ca/ GetPage no resol
+       i el bloc «Taller relacionat» no s'arribava a renderitzar mai. */}}
+  {{ $taller = site.GetPage (printf "/tallers/%s" $courseRef) }}
 {{ end }}
 
 <article class="section container">
@@ -84,6 +96,13 @@
       {{ else if eq $status "cancelled" }}
         <p style="color:var(--color-text-muted);">
           {{ i18n "status_cancelled" }}
+        </p>
+      {{ else if eq $status "past" }}
+        <p class="agenda-single__past" style="color:var(--color-text-muted);">
+          {{ i18n "status_past" }}
+          {{ if $taller }}
+            <a href="{{ $taller.RelPermalink }}" style="margin-left:0.5rem;">{{ i18n "cta_more_info" }} →</a>
+          {{ end }}
         </p>
       {{ end }}
     </div>

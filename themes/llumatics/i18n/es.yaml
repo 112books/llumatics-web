@@ -134,6 +134,8 @@ status_past: "Realizado"
 cta_more_info: "Ver taller"
 section_agenda_past_title: "Historial de sesiones"
 agenda_no_upcoming: "Ahora mismo no hay fechas programadas. Escríbenos para acordar una sesión."
+agenda_past_intro: "Ya hemos hecho %d sesiones. Si alguna de las que ya han pasado te interesa, escríbenos y la volvemos a programar."
+agenda_past_summary: "Ver las sesiones anteriores"
 
 # Contacto — anchor nav
 contact_anchor_details: "Contacto"

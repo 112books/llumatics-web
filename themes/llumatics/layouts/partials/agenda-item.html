@@ -2,7 +2,12 @@
 {{ $date := .Params.date_start }}
 {{ $today := now.Format "2006-01-02" }}
 {{ $status := .Params.status | default "active" }}
-{{ if and .Params.date_start (lt .Params.date_start $today) }}
+{{/* Una sessió és passada l'endemà d'haver-se fet (o de date_end, si en té) */}}
+{{ $endDate := "" }}
+{{ with (.Params.date_end | default .Params.date_start) }}
+  {{ $endDate = . | time.Format "2006-01-02" }}
+{{ end }}
+{{ if and $endDate (lt $endDate $today) }}
   {{ $status = "past" }}
 {{ end }}
 {{ $purchaseURL := .Params.purchase_url }}

@@ -1,0 +1,78 @@
+{{/* Partial: agenda-list.html — dates de l'agenda (properes + historial)
+
+     Font canònica: les entrades CA. Si hi ha traducció de l'entrada a
+     l'idioma actual, es renderitza la traducció (títol, lloc, etc.).
+
+     Regla temporal: una sessió deixa de ser "propera" l'endemà de la seva
+     realització, no el mateix dia. Per a sessions de diversos dies mana
+     date_end. La data que es compara es normalitza a YYYY-MM-DD perquè la
+     comparació de cadenes ISO ordeni bé.
+
+     Les sessions passades no desapareixen: s'agrupen per any dins d'un
+     bloc plegat ("Què hem fet"), perquè es vegi l'activitat de l'escola.
+     Les pàgines antigues continuen publicades (URL i SEO). */}}
+{{ $caSite := site }}
+{{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end }}
+{{ $lang := site.Language.Lang }}
+{{ $allPages := slice }}
+{{ range where $caSite.RegularPages "Type" "agenda" }}
+  {{ $item := . }}
+  {{ range .Translations }}
+    {{ if eq .Language.Lang $lang }}{{ $item = . }}{{ end }}
+  {{ end }}
+  {{ $allPages = $allPages | append $item }}
+{{ end }}
+
+{{ $today := now.Format "2006-01-02" }}
+{{ $upcoming := slice }}
+{{ $past := slice }}
+{{ range $allPages }}
+  {{ $endRaw := .Params.date_end | default .Params.date_start }}
+  {{ $endDate := "" }}
+  {{ with $endRaw }}{{ $endDate = . | time.Format "2006-01-02" }}{{ end }}
+  {{ $isPast := or
+    (eq (.Params.status | default "active") "past")
+    (and $endDate (lt $endDate $today)) }}
+  {{ if $isPast }}
+    {{ $past = $past | append . }}
+  {{ else }}
+    {{ $upcoming = $upcoming | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Properes dates — de la més propera a la més llunyana */}}
+{{ $upcoming = sort $upcoming ".Params.date_start" "asc" }}
+{{ if $upcoming }}
+<div class="agenda-grid agenda-grid--wide">
+  {{ range $upcoming }}
+    {{ partial "agenda-item.html" . }}
+  {{ end }}
+</div>
+{{ else }}
+<p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" }}</p>
+{{ end }}
+
+{{/* Historial — sessions passades agrupades per any (de la més recent enrere) */}}
+{{ $past = sort $past ".Params.date_start" "desc" }}
+{{ if $past }}
+<section class="agenda-historic">
+  <h2 class="agenda-historic__title">{{ i18n "section_agenda_past_title" }}</h2>
+  <p class="agenda-historic__intro">{{ printf (i18n "agenda_past_intro") (len $past) }}</p>
+  <details class="agenda-historic__details">
+    <summary class="agenda-historic__summary">{{ i18n "agenda_past_summary" }}</summary>
+    {{ $curYear := "" }}
+    {{ range $past }}
+      {{ $year := .Params.date_start | time.Format "2006" }}
+      {{ if ne $year $curYear }}
+        {{ if $curYear }}</div></div>{{ end }}
+        {{ $curYear = $year }}
+        <div class="agenda-historic__year">
+          <h3 class="agenda-historic__year-label">{{ $year }}</h3>
+          <div class="agenda-grid agenda-grid--past">
+      {{ end }}
+      {{ partial "agenda-item.html" . }}
+    {{ end }}
+    {{ if $curYear }}</div></div>{{ end }}
+  </details>
+</section>
+{{ end }}

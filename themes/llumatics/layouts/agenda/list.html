@@ -13,51 +13,11 @@
       </div>
     </div>
 
-    {{/* L'agenda pren els esdeveniments del site CA com a font canònica,
-         però renderitza la traducció quan existeix. Sense això, /es/ i /en/
-         mostraven el títol català i duplicaven la sessió quan també existia
-         una fitxa traduïda. */}}
-    {{ $caSite := site }}
-    {{ range hugo.Sites }}{{ if eq .Language.Lang "ca" }}{{ $caSite = . }}{{ end }}{{ end }}
-    {{ $lang := site.Language.Lang }}
-    {{ $allPages := slice }}
-    {{ range where $caSite.RegularPages "Type" "agenda" }}
-      {{ $item := . }}
-      {{ range .Translations }}
-        {{ if eq .Language.Lang $lang }}{{ $item = . }}{{ end }}
-      {{ end }}
-      {{ $allPages = $allPages | append $item }}
-    {{ end }}
+    {{/* Properes dates + historial. La lògica (font canònica CA, traduccions
+         i tall temporal) viu al partial agenda-list.html per compartir-la amb
+         el layout genèric de llista. */}}
 
-    {{/* Filtre automàtic: només es llisten les dates d'avui en endavant.
-         Es descarta qualsevol sessió amb date_start anterior a avui o amb
-         status: past, sense haver de tocar el frontmatter de cada entrada.
-         Les pàgines antigues continuen existint (URL i SEO), però no es
-         mostren a l'agenda. */}}
-    {{ $today := now.Format "2006-01-02" }}
-    {{ $upcoming := slice }}
-    {{ range $allPages }}
-      {{ $isPast := or
-        (eq (.Params.status | default "active") "past")
-        (and .Params.date_start (lt .Params.date_start $today)) }}
-      {{ if not $isPast }}
-        {{ $upcoming = $upcoming | append . }}
-      {{ end }}
-    {{ end }}
-
-    {{/* Properes dates — de més propera a més llunyana */}}
-    {{ $upcoming = sort $upcoming ".Params.date_start" "asc" }}
-    {{ if $upcoming }}
-    <div class="agenda-grid agenda-grid--wide">
-      {{ range $upcoming }}
-        {{ partial "agenda-item.html" . }}
-      {{ end }}
-    </div>
-    {{ else }}
-    <div class="container">
-      <p style="color:var(--color-text-muted); margin-bottom:3rem;">{{ i18n "agenda_no_upcoming" }}</p>
-    </div>
-    {{ end }}
+    {{ partial "agenda-list.html" . }}
 
 
   </div>

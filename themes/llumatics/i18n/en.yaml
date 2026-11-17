@@ -134,6 +134,8 @@ status_past: "Completed"
 cta_more_info: "View workshop"
 section_agenda_past_title: "Session history"
 agenda_no_upcoming: "No upcoming dates at the moment. Write to us to arrange a session."
+agenda_past_intro: "We've run %d sessions so far. If one of the past ones interests you, write to us and we'll schedule it again."
+agenda_past_summary: "See previous sessions"
 
 # Contact — anchor nav
 contact_anchor_details: "Contact"
