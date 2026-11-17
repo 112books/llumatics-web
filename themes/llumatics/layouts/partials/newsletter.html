@@ -13,6 +13,8 @@
 
     <form class="newsletter-form" data-subscribe-form data-ok="{{ i18n "newsletter_ok" }}" style="max-width:480px; margin-inline:auto;">
       <input type="hidden" name="idioma" value="{{ site.Language.Lang }}">
+      {{/* Marca la fila com a subscriptor del butlletí: sense això es desava newsletter=0 */}}
+      <input type="hidden" name="newsletter" value="1">
       <input type="text" name="website" value="" tabindex="-1" autocomplete="off" style="display:none;" aria-hidden="true">
       <input type="email" name="email" required autocomplete="email"
              placeholder="{{ i18n "newsletter_placeholder" }}"
