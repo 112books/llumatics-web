@@ -432,6 +432,16 @@ python3 scripts/generate-thumbs.py
 
 ## Registre de canvis
 
+### 2026-11-17 — L'agenda amaga les dates l'endemà i recupera l'historial
+
+- **Regla temporal** — una sessió deixa de llistar-se **l'endemà** d'haver-se fet, no el mateix dia. Amb el filtre anterior (`date_start >= avui`) la sessió de l'11 de desembre desapareixia l'11 al matí; ara tot l'11 es veu i el 12 a les 00:01 ja no. Si l'entrada té `date_end`, mana la data de fi (sessions de més d'un dia).
+- **`partials/agenda-list.html`** (nou) — la lògica (font canònica CA + traducció si existeix + tall temporal + properes i historial) viu en un sol lloc; l'usen `agenda/list.html` i `_default/list.html`, que abans la duplicaven.
+- **Historial recuperat** — les 73 sessions passades tornen a ser visibles, plegades en un `<details>` i agrupades per any (2026 → 2018), amb el recompte al text («Ja hem fet 73 sessions…»). S'havia tret el 2026-11-05; torna plegat perquè no mengi la pàgina però es vegi l'activitat de l'escola.
+- **Pàgina d'una data passada** — `agenda/single.html` aplica la mateixa regla: una data passada ja no ofereix «Inscriu-m'hi», sinó «Realitzat» + enllaç a la fitxa del taller.
+- **Bug arreglat** — `site.GetPage "/ca/tallers/…"` a `agenda/single.html` no resolia mai (la ruta és relativa a l'idioma), així que el bloc «Taller relacionat» no sortia en cap idioma. Ara amb `/tallers/…`.
+- **i18n** — `agenda_past_intro` i `agenda_past_summary` a CA/ES/EN; CSS nou per al bloc plegat (`.agenda-historic__summary`, `__intro`).
+- **Verificat** — `hugo --minify` net (CA 529 / ES 424 / EN 430). Amb `--clock`: l'11 des a les 23:30 la sessió encara és a «Properes dates»; el 12 des a les 00:01 ja és a l'historial. CA/ES/EN amb textos propis i HTML sense desbalancejos.
+
 ### 2026-11-05 — Pop-ups, agenda sense dates passades i nova data de «Retrat en gran format»
 
 - **Pop-up de portada** — `castanyada` desactivat a `data/efemerides.yaml` (la finestra 9–31 oct ja havia passat). Activat el de **Nadal** (`nadal`, finestra **5 nov – 11 des**: es va obrir el mateix dia per començar la difusió i es tanca sol l'endemà del taller) amb la imatge `static/images/popup/cianotipia-nadal.webp` i textos en CA/ES/EN.
@@ -865,7 +875,7 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 - [ ] **Difusió del flash «Postals en cianotípia» (11 des, 18–21 h)** — text per a Instagram (post + stories) i esborrany de butlletí a Brevo. El pop-up de la portada ja el promociona al web; falta la difusió exterior. Anotat 2026-11-05.
 - [ ] **Pop-up de Nadal: apagar-lo després de l'11 de desembre** — es tanca sol l'endemà del taller (`fi` + 1 dia), però cal deixar `actiu: false` a l'entrada `nadal` quan es prepari el següent pop-up, com es va fer amb la Castanyada. Anotat 2026-11-05.
-- [ ] **Imatges «guapes» de la cianotípia de Nadal** — Joan en farà de millors; substituir `static/images/tallers/postals-cianotipia-nadal.*` i `static/images/popup/cianotipia-nadal.*` (recordar el renombrament per la caché d'1 any si es manté la mateixa URL). Anotat 2026-11-05.
+- [ ] **Imatges «guapes» de la cianotípia de Nadal** — Joan en farà de millors; substituir `static/images/tallers/postals-cianotipia-nadal.*` i `static/images/popup/cianotipia-nadal.*` (recordar el renombrament per la caché d'1 any si es manté la mateixa URL). Anotat 2026-11-05. **2026-11-17: encara no s'han fet — falta material de cianotípia; no bloquegen res, la fitxa i el pop-up ja tenen imatge.**
 
 ### Qualitat i acabats
 - [x] **Logo dels correus** — resolt (2026-10-07): nou logotip rodó al 72% de negre; regenerats `static/images/email/llumatics-logo.png` (240) + `@2x` (480) i tots els favicons des del nou SVG.
