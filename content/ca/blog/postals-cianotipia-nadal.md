@@ -11,7 +11,7 @@ draft: false
 
 El blau de Prússia és un dels pigments més antics de la fotografia i també el més barat de fabricar: dues sals de ferro, aigua i llum. El 1842, [John Herschel](https://en.wikipedia.org/wiki/John_Herschel) va barrejar citrat d'amoni fèrric i ferricianur de potassi i va veure que on tocava la llum ultraviolada el paper es tornava blau, mentre que la resta s'esbandia amb aigua. No hi havia plata, no calia cambra fosca ni revelador: una exposició i una safata. Herschel buscava una manera de copiar notes i dibuixos, i durant dècades el procediment va servir per fer els plànols d'obra que en anglès encara es diuen *blueprints*.
 
-L'any següent, la botànica anglesa [Anna Atkins](https://en.wikipedia.org/wiki/Anna_Atkins) va fer servir el mateix blau per a una altra cosa: catalogar les algues de la costa britànica. Entre 1843 i 1853 va publicar *Photographs of British Algae: Cyanotype Impressions* en entregues, amb centenars de làmines fetes posant cada planta directament sobre el paper sensibilitzat. És el que avui en diem un fotograma, i aquella obra es considera el primer llibre il·lustrat amb imatges fotogràfiques de la història. Les làmines eren d'un blau intens, i les plantes hi surten amb una precisió que cap dibuix no hauria pogut igualar: és el paper que ha estat dibuixat per la llum.
+L'any següent, la botànica anglesa [Anna Atkins](https://en.wikipedia.org/wiki/Anna_Atkins) va fer servir el mateix blau per a una altra cosa: catalogar les algues de la costa britànica. Entre 1843 i 1853 va publicar [*Photographs of British Algae: Cyanotype Impressions*](https://www.metmuseum.org/art/collection/search/286656) en entregues, amb centenars de làmines fetes posant cada planta directament sobre el paper sensibilitzat. És el que avui en diem un fotograma, i aquella obra es considera el primer llibre il·lustrat amb imatges fotogràfiques de la història. Les làmines eren d'un blau intens, i les plantes hi surten amb una precisió que cap dibuix no hauria pogut igualar: és el paper que ha estat dibuixat per la llum.
 
 El **divendres 11 de desembre**, de 18 a 21 h, dediquem la tarda a aquesta tècnica a la Nau Bostik. No cal experiència prèvia ni càmera: la cianotípia és fotografia sense càmera, i la fem servir per imprimir postals —nadalenques o no—, una a una.
 
@@ -39,4 +39,4 @@ Per reservar el teu lloc, [escriu-nos](/contacte/?taller=postals-cianotipia-nada
 ## Referències
 
 - [Anna Atkins](https://en.wikipedia.org/wiki/Anna_Atkins) i [cianotípia](https://en.wikipedia.org/wiki/Cyanotype), a la Viquipèdia anglesa.
-- Anna Atkins, *Photographs of British Algae: Cyanotype Impressions* (1843–1853).
+- Anna Atkins, [*Photographs of British Algae: Cyanotype Impressions*](https://www.metmuseum.org/art/collection/search/286656) (1843–1853). L'exemplar digitalitzat del Metropolitan Museum of Art es pot fullejar en línia.
