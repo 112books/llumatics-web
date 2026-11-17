@@ -71,10 +71,11 @@
             <label class="contact-form__label" for="taller">{{ i18n "form_workshop_label" }}</label>
             <select class="contact-form__select" id="taller" name="taller">
               <option value="">{{ i18n "form_workshop_placeholder" }}</option>
-              {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "actiu" }}
-              {{ range sort $tallers ".Title" "asc" }}
-                {{ if not .Params.extern }}
-                <option value="{{ .Title }}" data-slug="{{ .File.ContentBaseName }}">{{ .Title }}{{ if .Params.preu_1 }} — {{ i18n "price_from" }} {{ .Params.preu_1 }}€{{ end }}</option>
+              {{/* Actius i pròxims (els flash amb data fixa també s'han de poder triar) */}}
+              {{ $tallers := where (where .Site.RegularPages "Type" "tallers") ".Params.estat" "in" (slice "actiu" "proxim") }}
+              {{ range $t := sort $tallers ".Title" "asc" }}
+                {{ if not $t.Params.extern }}
+                <option value="{{ $t.Title }}" data-slug="{{ $t.File.ContentBaseName }}"{{ if and (eq $t.Params.format "flash") $t.Params.date }} data-date="{{ $t.Params.date | time.Format "2006-01-02" }}"{{ end }}>{{ $t.Title }}{{ if $t.Params.preu_1 }} — {{ if eq $t.Params.format "flash" }}{{ $t.Params.preu_1 }} €{{ else }}{{ i18n "price_from" }} {{ $t.Params.preu_1 }}€{{ end }}{{ end }}</option>
                 {{ end }}
               {{ end }}
             </select>
@@ -146,10 +147,22 @@
         }
         if (slug && taller) {
           var opt = taller.querySelector('option[data-slug="' + slug + '"]');
-          if (opt) {
-            taller.value = opt.value;
-            var radioTaller = document.getElementById('radio-taller');
-            if (radioTaller) radioTaller.checked = true;
+          // Si el taller no és a la llista (esborrany, extern…), l'afegim perquè
+          // el formulari arribi sempre amb el taller triat.
+          if (!opt) {
+            opt = document.createElement('option');
+            opt.value = slug;
+            opt.textContent = slug.replace(/-/g, ' ');
+            opt.setAttribute('data-slug', slug);
+            taller.appendChild(opt);
+          }
+          taller.value = opt.value;
+          var radioTaller = document.getElementById('radio-taller');
+          if (radioTaller) radioTaller.checked = true;
+          // Flash amb data fixa: omple la data (Y-m-d) si el camp és buit
+          if (opt.dataset.date) {
+            var dataInput = document.getElementById('data');
+            if (dataInput && !dataInput.value) dataInput.value = opt.dataset.date;
           }
         }
         if (msg && missatge) missatge.value = msg;
