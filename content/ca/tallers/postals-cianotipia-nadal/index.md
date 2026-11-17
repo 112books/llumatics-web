@@ -13,7 +13,7 @@ efemeride: "nadal"
 linia: "processos"
 interessats: 0
 minim: 4
-sense_doc: true
+sense_doc: false
 blocs: ["processos-alternatius"]
 date: "2026-12-11"
 durada_hores: 3
