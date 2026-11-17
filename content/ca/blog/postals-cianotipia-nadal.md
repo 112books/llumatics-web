@@ -1,7 +1,7 @@
 ---
-title: "Postals en cianotípia: el primer llibre fet amb llum"
-lead: "El 1842 un astrònom va inventar una manera de copiar notes amb el sol; l'any següent, una botànica la va fer servir per publicar el primer llibre il·lustrat amb fotografies. El divendres 11 de desembre fem postals de Nadal amb aquest mateix blau."
-description: "Postals de Nadal en cianotípia: la tècnica que va il·lustrar el primer llibre de fotografia, el 1843. Taller flash l'11 de desembre a la Nau Bostik."
+title: "Nou taller per fer Postals (nadalenques o no) en cianotípia."
+lead: "El 1842 un astrònom va inventar una manera de copiar notes amb el sol; l'any següent, una botànica la va fer servir per publicar el primer llibre il·lustrat amb fotografies. El divendres 11 de desembre fem postals, nadalenques o no, amb aquest mateix blau."
+description: "Nou taller per fer postals en cianotípia, nadalenques o no: el blau de Prússia del primer llibre de fotografia. 11 de desembre, Nau Bostik."
 image: "/images/tallers/postals-cianotipia-nadal.jpg"
 date: 2026-11-17
 tags: ["cianotípia", "nadal", "postals", "fotogrames", "flash", "història de la fotografia"]
@@ -13,7 +13,7 @@ El blau de Prússia és un dels pigments més antics de la fotografia i també e
 
 L'any següent, la botànica anglesa [Anna Atkins](https://en.wikipedia.org/wiki/Anna_Atkins) va fer servir el mateix blau per a una altra cosa: catalogar les algues de la costa britànica. Entre 1843 i 1853 va publicar *Photographs of British Algae: Cyanotype Impressions* en entregues, amb centenars de làmines fetes posant cada planta directament sobre el paper sensibilitzat. És el que avui en diem un fotograma, i aquella obra es considera el primer llibre il·lustrat amb imatges fotogràfiques de la història. Les làmines eren d'un blau intens, i les plantes hi surten amb una precisió que cap dibuix no hauria pogut igualar: és el paper que ha estat dibuixat per la llum.
 
-El **divendres 11 de desembre**, de 18 a 21 h, dediquem la tarda a aquesta tècnica a la Nau Bostik. No cal experiència prèvia ni càmera: la cianotípia és fotografia sense càmera, i la fem servir per imprimir postals de Nadal, una a una.
+El **divendres 11 de desembre**, de 18 a 21 h, dediquem la tarda a aquesta tècnica a la Nau Bostik. No cal experiència prèvia ni càmera: la cianotípia és fotografia sense càmera, i la fem servir per imprimir postals —nadalenques o no—, una a una.
 
 ## Com anirà la tarda
 
