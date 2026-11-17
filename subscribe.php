@@ -1,6 +1,6 @@
 <?php
 // subscribe.php — Subscripció local (butlletí i material d'alumnes) amb doble opt-in.
-// Sense Brevo: desa a SQLite (admin/vals.db) i envia la confirmació pel MTA local.
+// Desa a SQLite (admin/vals.db) i envia la confirmació pel MTA local.
 require_once __DIR__ . '/mailer.php';
 
 $VALS_DB = __DIR__ . '/admin/vals.db';

@@ -13,7 +13,7 @@
 <a href=https://112books.github.io/llumatics-web/en/tallers/retrat-analogic/privat/ hreflang=en>EN</a></div><button class=nav-toggle aria-controls=site-nav aria-expanded=false aria-label="Obrir menú">
 <span class=nav-toggle__bar></span>
 <span class=nav-toggle__bar></span>
-<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Contingut per a alumnes</h1><p class=private-gate__desc>Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir.</p><div id=private-form-wrap><form id=private-brevo-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Nom complet</label>
+<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Contingut per a alumnes</h1><p class=private-gate__desc>Aquest material és exclusiu per als alumnes del taller. Introdueix el teu correu per accedir.</p><div id=private-form-wrap><form id=private-doc-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Nom complet</label>
 <input id=pf-nom type=text name=NOM placeholder="El teu nom i cognoms" required autocomplete=name class=private-form__input>
 <label class=private-form__label for=pf-email>Email</label>
 <input id=pf-email type=email name=EMAIL placeholder="el teu correu" required autocomplete=email class=private-form__input>
@@ -30,7 +30,7 @@
 <button type=submit class="btn btn--primary private-form__submit">
 Sol·licita la documentació</button></form><div id=private-confirm-msg hidden class=private-gate__confirm>Perfecte! T'hem enviat un email de confirmació. Revisa la safata d'entrada (i el correu brossa, per si de cas).</div></div><p class=private-gate__footer>La documentació és personal i intransferible. El document portarà el teu nom.</p></div></div></div><script>
 (function() {
-  var form = document.getElementById('private-brevo-form');
+  var form = document.getElementById('private-doc-form');
   if (!form) return;
 
   form.addEventListener('submit', function(e) {

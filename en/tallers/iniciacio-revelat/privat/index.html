@@ -13,7 +13,7 @@
 <span class=lang-switcher__current aria-current=true>EN</span></div><button class=nav-toggle aria-controls=site-nav aria-expanded=false aria-label="Open menu">
 <span class=nav-toggle__bar></span>
 <span class=nav-toggle__bar></span>
-<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Student content</h1><p class=private-gate__desc>This material is exclusive to workshop students. Enter your email to access.</p><div id=private-form-wrap><form id=private-brevo-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Full name</label>
+<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Student content</h1><p class=private-gate__desc>This material is exclusive to workshop students. Enter your email to access.</p><div id=private-form-wrap><form id=private-doc-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Full name</label>
 <input id=pf-nom type=text name=NOM placeholder="Your full name" required autocomplete=name class=private-form__input>
 <label class=private-form__label for=pf-email>Email</label>
 <input id=pf-email type=email name=EMAIL placeholder="your email" required autocomplete=email class=private-form__input>
@@ -30,7 +30,7 @@
 <button type=submit class="btn btn--primary private-form__submit">
 Request documentation</button></form><div id=private-confirm-msg hidden class=private-gate__confirm>Done! We've sent you a confirmation email. Check your inbox (and spam folder, just in case).</div></div><p class=private-gate__footer>This documentation is personal and non-transferable. The document will include your name.</p></div></div></div><script>
 (function() {
-  var form = document.getElementById('private-brevo-form');
+  var form = document.getElementById('private-doc-form');
   if (!form) return;
 
   form.addEventListener('submit', function(e) {

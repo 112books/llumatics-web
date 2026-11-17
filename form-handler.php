@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // ── Configuració ───────────────────────────────────────────────────────────
-// Tot el correu surt pel MTA local de Dinahosting (mail()); sense Brevo.
+// Tot el correu surt pel MTA local de Dinahosting (mail()).
 define('MAIL_FROM',      'hola@llumatics.com');
 define('MAIL_FROM_NAME', 'Llumàtics');
 define('MAIL_TO',        'hola@llumatics.com');

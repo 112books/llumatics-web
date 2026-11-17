@@ -13,7 +13,7 @@
 <a href=https://112books.github.io/llumatics-web/en/tallers/copies-beers-developer/privat/ hreflang=en>EN</a></div><button class=nav-toggle aria-controls=site-nav aria-expanded=false aria-label="Abrir menú">
 <span class=nav-toggle__bar></span>
 <span class=nav-toggle__bar></span>
-<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Contenido para alumnos</h1><p class=private-gate__desc>Este material es exclusivo para los alumnos del taller. Introduce tu correo para acceder.</p><div id=private-form-wrap><form id=private-brevo-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Nombre completo</label>
+<span class=nav-toggle__bar></span></button></div></div></div></header><main id=main-content class=page-main--offset><div class="section container"><div class=private-gate><div class=private-gate__box><div class=private-gate__icon>🔒</div><h1 class=private-gate__title>Contenido para alumnos</h1><p class=private-gate__desc>Este material es exclusivo para los alumnos del taller. Introduce tu correo para acceder.</p><div id=private-form-wrap><form id=private-doc-form action=/subscribe.php method=POST class=private-form><label class=private-form__label for=pf-nom>Nombre completo</label>
 <input id=pf-nom type=text name=NOM placeholder="Tu nombre y apellidos" required autocomplete=name class=private-form__input>
 <label class=private-form__label for=pf-email>Email</label>
 <input id=pf-email type=email name=EMAIL placeholder="tu correo" required autocomplete=email class=private-form__input>
@@ -30,7 +30,7 @@
 <button type=submit class="btn btn--primary private-form__submit">
 Solicitar la documentación</button></form><div id=private-confirm-msg hidden class=private-gate__confirm>¡Perfecto! Te hemos enviado un email de confirmación. Revisa tu bandeja de entrada (y el correo no deseado, por si acaso).</div></div><p class=private-gate__footer>La documentación es personal e intransferible. El documento llevará tu nombre.</p></div></div></div><script>
 (function() {
-  var form = document.getElementById('private-brevo-form');
+  var form = document.getElementById('private-doc-form');
   if (!form) return;
 
   form.addEventListener('submit', function(e) {
