@@ -437,13 +437,16 @@ python3 scripts/generate-thumbs.py
 > no hi ha cap servei de tercers, cap clau, cap Action ni cap formulari de subscripció. Les mencions
 > que trobareu en entrades anteriors d'aquest registre són **històriques** i es conserven com a traça.
 
-### 2026-11-17 (vespre) — Entrada de blog de les postals i fora el servei extern de butlletí
+### 2026-11-17 (vespre) — Blog de les postals, fora el butlletí, traduccions i documentació
 
 - **Entrada de blog publicada** — `content/ca/blog/postals-cianotipia-nadal.md` (CA, a producció): història de la tècnica —Herschel el 1842 i Anna Atkins amb *Photographs of British Algae*, enllaçat a l'exemplar digitalitzat del Metropolitan— i el desenvolupament del taller en sis passos (fórmula, sensibilització de les cartolines, composicions, insolació amb UV o sol, revelat en aigua) fins a «en pots fer tantes com vulguis a casa». Títol final: **«Nou taller per fer Postals (nadalenques o no) en cianotípia.»** Commits `a108ad51d` i `3a8157441`.
 - **Fora el servei extern de butlletí** — esborrats `.github/workflows/newsletter-draft.yml` i `.github/scripts/newsletter_draft.py`: creaven un esborrany a cada push amb `BREVO_API_KEY`/`BREVO_LIST_ID` i fallaven sempre. `hugo.toml` ja no tenia cap param associat i no queda cap clau al repo.
 - **Legal** — treta la fila del proveïdor de la taula de cookies a CA/ES/EN (`content/{ca,es,en}/cookies/index.md`). La política ja descrivia correctament que el web no genera cookies pròpies.
 - **Codi** — `private.html`: el formulari passa a `private-doc-form` (abans `private-brevo-form`) i els comentaris deixen de parlar del servei; `confirmat.html`, `subscribe.php`, `mailer.php` i `form-handler.php` amb comentaris netejats; `README.md` amb la fila de newsletter correcta.
-- **Docs** — `docs/manuals/crear-contingut.md` i `docs/manuals/correu-local.md` descriuen el flux local (subscribe.php + SQLite + MTA); el text del butlletí de les postals queda marcat **en pausa** a `docs/social/2026-11-17-butlleti-postals-cianotipia.md`.
+- **Docs** — `docs/manuals/crear-contingut.md` i `docs/manuals/correu-local.md` descriuen el flux local (subscribe.php + SQLite + MTA); el text del butlletí de les postals queda marcat **retirat** a `docs/social/2026-11-17-butlleti-postals-cianotipia.md`.
+- **Traduccions ES/EN de l'entrada** — `content/{es,en}/blog/postals-cianotipia-nadal.md` amb títol i meta descripció propis (147 i 150 car.) i enllaços a les fitxes de cada idioma. Verificat que apareixen a `/es/blog/`, `/en/blog/` i a la portada.
+- **Documentació d'alumnes de les postals** — porta `content/ca/privat/postals-cianotipia-nadal.md` i guia `…-doc.md` (1.150 paraules: fórmula A/B, sensibilització 10×15, taula de temps d'exposició, revelat, acabats, taula de problemes, seguretat del ferricianur). La fitxa CA passa a `sense_doc: false`; ES/EN el mantenen a `true` fins que hi hagi la doc traduïda. Fora del sitemap i amb `noindex`.
+- **Formulari de contacte** — la llista de tallers només incloïa `estat: actiu`, així que els flash (`proxim`) no hi sortien i `?taller=slug` no preseleccionava res: ara inclou actiu i pròxim, afegeix una opció si el slug no és a la llista, mostra el preu fix als flash («— 55 €») i omple el camp Data amb la data del taller.
 - **Butlletí retirat del web** — fora la banda del peu, el partial `newsletter.html`, la nota sota els botons dels tallers, el handler JS de `[data-subscribe-form]`, les 10 claus i18n (`newsletter_*`, `cta_newsletter_*`, `gracies_msg_newsletter`) i tot el CSS associat; `tallyFormNewsletter` i `tallyFormAvisa` fora de `hugo.toml`. Legal: tret el punt del butlletí de la privacitat i la fila de dades, i les mencions a cookies (CA/ES/EN). **«Avisa'm» no es toca**: va pel formulari local → `form-handler.php` → SQLite + MTA, sense cap servei extern.
 
 ### 2026-11-17 — L'agenda amaga les dates l'endemà i recupera l'historial
@@ -883,6 +886,11 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 - [x] **WebP de les imatges principals (tallers/blog)** — resolt (2026-10-03): partial `picture.html` amb `<source type="image/webp">` + fallback, usat a `tallers/single.html`, `blog/single.html` i `_default/single.html`; preload de `head.html` apunta al `.webp`. 58 `.webp` generats amb `scripts/generate-webp.py`.
 - [ ] **Difusió del flash «Postals en cianotípia» (11 des, 18–21 h)** — text per a Instagram (post + stories) i butlletí (en pausa: 1 subscriptor confirmat). El pop-up de la portada ja el promociona al web; falta la difusió exterior. Anotat 2026-11-05.
 - [ ] **Pop-up de Nadal: apagar-lo després de l'11 de desembre** — es tanca sol l'endemà del taller (`fi` + 1 dia), però cal deixar `actiu: false` a l'entrada `nadal` quan es prepari el següent pop-up, com es va fer amb la Castanyada. Anotat 2026-11-05.
+- [x] **Entrada de blog del flash** — publicada en CA/ES/EN el 2026-11-17 (`content/{ca,es,en}/blog/postals-cianotipia-nadal.md`), amb el llibre d'Anna Atkins enllaçat a l'exemplar digitalitzat del Met.
+- [x] **Documentació d'alumnes del flash** — porta i guia publicades en CA el 2026-11-17 (`content/ca/privat/postals-cianotipia-nadal{,-doc}.md`); la fitxa CA ja enllaça el material.
+- [ ] **Traducció ES/EN de la doc d'alumnes de les postals** — quan hi sigui, posar `sense_doc: false` a les fitxes ES i EN (ara el botó de material només surt en CA).
+- [ ] **Fotos del procés i de les postals acabades** — Joan les farà el 18 de novembre: afegir-les a la guia i, si vols, com a galeria de l'entrada de blog (portada + `images:` + `scripts/generate-thumbs.py` i WebP).
+- [ ] **Formulari de contacte: menys camps als flash** — en triar un taller amb data fixa, amagar «data», «horari» i «alumnes» i deixar només nom, email, taller i missatge.
 - [ ] **Imatges «guapes» de la cianotípia de Nadal** — Joan en farà de millors; substituir `static/images/tallers/postals-cianotipia-nadal.*` i `static/images/popup/cianotipia-nadal.*` (recordar el renombrament per la caché d'1 any si es manté la mateixa URL). Anotat 2026-11-05. **2026-11-17: encara no s'han fet — falta material de cianotípia; no bloquegen res, la fitxa i el pop-up ja tenen imatge.**
 
 ### Qualitat i acabats
