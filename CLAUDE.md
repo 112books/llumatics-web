@@ -456,6 +456,16 @@ python3 scripts/generate-thumbs.py
 > no hi ha cap servei de tercers, cap clau, cap Action ni cap formulari de subscripció. Les mencions
 > que trobareu en entrades anteriors d'aquest registre són **històriques** i es conserven com a traça.
 
+### 2026-11-22 (nit) — Tancament: documentació v2, guia, PDFs i sincronització
+
+- **Documentació v2 del taller d'iniciació** — reescriptura completa a partir de la crítica (desalineació amb la fitxa, 37% de química enciclopèdica, manca d'exercicis i errors). Cos nou: agenda, per què l'argèntica, càmera i càrrega del carret, exposició, triangle, dins el carret, mesurar la llum, profunditat de camp i bokeh, focal, **composició**, sis exercicis, errors freqüents, què fer amb el carret, per continuar i xinxeta; apèndixs A–E (procés fotoquímic, formats, simuladors, bibliografia, glossari). **18 pàgines** de PDF.
+- **Correccions de l'autor aplicades** — 36 fotos per carret (24 o 12 segons el rodet) a tot el document, comprovació d'encaix dels forats i de la roda de rebobinat amb la tapa tancada, «el rodet més polivalent», fora la taula de temps de la versió de l'alumne (viu a la guia). «Carret» i «rodet» s'usen indistintament.
+- **Guia del professor** (NOU) — `docs/guies/fonaments-iniciacio-puntual-guia-professor-ca.md` i PDF de 5 pàgines; el script té `--kind guia` (sense sumari ni comiat, capçalera pròpia).
+- **Publicat al web** — `/tallers/fonaments-iniciacio-puntual/privat/doc/` amb la v2, verificat 200 en directe.
+- **Enviat al Telegram** de Joan — PDF nominal de l'alumna (18 p.) i guia de classe (5 p.), via `tgb`.
+- **Incident i reparació** — `./scripts/deploy.sh` es va executar amb l'arbre local **31 commits enrere**: el `rsync --delete` va revertir contingut de producció (404 a les postals, butlletí de tornada). Detectat pel push rebutjat, reparat amb `git pull --rebase` (conflicte només a `CLAUDE.md`), push i Action de desplegament. Verificat: portada, postals CA/ES/EN, agenda i doc de fonaments a 200.
+- **Control horari** — `.taques/llumatics/2026-11-22.md` i `.taques-central/2026-11-22.md` (7 tasques, ~9,7 h, durades estimades).
+- **Pendent** — traduir la v2 a ES/EN (encara tenen la v1); opcional, xinxeta d'una pàgina per a la taula del professor.
 ### 2026-11-17 (vespre) — Blog de les postals, fora el butlletí, traduccions i documentació
 
 - **Entrada de blog publicada** — `content/ca/blog/postals-cianotipia-nadal.md` (CA, a producció): història de la tècnica —Herschel el 1842 i Anna Atkins amb *Photographs of British Algae*, enllaçat a l'exemplar digitalitzat del Metropolitan— i el desenvolupament del taller en sis passos (fórmula, sensibilització de les cartolines, composicions, insolació amb UV o sol, revelat en aigua) fins a «en pots fer tantes com vulguis a casa». Títol final: **«Nou taller per fer Postals (nadalenques o no) en cianotípia.»** Commits `a108ad51d` i `3a8157441`.
