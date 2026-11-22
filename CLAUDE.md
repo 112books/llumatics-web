@@ -24,6 +24,7 @@ Web oficial de **Llumàtics**, escola de fotografia a Barcelona especialitzada e
 | Idiomes | CA (per defecte), ES, EN |
 | Formularis | PHP propi pel MTA local de Dinahosting (vegeu `docs/manuals/correu-local.md`) |
 | Newsletter | Retirat del web (2026-11-17); el correu propi queda per a «Avisa'm», contacte i material d'alumnes |
+| PHP | **8.5** a producció (Dinahosting: 8.5.13 des del 22/11/2026; abans 8.1.34). El CLI de la shell continua sent 7.0.33 — només afecta les ordres per SSH, no el web. |
 | PDF alumnes | Generació al navegador (`window.print()`) |
 | DNS/Domini | Dinahosting |
 
@@ -210,6 +211,24 @@ No es permet la distribució ni reproducció d'aquest material.
 © Llumàtics — llumatics.com
 ──────────────────────────────────────────────
 ```
+
+#### PDF imprimible amb la imatge corporativa
+
+A més de la impressió des del navegador, es pot generar un PDF A4 maquetat amb la
+imatge corporativa (logotip, Playfair/Inter i colors de marca) a partir del mateix Markdown:
+
+```bash
+python3 scripts/generate-doc-pdf.py                                   # CA, fonaments-iniciacio-puntual
+python3 scripts/generate-doc-pdf.py revelat-bn --lang es
+python3 scripts/generate-doc-pdf.py fonaments-iniciacio-puntual --lang all
+python3 scripts/generate-doc-pdf.py --name "Nom Alumne"               # còpia nominal
+```
+
+- **Sortida:** `pdf/<slug>/<slug>-<lang>.pdf` — carpeta **local** i a `.gitignore`; no es desplega al web perquè la documentació és nominal i va darrere del formulari.
+- **Contingut:** coberta (logotip, títol, lead, durada i nivell, lloc i data; **sense preu**), sumari amb números de pàgina, cos amb seccions i figures numerades, capçalera i peu correguts («Pàgina X de Y») i pàgina final amb contacte i avís legal.
+- **Requisits:** `pandoc` + `weasyprint`. El script tria sol un intèrpret de Python que pugui importar WeasyPrint (es pot forçar amb `PDF_PYTHON`).
+- El `nivell` del frontmatter es tradueix al PDF (mapa `NIVELL`) encara que a ES/EN estigui en català.
+- `--keep-html` desa l'HTML intermedi per depurar la maquetació.
 
 ---
 
@@ -487,6 +506,29 @@ python3 scripts/generate-thumbs.py
 - **`static/.htaccess`** — 301 de `/agenda/iniciacio-revelat-2026-10-31/` (i variants `/es/`, `/en/`) a la data nova, perquè l'enllaç antic no doni 404.
 - **Difusió a Instagram** — el mateix dia es va publicar el re-anunci de la data nova amb una captura de la fitxa: **comentari al post antic** del 31 d'octubre (perquè qui el torni a veure trobi la data bona), **post nou** amb el peu llarg i **stories** amb la versió curta. Els textos queden a `docs/social/2026-10-26-instagram-revelat-7-novembre.md` (sense emoticones, primers 125 caràcters amb data + taller, i les dades del taller per reutilitzar-les).
 - **Sense tocar** — el taller flash de Castanyada («Fotografia d'esperits», 31 d'octubre, 19–22 h, Nau Bostik) i el pop-up d'efemèride es queden tal com eren.
+### 2026-11-22 — Control de cursos + sessió d'Alejandra (val LLM-2026-0X2ZB)
+
+- **`docs/control-cursos.md`** (NOU) — registre de sessions i vals: data, hora, taller, alumne, origen, codi, import i estat, amb notes per sessió i un esborrany del correu de lliurament. És la vista de conjunt; l'estat operatiu continua sent el panell (`/admin/vals.php`, `/admin/alumnes.php`).
+- **Val `LLM-2026-0X2ZB`** (Alejandra Céspedes Antolin, `alejandracean@gmail.com`) — sessió **23/11/2026 10:00-14:00**, iniciació a la fotografia analògica. Marcat com a *bescanviat* a `www/admin/vals.db` del VPS (backup `vals.db.bak-20261122`) i alta a la waitlist de `revelat-bn` (id 11, estat espera). El correu del val és el del comprador, no el de l'alumna.
+- **Còpia nominal de la documentació** — `pdf/alumnes/2026-11-23/alejandra-cespedes-iniciacio-ca.pdf` (13 pàgines, 1,2 MB), generada amb `--name` des del document publicat.
+- **`scripts/generate-doc-pdf.py`** — correccions al nom de sortida (tornava a perdre el sufix d'idioma després d'afegir `--md`) i a `--out` relatiu; ara arrela a `ROOT` i no peta amb `relative_to`.
+- **PHP 8.5.13** — pujat des de 8.1.34 al panell de Dinahosting el 22/11/2026. Verificat en directe: tots els endpoints 200 sense avisos, panells admin amb sessió i SQLite llegint bé (val i waitlist), `mail()` amb `llum_send_html()` = SEND_OK (correu de prova a info@llumatics.com, rebut) i cap deprecació a `apache.error.log`. El CLI de la shell continua a 7.0.33 (només afecta SSH/deploy).
+
+### 2026-11-22 (vespre) — Documentació v2 de «fonaments» publicada + guia del professor
+
+- **`content/ca/privat/fonaments-iniciacio-puntual-doc.md`** — substituït el cos pel de la v2 (l'esborrany era a `docs/esborranys/`): agenda de taller a l'obertura, càrrega del carret amb comprovació d'encaix i de la roda de rebobinat, latitud i gra, mesura de la llum amb compensació, profunditat de camp i bokeh, distància focal, **composició** (secció nova), sis exercicis, errors freqüents i xinxeta. Fora la taula de temps (viu a la guia). 36 fotos per carret (24 o 12 segons el rodet).
+- **Durada 4 h, 18 pàgines** en PDF; ES/EN encara tenen la v1 — pendent de traduir.
+- **Desplegat a producció** amb `./scripts/deploy.sh` (rsync directe al VPS, exit 23 conegut); verificat en directe: 200 a `/tallers/fonaments-iniciacio-puntual/privat/doc/` amb el contingut nou.
+- **Guia del professor** (NOU) — `docs/guies/fonaments-iniciacio-puntual-guia-professor-ca.md` i PDF de 5 pàgines: material i revisió de càmeres, temps per bloc, demos, què vigilar, cinc preguntes i senyals d'alerta. Es genera amb `--kind guia` (sense sumari ni pàgina de comiat).
+- **Còpia nominal** — `pdf/alumnes/2026-11-23/alejandra-cespedes-iniciacio-ca.pdf` (18 p., amb el nom a la coberta).
+### 2026-11-22 — Documentació de «fonaments»: alts descriptius + PDF corporatiu
+
+- **`content/{ca,es,en}/privat/fonaments-iniciacio-puntual-doc.md`** — les 8 figures (24 en total, 8 per idioma) tenien l'alt genèric «Descripció de la imatge». Reescrit amb una descripció real de cada figura (formats de pel·lícula, funcionament de la càmera, exposició, distància focal, triangle d'exposició, perspectiva, profunditat de camp), en els tres idiomes.
+- **`.DS_Store`** — 43 fitxers escombrats del repo (ja eren a `.gitignore`), inclòs el de `static/images/docs/fonaments-iniciacio-puntual/`.
+- **`scripts/generate-doc-pdf.py`** (NOU) — PDF A4 imprimible amb la imatge corporativa generat des del Markdown: coberta amb logotip i metadades del taller, sumari amb números de pàgina (`target-counter`), seccions i figures numerades, capçalera i peu correguts amb «Pàgina X de Y», i pàgina final amb contacte, ressenya i avís legal. Necessita `pandoc` + WeasyPrint i tria sol un intèrpret que pugui importar-lo.
+- **Sortida local** — `pdf/fonaments-iniciacio-puntual/fonaments-iniciacio-puntual-{ca,es,en}.pdf` (13/13/12 pàgines, ~1,2 MB); `pdf/` afegit a `.gitignore` perquè no es desplegui (la documentació és nominal i va darrere del formulari).
+- **Verificat** — cap text fora de marge (`pdftotext -bbox`), cap xoc entre capçalera esquerra i dreta a les tres llengües, 8 figures numerades 1–8 a cada idioma i logotip present a la coberta.
+- **Pendent (no tocat)** — la fitxa ES/EN de `fonaments-iniciacio-puntual` porta `nivell: "Iniciació"` en català; el PDF el tradueix, però la fitxa web encara el mostra així. I `caffenol-doc.md` conserva 3 alts genèrics.
 
 ### 2026-10-18 — Search Console: «Fragments de producte» del val-regal
 
@@ -978,7 +1020,9 @@ Format: `slug | doc CA | doc ES/EN | hores taller`
 **Vals registrats manualment (precarregats al DB):**
 | Codi | Taller | Import | Per a | Comprador | Compra | Caduca |
 |------|--------|--------|-------|-----------|--------|--------|
-| LLM-2026-0X2ZB | Aprende a controlar la luz | 220€ | Ale | elenavigoolivan@gmail.com | 2026-07-17 | 2027-01-17 |
+| LLM-2026-0X2ZB | Aprende a controlar la luz (fonaments-iniciacio-puntual) | 220€ | Alejandra Céspedes Antolin | elenavigoolivan@gmail.com | 2026-07-17 | 2027-01-17 |
+
+> **Control de cursos:** l'estat viu de les sessions i dels vals és a `docs/control-cursos.md`. Aquí només hi ha el registre històric.
 | LLM-2026-OPUH9 | Introduction to darkroom printing | 170€ | Nataliia Lisohurska | mdkisselgof@gmail.com | 2026-08-11 | 2027-02-11 |
 
 ### Fet aquesta sessió (2026-07-08) — continuació

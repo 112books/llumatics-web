@@ -15,3 +15,6 @@ static/admin/config.php
 
 # Orígens de disseny del logotip (Lora.zip és redundant amb Lora/)
 -Art/logo llumatics 2026/Lora.zip
+
+# PDFs generats localment (scripts/generate-doc-pdf.py); no es despleguen
+/pdf/
