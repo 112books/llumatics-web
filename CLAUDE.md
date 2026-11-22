@@ -760,6 +760,7 @@ python3 scripts/generate-thumbs.py
   scp public/admin/index.html llumatics@llumatics.com:www/admin/index.html
   ```
 - [x] Branca `develop` per a staging — ja configurada
+- ⚠️ **Abans de `./scripts/deploy.sh`, posa't al dia** (`git pull --rebase`). El rsync va amb `--delete` i, si l'arbre local va endarrerit, **esborra del servidor** tot el contingut que no hi és (va passar el 2026-11-22: 31 commits enrere → 404 a les postals i el butlletí tornant). Alternativa segura: `git push` a `main` i deixar que ho faci l'Action, que construeix amb la versió de Hugo del CI.
 
 ### CMS per publicar tallers — PENDENT D'ESTUDIAR
 
