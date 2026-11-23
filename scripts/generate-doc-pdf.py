@@ -288,6 +288,36 @@ body {
 .cover__foot p { margin: 0 0 1mm; }
 .cover__name { font-weight: 600; color: $ink; }
 
+/* ---------- Xinxeta (una pàgina) ---------- */
+.xinxeta .cover { display: none; }
+.xinxeta { font-size: 9.1pt; line-height: 1.45; hyphens: auto; }
+.xinxeta__brand {
+  display: flex; align-items: center; gap: 5mm;
+  border-bottom: 1.4pt solid $gold; padding-bottom: 3mm; margin-bottom: 5mm;
+}
+.xinxeta__brand img { height: 13mm; }
+.xinxeta__eyebrow {
+  margin: 0 0 1mm; font-size: 6.6pt; letter-spacing: 0.2em;
+  text-transform: uppercase; color: $accent; font-weight: 600;
+}
+.xinxeta__title {
+  margin: 0; font-family: Playfair, serif; font-size: 17pt; line-height: 1.1;
+  hyphens: none;
+}
+.xinxeta h2 {
+  font-size: 10pt; margin: 4.5mm 0 1.5mm; padding-bottom: 1mm;
+  border-bottom: 0.6pt solid $gold; margin-top: 0;
+}
+.xinxeta h2 .secnum { font-size: 6.6pt; margin-right: 2mm; }
+.xinxeta h3 { font-size: 8.8pt; margin: 2.5mm 0 1mm; }
+.xinxeta p { margin: 0 0 1.6mm; }
+.xinxeta ul, .xinxeta ol { margin: 0 0 2mm; padding-left: 4.5mm; }
+.xinxeta li { margin: 0 0 0.7mm; }
+.xinxeta table { margin: 1.5mm 0 3mm; font-size: 8.4pt; }
+.xinxeta th { padding: 1.2mm 1.8mm; font-size: 6.4pt; }
+.xinxeta td { padding: 1.2mm 1.8mm; }
+.xinxeta strong { font-weight: 600; }
+
 /* ---------- Cos ---------- */
 h2 {
   font-family: Playfair, serif; font-weight: 400;
@@ -386,7 +416,7 @@ HTML = """<!DOCTYPE html>
 <meta name="keywords" content="fotografia analògica, taller, Llumàtics, Barcelona">
 <style>$css</style>
 </head>
-<body>
+<body class="$body_class">
 
 <section class="cover">
   <div class="cover__brand-row">
@@ -411,6 +441,7 @@ HTML = """<!DOCTYPE html>
 </section>
 
 <main class="doc">
+$brand_html
 $toc_html
 $hero_html
 $body_html
@@ -440,6 +471,18 @@ def closing_section(t, review_url: str) -> str:
             '</section>')
 
 
+CHEATSHEET_EYEBROW = {"ca": "Xinxeta de classe", "es": "Chuleta de clase",
+                     "en": "Class cheat sheet"}
+
+
+def cheatsheet_brand(t, title: str) -> str:
+    return ('<div class="xinxeta__brand">'
+            '<img src="' + LOGO.as_uri() + '" alt="Llumàtics">'
+            '<div><p class="xinxeta__eyebrow">' + t["eyebrow"] + '</p>'
+            '<p class="xinxeta__title">' + title + '</p></div>'
+            '</div>')
+
+
 def build_html(lang: str, slug: str, name, review_url: str, md_path=None,
                kind: str = "alumne") -> str:
     from string import Template
@@ -447,6 +490,9 @@ def build_html(lang: str, slug: str, name, review_url: str, md_path=None,
     if kind == "guia":
         t["eyebrow"] = GUIDE_EYEBROW[lang]
         t["header_right"] = GUIDE_EYEBROW[lang]
+    if kind == "xinxeta":
+        t["eyebrow"] = CHEATSHEET_EYEBROW[lang]
+        t["header_right"] = CHEATSHEET_EYEBROW[lang]
     doc_path = (Path(md_path) if md_path
                 else ROOT / "content" / lang / "privat" / (slug + "-doc.md"))
     if not doc_path.exists():
@@ -464,7 +510,7 @@ def build_html(lang: str, slug: str, name, review_url: str, md_path=None,
     body_html, toc = number_sections(body_html)
 
     toc_html = ""
-    if toc and kind != "guia":
+    if toc and kind == "alumne":
         items = "".join('<li><a href="#%s">%s</a></li>' % (sid, ttl) for sid, ttl in toc)
         toc_html = ('<section class="toc"><h2>%s</h2><ol>%s</ol></section>'
                     % (t["toc"], items))
@@ -485,7 +531,7 @@ def build_html(lang: str, slug: str, name, review_url: str, md_path=None,
                  if name else "")
 
     hero_html = ""
-    hero = meta.get("image")
+    hero = meta.get("image") if kind == "alumne" else None
     if hero and (STATIC / hero.lstrip("/")).exists():
         hero_html = ('<figure class="doc-hero"><img src="%s" alt="%s"></figure>'
                      % (static_url(hero), title))
@@ -516,7 +562,9 @@ def build_html(lang: str, slug: str, name, review_url: str, md_path=None,
         closing_text=t["closing_text"],
         review_html=review_html,
         disclaimer=t["disclaimer"],
-        closing_html=("" if kind == "guia" else closing_section(t, review_url)),
+        closing_html=(closing_section(t, review_url) if kind == "alumne" else ""),
+        body_class=("xinxeta" if kind == "xinxeta" else ""),
+        brand_html=(cheatsheet_brand(t, title) if kind == "xinxeta" else ""),
     )
 
 
@@ -550,8 +598,8 @@ def main() -> None:
                     help="nom de l'alumne per a una copia nominal")
     ap.add_argument("--out", default=str(ROOT / "pdf"),
                     help="directori de sortida (per defecte pdf/)")
-    ap.add_argument("--kind", default="alumne", choices=["alumne", "guia"],
-                    help="alumne (document llarg) o guia (resum per impartir la classe)")
+    ap.add_argument("--kind", default="alumne", choices=["alumne", "guia", "xinxeta"],
+                    help="alumne (document llarg), guia (resum per impartir) o xinxeta (una pàgina)")
     ap.add_argument("--md", default=None,
                     help="fitxer Markdown alternatiu (per revisar un esborrany)")
     ap.add_argument("--keep-html", action="store_true",
