@@ -466,7 +466,7 @@ python3 scripts/generate-thumbs.py
 - **Incident i reparació** — `./scripts/deploy.sh` es va executar amb l'arbre local **31 commits enrere**: el `rsync --delete` va revertir contingut de producció (404 a les postals, butlletí de tornada). Detectat pel push rebutjat, reparat amb `git pull --rebase` (conflicte només a `CLAUDE.md`), push i Action de desplegament. Verificat: portada, postals CA/ES/EN, agenda i doc de fonaments a 200.
 - **Xinxeta d'una pàgina** (NOU) — `docs/guies/fonaments-iniciacio-puntual-xinxeta-ca.md` i PDF d'**1 pàgina** per imprimir i tenir a la taula: temps per bloc amb el que no pot faltar, les tres escales, les cinc preguntes, l'ordre de decisions, senyals i material/tancament. Es genera amb `--kind xinxeta` (sense coberta, sumari ni comiat).
 - **Control horari** — `.taques/llumatics/2026-11-22.md` i `.taques-central/2026-11-22.md` (7 tasques, ~9,7 h, durades estimades).
-- **Pendent** — traduir la v2 a ES/EN (encara tenen la v1); opcional, xinxeta d'una pàgina per a la taula del professor.
+- **Pendent** — traduir la v2 a ES/EN (encara tenen la v1).
 ### 2026-11-17 (vespre) — Blog de les postals, fora el butlletí, traduccions i documentació
 
 - **Entrada de blog publicada** — `content/ca/blog/postals-cianotipia-nadal.md` (CA, a producció): història de la tècnica —Herschel el 1842 i Anna Atkins amb *Photographs of British Algae*, enllaçat a l'exemplar digitalitzat del Metropolitan— i el desenvolupament del taller en sis passos (fórmula, sensibilització de les cartolines, composicions, insolació amb UV o sol, revelat en aigua) fins a «en pots fer tantes com vulguis a casa». Títol final: **«Nou taller per fer Postals (nadalenques o no) en cianotípia.»** Commits `a108ad51d` i `3a8157441`.
